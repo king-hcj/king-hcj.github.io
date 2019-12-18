@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>码志</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/pages/index.css">
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="alternate" type="application/atom+xml" title="码志" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta name="keywords" content="码志, Zhuang Ma, mzlogin, mazhuang">
+    <meta name="description" content="马壮的个人博客">
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:site_name" content="码志">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script src="http://localhost:4000/assets/js/main.js"></script>
+</head>
+<body class="home" data-mz="home">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="码志"><span class="octicon octicon-mark-github"></span> 码志</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="banner">
+    <div class="collection-head">
+        <div class="container">
+            <div class="collection-title">
+              <h1 class="collection-header" id="sub-title"><span>打码改变人生</span></h1>
+                <div class="collection-info">
+                    <span class="meta-info mobile-hidden">
+                        <span class="octicon octicon-location"></span>
+                        Wuhan, China
+                    </span>
+                    
+                     <span class="meta-info">
+                        <span class="octicon octicon-mark-github"></span>
+                        <a href="https://github.com/mzlogin" target="_blank">mzlogin</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.banner -->
+<section class="container content">
+    <div class="columns">
+        <div class="column two-thirds">
+            <ol class="repo-list">
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2019/09/14/gitee-and-tapd/">让 Tapd 的源码关联功能支持 Gitee 平台</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        Tapd 是腾讯提供的越来越完善的项目管理工具，Gitee 是国内相对比较稳的代码托管平台。本文记录了让 Tapd 的源码关联功能支持 Gitee 平台的方法，及摸索过程中遇到的问题的解决步骤。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2019/09/14
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Tools" title="Tools">Tools</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2019/05/25/a-stupid-bug/">记一个折磨了我一天半的 Bug</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        最近开始学习后台开发，虽然与我以前从事的 Android 开发一样都是使用 Java 语言，但是技术栈完全不同，有太多的必备的「新」概念要去学习，而在对它们，以及别人写的代码有充分的了解之前，就可能会遇上这种一杯茶，一根烟，一个 Bug 一天根本改不完的情况。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2019/05/25
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Java" title="Java">Java</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2019/01/20/my-2018/">我的 2018 盘点</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        又到了回顾以明得失，展望以知进退的时候。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2019/01/20
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Blog" title="Blog">Blog</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2018/09/06/markdown-intro/">一份简明的 Markdown 笔记与教程</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        为部门内知识分享准备的素材，记录了 Markdown 的优点、应用场景和编辑工具，介绍了标准语法与扩展语法，以及一些应用 Markdown 的奇技淫巧。个人使用 Markdown 的经验持续补充中，最新完整版请参见
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2018/09/06
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Markdown" title="Markdown">Markdown</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2018/06/11/handler-looper-massagequeue/">Android 源码分析 —— Handler、Looper 和 MessageQueue</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        本系列文章在 https://github.com/mzlogin/rtfsc-android 持(jing)续(chang)更(duan)新(geng)中，欢迎有兴趣的童鞋们关注。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2018/06/11
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Android" title="Android">Android</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2018/04/30/guanggoo-android-app-new-version/">光谷社区第三方 Android 客户端 v2.0 发布</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        我最完整的业余作品 光谷社区第三方 Android 客户端 （虽然也还不是很完善）今天发布了重大更新，版本号由 v1.3 更新到 v2.0，欢迎所有身在武汉和心系武汉的朋友们试用体验，也欢迎各路开发者大神们对照源码（后文有链接）交流指点。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2018/04/30
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Android" title="Android">Android</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2017/12/03/tcp-connect-between-android-emulators/">解决两个 Android 模拟器之间无法网络通信的问题</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        本文解决的是一个小众场景的问题：
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2017/12/03
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Android" title="Android">Android</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2017/11/12/start-from-toast/">Android 源码分析 —— 从 Toast 出发</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        本系列文章在 https://github.com/mzlogin/rtfsc-android 持续更新中，欢迎有兴趣的童鞋们关注。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2017/11/12
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Android" title="Android">Android</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2017/10/24/1024-poses/">程序员节的过节姿势大全</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        今天是 10 月 24 日，不知道你的朋友圈有没有被程序员节刷屏，反正我的是被刷了。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2017/10/24
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Blog" title="Blog">Blog</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="http://localhost:4000/2017/10/14/guanggoo-android-app/">发布一款光谷社区第三方 Android App</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        在过去的一个来月，我利用业余时间做了一款光谷社区的第三方 Android 客户端。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2017/10/14
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="http://localhost:4000/categories/#Android" title="Android">Android</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+            </ol>
+        </div>
+        <div class="column one-third">
+            
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+            
+
+            <h3>My Popular Repositories</h3>
+
+
+
+<a href="https://github.com/mzlogin/awesome-adb" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="awesome-adb">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    awesome-adb
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"><img class="emoji" title=":lollipop:" alt=":lollipop:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f36d.png" height="20" width="20"> ADB Usage Complete / ADB 用法大全</p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="6595 stars">
+                    <span class="octicon octicon-star"></span> 6595
+                </span>
+                <span class="meta-info" title="1450 forks">
+                    <span class="octicon octicon-git-branch"></span> 1450
+                </span>
+                <span class="meta-info" title="Last updated：2019-12-17 22:48:07 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2019-12-17 22:48:07 UTC">2019-12-17</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/mzlogin/chinese-copywriting-guidelines" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="chinese-copywriting-guidelines">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    chinese-copywriting-guidelines
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"><img class="emoji" title=":mahjong:" alt=":mahjong:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f004.png" height="20" width="20"> Chinese Copywriting Guidelines：中文文案排版指北（简体中文版）</p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="2555 stars">
+                    <span class="octicon octicon-star"></span> 2555
+                </span>
+                <span class="meta-info" title="367 forks">
+                    <span class="octicon octicon-git-branch"></span> 367
+                </span>
+                <span class="meta-info" title="Last updated：2019-12-17 19:12:34 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2019-12-17 19:12:34 UTC">2019-12-17</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/mzlogin/mzlogin.github.io" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="mzlogin.github.io">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    mzlogin.github.io
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"><img class="emoji" title=":speak_no_evil:" alt=":speak_no_evil:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f64a.png" height="20" width="20"> My Blog / Jekyll Themes / GitHub Pages 博客模板</p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="810 stars">
+                    <span class="octicon octicon-star"></span> 810
+                </span>
+                <span class="meta-info" title="709 forks">
+                    <span class="octicon octicon-git-branch"></span> 709
+                </span>
+                <span class="meta-info" title="Last updated：2019-12-17 05:28:34 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2019-12-17 05:28:34 UTC">2019-12-17</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/mzlogin/vim-markdown-toc" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="vim-markdown-toc">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    vim-markdown-toc
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"><img class="emoji" title=":package:" alt=":package:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e6.png" height="20" width="20"> A vim 7.4+ plugin to generate table of contents for Markdown files.</p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="275 stars">
+                    <span class="octicon octicon-star"></span> 275
+                </span>
+                <span class="meta-info" title="39 forks">
+                    <span class="octicon octicon-git-branch"></span> 39
+                </span>
+                <span class="meta-info" title="Last updated：2019-12-15 04:21:25 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2019-12-15 04:21:25 UTC">2019-12-15</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/mzlogin/CleanExpert" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="CleanExpert">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    CleanExpert
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"><img class="emoji" title=":green_heart:" alt=":green_heart:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f49a.png" height="20" width="20"> A cleaner app for android</p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="104 stars">
+                    <span class="octicon octicon-star"></span> 104
+                </span>
+                <span class="meta-info" title="46 forks">
+                    <span class="octicon octicon-git-branch"></span> 46
+                </span>
+                <span class="meta-info" title="Last updated：2019-12-16 12:34:46 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2019-12-16 12:34:46 UTC">2019-12-16</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+
+
+        </div>
+    </div>
+    <div class="pagination text-align">
+      <div class="btn-group">
+        
+            <button disabled href="javascript:;" class="btn btn-outline">«</button>
+        
+        
+            <a href="javascript:;" class="active btn btn-outline">1</a>
+        
+        
+          
+              <a href="http://localhost:4000/page2" class="btn btn-outline">2</a>
+          
+        
+          
+              <a href="http://localhost:4000/page3" class="btn btn-outline">3</a>
+          
+        
+          
+              <a href="http://localhost:4000/page4" class="btn btn-outline">4</a>
+          
+        
+          
+              <a href="http://localhost:4000/page5" class="btn btn-outline">5</a>
+          
+        
+          
+              <a href="http://localhost:4000/page6" class="btn btn-outline">6</a>
+          
+        
+          
+              <a href="http://localhost:4000/page7" class="btn btn-outline">7</a>
+          
+        
+          
+              <a href="http://localhost:4000/page8" class="btn btn-outline">8</a>
+          
+        
+          
+              <a href="http://localhost:4000/page9" class="btn btn-outline">9</a>
+          
+        
+          
+              <a href="http://localhost:4000/page10" class="btn btn-outline">10</a>
+          
+        
+          
+              <a href="http://localhost:4000/page11" class="btn btn-outline">11</a>
+          
+        
+        
+            <a href="http://localhost:4000/page2" class="btn btn-outline">»</a>
+        
+        </div>
+    </div>
+    <!-- /pagination -->
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Zhuang Ma">Zhuang Ma</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)">TOP</a>
+                </li>
+            </ul>
+            <a href="https://github.com/mzlogin/mzlogin.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

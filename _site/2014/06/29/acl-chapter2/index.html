@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>ANSI Common Lisp 第二章习题解答 &mdash; 码志</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2014/06/29/acl-chapter2/">
+    <link rel="alternate" type="application/atom+xml" title="码志" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="ANSI Common Lisp 第二章习题解答">
+      
+    <meta name="keywords" content="Lisp">
+    <meta name="og:keywords" content="Lisp">
+      
+    <meta name="description" content="本文是个人对第二章：欢迎来到 Lisp——ANSI Common Lisp 中文版 一文中习题的解答。">
+    <meta name="og:description" content="本文是个人对第二章：欢迎来到 Lisp——ANSI Common Lisp 中文版 一文中习题的解答。">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2014/06/29/acl-chapter2/">
+    <meta property="og:site_name" content="码志">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2014-06-29">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script src="http://localhost:4000/assets/js/main.js"></script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="码志"><span class="octicon octicon-mark-github"></span> 码志</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="ANSI Common Lis">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">ANSI Common Lisp 第二章习题解答</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2014/06/29
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Lisp" title="Lisp">Lisp</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <p>本文是个人对<a href="http://acl.readthedocs.org/en/latest/zhCN/ch2-cn.html">第二章：欢迎来到 Lisp——ANSI Common Lisp 中文版</a> 一文中习题的解答。</p>
+
+<p><strong>1. 描述下列表达式求值之后的结果：</strong></p>
+
+<p>(a) (+ (- 5 1) (+ 3 7))</p>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">14</code></p>
+
+<p>(b) (list 1 (+ 2 3))</p>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">(1 5)</code></p>
+
+<p>(c) (if (listp 1) (+ 1 2) (+ 3 4))</p>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">7</code></p>
+
+<p>(d) (list (and (listp 3) t) (+ 1 2))</p>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">(NIL 3)</code></p>
+
+<p><strong>2. 给出 3 种不同表示 (a b c) 的 cons 表达式 。</strong></p>
+
+<p><strong>答案：</strong></p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">cons</span> <span class="ss">'a</span> <span class="o">'</span><span class="p">(</span><span class="nv">b</span> <span class="nv">c</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">cons</span> <span class="ss">'a</span> <span class="p">(</span><span class="nb">cons</span> <span class="ss">'b</span> <span class="o">'</span><span class="p">(</span><span class="nv">c</span><span class="p">)))</span>
+<span class="p">(</span><span class="nb">cons</span> <span class="ss">'a</span> <span class="p">(</span><span class="nb">cons</span> <span class="ss">'b</span> <span class="p">(</span><span class="nb">cons</span> <span class="ss">'c</span> <span class="no">nil</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<p><strong>3. 使用 car 与 cdr 来定义一个函数，返回一个列表的第四个元素。</strong></p>
+
+<p><strong>答案：</strong></p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">get-forth</span><span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">car</span> <span class="p">(</span><span class="nb">cdr</span> <span class="p">(</span><span class="nb">cdr</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">)))))</span>
+</code></pre></div></div>
+
+<p><strong>4. 定义一个函数，接受两个实参，返回两者当中较大的那个。</strong></p>
+
+<p><strong>答案：</strong></p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">get-max</span><span class="p">(</span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">&lt;</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+    <span class="nv">y</span>
+    <span class="nv">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><strong>5. 这些函数做了什么？</strong></p>
+
+<p>(a)</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">enigma</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nb">not</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">x</span><span class="p">))</span>
+       <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nb">null</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">x</span><span class="p">))</span>
+           <span class="p">(</span><span class="nv">enigma</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">x</span><span class="p">)))))</span>
+</code></pre></div></div>
+
+<p><strong>答案：</strong>判断 x 列表中是否有 nil 元素</p>
+
+<p>(b)</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">mystery</span> <span class="p">(</span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">y</span><span class="p">)</span>
+    <span class="no">nil</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">eql</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">y</span><span class="p">)</span> <span class="nv">x</span><span class="p">)</span>
+      <span class="mi">0</span>
+      <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">z</span> <span class="p">(</span><span class="nv">mystery</span> <span class="nv">x</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">y</span><span class="p">))))</span>
+        <span class="p">(</span><span class="nb">and</span> <span class="nv">z</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">z</span> <span class="mi">1</span><span class="p">))))))</span>
+</code></pre></div></div>
+
+<p><strong>答案：</strong>查找 x 在列表 y 中的下标，如果没有则为 nil</p>
+
+<p><strong>6. 下列表达式， x 该是什么，才会得到相同的结果？</strong></p>
+
+<p>(a) &gt; (car (x (cdr ‘(a (b c) d))))</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B
+</code></pre></div></div>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">car</code></p>
+
+<p>(b) &gt; (x 13 (/ 1 0))</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>13
+</code></pre></div></div>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">or</code></p>
+
+<p>(c) &gt; (x #’list 1 nil)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1)
+</code></pre></div></div>
+
+<p><strong>答案：</strong><code class="language-plaintext highlighter-rouge">or '(1)</code> 或 <code class="language-plaintext highlighter-rouge">apply</code></p>
+
+<p><strong>7. 只使用本章所介绍的操作符，定义一个函数，它接受一个列表作为实参，如果有一个元素是列表时，就返回真。</strong></p>
+
+<p><strong>答案：</strong></p>
+
+<p>非递归版本</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">has-child-list</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="no">nil</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">obj</span> <span class="nv">lst</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">setf</span> <span class="nv">x</span> <span class="p">(</span><span class="nb">or</span> <span class="nv">x</span> <span class="p">(</span><span class="nb">listp</span> <span class="nv">obj</span><span class="p">))))</span>
+    <span class="nv">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>递归版本</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">has-child-list-re</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">lst</span><span class="p">)</span>
+    <span class="no">nil</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">listp</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">lst</span><span class="p">))</span>
+      <span class="no">t</span>
+      <span class="p">(</span><span class="nv">has-child-list-re</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">)))))</span>
+</code></pre></div></div>
+
+<p><strong>8. 给出函数的迭代与递归版本：</strong></p>
+
+<p>a. 接受一个正整数，并打印出数字数量的点。</p>
+
+<p><strong>答案：</strong></p>
+
+<p>非递归版本</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">print-dots</span> <span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">do</span> <span class="p">((</span><span class="nv">i</span> <span class="mi">0</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">i</span> <span class="mi">1</span><span class="p">)))</span>
+    <span class="p">((</span><span class="nb">=</span> <span class="nv">i</span> <span class="nv">n</span> <span class="p">)</span> <span class="ss">'done</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">format</span> <span class="no">t</span> <span class="s">"."</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<p>递归版本</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">print-dots-re</span> <span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">=</span> <span class="nv">n</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="ss">'done</span>
+    <span class="p">(</span><span class="k">progn</span>
+      <span class="p">(</span><span class="nb">format</span> <span class="no">t</span> <span class="s">"."</span><span class="p">)</span>
+      <span class="p">(</span><span class="nv">print-dots-re</span> <span class="p">(</span><span class="nb">-</span> <span class="nv">n</span> <span class="mi">1</span><span class="p">)))))</span>
+</code></pre></div></div>
+
+<p>b. 接受一个列表，并返回 a 在列表里所出现的次数。</p>
+
+<p><strong>答案：</strong></p>
+
+<p>非递归版本：</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">print-a-times</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+   <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">flag</span> <span class="ss">'a</span><span class="p">)(</span><span class="nv">x</span> <span class="mi">0</span><span class="p">))</span>
+     <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">obj</span> <span class="nv">lst</span><span class="p">)</span>
+       <span class="p">(</span><span class="nb">setf</span> <span class="nv">x</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">eql</span> <span class="nv">obj</span> <span class="nv">flag</span><span class="p">)</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">))))</span>
+     <span class="nv">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>递归版本：</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">print-a-times-re</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">lst</span><span class="p">)</span>
+    <span class="mi">0</span>
+    <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">flag</span> <span class="ss">'a</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">eql</span> <span class="nv">flag</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">lst</span><span class="p">))</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">)</span>
+         <span class="p">(</span><span class="nv">print-a-times-re</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">))))))</span>
+</code></pre></div></div>
+
+<p><strong>9. 一位朋友想写一个函数，返回列表里所有非 nil 元素的和。他写了此函数的两个版本，但两个都不能工作。请解释每一个的错误在哪里，并给出正确的版本。</strong></p>
+
+<p>(a)</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">summit</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">remove</span> <span class="no">nil</span> <span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">apply</span> <span class="nf">#'</span><span class="nb">+</span> <span class="nv">lst</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><strong>答案：</strong>因为 remove 并不会改变 lst 本身。正确的程序：</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">summit</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">newlst</span> <span class="p">(</span><span class="nb">remove</span> <span class="no">nil</span> <span class="nv">lst</span><span class="p">)))</span>
+    <span class="p">(</span><span class="nb">apply</span> <span class="nf">#'</span><span class="nb">+</span> <span class="nv">newlst</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<p>(b)</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">summit</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">lst</span><span class="p">)))</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">x</span><span class="p">)</span>
+      <span class="p">(</span><span class="nv">summit</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="p">(</span><span class="nv">summit</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">))))))</span>
+</code></pre></div></div>
+
+<p><strong>答案：</strong>因为递归没有边界退出分支。正确的程序：</p>
+
+<div class="language-cl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">summit</span> <span class="p">(</span><span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">lst</span><span class="p">)</span>
+    <span class="mi">0</span>
+    <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">x</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">lst</span><span class="p">)))</span>
+      <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">null</span> <span class="nv">x</span><span class="p">)</span>
+        <span class="p">(</span><span class="nv">summit</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">))</span>
+        <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="p">(</span><span class="nv">summit</span> <span class="p">(</span><span class="nb">cdr</span> <span class="nv">lst</span><span class="p">)))))))</span>
+</code></pre></div></div>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+            id: '/2014/06/29/acl-chapter2/',
+            clientID: 'd2e1cbbd298958076462',
+            clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
+            repo: 'blog-comments',
+            owner: 'mzlogin',
+            admin: ['mzlogin'],
+            labels: ['gitment'],
+            perPage: 50,
+        })
+        gitalk.render('gitalk-container')
+        </script>
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Zhuang Ma">Zhuang Ma</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="https://github.com/mzlogin/mzlogin.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

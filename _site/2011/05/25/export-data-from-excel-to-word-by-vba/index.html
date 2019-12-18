@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>使用 VBA 将 Excel 数据导入到 Word 表格中 &mdash; 码志</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2011/05/25/export-data-from-excel-to-word-by-vba/">
+    <link rel="alternate" type="application/atom+xml" title="码志" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="使用 VBA 将 Excel 数据导入到 Word 表格中">
+      
+    <meta name="keywords" content="Excel, VBA, Word">
+    <meta name="og:keywords" content="Excel, VBA, Word">
+      
+    <meta name="description" content="需求">
+    <meta name="og:description" content="需求">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2011/05/25/export-data-from-excel-to-word-by-vba/">
+    <meta property="og:site_name" content="码志">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2011-05-25">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script src="http://localhost:4000/assets/js/main.js"></script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="码志"><span class="octicon octicon-mark-github"></span> 码志</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="使用 VBA 将 Excel ">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">使用 VBA 将 Excel 数据导入到 Word 表格中</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2011/05/25
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Excel" title="Excel">Excel</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h2 id="需求">需求</h2>
+
+<p>现要求将一个 Excel 数据表中的每行数据导成一个 Word 文档，即有多少行数据就生成多少个 Word 文档，Excel 每列与 Word 文档中的表格项一一对应。</p>
+
+<h2 id="实现">实现</h2>
+
+<p><strong>前置工作：</strong>将 Word 文档空表格当作模板文档做好，与 Excel 数据源文件置于同一路径下。</p>
+
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Sub</span> <span class="err">分离()</span>
+    <span class="nf">Application</span><span class="p">.</span><span class="n">ScreenUpdating</span> <span class="o">=</span> <span class="k">False</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">Path</span> <span class="o">&amp;</span> <span class="s">"/"</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">p</span> <span class="o">&amp;</span> <span class="s">"空白模板.doc"</span>
+    
+    <span class="k">Dim</span> <span class="nv">myWS</span> <span class="ow">As</span> <span class="n">Worksheet</span>
+    <span class="k">Set</span> <span class="n">myWS</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">Sheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">'存有数据的表格</span>
+    
+    <span class="k">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span> <span class="k">To</span> <span class="mi">54</span>    <span class="c1">'遍历数据行</span>
+        <span class="n">FileCopy</span> <span class="n">f</span><span class="p">,</span> <span class="n">p</span> <span class="o">&amp;</span> <span class="s">"test/"</span> <span class="o">&amp;</span> <span class="n">myWS</span><span class="p">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="n">Text</span> <span class="o">&amp;</span> <span class="s">".doc"</span>    <span class="c1">'复制空模板并以某列数据为名命名新产生的文档</span>
+        <span class="k">Set</span> <span class="n">wd</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">"word.application"</span><span class="p">)</span>
+        <span class="k">Set</span> <span class="n">d</span> <span class="o">=</span> <span class="n">wd</span><span class="p">.</span><span class="n">documents</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="n">p</span> <span class="o">&amp;</span> <span class="s">"test/"</span> <span class="o">&amp;</span> <span class="n">myWS</span><span class="p">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="n">Text</span> <span class="o">&amp;</span> <span class="s">".doc"</span><span class="p">)</span> <span class="c1">'打开新文档</span>
+        
+        <span class="n">d</span><span class="p">.</span><span class="n">tables</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Cell</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">myWS</span><span class="p">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="n">Text</span> <span class="c1">'###</span>
+        <span class="c1">'复制表格每列内容到文档，有多少项就有多少条</span>
+        <span class="n">d</span><span class="p">.</span><span class="n">tables</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Cell</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">myWS</span><span class="p">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">20</span><span class="p">).</span><span class="n">Text</span> <span class="c1">'###</span>
+        
+        <span class="n">d</span><span class="p">.</span><span class="n">Close</span>
+        <span class="n">wd</span><span class="p">.</span><span class="n">Quit</span>
+        <span class="k">Set</span> <span class="n">wd</span> <span class="o">=</span> <span class="k">Nothing</span>
+    <span class="k">Next</span>
+    
+    <span class="n">Application</span><span class="p">.</span><span class="n">ScreenUpdating</span> <span class="o">=</span> <span class="k">True</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></div>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+            id: '/2011/05/25/export-data-from-excel-to-word-by-vba/',
+            clientID: 'd2e1cbbd298958076462',
+            clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
+            repo: 'blog-comments',
+            owner: 'mzlogin',
+            admin: ['mzlogin'],
+            labels: ['gitment'],
+            perPage: 50,
+        })
+        gitalk.render('gitalk-container')
+        </script>
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Zhuang Ma">Zhuang Ma</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="https://github.com/mzlogin/mzlogin.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
