@@ -295,7 +295,7 @@ git reset 5234ab MainActivity.java
 ### 设置全局 hooks
 
 ```sh
-git config --global core.hooksPath C:/Users/mazhuang/git-hooks
+git config --global core.hooksPath C:/Users/king-hcj/git-hooks
 ```
 
 然后把对应的 hooks 文件放在最后一个参数指定的目录即可。

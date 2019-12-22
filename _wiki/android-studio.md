@@ -194,7 +194,7 @@ logcat 默认缓冲区条数不大，在日志比较多的时候经常出现想�
 默认情况下文件头注释里的 author 是当前登录操作系统的用户名，如 Administrator 或 Lenovo 等，如果我们想替换成自己的名字，方法是打开 Android Studio 可执行程序，比如 studio64.exe 同目录下的 studio64.exe.vmoptions，在最下面加入这样一行：
 
 ```
--Duser.name=mazhuang
+-Duser.name=king-hcj
 ```
 
 然后重新启动 Android Studio 即可。
