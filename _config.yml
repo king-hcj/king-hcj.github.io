@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://king-hcj.github.io/
+url: https://king-hcj.github.io
 date_format: "ordinal"
 title: Cheney King
 subtitle: "编码，是一种艺术"
