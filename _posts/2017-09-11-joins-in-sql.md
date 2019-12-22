@@ -6,7 +6,7 @@ description: 用文氏图和示例来理解 SQL 里的各种 JOIN。
 keywords: SQL, Database, 文氏图
 ---
 
-从业以来主要在做客户端，用到的数据库都是表结构比较简单的 SQLite，以我那还给老师一大半的 SQL 水平倒也能对付。现在偶尔需要到后台的 SQL Server 里追查一些数据问题，就显得有点捉襟见肘了，特别是各种 JOIN，有时候傻傻分不清楚，于是索性弄明白并做个记录。
+文氏图和示例来理解 SQL 里的各种 JOIN。
 
 ## 前言
 
@@ -400,9 +400,7 @@ WHERE A.EMP_SUPV_ID = B.EMP_ID;
 
 3. SQLite 不支持 RIGHT JOIN 和 FULL OUTER JOIN，可以使用 LEFT JOIN 和 UNION 来达到相同的效果；
 
-4. MySQL 不支持 FULL OUTER JOIN，可以使用 LEFT JOIN 和 UNION 来达到相同的效果；
-
-假如你对我的文章感兴趣，可以关注我的微信公众号 isprogrammer 随时阅读更多内容。
+4. MySQL 不支持 FULL OUTER JOIN，可以使用 LEFT JOIN 和 UNION 来达到相同的效果。
 
 ## 参考
 

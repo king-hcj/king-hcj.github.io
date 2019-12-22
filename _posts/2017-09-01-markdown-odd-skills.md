@@ -6,9 +6,7 @@ description: 介绍 Markdown 的一些高级用法。
 keywords: Markdown, 奇技淫巧
 ---
 
-自从几年前开始在 GitHub 玩耍，接触到 Markdown 之后，就一发不可收拾，在各种文档编辑上，有条件用 Markdown 的尽量用，不能用的创造条件也要用——README、博客、公众号、接口文档等等全都是，比如当前这篇文章就是用 Markdown 编辑而成。
-
-这几年也发现越来越多的网站和程序提供了对 Markdown 的支持，从最初接触的 GitHub、Jekyll，到简书、掘金、CSDN 等等，由此也从别人做得好的文档中，学到了一些『奇技淫巧』，所以本文不是对 Markdown 基础语法的介绍，而是一些相对高级、能将 Markdown 玩出更多花样的小技巧。
+&emsp;&emsp;这几年也发现越来越多的网站和程序提供了对 Markdown 的支持，从GitHub、Jekyll到简书、掘金、CSDN 等，由此也从别人做得好的文档中，学到了一些『奇技淫巧』，所以本文不是对 Markdown 基础语法的介绍，而是一些相对高级、能将 Markdown 玩出更多花样的小技巧。
 
 *注：如下技巧大多是利用 Markdown 兼容部分 HTML 标签的特性来完成，不一定在所有网站和软件里都完全支持，主要以 GitHub 支持为准。*
 
@@ -205,19 +203,15 @@ N 与图片高度有关。
 
 有时候维护一份比较长的文档，希望能够自动根据文档中的标题生成目录（Table of Contents），并且当标题有变化时自动更新目录，能减轻工作量，也不易出错。
 
-如果你使用 Vim 编辑器，那可以使用我维护的插件 [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) 来帮你完美地解决此事：
+如果你使用 Vim 编辑器，那可以使用插件 [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) 来帮你完美地解决此事：
 
 ![](https://raw.githubusercontent.com/mzlogin/vim-markdown-toc/master/screenshots/english.gif)
-
-插件地址：<https://github.com/mzlogin/vim-markdown-toc>
 
 如果你使用其它编辑器，一般也能找到对应的解决方案，比如 Atom 编辑器的 [markdown-toc](https://atom.io/packages/markdown-toc) 插件，Sublime Text 的 [MarkdownTOC](https://packagecontrol.io/packages/MarkdownTOC) 插件等。
 
 ## 后话
 
 好了，这一波的奇技淫巧就此告一段落，希望大家在了解这些之后能有所收获，更好地排版，专注写作。
-
-如果你觉得本文对你有帮助，欢迎关注我的微信公众号 isprogrammer，获取更多有帮助的内容。
 
 ## 参考
 

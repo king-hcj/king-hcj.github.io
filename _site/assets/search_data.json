@@ -63,14 +63,9 @@
   
   
   
-
   
-    {
-      "title"    : "青蛙跳台阶的问题——Fibonacci",
-      "category" : "Algorithm",
-      
-      "url"      : "http://localhost:4000/2011/10/11/fibonacci/"
-    } ,
+  
+
   
     {
       "title"    : "C++ 语言基础",
@@ -101,13 +96,6 @@
     } ,
   
     {
-      "title"    : "如何有效使用 GitHub",
-      "category" : "GitHub",
-      
-      "url"      : "http://localhost:4000/2016/04/07/how-to-use-github-effective/"
-    } ,
-  
-    {
       "title"    : "关于 Markdown 的一些奇技淫巧",
       "category" : "Markdown",
       
@@ -122,10 +110,31 @@
     } ,
   
     {
-      "title"    : "一份简明的 Markdown 笔记与教程",
-      "category" : "Markdown",
+      "title"    : "慕课视频等综合学习笔记",
+      "category" : "Comprehensive",
       
-      "url"      : "http://localhost:4000/2018/09/06/markdown-intro/"
+      "url"      : "http://localhost:4000/2018/12/12/aiyongbao-study/"
+    } ,
+  
+    {
+      "title"    : "《React全家桶+AntD 共享单车后台管理系统开发》笔记",
+      "category" : "AntD",
+      
+      "url"      : "http://localhost:4000/2019/05/23/AntD/"
+    } ,
+  
+    {
+      "title"    : "JS技巧技法总结",
+      "category" : "Comprehensive",
+      
+      "url"      : "http://localhost:4000/2019/08/08/js-skills/"
+    } ,
+  
+    {
+      "title"    : "前端综合笔记",
+      "category" : "Comprehensive",
+      
+      "url"      : "http://localhost:4000/2019/12/22/angle-aiqier/"
     } ,
   
     {
