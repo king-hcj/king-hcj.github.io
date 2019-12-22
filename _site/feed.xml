@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T18:40:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T18:43:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
 &lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
 &lt;ul&gt;
@@ -15,18 +15,18 @@
 &lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
 &lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
   &lt;li&gt;Web攻城狮培养计划之进击JavaScript核心视频课程（&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B&quot;&gt;见网盘&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;ES6零基础教学解析彩票项目(有图片总结)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;React全家桶+AntD 共享单车后台管理系统开发&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Redux+react+Router+Node.js全栈开发(&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91&quot;&gt;见网盘&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/179.html&quot;&gt;React16+React-Router4 从零打造企业级电商后台管理系统&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/348.html&quot;&gt;React劲爆新特性Hooks 重构去哪儿网火车票PWA&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/334.html&quot;&gt;React16.8+Next.js+Koa2开发Github全栈项目&lt;/a&gt;(只看了第三章)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战 手把手带你掌握新版Webpack4.0&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;四大维度解锁 Webpack 3.0 前端工程化(网盘)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;《Node.js入门到企业Web开发中的应用》&lt;/a&gt;&lt;/li&gt;
