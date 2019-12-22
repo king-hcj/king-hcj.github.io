@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T18:37:08+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T18:40:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
 &lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
 &lt;ul&gt;
@@ -1415,37 +1415,7 @@ N 与图片高度有关。
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/matiassingers/awesome-readme/master/readme.md&quot;&gt;https://raw.githubusercontent.com/matiassingers/awesome-readme/master/readme.md&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.zybuluo.com/songpfei/note/247346&quot;&gt;https://www.zybuluo.com/songpfei/note/247346&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">自从几年前开始在 GitHub 玩耍，接触到 Markdown 之后，就一发不可收拾，在各种文档编辑上，有条件用 Markdown 的尽量用，不能用的创造条件也要用——README、博客、公众号、接口文档等等全都是，比如当前这篇文章就是用 Markdown 编辑而成。</summary></entry><entry><title type="html">我做了一个有点艰难的决定</title><link href="http://localhost:4000/2017/04/09/a-difficult-decision/" rel="alternate" type="text/html" title="我做了一个有点艰难的决定" /><published>2017-04-09T00:00:00+08:00</published><updated>2017-04-09T00:00:00+08:00</updated><id>http://localhost:4000/2017/04/09/a-difficult-decision</id><content type="html" xml:base="http://localhost:4000/2017/04/09/a-difficult-decision/">&lt;p&gt;我做了一个有点艰难的决定，离开帝都，回到了武汉工作和生活。&lt;/p&gt;
-
-&lt;p&gt;这让我想起近几年在各种新闻流标题里经常看到的两种说法，“逃离北上广”和“逃回北上广”，既然是逃，自然便是有什么东西在后面追，或者是高房价，或者是职业前景，或者是生活压力。回首我自己的决策过程，虽然也像现在好多年轻人一样处在“留不下的城市，回不去的故乡”的尴尬境地里，有一些无奈的成分，庆幸的是选择的成分相对还是更多一点。&lt;/p&gt;
-
-&lt;p&gt;身处北京时，常有一种莫名的“临时感”，总感觉生活里的很多东西都是临时不可长久持续的：房子是租来的，不想花钱和精力去提升它的舒适度；工作和同事们很给力，但不知道什么时候会中断，离开；想进行一些学习与深造，会考虑周期那么长，会不会无法在北京待到学完的时候？后来我明白了，这就是一个心态的问题，总认为生活不在北京，在未来的某个地方。想起多年前非常火的一个词，北漂，在北京的这些年头里从来没把自己跟这个词联系起来，但实际上我就是北漂，身漂心也漂。&lt;/p&gt;
-
-&lt;p&gt;我曾经跟小别同学讲说，有时候加个班回家晚，在路上听到《北京北京》鼻子会有点酸，她表示无法理解这种感受。其实早些年我也不会，也许是我老了。&lt;/p&gt;
-
-&lt;p&gt;即使心里非常清楚这样一个决定会给生活带来颠覆式的变化，我也还是比较匆忙地结束了在北京的一切，匆忙地做了工作交接，匆忙地与朋友们告别，约或者不约，故意推迟周知朋友们的时间，因为怕过渡期时间久会引得自己惆怅和伤感，但这些又如何避免得了呢。&lt;/p&gt;
-
-&lt;p&gt;我知道我从此放弃了一些东西，我将逐渐淡出几年里融入的圈子，跟好些朋友也许从此不会再见。&lt;/p&gt;
-
-&lt;p&gt;我也知道我将收获很多新的东西，认识很多不同的人，见到很多不一样的风景。我有点失落，但并不慌张，我告诉自己牢记一点：每当迷失方向，想想曾经艰难地放弃过什么。&lt;/p&gt;
-
-&lt;p&gt;在纠结惆怅的日子里，我曾经一度以为我要放弃的还有梦想，但后来想通了，不是只有北上广才能承载梦想，与我爱的人一起幸福平静地生活，我正奔着这个梦想而去。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;何必寻找所谓的天堂&lt;/p&gt;
-
-  &lt;p&gt;原来我 因为你&lt;/p&gt;
-
-  &lt;p&gt;不想再去流浪&lt;/p&gt;
-
-  &lt;p&gt;情愿平凡 不拥有一切也无妨&lt;/p&gt;
-
-  &lt;p&gt;有了你 在心上&lt;/p&gt;
-
-  &lt;p&gt;已然是天堂&lt;/p&gt;
-
-  &lt;p&gt;— 光良《天堂》&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Cheney King</name></author><summary type="html">我做了一个有点艰难的决定，离开帝都，回到了武汉工作和生活。</summary></entry><entry><title type="html">如何有效使用 GitHub</title><link href="http://localhost:4000/2016/04/07/how-to-use-github-effective/" rel="alternate" type="text/html" title="如何有效使用 GitHub" /><published>2016-04-07T00:00:00+08:00</published><updated>2016-04-07T00:00:00+08:00</updated><id>http://localhost:4000/2016/04/07/how-to-use-github-effective</id><content type="html" xml:base="http://localhost:4000/2016/04/07/how-to-use-github-effective/">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">自从几年前开始在 GitHub 玩耍，接触到 Markdown 之后，就一发不可收拾，在各种文档编辑上，有条件用 Markdown 的尽量用，不能用的创造条件也要用——README、博客、公众号、接口文档等等全都是，比如当前这篇文章就是用 Markdown 编辑而成。</summary></entry><entry><title type="html">如何有效使用 GitHub</title><link href="http://localhost:4000/2016/04/07/how-to-use-github-effective/" rel="alternate" type="text/html" title="如何有效使用 GitHub" /><published>2016-04-07T00:00:00+08:00</published><updated>2016-04-07T00:00:00+08:00</updated><id>http://localhost:4000/2016/04/07/how-to-use-github-effective</id><content type="html" xml:base="http://localhost:4000/2016/04/07/how-to-use-github-effective/">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;GitHub 是很多「modern」程序员使用频度很高的网站，但各人从中汲取的养分不同。有的人借助它的力量扬名立万成为一代大神；有的人迷失其中，天天在其中流连却成长有限。&lt;/p&gt;
 
@@ -2043,4 +2013,95 @@ default constructor
 copy constructor
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">面试中遇到的 C++ 语言基础试题。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">面试中遇到的 C++ 语言基础试题。</summary></entry><entry><title type="html">青蛙跳台阶的问题——Fibonacci</title><link href="http://localhost:4000/2011/10/11/fibonacci/" rel="alternate" type="text/html" title="青蛙跳台阶的问题——Fibonacci" /><published>2011-10-11T00:00:00+08:00</published><updated>2011-10-11T00:00:00+08:00</updated><id>http://localhost:4000/2011/10/11/fibonacci</id><content type="html" xml:base="http://localhost:4000/2011/10/11/fibonacci/">&lt;p&gt;这几天正在复习算法，今天在看一篇文章时偶然看到这个题目，想了一下居然没什么思路……（抱歉，实在太菜。)，文章中提示了一个关键词：Fibonacci 数列。然后我又小百度了一下，找了一个具体分析实例，结合两处，这才理清了思路。（汗啊……基础全忘光了，这以后咋办啊……深感担忧……)&lt;/p&gt;
+
+&lt;h3 id=&quot;问题描述&quot;&gt;问题描述&lt;/h3&gt;
+
+&lt;p&gt;一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级台阶，请问这只青蛙跳上 n 级的台阶总共有多少种跳法？&lt;/p&gt;
+
+&lt;h3 id=&quot;问题分析&quot;&gt;问题分析&lt;/h3&gt;
+
+&lt;p&gt;设青蛙跳上 n 级台阶的跳法为 f(n) 种。&lt;/p&gt;
+
+&lt;p&gt;设 Fibonacci 数列的第 x 项值为 fibo(x)。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;当 n=1 时，f(n)=1=fibo(2)&lt;/li&gt;
+  &lt;li&gt;当 n=2 时，f(n)=2=fibo(3)&lt;/li&gt;
+  &lt;li&gt;当 n&amp;gt;2 时，分析可知，在跳上第 n 级台阶前一步，必然是在第 (n-1) 或 (n-2) 级台阶，故有 f(n) = f(n-1) + f(n-2); 依此类推……&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;则有：&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;f(n)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= f(n-1) + f(n-2)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= 2f(n-2) + f(n-3)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= 3f(n-3) + 2f(n-4)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= 5 f(n-4) + 3f(n-5)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= 8f(n-5) + 5f(n-6)&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= …&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= fibo(x+1)f(n-x)+fibo(x)f(n-(x+1))&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;=…&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= fibo(n-1)f(n-(n-2)) + fibo(n-2)f(n-(n-1))&lt;/del&gt;&lt;br /&gt;
+&lt;del&gt;= fibo(n-1)f(2) + fibo(n-2)f(1)&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;f(n) 的规律符合 Fibonacci 数列的规律，它与 Fibonacci 的区别是 Fibonacci 的前两个元素是 1，1，而 f(n) 的规律是 1，2，即可知有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f(n)=fibo(n+1)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;简单的-c-实现&quot;&gt;简单的 C++ 实现&lt;/h3&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 非递归写法&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 获取 Fibonacci 数列的第 N 项值&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//// 递归写法&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//int fibo(int n)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//    if(n == 1 || n == 2)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//        return 1;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//    else&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//        return fibo(n-1) + fibo(n-2);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;请输入楼梯的级数：&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//if(1==n)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//    sum = 1;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//else if (2==n)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//    sum = 2;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//else&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//    sum = 2 * fibo(n-1) + fibo(n-2);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;共有 &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; 种跳法。&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Cheney King</name></author><summary type="html">这几天正在复习算法，今天在看一篇文章时偶然看到这个题目，想了一下居然没什么思路……（抱歉，实在太菜。)，文章中提示了一个关键词：Fibonacci 数列。然后我又小百度了一下，找了一个具体分析实例，结合两处，这才理清了思路。（汗啊……基础全忘光了，这以后咋办啊……深感担忧……)</summary></entry></feed>

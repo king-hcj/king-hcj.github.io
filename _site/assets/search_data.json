@@ -63,8 +63,6 @@
   
   
   
-  
-  
 
   
     {
@@ -107,13 +105,6 @@
       "category" : "GitHub",
       
       "url"      : "http://localhost:4000/2016/04/07/how-to-use-github-effective/"
-    } ,
-  
-    {
-      "title"    : "我做了一个有点艰难的决定",
-      "category" : "Blog",
-      
-      "url"      : "http://localhost:4000/2017/04/09/a-difficult-decision/"
     } ,
   
     {
