@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T20:51:18+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端综合笔记</title><link href="http://localhost:4000/2019/12/22/angle-aiqier/" rel="alternate" type="text/html" title="前端综合笔记" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/angle-aiqier</id><content type="html" xml:base="http://localhost:4000/2019/12/22/angle-aiqier/">&lt;p&gt;这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T17:29:49+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">2020年个人OKR关注点</title><link href="http://localhost:4000/2019/12/23/okr/" rel="alternate" type="text/html" title="2020年个人OKR关注点" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/okr</id><content type="html" xml:base="http://localhost:4000/2019/12/23/okr/">&lt;h1 id=&quot;2020年个人okr关注点&quot;&gt;2020年个人OKR关注点&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;原生开发的能力&lt;/li&gt;
+  &lt;li&gt;基于NodeJs的全栈开发能力（Nginx、Go、Java）&lt;/li&gt;
+  &lt;li&gt;基于React Native、Flutter、小程序的移动端开发能力&lt;/li&gt;
+  &lt;li&gt;React和Vue底层原理、思想、源码的阅读学习&lt;/li&gt;
+  &lt;li&gt;性能优化、网络安全、网络协议、SQL、计算机组成原理、数据结构和算法、数学能力&lt;/li&gt;
+  &lt;li&gt;项目构建能力，持续集成、持续交付能力&lt;/li&gt;
+  &lt;li&gt;前沿技术动态的把控&lt;/li&gt;
+  &lt;li&gt;知识输出能力和个人前端体系的构建&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">2020年个人OKR关注点 原生开发的能力 基于NodeJs的全栈开发能力（Nginx、Go、Java） 基于React Native、Flutter、小程序的移动端开发能力 React和Vue底层原理、思想、源码的阅读学习 性能优化、网络安全、网络协议、SQL、计算机组成原理、数据结构和算法、数学能力 项目构建能力，持续集成、持续交付能力 前沿技术动态的把控 知识输出能力和个人前端体系的构建</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
+
+&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;《深入理解ES6》 —— Nicholas C. Zakas&lt;/li&gt;
+  &lt;li&gt;《React进阶之路》 —— 徐超&lt;/li&gt;
+  &lt;li&gt;《高效前端：Web高效编程与优化实践》 —— 李银城&lt;/li&gt;
+  &lt;li&gt;《JavaScript高级程序设计（第3版）》 —— Nicholas C. Zakas（差三章左右）&lt;/li&gt;
+  &lt;li&gt;《CSS世界》 —— 张鑫旭（未读完）&lt;/li&gt;
+  &lt;li&gt;《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;开源链接&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;《深入React技术栈》 —— 陈屹（未读完）&lt;/li&gt;
+  &lt;li&gt;《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
+&lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
+  &lt;li&gt;Web攻城狮培养计划之进击JavaScript核心视频课程（&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B&quot;&gt;见网盘&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ES6零基础教学解析彩票项目(有图片总结)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;React全家桶+AntD 共享单车后台管理系统开发&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Redux+react+Router+Node.js全栈开发(&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91&quot;&gt;见网盘&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/179.html&quot;&gt;React16+React-Router4 从零打造企业级电商后台管理系统&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/348.html&quot;&gt;React劲爆新特性Hooks 重构去哪儿网火车票PWA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/334.html&quot;&gt;React16.8+Next.js+Koa2开发Github全栈项目&lt;/a&gt;(只看了第三章)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战 手把手带你掌握新版Webpack4.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;四大维度解锁 Webpack 3.0 前端工程化(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;《Node.js入门到企业Web开发中的应用》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot;&gt;《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/808&quot;&gt;ReactNative入门与进阶&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot;&gt;新版React Native从入门到实战 打造高质量上线App&lt;/a&gt;(未看完)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/50&quot;&gt;Yahoo军规&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;Web App用组件方式开发全站(网盘，旧技术切图)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/763&quot;&gt;TypeScript入门&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot;&gt;《基于TypeScript从零重构axios》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1035&quot;&gt;Flutter开发第一步-Dart编程语言入门&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1090&quot;&gt;Flutter入门与案例实战&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot;&gt;Flutter从入门到进阶实战携程网App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/sc/?plan_id=64&quot;&gt;Java零基础入门&lt;/a&gt;(开始)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/643&quot;&gt;CSS深入理解之z-index&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot;&gt;《全面系统讲解CSS 工作应用+面试一步搞定》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;快速上手Linux玩转典型应用(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/214.html&quot;&gt;区块链入门与去中心化应用实战&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1084&quot;&gt;Taro多端框架开发外卖首页&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/306.html&quot;&gt;掌握Taro多端框架 快速上手小程序H5开发&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/183.html&quot;&gt;《微信小游戏入门与实战 刷爆朋友圈》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/34&quot;&gt;《从0开始学爬虫》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/35&quot;&gt;《零基础学透TypeScript》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;极客时间&quot;&gt;极客时间&lt;/h2&gt;
+&lt;h3 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《浏览器工作原理与实践》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《重学前端》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;(在看)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《左耳听风》&lt;/a&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/145&quot;&gt;《玩转Git三剑客》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;掘金&quot;&gt;掘金&lt;/h2&gt;
+&lt;h3 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a6abad5518825733c144469&quot;&gt;《使用 webpack 定制前端开发环境》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5c526902e51d4543805ef35e&quot;&gt;《你不知道的Chrome调试技巧》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a1212bc51882531ea64df07&quot;&gt;《用npm script打造超溜的前端工作流》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5b936540f265da0a9624b04b&quot;&gt;《前端性能优化原理与实践》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5bdc715fe51d454e755f75ef&quot;&gt;《前端面试之道》&lt;/a&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;51cto&quot;&gt;51CTO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://edu.51cto.com/course/10543.html&quot;&gt;Vue. js2.0之全家桶系列&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;其他经典&quot;&gt;其他经典&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yuchengkai.cn/&quot;&gt;前端进阶之道&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections&quot;&gt;掘金&lt;/a&gt;、知乎、思否、微信公众号文章、慕课手记等&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry><entry><title type="html">前端综合笔记</title><link href="http://localhost:4000/2019/12/22/angle-aiqier/" rel="alternate" type="text/html" title="前端综合笔记" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/angle-aiqier</id><content type="html" xml:base="http://localhost:4000/2019/12/22/angle-aiqier/">&lt;p&gt;这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。&lt;/p&gt;
 
 &lt;h1 id=&quot;react-intl&quot;&gt;React-intl&lt;/h1&gt;
 &lt;ol&gt;
@@ -596,99 +698,63 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
       &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;主题选择&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">箭头函数和普通函数的区别</title><link href="http://localhost:4000/2019/12/21/func-and-arrow-func/" rel="alternate" type="text/html" title="箭头函数和普通函数的区别" /><published>2019-12-21T00:00:00+08:00</published><updated>2019-12-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/21/func-and-arrow-func</id><content type="html" xml:base="http://localhost:4000/2019/12/21/func-and-arrow-func/">&lt;p&gt;今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：&lt;/p&gt;
 
-&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;《深入理解ES6》 —— Nicholas C. Zakas&lt;/li&gt;
-  &lt;li&gt;《React进阶之路》 —— 徐超&lt;/li&gt;
-  &lt;li&gt;《高效前端：Web高效编程与优化实践》 —— 李银城&lt;/li&gt;
-  &lt;li&gt;《JavaScript高级程序设计（第3版）》 —— Nicholas C. Zakas（差三章左右）&lt;/li&gt;
-  &lt;li&gt;《CSS世界》 —— 张鑫旭（未读完）&lt;/li&gt;
-  &lt;li&gt;《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;开源链接&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;《深入React技术栈》 —— 陈屹（未读完）&lt;/li&gt;
-  &lt;li&gt;《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;ES6标准新增了一种新的函数：Arrow Function（箭头函数），为什么叫Arrow Function？因为它的定义用的就是一个箭头，那么，它和普通函数有哪些不同呢？&lt;/p&gt;
 
-&lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
-&lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
+&lt;h3 id=&quot;箭头函数的特点&quot;&gt;箭头函数的特点&lt;/h3&gt;
+&lt;p&gt;箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种只包含一个表达式，连{ … }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{ … }和return。&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
-  &lt;li&gt;Web攻城狮培养计划之进击JavaScript核心视频课程（&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B&quot;&gt;见网盘&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;ES6零基础教学解析彩票项目(有图片总结)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;React全家桶+AntD 共享单车后台管理系统开发&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Redux+react+Router+Node.js全栈开发(&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91&quot;&gt;见网盘&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/179.html&quot;&gt;React16+React-Router4 从零打造企业级电商后台管理系统&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/348.html&quot;&gt;React劲爆新特性Hooks 重构去哪儿网火车票PWA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/334.html&quot;&gt;React16.8+Next.js+Koa2开发Github全栈项目&lt;/a&gt;(只看了第三章)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战 手把手带你掌握新版Webpack4.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;四大维度解锁 Webpack 3.0 前端工程化(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;《Node.js入门到企业Web开发中的应用》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot;&gt;《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/808&quot;&gt;ReactNative入门与进阶&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot;&gt;新版React Native从入门到实战 打造高质量上线App&lt;/a&gt;(未看完)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/50&quot;&gt;Yahoo军规&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;Web App用组件方式开发全站(网盘，旧技术切图)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/763&quot;&gt;TypeScript入门&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot;&gt;《基于TypeScript从零重构axios》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1035&quot;&gt;Flutter开发第一步-Dart编程语言入门&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1090&quot;&gt;Flutter入门与案例实战&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot;&gt;Flutter从入门到进阶实战携程网App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/sc/?plan_id=64&quot;&gt;Java零基础入门&lt;/a&gt;(开始)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/643&quot;&gt;CSS深入理解之z-index&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot;&gt;《全面系统讲解CSS 工作应用+面试一步搞定》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;快速上手Linux玩转典型应用(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/214.html&quot;&gt;区块链入门与去中心化应用实战&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1084&quot;&gt;Taro多端框架开发外卖首页&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/306.html&quot;&gt;掌握Taro多端框架 快速上手小程序H5开发&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/183.html&quot;&gt;《微信小游戏入门与实战 刷爆朋友圈》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/34&quot;&gt;《从0开始学爬虫》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/35&quot;&gt;《零基础学透TypeScript》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;极客时间&quot;&gt;极客时间&lt;/h2&gt;
-&lt;h3 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《浏览器工作原理与实践》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《重学前端》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;(在看)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《左耳听风》&lt;/a&gt;(在看)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/145&quot;&gt;《玩转Git三剑客》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;掘金&quot;&gt;掘金&lt;/h2&gt;
-&lt;h3 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a6abad5518825733c144469&quot;&gt;《使用 webpack 定制前端开发环境》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5c526902e51d4543805ef35e&quot;&gt;《你不知道的Chrome调试技巧》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a1212bc51882531ea64df07&quot;&gt;《用npm script打造超溜的前端工作流》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5b936540f265da0a9624b04b&quot;&gt;《前端性能优化原理与实践》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5bdc715fe51d454e755f75ef&quot;&gt;《前端面试之道》&lt;/a&gt;(在看)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;51cto&quot;&gt;51CTO&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://edu.51cto.com/course/10543.html&quot;&gt;Vue. js2.0之全家桶系列&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;其他经典&quot;&gt;其他经典&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://yuchengkai.cn/&quot;&gt;前端进阶之道&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections&quot;&gt;掘金&lt;/a&gt;、知乎、思否、微信公众号文章、慕课手记等&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry><entry><title type="html">JS技巧技法总结</title><link href="http://localhost:4000/2019/08/08/js-skills/" rel="alternate" type="text/html" title="JS技巧技法总结" /><published>2019-08-08T00:00:00+08:00</published><updated>2019-08-08T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/08/js-skills</id><content type="html" xml:base="http://localhost:4000/2019/08/08/js-skills/">&lt;p&gt;开发、阅读、学习中接触到的一些知识点。&lt;/p&gt;
+  &lt;li&gt;相比普通函数，箭头函数有更简洁的语法&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;箭头函数不绑定this，会捕获其所在的上下文的this值，作为自己的this值&lt;/strong&gt;
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。&lt;/li&gt;
+        &lt;li&gt;把动态this转换为静态this：长期以来，JavaScript 语言的this对象一直是一个令人头痛的问题，在对象方法中使用this，必须非常小心。箭头函数”绑定”this，很大程度上解决了这个困扰。&lt;/li&gt;
+        &lt;li&gt;箭头函数可以让this指向固定化，这种特性很有利于封装回调函数。&lt;/li&gt;
+        &lt;li&gt;原理: this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;箭头函数是匿名函数，不能作为构造函数，不可以使用new命令，否则会抛出一个错误。所以箭头函数也不具有new.target。
+    &lt;blockquote&gt;
+      &lt;p&gt;原因：构造函数的new都做了些什么？简单来说，分为四步&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;ul&gt;
+      &lt;li&gt;JS内部首先会先生成一个对象；&lt;/li&gt;
+      &lt;li&gt;再把函数中的this指向该对象；&lt;/li&gt;
+      &lt;li&gt;然后执行构造函数中的语句；&lt;/li&gt;
+      &lt;li&gt;最终返回该对象实例。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller
+    &lt;blockquote&gt;
+      &lt;p&gt;不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：&lt;/p&gt;
+      &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   const testFunc = (...args)=&amp;gt;{
+       console.log(args) //数组形式输出参数
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用call()、apply()和bind()调用，对 this 没有什么影响
+    &lt;blockquote&gt;
+      &lt;p&gt;由于 this 已经在词法层面完成了绑定，通过 call()、 apply()、bind() 方法调用一个函数时，只传入了一个参数，对 this 并没有什么影响&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;箭头函数没有原型属性prototype&lt;/li&gt;
+  &lt;li&gt;不能简单返回对象字面量
+    &lt;blockquote&gt;
+      &lt;p&gt;如果要直接返回对象时需要用小括号包起来，因为大括号被占用解释为代码块了&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;不能使用yield关键字，因此箭头函数不能用作 Generator 函数。&lt;/li&gt;
+  &lt;li&gt;箭头函数括号后面不能换行；&lt;/li&gt;
+  &lt;li&gt;箭头函数不具有super。
+    &lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;箭头函数的 this 永远指向其上下文的  this ，任何方法都改变不了其指向，如 call() ,  bind() ,  apply() ，可以说正是因为没有自己的this，才使其具备了以上介绍的大部分特点；&lt;/li&gt;
+  &lt;li&gt;普通函数的this指向调用它的那个对象&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：</summary></entry><entry><title type="html">JS技巧技法总结</title><link href="http://localhost:4000/2019/08/08/js-skills/" rel="alternate" type="text/html" title="JS技巧技法总结" /><published>2019-08-08T00:00:00+08:00</published><updated>2019-08-08T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/08/js-skills</id><content type="html" xml:base="http://localhost:4000/2019/08/08/js-skills/">&lt;p&gt;开发、阅读、学习中接触到的一些知识点。&lt;/p&gt;
 
 &lt;h2 id=&quot;js技巧&quot;&gt;JS技巧&lt;/h2&gt;
 &lt;h3 id=&quot;js计数器的几种实现&quot;&gt;JS计数器的几种实现&lt;/h3&gt;
@@ -1991,150 +2057,4 @@ alen = UBound(arr) - LBound(arr) + 1
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://software-solutions-online.com/converting-data-types/&quot;&gt;VBA Converting Data Types&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6d5dcf100101bkhz.html##1&quot;&gt;excel vba判断文件是否存在&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">文件操作</summary></entry><entry><title type="html">简单的全排列算法实现</title><link href="http://localhost:4000/2011/11/20/permutation/" rel="alternate" type="text/html" title="简单的全排列算法实现" /><published>2011-11-20T00:00:00+08:00</published><updated>2011-11-20T00:00:00+08:00</updated><id>http://localhost:4000/2011/11/20/permutation</id><content type="html" xml:base="http://localhost:4000/2011/11/20/permutation/">&lt;h3 id=&quot;问题描述&quot;&gt;问题描述&lt;/h3&gt;
-
-&lt;p&gt;实现一个简单的全排列算法，以整形数组{1,2,3,4,5}为例，假设元素无重复。&lt;/p&gt;
-
-&lt;h3 id=&quot;问题分析&quot;&gt;问题分析&lt;/h3&gt;
-
-&lt;p&gt;如果用多层循环来实现，那么……有多少个元素将需要有多少层循环，这样作为实现一个算法的角度来看显然是不可取的。&lt;/p&gt;
-
-&lt;p&gt;以 a[] = {1,2,3,4,5}为例，它的全排列是&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1　{2,3,4,5}的全排列
-2  {1,3,4,5}的全排列
-3  {1,2,4,5}的全排列
-4  {1,2,3,5}的全排列
-5  {1,2,3,4}的全排列
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;由子数组的全排列得到母数组的全排列结果，可以考虑用递归实现，具体可以设计为将 a 依次变换为&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;12345
-21345
-31245
-41235
-51234
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后分别求它们后四个元素的全排列，依此类推。&lt;/p&gt;
-
-&lt;h3 id=&quot;简单的-c-实现&quot;&gt;简单的 C++ 实现&lt;/h3&gt;
-
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swapint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fullarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt; 
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 数组长度&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 开始下标&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iLen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;swapint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;fullarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;swapint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fullarray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;总共&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;种&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;参考：&lt;a href=&quot;http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html&quot;&gt;http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html&lt;/a&gt;&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">问题描述</summary></entry><entry><title type="html">操作系统和数据库基础</title><link href="http://localhost:4000/2011/11/06/basis/" rel="alternate" type="text/html" title="操作系统和数据库基础" /><published>2011-11-06T00:00:00+08:00</published><updated>2011-11-06T00:00:00+08:00</updated><id>http://localhost:4000/2011/11/06/basis</id><content type="html" xml:base="http://localhost:4000/2011/11/06/basis/">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;进程与线程的差别&lt;/p&gt;
-
-    &lt;p&gt;进程是程序的一次执行。线程可以理解为进程中执行的一段程序片段。在一个多任务环境下中下面的概念可以帮助我们理解两者的区别。&lt;/p&gt;
-
-    &lt;p&gt;进程间是独立的，这表现在内存空间，上下文环境上；线程运行在进程空间里。一般来讲（不使用特殊技术），进程无法突破进程边界存取其它进程内的存储空间；而线程由于处于线程空间内，所以同一进程所产生的线程共享内一内存空间。同一进程中的两段代码不能够同时执行，除非引入线程。&lt;/p&gt;
-
-    &lt;p&gt;线程是属于进程的，当进程退出时该进程所产生的线程都会被强制退出并清除。线程占用的资源要少于进程所占用的资料。&lt;/p&gt;
-
-    &lt;p&gt;进程和线程都可以有优先级。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;进程间通信的方式&lt;/p&gt;
-
-    &lt;p&gt;现在最常用进程间通信的方式有信号，信号量，消息队列，共享内存。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;线程同步的方法&lt;/p&gt;
-
-    &lt;p&gt;临界区，互斥量，信号量，事件。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;DLL 文件的作用&lt;/p&gt;
-
-    &lt;p&gt;(1)拓展应用程序&lt;/p&gt;
-
-    &lt;p&gt;(2)便于程序员合作&lt;/p&gt;
-
-    &lt;p&gt;(3)节省内存&lt;/p&gt;
-
-    &lt;p&gt;(4)共享程序资源&lt;/p&gt;
-
-    &lt;p&gt;(5)解决应用程序本地化问题&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;什么是存储过程?&lt;/p&gt;
-
-    &lt;p&gt;存储过程是一组为了完成特定功能的 SQL 语句集。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;什么是触发器?&lt;/p&gt;
-
-    &lt;p&gt;触发器是一个特殊的存储过程，它的执行不是由程序调动，也不由手工启动，而是由事件来触发。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;什么是事务?&lt;/p&gt;
-
-    &lt;p&gt;事务是访问并可能更新数据库中各种数据项的一个程序执行单元。&lt;/p&gt;
-
-    &lt;p&gt;(在关系数据库中，一个事务可以是一条SQL语句，一组 SQL 语句或整个程序)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;事务的几个特性&lt;/p&gt;
-
-    &lt;p&gt;(1)一致性：将事务中所做的操作捆绑成一个原子单元，即对于事务所进行的数据修改等操作，要么全部执行，要么全部不执行。&lt;/p&gt;
-
-    &lt;p&gt;(2)原子性：事务在完成时，必须使所有的数据都保持一致状态，而且在相关数据中，所有规则都必须应用于事务的修改，以保持所有数据的完整性。事务结束时，所有的内部数据结构都应该是正确的。&lt;/p&gt;
-
-    &lt;p&gt;(3)隔离性：由并发事务所做的修改必须与任何其他事务所做的修改相隔离。事务查看数据时数据所处的状态，要么是被另一并发事务修改之前的状态，要么是被另一并发事务修改之后的状态。即事务不会查看由另一个并发事务正在修改的数据。这种隔离方式也叫可串行性。&lt;/p&gt;
-
-    &lt;p&gt;(4)持久性：事务完成之后，它对系统的影响是永久的，即使出现系统故障也是如此。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;什么是 ADO?它与 ODBC 比起来哪种方式快?&lt;/p&gt;
-
-    &lt;p&gt;ADO(ActiveX Data Objects)是一个用于存取数据源的 COM 组件。它提供了编程语言和统一数据访问方式的 OLE DB 的一个中间层。允许开发人员编写访问数据的代码而不用关心数据库是如何实现的，而只用关心到数据库的连接。&lt;/p&gt;
-
-    &lt;p&gt;ADO 更快。(这个网上争议很多)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">进程与线程的差别</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">文件操作</summary></entry></feed>

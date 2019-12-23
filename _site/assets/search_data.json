@@ -131,6 +131,13 @@
     } ,
   
     {
+      "title"    : "箭头函数和普通函数的区别",
+      "category" : "JavaScript",
+      
+      "url"      : "http://localhost:4000/2019/12/21/func-and-arrow-func/"
+    } ,
+  
+    {
       "title"    : "前端综合笔记",
       "category" : "Comprehensive",
       
@@ -142,6 +149,13 @@
       "category" : "Blog",
       
       "url"      : "http://localhost:4000/2019/12/22/front-end-engineer/"
+    } ,
+  
+    {
+      "title"    : "2020年个人OKR关注点",
+      "category" : "Blog",
+      
+      "url"      : "http://localhost:4000/2019/12/23/okr/"
     } ,
   
     {

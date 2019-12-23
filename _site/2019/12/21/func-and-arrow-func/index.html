@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Wiki Template &mdash; Cheney King</title>
+    <title>箭头函数和普通函数的区别 &mdash; Cheney King</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,28 +21,28 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/template/">
+    <link rel="canonical" href="http://localhost:4000/2019/12/21/func-and-arrow-func/">
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Wiki Template">
+    <meta property="og:title" content="箭头函数和普通函数的区别">
       
-    <meta name="keywords" content="keyword1, keyword2">
-    <meta name="og:keywords" content="keyword1, keyword2">
+    <meta name="keywords" content="箭头函数，ES6">
+    <meta name="og:keywords" content="箭头函数，ES6">
       
-    <meta name="description" content="Content here">
-    <meta name="og:description" content="Content here">
+    <meta name="description" content="今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：">
+    <meta name="og:description" content="今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/template/">
+    <meta property="og:url" content="http://localhost:4000/2019/12/21/func-and-arrow-func/">
     <meta property="og:site_name" content="Cheney King">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
     
-    <meta property="article:published_time" content="2019-12-23">
+    <meta property="article:published_time" content="2019-12-21">
     
     <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
@@ -74,12 +74,25 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Wiki Template">
+    <section class="collection-head small geopattern" data-pattern-id="箭头函数和普通函数的区别">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Wiki Template</h1>
+        <h1 class="collection-header">箭头函数和普通函数的区别</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2019/12/21
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#JavaScript" title="JavaScript">JavaScript</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -90,7 +103,63 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <p>Content here</p>
+    <p>今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：</p>
+
+<p>ES6标准新增了一种新的函数：Arrow Function（箭头函数），为什么叫Arrow Function？因为它的定义用的就是一个箭头，那么，它和普通函数有哪些不同呢？</p>
+
+<h3 id="箭头函数的特点">箭头函数的特点</h3>
+<p>箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种只包含一个表达式，连{ … }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{ … }和return。</p>
+<ul>
+  <li>相比普通函数，箭头函数有更简洁的语法</li>
+  <li><strong>箭头函数不绑定this，会捕获其所在的上下文的this值，作为自己的this值</strong>
+    <blockquote>
+      <ul>
+        <li>函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</li>
+        <li>把动态this转换为静态this：长期以来，JavaScript 语言的this对象一直是一个令人头痛的问题，在对象方法中使用this，必须非常小心。箭头函数”绑定”this，很大程度上解决了这个困扰。</li>
+        <li>箭头函数可以让this指向固定化，这种特性很有利于封装回调函数。</li>
+        <li>原理: this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>箭头函数是匿名函数，不能作为构造函数，不可以使用new命令，否则会抛出一个错误。所以箭头函数也不具有new.target。
+    <blockquote>
+      <p>原因：构造函数的new都做了些什么？简单来说，分为四步</p>
+    </blockquote>
+    <ul>
+      <li>JS内部首先会先生成一个对象；</li>
+      <li>再把函数中的this指向该对象；</li>
+      <li>然后执行构造函数中的语句；</li>
+      <li>最终返回该对象实例。</li>
+    </ul>
+  </li>
+  <li>箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller
+    <blockquote>
+      <p>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：</p>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   const testFunc = (...args)=&gt;{
+       console.log(args) //数组形式输出参数
+   }
+</code></pre></div>      </div>
+    </blockquote>
+  </li>
+  <li>使用call()、apply()和bind()调用，对 this 没有什么影响
+    <blockquote>
+      <p>由于 this 已经在词法层面完成了绑定，通过 call()、 apply()、bind() 方法调用一个函数时，只传入了一个参数，对 this 并没有什么影响</p>
+    </blockquote>
+  </li>
+  <li>箭头函数没有原型属性prototype</li>
+  <li>不能简单返回对象字面量
+    <blockquote>
+      <p>如果要直接返回对象时需要用小括号包起来，因为大括号被占用解释为代码块了</p>
+    </blockquote>
+  </li>
+  <li>不能使用yield关键字，因此箭头函数不能用作 Generator 函数。</li>
+  <li>箭头函数括号后面不能换行；</li>
+  <li>箭头函数不具有super。
+    <h3 id="总结">总结</h3>
+  </li>
+  <li>箭头函数的 this 永远指向其上下文的  this ，任何方法都改变不了其指向，如 call() ,  bind() ,  apply() ，可以说正是因为没有自己的this，才使其具备了以上介绍的大部分特点；</li>
+  <li>普通函数的this指向调用它的那个对象</li>
+</ul>
 
     </article>
     <div class="share">
@@ -107,7 +176,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/template/',
+            id: '/2019/12/21/func-and-arrow-func/',
             clientID: 'd2e1cbbd298958076462',
             clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
             repo: 'blog-comments',
