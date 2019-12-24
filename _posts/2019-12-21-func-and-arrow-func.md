@@ -23,7 +23,7 @@ ES6标准新增了一种新的函数：Arrow Function（箭头函数），为什
         - 再把函数中的this指向该对象；
         - 然后执行构造函数中的语句；
         - 最终返回该对象实例。
-   - 箭头函数不绑定arguments，取而代之用rest参数...解决；所以箭头函数也没有arguments.callee和arguments.caller
+   - **箭头函数不绑定arguments，取而代之用rest参数...解决；所以箭头函数也没有arguments.callee和arguments.caller**
       > 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：
         ```
         const testFunc = (...args)=>{

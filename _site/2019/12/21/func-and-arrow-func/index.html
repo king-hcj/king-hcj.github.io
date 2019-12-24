@@ -132,7 +132,7 @@
       <li>最终返回该对象实例。</li>
     </ul>
   </li>
-  <li>箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller
+  <li><strong>箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller</strong>
     <blockquote>
       <p>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：</p>
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   const testFunc = (...args)=&gt;{
