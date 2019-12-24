@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T18:17:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">2020年个人OKR关注点</title><link href="http://localhost:4000/2019/12/23/okr/" rel="alternate" type="text/html" title="2020年个人OKR关注点" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/okr</id><content type="html" xml:base="http://localhost:4000/2019/12/23/okr/">&lt;h1 id=&quot;2020年个人okr关注点&quot;&gt;2020年个人OKR关注点&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-24T10:24:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">2020年个人OKR关注点</title><link href="http://localhost:4000/2019/12/23/okr/" rel="alternate" type="text/html" title="2020年个人OKR关注点" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/okr</id><content type="html" xml:base="http://localhost:4000/2019/12/23/okr/">&lt;h1 id=&quot;2020年个人okr关注点&quot;&gt;2020年个人OKR关注点&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;原生开发的能力&lt;/li&gt;
   &lt;li&gt;基于NodeJs的全栈开发能力（Nginx、Go、Java）&lt;/li&gt;
@@ -8,6 +8,25 @@
   &lt;li&gt;项目构建能力，持续集成、持续交付能力&lt;/li&gt;
   &lt;li&gt;前沿技术动态的把控&lt;/li&gt;
   &lt;li&gt;知识输出能力和个人前端体系的构建&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;2019年个人okr&quot;&gt;2019年个人OKR&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;目标：成为一名优秀的中级前端工程师&lt;/li&gt;
+  &lt;li&gt;关键结果
+    &lt;ul&gt;
+      &lt;li&gt;基础牢固
+        &lt;blockquote&gt;
+          &lt;p&gt;&lt;strong&gt;红宝书&lt;/strong&gt;、CSS世界、网络、高效前端、数据结构与算法等书籍至少看一遍（详见微信、京东读书、电脑学习资料、PDF文件夹）&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+      &lt;li&gt;能用PHP、SQL、数据库完成大部分接口（Redis）&lt;/li&gt;
+      &lt;li&gt;React底层原理与设计思想（Vue可涉及提升）、React Native书籍&lt;/li&gt;
+      &lt;li&gt;前端工具熟练掌握（git、webpack等书籍）&lt;/li&gt;
+      &lt;li&gt;能自主解决服务器、接口等大多数错误（排查解决）；前端独挡一面&lt;/li&gt;
+      &lt;li&gt;每天学习，每天进步，薪资增长50%&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">2020年个人OKR关注点 原生开发的能力 基于NodeJs的全栈开发能力（Nginx、Go、Java） 基于React Native、Flutter、小程序的移动端开发能力 React和Vue底层原理、思想、源码的阅读学习 性能优化、网络安全、网络协议、SQL、计算机组成原理、数据结构和算法、数学能力 项目构建能力，持续集成、持续交付能力 前沿技术动态的把控 知识输出能力和个人前端体系的构建</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
 &lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
@@ -734,6 +753,9 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
        console.log(args) //数组形式输出参数
    }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+      &lt;p&gt;在 ECMAScript 6 之前的函数声明中，它们的参数都是“简单参数类型”的。在 ECMAScript 6 之后，凡是在参数声明中使用了缺省参数、剩余参数和模板参数之一的，都不再是“简单的”（non-simple parameters）。 &lt;br /&gt;
+在使用传统的简单参数时，只需要将调用该参数时传入的实际参数与参数对象（arguments）绑定就可以了；而使用“非简单参数”时，需要通过“初始器赋值”来完成名字与值的绑定。 &lt;br /&gt;
+两种绑定模式的区别在于：通常将实际参数与参数对象绑定时，只需要映射两个数组的下标即可，而“初始器赋值”需要通过名字来索引值（以实现绑定），因此一旦出现“重名参数”就无法处理了。&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
   &lt;li&gt;使用call()、apply()和bind()调用，对 this 没有什么影响
