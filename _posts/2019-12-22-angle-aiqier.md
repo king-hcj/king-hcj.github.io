@@ -408,7 +408,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    - 直接用  ant-tooltip-  在页面并无法修改它的样式；
    - 通过自定义的类名以及类名下的标签就可以修改其样式,如下所示:
    (先给Tooltip添加一个overlayClassName={styles['tooltip-custom']})
-   ![ant design Tooltip文字提示的样式设置](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/comprehensive/tooltip.png)   
+   ![ant design Tooltip文字提示的样式设置](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/comprehensive/tooltip.png?raw=true)   
    例： tooltip 黑色背景改成白色不透明
       ```
         .tooltip-custom {
