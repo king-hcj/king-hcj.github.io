@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端菜鸟，也有春天！
+title: 菜鸟，也有春天！
 categories: Blog
 description: 2019年终总结
 keywords: 年终总结，前端
