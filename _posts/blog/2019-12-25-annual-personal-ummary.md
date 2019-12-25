@@ -12,12 +12,14 @@ keywords: 年终总结，前端
 
 ## 缘起
 
+![我的学校](https://github.com/king-hcj/introduce/blob/master/images/myschool1.jpeg?raw=true)
 &emsp;&emsp;那是2016年的毕业季，他的毕设研究题目是《基于图模型理论的冲突敏感性分析》，需要做一个演示的界面，当时，他第一时间想到了网页，那时候他对前端的了解，仅限于从网上下载过一个HTML模版，在模版上改了那么些文字。面对数学课题庞大的矩阵运算，他最终放弃了web，转而使用更为熟悉且更适合矩阵运算的MATLAB GUI完成了演示系统的制作，顺利毕业。
 
 &emsp;&emsp;如今回首，也许只是因为当时对网页的匆匆一瞥，让他自此与前端结缘。
 
 ## 军工·科研
 
+![贵飞](https://github.com/king-hcj/introduce/blob/master/images/guifei.jpeg?raw=true)
 &emsp;&emsp;他的学校是国防七校之一，毕业后，怀揣着“效法羲和驭天马，志在长空牧群星”的梦想和对国防军工的满腔热情投入到了老三线的建设当中。
 
 &emsp;&emsp;说实话，他很感激国企的两年时光。   
@@ -31,11 +33,13 @@ keywords: 年终总结，前端
 &emsp;&emsp;他很迷茫，没有方向感的迷茫。到底企业需要什么？到底达到怎样一个程度，出去才能找到工作？为此，他也曾彻夜难眠，甚至到[
 SegmentFault社区求助](https://segmentfault.com/q/1010000014946491)；他也尝试着把自己学习的一些东西记录在思否社区的[一篇文章](https://segmentfault.com/a/1190000015048814)里。
 
+![黄果树瀑布2](https://github.com/king-hcj/introduce/blob/master/images/huangguoshu2.jpeg?raw=true)
 &emsp;&emsp;2018年7月底，是他到国企整整两年的时候，他提出了辞职，他的理由是：离家太远，他也想出去看看。   
 &emsp;&emsp;那个时候，他在W3Cschool的经验值排行是第二名（现在W3Cschool貌似已经取消了排名的功能），并独立完成W3Cschool上FreeCodeCamp95%挑战项目，但这，对于前端门外汉，依然不足。
 
 ## 上海·初始
 
+![魔都的国庆之夜](https://github.com/king-hcj/introduce/blob/master/images/modu.jpeg?raw=true)
 &emsp;&emsp;从国企出来后，他来到了有着魔都之称的上海。   
 &emsp;&emsp;来上海的第一周，顶着烈日炎炎，他一共面试了13家公司，后面一段时间，又有选择性的面试几家公司。最终到手有七八个offer，他选择了一家薪水不是最高、规模也不是最大的公司，理由是：这家公司经常招在校生，入职前一两个月，主要是按照公司培养方案进行阶段性学习。那段时间，他写了150来页的学习笔记，不过是PDF的，因为在国企，他最熟悉的是Word和PDF。
 
@@ -54,10 +58,12 @@ SegmentFault社区求助](https://segmentfault.com/q/1010000014946491)；他也�
 
 ## 进化·思辨
 
+![刮画](https://github.com/king-hcj/introduce/blob/master/images/shanghaiguahua.jpeg?raw=true)
 &emsp;&emsp;2019年元旦当日，他订立了个人OKR，并在钉钉上发起了个人每日学习打卡，前两天，他使用jekyll-now在GitHub上搭建了[个人博客](https://king-hcj.github.io)，并对2019年的学习过的东西进行了[总结](https://king-hcj.github.io/2019/12/22/front-end-engineer/)，他很骄傲这一年的坚持，虽然还未曾使自己成为梦想中的样子，但也因此收获很多。   
 &emsp;&emsp;关于个人博客，起初他其实是有太多顾虑的。**首先，自己的技术水平还并未达到可以随心所欲说教的底部；其次，如今的网络，好文章很多，不好的文章其实也已经够多了，自己会使不好的文章更加庞大而因此误人子弟吗？最后，自己写的东西，是否真的会有人关注？**   
 &emsp;&emsp;后来他感觉，面对很多事情，当我们去排斥它的时候，借口总比去干的理由多，有时候，我们把自己看的过重，有时候，又是看的太轻；要想技术提升，唯有日积月累，不积跬步，无以至千里。**学习是自己的事，如果你无心，知识自然对你无意。**   
 
+![青岛彩虹桥](https://github.com/king-hcj/introduce/blob/master/images/qingdao.jpeg?raw=true)
 &emsp;&emsp;他曾在个人第一篇思否文章[《关于前端开发的资源推荐与总结【持续更新】》](https://segmentfault.com/a/1190000015048814)中说：
 >&emsp;&emsp;我们很多人总会有这样一个问题，就是**喜欢收藏很多东西，自我安慰说等有时间了一定好好看**，以至于网页收藏夹、微信收藏栏、百度网盘等处积累了太多资源，给人一种学富五车的样子，而**只有自己才知道，被收藏的东西，真正看了多少，掌握了多少**。   
 &emsp;&emsp;对于我本人来讲，可以毫不夸张的说，**如果能将自己收藏的东西完全学习掌握，至少会是某个领域的专家**，我想，对于大多说人来说，情况可能和我也有很大的相似之处。所以说，我们需要时刻激励自己，**不能让类似“先收藏了，等以后有时间再看”这样的话语来腐蚀自己、消磨自己，最终让只是随手收藏而不去阅读成为一种习惯**。
@@ -66,9 +72,10 @@ SegmentFault社区求助](https://segmentfault.com/q/1010000014946491)；他也�
 
 ## 不是终章
 
+![华山日出](https://github.com/king-hcj/introduce/blob/master/images/huashan111.jpeg?raw=true)
 &emsp;&emsp;作为前端菜鸟，一路走来，他是幸运的。身在魔都，机会多，加之有一点学校的优势，他可能比很多人更容易获得机会。
 
-&emsp;&emsp;回首2019，如今，他也多了一些坦然。前天，他回顾了2019年的OKR，也列出了一些2020年的关注点：
+&emsp;&emsp;相比初始，如今，他也多了一些坦然。前天，他回顾了2019年的OKR，也列出了一些2020年的关注点：
    - 基于原生JS、HTML、CSS开发的能力
    - 基于**NodeJS**的全栈开发能力
    - 基于React Native、Flutter、小程序的移动端开发能力
