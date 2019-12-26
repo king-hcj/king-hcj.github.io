@@ -96,16 +96,16 @@ disqus:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: king-hcj
-    repo: blog-comments
+    repo: king-hcj.github.io
     oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+        client_id: bc269064fe241728eb14
+        client_secret: 0f2e89e4b56f4580e067356a0900c95968284917
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: king-hcj
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+    repo: king-hcj.github.io
+    clientID: bc269064fe241728eb14
+    clientSecret: 0f2e89e4b56f4580e067356a0900c95968284917
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
