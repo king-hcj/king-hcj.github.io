@@ -382,6 +382,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     test()
     ```
 
+21. [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f)
 
 ## HTML
 
