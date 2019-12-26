@@ -259,153 +259,205 @@ const HelloMessage = (props)=&gt;(
    console.log(a?.c?.c || 22) // 22
    console.log(a?.c?.c ?? 22) // 22
 </code></pre></div>    </div>
-    <p><a href="https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js">idx源码链接</a><br />
-```
-function idx&lt;Ti, Tv&gt;(input: Ti, accessor: (input: Ti) =&gt; Tv): ?Tv {
-  try {
-    return accessor(input);
-  } catch (error) {
-    if (error instanceof TypeError) {
- if (nullPattern.test(error)) {
-   return null;
- } else if (undefinedPattern.test(error)) {
-   return undefined;
- }
-    }
-    throw error;
-  }
-}</p>
+    <p><a href="https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js">idx源码链接</a></p>
   </li>
 </ol>
 
-<table>
-  <tbody>
-    <tr>
-      <td>const nullPattern = /^null</td>
-      <td>null$</td>
-      <td>^[^(]* null /i;</td>
-    </tr>
-    <tr>
-      <td>const undefinedPattern = /^undefined</td>
-      <td>undefined$</td>
-      <td>^[^(]* undefined /i;</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>idx.default = idx;
-module.exports = idx;</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-4. [ console-importer](https://github.com/pd4d10/console-importer):在在 Dev Tools 里面来使用 npm 插件！
-
-5. [ Lodash-文档](https://www.lodashjs.com/)
-   1. omit 忽略值：
-      ```
-      var object = { 'a': 1, 'b': '2', 'c': 3 };   
-        _.omit(object, ['a', 'c']);   
-        // =&gt; { 'b': '2' }
-      ```
-
-6. curl
-&gt;&gt;&gt;百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。    
-      1. [curl 的使用](https://www.jianshu.com/p/f05bbd5007d9)
-      2. [Linux 命令行：cURL 的十种常见用法](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028)
-      3. [curl 命令详解](https://www.jianshu.com/p/07c4dddae43a)
-
-7. [React DnD](http://react-dnd.github.io/react-dnd/about)
-
-8. [Moment.js 文档](http://momentjs.cn/docs/)
-
-9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
-
-10. [DropzoneJS](https://www.dropzonejs.com/#) | [Ant Motion ](https://motion.ant.design/index-cn) | [fullPage全屏滚动](https://alvarotrigo.com/fullPage/)
-
-11. [Less 中文网](http://lesscss.cn/)
-
-12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
-
-13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/)
-
-# 技巧技法
-## git
-1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
-2. Git文件名大小写敏感:
-   - 问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交
-   - 查看git 的设置:git config --get core.ignorecase
-   - git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改
-   - 更改设置解决:git config core.ignorecase false
-## JS
-1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
-2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
-3. 函数防抖运用:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  function idx&lt;Ti, Tv&gt;(input: Ti, accessor: (input: Ti) =&gt; Tv): ?Tv {
+    try {
+      return accessor(input);
+    } catch (error) {
+      if (error instanceof TypeError) {
+        if (nullPattern.test(error)) {
+          return null;
+        } else if (undefinedPattern.test(error)) {
+          return undefined;
+        }
+      }
+      throw error;
+    }
+  }
+  const nullPattern = /^null | null$|^[^(]* null /i;
+  const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
+  idx.default = idx;
+  module.exports = idx;
 </code></pre></div></div>
-<p>A.js
+
+<ol>
+  <li>
+    <p><a href="https://github.com/pd4d10/console-importer"> console-importer</a>:在在 Dev Tools 里面来使用 npm 插件！</p>
+  </li>
+  <li><a href="https://www.lodashjs.com/"> Lodash-文档</a>
+    <ol>
+      <li>omit 忽略值：
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var object = { 'a': 1, 'b': '2', 'c': 3 };   
+  _.omit(object, ['a', 'c']);   
+  // =&gt; { 'b': '2' }
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>curl
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p>百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。</p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <ol>
+      <li><a href="https://www.jianshu.com/p/f05bbd5007d9">curl 的使用</a></li>
+      <li><a href="https://blog.csdn.net/chenliaoyuanjv/article/details/79689028">Linux 命令行：cURL 的十种常见用法</a></li>
+      <li><a href="https://www.jianshu.com/p/07c4dddae43a">curl 命令详解</a></li>
+    </ol>
+  </li>
+  <li>
+    <p><a href="http://react-dnd.github.io/react-dnd/about">React DnD</a></p>
+  </li>
+  <li>
+    <p><a href="http://momentjs.cn/docs/">Moment.js 文档</a></p>
+  </li>
+  <li>
+    <p><a href="https://cassetterocks.github.io/react-infinite-scroller/">React Infinite Scroller</a></p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><a href="https://www.dropzonejs.com/#">DropzoneJS</a></td>
+          <td><a href="https://motion.ant.design/index-cn">Ant Motion </a></td>
+          <td><a href="https://alvarotrigo.com/fullPage/">fullPage全屏滚动</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p><a href="http://lesscss.cn/">Less 中文网</a></p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><a href="http://www.typescriptlang.org/index.html">TypeScript英文文档</a></td>
+          <td><a href="https://www.tslang.cn/index.html">中文</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><a href="http://nextjs.frontendx.cn/">Next.js文档</a></td>
+          <td><a href="https://nextjs.org/">Next.js英文文档</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h1 id="技巧技法">技巧技法</h1>
+<h2 id="git">git</h2>
+<ol>
+  <li>已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程</li>
+  <li>Git文件名大小写敏感:
+    <ul>
+      <li>问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交</li>
+      <li>查看git 的设置:git config –get core.ignorecase</li>
+      <li>git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改</li>
+      <li>更改设置解决:git config core.ignorecase false
+        <h2 id="js">JS</h2>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://blog.csdn.net/qq_38627581/article/details/77353015">js判断对象是否为空对象的几种方法</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><a href="http://nodejs.cn/api/synopsis.html">Node.js 中文文档</a></td>
+          <td><a href="https://nodejs.org/en/docs/">Node.js 英文文档</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>函数防抖运用:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A.js
 // 防抖实现
 export const debounce = (method, wait) =&gt; {
   let timeout
   // args为返回函数调用时传入的参数，传给method
-  return function (…args) {
-    let context = this
-    if (timeout) {
-      clearTimeout(timeout)
-    }
-    timeout = setTimeout(() =&gt; {
-      // args是一个类数组，所以使用fn.apply
-      // 也可写作method.call(context, …args)
-      method.apply(context, args)
-    }, wait)
+  return function (...args) {
+ let context = this
+ if (timeout) {
+   clearTimeout(timeout)
+ }
+ timeout = setTimeout(() =&gt; {
+   // args是一个类数组，所以使用fn.apply
+   // 也可写作method.call(context, ...args)
+   method.apply(context, args)
+ }, wait)
   }
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-</code></pre></div></div>
-<p>B.js
+}
+</code></pre></div>    </div>
+    <hr />
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B.js
 //调用：
 import { debounce } from A;
 debouncedFn = debounce(this.props.getProductItems, 500)
 //实际使用：
-this.debouncedFn(data)</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. react如何产生随机不重复的key
-   - `&lt;div key={+new Date() + Math.random()}&gt;`
-   - 使用数组的索引
-   - 使用uuid：https://www.npmjs.com/package/uuid
-   - 使用uniqid：https://www.npmjs.com/package/uniqid
-   - Date.now()
-5. PureComponent使用(以选择框为例)
-   - 使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)
-   - 直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)
-   - 函数组件:React.memo(...)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(...) 其实就是函数组件的React.PureComponent。
-      ```
-      let TestC = (props) =&gt; {
-        return ( 
-            &lt;div&gt;
-            { props.count }
-            &lt;/&gt;
-        )
-      }
-      TestC = React.memo(TestC);
-      ```
-  - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
-  - 参考阅读
-     - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html)
-     - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
-     - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
-6. Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Modal.confirm({
-  title: messages['common_0005'],
-  content: messages['prod_br_0008'],
-  onOk () {
-    _this.props.method()
-  },
-  &lt;!-- onOk: () =&gt; {
-    this.props.method()
-  }, --&gt;
-  onCancel () {
-  }
-}) ```
-</code></pre></div></div>
-
-<ol>
+this.debouncedFn(data)
+</code></pre></div>    </div>
+  </li>
+  <li>react如何产生随机不重复的key
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;div key={+new Date() + Math.random()}&gt;</code></li>
+      <li>使用数组的索引</li>
+      <li>使用uuid：https://www.npmjs.com/package/uuid</li>
+      <li>使用uniqid：https://www.npmjs.com/package/uniqid</li>
+      <li>Date.now()</li>
+    </ul>
+  </li>
+  <li>PureComponent使用(以选择框为例)
+    <ul>
+      <li>使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)</li>
+      <li>直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)</li>
+      <li>函数组件:React.memo(…)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(…) 其实就是函数组件的React.PureComponent。
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let TestC = (props) =&gt; {
+   return ( 
+       &lt;div&gt;
+       { props.count }
+       &lt;/&gt;
+   )
+ }
+ TestC = React.memo(TestC);
+</code></pre></div>        </div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
+   - 参考阅读
+</code></pre></div>        </div>
+        <ul>
+          <li><a href="https://reactjs.org/blog/2018/10/23/react-v-16-6.html">React v16.6.0: lazy, memo and contextType</a></li>
+          <li><a href="http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html">react v16.6 动态 import，React.lazy()、Suspense、Error boundaries</a></li>
+          <li><a href="http://react-china.org/t/react-memo-lazy-suspense-hooks/28789">React新特性实例详解（memo、lazy、suspense、hooks）</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Modal.confirm({
+   title: messages['common_0005'],
+   content: messages['prod_br_0008'],
+   onOk () {
+     _this.props.method()
+   },
+   &lt;!-- onOk: () =&gt; {
+     this.props.method()
+   }, --&gt;
+   onCancel () {
+   }
+ })
+</code></pre></div>    </div>
+  </li>
   <li>后端返回的 { responseType: ‘blob’ }数据，需要用react-file-download转化;
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import FileDownload from 'react-file-download'
  this.props.actions.downloadPictures(this.props.selectedIds).then((res) =&gt; {

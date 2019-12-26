@@ -131,28 +131,29 @@ const HelloMessage = (props)=>(
         console.log(a?.c?.c ?? 22) // 22
       ```
 [idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
+   
+   
 ```
-function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
-  try {
-    return accessor(input);
-  } catch (error) {
-    if (error instanceof TypeError) {
-      if (nullPattern.test(error)) {
-        return null;
-      } else if (undefinedPattern.test(error)) {
-        return undefined;
+  function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
+    try {
+      return accessor(input);
+    } catch (error) {
+      if (error instanceof TypeError) {
+        if (nullPattern.test(error)) {
+          return null;
+        } else if (undefinedPattern.test(error)) {
+          return undefined;
+        }
       }
+      throw error;
     }
-    throw error;
   }
-}
-
-const nullPattern = /^null | null$|^[^(]* null /i;
-const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
-
-idx.default = idx;
-module.exports = idx;
+  const nullPattern = /^null | null$|^[^(]* null /i;
+  const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
+  idx.default = idx;
+  module.exports = idx;
 ```
+   
 
 4. [ console-importer](https://github.com/pd4d10/console-importer):在在 Dev Tools 里面来使用 npm 插件！
 

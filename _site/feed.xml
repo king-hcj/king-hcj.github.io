@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-26T11:36:13+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-26T11:44:28+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
 
 &lt;p&gt;  记得八九月份，在某前端交流群结识了一位想转行前端的小伙伴，他因学习压力和没有面试机会而苦恼迷茫，我安慰他说：菜鸟，也有春天。&lt;/p&gt;
 
@@ -364,153 +364,205 @@ const HelloMessage = (props)=&amp;gt;(
    console.log(a?.c?.c || 22) // 22
    console.log(a?.c?.c ?? 22) // 22
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js&quot;&gt;idx源码链接&lt;/a&gt;&lt;br /&gt;
-```
-function idx&amp;lt;Ti, Tv&amp;gt;(input: Ti, accessor: (input: Ti) =&amp;gt; Tv): ?Tv {
-  try {
-    return accessor(input);
-  } catch (error) {
-    if (error instanceof TypeError) {
- if (nullPattern.test(error)) {
-   return null;
- } else if (undefinedPattern.test(error)) {
-   return undefined;
- }
-    }
-    throw error;
-  }
-}&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js&quot;&gt;idx源码链接&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;const nullPattern = /^null&lt;/td&gt;
-      &lt;td&gt;null$&lt;/td&gt;
-      &lt;td&gt;^[^(]* null /i;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;const undefinedPattern = /^undefined&lt;/td&gt;
-      &lt;td&gt;undefined$&lt;/td&gt;
-      &lt;td&gt;^[^(]* undefined /i;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;idx.default = idx;
-module.exports = idx;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-4. [ console-importer](https://github.com/pd4d10/console-importer):在在 Dev Tools 里面来使用 npm 插件！
-
-5. [ Lodash-文档](https://www.lodashjs.com/)
-   1. omit 忽略值：
-      ```
-      var object = { 'a': 1, 'b': '2', 'c': 3 };   
-        _.omit(object, ['a', 'c']);   
-        // =&amp;gt; { 'b': '2' }
-      ```
-
-6. curl
-&amp;gt;&amp;gt;&amp;gt;百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。    
-      1. [curl 的使用](https://www.jianshu.com/p/f05bbd5007d9)
-      2. [Linux 命令行：cURL 的十种常见用法](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028)
-      3. [curl 命令详解](https://www.jianshu.com/p/07c4dddae43a)
-
-7. [React DnD](http://react-dnd.github.io/react-dnd/about)
-
-8. [Moment.js 文档](http://momentjs.cn/docs/)
-
-9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
-
-10. [DropzoneJS](https://www.dropzonejs.com/#) | [Ant Motion ](https://motion.ant.design/index-cn) | [fullPage全屏滚动](https://alvarotrigo.com/fullPage/)
-
-11. [Less 中文网](http://lesscss.cn/)
-
-12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
-
-13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/)
-
-# 技巧技法
-## git
-1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
-2. Git文件名大小写敏感:
-   - 问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交
-   - 查看git 的设置:git config --get core.ignorecase
-   - git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改
-   - 更改设置解决:git config core.ignorecase false
-## JS
-1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
-2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
-3. 函数防抖运用:
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  function idx&amp;lt;Ti, Tv&amp;gt;(input: Ti, accessor: (input: Ti) =&amp;gt; Tv): ?Tv {
+    try {
+      return accessor(input);
+    } catch (error) {
+      if (error instanceof TypeError) {
+        if (nullPattern.test(error)) {
+          return null;
+        } else if (undefinedPattern.test(error)) {
+          return undefined;
+        }
+      }
+      throw error;
+    }
+  }
+  const nullPattern = /^null | null$|^[^(]* null /i;
+  const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
+  idx.default = idx;
+  module.exports = idx;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A.js
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/pd4d10/console-importer&quot;&gt; console-importer&lt;/a&gt;:在在 Dev Tools 里面来使用 npm 插件！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lodashjs.com/&quot;&gt; Lodash-文档&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;omit 忽略值：
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var object = { 'a': 1, 'b': '2', 'c': 3 };   
+  _.omit(object, ['a', 'c']);   
+  // =&amp;gt; { 'b': '2' }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;curl
+    &lt;blockquote&gt;
+      &lt;blockquote&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/f05bbd5007d9&quot;&gt;curl 的使用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/chenliaoyuanjv/article/details/79689028&quot;&gt;Linux 命令行：cURL 的十种常见用法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/07c4dddae43a&quot;&gt;curl 命令详解&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://react-dnd.github.io/react-dnd/about&quot;&gt;React DnD&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://momentjs.cn/docs/&quot;&gt;Moment.js 文档&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cassetterocks.github.io/react-infinite-scroller/&quot;&gt;React Infinite Scroller&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;https://www.dropzonejs.com/#&quot;&gt;DropzoneJS&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://motion.ant.design/index-cn&quot;&gt;Ant Motion &lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://alvarotrigo.com/fullPage/&quot;&gt;fullPage全屏滚动&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://lesscss.cn/&quot;&gt;Less 中文网&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;http://www.typescriptlang.org/index.html&quot;&gt;TypeScript英文文档&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://www.tslang.cn/index.html&quot;&gt;中文&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;http://nextjs.frontendx.cn/&quot;&gt;Next.js文档&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Next.js英文文档&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;技巧技法&quot;&gt;技巧技法&lt;/h1&gt;
+&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程&lt;/li&gt;
+  &lt;li&gt;Git文件名大小写敏感:
+    &lt;ul&gt;
+      &lt;li&gt;问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交&lt;/li&gt;
+      &lt;li&gt;查看git 的设置:git config –get core.ignorecase&lt;/li&gt;
+      &lt;li&gt;git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改&lt;/li&gt;
+      &lt;li&gt;更改设置解决:git config core.ignorecase false
+        &lt;h2 id=&quot;js&quot;&gt;JS&lt;/h2&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qq_38627581/article/details/77353015&quot;&gt;js判断对象是否为空对象的几种方法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;http://nodejs.cn/api/synopsis.html&quot;&gt;Node.js 中文文档&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://nodejs.org/en/docs/&quot;&gt;Node.js 英文文档&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;函数防抖运用:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A.js
 // 防抖实现
 export const debounce = (method, wait) =&amp;gt; {
   let timeout
   // args为返回函数调用时传入的参数，传给method
-  return function (…args) {
-    let context = this
-    if (timeout) {
-      clearTimeout(timeout)
-    }
-    timeout = setTimeout(() =&amp;gt; {
-      // args是一个类数组，所以使用fn.apply
-      // 也可写作method.call(context, …args)
-      method.apply(context, args)
-    }, wait)
+  return function (...args) {
+ let context = this
+ if (timeout) {
+   clearTimeout(timeout)
+ }
+ timeout = setTimeout(() =&amp;gt; {
+   // args是一个类数组，所以使用fn.apply
+   // 也可写作method.call(context, ...args)
+   method.apply(context, args)
+ }, wait)
   }
-}&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;B.js
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;hr /&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B.js
 //调用：
 import { debounce } from A;
 debouncedFn = debounce(this.props.getProductItems, 500)
 //实际使用：
-this.debouncedFn(data)&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4. react如何产生随机不重复的key
-   - `&amp;lt;div key={+new Date() + Math.random()}&amp;gt;`
-   - 使用数组的索引
-   - 使用uuid：https://www.npmjs.com/package/uuid
-   - 使用uniqid：https://www.npmjs.com/package/uniqid
-   - Date.now()
-5. PureComponent使用(以选择框为例)
-   - 使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)
-   - 直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)
-   - 函数组件:React.memo(...)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(...) 其实就是函数组件的React.PureComponent。
-      ```
-      let TestC = (props) =&amp;gt; {
-        return ( 
-            &amp;lt;div&amp;gt;
-            { props.count }
-            &amp;lt;/&amp;gt;
-        )
-      }
-      TestC = React.memo(TestC);
-      ```
-  - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
-  - 参考阅读
-     - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html)
-     - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
-     - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
-6. Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Modal.confirm({
-  title: messages['common_0005'],
-  content: messages['prod_br_0008'],
-  onOk () {
-    _this.props.method()
-  },
-  &amp;lt;!-- onOk: () =&amp;gt; {
-    this.props.method()
-  }, --&amp;gt;
-  onCancel () {
-  }
-}) ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
+this.debouncedFn(data)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;react如何产生随机不重复的key
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div key={+new Date() + Math.random()}&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;使用数组的索引&lt;/li&gt;
+      &lt;li&gt;使用uuid：https://www.npmjs.com/package/uuid&lt;/li&gt;
+      &lt;li&gt;使用uniqid：https://www.npmjs.com/package/uniqid&lt;/li&gt;
+      &lt;li&gt;Date.now()&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PureComponent使用(以选择框为例)
+    &lt;ul&gt;
+      &lt;li&gt;使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)&lt;/li&gt;
+      &lt;li&gt;直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)&lt;/li&gt;
+      &lt;li&gt;函数组件:React.memo(…)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(…) 其实就是函数组件的React.PureComponent。
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; let TestC = (props) =&amp;gt; {
+   return ( 
+       &amp;lt;div&amp;gt;
+       { props.count }
+       &amp;lt;/&amp;gt;
+   )
+ }
+ TestC = React.memo(TestC);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
+   - 参考阅读
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://reactjs.org/blog/2018/10/23/react-v-16-6.html&quot;&gt;React v16.6.0: lazy, memo and contextType&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html&quot;&gt;react v16.6 动态 import，React.lazy()、Suspense、Error boundaries&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://react-china.org/t/react-memo-lazy-suspense-hooks/28789&quot;&gt;React新特性实例详解（memo、lazy、suspense、hooks）&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Modal.confirm({
+   title: messages['common_0005'],
+   content: messages['prod_br_0008'],
+   onOk () {
+     _this.props.method()
+   },
+   &amp;lt;!-- onOk: () =&amp;gt; {
+     this.props.method()
+   }, --&amp;gt;
+   onCancel () {
+   }
+ })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
   &lt;li&gt;后端返回的 { responseType: ‘blob’ }数据，需要用react-file-download转化;
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import FileDownload from 'react-file-download'
  this.props.actions.downloadPictures(this.props.selectedIds).then((res) =&amp;gt; {
