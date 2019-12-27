@@ -2,14 +2,18 @@
   name: king-hcj
   url: https://github.com/king-hcj
 
-- sitename: 掘金
+- sitename: 简书
+  name: 孤篷_e9c4
+  url: https://www.jianshu.com/u/184615f5e131
+
+- sitename: 掘金社区
   name: king-hcj
   url: https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections
 
-- sitename: 博客
+- sitename: 个人博客
   name: Cheney King
   url: https://king-hcj.github.io/
 
-- sitename: 思否
+- sitename: SegmentFault社区
   name: 孤篷
   url: https://segmentfault.com/u/king_hcj/articles
