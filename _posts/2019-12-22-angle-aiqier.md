@@ -385,6 +385,11 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 21. [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f)
 
+22. 在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
+    ```
+    document.getElementById('Tools_FBA_Calculator').click()
+    ```
+
 ## HTML
 
 ## CSS
