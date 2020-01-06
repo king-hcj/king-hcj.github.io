@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-27T16:47:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-06T18:24:59+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
 
 &lt;p&gt;  记得八九月份，在某前端交流群结识了一位想转行前端的小伙伴，他因学习压力和没有面试机会而苦恼迷茫，我安慰他说：菜鸟，也有春天。&lt;/p&gt;
 
@@ -81,9 +81,9 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
 &lt;ul&gt;
   &lt;li&gt;基于原生JS、HTML、CSS开发的能力&lt;/li&gt;
   &lt;li&gt;基于&lt;strong&gt;NodeJS&lt;/strong&gt;的全栈开发能力&lt;/li&gt;
-  &lt;li&gt;基于React Native、Flutter、小程序的移动端开发能力&lt;/li&gt;
+  &lt;li&gt;基于React Native、Flutter、小程序的移动端开发能力(分别搭建一个个人项目)&lt;/li&gt;
   &lt;li&gt;React和Vue底层原理、思想、源码的阅读学习&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;性能优化、网络安全、网络协议、操作系统、编译原理、SQL、计算机组成原理、数据结构和算法、数学能力&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;性能优化、网络安全、网络协议、操作系统、编译原理、SQL、计算机组成原理、数据结构和算法、数学能力&lt;/strong&gt;(产出系列笔记)&lt;/li&gt;
   &lt;li&gt;项目构建能力，持续集成、持续交付能力&lt;/li&gt;
   &lt;li&gt;前沿技术动态的把控&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;知识输出能力和个人前端体系的构建&lt;/strong&gt;&lt;/li&gt;
@@ -95,34 +95,91 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
 &lt;p align=&quot;right&quot;&gt;致如我般在前端领域苦行的菜鸟们，共勉！&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。</summary></entry><entry><title type="html">2020年个人OKR关注点</title><link href="http://localhost:4000/2019/12/23/okr/" rel="alternate" type="text/html" title="2020年个人OKR关注点" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/okr</id><content type="html" xml:base="http://localhost:4000/2019/12/23/okr/">&lt;p&gt;记录个人&lt;a href=&quot;https://www.jianshu.com/p/09c6d7d89175&quot;&gt;OKR&lt;/a&gt;相关信息。&lt;/p&gt;
 
 &lt;h1 id=&quot;2020年个人okr关注点&quot;&gt;2020年个人OKR关注点&lt;/h1&gt;
+&lt;h3 id=&quot;目标&quot;&gt;目标：&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;成为一名具有&lt;strong&gt;全自主开发能力&lt;/strong&gt;的前端工程师，拥有进入&lt;strong&gt;业界较知名公司&lt;/strong&gt;的能力&lt;/li&gt;
+  &lt;li&gt;在不降低公司标准的前提下，薪资增长20%&lt;/li&gt;
+  &lt;li&gt;潜心修得双全法，&lt;strong&gt;不负前端不负卿&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;关键结果&quot;&gt;关键结果：&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;基于原生JS、HTML、CSS开发的能力&lt;/li&gt;
-  &lt;li&gt;基于&lt;strong&gt;NodeJS&lt;/strong&gt;的全栈开发能力（Nginx、Go、Java）&lt;/li&gt;
-  &lt;li&gt;基于React Native、Flutter、小程序的移动端开发能力&lt;/li&gt;
-  &lt;li&gt;React和Vue底层原理、思想、源码的阅读学习&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;性能优化、网络安全、网络协议、操作系统、编译原理、SQL、计算机组成原理、数据结构和算法、数学能力&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;项目构建能力，持续集成、持续交付能力&lt;/li&gt;
-  &lt;li&gt;前沿技术动态的把控&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;知识输出能力和个人前端体系的构建&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;基于原生JS、HTML、CSS开发的能力
+    &lt;ul&gt;
+      &lt;li&gt;理解JavaScript&lt;strong&gt;核心原理&lt;/strong&gt;，具备&lt;strong&gt;原生开发&lt;/strong&gt;的能力&lt;/li&gt;
+      &lt;li&gt;至少&lt;strong&gt;深入阅读&lt;/strong&gt;一本HTML和CSS&lt;strong&gt;经典书籍&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;基于&lt;strong&gt;NodeJS&lt;/strong&gt;的全栈开发能力
+    &lt;ul&gt;
+      &lt;li&gt;经典书籍、视频的学习，并产出学习笔记&lt;/li&gt;
+      &lt;li&gt;搭建和维护全栈示例项目(可结合下一大条关键结果进行)&lt;/li&gt;
+      &lt;li&gt;能回答相关面试问题&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt;、&lt;strong&gt;Linux&lt;/strong&gt;、Go(专栏和视频)、Java(经典&lt;strong&gt;总结性&lt;/strong&gt;视频)等相关视频、专栏的学习了解&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;基于React Native、Flutter、小程序的&lt;strong&gt;移动端开发能力&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;搭建和维护示例项目&lt;/li&gt;
+      &lt;li&gt;能解决常见问题&lt;/li&gt;
+      &lt;li&gt;能回答相关面试问题&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;React和Vue底层原理、思想、源码的阅读学习
+    &lt;ul&gt;
+      &lt;li&gt;源码视频学习和理解，经典书籍阅读&lt;/li&gt;
+      &lt;li&gt;能回答相关面试底层问题&lt;/li&gt;
+      &lt;li&gt;深刻理解&lt;strong&gt;设计思想&lt;/strong&gt;，进行借鉴，学以致用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;性能优化、网络安全、网络协议、操作系统、编译原理、SQL、计算机组成原理、数据结构和算法、数学能力、前端底层原理的理解&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;产出系列笔记&lt;/li&gt;
+      &lt;li&gt;对前端有更深入的认识&lt;/li&gt;
+      &lt;li&gt;对编程有全新的&lt;strong&gt;体系性&lt;/strong&gt;的理解&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;项目构建能力，持续集成、持续交付能力
+    &lt;ul&gt;
+      &lt;li&gt;可以根据需求，自主搭建项目，做技术选型&lt;/li&gt;
+      &lt;li&gt;理顺项目从开始搭建到开发上线、迭代运维的全过程&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;前沿技术动态的把控
+    &lt;ul&gt;
+      &lt;li&gt;前端、前沿动态及技术趋势&lt;/li&gt;
+      &lt;li&gt;新技术的了解&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;知识输出能力和个人前端体系的构建&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;个人博客、社区账号的维护(每月产出1篇左右的优质技术文章)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;潜心技术，兼顾生活&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;人生有目标，生涯有规划&lt;/li&gt;
+      &lt;li&gt;随笔、游记、情感、感悟、兴趣爱好类文章&lt;/li&gt;
+      &lt;li&gt;和爱❤️的人做快乐的事&lt;/li&gt;
+      &lt;li&gt;不负爱好，不负爱景，不负爱人&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;2019年个人okr&quot;&gt;2019年个人OKR&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;目标：成为一名优秀的中级前端工程师&lt;/li&gt;
-  &lt;li&gt;关键结果
-    &lt;ul&gt;
-      &lt;li&gt;基础牢固
-        &lt;blockquote&gt;
-          &lt;p&gt;&lt;strong&gt;红宝书&lt;/strong&gt;、CSS世界、网络、高效前端、数据结构与算法等书籍至少看一遍（详见微信、京东读书、电脑学习资料、PDF文件夹）&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/li&gt;
-      &lt;li&gt;能用PHP、SQL、数据库完成大部分接口（Redis）&lt;/li&gt;
-      &lt;li&gt;React底层原理与设计思想（Vue可涉及提升）、React Native书籍&lt;/li&gt;
-      &lt;li&gt;前端工具熟练掌握（git、webpack等书籍）&lt;/li&gt;
-      &lt;li&gt;能自主解决服务器、接口等大多数错误（排查解决）；前端独挡一面&lt;/li&gt;
-      &lt;li&gt;每天学习，每天进步，薪资增长50%&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h3 id=&quot;目标成为一名优秀的中级前端工程师&quot;&gt;目标：成为一名优秀的中级前端工程师&lt;/h3&gt;
+&lt;h3 id=&quot;关键结果-1&quot;&gt;关键结果&lt;/h3&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;基础牢固
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;红宝书&lt;/strong&gt;、CSS世界、网络、高效前端、数据结构与算法等书籍至少看一遍（详见微信、京东读书、电脑学习资料、PDF文件夹）&lt;/p&gt;
+    &lt;/blockquote&gt;
   &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;能用PHP、SQL、数据库完成大部分接口（Redis）&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;React底层原理与设计思想（Vue可涉及提升）、React Native书籍&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;前端工具熟练掌握（git、webpack等书籍）&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;能自主解决服务器、接口等大多数错误（排查解决）；前端独挡一面&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;每天学习，每天进步，薪资增长50%&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">记录个人OKR相关信息。</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
 &lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
@@ -711,7 +768,13 @@ const test = async () =&amp;gt; {
 test()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/656e6101bf0f&quot;&gt;在个人博客里添加评论系统–Gitalk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/656e6101bf0f&quot;&gt;在个人博客里添加评论系统–Gitalk&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;document.getElementById('Tools_FBA_Calculator').click()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;html&quot;&gt;HTML&lt;/h2&gt;
