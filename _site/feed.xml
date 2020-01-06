@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-06T18:24:59+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-06T18:32:40+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
 
 &lt;p&gt;  记得八九月份，在某前端交流群结识了一位想转行前端的小伙伴，他因学习压力和没有面试机会而苦恼迷茫，我安慰他说：菜鸟，也有春天。&lt;/p&gt;
 
@@ -128,7 +128,7 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
   &lt;li&gt;React和Vue底层原理、思想、源码的阅读学习
     &lt;ul&gt;
       &lt;li&gt;源码视频学习和理解，经典书籍阅读&lt;/li&gt;
-      &lt;li&gt;能回答相关面试底层问题&lt;/li&gt;
+      &lt;li&gt;能回答相关底层面试问题&lt;/li&gt;
       &lt;li&gt;深刻理解&lt;strong&gt;设计思想&lt;/strong&gt;，进行借鉴，学以致用&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -154,6 +154,7 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
   &lt;li&gt;&lt;strong&gt;知识输出能力和个人前端体系的构建&lt;/strong&gt;
     &lt;ul&gt;
       &lt;li&gt;个人博客、社区账号的维护(每月产出1篇左右的优质技术文章)&lt;/li&gt;
+      &lt;li&gt;认真践行以上关键点，构建个人前端体系&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;潜心技术，兼顾生活&lt;/strong&gt;
