@@ -282,6 +282,18 @@ axios.put(this.url + '/zip', data, {
     headers: { 'x-access-token': localStorage.token }
   })
 ```
+上传文件：   
+```
+onDrop = (accepted) => {
+    this.setState({
+      fileName: accepted[0].name,
+      file: accepted[0]
+    }
+}
+const uploadFile = new FormData()
+uploadFile.append('file', this.state.file)
+this.props.actions.uploadCalcExcel(uploadFile)
+```
 
 8. Fetch请求可以直接在控制台调用
     ```
