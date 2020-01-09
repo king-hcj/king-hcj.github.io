@@ -402,6 +402,11 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     document.getElementById('Tools_FBA_Calculator').click()
     ```
 
+23. 跨平台桌面应用：
+   - [Electron](https://electronjs.org/)
+   - [revery](https://github.com/revery-ui/revery)
+   - [nodegui](https://github.com/nodegui/nodegui)
+
 ## HTML
 
 ## CSS
