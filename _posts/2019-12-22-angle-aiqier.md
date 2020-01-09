@@ -183,7 +183,7 @@ const HelloMessage = (props)=>(
 
 12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
 
-13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/)
+13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/) | [UmiJS](https://umijs.org/zh/)
 
 # 技巧技法
 ## git
