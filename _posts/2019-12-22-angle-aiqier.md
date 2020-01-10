@@ -217,7 +217,7 @@ export const debounce = (method, wait) => {
 }
 ```
 ---
-```
+```js
 B.js
 //调用：
 import { debounce } from A;
@@ -345,11 +345,11 @@ const args = [...arguments];
 
 17. url出现了有+，空格，/，?，%，#，&，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
    - 在拼接参数的时候，使用 encodeURIComponent() 进行手动转义：
-      ```
+      ```js
       var url = "xxx?name=" + encodeURIComponent( "wz#aa" );
       ```
    - 用其他字符替换，如：
-        ```
+        ```js
           var str = '少林寺3#101';
           var result = str.replace(/#/g, '%23');
         ```
@@ -399,7 +399,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 21. [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f)
 
 22. 在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
-    ```
+    ```js
     document.getElementById('Tools_FBA_Calculator').click()
     ```
 

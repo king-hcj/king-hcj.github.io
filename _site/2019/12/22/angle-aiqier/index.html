@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共9831字,阅读全文约需37分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共9833字,阅读全文约需37分钟</span>
         </div>
       </div>
     </div>
@@ -404,12 +404,12 @@
 <span class="p">}</span>
 </code></pre></div>    </div>
     <hr />
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B.js
-//调用：
-import { debounce } from A;
-debouncedFn = debounce(this.props.getProductItems, 500)
-//实际使用：
-this.debouncedFn(data)
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">B</span><span class="p">.</span><span class="nx">js</span>
+<span class="c1">//调用：</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">debounce</span> <span class="p">}</span> <span class="k">from</span> <span class="nx">A</span><span class="p">;</span>
+<span class="nx">debouncedFn</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">getProductItems</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="c1">//实际使用：</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">debouncedFn</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
   <li>react如何产生随机不重复的key
@@ -557,11 +557,11 @@ this.debouncedFn(data)
   <li>url出现了有+，空格，/，?，%，#，&amp;，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
     <ul>
       <li>在拼接参数的时候，使用 encodeURIComponent() 进行手动转义：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  var url = "xxx?name=" + encodeURIComponent( "wz#aa" );
+        <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">xxx?name=</span><span class="dl">"</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span> <span class="dl">"</span><span class="s2">wz#aa</span><span class="dl">"</span> <span class="p">);</span>
 </code></pre></div>        </div>
       </li>
       <li>用其他字符替换，如：
-    <code class="language-plaintext highlighter-rouge">
+    <code class="language-plaintext highlighter-rouge">js
  var str = '少林寺3#101';
  var result = str.replace(/#/g, '%23');
    </code></li>
@@ -619,7 +619,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     <p><a href="https://www.jianshu.com/p/656e6101bf0f">在个人博客里添加评论系统–Gitalk</a></p>
   </li>
   <li>在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.getElementById('Tools_FBA_Calculator').click()
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">Tools_FBA_Calculator</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">()</span>
 </code></pre></div>    </div>
   </li>
   <li>跨平台桌面应用：
