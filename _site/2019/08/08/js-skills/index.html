@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共1300字,阅读全文约需4分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共1310字,阅读全文约需4分钟</span>
         </div>
       </div>
     </div>
@@ -110,49 +110,49 @@
 <h3 id="js计数器的几种实现">JS计数器的几种实现</h3>
 <ul>
   <li>全局变量
-    <code class="language-plaintext highlighter-rouge">
+    <code class="language-plaintext highlighter-rouge">javascript
     let count = 0;
     const countUp = () =&gt; count++;
    </code></li>
   <li>闭包
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   // javascript
-    const countUp = (() =&gt; {
-    let count = 0;
-    return () =&gt; {
-   return ++count;
-    };
-    })();
-    console.log(countUp()); // 1
-    console.log(countUp()); // 2
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c1">// javascript</span>
+    <span class="kd">const</span> <span class="nx">countUp</span> <span class="o">=</span> <span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="o">++</span><span class="nx">count</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="p">})();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">countUp</span><span class="p">());</span> <span class="c1">// 1</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">countUp</span><span class="p">());</span> <span class="c1">// 2</span>
 </code></pre></div>    </div>
   </li>
   <li>函数属性
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   // javascript
-    let countUp = () =&gt; {
-    return ++countUp.count;
-    };
-    countUp.count = 0;
-    console.log(countUp()); // 1
-    console.log(countUp()); // 2
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c1">// javascript</span>
+    <span class="kd">let</span> <span class="nx">countUp</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">++</span><span class="nx">countUp</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nx">countUp</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">countUp</span><span class="p">());</span> <span class="c1">// 1</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">countUp</span><span class="p">());</span> <span class="c1">// 2</span>
 </code></pre></div>    </div>
   </li>
   <li>函数属性(TS)
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   interface Counter {
-    (): void; // 这里定义Counter这个结构必须包含一个函数，函数的要求是无参数，返回值为void，即无返回值
-    count: number; // 而且这个结构还必须包含一个名为count、值的类型为number类型的属性
-    }
-    const getCounter = (): Counter =&gt; { // 这里定义一个函数用来返回这个计数器
-    const c = () =&gt; { // 定义一个函数，逻辑和前面例子的一样
-   c.count++;
-    };
-    c.count = 0; // 再给这个函数添加一个count属性初始值为0
-    return c; // 最后返回这个函数对象
-    };
-    const counter: Counter = getCounter(); // 通过getCounter函数得到这个计数器
-    counter();
-    console.log(counter.count); // 1
-    counter();
-    console.log(counter.count); // 2
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kr">interface</span> <span class="nx">Counter</span> <span class="p">{</span>
+    <span class="p">():</span> <span class="k">void</span><span class="p">;</span> <span class="c1">// 这里定义Counter这个结构必须包含一个函数，函数的要求是无参数，返回值为void，即无返回值</span>
+    <span class="nl">count</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span> <span class="c1">// 而且这个结构还必须包含一个名为count、值的类型为number类型的属性</span>
+    <span class="p">}</span>
+    <span class="kd">const</span> <span class="nx">getCounter</span> <span class="o">=</span> <span class="p">():</span> <span class="nx">Counter</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// 这里定义一个函数用来返回这个计数器</span>
+    <span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// 定义一个函数，逻辑和前面例子的一样</span>
+   <span class="nx">c</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nx">c</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 再给这个函数添加一个count属性初始值为0</span>
+    <span class="k">return</span> <span class="nx">c</span><span class="p">;</span> <span class="c1">// 最后返回这个函数对象</span>
+    <span class="p">};</span>
+    <span class="kd">const</span> <span class="na">counter</span><span class="p">:</span> <span class="nx">Counter</span> <span class="o">=</span> <span class="nx">getCounter</span><span class="p">();</span> <span class="c1">// 通过getCounter函数得到这个计数器</span>
+    <span class="nx">counter</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">counter</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> <span class="c1">// 1</span>
+    <span class="nx">counter</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">counter</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span> <span class="c1">// 2</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -160,15 +160,15 @@
 <h3 id="前端语音">前端语音</h3>
 <ul>
   <li>语音播报：在项目中需要对ajax请求返回的消息进行语音播报,str 为返回的data
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //语音播报
-  function voiceAnnouncements(str){
-      //百度
-      var url = "http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;text=" + encodeURI(str);        // baidu
-      var n = new Audio(url);
-      n.src = url;
-      n.play();
-  }
-  voiceAnnouncements('你好，今天吃的什么？')
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//语音播报</span>
+  <span class="kd">function</span> <span class="nx">voiceAnnouncements</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span>
+      <span class="c1">//百度</span>
+      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;text=</span><span class="dl">"</span> <span class="o">+</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>        <span class="c1">// baidu</span>
+      <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Audio</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+      <span class="nx">n</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+      <span class="nx">n</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="nx">voiceAnnouncements</span><span class="p">(</span><span class="dl">'</span><span class="s1">你好，今天吃的什么？</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
   <li>

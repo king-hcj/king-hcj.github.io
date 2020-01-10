@@ -138,17 +138,17 @@ React.Children.map的实现考虑到 props.children 可能是一个数组或一�
 
 <p>ref: <br />
 经常误解的是，您需要使用类组件才能使用 ref ，但 ref 也可以通过利用 JavaScript 中的 闭包 与 功能组件functional components一起使用。例如：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function CustomForm ({handleSubmit}) {
-  let inputElement
-  return (
-    &lt;form onSubmit={() =&gt; handleSubmit(inputElement.value)}&gt;
-      &lt;input
-        type='text'
-        ref={(input) =&gt; inputElement = input} /&gt;
-      &lt;button type='submit'&gt;Submit&lt;/button&gt;
-    &lt;/form&gt;
-  )
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">CustomForm</span> <span class="p">({</span><span class="nx">handleSubmit</span><span class="p">})</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">inputElement</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">handleSubmit</span><span class="p">(</span><span class="nx">inputElement</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">'</span><span class="s1">text</span><span class="dl">'</span>
+        <span class="nx">ref</span><span class="o">=</span><span class="p">{(</span><span class="nx">input</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">inputElement</span> <span class="o">=</span> <span class="nx">input</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="dl">'</span><span class="s1">submit</span><span class="dl">'</span><span class="o">&gt;</span><span class="nx">Submit</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>文章力荐：</p>
@@ -161,12 +161,12 @@ React.Children.map的实现考虑到 props.children 可能是一个数组或一�
 
 <ol>
   <li><a href="https://www.oschina.net/p/antv-g2">数据驱动的高交互可视化图形语法 AntV - G2</a>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  import G2 from '@antv/g2';   
-  const chart = new G2.Chart({   
- container: 'c1',   
- width: 600,   
- height: 300   
-  });
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">import</span> <span class="nx">G2</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@antv/g2</span><span class="dl">'</span><span class="p">;</span>   
+  <span class="kd">const</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">G2</span><span class="p">.</span><span class="nx">Chart</span><span class="p">({</span>   
+ <span class="na">container</span><span class="p">:</span> <span class="dl">'</span><span class="s1">c1</span><span class="dl">'</span><span class="p">,</span>   
+ <span class="na">width</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>   
+ <span class="na">height</span><span class="p">:</span> <span class="mi">300</span>   
+  <span class="p">});</span>
 </code></pre></div>    </div>
   </li>
   <li><a href="https://www.yuque.com/antv/g2-docs">G2 文档:G2 API 和教程文档</a></li>

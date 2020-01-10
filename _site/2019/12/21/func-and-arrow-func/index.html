@@ -136,9 +136,9 @@
   <li><strong>箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller</strong>
     <blockquote>
       <p>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：</p>
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   const testFunc = (...args)=&gt;{
-       console.log(args) //数组形式输出参数
-   }
+      <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">const</span> <span class="nx">testFunc</span> <span class="o">=</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="c1">//数组形式输出参数</span>
+   <span class="p">}</span>
 </code></pre></div>      </div>
       <p>在 ECMAScript 6 之前的函数声明中，它们的参数都是“简单参数类型”的。在 ECMAScript 6 之后，凡是在参数声明中使用了缺省参数、剩余参数和模板参数之一的，都不再是“简单的”（non-simple parameters）。 <br />
 在使用传统的简单参数时，只需要将调用该参数时传入的实际参数与参数对象（arguments）绑定就可以了；而使用“非简单参数”时，需要通过“初始器赋值”来完成名字与值的绑定。 <br />

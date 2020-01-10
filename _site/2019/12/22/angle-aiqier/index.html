@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共9576字,阅读全文约需36分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共9831字,阅读全文约需37分钟</span>
         </div>
       </div>
     </div>
@@ -180,24 +180,24 @@
 </ol>
 
 <h2 id="react-dropzone上传文件类型支持">react-dropzone上传文件类型支持：</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;Dropzone
-        onDrop={this.onDrop}
-        accept={'image/jpg, image/jpeg, image/png, image/gif, application/zip, ' +
-        'application/x-rar-compressed, application/msword, application/pdf,' +
-        ' application/vnd.openxmlformats-officedocument.wordprocessingml.document,' +
-        ' application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}
-        style={_styles.drop}&gt;
-        &lt;Icon
-        type='inbox'
-        style={_styles.icon} /&gt;
-        &lt;p style={_styles.title}&gt;
-        Click or drag file to this area to upload
-        &lt;/p&gt;
-        &lt;p style={_styles.message}&gt;
-        Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
-        &lt;/p&gt;
-    &lt;/Dropzone&gt;
-</code></pre></div></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">&lt;</span><span class="nx">Dropzone</span>
+        <span class="nx">onDrop</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onDrop</span><span class="p">}</span>
+        <span class="nx">accept</span><span class="o">=</span><span class="p">{</span><span class="dl">'</span><span class="s1">image/jpg, image/jpeg, image/png, image/gif, application/zip, </span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">application/x-rar-compressed, application/msword, application/pdf,</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1"> application/vnd.openxmlformats-officedocument.wordprocessingml.document,</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1"> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</span><span class="dl">'</span><span class="p">}</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">_styles</span><span class="p">.</span><span class="nx">drop</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Icon</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">'</span><span class="s1">inbox</span><span class="dl">'</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">_styles</span><span class="p">.</span><span class="nx">icon</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">_styles</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="nx">Click</span> <span class="nx">or</span> <span class="nx">drag</span> <span class="nx">file</span> <span class="nx">to</span> <span class="k">this</span> <span class="nx">area</span> <span class="nx">to</span> <span class="nx">upload</span>
+        <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">_styles</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="nx">Support</span> <span class="k">for</span> <span class="nx">a</span> <span class="nx">single</span> <span class="nx">or</span> <span class="nx">bulk</span> <span class="nx">upload</span><span class="p">.</span> <span class="nx">Strictly</span> <span class="nx">prohibit</span> <span class="k">from</span> <span class="nx">uploading</span> <span class="nx">company</span> <span class="nx">data</span> <span class="nx">or</span> <span class="nx">other</span> <span class="nx">band</span> <span class="nx">files</span>
+        <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Dropzone</span><span class="err">&gt;
+</span></code></pre></div></div>
 <p>参考：
 <a href="https://blog.csdn.net/xiaoranzhizhu/article/details/70473734">office 所有后缀对应的 content-type</a></p>
 
@@ -209,17 +209,17 @@
 如果你在constructor中要使用this.props,就必须给super加参数：super(props)；
 （无论有没有constructor，在render中this.props都是可以使用的，这是React自动附带的；）
 如果没用到constructor,是可以不写的,直接：</p>
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class HelloMessage extends React.Component{
-    render (){
-        return (
-            &lt;div&gt;nice to meet you! {this.props.name}&lt;/div&gt;
-        );
-    }
-}
-//不过这种只是用render的情况，使用一般的ES6函数写会更简便：
-const HelloMessage = (props)=&gt;(
-    &lt;div&gt;nice to meet you! {this.props.name}&lt;/div&gt;
-)
+      <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">HelloMessage</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span> <span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">nice</span> <span class="nx">to</span> <span class="nx">meet</span> <span class="nx">you</span><span class="o">!</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//不过这种只是用render的情况，使用一般的ES6函数写会更简便：</span>
+<span class="kd">const</span> <span class="nx">HelloMessage</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">nice</span> <span class="nx">to</span> <span class="nx">meet</span> <span class="nx">you</span><span class="o">!</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">)</span>
 </code></pre></div>      </div>
     </blockquote>
   </blockquote>
@@ -245,43 +245,43 @@ const HelloMessage = (props)=&gt;(
       <li>obj?.foo.bar?.baz</li>
       <li>obj?.[‘foo’]?.bar?.baz</li>
       <li>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function test() {
-   return 42;
- }
- test?.();
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="nx">test</span><span class="p">?.();</span>
 </code></pre></div>        </div>
       </li>
     </ol>
   </li>
   <li>|| 和 ??区别
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   let a = { b: { c: 0 } }
-   console.log(a?.b?.c || 33) // 33
-   console.log(a?.b?.c ?? 33) // 0
-   console.log(a?.c?.c || 22) // 22
-   console.log(a?.c?.c ?? 22) // 22
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span> <span class="na">b</span><span class="p">:</span> <span class="p">{</span> <span class="na">c</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">b</span><span class="p">?.</span><span class="nx">c</span> <span class="o">||</span> <span class="mi">33</span><span class="p">)</span> <span class="c1">// 33</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">b</span><span class="p">?.</span><span class="nx">c</span> <span class="p">??</span> <span class="mi">33</span><span class="p">)</span> <span class="c1">// 0</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">c</span><span class="p">?.</span><span class="nx">c</span> <span class="o">||</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// 22</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">c</span><span class="p">?.</span><span class="nx">c</span> <span class="p">??</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// 22</span>
 </code></pre></div>    </div>
     <p><a href="https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js">idx源码链接</a></p>
   </li>
 </ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  function idx&lt;Ti, Tv&gt;(input: Ti, accessor: (input: Ti) =&gt; Tv): ?Tv {
-    try {
-      return accessor(input);
-    } catch (error) {
-      if (error instanceof TypeError) {
-        if (nullPattern.test(error)) {
-          return null;
-        } else if (undefinedPattern.test(error)) {
-          return undefined;
-        }
-      }
-      throw error;
-    }
-  }
-  const nullPattern = /^null | null$|^[^(]* null /i;
-  const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
-  idx.default = idx;
-  module.exports = idx;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">idx</span><span class="o">&lt;</span><span class="nx">Ti</span><span class="p">,</span> <span class="nx">Tv</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">,</span> <span class="nx">accessor</span><span class="p">:</span> <span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">Tv</span><span class="p">):</span> <span class="p">?</span><span class="nx">Tv</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">accessor</span><span class="p">(</span><span class="nx">input</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="k">instanceof</span> <span class="nx">TypeError</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">nullPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">undefinedPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="kd">const</span> <span class="nx">nullPattern</span> <span class="o">=</span> <span class="sr">/^null | null$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* null /i</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">undefinedPattern</span> <span class="o">=</span> <span class="sr">/^undefined | undefined$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* undefined /i</span><span class="p">;</span>
+  <span class="nx">idx</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
+  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
 </code></pre></div></div>
 
 <ol>
@@ -291,9 +291,9 @@ const HelloMessage = (props)=&gt;(
   <li><a href="https://www.lodashjs.com/"> Lodash-文档</a>
     <ol>
       <li>omit 忽略值：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var object = { 'a': 1, 'b': '2', 'c': 3 };   
-  _.omit(object, ['a', 'c']);   
-  // =&gt; { 'b': '2' }
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">:</span> <span class="mi">3</span> <span class="p">};</span>   
+  <span class="nx">_</span><span class="p">.</span><span class="nx">omit</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">]);</span>   
+  <span class="c1">// =&gt; { 'b': '2' }</span>
 </code></pre></div>        </div>
       </li>
     </ol>
@@ -350,7 +350,9 @@ const HelloMessage = (props)=&gt;(
       <tbody>
         <tr>
           <td><a href="http://nextjs.frontendx.cn/">Next.js文档</a></td>
-          <td><a href="https://nextjs.org/">Next.js英文文档</a></td>
+          <td><a href="https://nextjs.org/">Next.js英文文档</a>(React)</td>
+          <td><a href="https://umijs.org/zh/">UmiJS</a></td>
+          <td><a href="https://zh.nuxtjs.org/">NuxtJS</a>(Vue)</td>
         </tr>
       </tbody>
     </table>
@@ -383,23 +385,23 @@ const HelloMessage = (props)=&gt;(
     </table>
   </li>
   <li>函数防抖运用:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A.js
-// 防抖实现
-export const debounce = (method, wait) =&gt; {
-  let timeout
-  // args为返回函数调用时传入的参数，传给method
-  return function (...args) {
- let context = this
- if (timeout) {
-   clearTimeout(timeout)
- }
- timeout = setTimeout(() =&gt; {
-   // args是一个类数组，所以使用fn.apply
-   // 也可写作method.call(context, ...args)
-   method.apply(context, args)
- }, wait)
-  }
-}
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">A</span><span class="p">.</span><span class="nx">js</span>
+<span class="c1">// 防抖实现</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">wait</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">timeout</span>
+  <span class="c1">// args为返回函数调用时传入的参数，传给method</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+ <span class="kd">let</span> <span class="nx">context</span> <span class="o">=</span> <span class="k">this</span>
+ <span class="k">if</span> <span class="p">(</span><span class="nx">timeout</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">)</span>
+ <span class="p">}</span>
+ <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="c1">// args是一个类数组，所以使用fn.apply</span>
+   <span class="c1">// 也可写作method.call(context, ...args)</span>
+   <span class="nx">method</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+ <span class="p">},</span> <span class="nx">wait</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>    </div>
     <hr />
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B.js
@@ -424,14 +426,14 @@ this.debouncedFn(data)
       <li>使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)</li>
       <li>直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)</li>
       <li>函数组件:React.memo(…)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(…) 其实就是函数组件的React.PureComponent。
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let TestC = (props) =&gt; {
-   return ( 
-       &lt;div&gt;
-       { props.count }
-       &lt;/&gt;
-   )
- }
- TestC = React.memo(TestC);
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">let</span> <span class="nx">TestC</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">(</span> 
+       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+       <span class="p">{</span> <span class="nx">props</span><span class="p">.</span><span class="nx">count</span> <span class="p">}</span>
+       <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>   <span class="p">)</span>
+ <span class="p">}</span>
+ <span class="nx">TestC</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">memo</span><span class="p">(</span><span class="nx">TestC</span><span class="p">);</span>
 </code></pre></div>        </div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
    - 参考阅读
@@ -445,50 +447,61 @@ this.debouncedFn(data)
     </ul>
   </li>
   <li>Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Modal.confirm({
-   title: messages['common_0005'],
-   content: messages['prod_br_0008'],
-   onOk () {
-     _this.props.method()
-   },
-   &lt;!-- onOk: () =&gt; {
-     this.props.method()
-   }, --&gt;
-   onCancel () {
-   }
- })
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">Modal</span><span class="p">.</span><span class="nx">confirm</span><span class="p">({</span>
+   <span class="na">title</span><span class="p">:</span> <span class="nx">messages</span><span class="p">[</span><span class="dl">'</span><span class="s1">common_0005</span><span class="dl">'</span><span class="p">],</span>
+   <span class="na">content</span><span class="p">:</span> <span class="nx">messages</span><span class="p">[</span><span class="dl">'</span><span class="s1">prod_br_0008</span><span class="dl">'</span><span class="p">],</span>
+   <span class="nx">onOk</span> <span class="p">()</span> <span class="p">{</span>
+     <span class="nx">_this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
+   <span class="p">},</span>
+   <span class="c">&lt;!--</span> <span class="na">onOk</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
+   <span class="p">},</span> <span class="o">--&gt;</span>
+   <span class="nx">onCancel</span> <span class="p">()</span> <span class="p">{</span>
+   <span class="p">}</span>
+ <span class="p">})</span>
 </code></pre></div>    </div>
   </li>
   <li>后端返回的 { responseType: ‘blob’ }数据，需要用react-file-download转化;
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import FileDownload from 'react-file-download'
- this.props.actions.downloadPictures(this.props.selectedIds).then((res) =&gt; {
-   // 不能加if(res.data.success)的判断，因为返回的数据是blob，找不到res.data.success
-   FileDownload(res.data, 'images.zip')
-   this.props.cancelSelected()
- })
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">FileDownload</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-file-download</span><span class="dl">'</span>
+ <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">actions</span><span class="p">.</span><span class="nx">downloadPictures</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">selectedIds</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="c1">// 不能加if(res.data.success)的判断，因为返回的数据是blob，找不到res.data.success</span>
+   <span class="nx">FileDownload</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span> <span class="dl">'</span><span class="s1">images.zip</span><span class="dl">'</span><span class="p">)</span>
+   <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">cancelSelected</span><span class="p">()</span>
+ <span class="p">})</span>
 </code></pre></div>    </div>
     <p>下载文件时，很可能需要写responseType,否则可能打不开文件：</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>axios.put(this.url + '/zip', data, {
- responseType: 'blob',
- headers: { 'x-access-token': localStorage.token }
-  })
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">axios</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/zip</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="p">{</span>
+ <span class="na">responseType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">blob</span><span class="dl">'</span><span class="p">,</span>
+ <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">x-access-token</span><span class="dl">'</span><span class="p">:</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">token</span> <span class="p">}</span>
+  <span class="p">})</span>
+</code></pre></div>    </div>
+    <p>上传文件：</p>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">onDrop</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accepted</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+ <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+   <span class="na">fileName</span><span class="p">:</span> <span class="nx">accepted</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">,</span>
+   <span class="na">file</span><span class="p">:</span> <span class="nx">accepted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">uploadFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">()</span>
+<span class="nx">uploadFile</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">file</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">file</span><span class="p">)</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">actions</span><span class="p">.</span><span class="nx">uploadCalcExcel</span><span class="p">(</span><span class="nx">uploadFile</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
   <li>Fetch请求可以直接在控制台调用
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let content = {some: 'content'}
- // Post request with fetch
- fetch('some-url', {
-   method: 'post',
-   headers: {'Content-Type': 'application/json'}
-   body: JSON.stringify(content)
- }).then(status)
- .then(json)
- .then(function(data){
-     console.log("请求成功，JSON解析后的响应数据为:",data);
- })
- .catch(function(err){
-     console.log("Fetch错误:"+err);
- });
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">let</span> <span class="nx">content</span> <span class="o">=</span> <span class="p">{</span><span class="na">some</span><span class="p">:</span> <span class="dl">'</span><span class="s1">content</span><span class="dl">'</span><span class="p">}</span>
+ <span class="c1">// Post request with fetch</span>
+ <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">some-url</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+   <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span><span class="p">}</span>
+   <span class="nl">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">content</span><span class="p">)</span>
+ <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span>
+ <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+ <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">请求成功，JSON解析后的响应数据为:</span><span class="dl">"</span><span class="p">,</span><span class="nx">data</span><span class="p">);</span>
+ <span class="p">})</span>
+ <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Fetch错误:</span><span class="dl">"</span><span class="o">+</span><span class="nx">err</span><span class="p">);</span>
+ <span class="p">});</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -525,11 +538,11 @@ this.debouncedFn(data)
       <blockquote>
         <blockquote>
           <p>arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的Array：</p>
-          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var args = Array.prototype.slice.call(arguments);
-var args = [].slice.call(arguments);
-// ES2015
-const args = Array.from(arguments);
-const args = [...arguments];
+          <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+<span class="c1">// ES2015</span>
+<span class="kd">const</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">args</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arguments</span><span class="p">];</span>
 </code></pre></div>          </div>
         </blockquote>
       </blockquote>
@@ -560,9 +573,9 @@ const args = [...arguments];
   <li>JS中为什么[‘1’,’7’,’11’].map(parseInt)返回[1,NaN,3]?
     <ul>
       <li>map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1 0 (3) [1, 7, 11]
-  7 1 (3) [1, 7, 11]
-  11 2 (3) [1, 7, 11]
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="mi">1</span> <span class="mi">0</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="err"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+  <span class="mi">7</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="err"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+  <span class="mi">11</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="err"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
 </code></pre></div>        </div>
       </li>
       <li>parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
@@ -572,32 +585,34 @@ const args = [...arguments];
       </li>
     </ul>
   </li>
-  <li><a href="https://www.jianshu.com/p/4f07ef18b5d7">MessageChannel是什么，怎么使用？</a>：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： <br />
-MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function structuralClone(obj) {
-  return new Promise(resolve =&gt; {
-    const { port1, port2 } = new MessageChannel()
-    port2.onmessage = ev =&gt; resolve(ev.data)
-    port1.postMessage(obj)
-  })
-}
+  <li>
+    <p><a href="https://www.jianshu.com/p/4f07ef18b5d7">MessageChannel是什么，怎么使用？</a>：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： <br />
+MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。</p>
 
-var obj = {
-  a: 1,
-  b: {
-    c: 2
-  }
-}
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">structuralClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">port1</span><span class="p">,</span> <span class="nx">port2</span> <span class="p">}</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MessageChannel</span><span class="p">()</span>
+    <span class="nx">port2</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="nx">ev</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+    <span class="nx">port1</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
 
-obj.b.d = obj.b
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">b</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">c</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-// 注意该方法是异步的
-// 可以处理 undefined 和循环引用对象
-const test = async () =&gt; {
-  const clone = await structuralClone(obj)
-  console.log(clone)
-}
-test()
+<span class="nx">obj</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">d</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">b</span>
+
+<span class="c1">// 注意该方法是异步的</span>
+<span class="c1">// 可以处理 undefined 和循环引用对象</span>
+<span class="kd">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">clone</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">structuralClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clone</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">test</span><span class="p">()</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -607,6 +622,13 @@ test()
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.getElementById('Tools_FBA_Calculator').click()
 </code></pre></div>    </div>
   </li>
+  <li>跨平台桌面应用：
+    <ul>
+      <li><a href="https://electronjs.org/">Electron</a></li>
+      <li><a href="https://github.com/revery-ui/revery">revery</a></li>
+      <li><a href="https://github.com/nodegui/nodegui">nodegui</a></li>
+    </ul>
+  </li>
 </ol>
 
 <h2 id="html">HTML</h2>
@@ -614,17 +636,17 @@ test()
 <h2 id="css">CSS</h2>
 <ol>
   <li><a href="https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/">position: sticky粘性定位</a>:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 示例代码：
- .left-container {
-   width: 200px;
-   height: 100vh;
-   position: sticky;
-   top: 0px;
-   bottom: 0;
-   background-color: #ffffff;
-   border-right: solid 1px rgb(233, 233, 233);
-   overflow: auto;
- }
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="err">示例代码：</span>
+ <span class="nc">.left-container</span> <span class="p">{</span>
+   <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+   <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+   <span class="nl">position</span><span class="p">:</span> <span class="n">sticky</span><span class="p">;</span>
+   <span class="nl">top</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+   <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+   <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+   <span class="nl">border-right</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">1px</span> <span class="nf">rgb</span><span class="p">(</span><span class="m">233</span><span class="o">,</span> <span class="m">233</span><span class="o">,</span> <span class="m">233</span><span class="p">);</span>
+   <span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+ <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -638,20 +660,20 @@ test()
 (先给Tooltip添加一个overlayClassName={styles[‘tooltip-custom’]})
 <img src="https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/comprehensive/tooltip.png?raw=true" alt="ant design Tooltip文字提示的样式设置" /> <br />
 例： tooltip 黑色背景改成白色不透明
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   .tooltip-custom {
-     div {
-       div {
-         &amp;:first-child {
-           display: none;
-         }
+        <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nc">.tooltip-custom</span> <span class="p">{</span>
+     <span class="nt">div</span> <span class="p">{</span>
+       <span class="nt">div</span> <span class="p">{</span>
+         <span class="k">&amp;</span><span class="nd">:first-child</span> <span class="p">{</span>
+           <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+         <span class="p">}</span>
         
-         &amp;:last-child {
-           padding: 0px;
-           background-color: rgba(255, 255, 255, 1);
-         }
-       }
-     }
-   }
+         <span class="k">&amp;</span><span class="nd">:last-child</span> <span class="p">{</span>
+           <span class="nl">padding</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+           <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">1</span><span class="p">);</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
 </code></pre></div>        </div>
       </li>
     </ul>
@@ -662,7 +684,7 @@ test()
 <h2 id="其他">其他</h2>
 <ol>
   <li><a href="https://blog.csdn.net/u013044310/article/details/80444695">Chrome浏览器百度云倍速播放</a>：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">videojs</span><span class="p">.</span><span class="nx">getPlayers</span><span class="p">(</span><span class="dl">"</span><span class="s2">video-player</span><span class="dl">"</span><span class="p">).</span><span class="nx">html5player</span><span class="p">.</span><span class="nx">tech_</span><span class="p">.</span><span class="nx">setPlaybackRate</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -674,7 +696,7 @@ test()
   <li>查看整个项目的代码行数
     <ul>
       <li>打开终端，用cd命令定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来(适用于前端项目，只要改文件后缀即可)：
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> find . "(" -name "*.m" -or -name "*.mm" -or -name "*.cpp" -or -name "*.h" -or -name "*.rss" ")" -print | xargs wc -l
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">find</span> <span class="p">.</span> <span class="dl">"</span><span class="s2">(</span><span class="dl">"</span> <span class="o">-</span><span class="nx">name</span> <span class="dl">"</span><span class="s2">*.m</span><span class="dl">"</span> <span class="o">-</span><span class="nx">or</span> <span class="o">-</span><span class="nx">name</span> <span class="dl">"</span><span class="s2">*.mm</span><span class="dl">"</span> <span class="o">-</span><span class="nx">or</span> <span class="o">-</span><span class="nx">name</span> <span class="dl">"</span><span class="s2">*.cpp</span><span class="dl">"</span> <span class="o">-</span><span class="nx">or</span> <span class="o">-</span><span class="nx">name</span> <span class="dl">"</span><span class="s2">*.h</span><span class="dl">"</span> <span class="o">-</span><span class="nx">or</span> <span class="o">-</span><span class="nx">name</span> <span class="dl">"</span><span class="s2">*.rss</span><span class="dl">"</span> <span class="dl">"</span><span class="s2">)</span><span class="dl">"</span> <span class="o">-</span><span class="nx">print</span> <span class="o">|</span> <span class="nx">xargs</span> <span class="nx">wc</span> <span class="o">-</span><span class="nx">l</span>
 </code></pre></div>        </div>
         <h1 id="代码规范规约">代码规范/规约</h1>
       </li>

@@ -61,7 +61,7 @@ keywords: HTML，JS，CSS，ERP，前端
 
 
 ## react-dropzone上传文件类型支持：
-```
+```javascript
     <Dropzone
         onDrop={this.onDrop}
         accept={'image/jpg, image/jpeg, image/png, image/gif, application/zip, ' +
@@ -88,7 +88,7 @@ keywords: HTML，JS，CSS，ERP，前端
 如果你在constructor中要使用this.props,就必须给super加参数：super(props)；
 （无论有没有constructor，在render中this.props都是可以使用的，这是React自动附带的；）
 如果没用到constructor,是可以不写的,直接：
-```
+```javascript
 class HelloMessage extends React.Component{
     render (){
         return (
@@ -116,14 +116,14 @@ const HelloMessage = (props)=>(
    1. obj?.foo.bar?.baz
    2. obj?.['foo']?.bar?.baz
    3. 
-      ```
+      ```javascript
         function test() {
           return 42;
         }
         test?.();
       ```
   4. || 和 ??区别
-      ```
+      ```javascript
         let a = { b: { c: 0 } }
         console.log(a?.b?.c || 33) // 33
         console.log(a?.b?.c ?? 33) // 0
@@ -133,7 +133,7 @@ const HelloMessage = (props)=>(
 [idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
    
    
-```
+```javascript
   function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
     try {
       return accessor(input);
@@ -159,7 +159,7 @@ const HelloMessage = (props)=>(
 
 5. [ Lodash-文档](https://www.lodashjs.com/)
    1. omit 忽略值：
-      ```
+      ```javascript
       var object = { 'a': 1, 'b': '2', 'c': 3 };   
         _.omit(object, ['a', 'c']);   
         // => { 'b': '2' }
@@ -197,7 +197,7 @@ const HelloMessage = (props)=>(
 1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
 2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
 3. 函数防抖运用:
-```
+```javascript
 A.js
 // 防抖实现
 export const debounce = (method, wait) => {
@@ -235,7 +235,7 @@ this.debouncedFn(data)
    - 使用PureComponent，父组件传递的props不能全是对象和不变的量，否则会导致一直不更新(如果渲染用的checked来自对象，也应该传一个每次切换会变化为true和false的checked，即便不直接使用)
    - 直接使用shouldComponentUpdate，nextProps和this.props进行对比的属性也不能来自对象(例如：return nextProps.item.checked !== this.props.item.checked，也会导致不更新)
    - 函数组件:React.memo(...)是React v16.6引进来的新属性。它的作用和React.PureComponent类似，是用来控制函数组件的重新渲染的。React.memo(...) 其实就是函数组件的React.PureComponent。
-      ```
+      ```javascript
       let TestC = (props) => {
         return ( 
             <div>
@@ -251,7 +251,7 @@ this.debouncedFn(data)
      - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
      - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
 6. Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
-```
+```javascript
     Modal.confirm({
       title: messages['common_0005'],
       content: messages['prod_br_0008'],
@@ -267,7 +267,7 @@ this.debouncedFn(data)
 ```
 
 7. 后端返回的 { responseType: 'blob' }数据，需要用react-file-download转化;
-```
+```javascript
 import FileDownload from 'react-file-download'
     this.props.actions.downloadPictures(this.props.selectedIds).then((res) => {
       // 不能加if(res.data.success)的判断，因为返回的数据是blob，找不到res.data.success
@@ -276,14 +276,14 @@ import FileDownload from 'react-file-download'
     })
 ```
 下载文件时，很可能需要写responseType,否则可能打不开文件：
-```
+```javascript
 axios.put(this.url + '/zip', data, {
     responseType: 'blob',
     headers: { 'x-access-token': localStorage.token }
   })
 ```
 上传文件：   
-```
+```javascript
 onDrop = (accepted) => {
     this.setState({
       fileName: accepted[0].name,
@@ -296,7 +296,7 @@ this.props.actions.uploadCalcExcel(uploadFile)
 ```
 
 8. Fetch请求可以直接在控制台调用
-    ```
+    ```javascript
     let content = {some: 'content'}
     // Post request with fetch
     fetch('some-url', {
@@ -330,7 +330,7 @@ this.props.actions.uploadCalcExcel(uploadFile)
 
 15. [arguments对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments):
 >>>arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的Array：
-```
+```javascript
 var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 // ES2015
@@ -358,7 +358,7 @@ const args = [...arguments];
 
 19. JS中为什么['1','7','11'].map(parseInt)返回[1,NaN,3]?
    - map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
-      ```
+      ```javascript
       1 0 (3) [1, 7, 11]
       7 1 (3) [1, 7, 11]
       11 2 (3) [1, 7, 11]
@@ -368,7 +368,8 @@ const args = [...arguments];
 
 20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7)：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
 MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。
-    ```
+
+    ```javascript
     function structuralClone(obj) {
       return new Promise(resolve => {
         const { port1, port2 } = new MessageChannel()
@@ -411,7 +412,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 ## CSS
 1. [position: sticky粘性定位](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/):除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)   
-```
+```scss
     示例代码：
     .left-container {
       width: 200px;
@@ -434,7 +435,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    (先给Tooltip添加一个overlayClassName={styles['tooltip-custom']})
    ![ant design Tooltip文字提示的样式设置](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/comprehensive/tooltip.png?raw=true)   
    例： tooltip 黑色背景改成白色不透明
-      ```
+      ```scss
         .tooltip-custom {
           div {
             div {
@@ -455,7 +456,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 ## 其他
 1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
-    ```
+    ```javascript
     videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
     ```
 
@@ -465,7 +466,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 4. 查看整个项目的代码行数
   - 打开终端，用cd命令定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来(适用于前端项目，只要改文件后缀即可)：
-    ```
+    ```javascript
     find . "(" -name "*.m" -or -name "*.mm" -or -name "*.cpp" -or -name "*.h" -or -name "*.rss" ")" -print | xargs wc -l
     ```
 # 代码规范/规约

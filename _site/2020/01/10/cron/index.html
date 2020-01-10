@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Python &mdash; Cheney King</title>
+    <title>react+AntD 实现CRON表达式生成器 &mdash; Cheney King</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,23 +21,23 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/python/">
+    <link rel="canonical" href="http://localhost:4000/2020/01/10/cron/">
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Python">
+    <meta property="og:title" content="react+AntD 实现CRON表达式生成器">
       
-    <meta name="keywords" content="Python">
-    <meta name="og:keywords" content="Python">
+    <meta name="keywords" content="CRON，JS，AntD，React，前端">
+    <meta name="og:keywords" content="CRON，JS，AntD，React，前端">
       
-    <meta name="description" content="requests">
-    <meta name="og:description" content="requests">
+    <meta name="description" content="  因业务需要CRON生成器，网上找的插件多不可用，在线cron工具又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。">
+    <meta name="og:description" content="  因业务需要CRON生成器，网上找的插件多不可用，在线cron工具又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/python/">
+    <meta property="og:url" content="http://localhost:4000/2020/01/10/cron/">
     <meta property="og:site_name" content="Cheney King">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -74,12 +74,26 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Python">
+    <section class="collection-head small geopattern" data-pattern-id="react+AntD 实现CR">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Python</h1>
+        <h1 class="collection-header">react+AntD 实现CRON表达式生成器</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2020/01/10
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#JavaScript" title="JavaScript">JavaScript</a>
+          </span>
+          
+          <span style="color:#ededed;font-size: 14px">本文共96字,阅读全文约需0分钟</span>
+        </div>
       </div>
     </div>
   </div>
@@ -90,68 +104,10 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h3 id="requests">requests</h3>
+    <p>  因业务需要CRON生成器，网上找的插件多不可用，<a href="http://cron.qqe2.com/">在线cron工具</a>又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。</p>
 
-<p>优雅简单的 HTTP 模块。</p>
+<p><img src="https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/javascript/cron.png?raw=true" alt="示例图片" /></p>
 
-<h3 id="beautifulsoup">BeautifulSoup</h3>
-
-<p>很好用的 HTML/XML 解析器。</p>
-
-<h3 id="json">json</h3>
-
-<p>JSON 编码解码器。</p>
-
-<p>应用举例：</p>
-
-<ul>
-  <li>
-    <p>格式化 JSON 文件</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> json.tool src.json <span class="o">&gt;</span> dst.json
-</code></pre></div>    </div>
-
-    <p>在 Vim 里格式化 JSON：</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:%!python <span class="nt">-m</span> json.tool
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<h3 id="cgihttpserver">CGIHTTPServer</h3>
-
-<p>简单实用的 HTTP 服务器。</p>
-
-<p>应用举例：</p>
-
-<ul>
-  <li>
-    <p>运行一个简易的 HTTP 服务器</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> CGIHTTPServer 80
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<h3 id="base64">base64</h3>
-
-<p>方便地进行 base64 编解码的模块。</p>
-
-<p>应用举例：</p>
-
-<ul>
-  <li>
-    <p>解码 base64</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span><span class="nv">aGVsbG93b3JsZA</span><span class="o">==</span> | python <span class="nt">-m</span> <span class="nb">base64</span> <span class="nt">-d</span>
-</code></pre></div>    </div>
-
-    <p>则能看到输出</p>
-
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helloworld
-</code></pre></div>    </div>
-  </li>
-</ul>
 
     </article>
     <div class="share">
@@ -168,7 +124,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/python/',
+            id: '/2020/01/10/cron/',
             clientID: 'bc269064fe241728eb14',
             clientSecret: '0f2e89e4b56f4580e067356a0900c95968284917',
             repo: 'king-hcj.github.io',

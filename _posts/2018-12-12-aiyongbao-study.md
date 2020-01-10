@@ -37,7 +37,7 @@ key值的作用：
 
 ref:   
 经常误解的是，您需要使用类组件才能使用 ref ，但 ref 也可以通过利用 JavaScript 中的 闭包 与 功能组件functional components一起使用。例如：
-```
+```javascript
 function CustomForm ({handleSubmit}) {
   let inputElement
   return (
@@ -58,7 +58,7 @@ function CustomForm ({handleSubmit}) {
 # 图表库 AntV - G2
 
 1. [数据驱动的高交互可视化图形语法 AntV - G2](https://www.oschina.net/p/antv-g2)
-```
+```javascript
   import G2 from '@antv/g2';   
   const chart = new G2.Chart({   
     container: 'c1',   
