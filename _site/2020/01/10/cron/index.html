@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#JavaScript" title="JavaScript">JavaScript</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共10533字,阅读全文约需48分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共10778字,阅读全文约需49分钟</span>
         </div>
       </div>
     </div>
@@ -106,8 +106,9 @@
     <article class="article-content markdown-body">
     <p>  因业务需要CRON生成器，网上找的插件多不可用，<a href="http://cron.qqe2.com/">在线cron工具</a>又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。</p>
 
-<p>效果图：
-<img src="https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/javascript/cron.png?raw=true" alt="示例图片" /></p>
+<p>效果图如下：<br /></p>
+
+<p><img src="https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/javascript/cron.png?raw=true" alt="示例图片" /></p>
 
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Cron.js</span>
 
@@ -324,10 +325,10 @@
 
     <span class="k">return</span> <span class="p">(</span>
       <span class="p">&lt;&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style=</span><span class="err">&gt;*&lt;/span&gt;
-        &lt;label style=&gt;时间参数&lt;/label&gt;
-        &lt;Tabs type=</span><span class="s1">'card'</span> <span class="na">style=</span><span class="err">&gt;
-          &lt;TabPane tab=</span><span class="s1">'秒'</span> <span class="na">key=</span><span class="s1">'1'</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">red</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span><span class="p">&gt;</span>*<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">rgba(0,0,0,.85)</span><span class="dl">'</span><span class="p">,</span> <span class="na">marginLeft</span><span class="p">:</span> <span class="dl">'</span><span class="s1">5px</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span><span class="p">&gt;</span>时间参数<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Tabs</span> <span class="na">type=</span><span class="s1">'card'</span> <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">height</span><span class="p">:</span> <span class="dl">'</span><span class="s1">300px</span><span class="dl">'</span><span class="p">,</span> <span class="na">marginTop</span><span class="p">:</span> <span class="dl">'</span><span class="s1">6px</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">TabPane</span> <span class="na">tab=</span><span class="s1">'秒'</span> <span class="na">key=</span><span class="s1">'1'</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nc">Radio</span><span class="p">.</span><span class="nc">Group</span>
               <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleRadioChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">second</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span>
               <span class="na">value=</span><span class="si">{</span><span class="nx">radioValue</span><span class="p">[</span><span class="dl">'</span><span class="s1">second</span><span class="dl">'</span><span class="p">]</span><span class="si">}</span>
@@ -372,8 +373,8 @@
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span>
-                  <span class="na">style=</span><span class="err">
-                  onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">second</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span>
+                  <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+                  <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">second</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span>
                 <span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">secondCheckbox</span><span class="si">}</span>
@@ -425,8 +426,8 @@
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span>
-                  <span class="na">style=</span><span class="err">
-                  onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">minute</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+                  <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+                  <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">minute</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">minuteCheckbox</span><span class="si">}</span>
                 <span class="p">&lt;/</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span><span class="p">&gt;</span>
@@ -476,8 +477,8 @@
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span>
-                  <span class="na">style=</span><span class="err">
-                  onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hour</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+                  <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+                  <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hour</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">hourCheckbox</span><span class="si">}</span>
                 <span class="p">&lt;/</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span><span class="p">&gt;</span>
@@ -530,8 +531,8 @@
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span>
-                  <span class="na">style=</span><span class="err">
-                  onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">day</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+                  <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+                  <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">day</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">dayCheckbox</span><span class="si">}</span>
                 <span class="p">&lt;/</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span><span class="p">&gt;</span>
@@ -583,7 +584,7 @@
                 月执行一次
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span> <span class="na">style=</span><span class="err"> onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">month</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span> <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span> <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">month</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">monthCheckbox</span><span class="si">}</span>
                 <span class="p">&lt;/</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span><span class="p">&gt;</span>
@@ -618,8 +619,8 @@
               <span class="p">&lt;/</span><span class="nc">Radio</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nc">Radio</span> <span class="na">style=</span><span class="si">{</span><span class="nx">radioStyle</span><span class="si">}</span> <span class="na">value=</span><span class="s1">'point'</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span>
-                  <span class="na">style=</span><span class="err">
-                  onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">week</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+                  <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">100%</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+                  <span class="na">onChange=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleCheckboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="dl">'</span><span class="s1">week</span><span class="dl">'</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
                   指定
                   <span class="si">{</span><span class="nx">weekCheckbox</span><span class="si">}</span>
                 <span class="p">&lt;/</span><span class="nc">Checkbox</span><span class="p">.</span><span class="nc">Group</span><span class="p">&gt;</span>
@@ -630,8 +631,8 @@
         <span class="p">&lt;</span><span class="nc">Search</span>
           <span class="na">placeholder=</span><span class="s1">'生成Cron'</span>
           <span class="na">enterButton=</span><span class="s1">'生成'</span>
-          <span class="na">style=</span><span class="err">
-          onSearch=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">createCron</span><span class="si">}</span>
+          <span class="na">style=</span><span class="si">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="na">margin</span><span class="p">:</span> <span class="dl">'</span><span class="s1">10px 0 18px</span><span class="dl">'</span> <span class="p">}</span><span class="si">}</span>
+          <span class="na">onSearch=</span><span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">createCron</span><span class="si">}</span>
           <span class="na">value=</span><span class="si">{</span><span class="nx">cronText</span><span class="si">}</span>
         <span class="p">/&gt;</span>
       <span class="p">&lt;/&gt;</span>
@@ -659,7 +660,7 @@
 <blockquote>
   <blockquote>
     <blockquote>
-      <p>错误解决：{ {second: *}本来前两个花括号之间没有空格({{second: *})，导致报错‘Variable ‘{{second: *}’ was not properly terminated with regexp: /}}/ in…’，可以用转译，也可以用空格隔开。</p>
+      <p>错误解决：{ {second: *}本来前两个花括号之间没有空格({{second: *})，导致报错‘Variable ‘{{second: *}’ was not properly terminated with regexp: /}}/ in…’，可以用转译，也可以用空格隔开。也就是说不能直接不现两个前花括号连着的情况。</p>
     </blockquote>
   </blockquote>
 </blockquote>
