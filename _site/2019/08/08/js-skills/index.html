@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共1310字,阅读全文约需4分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共1862字,阅读全文约需6分钟</span>
         </div>
       </div>
     </div>
@@ -191,6 +191,38 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
   <li>toString后split</li>
   <li>join后split</li>
 </ul>
+
+<h3 id="使用-proxy-来实现一个数据绑定和监听">使用 Proxy 来实现一个数据绑定和监听</h3>
+
+<p>Proxy简介：</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+<span class="c1">// `target` 代表需要添加代理的对象</span>
+<span class="c1">// `handler` 用来自定义对象中的操作</span>
+</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">onWatch</span> <span class="o">=</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">setBind</span><span class="p">,</span> <span class="nx">getLogger</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">handler</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kd">get</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">,</span> <span class="nx">receiver</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">getLogger</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nb">Reflect</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">,</span> <span class="nx">receiver</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="kd">set</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">receiver</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">setBind</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nb">Reflect</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="kd">let</span> <span class="nx">value</span>
+<span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">onWatch</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">value</span> <span class="o">=</span> <span class="nx">v</span>
+<span class="p">},</span> <span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">property</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Get '</span><span class="p">${</span><span class="nx">property</span><span class="p">}</span><span class="s2">' = </span><span class="p">${</span><span class="nx">target</span><span class="p">[</span><span class="nx">property</span><span class="p">]}</span><span class="s2">`</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// bind `value` to `2`</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">a</span> <span class="c1">// -&gt; Get 'a' = 2</span>
+</code></pre></div></div>
 
     </article>
     <div class="share">

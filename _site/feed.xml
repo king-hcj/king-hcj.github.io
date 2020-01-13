@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-10T18:19:05+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">react+AntD 实现CRON表达式生成器</title><link href="http://localhost:4000/2020/01/10/cron/" rel="alternate" type="text/html" title="react+AntD 实现CRON表达式生成器" /><published>2020-01-10T00:00:00+08:00</published><updated>2020-01-10T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/10/cron</id><content type="html" xml:base="http://localhost:4000/2020/01/10/cron/">&lt;p&gt;  因业务需要CRON生成器，网上找的插件多不可用，&lt;a href=&quot;http://cron.qqe2.com/&quot;&gt;在线cron工具&lt;/a&gt;又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-13T17:31:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">关于未来互联网的思考</title><link href="http://localhost:4000/2020/01/13/thinking-about-the-future-network/" rel="alternate" type="text/html" title="关于未来互联网的思考" /><published>2020-01-13T00:00:00+08:00</published><updated>2020-01-13T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/13/thinking-about-the-future-network</id><content type="html" xml:base="http://localhost:4000/2020/01/13/thinking-about-the-future-network/">&lt;p&gt;  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。&lt;/p&gt;
+
+&lt;p&gt;  因为是转行而来，从最初面对需求的茫然不知所措到后来逐渐能胜任前端开发、理解前端思想原理，之后难免会对前端的未来和个人的未来进行一些思考。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;如何在入行前端的各个阶段平稳过渡？各个阶段的认知不一样，唯有在这个阶段努力提升，在这个阶段变的更好，你才能领会下一个阶段应该是什么样的，需要一些什么。
+    &lt;ul&gt;
+      &lt;li&gt;很多时候，你会真切的感受到知道的越多，不知道的越多；要如何判断你认为重要的东西是否就是前端重要的东西。&lt;/li&gt;
+      &lt;li&gt;比如我学浏览器工作原理，学习JavaScript核心原理，我知道这是前端真真切切需要的；&lt;/li&gt;
+      &lt;li&gt;我学编译原理，复习计算机组成原理，我知道它和编程息息相关，但它对前端有多少真切的影响呢？说的俗一点，前端、工作，大多时候我们都是在趋利的，那么我们又该如何平衡趋利和基础深度的关系？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;你觉得未来的互联网、未来的前端是什么样的？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;展示立体化虚拟现实装修5g游戏&quot;&gt;展示立体化(虚拟现实，装修，5G，游戏)&lt;/h2&gt;
+&lt;p&gt;  5G带来更多可能；基于D3，threejs或类似框架技术的立体化。&lt;/p&gt;
+
+&lt;h2 id=&quot;功能智能化人工智能&quot;&gt;功能智能化(人工智能)&lt;/h2&gt;
+&lt;p&gt;  人工智能，大数据。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。</summary></entry><entry><title type="html">趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话</title><link href="http://localhost:4000/2020/01/11/symmetric-asymmetric/" rel="alternate" type="text/html" title="趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话" /><published>2020-01-11T00:00:00+08:00</published><updated>2020-01-11T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/11/symmetric-asymmetric</id><content type="html" xml:base="http://localhost:4000/2020/01/11/symmetric-asymmetric/">&lt;p&gt;  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！&lt;/p&gt;
+
+&lt;h2 id=&quot;概念&quot;&gt;概念&lt;/h2&gt;
+&lt;p&gt;  对称密钥加密（英语：Symmetric-key algorithm）又称为对称加密、私钥加密、共享密钥加密，是密码学中的一类加密算法。这类算法在加密和解密时使用相同的密钥，或是使用两个可以简单地相互推算的密钥。&lt;/p&gt;
+
+&lt;p&gt;  公开密钥加密（英语：Public-key cryptography），也称为非对称加密（英语：asymmetric cryptography），是密码学的一种算法，它需要两个密钥，一个是公开密钥，另一个是私有密钥；一个用作加密的时候，另一个则用作解密。使用其中一个密钥把明文加密后所得的密文，只能用相对应的另一个密钥才能解密得到原本的明文；由于加密和解密需要两个不同的密钥，故被称为非对称加密。&lt;/p&gt;
+
+&lt;h2 id=&quot;场景描述&quot;&gt;场景描述&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;背景：愉快的高中生活结束了，大学录取结果隆重出炉，互不相识的小明和小丽被拉入了一个大学新生群。这个微信群，和普通群的区别是：无法加群里的小伙伴为好友，也就是说无法发起私聊，任何信息都得发在群里，大家都会看见。&lt;/li&gt;
+  &lt;li&gt;任务：小明和小丽在群里实现私密会话。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;实施方案&quot;&gt;实施方案&lt;/h2&gt;
+&lt;p&gt;  进群后，小伙伴们就可以愉快的聊天了。因为他们都使用中文，都通过中文的语法获取信息，所以所有人可以愉快的、无障碍的聊天。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;其实这时候的交流方式可以理解成对称加密——加密和解密时使用相同的密钥，也就是中文语法。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  非对称加密+对称加密：HTTPS真正采用的是这种加密方式。大致的过程就是使用非对称加密的方式传送密钥，那么该密钥就是双方就安全的得到了，也就是说使用非对称加密来使得双方安全拿到密钥。&lt;/p&gt;
+
+&lt;p&gt;中间人攻击：
+  在非对称加密的过程中，服务器向浏览器发送公钥的过程是明文的，这个通道上的公钥是可以被中间人获取到的，假设这个公钥被获取到了，然后中间人自己伪造一个公钥和私钥。将自己伪造的公钥传给浏览器，而浏览器用伪造的公钥加密后传回服务器的途中被中间人获取，然后用伪造的私钥解密，这样数据就被获取到了，而中间人同样有服务器的公钥，同时也可以和服务器进行交互。上面暴露的问题是浏览器根本不知道公钥是不是服务器的。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！</summary></entry><entry><title type="html">react+AntD 实现CRON表达式生成器</title><link href="http://localhost:4000/2020/01/10/cron/" rel="alternate" type="text/html" title="react+AntD 实现CRON表达式生成器" /><published>2020-01-10T00:00:00+08:00</published><updated>2020-01-10T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/10/cron</id><content type="html" xml:base="http://localhost:4000/2020/01/10/cron/">&lt;p&gt;  因业务需要CRON生成器，网上找的插件多不可用，&lt;a href=&quot;http://cron.qqe2.com/&quot;&gt;在线cron工具&lt;/a&gt;又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。&lt;/p&gt;
 
 &lt;p&gt;效果图如下：&lt;br /&gt;&lt;/p&gt;
 
@@ -557,7 +597,12 @@
       &lt;p&gt;错误解决：{ {second: *}本来前两个花括号之间没有空格({{second: *})，导致报错‘Variable ‘{{second: *}’ was not properly terminated with regexp: /}}/ in…’，可以用转译，也可以用空格隔开。也就是说不能直接不现两个前花括号连着的情况。&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/blockquote&gt;
-&lt;/blockquote&gt;</content><author><name>Cheney King</name></author><summary type="html">  因业务需要CRON生成器，网上找的插件多不可用，在线cron工具又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。</summary></entry><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;后期优化参考：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/zsg88/article/details/70622414&quot;&gt;Cron 表达式的JavaScript验证代码&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  因业务需要CRON生成器，网上找的插件多不可用，在线cron工具又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。</summary></entry><entry><title type="html">菜鸟，也有春天！</title><link href="http://localhost:4000/2019/12/25/annual-personal-ummary/" rel="alternate" type="text/html" title="菜鸟，也有春天！" /><published>2019-12-25T00:00:00+08:00</published><updated>2019-12-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/25/annual-personal-ummary</id><content type="html" xml:base="http://localhost:4000/2019/12/25/annual-personal-ummary/">&lt;p&gt;  非夜，亦无酒；我们不谈技术，亦无关风月～。这里只有一个半路出家一路走来的前端菜鸟的故事。&lt;/p&gt;
 
 &lt;p&gt;  记得八九月份，在某前端交流群结识了一位想转行前端的小伙伴，他因学习压力和没有面试机会而苦恼迷茫，我安慰他说：菜鸟，也有春天。&lt;/p&gt;
 
@@ -1665,7 +1710,39 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
   &lt;li&gt;flatMap&lt;/li&gt;
   &lt;li&gt;toString后split&lt;/li&gt;
   &lt;li&gt;join后split&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry><entry><title type="html">《React全家桶+AntD 共享单车后台管理系统开发》笔记</title><link href="http://localhost:4000/2019/05/23/AntD/" rel="alternate" type="text/html" title="《React全家桶+AntD 共享单车后台管理系统开发》笔记" /><published>2019-05-23T00:00:00+08:00</published><updated>2019-05-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/23/AntD</id><content type="html" xml:base="http://localhost:4000/2019/05/23/AntD/">&lt;p&gt;课程《React全家桶+AntD 共享单车后台管理系统开发》参见&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;使用-proxy-来实现一个数据绑定和监听&quot;&gt;使用 Proxy 来实现一个数据绑定和监听&lt;/h3&gt;
+
+&lt;p&gt;Proxy简介：&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Proxy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// `target` 代表需要添加代理的对象&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// `handler` 用来自定义对象中的操作&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onWatch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setBind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Reflect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;setBind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Reflect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Proxy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onWatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`Get '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bind `value` to `2`&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Get 'a' = 2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry><entry><title type="html">《React全家桶+AntD 共享单车后台管理系统开发》笔记</title><link href="http://localhost:4000/2019/05/23/AntD/" rel="alternate" type="text/html" title="《React全家桶+AntD 共享单车后台管理系统开发》笔记" /><published>2019-05-23T00:00:00+08:00</published><updated>2019-05-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/23/AntD</id><content type="html" xml:base="http://localhost:4000/2019/05/23/AntD/">&lt;p&gt;课程《React全家桶+AntD 共享单车后台管理系统开发》参见&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h1 id=&quot;yarn介绍&quot;&gt;yarn介绍&lt;/h1&gt;
 &lt;ul&gt;
@@ -1768,638 +1845,4 @@ less中可以通过@import导入文件（变量、less）&lt;/p&gt;
   &lt;li&gt;图片画廊：card，card.meta,row（gutter），col，modal实现（单行，多列，每列多个，每个图片尺寸不同，点击查看大图）&lt;/li&gt;
   &lt;li&gt;this.props.form、getFieldDecorator需结合Form.create进行表单验证；可以用一个值为icon的prefix（前缀）使得输入框内部前部显示图标等；&lt;/li&gt;
   &lt;li&gt;easy-mock：数据在线模拟&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">课程《React全家桶+AntD 共享单车后台管理系统开发》参见这里。</summary></entry><entry><title type="html">慕课视频等综合学习笔记</title><link href="http://localhost:4000/2018/12/12/aiyongbao-study/" rel="alternate" type="text/html" title="慕课视频等综合学习笔记" /><published>2018-12-12T00:00:00+08:00</published><updated>2018-12-12T00:00:00+08:00</updated><id>http://localhost:4000/2018/12/12/aiyongbao-study</id><content type="html" xml:base="http://localhost:4000/2018/12/12/aiyongbao-study/">&lt;p&gt;包括在爱用宝工作及慕课课程学习总结的一些笔记。&lt;/p&gt;
-
-&lt;h2 id=&quot;markdown基本语法参考&quot;&gt;&lt;a href=&quot;https://www.jianshu.com/p/191d1e21f7ed&quot;&gt;Markdown基本语法参考&lt;/a&gt;&lt;/h2&gt;
-&lt;h1 id=&quot;react-164-开发简书项目&quot;&gt;React 16.4 开发简书项目:&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;从零基础入门到实战&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;生命周期函数：指在某一时刻组件会自动调用执行的函数&lt;/p&gt;
-
-&lt;p&gt;动画：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000015487495&quot;&gt;react-transition-group 思否&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://reactcommunity.org/react-transition-group/&quot;&gt;react-transition-group 官网&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;React、React.js、React Native三者的关系&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;React：
-React 是基础框架，是一套基础设计实现理念，开发者不能直接使用它来开发移动应用或者网页。&lt;/li&gt;
-  &lt;li&gt;React.js:
-在React框架之上，发展出了React.js 框架来开发网页。&lt;/li&gt;
-  &lt;li&gt;React Native：
-在React框架之上，发展出来React Native 用来开发移动应用。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;因为React 基础框架与React.js框架是同时出现、同时进化发展的，这就造成了React基础框架的基本概念、设计思想都是在React.js的相关文档中描述的。后来，Facebook推出了React Native 后，也没有把React的相关概念文档从React.js文档中分离出来。这就导致出现了学React Native 要去看React.js文档，说React Native 不时会说到React.js的情况。&lt;/p&gt;
-
-&lt;p&gt;使用React.Children.map而不是props.children.map遍历： &lt;br /&gt;
-React.Children.map的实现考虑到 props.children 可能是一个数组或一个对象。&lt;/p&gt;
-
-&lt;p&gt;key值的作用： &lt;br /&gt;
-一列节点中的一个发生了改变，React并没有什么好方法来处理这个问题。循环新旧两个列表，并找出不同是React唯一的处理方法。但是，有一个可以把这个算法的复杂度降低的办法。那就是我们在生成一列节点的时候给每一个节点上添加一个key。这个key只需要在这一列节点中唯一，不需要全局唯一。&lt;/p&gt;
-
-&lt;p&gt;ref: &lt;br /&gt;
-经常误解的是，您需要使用类组件才能使用 ref ，但 ref 也可以通过利用 JavaScript 中的 闭包 与 功能组件functional components一起使用。例如：&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CustomForm&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleSubmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputElement&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onSubmit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleSubmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputElement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;submit&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Submit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/form&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;文章力荐：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/sinat_17775997/article/details/69938720&quot;&gt;React 常见的面试题&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/41312576&quot;&gt;理解 React，但不理解 Redux，该如何通俗易懂的理解 Redux？&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;图表库-antv---g2&quot;&gt;图表库 AntV - G2&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.oschina.net/p/antv-g2&quot;&gt;数据驱动的高交互可视化图形语法 AntV - G2&lt;/a&gt;
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;G2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@antv/g2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;G2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;   
- &lt;span class=&quot;na&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
- &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
- &lt;span class=&quot;na&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;   
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.yuque.com/antv/g2-docs&quot;&gt;G2 文档:G2 API 和教程文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;http协议原理实践-web开发工程师必学&quot;&gt;HTTP协议原理+实践 Web开发工程师必学&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践 Web开发工程师必学&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;低三层：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;物理层：定义物理设备如何传输数据&lt;/li&gt;
-  &lt;li&gt;数据链路层：在通信实体间建立数据链路连接（电路）&lt;/li&gt;
-  &lt;li&gt;网络层：为数据在结点间传输创建逻辑链路&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;传输层：
-端到端，向高层屏蔽细节&lt;/p&gt;
-
-&lt;p&gt;应用层：构建于TCP协议之上，屏蔽网络传输细节&lt;/p&gt;
-
-&lt;p&gt;URI(统一资源标识符)：包含URL(统一资源定位器)和URN(永久统一资源定位符，资源移动后还能找到)&lt;/p&gt;
-
-&lt;p&gt;Get、Post、Put方法等只是语义话方法（建议），无强约束。&lt;/p&gt;
-
-&lt;p&gt;Etag:数据签名(最常见：hash计算。if-Match、if-Non-Match)。&lt;/p&gt;
-
-&lt;p&gt;axios在很大程度上受到Angular提供的$http服务的启发。 最终，axios努力提供一个在Angular外使用的独立的$http-like服务。&lt;/p&gt;
-
-&lt;h1 id=&quot;web攻城狮培养计划之进击javascript核心视频课程&quot;&gt;Web攻城狮培养计划之进击JavaScript核心视频课程&lt;/h1&gt;
-&lt;p&gt;堆内存、栈内存：
-   基本类型，按值访问；保存在栈内存中(有序好查找，固定大小，不可修改，修改变量实际是覆盖)；
-   引用类型,按引用访问；大小不固定，保存在堆内存中，可修改；无序，难以定位，所以把地址保存在栈内存中，通过地址查找。
-参数传递：按值传递（引用类型传递的是地址，也是值）&lt;/p&gt;
-
-&lt;p&gt;作用域：全局作用域，局部作用域（函数作用域）；没有块级作用域&lt;/p&gt;
-
-&lt;p&gt;JS解析：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;先预解析（所有变量，在正式运行代码之前，都提前赋一个值：undefined；所有的函数，在正式运行代码之前都是整个函数块）;逐行代码解析（fn1()函数内部再发生{（1）预解析（2）逐行代码解析}）；&lt;/li&gt;
-  &lt;li&gt;遇到重名，变量和函数重名，就留下函数，与上下关系没有关系，注:只先找var(包括参数。其他无var的，不会预解析) ，function声明的；&lt;/li&gt;
-  &lt;li&gt;预解析不影响执行时的赋值，如var 了变量a和函数a，预解析时函数覆盖掉变量，但是执行的时候，还是可以给a赋值，所以可能会造成函数无法执行的问题；&lt;/li&gt;
-  &lt;li&gt;预解析是分标签进行的（script），前一个标签定义赋值，后一个打印可以；换过来不行；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/yehui-mmd/p/6095041.html&quot;&gt;JS解析+预解析相关总结&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;垃圾回收机制：释放无用数据，回收内存&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;自动&lt;/li&gt;
-  &lt;li&gt;手动&lt;/li&gt;
-  &lt;li&gt;原理：找出无用数据，打上标记，释放其内存；周期性执行。
-    &lt;ul&gt;
-      &lt;li&gt;标记清除&lt;/li&gt;
-      &lt;li&gt;引用计数（变量访问对象）：问题在于循环引用，得不到释放&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;内存管理：web浏览器 &amp;lt; 桌面应用程序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;资料参考：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/89a377c52b48&quot;&gt;没错，就是Access-Control-Allow-Origin，跨域&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000012469713&quot;&gt;ajax跨域，这应该是最全的解决方案了&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/#more&quot;&gt;axios全攻略&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/35123b048e5e&quot;&gt;前端｜浅谈fetch&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;react-native&quot;&gt;React Native&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://baijiahao.baidu.com/s?id=1615907407534131792&amp;amp;wfr=spider&amp;amp;for=pc&quot;&gt;看看React Native和React.js之间的区别&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/xiangzhihong8/article/details/52623852&quot;&gt;React Native运行原理解析&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qizhenshuai/article/details/78202472&quot;&gt;React、React Native面试题&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://weibo.com/1712131295/CoRnElNkZ?ref=collection&amp;amp;type=comment#_rnd1554724921355&quot;&gt;CSS3 Flexbox 口诀&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/elzza/article/details/78878806&quot;&gt;IOS与安卓的区别&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/372034fc2f2e&quot;&gt;iOS与安卓的区别 浅谈ios为什么比安卓流畅&lt;/a&gt;：
-    &lt;blockquote&gt;
-      &lt;blockquote&gt;
-        &lt;blockquote&gt;
-          &lt;p&gt;有了优先级的关系，有了GPU加速的影响，还有两个系统各自编程以及机制的问题，似乎已经可以说明为什么iOS相比Android更为流畅的原因，但最终还有一个问题是就是应用程序。&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/blockquote&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/17cfac53578a&quot;&gt;iOS 开发是否要采用 React Native?&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;抠图技术&quot;&gt;抠图技术&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;语义分割重在对每个像素的语义理解，将相同语义的像素分割为同一个部分，得到的结果就是若干个块状，至于块与块之间是否衔接自然则不考虑。抠图只将图片分成前景和背景两块，目的是拿到前景，好的抠图算法会对于头发等细节的处理效果比较精确。分割和抠图的另一个重要区别是分割是返回像素分类结果，分类结果是整型；而抠图返回的是属于前景或背景的概率p，在前景与背景交互区域会产生渐变的效果，使得抠图更加自然。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;抠图技术的核心问题是解以下公式：Ii = αFi + (1-α)Bi，其中Ii是图像当前可观察的像素，为已知量；α是透明度，F是前景像素，B是背景像素，这三个变量为未知量。对于这个公式的理解，可以把原始图像看做是前景和背景按照一定权重（α透明度）叠加组成的。对于完全确定是前景的像素，α = 1；对于完全确定是背景的像素，α = 0；对于不确定是前景还是背景的像素，α是介于0到1之间的浮点数。&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;来源：CSDN&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;原文：https://blog.csdn.net/qq_36165459/article/details/78549686&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I = αF +(1-α)B。一张图片I，应该由前景F和前景B合成，合成的方式，就是通过透明度α来操作。matting问题研究的是，如何通过左边的I，推测出右边的三个变量α、F和B，难度可想而知。在这篇文章中，作者给出了Triangulation Matting的方法，整体思想也很简单，既然matting原问题那么难，不如把条件放松，使得问题简单一些。假设我知道了B和I，那么有没有可能得到α和F，于是乎，作者提出了，针对同一张前景，切换背景，来计算得到前景和透明度的方法。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;因为F、B和α都是未知的，要把这么多未知项都求出来显然很不容易。所以就需要增加一些附加的约束，通常，这种约以TriMap的形式给出。TriMap就是三元图，它是和待分割图像同等大小的一张图，但图中的像素只有三个取值，0、128（左右）和255。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;来源：&lt;a href=&quot;https://blog.csdn.net/baimafujinji/article/details/72863106?utm_source=gold_browser_extension&quot;&gt;自然抠图算法：以经典的贝叶斯抠图为例（Bayesian Matting）&lt;/a&gt;&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;相关文章：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27852081?utm_source=itdadao&amp;amp;utm_medium=referral&quot;&gt;天干物燥，小心抠图 —— A journey of matting(知乎)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.juew.org/default.htm&quot;&gt;Jue Wang Computer Graphics and Vision Researcher&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ai.baidu.com/tech/body/seg&quot;&gt;百度AI人像分割(免费使用)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;小技巧&quot;&gt;小技巧&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;多行文本转数组:类似下面这样，带有换行符，需要转换成在SQL IN中可使用的数组
-    &lt;blockquote&gt;
-      &lt;blockquote&gt;
-        &lt;blockquote&gt;
-          &lt;p&gt;技巧：``.replace(/\n/g,’,’).split(‘,’) &lt;br /&gt;
-纵列文本&lt;/p&gt;
-          &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   娜琪丝   
-   泰和之恋   
-   凯飞乐呵呵125212910   
-   谭焕荣   
-   wangp111111111   
-   倍帅123   
-   joonewatch1222   
-   女神win   
-   缪斯兔商城   
-   yu727467052   
-   tb78230558   
-   wangjia2772489833   
-   dainian   
-   第一间店铺1   
-   凰诏旗舰店   
-   lijinxuan123   
-   rthz李杰   
-   为你我要好好的   
-   余锦盟123   
-   乐派成人用品专营店   
-   jayvsliangw   
-   tb3228464532   
-   fxj12345677   
-   体坛风云302   
-   anhuimaanshan   
-   月光林地101   
-   安小雨1   
-   烟花夕颜冷   
-   fvqrfvqr77   
-   tb0400_72   
-   快乐飞34   
-   ranqingjun123   
-   taobaotong0902   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;          &lt;/div&gt;
-        &lt;/blockquote&gt;
-      &lt;/blockquote&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;输出： &lt;br /&gt;
-[“娜琪丝”, “泰和之恋”, “凯飞乐呵呵125212910”, “谭焕荣”, “wangp111111111”, “倍帅123”, “joonewatch1222”, “女神win”, “缪斯兔商城”, “yu727467052”, “tb78230558”, “wangjia2772489833”, “dainian”, “第一间店铺1”, “凰诏旗舰店”, “lijinxuan123”, “rthz李杰”, “为你我要好好的”, “余锦盟123”, “乐派成人用品专营店”, “jayvsliangw”, “tb3228464532”, “fxj12345677”, “体坛风云302”, “anhuimaanshan”, “月光林地101”, “安小雨1”, “烟花夕颜冷”, “fvqrfvqr77”, “tb0400_72”, “快乐飞34”, “ranqingjun123”, “taobaotong0902”]&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;</content><author><name>Cheney King</name></author><summary type="html">包括在爱用宝工作及慕课课程学习总结的一些笔记。</summary></entry><entry><title type="html">图解 SQL 里的各种 JOIN</title><link href="http://localhost:4000/2017/09/11/joins-in-sql/" rel="alternate" type="text/html" title="图解 SQL 里的各种 JOIN" /><published>2017-09-11T00:00:00+08:00</published><updated>2017-09-11T00:00:00+08:00</updated><id>http://localhost:4000/2017/09/11/joins-in-sql</id><content type="html" xml:base="http://localhost:4000/2017/09/11/joins-in-sql/">&lt;p&gt;文氏图和示例来理解 SQL 里的各种 JOIN。&lt;/p&gt;
-
-&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;在各种问答社区里谈及 SQL 里的各种 JOIN 之间的区别时，最被广为引用的是 CodeProject 上 &lt;a href=&quot;https://www.codeproject.com/script/Membership/View.aspx?mid=5909363&quot;&gt;C.L. Moffatt&lt;/a&gt; 的文章 &lt;a href=&quot;https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins&quot;&gt;Visual Representation of SQL Joins&lt;/a&gt;，他确实讲得简单明了，使用文氏图来帮助理解，效果明显。本文将沿用他的讲解方式，稍有演绎，可以视为该文较为粗糙的中译版。&lt;/p&gt;
-
-&lt;h2 id=&quot;约定&quot;&gt;约定&lt;/h2&gt;
-
-&lt;p&gt;下文将使用两个数据库表 Table_A 和 Table_B 来进行示例讲解，其结构与数据分别如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql&amp;gt; SELECT * FROM Table_A ORDER BY PK ASC;
-+----+---------+
-| PK | Value   |
-+----+---------+
-|  1 | both ab |
-|  2 | only a  |
-+----+---------+
-2 rows in set (0.00 sec)
-
-mysql&amp;gt; SELECT * from Table_B ORDER BY PK ASC;
-+----+---------+
-| PK | Value   |
-+----+---------+
-|  1 | both ab |
-|  3 | only b  |
-+----+---------+
-2 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;其中 PK 为 1 的记录在 Table_A 和 Table_B 中都有，2 为 Table_A 特有，3 为 Table_B 特有。&lt;/p&gt;
-
-&lt;h2 id=&quot;常用的-join&quot;&gt;常用的 JOIN&lt;/h2&gt;
-
-&lt;h3 id=&quot;inner-join&quot;&gt;INNER JOIN&lt;/h3&gt;
-
-&lt;p&gt;INNER JOIN 一般被译作内连接。内连接查询能将左表（表 A）和右表（表 B）中能关联起来的数据连接后返回。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/inner-join.png&quot; alt=&quot;INNER JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;INNER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-|    1 |    1 | both ab | both ab |
-+------+------+---------+---------+
-1 row in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;注：其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; 为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Table_A&lt;/code&gt; 的别名，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; 为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Table_B&lt;/code&gt; 的别名，下同。&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;left-join&quot;&gt;LEFT JOIN&lt;/h3&gt;
-
-&lt;p&gt;LEFT JOIN 一般被译作左连接，也写作 LEFT OUTER JOIN。左连接查询会返回左表（表 A）中所有记录，不管右表（表 B）中有没有关联的数据。在右表中找到的关联数据列也会被一起返回。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/left-join.png&quot; alt=&quot;LEFT JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-|    1 |    1 | both ab | both ba |
-|    2 | NULL | only a  | NULL    |
-+------+------+---------+---------+
-2 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;right-join&quot;&gt;RIGHT JOIN&lt;/h3&gt;
-
-&lt;p&gt;RIGHT JOIN 一般被译作右连接，也写作 RIGHT OUTER JOIN。右连接查询会返回右表（表 B）中所有记录，不管左表（表 A）中有没有关联的数据。在左表中找到的关联数据列也会被一起返回。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/right-join.png&quot; alt=&quot;RIGHT JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RIGHT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-|    1 |    1 | both ab | both ba |
-| NULL |    3 | NULL    | only b  |
-+------+------+---------+---------+
-2 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;full-outer-join&quot;&gt;FULL OUTER JOIN&lt;/h3&gt;
-
-&lt;p&gt;FULL OUTER JOIN 一般被译作外连接、全连接，实际查询语句中可以写作 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FULL OUTER JOIN&lt;/code&gt; 或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FULL JOIN&lt;/code&gt;。外连接查询能返回左右表里的所有记录，其中左右表里能关联起来的记录被连接后返回。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/full-outer-join.png&quot; alt=&quot;FULL OUTER JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FULL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FULL OUTER JOIN Table_B B
-ON A.PK = B.PK' at line 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;注：我当前示例使用的 MySQL 不支持 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FULL OUTER JOIN&lt;/code&gt;。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;应当返回的结果（使用 UNION 模拟）：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql&amp;gt; SELECT * 
-    -&amp;gt; FROM Table_A
-    -&amp;gt; LEFT JOIN Table_B 
-    -&amp;gt; ON Table_A.PK = Table_B.PK
-    -&amp;gt; UNION ALL
-    -&amp;gt; SELECT *
-    -&amp;gt; FROM Table_A
-    -&amp;gt; RIGHT JOIN Table_B 
-    -&amp;gt; ON Table_A.PK = Table_B.PK
-    -&amp;gt; WHERE Table_A.PK IS NULL;
-+------+---------+------+---------+
-| PK   | Value   | PK   | Value   |
-+------+---------+------+---------+
-|    1 | both ab |    1 | both ba |
-|    2 | only a  | NULL | NULL    |
-| NULL | NULL    |    3 | only b  |
-+------+---------+------+---------+
-3 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
-
-&lt;p&gt;以上四种，就是 SQL 里常见 JOIN 的种类和概念了，看一下它们的合影：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/general-joins.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有没有感觉少了些什么，学数学集合时完全不止这几种情况？确实如此，继续看。&lt;/p&gt;
-
-&lt;h2 id=&quot;延伸用法&quot;&gt;延伸用法&lt;/h2&gt;
-
-&lt;h3 id=&quot;left-join-excluding-inner-join&quot;&gt;LEFT JOIN EXCLUDING INNER JOIN&lt;/h3&gt;
-
-&lt;p&gt;返回左表有但右表没有关联数据的记录集。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/left-join-excluding-inner-join.png&quot; alt=&quot;LEFT JOIN EXCLUDING INNER JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-|    2 | NULL | only a  | NULL    |
-+------+------+---------+---------+
-1 row in set (0.01 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;right-join-excluding-inner-join&quot;&gt;RIGHT JOIN EXCLUDING INNER JOIN&lt;/h3&gt;
-
-&lt;p&gt;返回右表有但左表没有关联数据的记录集。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/right-join-excluding-inner-join.png&quot; alt=&quot;RIGHT JOIN EXCLUDING INNER JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RIGHT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-| NULL |    3 | NULL    | only b  |
-+------+------+---------+---------+
-1 row in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;full-outer-join-excluding-inner-join&quot;&gt;FULL OUTER JOIN EXCLUDING INNER JOIN&lt;/h3&gt;
-
-&lt;p&gt;返回左表和右表里没有相互关联的记录集。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;文氏图：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/full-outer-join-excluding-inner-join.png&quot; alt=&quot;FULL OUTER JOIN EXCLUDING INNER JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FULL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;OR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;因为使用到了 FULL OUTER JOIN，MySQL 在执行该查询时再次报错。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FULL OUTER JOIN Table_B B
-ON A.PK = B.PK
-WHERE A.PK IS NULL
-OR B.PK IS NULL' at line 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;应当返回的结果（用 UNION 模拟）：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql&amp;gt; SELECT * 
-    -&amp;gt; FROM Table_A
-    -&amp;gt; LEFT JOIN Table_B
-    -&amp;gt; ON Table_A.PK = Table_B.PK
-    -&amp;gt; WHERE Table_B.PK IS NULL
-    -&amp;gt; UNION ALL
-    -&amp;gt; SELECT *
-    -&amp;gt; FROM Table_A
-    -&amp;gt; RIGHT JOIN Table_B
-    -&amp;gt; ON Table_A.PK = Table_B.PK
-    -&amp;gt; WHERE Table_A.PK IS NULL;
-+------+--------+------+--------+
-| PK   | Value  | PK   | Value  |
-+------+--------+------+--------+
-|    2 | only a | NULL | NULL   |
-| NULL | NULL   |    3 | only b |
-+------+--------+------+--------+
-2 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
-
-&lt;p&gt;以上七种用法基本上可以覆盖各种 JOIN 查询了。七种用法的全家福：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/sql-joins.png&quot; alt=&quot;SQL JOINS&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;看着它们，我仿佛回到了当年学数学，求交集并集的时代……&lt;/p&gt;
-
-&lt;p&gt;顺带张贴一下 &lt;a href=&quot;https://www.codeproject.com/script/Membership/View.aspx?mid=5909363&quot;&gt;C.L. Moffatt&lt;/a&gt; 带 SQL 语句的图片，配合学习，风味更佳：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/Visual_SQL_JOINS_orig.jpg&quot; alt=&quot;SQL JOINS&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;更新更多的-join&quot;&gt;更新：更多的 JOIN&lt;/h2&gt;
-
-&lt;p&gt;除以上几种外，还有更多的 JOIN 用法，比如 CROSS JOIN（迪卡尔集）、SELF JOIN，可以参考 &lt;a href=&quot;https://www.w3resource.com/slides/sql-joins-slide-presentation.php&quot;&gt;SQL JOINS Slide Presentation&lt;/a&gt; 学习。&lt;/p&gt;
-
-&lt;h3 id=&quot;cross-join&quot;&gt;CROSS JOIN&lt;/h3&gt;
-
-&lt;p&gt;返回左表与右表之间符合条件的记录的迪卡尔集。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;图示：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mzlogin/mzlogin.github.io/master/images/posts/database/cross-join.png&quot; alt=&quot;CORSS JOIN&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PK&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_PK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A_Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B_Value&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;CROSS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_B&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+------+------+---------+---------+
-| A_PK | B_PK | A_Value | B_Value |
-+------+------+---------+---------+
-|    1 |    1 | both ab | both ba |
-|    2 |    1 | only a  | both ba |
-|    1 |    3 | both ab | only b  |
-|    2 |    3 | only a  | only b  |
-+------+------+---------+---------+
-4 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;上面讲过的几种 JOIN 查询的结果都可以用 CROSS JOIN 加条件模拟出来，比如 INNER JOIN 对应 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CROSS JOIN ... WHERE A.PK = B.PK&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;self-join&quot;&gt;SELF JOIN&lt;/h3&gt;
-
-&lt;p&gt;返回表与自己连接后符合条件的记录，一般用在表里有一个字段是用主键作为外键的情况。&lt;/p&gt;
-
-&lt;p&gt;比如 Table_C 的结构与数据如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+--------+----------+-------------+
-| EMP_ID | EMP_NAME | EMP_SUPV_ID |
-+--------+----------+-------------+
-|   1001 | Ma       |        NULL |
-|   1002 | Zhuang   |        1001 |
-+--------+----------+-------------+
-2 rows in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;EMP_ID 字段表示员工 ID，EMP_NAME 字段表示员工姓名，EMP_SUPV_ID 表示主管 ID。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;示例查询：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;现在我们想查询所有有主管的员工及其对应的主管 ID 和姓名，就可以用 SELF JOIN 来实现。&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_ID&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EMP_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EMP_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-    &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_ID&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EMP_SUPV_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EMP_SUPV_NAME&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_C&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table_C&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_SUPV_ID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EMP_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;查询结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+--------+----------+-------------+---------------+
-| EMP_ID | EMP_NAME | EMP_SUPV_ID | EMP_SUPV_NAME |
-+--------+----------+-------------+---------------+
-|   1002 | Zhuang   |        1001 | Ma            |
-+--------+----------+-------------+---------------+
-1 row in set (0.00 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;补充说明&quot;&gt;补充说明&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;文中的图使用 Keynote 绘制；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;个人的体会是 SQL 里的 JOIN 查询与数学里的求交集、并集等很像；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SQLite 不支持 RIGHT JOIN 和 FULL OUTER JOIN，可以使用 LEFT JOIN 和 UNION 来达到相同的效果；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;MySQL 不支持 FULL OUTER JOIN，可以使用 LEFT JOIN 和 UNION 来达到相同的效果。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins&quot;&gt;Visual Representation of SQL Joins&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/4796872/how-to-do-a-full-outer-join-in-mysql&quot;&gt;How to do a FULL OUTER JOIN in MySQL?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.w3resource.com/slides/sql-joins-slide-presentation.php&quot;&gt;SQL JOINS Slide Presentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.w3resource.com/sql/joins/perform-a-self-join.php&quot;&gt;SQL Self Join&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">文氏图和示例来理解 SQL 里的各种 JOIN。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">课程《React全家桶+AntD 共享单车后台管理系统开发》参见这里。</summary></entry></feed>
