@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-13T17:36:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">关于未来互联网的思考</title><link href="http://localhost:4000/2020/01/13/thinking-about-the-future-network/" rel="alternate" type="text/html" title="关于未来互联网的思考" /><published>2020-01-13T00:00:00+08:00</published><updated>2020-01-13T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/13/thinking-about-the-future-network</id><content type="html" xml:base="http://localhost:4000/2020/01/13/thinking-about-the-future-network/">&lt;p&gt;  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-14T15:43:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
+
+&lt;h3 id=&quot;问题引入&quot;&gt;问题引入&lt;/h3&gt;
+&lt;p&gt;  当页面已有一个可拖拽组件，打开另一个时，react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’&lt;/p&gt;
+&lt;h3 id=&quot;源码分析&quot;&gt;源码分析&lt;/h3&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__isReactDndBackendSetUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Cannot have two HTML5 backends at the same time.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__isReactDndBackendSetUp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;错误处理方法及延伸&quot;&gt;错误处理方法及延伸&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;可以通过window.__isReactDndBackendSetUp的全局变量判断是否已经存在一个可拖拽组件；如果是通过弹窗展示的可拖拽组件，一定要记得给弹窗设置destroyOnClose属性（关闭销毁）。&lt;/li&gt;
+  &lt;li&gt;Error Boundaries &lt;br /&gt;
+   如何使组件变成一个“Error Boundaries”，只需要在组件中定义个新的生命周期函数——componentDidCatch(error, info):
+    &lt;blockquote&gt;
+      &lt;p&gt;error: 这是一个已经被抛出的错误；info:这是一个componentStack key。这个属性有关于抛出错误的组件堆栈信息。&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;// ErrorBoundary实现&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ErrorBoundary&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;hasError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;componentDidCatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Display fallback UI&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;hasError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// You can also log the error to an error reporting service&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;logErrorToMyService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// You can render any custom fallback UI&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Something&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;went&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wrong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;// ErrorBoundary使用&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ErrorBoundary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MyWidget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/ErrorBoundary&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Erro Boundaries本质上也是一个组件，通过增加了新的生命周期函数componentDidCatch使其变成了一个新的组件，这个特殊组件可以捕获其子组件树中的js错误信息，输出错误信息或者在报错条件下，显示默认错误页。注意一个Error Boundaries只能捕获其子组件中的js错误，而不能捕获其组件本身的错误和非子组件中的js错误。 &lt;br /&gt;
+下面我们来看哪些情况下不能通过Error Boundaries来实现catch{}错误:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;组件的内部的事件处理函数，因为Error Boundaries处理的仅仅是Render中的错误，而Hander Event并不发生在Render过程中。&lt;/li&gt;
+        &lt;li&gt;异步函数中的异常，Error Boundaries不能catch，比如setTimeout或者setInterval ,requestAnimationFrame等函数中的异常。&lt;/li&gt;
+        &lt;li&gt;服务器端的rendering&lt;/li&gt;
+        &lt;li&gt;发生在Error Boundaries组件本身的错误&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;componentDidCatch（）生命周期函数：componentDidCatch是一个新的生命周期函数，当组件有了这个生命周期函数，就成为了一个Error Boundaries。&lt;/li&gt;
+  &lt;li&gt;try/catch模块：Error Boundaries仅仅抛出了子组件的错误信息，并且不能抛出组件中的事件处理函数中的异常。（因为Error Boundaries仅仅能保证正确的render，而事件处理函数并不会发生在render过程中），我们需要用try/catch来处理事件处理函数中的异常。
+    &lt;blockquote&gt;
+      &lt;p&gt;try/catch只能捕获到同步的运行时错误，对语法和异步错误却无能为力，捕获不到。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;window.onerror：当 JS 运行时错误发生时，window 会触发一个 ErrorEvent 接口的 error 事件，并执行 window.onerror()。
+    &lt;blockquote&gt;
+      &lt;p&gt;在实际的使用过程中，onerror 主要是来捕获预料之外的错误，而 try-catch 则是用来在可预见情况下监控特定的错误，两者结合使用更加高效。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+* @param {String}  message    错误信息
+* @param {String}  source    出错文件
+* @param {Number}  lineno    行号
+* @param {Number}  colno    列号
+* @param {Object}  error  Error对象（对象）
+*/&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onerror&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lineno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;colno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;捕获到异常：&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lineno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;colno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// window.onerror 函数只有在返回 true 的时候，异常才不会向上抛出，否则即使是知道异常的发生控制台还是会显示 Uncaught Error: xxxxx。&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//  return true;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;window.addEventListener：静态资源加载异常捕获&lt;/li&gt;
+  &lt;li&gt;Promise Catch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+&lt;p&gt;  &lt;strong&gt;前端组件/项目中，需要有适当的错误处理过程，否则出现错误，层层上传，没有进行捕获，就会导致页面挂掉。&lt;/strong&gt;&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。</summary></entry><entry><title type="html">关于未来互联网的思考</title><link href="http://localhost:4000/2020/01/13/thinking-about-the-future-network/" rel="alternate" type="text/html" title="关于未来互联网的思考" /><published>2020-01-13T00:00:00+08:00</published><updated>2020-01-13T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/13/thinking-about-the-future-network</id><content type="html" xml:base="http://localhost:4000/2020/01/13/thinking-about-the-future-network/">&lt;p&gt;  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。&lt;/p&gt;
 
 &lt;p&gt;  因为是转行而来，从最初面对需求的茫然不知所措到后来逐渐能胜任前端开发、理解前端思想原理，之后难免会对前端的未来和个人的未来进行一些思考。&lt;/p&gt;
 &lt;ul&gt;
@@ -1720,107 +1819,4 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bind `value` to `2`&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Get 'a' = 2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry><entry><title type="html">《React全家桶+AntD 共享单车后台管理系统开发》笔记</title><link href="http://localhost:4000/2019/05/23/AntD/" rel="alternate" type="text/html" title="《React全家桶+AntD 共享单车后台管理系统开发》笔记" /><published>2019-05-23T00:00:00+08:00</published><updated>2019-05-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/05/23/AntD</id><content type="html" xml:base="http://localhost:4000/2019/05/23/AntD/">&lt;p&gt;课程《React全家桶+AntD 共享单车后台管理系统开发》参见&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;yarn介绍&quot;&gt;yarn介绍&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;yarn是新一代包管理工具
-    &lt;ul&gt;
-      &lt;li&gt;Facebook联合其他公司开发，觉得npm有缺陷&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;为什么使用yarn：
-    &lt;ul&gt;
-      &lt;li&gt;速度快&lt;/li&gt;
-      &lt;li&gt;安装版本统一，更安全（lock文件）&lt;/li&gt;
-      &lt;li&gt;更简洁的输出&lt;/li&gt;
-      &lt;li&gt;更好的语义化&lt;/li&gt;
-      &lt;li&gt;没有颠覆npm，只是修复了缺陷&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;如何使用yarn
-    &lt;ul&gt;
-      &lt;li&gt;yarn init 初始化项目&lt;/li&gt;
-      &lt;li&gt;yarn add 安装包&lt;/li&gt;
-      &lt;li&gt;yarn remove 删除包&lt;/li&gt;
-      &lt;li&gt;yarn/yarn install 安装项目依赖&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;node_modules:项目的安装依赖&lt;/p&gt;
-
-&lt;p&gt;AntD：基于less开发（test:less,less-loder）
-计算属性calc：less中可以用@定义变量
-less中可以嵌套书写，css不可以
-less中可以通过@import导入文件（变量、less）&lt;/p&gt;
-
-&lt;p&gt;vh：屏幕100等份，1份1vh，相当于1%，如定义高度height：calc（100vh）
-栅格布局（Row，Col）&lt;/p&gt;
-
-&lt;p&gt;暴露配置：yarn eject，改webpack.config文件,use数组从后向前运行&lt;/p&gt;
-
-&lt;p&gt;React左右布局，点击左边，如何使内容出现在右侧：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;点击左侧，触发方法，改变右侧组件渲染&lt;/li&gt;
-  &lt;li&gt;路由匹配（this.props.children）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;三角形：&lt;/p&gt;
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;nc&quot;&gt;.three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nl&quot;&gt;border-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nl&quot;&gt;border-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nl&quot;&gt;border-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;err&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;border-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;yellow&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;green&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;--&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;多级（不定级）菜单渲染：递归SubMenu =&amp;gt; Menu.Item&lt;/p&gt;
-
-&lt;p&gt;React Router 4.0：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;react-router-dom：web端安装&lt;/li&gt;
-  &lt;li&gt;4.0版 已不需要路由配置，一切皆组件&lt;/li&gt;
-  &lt;li&gt;HashRouter（根路由）和BrowserRouter（/，/更多是接口请求）&lt;/li&gt;
-  &lt;li&gt;Route:增加Render方法&lt;/li&gt;
-  &lt;li&gt;Link（导航）、NavLink&lt;/li&gt;
-  &lt;li&gt;Switch，只匹配第一个匹配的路由&lt;/li&gt;
-  &lt;li&gt;Redirect：路由重定向&lt;/li&gt;
-  &lt;li&gt;混合组件化；允许一次匹配多个（加exact避免，或用Switch匹配第一个）&lt;/li&gt;
-  &lt;li&gt;动态路由参数获取：this.props.match.params.value&lt;/li&gt;
-  &lt;li&gt;不匹配任何组件：Route不配置path，只写一个component&lt;/li&gt;
-  &lt;li&gt;子路由：不通过component，而是通过render方法return组件，内部配置子路由，父路由不能使用精准匹配&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;不写bind（this），内部不能使用类似this.setState等带this的；&lt;/p&gt;
-
-&lt;p&gt;AntD UI组件：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;面向后台管理系统；&lt;/li&gt;
-  &lt;li&gt;import {Button} from ‘antd’;&lt;/li&gt;
-  &lt;li&gt;Button图形按钮：type，shape，icon；&lt;/li&gt;
-  &lt;li&gt;Loading按钮：动态控制loading = {true/false}；&lt;/li&gt;
-  &lt;li&gt;overflow：auto（超出部分自动滚动，而非全屏滚动，在左右布局左侧固定，右侧内容较多时可以使用）；&lt;/li&gt;
-  &lt;li&gt;绑定方法时，不传参，不需要箭头函数；传参，必须通过箭头函数或者bind实现，如果直接this.method(arg)会自动执行，应该写成（）=&amp;gt;this.method(arg)；&lt;/li&gt;
-  &lt;li&gt;通过传不同的参数type控制多个弹窗的显示隐藏小技巧：
-    &lt;ul&gt;
-      &lt;li&gt;this.setState（{[type]:true}），此时[type]就相当于是一个变量，避免了写if语句判断给哪个值设置true；&lt;/li&gt;
-      &lt;li&gt;Modal.confirm,Modal[‘confirm’],Modal.success,Modal.info等,可用Modal[type]来代替，只需传入不同的type&lt;/li&gt;
-      &lt;li&gt;this&lt;a href=&quot;targetKey&quot;&gt;action&lt;/a&gt;:传递参数targetKey，根据action调用相应方法&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;const，内存地址不能更改；&lt;/li&gt;
-  &lt;li&gt;tab可编辑（添加删除）：
-    &lt;ul&gt;
-      &lt;li&gt;删除的不是当前选中（激活）的tab&lt;/li&gt;
-      &lt;li&gt;删除的是当前激活的tab&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;map（）方法会返回新的数组，不会改变原数组&lt;/li&gt;
-  &lt;li&gt;public下的文件会部署的服务器的根目录，所以用‘/’访问&lt;/li&gt;
-  &lt;li&gt;图片画廊：card，card.meta,row（gutter），col，modal实现（单行，多列，每列多个，每个图片尺寸不同，点击查看大图）&lt;/li&gt;
-  &lt;li&gt;this.props.form、getFieldDecorator需结合Form.create进行表单验证；可以用一个值为icon的prefix（前缀）使得输入框内部前部显示图标等；&lt;/li&gt;
-  &lt;li&gt;easy-mock：数据在线模拟&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">课程《React全家桶+AntD 共享单车后台管理系统开发》参见这里。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry></feed>
