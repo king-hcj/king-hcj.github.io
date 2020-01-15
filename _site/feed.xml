@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-14T15:43:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-15T10:20:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
 
 &lt;h3 id=&quot;问题引入&quot;&gt;问题引入&lt;/h3&gt;
 &lt;p&gt;  当页面已有一个可拖拽组件，打开另一个时，react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’&lt;/p&gt;
@@ -1819,4 +1819,31 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bind `value` to `2`&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; Get 'a' = 2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;再谈闭包&quot;&gt;再谈闭包&lt;/h3&gt;
+&lt;h4 id=&quot;一等公民的定义&quot;&gt;一等公民的定义&lt;/h4&gt;
+&lt;p&gt;  在编程语言中，&lt;strong&gt;一等公民可以作为函数参数，可以作为函数返回值，也可以赋值给变量&lt;/strong&gt;。例如，字符串在几乎所有编程语言中都是一等公民，字符串可以做为函数参数，字符串可以作为函数返回值，字符串也可以赋值给变量。对于各种编程语言来说，函数就不一定是一等公民了，比如Java 8之前的版本。对于JavaScript来说，函数可以赋值给变量，也可以作为函数参数，还可以作为函数返回值，因此JavaScript中函数是一等公民。&lt;/p&gt;
+
+&lt;h4 id=&quot;动态作用域与静态作用域&quot;&gt;动态作用域与静态作用域&lt;/h4&gt;
+&lt;p&gt;  注意，是说作用域，不是类型。 &lt;br /&gt;
+  如果一门语言的作用域是&lt;strong&gt;静态作用域&lt;/strong&gt;，那么符号之间的引用关系能够根据程序代码在编译时就确定清楚，在运行时不会变。某个函数是在哪声明的，就具有它所在位置的作用域。它能够访问哪些变量，那么就跟这些变量绑定了，在运行时就一直能访问这些变量。即静态作用域可以由程序代码决定，在编译时就能完全确定。大多数语言都是静态作用域的。 &lt;br /&gt;
+  &lt;strong&gt;动态作用域&lt;/strong&gt;（Dynamic Scope）。也就是说，变量引用跟变量声明不是在编译时就绑定死了的。在运行时，它是在运行环境中动态地找一个相同名称的变量。在 macOS 或 Linux 中用的 bash 脚本语言，就是动态作用域的。&lt;/p&gt;
+&lt;h4 id=&quot;闭包&quot;&gt;闭包&lt;/h4&gt;
+&lt;p&gt;  闭包的内在矛盾是运行时的环境和定义时的作用域之间的矛盾。那么我们把内部环境中需要的变量，打包交给闭包函数，它就可以随时访问这些变量了。 &lt;br /&gt;
+  闭包这个概念，对于初学者来讲是一个挑战。其实，闭包就是把函数在静态作用域中所访问的变量的生存期拉长，形成一份可以由这个函数单独访问的数据。正因为这些数据只能被闭包函数访问，所以也就具备了对信息进行封装、隐藏内部细节的特性。&lt;/p&gt;
+&lt;h4 id=&quot;闭包与面向对象&quot;&gt;闭包与面向对象&lt;/h4&gt;
+&lt;p&gt;  听上去是不是有点儿耳熟？封装，把数据和对数据的操作封在一起，这不就是面向对象编程嘛！一个闭包可以看做是一个对象。反过来看，一个对象是不是也可以看做一个闭包呢？对象的属性，也可以看做被方法所独占的环境变量，其生存期也必须保证能够被方法一直正常的访问。&lt;/p&gt;
+&lt;h4 id=&quot;闭包的实现&quot;&gt;闭包的实现&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;函数要变成 playscript 的一等公民。也就是要能把函数像普通数值一样赋值给变量，可以作为参数传递给其他函数，可以作为函数的返回值。&lt;/li&gt;
+  &lt;li&gt;要让内层函数一直访问它环境中的变量，不管外层函数退出与否。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;归纳总结&quot;&gt;归纳总结&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;因为JavaScript是静态作用域的，所以它内部环境中需要的变量在编译时就确定了，运行时不会改变；&lt;/li&gt;
+  &lt;li&gt;因为JavaScript中，函数是一等公民，可以被调用，可以作为参数传递，可以赋值给变量，也可以作为函数返回值，所以它的运行时环境很容易变化；&lt;/li&gt;
+  &lt;li&gt;当函数作为参数返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；&lt;/li&gt;
+  &lt;li&gt;所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry></feed>
