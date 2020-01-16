@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-15T10:20:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-15T10:38:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
 
 &lt;h3 id=&quot;问题引入&quot;&gt;问题引入&lt;/h3&gt;
 &lt;p&gt;  当页面已有一个可拖拽组件，打开另一个时，react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’&lt;/p&gt;
@@ -115,7 +115,29 @@
 &lt;p&gt;  5G带来更多可能；基于D3，threejs或类似框架技术的立体化。&lt;/p&gt;
 
 &lt;h2 id=&quot;功能智能化人工智能&quot;&gt;功能智能化(人工智能)&lt;/h2&gt;
-&lt;p&gt;  人工智能，大数据。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。</summary></entry><entry><title type="html">Symmetric Asymmetric</title><link href="http://localhost:4000/2020/01/11/symmetric-asymmetric/" rel="alternate" type="text/html" title="Symmetric Asymmetric" /><published>2020-01-11T00:00:00+08:00</published><updated>2020-01-11T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/11/symmetric-asymmetric</id><content type="html" xml:base="http://localhost:4000/2020/01/11/symmetric-asymmetric/"></content><author><name>Cheney King</name></author><summary type="html"></summary></entry><entry><title type="html">react+AntD 实现CRON表达式生成器</title><link href="http://localhost:4000/2020/01/10/cron/" rel="alternate" type="text/html" title="react+AntD 实现CRON表达式生成器" /><published>2020-01-10T00:00:00+08:00</published><updated>2020-01-10T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/10/cron</id><content type="html" xml:base="http://localhost:4000/2020/01/10/cron/">&lt;p&gt;  因业务需要CRON生成器，网上找的插件多不可用，&lt;a href=&quot;http://cron.qqe2.com/&quot;&gt;在线cron工具&lt;/a&gt;又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。&lt;/p&gt;
+&lt;p&gt;  人工智能，大数据。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。</summary></entry><entry><title type="html">趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话</title><link href="http://localhost:4000/2020/01/11/symmetric-asymmetric/" rel="alternate" type="text/html" title="趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话" /><published>2020-01-11T00:00:00+08:00</published><updated>2020-01-11T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/11/symmetric-asymmetric</id><content type="html" xml:base="http://localhost:4000/2020/01/11/symmetric-asymmetric/">&lt;p&gt;  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！&lt;/p&gt;
+
+&lt;h2 id=&quot;概念&quot;&gt;概念&lt;/h2&gt;
+&lt;p&gt;  对称密钥加密（英语：Symmetric-key algorithm）又称为对称加密、私钥加密、共享密钥加密，是密码学中的一类加密算法。这类算法在加密和解密时使用相同的密钥，或是使用两个可以简单地相互推算的密钥。&lt;/p&gt;
+
+&lt;p&gt;  公开密钥加密（英语：Public-key cryptography），也称为非对称加密（英语：asymmetric cryptography），是密码学的一种算法，它需要两个密钥，一个是公开密钥，另一个是私有密钥；一个用作加密的时候，另一个则用作解密。使用其中一个密钥把明文加密后所得的密文，只能用相对应的另一个密钥才能解密得到原本的明文；由于加密和解密需要两个不同的密钥，故被称为非对称加密。&lt;/p&gt;
+
+&lt;h2 id=&quot;场景描述&quot;&gt;场景描述&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;背景：愉快的高中生活结束了，大学录取结果隆重出炉，互不相识的小明和小丽被拉入了一个大学新生群。这个微信群，和普通群的区别是：无法加群里的小伙伴为好友，也就是说无法发起私聊，任何信息都得发在群里，大家都会看见。&lt;/li&gt;
+  &lt;li&gt;任务：小明和小丽在群里实现私密会话。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;实施方案&quot;&gt;实施方案&lt;/h2&gt;
+&lt;p&gt;  进群后，小伙伴们就可以愉快的聊天了。因为他们都使用中文，都通过中文的语法获取信息，所以所有人可以愉快的、无障碍的聊天。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;其实这时候的交流方式可以理解成对称加密——加密和解密时使用相同的密钥，也就是中文语法。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  非对称加密+对称加密：HTTPS真正采用的是这种加密方式(TLS 中使用了两种加密技术，分别为：对称加密和非对称加密)。大致的过程就是使用非对称加密的方式传送密钥，那么该密钥就是双方就安全的得到了，也就是说使用非对称加密来使得双方安全拿到密钥。&lt;/p&gt;
+
+&lt;p&gt;中间人攻击：
+  在非对称加密的过程中，服务器向浏览器发送公钥的过程是明文的，这个通道上的公钥是可以被中间人获取到的，假设这个公钥被获取到了，然后中间人自己伪造一个公钥和私钥。将自己伪造的公钥传给浏览器，而浏览器用伪造的公钥加密后传回服务器的途中被中间人获取，然后用伪造的私钥解密，这样数据就被获取到了，而中间人同样有服务器的公钥，同时也可以和服务器进行交互。上面暴露的问题是浏览器根本不知道公钥是不是服务器的。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！</summary></entry><entry><title type="html">react+AntD 实现CRON表达式生成器</title><link href="http://localhost:4000/2020/01/10/cron/" rel="alternate" type="text/html" title="react+AntD 实现CRON表达式生成器" /><published>2020-01-10T00:00:00+08:00</published><updated>2020-01-10T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/10/cron</id><content type="html" xml:base="http://localhost:4000/2020/01/10/cron/">&lt;p&gt;  因业务需要CRON生成器，网上找的插件多不可用，&lt;a href=&quot;http://cron.qqe2.com/&quot;&gt;在线cron工具&lt;/a&gt;又没法直接集成到项目中，遂参考在线工具，使用react和antd实现一个CRON表达式生成器，并在接口的配合下完成合规校验。&lt;/p&gt;
 
 &lt;p&gt;效果图如下：&lt;br /&gt;&lt;/p&gt;
 
@@ -1773,7 +1795,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;/li&gt;
   &lt;li&gt;语音识别:
     &lt;ul&gt;
-      &lt;li&gt;语音控制网站 &lt;a href=&quot;https://github.com/TalAter/annyang&quot;&gt;annyang&lt;/a&gt;:
+      &lt;li&gt;用语音控制自己的网站 &lt;a href=&quot;https://github.com/TalAter/annyang&quot;&gt;annyang&lt;/a&gt;:
   A tiny JavaScript Speech Recognition library that lets your users control your site with voice commands. &lt;br /&gt;
 annyang has no dependencies, weighs just 2 KB, and is free to use and modify under the MIT license.&lt;/li&gt;
     &lt;/ul&gt;
@@ -1844,6 +1866,6 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 &lt;ol&gt;
   &lt;li&gt;因为JavaScript是静态作用域的，所以它内部环境中需要的变量在编译时就确定了，运行时不会改变；&lt;/li&gt;
   &lt;li&gt;因为JavaScript中，函数是一等公民，可以被调用，可以作为参数传递，可以赋值给变量，也可以作为函数返回值，所以它的运行时环境很容易变化；&lt;/li&gt;
-  &lt;li&gt;当函数作为参数返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；&lt;/li&gt;
+  &lt;li&gt;当函数作为参数返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让内层函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；&lt;/li&gt;
   &lt;li&gt;所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry></feed>

@@ -342,6 +342,14 @@ const args = [...arguments];
 16. momentJS问题：
    - [东八区问题 moment().format() 有时间差](https://blog.csdn.net/ASZJBGD/article/details/85252658)
    - [解决Moment格式化时间出现时区差的问题](https://blog.csdn.net/littlebearGreat/article/details/80996346)
+   -  使用moment.js 获取当前时间往前的时间
+   ```js
+  moment().format("YYYY-MM-DD HH:mm:ss"); //当前时间
+  moment().subtract(10, "days").format("YYYY-MM-DD"); //当前时间的前10天时间
+  moment().subtract(1, "years").format("YYYY-MM-DD"); //当前时间的前1年时间
+  moment().subtract(3, "months").format("YYYY-MM-DD"); //当前时间的前3个月时间
+  moment().subtract(1, "weeks").format("YYYY-MM-DD"); //当前时间的前一个星期时间
+   ```
 
 17. url出现了有+，空格，/，?，%，#，&，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
    - 在拼接参数的时候，使用 encodeURIComponent() 进行手动转义：
@@ -407,6 +415,14 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    - [Electron](https://electronjs.org/)
    - [revery](https://github.com/revery-ui/revery)
    - [nodegui](https://github.com/nodegui/nodegui)
+
+24. flex布局设置子元素换行：
+  ```scss
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ```
 
 ## HTML
 
