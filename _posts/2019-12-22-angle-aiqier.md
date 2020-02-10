@@ -53,7 +53,7 @@ keywords: HTML，JS，CSS，ERP，前端
      - git push
    2. 项目部署
      - 地址：webpack.XX.org(Jenkins)
-     - PR代码
+     - PR代码(yarn merge)
      - yarn merge:root test
      - yarn deploy (test)
      - yarn merge:root prod
