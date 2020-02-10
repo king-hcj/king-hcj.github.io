@@ -58,6 +58,20 @@ keywords: HTML，JS，CSS，ERP，前端
      - yarn deploy (test)
      - yarn merge:root prod
      - yarn deploy prod
+   3. profile.json文件
+     ```json
+     {
+        "git":
+        {
+          "userName": "个人账号",
+          "password": "XXXXX"
+        },
+        "ci": {
+          "j_username": "公司名",
+          "j_password": "XXX"
+        }
+      }
+     ```
 
 
 ## react-dropzone上传文件类型支持：
