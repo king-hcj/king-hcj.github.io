@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-15T10:38:25+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-12T09:20:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端错误处理</title><link href="http://localhost:4000/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:4000/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
 
 &lt;h3 id=&quot;问题引入&quot;&gt;问题引入&lt;/h3&gt;
 &lt;p&gt;  当页面已有一个可拖拽组件，打开另一个时，react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’&lt;/p&gt;
@@ -1040,12 +1040,26 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
       &lt;li&gt;项目部署
         &lt;ul&gt;
           &lt;li&gt;地址：webpack.XX.org(Jenkins)&lt;/li&gt;
-          &lt;li&gt;PR代码&lt;/li&gt;
+          &lt;li&gt;PR代码(yarn merge)&lt;/li&gt;
           &lt;li&gt;yarn merge:root test&lt;/li&gt;
           &lt;li&gt;yarn deploy (test)&lt;/li&gt;
           &lt;li&gt;yarn merge:root prod&lt;/li&gt;
           &lt;li&gt;yarn deploy prod&lt;/li&gt;
         &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;profile.json文件
+        &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;git&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;个人账号&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;XXXXX&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ci&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;j_username&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;公司名&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;j_password&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;XXX&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
@@ -1424,6 +1438,14 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ASZJBGD/article/details/85252658&quot;&gt;东八区问题 moment().format() 有时间差&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/littlebearGreat/article/details/80996346&quot;&gt;解决Moment格式化时间出现时区差的问题&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;使用moment.js 获取当前时间往前的时间
+        &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD HH:mm:ss&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间的前10天时间&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;years&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间的前1年时间&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;months&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间的前3个月时间&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;weeks&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间的前一个星期时间&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;url出现了有+，空格，/，?，%，#，&amp;amp;，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
@@ -1500,6 +1522,13 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
       &lt;li&gt;&lt;a href=&quot;https://github.com/revery-ui/revery&quot;&gt;revery&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://github.com/nodegui/nodegui&quot;&gt;nodegui&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;flex布局设置子元素换行：
+    &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -1723,7 +1752,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;/li&gt;
   &lt;li&gt;箭头函数的 this 永远指向其上下文的  this ，任何方法都改变不了其指向，如 call() ,  bind() ,  apply() ，可以说正是因为没有自己的this，才使其具备了以上介绍的大部分特点；&lt;/li&gt;
   &lt;li&gt;普通函数的this指向调用它的那个对象&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：</summary></entry><entry><title type="html">JS技巧技法总结</title><link href="http://localhost:4000/2019/08/08/js-skills/" rel="alternate" type="text/html" title="JS技巧技法总结" /><published>2019-08-08T00:00:00+08:00</published><updated>2019-08-08T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/08/js-skills</id><content type="html" xml:base="http://localhost:4000/2019/08/08/js-skills/">&lt;p&gt;开发、阅读、学习中接触到的一些知识点。&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：</summary></entry><entry><title type="html">JS技巧技法总结——闭包原理、数组展平、前端语音、Proxy 数据绑定和监听、计数器</title><link href="http://localhost:4000/2019/08/08/js-skills/" rel="alternate" type="text/html" title="JS技巧技法总结——闭包原理、数组展平、前端语音、Proxy 数据绑定和监听、计数器" /><published>2019-08-08T00:00:00+08:00</published><updated>2019-08-08T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/08/js-skills</id><content type="html" xml:base="http://localhost:4000/2019/08/08/js-skills/">&lt;p&gt;开发、阅读、学习中接触到的一些知识点。&lt;/p&gt;
 
 &lt;h2 id=&quot;js技巧&quot;&gt;JS技巧&lt;/h2&gt;
 &lt;h3 id=&quot;js计数器的几种实现&quot;&gt;JS计数器的几种实现&lt;/h3&gt;
@@ -1858,7 +1887,7 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 &lt;p&gt;  听上去是不是有点儿耳熟？封装，把数据和对数据的操作封在一起，这不就是面向对象编程嘛！一个闭包可以看做是一个对象。反过来看，一个对象是不是也可以看做一个闭包呢？对象的属性，也可以看做被方法所独占的环境变量，其生存期也必须保证能够被方法一直正常的访问。&lt;/p&gt;
 &lt;h4 id=&quot;闭包的实现&quot;&gt;闭包的实现&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;函数要变成 playscript 的一等公民。也就是要能把函数像普通数值一样赋值给变量，可以作为参数传递给其他函数，可以作为函数的返回值。&lt;/li&gt;
+  &lt;li&gt;函数要变成 JavaScript 的一等公民。也就是要能把函数像普通数值一样赋值给变量，可以作为参数传递给其他函数，可以作为函数的返回值。&lt;/li&gt;
   &lt;li&gt;要让内层函数一直访问它环境中的变量，不管外层函数退出与否。&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1866,6 +1895,6 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 &lt;ol&gt;
   &lt;li&gt;因为JavaScript是静态作用域的，所以它内部环境中需要的变量在编译时就确定了，运行时不会改变；&lt;/li&gt;
   &lt;li&gt;因为JavaScript中，函数是一等公民，可以被调用，可以作为参数传递，可以赋值给变量，也可以作为函数返回值，所以它的运行时环境很容易变化；&lt;/li&gt;
-  &lt;li&gt;当函数作为参数返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让内层函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；&lt;/li&gt;
+  &lt;li&gt;当函数作为另一个函数（外层函数）的返回值返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让内层函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；&lt;/li&gt;
   &lt;li&gt;所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">开发、阅读、学习中接触到的一些知识点。</summary></entry></feed>

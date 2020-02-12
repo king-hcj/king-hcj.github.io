@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共9833字,阅读全文约需37分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共10322字,阅读全文约需39分钟</span>
         </div>
       </div>
     </div>
@@ -168,12 +168,26 @@
       <li>项目部署
         <ul>
           <li>地址：webpack.XX.org(Jenkins)</li>
-          <li>PR代码</li>
+          <li>PR代码(yarn merge)</li>
           <li>yarn merge:root test</li>
           <li>yarn deploy (test)</li>
           <li>yarn merge:root prod</li>
           <li>yarn deploy prod</li>
         </ul>
+      </li>
+      <li>profile.json文件
+        <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"git"</span><span class="p">:</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"个人账号"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXXXX"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"ci"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"j_username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"公司名"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"j_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>        </div>
       </li>
     </ol>
   </li>
@@ -552,6 +566,14 @@
     <ul>
       <li><a href="https://blog.csdn.net/ASZJBGD/article/details/85252658">东八区问题 moment().format() 有时间差</a></li>
       <li><a href="https://blog.csdn.net/littlebearGreat/article/details/80996346">解决Moment格式化时间出现时区差的问题</a></li>
+      <li>使用moment.js 获取当前时间往前的时间
+        <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">moment</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD HH:mm:ss</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间</span>
+  <span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">days</span><span class="dl">"</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间的前10天时间</span>
+  <span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="dl">"</span><span class="s2">years</span><span class="dl">"</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间的前1年时间</span>
+  <span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="dl">"</span><span class="s2">months</span><span class="dl">"</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间的前3个月时间</span>
+  <span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="dl">"</span><span class="s2">weeks</span><span class="dl">"</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间的前一个星期时间</span>
+</code></pre></div>        </div>
+      </li>
     </ul>
   </li>
   <li>url出现了有+，空格，/，?，%，#，&amp;，=等特殊符号的时候，可能在服务器端无法获得正确的参数值（当参数中含有”#”这些等对于URI而言有着特殊含义的符号时，发现“#”字符后面的信息全被裁掉了）:
@@ -628,6 +650,13 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
       <li><a href="https://github.com/revery-ui/revery">revery</a></li>
       <li><a href="https://github.com/nodegui/nodegui">nodegui</a></li>
     </ul>
+  </li>
+  <li>flex布局设置子元素换行：
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+<span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
   </li>
 </ol>
 
