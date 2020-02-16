@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>MPV &mdash; Cheney King</title>
+    <title>CSS常见面试问题汇总 &mdash; Cheney King</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,23 +21,23 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/mpv/">
+    <link rel="canonical" href="http://localhost:4000/2020/02/16/css-skills/">
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="MPV">
+    <meta property="og:title" content="CSS常见面试问题汇总">
       
-    <meta name="keywords" content="mpv">
-    <meta name="og:keywords" content="mpv">
+    <meta name="keywords" content="css">
+    <meta name="og:keywords" content="css">
       
-    <meta name="description" content="Mac OS X 下最好用的播放器，没有之一。">
-    <meta name="og:description" content="Mac OS X 下最好用的播放器，没有之一。">
+    <meta name="description" content="伪类与伪元素的特性及其区别">
+    <meta name="og:description" content="伪类与伪元素的特性及其区别">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/mpv/">
+    <meta property="og:url" content="http://localhost:4000/2020/02/16/css-skills/">
     <meta property="og:site_name" content="Cheney King">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -74,12 +74,26 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="MPV">
+    <section class="collection-head small geopattern" data-pattern-id="CSS常见面试问题汇总">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">MPV</h1>
+        <h1 class="collection-header">CSS常见面试问题汇总</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2020/02/16
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
+          </span>
+          
+          <span style="color:#ededed;font-size: 14px">本文共440字,阅读全文约需1分钟</span>
+        </div>
       </div>
     </div>
   </div>
@@ -90,165 +104,32 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <p>Mac OS X 下最好用的播放器，没有之一。</p>
-
-<h2 id="快捷键">快捷键</h2>
-
-<p>参考：<a href="https://github.com/mpv-player/mpv/blob/master/etc/input.conf">mpv keybindings</a></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>按键</th>
-      <th>功能</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>RIGHT</td>
-      <td>前进 5 秒</td>
-    </tr>
-    <tr>
-      <td>LEFT</td>
-      <td>后退 5 秒</td>
-    </tr>
-    <tr>
-      <td>UP</td>
-      <td>前进 60 秒</td>
-    </tr>
-    <tr>
-      <td>DOWN</td>
-      <td>后退 60 秒</td>
-    </tr>
-    <tr>
-      <td>[</td>
-      <td>0.9091 倍速播放</td>
-    </tr>
-    <tr>
-      <td>]</td>
-      <td>1.1 倍速播放</td>
-    </tr>
-    <tr>
-      <td>{</td>
-      <td>0.5 倍速播放</td>
-    </tr>
-    <tr>
-      <td>}</td>
-      <td>2.0 倍速播放</td>
-    </tr>
-    <tr>
-      <td>Backspace</td>
-      <td>还原到 1.0 倍速</td>
-    </tr>
-    <tr>
-      <td>Space 或 p</td>
-      <td>播放/暂停</td>
-    </tr>
-    <tr>
-      <td>.</td>
-      <td>下一帧</td>
-    </tr>
-    <tr>
-      <td>,</td>
-      <td>上一帧</td>
-    </tr>
-    <tr>
-      <td>9 或 /</td>
-      <td>音量 -2</td>
-    </tr>
-    <tr>
-      <td>0 或 *</td>
-      <td>音量 +2</td>
-    </tr>
-    <tr>
-      <td>f</td>
-      <td>切换是否全屏</td>
-    </tr>
-    <tr>
-      <td>v</td>
-      <td>显示/隐藏字幕</td>
-    </tr>
-    <tr>
-      <td>T</td>
-      <td>切换是否前端显示</td>
-    </tr>
-    <tr>
-      <td>s</td>
-      <td>截屏，有字幕</td>
-    </tr>
-    <tr>
-      <td>S</td>
-      <td>截屏，无字幕</td>
-    </tr>
-    <tr>
-      <td>o</td>
-      <td>显示进度条与时间，2 秒后消失</td>
-    </tr>
-    <tr>
-      <td>I (大写 i)</td>
-      <td>显示当前文件名</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>对比度 -1</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>对比度 +1</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>亮度 -1</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>亮度 +1</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Gamma 值 -1</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Gamma 值 +1</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>饱和度 -1</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>饱和度 +1</td>
-    </tr>
-    <tr>
-      <td>l (小写 L)</td>
-      <td>设置/清除 A-B 循环点</td>
-    </tr>
-    <tr>
-      <td>j/J</td>
-      <td>选择字幕</td>
-    </tr>
-    <tr>
-      <td>#</td>
-      <td>切换声道</td>
-    </tr>
-    <tr>
-      <td>q</td>
-      <td>退出</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="命令行参数">命令行参数</h2>
-
-<p>参考：<a href="https://github.com/mpv-player/mpv/blob/master/DOCS/man/options.rst">OPTIONS</a></p>
-
-<h2 id="参考">参考</h2>
+    <h2 id="伪类与伪元素的特性及其区别">伪类与伪元素的特性及其区别</h2>
 
 <ul>
-  <li><a href="https://segmentfault.com/a/1190000004533079">MPV使用小记</a></li>
+  <li>伪类本质上是为了弥补常规CSS选择器的不足，以便获取到更多信息；</li>
+  <li>伪元素本质上是创建了一个有内容的虚拟容器；</li>
+  <li>CSS3中伪类和伪元素的语法不同；
+    <ul>
+      <li>伪类  :link  :hover</li>
+      <li>伪元素  ::before    ::after</li>
+    </ul>
+  </li>
+  <li>可以同时使用多个伪类，而只能同时使用一个伪元素；</li>
+  <li>其中伪类和伪元素的根本区别在于：它们是否创造了新的元素,,   这个新创造的元素就叫  “伪元素” ；
+    <ul>
+      <li>伪元素/伪对象：不存在在DOM文档中，是虚拟的元素，是创建新元素。 这个新元素(伪元素)是某个元素的子元素，这个子元素虽然在逻辑上存在，但却并不实际存在于文档树中。</li>
+      <li>伪类：存在DOM文档中，(无标签,找不到,  只有符合触发条件时才能看到 ),  逻辑上存在但在文档树中却无须标识的“幽灵”分类。</li>
+    </ul>
+  </li>
+  <li>因为伪类是类似于添加类所以可以是多个，而伪元素在一个选择器中只能出现一次，并且只能出现在末尾；</li>
+  <li>W3C中对于二者应用的描述(描述太模糊, 不容易理解)：
+    <ul>
+      <li>伪类：用于向某些选择器添加特殊的效果</li>
+      <li>伪元素：用于将特殊的效果添加到某些选择器(标签）</li>
+    </ul>
+  </li>
 </ul>
-
 
     </article>
     <div class="share">
@@ -265,7 +146,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/mpv/',
+            id: '/2020/02/16/css-skills/',
             clientID: 'bc269064fe241728eb14',
             clientSecret: '0f2e89e4b56f4580e067356a0900c95968284917',
             repo: 'king-hcj.github.io',
