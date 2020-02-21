@@ -92,7 +92,7 @@
             <a href="http://localhost:4000/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共3623字,阅读全文约需12分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共4207字,阅读全文约需14分钟</span>
         </div>
       </div>
     </div>
@@ -250,6 +250,45 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
   <li>当函数作为另一个函数（外层函数）的返回值返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让内层函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；</li>
   <li>所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。</li>
 </ol>
+
+<h3 id="js函数柯里化">JS函数柯里化</h3>
+<p>####概念： <br />
+Currying是把接受多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术，即只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。示例：</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 普通的add函数</span>
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+<span class="p">}</span>
+<span class="c1">// Currying后</span>
+<span class="kd">function</span> <span class="nx">curryingAdd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>           <span class="c1">// 3</span>
+<span class="nx">curryingAdd</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1">// 3</span>
+</code></pre></div></div>
+
+<h4 id="currying化的好处">Currying化的好处</h4>
+<ul>
+  <li>参数复用：因为函数会返回另一个函数，所以可以参数复用；</li>
+  <li>提前确认：比如浏览器兼容（addEventListener和attachEvent）；</li>
+  <li>延迟运行：比如bind的实现（bind会返回一个函数，其实bind的实现也用到了闭包）；
+    <h4 id="curry性能">curry性能</h4>
+  </li>
+  <li>存取arguments对象通常要比存取命名参数要慢一点</li>
+  <li>一些老版本的浏览器在arguments.length的实现上是相当慢的</li>
+  <li>使用fn.apply( … ) 和 fn.call( … )通常比直接调用fn( … ) 稍微慢点</li>
+  <li>创建大量嵌套作用域和闭包函数会带来花销，无论是在内存还是速度上 <br />
+其实在大部分应用中，主要的性能瓶颈是在操作DOM节点上，这js的性能损耗基本是可以忽略不计的，所以curry是可以直接放心的使用。
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p>参考：<a href="https://www.jianshu.com/p/2975c25e4d71">详解JS函数柯里化</a></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </li>
+</ul>
 
 <h3 id="npm和yarn的区别">npm和yarn的区别</h3>
 <ol>

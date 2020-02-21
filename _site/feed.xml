@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-18T17:14:03+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">CSS常见面试问题汇总</title><link href="http://localhost:4000/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS常见面试问题汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:4000/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-21T18:20:37+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">CSS常见面试问题汇总</title><link href="http://localhost:4000/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS常见面试问题汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:4000/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
 
 &lt;h2 id=&quot;伪类与伪元素的特性及其区别&quot;&gt;伪类与伪元素的特性及其区别&lt;/h2&gt;
 
@@ -136,6 +136,9 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;你觉得未来的互联网、未来的前端是什么样的？&lt;/li&gt;
+  &lt;li&gt;如果我入职这个岗位的话,前三个月你希望我能做到些什么?&lt;/li&gt;
+  &lt;li&gt;我的这个岗位的前任是为什么离职的,我什么地方能做的更好?&lt;/li&gt;
+  &lt;li&gt;你对这个职位理想人选的要求是什么?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;展示立体化虚拟现实装修5g游戏&quot;&gt;展示立体化(虚拟现实，装修，5G，游戏)&lt;/h2&gt;
