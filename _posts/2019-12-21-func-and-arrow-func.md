@@ -41,6 +41,30 @@ ES6标准新增了一种新的函数：Arrow Function（箭头函数），为什
    - 不能使用yield关键字，因此箭头函数不能用作 Generator 函数。
    - 箭头函数括号后面不能换行；
    - 箭头函数不具有super。
+### 箭头函数的ES5实现（Babel转换）
+转换前:
+```js
+// ES6
+const obj = {
+    getArrow() {
+        return () => {
+            console.log(this === obj);
+        };
+    }
+} 
+```
+转换后:
+```js
+// ES5，由 Babel 转译
+var obj = {
+    getArrow: function getArrow() {
+        var _this = this;
+        return function () {
+            console.log(_this === obj);
+        };
+    }
+};
+```
 ### 总结
    - 箭头函数的 this 永远指向其上下文的  this ，任何方法都改变不了其指向，如 call() ,  bind() ,  apply() ，可以说正是因为没有自己的this，才使其具备了以上介绍的大部分特点；
    - 普通函数的this指向调用它的那个对象
