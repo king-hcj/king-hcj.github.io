@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 前端综合笔记
+title: 前端综合笔记（爱奇尔）
 categories: Comprehensive
 description: 搭建此博客前的一些积累
 keywords: HTML，JS，CSS，ERP，前端
 ---
 
-这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。
+这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。
 
 # React-intl
 1. 后台没有，再去**正式环境**添加；一定在正式环境添加key；只添加中文；测试环境的由后端同步（李建龙）；

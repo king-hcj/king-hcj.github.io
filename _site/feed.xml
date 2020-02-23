@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-22T15:02:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">CSS常见面试问题汇总</title><link href="http://localhost:4000/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS常见面试问题汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:4000/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-23T13:59:48+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:4000/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:4000/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+
+&lt;h2 id=&quot;webpack热更新原理分析&quot;&gt;webpack热更新原理分析&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.jpeg?raw=true&quot; alt=&quot;webpack热更新原理&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;npm和yarn的区别&quot;&gt;npm和yarn的区别&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;yarn速度快&lt;/strong&gt;：
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;并行安装&lt;/strong&gt;：无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 安装完成之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;离线模式&lt;/strong&gt;：如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;安装版本统一&lt;/strong&gt;：为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。&lt;/li&gt;
+  &lt;li&gt;更简洁的输出：npm 的输出信息比较冗长。在执行 npm install package 的时候，命令行里会不断地打印出所有被安装上的依赖。&lt;/li&gt;
+  &lt;li&gt;多注册来源处理：所有的依赖包，不管他被不同的库间接关联引用多少次，安装这个包时，只会从一个注册来源去装，要么是 npm 要么是 bower, 防止出现混乱不一致。&lt;/li&gt;
+  &lt;li&gt;更好的语义化： yarn改变了一些npm命令的名称，比如 yarn add/remove，感觉上比 npm 原本的 install/uninstall 要更清晰。&lt;/li&gt;
+  &lt;li&gt;有了yarn的压力之后，npm5.0做了一些类似的改进，如默认新增了类似yarn.lock的 package-lock.json。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。</summary></entry><entry><title type="html">CSS常见面试问题汇总</title><link href="http://localhost:4000/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS常见面试问题汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:4000/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:4000/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
 
 &lt;h2 id=&quot;伪类与伪元素的特性及其区别&quot;&gt;伪类与伪元素的特性及其区别&lt;/h2&gt;
 
@@ -914,99 +932,7 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;前端工具熟练掌握（git、webpack等书籍）&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;能自主解决服务器、接口等大多数错误（排查解决）；前端独挡一面&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;每天学习，每天进步，薪资增长50%&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">记录个人OKR相关信息。</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
-
-&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;《深入理解ES6》 —— Nicholas C. Zakas&lt;/li&gt;
-  &lt;li&gt;《React进阶之路》 —— 徐超&lt;/li&gt;
-  &lt;li&gt;《高效前端：Web高效编程与优化实践》 —— 李银城&lt;/li&gt;
-  &lt;li&gt;《JavaScript高级程序设计（第3版）》 —— Nicholas C. Zakas（差三章左右）&lt;/li&gt;
-  &lt;li&gt;《CSS世界》 —— 张鑫旭（未读完）&lt;/li&gt;
-  &lt;li&gt;《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;开源链接&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;《深入React技术栈》 —— 陈屹（未读完）&lt;/li&gt;
-  &lt;li&gt;《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
-&lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
-  &lt;li&gt;Web攻城狮培养计划之进击JavaScript核心视频课程（&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B&quot;&gt;见网盘&lt;/a&gt;）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;ES6零基础教学解析彩票项目(有图片总结)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;React全家桶+AntD 共享单车后台管理系统开发&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Redux+react+Router+Node.js全栈开发(&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91&quot;&gt;见网盘&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/179.html&quot;&gt;React16+React-Router4 从零打造企业级电商后台管理系统&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/348.html&quot;&gt;React劲爆新特性Hooks 重构去哪儿网火车票PWA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/334.html&quot;&gt;React16.8+Next.js+Koa2开发Github全栈项目&lt;/a&gt;(只看了第三章)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战 手把手带你掌握新版Webpack4.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;四大维度解锁 Webpack 3.0 前端工程化(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;《Node.js入门到企业Web开发中的应用》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot;&gt;《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/808&quot;&gt;ReactNative入门与进阶&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot;&gt;新版React Native从入门到实战 打造高质量上线App&lt;/a&gt;(未看完)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/50&quot;&gt;Yahoo军规&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;Web App用组件方式开发全站(网盘，旧技术切图)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/763&quot;&gt;TypeScript入门&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot;&gt;《基于TypeScript从零重构axios》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1035&quot;&gt;Flutter开发第一步-Dart编程语言入门&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1090&quot;&gt;Flutter入门与案例实战&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot;&gt;Flutter从入门到进阶实战携程网App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/sc/?plan_id=64&quot;&gt;Java零基础入门&lt;/a&gt;(开始)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/643&quot;&gt;CSS深入理解之z-index&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot;&gt;《全面系统讲解CSS 工作应用+面试一步搞定》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;快速上手Linux玩转典型应用(网盘)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/214.html&quot;&gt;区块链入门与去中心化应用实战&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1084&quot;&gt;Taro多端框架开发外卖首页&lt;/a&gt;(免费)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/306.html&quot;&gt;掌握Taro多端框架 快速上手小程序H5开发&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/183.html&quot;&gt;《微信小游戏入门与实战 刷爆朋友圈》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/34&quot;&gt;《从0开始学爬虫》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/35&quot;&gt;《零基础学透TypeScript》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;极客时间&quot;&gt;极客时间&lt;/h2&gt;
-&lt;h3 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《浏览器工作原理与实践》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《重学前端》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;(在看)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《左耳听风》&lt;/a&gt;(在看)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/145&quot;&gt;《玩转Git三剑客》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;掘金&quot;&gt;掘金&lt;/h2&gt;
-&lt;h3 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a6abad5518825733c144469&quot;&gt;《使用 webpack 定制前端开发环境》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5c526902e51d4543805ef35e&quot;&gt;《你不知道的Chrome调试技巧》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a1212bc51882531ea64df07&quot;&gt;《用npm script打造超溜的前端工作流》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5b936540f265da0a9624b04b&quot;&gt;《前端性能优化原理与实践》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5bdc715fe51d454e755f75ef&quot;&gt;《前端面试之道》&lt;/a&gt;(在看)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;51cto&quot;&gt;51CTO&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://edu.51cto.com/course/10543.html&quot;&gt;Vue. js2.0之全家桶系列&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;其他经典&quot;&gt;其他经典&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://yuchengkai.cn/&quot;&gt;前端进阶之道&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections&quot;&gt;掘金&lt;/a&gt;、知乎、思否、微信公众号文章、慕课手记等&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry><entry><title type="html">前端综合笔记</title><link href="http://localhost:4000/2019/12/22/angle-aiqier/" rel="alternate" type="text/html" title="前端综合笔记" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/angle-aiqier</id><content type="html" xml:base="http://localhost:4000/2019/12/22/angle-aiqier/">&lt;p&gt;这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">记录个人OKR相关信息。</summary></entry><entry><title type="html">前端综合笔记（爱奇尔）</title><link href="http://localhost:4000/2019/12/22/angle-aiqier/" rel="alternate" type="text/html" title="前端综合笔记（爱奇尔）" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/angle-aiqier</id><content type="html" xml:base="http://localhost:4000/2019/12/22/angle-aiqier/">&lt;p&gt;这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。&lt;/p&gt;
 
 &lt;h1 id=&quot;react-intl&quot;&gt;React-intl&lt;/h1&gt;
 &lt;ol&gt;
@@ -1723,85 +1649,96 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
       &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;主题选择&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在工作中进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">箭头函数和普通函数的区别</title><link href="http://localhost:4000/2019/12/21/func-and-arrow-func/" rel="alternate" type="text/html" title="箭头函数和普通函数的区别" /><published>2019-12-21T00:00:00+08:00</published><updated>2019-12-21T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/21/func-and-arrow-func</id><content type="html" xml:base="http://localhost:4000/2019/12/21/func-and-arrow-func/">&lt;p&gt;今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:4000/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:4000/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
-&lt;p&gt;ES6标准新增了一种新的函数：Arrow Function（箭头函数），为什么叫Arrow Function？因为它的定义用的就是一个箭头，那么，它和普通函数有哪些不同呢？&lt;/p&gt;
-
-&lt;h3 id=&quot;箭头函数的特点&quot;&gt;箭头函数的特点&lt;/h3&gt;
-&lt;p&gt;箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种只包含一个表达式，连{ … }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{ … }和return。&lt;/p&gt;
+&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;相比普通函数，箭头函数有更简洁的语法&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;箭头函数不绑定this，会捕获其所在的上下文的this值，作为自己的this值&lt;/strong&gt;
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。&lt;/li&gt;
-        &lt;li&gt;把动态this转换为静态this：长期以来，JavaScript 语言的this对象一直是一个令人头痛的问题，在对象方法中使用this，必须非常小心。箭头函数”绑定”this，很大程度上解决了这个困扰。&lt;/li&gt;
-        &lt;li&gt;箭头函数可以让this指向固定化，这种特性很有利于封装回调函数。&lt;/li&gt;
-        &lt;li&gt;原理: this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;箭头函数是匿名函数，不能作为构造函数，不可以使用new命令，否则会抛出一个错误。所以箭头函数也不具有new.target。
-    &lt;blockquote&gt;
-      &lt;p&gt;原因：构造函数的new都做了些什么？简单来说，分为四步&lt;/p&gt;
-    &lt;/blockquote&gt;
-    &lt;ul&gt;
-      &lt;li&gt;JS内部首先会先生成一个对象；&lt;/li&gt;
-      &lt;li&gt;再把函数中的this指向该对象；&lt;/li&gt;
-      &lt;li&gt;然后执行构造函数中的语句；&lt;/li&gt;
-      &lt;li&gt;最终返回该对象实例。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;箭头函数不绑定arguments，取而代之用rest参数…解决；所以箭头函数也没有arguments.callee和arguments.caller&lt;/strong&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：&lt;/p&gt;
-      &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testFunc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//数组形式输出参数&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
-      &lt;p&gt;在 ECMAScript 6 之前的函数声明中，它们的参数都是“简单参数类型”的。在 ECMAScript 6 之后，凡是在参数声明中使用了缺省参数、剩余参数和模板参数之一的，都不再是“简单的”（non-simple parameters）。 &lt;br /&gt;
-在使用传统的简单参数时，只需要将调用该参数时传入的实际参数与参数对象（arguments）绑定就可以了；而使用“非简单参数”时，需要通过“初始器赋值”来完成名字与值的绑定。 &lt;br /&gt;
-两种绑定模式的区别在于：通常将实际参数与参数对象绑定时，只需要映射两个数组的下标即可，而“初始器赋值”需要通过名字来索引值（以实现绑定），因此一旦出现“重名参数”就无法处理了。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;使用call()、apply()和bind()调用，对 this 没有什么影响
-    &lt;blockquote&gt;
-      &lt;p&gt;由于 this 已经在词法层面完成了绑定，通过 call()、 apply()、bind() 方法调用一个函数时，只传入了一个参数，对 this 并没有什么影响&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;箭头函数没有原型属性prototype&lt;/li&gt;
-  &lt;li&gt;不能简单返回对象字面量
-    &lt;blockquote&gt;
-      &lt;p&gt;如果要直接返回对象时需要用小括号包起来，因为大括号被占用解释为代码块了&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;不能使用yield关键字，因此箭头函数不能用作 Generator 函数。&lt;/li&gt;
-  &lt;li&gt;箭头函数括号后面不能换行；&lt;/li&gt;
-  &lt;li&gt;箭头函数不具有super。
-    &lt;h3 id=&quot;箭头函数的es5实现babel转换&quot;&gt;箭头函数的ES5实现（Babel转换）&lt;/h3&gt;
-    &lt;p&gt;转换前:&lt;/p&gt;
-    &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ES6&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;getArrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;转换后:&lt;/p&gt;
-    &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ES5，由 Babel 转译&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;getArrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getArrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;箭头函数的 this 永远指向其上下文的  this ，任何方法都改变不了其指向，如 call() ,  bind() ,  apply() ，可以说正是因为没有自己的this，才使其具备了以上介绍的大部分特点；&lt;/li&gt;
-  &lt;li&gt;普通函数的this指向调用它的那个对象&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">今天在阿里淘宝的电话面试中被问到箭头函数和普通函数的区别，没能回答全面，现进行总结如下：</summary></entry></feed>
+  &lt;li&gt;《深入理解ES6》 —— Nicholas C. Zakas&lt;/li&gt;
+  &lt;li&gt;《React进阶之路》 —— 徐超&lt;/li&gt;
+  &lt;li&gt;《高效前端：Web高效编程与优化实践》 —— 李银城&lt;/li&gt;
+  &lt;li&gt;《JavaScript高级程序设计（第3版）》 —— Nicholas C. Zakas（差三章左右）&lt;/li&gt;
+  &lt;li&gt;《CSS世界》 —— 张鑫旭（未读完）&lt;/li&gt;
+  &lt;li&gt;《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;开源链接&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;《深入React技术栈》 —— 陈屹（未读完）&lt;/li&gt;
+  &lt;li&gt;《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
+&lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
+  &lt;li&gt;Web攻城狮培养计划之进击JavaScript核心视频课程（&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B&quot;&gt;见网盘&lt;/a&gt;）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ES6零基础教学解析彩票项目(有图片总结)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/229.html&quot;&gt;《React16.4开发简书项目-从零基础入门到实战》&lt;/a&gt;（有图片总结）&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/236.html&quot;&gt;React全家桶+AntD 共享单车后台管理系统开发&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Redux+react+Router+Node.js全栈开发(&lt;a href=&quot;https://pan.baidu.com/disk/home#/all?vmode=list&amp;amp;path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91&quot;&gt;见网盘&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/179.html&quot;&gt;React16+React-Router4 从零打造企业级电商后台管理系统&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/348.html&quot;&gt;React劲爆新特性Hooks 重构去哪儿网火车票PWA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/334.html&quot;&gt;React16.8+Next.js+Koa2开发Github全栈项目&lt;/a&gt;(只看了第三章)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战 手把手带你掌握新版Webpack4.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;四大维度解锁 Webpack 3.0 前端工程化(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;《Node.js入门到企业Web开发中的应用》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot;&gt;《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/808&quot;&gt;ReactNative入门与进阶&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot;&gt;新版React Native从入门到实战 打造高质量上线App&lt;/a&gt;(未看完)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/50&quot;&gt;Yahoo军规&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;Web App用组件方式开发全站(网盘，旧技术切图)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/763&quot;&gt;TypeScript入门&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot;&gt;《基于TypeScript从零重构axios》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1035&quot;&gt;Flutter开发第一步-Dart编程语言入门&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1090&quot;&gt;Flutter入门与案例实战&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot;&gt;Flutter从入门到进阶实战携程网App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/sc/?plan_id=64&quot;&gt;Java零基础入门&lt;/a&gt;(开始)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/643&quot;&gt;CSS深入理解之z-index&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot;&gt;《全面系统讲解CSS 工作应用+面试一步搞定》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;快速上手Linux玩转典型应用(网盘)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/214.html&quot;&gt;区块链入门与去中心化应用实战&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1084&quot;&gt;Taro多端框架开发外卖首页&lt;/a&gt;(免费)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/306.html&quot;&gt;掌握Taro多端框架 快速上手小程序H5开发&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/183.html&quot;&gt;《微信小游戏入门与实战 刷爆朋友圈》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/34&quot;&gt;《从0开始学爬虫》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/35&quot;&gt;《零基础学透TypeScript》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;极客时间&quot;&gt;极客时间&lt;/h2&gt;
+&lt;h3 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《浏览器工作原理与实践》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《重学前端》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;(在看)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot;&gt;《左耳听风》&lt;/a&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/145&quot;&gt;《玩转Git三剑客》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;掘金&quot;&gt;掘金&lt;/h2&gt;
+&lt;h3 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a6abad5518825733c144469&quot;&gt;《使用 webpack 定制前端开发环境》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5c526902e51d4543805ef35e&quot;&gt;《你不知道的Chrome调试技巧》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a1212bc51882531ea64df07&quot;&gt;《用npm script打造超溜的前端工作流》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5b936540f265da0a9624b04b&quot;&gt;《前端性能优化原理与实践》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5bdc715fe51d454e755f75ef&quot;&gt;《前端面试之道》&lt;/a&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;51cto&quot;&gt;51CTO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://edu.51cto.com/course/10543.html&quot;&gt;Vue. js2.0之全家桶系列&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;其他经典&quot;&gt;其他经典&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yuchengkai.cn/&quot;&gt;前端进阶之道&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections&quot;&gt;掘金&lt;/a&gt;、知乎、思否、微信公众号文章、慕课手记等&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry></feed>

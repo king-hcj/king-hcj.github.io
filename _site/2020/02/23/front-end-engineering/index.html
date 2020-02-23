@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Linux/Unix &mdash; Cheney King</title>
+    <title>前端自动化、工程化原理与实践(一) &mdash; Cheney King</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,23 +21,23 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/linux/">
+    <link rel="canonical" href="http://localhost:4000/2020/02/23/front-end-engineering/">
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Linux/Unix">
+    <meta property="og:title" content="前端自动化、工程化原理与实践(一)">
       
-    <meta name="keywords" content="Linux">
-    <meta name="og:keywords" content="Linux">
+    <meta name="keywords" content="前端工程化，原理与实践">
+    <meta name="og:keywords" content="前端工程化，原理与实践">
       
-    <meta name="description" content="类 Unix 系统下的一些常用命令和用法。">
-    <meta name="og:description" content="类 Unix 系统下的一些常用命令和用法。">
+    <meta name="description" content="  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。">
+    <meta name="og:description" content="  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/linux/">
+    <meta property="og:url" content="http://localhost:4000/2020/02/23/front-end-engineering/">
     <meta property="og:site_name" content="Cheney King">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -74,12 +74,26 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Linux/Unix">
+    <section class="collection-head small geopattern" data-pattern-id="前端自动化、工程化原理与实践(">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Linux/Unix</h1>
+        <h1 class="collection-header">前端自动化、工程化原理与实践(一)</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2020/02/23
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#前端工程化系列原理与实践" title="前端工程化系列原理与实践">前端工程化系列原理与实践</a>
+          </span>
+          
+          <span style="color:#ededed;font-size: 14px">本文共667字,阅读全文约需2分钟</span>
+        </div>
       </div>
     </div>
   </div>
@@ -90,57 +104,26 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <p>类 Unix 系统下的一些常用命令和用法。</p>
+    <p>  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。</p>
 
-<h2 id="实用命令">实用命令</h2>
+<h2 id="webpack热更新原理分析">webpack热更新原理分析</h2>
+<p><img src="https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.jpeg?raw=true" alt="webpack热更新原理" /></p>
 
-<h3 id="fuser">fuser</h3>
+<h2 id="npm和yarn的区别">npm和yarn的区别</h2>
+<ol>
+  <li><strong>yarn速度快</strong>：
+    <ul>
+      <li><strong>并行安装</strong>：无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 安装完成之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。</li>
+      <li><strong>离线模式</strong>：如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了。</li>
+    </ul>
+  </li>
+  <li><strong>安装版本统一</strong>：为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。</li>
+  <li>更简洁的输出：npm 的输出信息比较冗长。在执行 npm install package 的时候，命令行里会不断地打印出所有被安装上的依赖。</li>
+  <li>多注册来源处理：所有的依赖包，不管他被不同的库间接关联引用多少次，安装这个包时，只会从一个注册来源去装，要么是 npm 要么是 bower, 防止出现混乱不一致。</li>
+  <li>更好的语义化： yarn改变了一些npm命令的名称，比如 yarn add/remove，感觉上比 npm 原本的 install/uninstall 要更清晰。</li>
+  <li>有了yarn的压力之后，npm5.0做了一些类似的改进，如默认新增了类似yarn.lock的 package-lock.json。</li>
+</ol>
 
-<p>查看文件被谁占用。</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fuser <span class="nt">-u</span> .linux.md.swp
-</code></pre></div></div>
-
-<h3 id="id">id</h3>
-
-<p>查看当前用户、组 id。</p>
-
-<h3 id="lsof">lsof</h3>
-
-<p>查看打开的文件列表。</p>
-
-<blockquote>
-  <p>An  open  file  may  be  a  regular  file,  a directory, a block special file, a character special file, an executing text reference, a library, a stream or a network file (Internet socket, NFS file or UNIX domain socket.)  A specific file or all the files in a file system may be selected by path.</p>
-</blockquote>
-
-<h4 id="查看网络相关的文件占用">查看网络相关的文件占用</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span>
-</code></pre></div></div>
-
-<h4 id="查看端口占用">查看端口占用</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> tcp:5037
-</code></pre></div></div>
-
-<h4 id="查看某个文件被谁占用">查看某个文件被谁占用</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof .linux.md.swp
-</code></pre></div></div>
-
-<h4 id="查看某个用户占用的文件信息">查看某个用户占用的文件信息</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-u</span> king-hcj
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">-u</code> 后面可以跟 uid 或 login name。</p>
-
-<h4 id="查看某个程序占用的文件信息">查看某个程序占用的文件信息</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-c</span> Vim
-</code></pre></div></div>
-
-<p>注意程序名区分大小写。</p>
 
     </article>
     <div class="share">
@@ -157,7 +140,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/linux/',
+            id: '/2020/02/23/front-end-engineering/',
             clientID: 'bc269064fe241728eb14',
             clientSecret: '0f2e89e4b56f4580e067356a0900c95968284917',
             repo: 'king-hcj.github.io',

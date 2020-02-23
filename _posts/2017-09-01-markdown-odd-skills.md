@@ -10,6 +10,24 @@ keywords: Markdown, 奇技淫巧
 
 *注：如下技巧大多是利用 Markdown 兼容部分 HTML 标签的特性来完成，不一定在所有网站和软件里都完全支持，主要以 GitHub 支持为准。*
 
+## markdown折叠内容语法
+
+语法：
+```md
+<details>
+<summary>Title</summary>
+
+content!!!
+</details>
+```
+
+展示：
+<details>
+<summary>markdown折叠内容语法</summary>
+
+这是要展示的详细内容，或者代码块等
+</details>
+
 ## 在表格单元格里换行
 
 借助于 HTML 里的 `<br />` 实现。
