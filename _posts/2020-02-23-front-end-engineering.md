@@ -9,7 +9,7 @@ keywords: 前端工程化，原理与实践
 &emsp;&emsp;本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。
 
 ## webpack热更新原理分析
-![webpack热更新原理](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.jpeg?raw=true)   
+![webpack热更新原理](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.png?raw=true)   
 
 ## SSR实现思路
 ![SSR代码实现思路](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/SSR.png?raw=true)   
