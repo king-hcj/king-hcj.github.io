@@ -484,7 +484,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 4. React行内calc的使用：
 ```js
-style={{ width: 'calc(100% - 80px)' }}
+style={ { width: 'calc(100% - 80px)' } }
 ```
 
 ## 其他
