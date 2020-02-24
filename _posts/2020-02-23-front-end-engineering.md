@@ -11,6 +11,9 @@ keywords: 前端工程化，原理与实践
 ## webpack热更新原理分析
 ![webpack热更新原理](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.jpeg?raw=true)   
 
+## SSR实现思路
+![SSR代码实现思路](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/SSR.png?raw=true)   
+
 ## npm和yarn的区别
 1. **yarn速度快**：
    - **并行安装**：无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 安装完成之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。
