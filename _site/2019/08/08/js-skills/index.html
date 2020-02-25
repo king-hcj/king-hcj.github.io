@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共3644字,阅读全文约需12分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共3887字,阅读全文约需13分钟</span>
         </div>
       </div>
     </div>
@@ -252,8 +252,8 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
 </ol>
 
 <h3 id="js函数柯里化">JS函数柯里化</h3>
-<p>####概念： <br />
-Currying是把接受多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术，即只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。示例：</p>
+<h4 id="概念">概念：</h4>
+<p>Currying是把接受多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术，即只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。示例：</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 普通的add函数</span>
 <span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
@@ -289,6 +289,34 @@ Currying是把接受多个参数的函数变换成接受一个单一参数的函
     </blockquote>
   </li>
 </ul>
+
+<h3 id="跨域">跨域</h3>
+<h4 id="跨域资源共享-cors-详解">跨域资源共享 CORS 详解</h4>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html">跨域资源共享 CORS 详解——阮一峰</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="https://segmentfault.com/a/1190000011145364">前端常见跨域解决方案（全）——segmentfault</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4 id="mac上设置新版chrome浏览器跨域">mac上设置新版chrome浏览器跨域</h4>
+<p>打开一个新的可跨域的chrome窗口实现方法：</p>
+<ol>
+  <li>打开终端</li>
+  <li>输入下面的命令(需要替换路径中的yourname)
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">open</span> <span class="o">-</span><span class="nx">n</span> <span class="o">/</span><span class="nx">Applications</span><span class="o">/</span><span class="nx">Google</span><span class="err">\</span> <span class="nx">Chrome</span><span class="p">.</span><span class="nx">app</span><span class="o">/</span> <span class="o">--</span><span class="nx">args</span> <span class="o">--</span><span class="nx">disable</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">security</span>  <span class="o">--</span><span class="nx">user</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">dir</span><span class="o">=</span><span class="sr">/Users/y</span><span class="nx">ourname</span><span class="o">/</span><span class="nx">MyChromeDevUserData</span><span class="o">/</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
 
     </article>
     <div class="share">
