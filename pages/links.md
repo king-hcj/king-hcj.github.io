@@ -11,7 +11,7 @@ permalink: /links/
 > Nothing is given, Everything is earned！
 
 {% for link in site.data.links %}
-  {% if link.src == 'life' %}
+  {% if link.src == 'www' %}
 * [{{ link.name }}]({{ link.url }})
   {% endif %}
 {% endfor %}
@@ -19,7 +19,7 @@ permalink: /links/
 > 个人简历
 
 {% for link in site.data.links %}
-  {% if link.src == 'www' %}
+  {% if link.src == 'life' %}
 * [{{ link.name }}]({{ link.url }})
   {% endif %}
 {% endfor %}

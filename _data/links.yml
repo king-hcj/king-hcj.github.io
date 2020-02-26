@@ -1,27 +1,35 @@
 - name: 前端进阶之道
   url: https://yuchengkai.cn
-  src: life
+  src: www
 
 - name: 前端面试与进阶指南
   url: https://www.cxymsg.com
-  src: life
+  src: www
 
 - name: React源码解析
   url: https://react.jokcy.me
-  src: life
+  src: www
 
 - name: 鑫空间，鑫生活
   url: https://www.zhangxinxu.com/
-  src: life
+  src: www
+
+- name: 《ECMAScript 6 入门》- 阮一峰
+  url: https://es6.ruanyifeng.com/
+  src: www
+
+- name: Pro Git
+  url: https://git-scm.com/book/zh/v2
+  src: www
 
 - name: 日新亭
   url: http://www.fengerzh.com/
-  src: life
+  src: www
 
 - name: 水寒的博客
   url: https://dp2px.com
-  src: life
+  src: www
 
 - name: 个人简历
   url: https://king-hcj.github.io/Resume/
-  src: www
+  src: life
