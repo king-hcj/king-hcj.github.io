@@ -559,5 +559,6 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 6. 访问量统计
 7. 基于jekyll-now的个人博客解决方案
    - [jekyll-now](https://github.com/barryclark/jekyll-now)
+   - [jekyll-now 文档](http://jekyllcn.com/)
    - [参考页面](https://github.com/mzlogin/mzlogin.github.io)
    - [主题选择](http://jekyllthemes.org/)
