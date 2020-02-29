@@ -9,13 +9,13 @@ keywords: 前端工程化，原理与实践
 &emsp;&emsp;本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。
 
 ## webpack功能模块设计
-![webpack功能模块设计](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/webpack.jpeg?raw=true)   
+![webpack功能模块设计]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/webpack.jpeg?raw=true)   
 
 ## webpack热更新原理分析
 ![webpack热更新原理]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/HMR.png?raw=true)   
 
 ## SSR实现思路
-![SSR代码实现思路](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/SSR.png?raw=true)   
+![SSR代码实现思路]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/SSR.png?raw=true)   
 
 ## npm和yarn的区别
 1. **yarn速度快**：
