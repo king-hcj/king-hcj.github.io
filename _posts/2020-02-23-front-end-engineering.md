@@ -12,7 +12,7 @@ keywords: 前端工程化，原理与实践
 ![webpack功能模块设计](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/webpack.jpeg?raw=true)   
 
 ## webpack热更新原理分析
-![webpack热更新原理](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/HMR.png?raw=true)   
+![webpack热更新原理]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/HMR.png?raw=true)   
 
 ## SSR实现思路
 ![SSR代码实现思路](https://github.com/king-hcj/king-hcj.github.io/blob/master/images/posts/frontEndEngineering/SSR.png?raw=true)   
