@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-01T00:01:01+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-01T00:06:59+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://localhost:5001/images/posts/frontEndEngineering/webpack.jpeg?raw=true&quot; alt=&quot;webpack功能模块设计&quot; /&gt;&lt;/p&gt;
@@ -1476,7 +1476,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
       &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/656e6101bf0f&quot;&gt;在个人博客里添加评论系统–Gitalk&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;引入图片的方式
         &lt;ul&gt;
-          &lt;li&gt;GitHub图片：需要在路径上加上blob和raw=true之类的字段（关键词百度）&lt;/li&gt;
+          &lt;li&gt;GitHub图片：需要在路径分支前加blob，图片后缀后加?raw=true（关键词百度）&lt;/li&gt;
           &lt;li&gt;相对路径(liquid语法：使用站点url与基地目录（site.url与site.baseurl）)：{ {site.url} }{ {site.baseurl} }/images/posts/XXX/XX.png?raw=true&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;

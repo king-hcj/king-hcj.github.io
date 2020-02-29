@@ -421,7 +421,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 21. 个人博客相关
 - [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f)
 - 引入图片的方式
-   - GitHub图片：需要在路径上加上blob和raw=true之类的字段（关键词百度）
+   - GitHub图片：需要在路径分支前加blob，图片后缀后加?raw=true（关键词百度）
    - 相对路径(liquid语法：使用站点url与基地目录（site.url与site.baseurl）)：{ {site.url} }{ {site.baseurl} }/images/posts/XXX/XX.png?raw=true
 
 22. 在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
