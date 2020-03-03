@@ -425,7 +425,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    - 相对路径(liquid语法：使用站点url与基地目录（site.url与site.baseurl）)：{ {site.url} }{ {site.baseurl} }/images/posts/XXX/XX.png?raw=true
    - Markdown超链接在新窗口打开：
    ```js
-   [example](https://king-hcj.github.io){:target="_blank"}
+   [example](https://king-hcj.github.io){:target='_blank'}
    ```
 
 22. 在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：

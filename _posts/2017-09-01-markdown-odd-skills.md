@@ -28,6 +28,11 @@ content!!!
 这是要展示的详细内容，或者代码块等
 </details>
 
+## Markdown超链接在新窗口打开：
+   ```js
+   [example](https://king-hcj.github.io){:target='_blank'}
+   ```
+
 ## 在表格单元格里换行
 
 借助于 HTML 里的 `<br />` 实现。
