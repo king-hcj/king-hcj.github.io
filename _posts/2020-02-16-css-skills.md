@@ -41,7 +41,7 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
    - 盒模型：标准模式（width值即为盒模型中的content的宽度值）和怪异模式（IE8以下，width的宽度包括border、padding和content）；根据使用方式，写好box-sizing属性
    - 默认样式：通配符设置默认样式（不建议）；相关CSS Reset重置默认样式（高效）；
    - 图片默认有间距：使用float属性为img布局；
-   - css属性：opacity、cursor（支持的值不同）、float、text-overflow（ellipsis）、
+   - css属性：opacity、cursor（支持的值不同）、float、text-overflow（ellipsis）等。
    >>>IE：filter:alpha(opacity=60);FF：opacity:0.6。   
    firefox 不支持hand，但ie支持 pointer;解决方法:统一使用pointer
 - CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
