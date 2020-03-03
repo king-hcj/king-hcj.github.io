@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-03T13:37:42+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-03T18:47:41+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;http://localhost:5001/images/posts/frontEndEngineering/webpack.jpeg?raw=true&quot; alt=&quot;webpack功能模块设计&quot; /&gt;&lt;/p&gt;
@@ -48,6 +48,97 @@
       &lt;li&gt;伪类：用于向某些选择器添加特殊的效果&lt;/li&gt;
       &lt;li&gt;伪元素：用于将特殊的效果添加到某些选择器(标签）&lt;/li&gt;
     &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;浏览器兼容性的理解&quot;&gt;浏览器兼容性的理解&lt;/h2&gt;
+&lt;p&gt;因为个人在项目中，实际上没有涉及到太多浏览器兼容性相关的问题，也不能胡诌诌，只说说个人对这一块儿的理解：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit
+    &lt;blockquote&gt;
+      &lt;blockquote&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;IE浏览器：Trident内核，也称为IE内核
+Chrome浏览器：Webkit内核，现在是Blink内核
+Firefox浏览器：Gecko内核，俗称Firefox内核
+Safari浏览器：Webkit内核
+Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；
+360浏览器：IE+Chrome双内核
+猎豹浏览器：IE+Chrome双内核
+百度浏览器：IE内核
+QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;样式：
+    &lt;ul&gt;
+      &lt;li&gt;盒模型：标准模式（width值即为盒模型中的content的宽度值）和怪异模式（IE8以下，width的宽度包括border、padding和content）；根据使用方式，写好box-sizing属性&lt;/li&gt;
+      &lt;li&gt;默认样式：通配符设置默认样式（不建议）；相关CSS Reset重置默认样式（高效）；&lt;/li&gt;
+      &lt;li&gt;图片默认有间距：使用float属性为img布局；&lt;/li&gt;
+      &lt;li&gt;css属性：opacity、cursor（支持的值不同）、float、text-overflow（ellipsis）、
+        &lt;blockquote&gt;
+          &lt;blockquote&gt;
+            &lt;blockquote&gt;
+              &lt;p&gt;IE：filter:alpha(opacity=60);FF：opacity:0.6。 &lt;br /&gt;
+ firefox 不支持hand，但ie支持 pointer;解决方法:统一使用pointer&lt;/p&gt;
+            &lt;/blockquote&gt;
+          &lt;/blockquote&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
+    &lt;ul&gt;
+      &lt;li&gt;CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器:
+        &lt;ul&gt;
+          &lt;li&gt;属性级Hack：比如IE6能识别下划线“&lt;em&gt;”和星号“*”，IE7能识别星号“*”，但不能识别下划线”&lt;/em&gt; ”，而firefox两个都不能认识。&lt;/li&gt;
+          &lt;li&gt;选择符级Hack：比如IE6能识别&lt;em&gt;html .class{}，IE7能识别&lt;/em&gt;+html .class{}或者*:first-child+html .class{}。&lt;/li&gt;
+          &lt;li&gt;IE条件注释Hack：IE条件注释是微软IE5开始就提供的一种非标准逻辑语句。比如针对所有IE：&amp;lt;!-[if IE]&amp;gt;&amp;lt;!-您的代码-&amp;gt;&amp;lt;![endif]&amp;gt;，针对IE6及以下版本：&amp;lt;!-[if it IE 7]&amp;gt;&amp;lt;!-您的代码-&amp;gt;&amp;lt;![endif]-&amp;gt;，这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。 &lt;br /&gt;
+ PS：条件注释只有在IE浏览器下才能执行，这个代码在非IE浏览下被当做注释视而不见。可以通过IE条件注释载入不同的CSS、JS、HTML和服务器代码等。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;ie6认识的hacker 是下划线_ 和星号 *&lt;/li&gt;
+      &lt;li&gt;ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
+        &lt;ul&gt;
+          &lt;li&gt;比如这样一个css设置
+            &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+            &lt;p&gt;ie6浏览器在读到 height:300px的时候会认为高时300px；继续往下读，他也认识&lt;em&gt;heihgt， 所以当ie6读到&lt;/em&gt;height:200px的时候会覆盖掉前一条的相冲突设置，认为高度是200px。继续往下读，ie6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px； ie7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px； 剩下的浏览器只认识第一个height:300px;所以他们会把高度解析为300px。&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;优先级相同且相冲突的属性设置后一个会覆盖掉前一个，所以书写的次序是很重要的。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;事件绑定和AJAX：
+    &lt;ul&gt;
+      &lt;li&gt;IE:dom.attachEvent();其他浏览器：dom.addEventListener()。&lt;/li&gt;
+      &lt;li&gt;IE：ActiveXObject；其他：xmlHttpReuest；同上。&lt;/li&gt;
+      &lt;li&gt;所以，如果项目中涉及到这些，应该会有一个封装的公共方法来进行处理；&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;polyfills：可能不哦导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5薪语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）&lt;/li&gt;
+  &lt;li&gt;PostCSS：
+    &lt;ul&gt;
+      &lt;li&gt;利用从 Can I Use 网站获取的数据为 CSS 规则添加特定厂商的前缀。Autoprefixer 自动获取浏览器的流行度和能够支持的属性，并根据这些数据帮你自动为 CSS 规则添加前缀；&lt;/li&gt;
+      &lt;li&gt;将现代 CSS 语法转换成大多数浏览器都能理解的东西，根据你的目标浏览器或运行时环境来确定你需要的 polyfills，基于 cssdb 实现；&lt;/li&gt;
+      &lt;li&gt;CSS Modules， 就是说你永远不用担心命名太大众化而造成冲突太普通，只要用最有意义的名字就行了；stylelint 做CSS 代码检查；利用 calc() 和你所定义的分割方式来创建网格系统，无需传递大量参数等。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;万能清除浮动:给需要闭合的div加上class=”clearfix”即可
+    &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;/* Clear Fix */&lt;/span&gt; 
+ &lt;span class=&quot;nc&quot;&gt;.clearfix&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;both&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;visibility&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+ &lt;span class=&quot;nc&quot;&gt;.clearfix&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+ &lt;span class=&quot;c&quot;&gt;/* Hide from IE Mac */&lt;/span&gt; 
+ &lt;span class=&quot;nc&quot;&gt;.clearfix&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt; 
+ &lt;span class=&quot;c&quot;&gt;/* End hide from IE Mac */&lt;/span&gt; 
+ &lt;span class=&quot;c&quot;&gt;/* end of clearfix */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">汇集整理常见的CSS知识点，以供参考复习阅读。</summary></entry><entry><title type="html">前端错误处理</title><link href="http://localhost:5001/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:5001/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
 

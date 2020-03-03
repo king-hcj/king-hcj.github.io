@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共463字,阅读全文约需1分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共2948字,阅读全文约需10分钟</span>
         </div>
       </div>
     </div>
@@ -130,6 +130,97 @@
       <li>伪类：用于向某些选择器添加特殊的效果</li>
       <li>伪元素：用于将特殊的效果添加到某些选择器(标签）</li>
     </ul>
+  </li>
+</ul>
+
+<h2 id="浏览器兼容性的理解">浏览器兼容性的理解</h2>
+<p>因为个人在项目中，实际上没有涉及到太多浏览器兼容性相关的问题，也不能胡诌诌，只说说个人对这一块儿的理解：</p>
+<ul>
+  <li>常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p>IE浏览器：Trident内核，也称为IE内核
+Chrome浏览器：Webkit内核，现在是Blink内核
+Firefox浏览器：Gecko内核，俗称Firefox内核
+Safari浏览器：Webkit内核
+Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；
+360浏览器：IE+Chrome双内核
+猎豹浏览器：IE+Chrome双内核
+百度浏览器：IE内核
+QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>样式：
+    <ul>
+      <li>盒模型：标准模式（width值即为盒模型中的content的宽度值）和怪异模式（IE8以下，width的宽度包括border、padding和content）；根据使用方式，写好box-sizing属性</li>
+      <li>默认样式：通配符设置默认样式（不建议）；相关CSS Reset重置默认样式（高效）；</li>
+      <li>图片默认有间距：使用float属性为img布局；</li>
+      <li>css属性：opacity、cursor（支持的值不同）、float、text-overflow（ellipsis）、
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <p>IE：filter:alpha(opacity=60);FF：opacity:0.6。 <br />
+ firefox 不支持hand，但ie支持 pointer;解决方法:统一使用pointer</p>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
+    <ul>
+      <li>CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器:
+        <ul>
+          <li>属性级Hack：比如IE6能识别下划线“<em>”和星号“*”，IE7能识别星号“*”，但不能识别下划线”</em> ”，而firefox两个都不能认识。</li>
+          <li>选择符级Hack：比如IE6能识别<em>html .class{}，IE7能识别</em>+html .class{}或者*:first-child+html .class{}。</li>
+          <li>IE条件注释Hack：IE条件注释是微软IE5开始就提供的一种非标准逻辑语句。比如针对所有IE：&lt;!-[if IE]&gt;&lt;!-您的代码-&gt;&lt;![endif]&gt;，针对IE6及以下版本：&lt;!-[if it IE 7]&gt;&lt;!-您的代码-&gt;&lt;![endif]-&gt;，这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。 <br />
+ PS：条件注释只有在IE浏览器下才能执行，这个代码在非IE浏览下被当做注释视而不见。可以通过IE条件注释载入不同的CSS、JS、HTML和服务器代码等。</li>
+        </ul>
+      </li>
+      <li>ie6认识的hacker 是下划线_ 和星号 *</li>
+      <li>ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
+        <ul>
+          <li>比如这样一个css设置
+            <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">div</span> <span class="p">{</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+    <span class="err">*</span><span class="nl">height</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
+    <span class="py">_height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>            </div>
+            <p>ie6浏览器在读到 height:300px的时候会认为高时300px；继续往下读，他也认识<em>heihgt， 所以当ie6读到</em>height:200px的时候会覆盖掉前一条的相冲突设置，认为高度是200px。继续往下读，ie6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px； ie7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px； 剩下的浏览器只认识第一个height:300px;所以他们会把高度解析为300px。</p>
+          </li>
+        </ul>
+      </li>
+      <li>优先级相同且相冲突的属性设置后一个会覆盖掉前一个，所以书写的次序是很重要的。</li>
+    </ul>
+  </li>
+  <li>事件绑定和AJAX：
+    <ul>
+      <li>IE:dom.attachEvent();其他浏览器：dom.addEventListener()。</li>
+      <li>IE：ActiveXObject；其他：xmlHttpReuest；同上。</li>
+      <li>所以，如果项目中涉及到这些，应该会有一个封装的公共方法来进行处理；</li>
+    </ul>
+  </li>
+  <li>polyfills：可能不哦导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5薪语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）</li>
+  <li>PostCSS：
+    <ul>
+      <li>利用从 Can I Use 网站获取的数据为 CSS 规则添加特定厂商的前缀。Autoprefixer 自动获取浏览器的流行度和能够支持的属性，并根据这些数据帮你自动为 CSS 规则添加前缀；</li>
+      <li>将现代 CSS 语法转换成大多数浏览器都能理解的东西，根据你的目标浏览器或运行时环境来确定你需要的 polyfills，基于 cssdb 实现；</li>
+      <li>CSS Modules， 就是说你永远不用担心命名太大众化而造成冲突太普通，只要用最有意义的名字就行了；stylelint 做CSS 代码检查；利用 calc() 和你所定义的分割方式来创建网格系统，无需传递大量参数等。</li>
+    </ul>
+  </li>
+  <li>万能清除浮动:给需要闭合的div加上class=”clearfix”即可
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">/* Clear Fix */</span> 
+ <span class="nc">.clearfix</span><span class="nd">:after</span> <span class="p">{</span> <span class="nl">content</span><span class="p">:</span><span class="s1">"."</span><span class="p">;</span> <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span> <span class="nl">height</span><span class="p">:</span><span class="m">0</span><span class="p">;</span> <span class="nl">clear</span><span class="p">:</span><span class="nb">both</span><span class="p">;</span><span class="nl">visibility</span><span class="p">:</span><span class="nb">hidden</span><span class="p">;</span> <span class="p">}</span> 
+ <span class="nc">.clearfix</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span><span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span> 
+ <span class="c">/* Hide from IE Mac */</span> 
+ <span class="nc">.clearfix</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;}</span> 
+ <span class="c">/* End hide from IE Mac */</span> 
+ <span class="c">/* end of clearfix */</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
