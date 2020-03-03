@@ -8,14 +8,18 @@ keywords: 前端工程化，原理与实践
 
 &emsp;&emsp;本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。
 
-## webpack功能模块设计
+## WebPack
+### webpack功能模块设计
 ![webpack功能模块设计]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/webpack.jpeg?raw=true)   
 
-## webpack热更新原理分析
+### webpack热更新原理分析
 ![webpack热更新原理]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/HMR.png?raw=true)   
 
-## SSR实现思路
+### SSR实现思路
 ![SSR代码实现思路]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/SSR.png?raw=true)   
+
+### Tapable
+[tapable](https://segmentfault.com/a/1190000017420937){:target='_blank'} 是一个类似于nodejs 的EventEmitter 的库, 主要是控制钩子函数的发布与订阅,控制着webpack的插件系,webpack的本质就是一系列的插件运行。
 
 ## npm和yarn的区别
 1. **yarn速度快**：

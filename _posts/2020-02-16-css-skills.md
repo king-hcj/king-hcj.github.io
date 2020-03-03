@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSS常见面试问题汇总
+title: CSS知识点汇总
 categories: Comprehensive
 description: css常见面试问题汇总
 keywords: css
@@ -27,15 +27,15 @@ keywords: css
 ## 浏览器兼容性的理解
 因为个人在项目中，实际上没有涉及到太多浏览器兼容性相关的问题，也不能胡诌诌，只说说个人对这一块儿的理解：
 - 常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit
->>>IE浏览器：Trident内核，也称为IE内核
-Chrome浏览器：Webkit内核，现在是Blink内核
-Firefox浏览器：Gecko内核，俗称Firefox内核
-Safari浏览器：Webkit内核
-Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；
-360浏览器：IE+Chrome双内核
-猎豹浏览器：IE+Chrome双内核
-百度浏览器：IE内核
-QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
+>>>IE浏览器：Trident内核，也称为IE内核   
+Chrome浏览器：Webkit内核，现在是Blink内核   
+Firefox浏览器：Gecko内核，俗称Firefox内核   
+Safari浏览器：Webkit内核   
+Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核   
+360浏览器：IE+Chrome双内核   
+猎豹浏览器：IE+Chrome双内核   
+百度浏览器：IE内核   
+QQ浏览器：Trident（兼容模式）+Webkit（高速模式）   
 
 - 样式：
    - 盒模型：标准模式（width值即为盒模型中的content的宽度值）和怪异模式（IE8以下，width的宽度包括border、padding和content）；根据使用方式，写好box-sizing属性
@@ -45,20 +45,19 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
    >>>IE：filter:alpha(opacity=60);FF：opacity:0.6。   
    firefox 不支持hand，但ie支持 pointer;解决方法:统一使用pointer
 - CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
-   - CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器:
+   - CSS属性Hack、CSS选择符Hack以及IE条件注释Hack:
       - 属性级Hack：比如IE6能识别下划线“_”和星号“*”，IE7能识别星号“*”，但不能识别下划线”_ ”，而firefox两个都不能认识。
       - 选择符级Hack：比如IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。
       - IE条件注释Hack：IE条件注释是微软IE5开始就提供的一种非标准逻辑语句。比如针对所有IE：&lt;!-[if IE]&gt;&lt;!-您的代码-&gt;&lt;![endif]&gt;，针对IE6及以下版本：&lt;!-[if it IE 7]&gt;&lt;!-您的代码-&gt;&lt;![endif]-&gt;，这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。   
       PS：条件注释只有在IE浏览器下才能执行，这个代码在非IE浏览下被当做注释视而不见。可以通过IE条件注释载入不同的CSS、JS、HTML和服务器代码等。
-   - ie6认识的hacker 是下划线_ 和星号 *
-   - ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
+   - 示例：ie6认识的hacker 是下划线_ 和星号 *；ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
       - 比如这样一个css设置 
          ```css
          div {
             height:300px;
             *height:200px;
             _height:100px;
-            }
+         }
          ```
          ie6浏览器在读到 height:300px的时候会认为高时300px；继续往下读，他也认识*heihgt， 所以当ie6读到*height:200px的时候会覆盖掉前一条的相冲突设置，认为高度是200px。继续往下读，ie6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px； ie7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px； 剩下的浏览器只认识第一个height:300px;所以他们会把高度解析为300px。
    - 优先级相同且相冲突的属性设置后一个会覆盖掉前一个，所以书写的次序是很重要的。

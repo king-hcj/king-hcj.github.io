@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-03T18:52:30+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-03T21:08:20+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
-&lt;h2 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h2&gt;
+&lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
+&lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;http://localhost:5001/images/posts/frontEndEngineering/webpack.jpeg?raw=true&quot; alt=&quot;webpack功能模块设计&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;webpack热更新原理分析&quot;&gt;webpack热更新原理分析&lt;/h2&gt;
+&lt;h3 id=&quot;webpack热更新原理分析&quot;&gt;webpack热更新原理分析&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;http://localhost:5001/images/posts/frontEndEngineering/HMR.png?raw=true&quot; alt=&quot;webpack热更新原理&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;ssr实现思路&quot;&gt;SSR实现思路&lt;/h2&gt;
+&lt;h3 id=&quot;ssr实现思路&quot;&gt;SSR实现思路&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;http://localhost:5001/images/posts/frontEndEngineering/SSR.png?raw=true&quot; alt=&quot;SSR代码实现思路&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tapable&quot;&gt;Tapable&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000017420937&quot; target=&quot;_blank&quot;&gt;tapable&lt;/a&gt; 是一个类似于nodejs 的EventEmitter 的库, 主要是控制钩子函数的发布与订阅,控制着webpack的插件系,webpack的本质就是一系列的插件运行。&lt;/p&gt;
 
 &lt;h2 id=&quot;npm和yarn的区别&quot;&gt;npm和yarn的区别&lt;/h2&gt;
 &lt;ol&gt;
@@ -22,7 +26,7 @@
   &lt;li&gt;多注册来源处理：所有的依赖包，不管他被不同的库间接关联引用多少次，安装这个包时，只会从一个注册来源去装，要么是 npm 要么是 bower, 防止出现混乱不一致。&lt;/li&gt;
   &lt;li&gt;更好的语义化： yarn改变了一些npm命令的名称，比如 yarn add/remove，感觉上比 npm 原本的 install/uninstall 要更清晰。&lt;/li&gt;
   &lt;li&gt;有了yarn的压力之后，npm5.0做了一些类似的改进，如默认新增了类似yarn.lock的 package-lock.json。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。</summary></entry><entry><title type="html">CSS常见面试问题汇总</title><link href="http://localhost:5001/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS常见面试问题汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:5001/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。</summary></entry><entry><title type="html">CSS知识点汇总</title><link href="http://localhost:5001/2020/02/16/css-skills/" rel="alternate" type="text/html" title="CSS知识点汇总" /><published>2020-02-16T00:00:00+08:00</published><updated>2020-02-16T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/16/css-skills</id><content type="html" xml:base="http://localhost:5001/2020/02/16/css-skills/">&lt;p&gt;汇集整理常见的CSS知识点，以供参考复习阅读。&lt;/p&gt;
 
 &lt;h2 id=&quot;伪类与伪元素的特性及其区别&quot;&gt;伪类与伪元素的特性及其区别&lt;/h2&gt;
 
@@ -58,14 +62,14 @@
     &lt;blockquote&gt;
       &lt;blockquote&gt;
         &lt;blockquote&gt;
-          &lt;p&gt;IE浏览器：Trident内核，也称为IE内核
-Chrome浏览器：Webkit内核，现在是Blink内核
-Firefox浏览器：Gecko内核，俗称Firefox内核
-Safari浏览器：Webkit内核
-Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；
-360浏览器：IE+Chrome双内核
-猎豹浏览器：IE+Chrome双内核
-百度浏览器：IE内核
+          &lt;p&gt;IE浏览器：Trident内核，也称为IE内核 &lt;br /&gt;
+Chrome浏览器：Webkit内核，现在是Blink内核 &lt;br /&gt;
+Firefox浏览器：Gecko内核，俗称Firefox内核 &lt;br /&gt;
+Safari浏览器：Webkit内核 &lt;br /&gt;
+Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核 &lt;br /&gt;
+360浏览器：IE+Chrome双内核 &lt;br /&gt;
+猎豹浏览器：IE+Chrome双内核 &lt;br /&gt;
+百度浏览器：IE内核 &lt;br /&gt;
 QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
         &lt;/blockquote&gt;
       &lt;/blockquote&gt;
@@ -90,7 +94,7 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
     &lt;ul&gt;
-      &lt;li&gt;CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器:
+      &lt;li&gt;CSS属性Hack、CSS选择符Hack以及IE条件注释Hack:
         &lt;ul&gt;
           &lt;li&gt;属性级Hack：比如IE6能识别下划线“&lt;em&gt;”和星号“*”，IE7能识别星号“*”，但不能识别下划线”&lt;/em&gt; ”，而firefox两个都不能认识。&lt;/li&gt;
           &lt;li&gt;选择符级Hack：比如IE6能识别&lt;em&gt;html .class{}，IE7能识别&lt;/em&gt;+html .class{}或者*:first-child+html .class{}。&lt;/li&gt;
@@ -98,15 +102,14 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
  PS：条件注释只有在IE浏览器下才能执行，这个代码在非IE浏览下被当做注释视而不见。可以通过IE条件注释载入不同的CSS、JS、HTML和服务器代码等。&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;ie6认识的hacker 是下划线_ 和星号 *&lt;/li&gt;
-      &lt;li&gt;ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
+      &lt;li&gt;示例：ie6认识的hacker 是下划线_ 和星号 *；ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
         &lt;ul&gt;
           &lt;li&gt;比如这样一个css设置
             &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;py&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
             &lt;p&gt;ie6浏览器在读到 height:300px的时候会认为高时300px；继续往下读，他也认识&lt;em&gt;heihgt， 所以当ie6读到&lt;/em&gt;height:200px的时候会覆盖掉前一条的相冲突设置，认为高度是200px。继续往下读，ie6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px； ie7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px； 剩下的浏览器只认识第一个height:300px;所以他们会把高度解析为300px。&lt;/p&gt;
           &lt;/li&gt;

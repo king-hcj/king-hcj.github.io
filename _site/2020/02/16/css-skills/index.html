@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>CSS常见面试问题汇总 &mdash; Cheney King</title>
+    <title>CSS知识点汇总 &mdash; Cheney King</title>
     <link rel="stylesheet" href="http://localhost:5001/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:5001/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:5001/assets/vendor/octicons/octicons/octicons.css">
@@ -25,7 +25,7 @@
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:5001/feed.xml">
     <link rel="shortcut icon" href="http://localhost:5001/favicon.ico">
     
-    <meta property="og:title" content="CSS常见面试问题汇总">
+    <meta property="og:title" content="CSS知识点汇总">
       
     <meta name="keywords" content="css">
     <meta name="og:keywords" content="css">
@@ -74,12 +74,12 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="CSS常见面试问题汇总">
+    <section class="collection-head small geopattern" data-pattern-id="CSS知识点汇总">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">CSS常见面试问题汇总</h1>
+        <h1 class="collection-header">CSS知识点汇总</h1>
         <div class="collection-info">
           
           <span class="meta-info">
@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共2949字,阅读全文约需10分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共2938字,阅读全文约需10分钟</span>
         </div>
       </div>
     </div>
@@ -140,14 +140,14 @@
     <blockquote>
       <blockquote>
         <blockquote>
-          <p>IE浏览器：Trident内核，也称为IE内核
-Chrome浏览器：Webkit内核，现在是Blink内核
-Firefox浏览器：Gecko内核，俗称Firefox内核
-Safari浏览器：Webkit内核
-Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；
-360浏览器：IE+Chrome双内核
-猎豹浏览器：IE+Chrome双内核
-百度浏览器：IE内核
+          <p>IE浏览器：Trident内核，也称为IE内核 <br />
+Chrome浏览器：Webkit内核，现在是Blink内核 <br />
+Firefox浏览器：Gecko内核，俗称Firefox内核 <br />
+Safari浏览器：Webkit内核 <br />
+Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核 <br />
+360浏览器：IE+Chrome双内核 <br />
+猎豹浏览器：IE+Chrome双内核 <br />
+百度浏览器：IE内核 <br />
 QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
         </blockquote>
       </blockquote>
@@ -172,7 +172,7 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
   </li>
   <li>CSS Hack：CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准,使用hacker 可以把浏览器分为3类：ie6 ；ie7和遨游；其他（ie8 chrome ff safari opera等）），以达到应用不同的CSS样式的目的。
     <ul>
-      <li>CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器:
+      <li>CSS属性Hack、CSS选择符Hack以及IE条件注释Hack:
         <ul>
           <li>属性级Hack：比如IE6能识别下划线“<em>”和星号“*”，IE7能识别星号“*”，但不能识别下划线”</em> ”，而firefox两个都不能认识。</li>
           <li>选择符级Hack：比如IE6能识别<em>html .class{}，IE7能识别</em>+html .class{}或者*:first-child+html .class{}。</li>
@@ -180,15 +180,14 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
  PS：条件注释只有在IE浏览器下才能执行，这个代码在非IE浏览下被当做注释视而不见。可以通过IE条件注释载入不同的CSS、JS、HTML和服务器代码等。</li>
         </ul>
       </li>
-      <li>ie6认识的hacker 是下划线_ 和星号 *</li>
-      <li>ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
+      <li>示例：ie6认识的hacker 是下划线_ 和星号 *；ie7 遨游认识的hacker是星号 * （!important也算是hack的一种）
         <ul>
           <li>比如这样一个css设置
             <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">div</span> <span class="p">{</span>
     <span class="nl">height</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
     <span class="err">*</span><span class="nl">height</span><span class="p">:</span><span class="m">200px</span><span class="p">;</span>
     <span class="py">_height</span><span class="p">:</span><span class="m">100px</span><span class="p">;</span>
-    <span class="p">}</span>
+ <span class="p">}</span>
 </code></pre></div>            </div>
             <p>ie6浏览器在读到 height:300px的时候会认为高时300px；继续往下读，他也认识<em>heihgt， 所以当ie6读到</em>height:200px的时候会覆盖掉前一条的相冲突设置，认为高度是200px。继续往下读，ie6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px； ie7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px； 剩下的浏览器只认识第一个height:300px;所以他们会把高度解析为300px。</p>
           </li>
