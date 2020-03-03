@@ -12,7 +12,7 @@ permalink: /links/
 
 {% for link in site.data.links %}
   {% if link.src == 'www' %}
-* [{{ link.name }}]({{ link.url }})
+* [{{ link.name }}]({{ link.url }}){:target='_blank'}
   {% endif %}
 {% endfor %}
 
@@ -20,6 +20,6 @@ permalink: /links/
 
 {% for link in site.data.links %}
   {% if link.src == 'life' %}
-* [{{ link.name }}]({{ link.url }})
+* [{{ link.name }}]({{ link.url }}){:target='_blank'}
   {% endif %}
 {% endfor %}
