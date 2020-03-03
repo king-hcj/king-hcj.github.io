@@ -1,3 +1,7 @@
+- name: InfoQ
+  url: https://www.infoq.cn
+  src: www
+
 - name: 前端进阶之道
   url: https://yuchengkai.cn
   src: www
