@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共2938字,阅读全文约需10分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共2944字,阅读全文约需10分钟</span>
         </div>
       </div>
     </div>
@@ -211,9 +211,16 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
       <li>CSS Modules， 就是说你永远不用担心命名太大众化而造成冲突太普通，只要用最有意义的名字就行了；stylelint 做CSS 代码检查；利用 calc() 和你所定义的分割方式来创建网格系统，无需传递大量参数等。</li>
     </ul>
   </li>
+  <li>使用框架和库</li>
   <li>万能清除浮动:给需要闭合的div加上class=”clearfix”即可
     <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">/* Clear Fix */</span> 
- <span class="nc">.clearfix</span><span class="nd">:after</span> <span class="p">{</span> <span class="nl">content</span><span class="p">:</span><span class="s1">"."</span><span class="p">;</span> <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span> <span class="nl">height</span><span class="p">:</span><span class="m">0</span><span class="p">;</span> <span class="nl">clear</span><span class="p">:</span><span class="nb">both</span><span class="p">;</span><span class="nl">visibility</span><span class="p">:</span><span class="nb">hidden</span><span class="p">;</span> <span class="p">}</span> 
+ <span class="nc">.clearfix</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span><span class="s1">"."</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">0</span><span class="p">;</span>
+    <span class="nl">clear</span><span class="p">:</span><span class="nb">both</span><span class="p">;</span>
+    <span class="nl">visibility</span><span class="p">:</span><span class="nb">hidden</span><span class="p">;</span>
+ <span class="p">}</span> 
  <span class="nc">.clearfix</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span><span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span> 
  <span class="c">/* Hide from IE Mac */</span> 
  <span class="nc">.clearfix</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;}</span> 

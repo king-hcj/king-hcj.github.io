@@ -71,11 +71,17 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
    - 利用从 Can I Use 网站获取的数据为 CSS 规则添加特定厂商的前缀。Autoprefixer 自动获取浏览器的流行度和能够支持的属性，并根据这些数据帮你自动为 CSS 规则添加前缀；
    - 将现代 CSS 语法转换成大多数浏览器都能理解的东西，根据你的目标浏览器或运行时环境来确定你需要的 polyfills，基于 cssdb 实现；
    - CSS Modules， 就是说你永远不用担心命名太大众化而造成冲突太普通，只要用最有意义的名字就行了；stylelint 做CSS 代码检查；利用 calc() 和你所定义的分割方式来创建网格系统，无需传递大量参数等。
-
+- 使用框架和库
 - 万能清除浮动:给需要闭合的div加上class=”clearfix”即可
    ```css
    /* Clear Fix */ 
-   .clearfix:after { content:"."; display:block; height:0; clear:both;visibility:hidden; } 
+   .clearfix:after {
+      content:".";
+      display:block;
+      height:0;
+      clear:both;
+      visibility:hidden;
+   } 
    .clearfix { display:inline-block; } 
    /* Hide from IE Mac */ 
    .clearfix {display:block;} 
