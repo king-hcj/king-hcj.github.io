@@ -12,6 +12,9 @@ keywords: 前端工程化，原理与实践
 ### webpack功能模块设计
 ![webpack功能模块设计]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/webpack.jpeg?raw=true)   
 
+### webpack流程
+![webpack流程]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/webpack.png?raw=true)   
+
 ### webpack热更新原理分析
 ![webpack热更新原理]({{site.url}}{{site.baseurl}}/images/posts/frontEndEngineering/HMR.png?raw=true)   
 
