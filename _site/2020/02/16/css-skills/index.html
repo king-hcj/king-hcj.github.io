@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共2944字,阅读全文约需10分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共2940字,阅读全文约需10分钟</span>
         </div>
       </div>
     </div>
@@ -199,11 +199,11 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
   <li>事件绑定和AJAX：
     <ul>
       <li>IE:dom.attachEvent();其他浏览器：dom.addEventListener()。</li>
-      <li>IE：ActiveXObject；其他：xmlHttpReuest；同上。</li>
+      <li>IE：ActiveXObject；其他：xmlHttpReuest；</li>
       <li>所以，如果项目中涉及到这些，应该会有一个封装的公共方法来进行处理；</li>
     </ul>
   </li>
-  <li>polyfills：可能不哦导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5薪语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）</li>
+  <li>polyfills：可能会导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5新语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）</li>
   <li>PostCSS：
     <ul>
       <li>利用从 Can I Use 网站获取的数据为 CSS 规则添加特定厂商的前缀。Autoprefixer 自动获取浏览器的流行度和能够支持的属性，并根据这些数据帮你自动为 CSS 规则添加前缀；</li>

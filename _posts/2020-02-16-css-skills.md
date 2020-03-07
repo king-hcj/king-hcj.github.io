@@ -64,9 +64,9 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
 
 - 事件绑定和AJAX：
    - IE:dom.attachEvent();其他浏览器：dom.addEventListener()。
-   - IE：ActiveXObject；其他：xmlHttpReuest；同上。
+   - IE：ActiveXObject；其他：xmlHttpReuest；
    - 所以，如果项目中涉及到这些，应该会有一个封装的公共方法来进行处理；
-- polyfills：可能不哦导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5薪语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）
+- polyfills：可能会导致包比较大，可以用动态倒入polyfills的技术方案（判断浏览器UA）；（HTML5新语义元素；客户端存储；地理位置；onhashchange 和 pushState；SVG 和 Canvas 图像，HTML5视频，ECMAScript 5 甚至 WebWorkers 特性等）
 - PostCSS：
    - 利用从 Can I Use 网站获取的数据为 CSS 规则添加特定厂商的前缀。Autoprefixer 自动获取浏览器的流行度和能够支持的属性，并根据这些数据帮你自动为 CSS 规则添加前缀；
    - 将现代 CSS 语法转换成大多数浏览器都能理解的东西，根据你的目标浏览器或运行时环境来确定你需要的 polyfills，基于 cssdb 实现；
