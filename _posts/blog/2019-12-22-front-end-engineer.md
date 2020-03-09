@@ -17,6 +17,8 @@ keywords: 前端学习之路
    - 《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)[开源链接](https://git-scm.com/book/zh/v2)
    - 《深入React技术栈》 —— 陈屹（未读完）
    - 《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)
+   - ===================2020========================
+   - 《深入浅出Node.js》——朴灵(在看)
 
 
 ## 慕课网
@@ -55,33 +57,44 @@ keywords: 前端学习之路
    - [Taro多端框架开发外卖首页](https://www.imooc.com/learn/1084)(免费)
    - [掌握Taro多端框架 快速上手小程序H5开发](https://coding.imooc.com/class/306.html)
    - [《微信小游戏入门与实战 刷爆朋友圈》](https://coding.imooc.com/class/183.html)
+   - ===================2020========================
+   - [计算机基础——更适合程序员的编程必备基础知识](https://coding.imooc.com/class/355.html){:target='_blank'}(在看)
+   - [React源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='_blank'}(在看)
+   - [微信小程序入门与实战](https://coding.imooc.com/learn/list/424.html){:target='_blank'}(在看)
 
 
 ### 慕课专栏
-   - [《从0开始学爬虫》](https://www.imooc.com/read/34)
-   - [《零基础学透TypeScript》](https://www.imooc.com/read/35)
+   - [《从0开始学爬虫》](https://www.imooc.com/read/34){:target='_blank'}
+   - [《零基础学透TypeScript》](https://www.imooc.com/read/35){:target='_blank'}
+   - ===================2020========================
 
 ## 极客时间
 ### 极客时间专栏
-   - [《浏览器工作原理与实践》](https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse)
-   - [《重学前端》](https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse)
-   - [《JavaScript核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse)(在看)
-   - [《左耳听风》](https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse)(在看)
+   - [《浏览器工作原理与实践》](https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
+   - [《重学前端》](https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
+   - [《左耳听风》](https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}(在看)
+   - ===================2020========================
+   - [《JavaScript核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
+   - **[透视HTTP协议](https://time.geekbang.org/column/intro/189){:target='_blank'}**
+   - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}**(在看)
 
 ### 极客时间视频
-   - [《玩转Git三剑客》](https://time.geekbang.org/course/intro/145)
+   - [《玩转Git三剑客》](https://time.geekbang.org/course/intro/145){:target='_blank'}
+   - ===================2020========================
+   - [玩转webpack-全方位掌握webpack核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='_blank'}
+   - [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='_blank'}(在看)
 
 ## 掘金
 ### 掘金小册
-   - [《使用 webpack 定制前端开发环境》](https://juejin.im/book/5a6abad5518825733c144469)
-   - [《你不知道的Chrome调试技巧》](https://juejin.im/book/5c526902e51d4543805ef35e)
-   - [《用npm script打造超溜的前端工作流》](https://juejin.im/book/5a1212bc51882531ea64df07)
-   - [《前端性能优化原理与实践》](https://juejin.im/book/5b936540f265da0a9624b04b)
-   - [《前端面试之道》](https://juejin.im/book/5bdc715fe51d454e755f75ef)(在看)
+   - [《使用 webpack 定制前端开发环境》](https://juejin.im/book/5a6abad5518825733c144469){:target='_blank'}
+   - [《你不知道的Chrome调试技巧》](https://juejin.im/book/5c526902e51d4543805ef35e){:target='_blank'}
+   - [《用npm script打造超溜的前端工作流》](https://juejin.im/book/5a1212bc51882531ea64df07){:target='_blank'}
+   - [《前端性能优化原理与实践》](https://juejin.im/book/5b936540f265da0a9624b04b){:target='_blank'}
+   - [《前端面试之道》](https://juejin.im/book/5bdc715fe51d454e755f75ef){:target='_blank'}(在看)
 
 ## 51CTO
-   - [Vue. js2.0之全家桶系列](https://edu.51cto.com/course/10543.html)
+   - [Vue. js2.0之全家桶系列](https://edu.51cto.com/course/10543.html){:target='_blank'}
 
 ## 其他经典
-   - [前端进阶之道](https://yuchengkai.cn/)
-   - [掘金](https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections)、知乎、思否、微信公众号文章、慕课手记等
+   - [前端进阶之道](https://yuchengkai.cn/){:target='_blank'}
+   - [掘金](https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections){:target='_blank'}、知乎、思否、微信公众号文章、慕课手记等
