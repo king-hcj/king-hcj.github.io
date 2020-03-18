@@ -28,10 +28,12 @@ content!!!
 这是要展示的详细内容，或者代码块等
 </details>
 
-## Markdown超链接在新窗口打开：
+## Markdown超链接在新窗口打开
    ```js
    [example](https://king-hcj.github.io){:target='_blank'}
    ```
+## Markdown常用符号及排版
+[Markdown常用符号及排版](https://blog.csdn.net/u013914471/article/details/82973812){:target='_blank'}
 
 ## 在表格单元格里换行
 
