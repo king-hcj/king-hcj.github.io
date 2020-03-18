@@ -16,7 +16,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://king-hcj.github.io/){:target='_blank'}**
+**[在线预览 &rarr;](https://king-hcj.github.io/)**
 
 ## Fork 指南
 
