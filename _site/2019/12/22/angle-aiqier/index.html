@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共10607字,阅读全文约需40分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共11134字,阅读全文约需42分钟</span>
         </div>
       </div>
     </div>
@@ -722,6 +722,35 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
   <li>React行内calc的使用：
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="dl">'</span><span class="s1">calc(100% - 80px)</span><span class="dl">'</span> <span class="p">}</span> <span class="p">}</span>
 </code></pre></div>    </div>
+  </li>
+  <li>AntD Table列配置相关问题
+    <ul>
+      <li>有固定列，因表头各列字数不等，头部不对齐问题，可固定表头高度：给Column添加 className: styles[‘custom_height’]
+        <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">{</span>
+ <span class="nl">key</span><span class="p">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">fieldName</span><span class="p">,</span>
+ <span class="nx">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Title</span><span class="dl">'</span><span class="p">,</span>
+ <span class="nx">width</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+ <span class="nx">className</span><span class="p">:</span> <span class="nx">styles</span><span class="p">[</span><span class="dl">'</span><span class="s1">custom_height</span><span class="dl">'</span><span class="p">],</span>
+ <span class="nx">dataIndex</span><span class="p">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">fieldName</span><span class="p">,</span>
+ <span class="nx">sorter</span><span class="p">:</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="p">[</span><span class="nx">item</span><span class="p">.</span><span class="nx">fieldName</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="nx">item</span><span class="p">.</span><span class="nx">fieldName</span><span class="p">],</span>
+ <span class="nx">sortOrder</span><span class="p">:</span> <span class="nx">sortedInfo</span><span class="p">.</span><span class="nx">columnKey</span> <span class="o">===</span> <span class="nx">item</span><span class="p">.</span><span class="nx">fieldName</span> <span class="o">&amp;&amp;</span> <span class="nx">sortedInfo</span><span class="p">.</span><span class="nx">order</span><span class="p">,</span>
+ <span class="p">}</span>
+</code></pre></div>        </div>
+        <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//自定义头部高度</span>
+ <span class="nt">th</span><span class="nc">.custom_height</span> <span class="p">{</span>
+ <span class="nl">height</span><span class="p">:</span> <span class="m">60px</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>自定义某些列颜色：条件判断，给某些column添加className：styles[‘custom_bg_color’]
+        <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">th</span><span class="nc">.custom_bg_color</span><span class="o">,</span>
+ <span class="nt">td</span><span class="nc">.custom_bg_color</span> <span class="p">{</span>
+ <span class="nl">color</span><span class="p">:</span> <span class="mh">#ffffff</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+ <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#f85a27</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
   </li>
 </ol>
 

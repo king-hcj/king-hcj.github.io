@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共5176字,阅读全文约需17分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共5681字,阅读全文约需18分钟</span>
         </div>
       </div>
     </div>
@@ -347,6 +347,32 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
   <li><a href="https://open.taobao.com/doc.htm?docId=105545&amp;docType=1" target="_blank">QAP介绍</a></li>
   <li><a href="http://xiaoqiang730730.github.io/2018/03/10/qap-%E5%8C%85%E5%A4%A7%E5%B0%8F%E4%BC%98%E5%8C%96/" target="_blank">qap_包大小优化</a></li>
 </ul>
+
+<h3 id="快速排序">快速排序</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 实现一个数组排序</span>
+<span class="kd">function</span> <span class="nx">sort</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 思路：分治</span>
+  <span class="c1">// 1、随机取一个位置，以此为基准点，按照大小将数据分为左右两部分</span>
+  <span class="c1">// 2、分别对左右进行相应的排序</span>
+  <span class="kd">let</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="c1">// 数组长度缓存</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">len</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="p">)</span> <span class="k">return</span> <span class="nx">nums</span>
+  <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="c1">// 取基准点</span>
+  <span class="kd">let</span> <span class="nx">indexValue</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="c1">// 基准值</span>
+  <span class="kd">let</span> <span class="nx">left</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">//左</span>
+  <span class="kd">let</span> <span class="nx">right</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">//右</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">indexValue</span><span class="p">){</span><span class="c1">//排序</span>
+      <span class="nx">left</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">!==</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">right</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">sort</span><span class="p">(</span><span class="nx">left</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="nx">indexValue</span><span class="p">,</span> <span class="nx">sort</span><span class="p">(</span><span class="nx">right</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sort</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sort</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sort</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+</code></pre></div></div>
 
     </article>
     <div class="share">

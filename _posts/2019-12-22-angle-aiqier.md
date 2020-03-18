@@ -495,6 +495,34 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 style={ { width: 'calc(100% - 80px)' } }
 ```
 
+5. AntD Table列配置相关问题
+   - 有固定列，因表头各列字数不等，头部不对齐问题，可固定表头高度：给Column添加 className: styles['custom_height']
+   ```js
+    {
+      key: item.fieldName,
+      title: 'Title',
+      width: 120,
+      className: styles['custom_height'],
+      dataIndex: item.fieldName,
+      sorter: (a, b) => a[item.fieldName] - b[item.fieldName],
+      sortOrder: sortedInfo.columnKey === item.fieldName && sortedInfo.order,
+    }
+   ```
+   ```scss
+    //自定义头部高度
+    th.custom_height {
+      height: 60px !important;
+    }
+   ```
+   - 自定义某些列颜色：条件判断，给某些column添加className：styles['custom_bg_color']
+   ```scss
+    th.custom_bg_color,
+    td.custom_bg_color {
+      color: #ffffff !important;
+      background-color: #f85a27 !important;
+    }
+   ```
+
 ## 其他
 1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
     ```javascript
