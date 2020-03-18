@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-18T17:24:42+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-18T17:41:16+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -978,7 +978,16 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
 &lt;h1 id=&quot;2020年个人okr关注点&quot;&gt;2020年个人OKR关注点&lt;/h1&gt;
 &lt;h3 id=&quot;目标&quot;&gt;目标：&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;成为一名具有&lt;strong&gt;全自主开发能力&lt;/strong&gt;的前端工程师，拥有进入&lt;strong&gt;业界较知名公司&lt;/strong&gt;的能力&lt;/li&gt;
+  &lt;li&gt;成为一名具有&lt;strong&gt;全自主开发能力&lt;/strong&gt;的前端工程师，拥有进入&lt;strong&gt;业界较知名公司&lt;/strong&gt;的能力
+    &lt;blockquote&gt;
+      &lt;blockquote&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;&lt;a href=&quot;https://finance.sina.com.cn/chanjing/gsnews/2019-08-14/doc-ihytcern0692309.shtml&quot; target=&quot;_blank&quot;&gt;2019年中国互联网企业100强揭晓&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;http://www.miit.gov.cn/n1146290/n1146402/n7039597/c7260777/content.html&quot; target=&quot;_blank&quot;&gt;2019年中国互联网企业100强发布会在京召开&lt;/a&gt;&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
   &lt;li&gt;在不降低公司标准的前提下，薪资增长20%&lt;/li&gt;
   &lt;li&gt;潜心修得双全法，&lt;strong&gt;不负前端不负卿&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
