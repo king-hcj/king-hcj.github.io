@@ -1,3 +1,7 @@
+- name: LeetCode
+  url: https://leetcode-cn.com/u/king-hcj-3
+  src: www
+
 - name: InfoQ
   url: https://www.infoq.cn
   src: www
