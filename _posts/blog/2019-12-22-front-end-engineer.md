@@ -113,5 +113,7 @@ keywords: 前端学习之路
 ### 掘金
 #### 掘金小册
 
+### LeetCode
+   - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='_blank'}
 ### 其他经典
    

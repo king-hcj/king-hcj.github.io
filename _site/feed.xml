@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-22T18:25:31+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-22T18:28:46+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -1959,4 +1959,9 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 &lt;h3 id=&quot;掘金-1&quot;&gt;掘金&lt;/h3&gt;
 &lt;h4 id=&quot;掘金小册-1&quot;&gt;掘金小册&lt;/h4&gt;
 
-&lt;h3 id=&quot;其他经典-1&quot;&gt;其他经典&lt;/h3&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry></feed>
+&lt;h3 id=&quot;leetcode&quot;&gt;LeetCode&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode-cn.com/u/king-hcj-3&quot; target=&quot;_blank&quot;&gt;LeetCode&lt;/a&gt;
+    &lt;h3 id=&quot;其他经典-1&quot;&gt;其他经典&lt;/h3&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry></feed>
