@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-20T16:30:38+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-22T18:25:31+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -1832,9 +1832,10 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
       &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;主题选择&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">前端学习之路</title><link href="http://localhost:5001/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:5001/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:5001/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">前端学习之路【学习途径、资料、书籍等】</title><link href="http://localhost:5001/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路【学习途径、资料、书籍等】" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:5001/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:5001/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
 
-&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
+&lt;h2 id=&quot;2019年及以前&quot;&gt;2019年及以前&lt;/h2&gt;
+&lt;h3 id=&quot;书籍&quot;&gt;书籍&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;《深入理解ES6》 —— Nicholas C. Zakas&lt;/li&gt;
   &lt;li&gt;《React进阶之路》 —— 徐超&lt;/li&gt;
@@ -1844,12 +1845,10 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;li&gt;《精通Git(第二版)》 —— Scott Chacon / Ben Straub(前两章)&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot;&gt;开源链接&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;《深入React技术栈》 —— 陈屹（未读完）&lt;/li&gt;
   &lt;li&gt;《React全栈(Redux+Flux+webpack+Babel整合开发)》 —— 张轩 / 杨寒星(差两章)&lt;/li&gt;
-  &lt;li&gt;===================2020========================&lt;/li&gt;
-  &lt;li&gt;《深入浅出Node.js》——朴灵(在看)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;慕课网&quot;&gt;慕课网&lt;/h2&gt;
-&lt;h3 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h3&gt;
+&lt;h3 id=&quot;慕课网&quot;&gt;慕课网&lt;/h3&gt;
+&lt;h4 id=&quot;慕课视频课程&quot;&gt;慕课视频课程&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/225.html&quot;&gt;HTTP协议原理+实践  Web开发工程师必学&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/190.html&quot;&gt;揭秘一线互联网企业 前端JavaScript高级面试&lt;/a&gt;(有图片总结)&lt;/li&gt;
@@ -1885,41 +1884,29 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/learn/1084&quot;&gt;Taro多端框架开发外卖首页&lt;/a&gt;(免费)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/306.html&quot;&gt;掌握Taro多端框架 快速上手小程序H5开发&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/183.html&quot;&gt;《微信小游戏入门与实战 刷爆朋友圈》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;===================2020========================&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/355.html&quot; target=&quot;_blank&quot;&gt;计算机基础——更适合程序员的编程必备基础知识&lt;/a&gt;(在看)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/309.html&quot; target=&quot;_blank&quot;&gt;React源码深度解析 高级前端工程师必备技能&lt;/a&gt;(在看)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://coding.imooc.com/learn/list/424.html&quot; target=&quot;_blank&quot;&gt;微信小程序入门与实战&lt;/a&gt;【在看，拥有基本的小程序开发能力】&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h3&gt;
+&lt;h4 id=&quot;慕课专栏&quot;&gt;慕课专栏&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/34&quot; target=&quot;_blank&quot;&gt;《从0开始学爬虫》&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.imooc.com/read/35&quot; target=&quot;_blank&quot;&gt;《零基础学透TypeScript》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;===================2020========================&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;极客时间&quot;&gt;极客时间&lt;/h2&gt;
-&lt;h3 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h3&gt;
+&lt;h3 id=&quot;极客时间&quot;&gt;极客时间&lt;/h3&gt;
+&lt;h4 id=&quot;极客时间专栏&quot;&gt;极客时间专栏&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《浏览器工作原理与实践》&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《重学前端》&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《左耳听风》&lt;/a&gt;(在看)&lt;/li&gt;
-  &lt;li&gt;===================2020========================&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/189&quot; target=&quot;_blank&quot;&gt;透视HTTP协议&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/219&quot; target=&quot;_blank&quot;&gt;编译原理之美&lt;/a&gt;&lt;/strong&gt;(在看)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h3&gt;
+&lt;h4 id=&quot;极客时间视频&quot;&gt;极客时间视频&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/145&quot; target=&quot;_blank&quot;&gt;《玩转Git三剑客》&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;===================2020========================&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/190&quot; target=&quot;_blank&quot;&gt;玩转webpack-全方位掌握webpack核心技能和优化策略&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/257&quot; target=&quot;_blank&quot;&gt;前端全链路性能优化实战&lt;/a&gt;(在看)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;掘金&quot;&gt;掘金&lt;/h2&gt;
-&lt;h3 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h3&gt;
+&lt;h3 id=&quot;掘金&quot;&gt;掘金&lt;/h3&gt;
+&lt;h4 id=&quot;掘金小册&quot;&gt;掘金小册&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5a6abad5518825733c144469&quot; target=&quot;_blank&quot;&gt;《使用 webpack 定制前端开发环境》&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5c526902e51d4543805ef35e&quot; target=&quot;_blank&quot;&gt;《你不知道的Chrome调试技巧》&lt;/a&gt;&lt;/li&gt;
@@ -1928,13 +1915,48 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;li&gt;&lt;a href=&quot;https://juejin.im/book/5bdc715fe51d454e755f75ef&quot; target=&quot;_blank&quot;&gt;《前端面试之道》&lt;/a&gt;(在看)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;51cto&quot;&gt;51CTO&lt;/h2&gt;
+&lt;h3 id=&quot;51cto&quot;&gt;51CTO&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://edu.51cto.com/course/10543.html&quot; target=&quot;_blank&quot;&gt;Vue. js2.0之全家桶系列&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;其他经典&quot;&gt;其他经典&lt;/h2&gt;
+&lt;h3 id=&quot;其他经典&quot;&gt;其他经典&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://yuchengkai.cn/&quot; target=&quot;_blank&quot;&gt;前端进阶之道&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections&quot; target=&quot;_blank&quot;&gt;掘金&lt;/a&gt;、知乎、思否、微信公众号文章、慕课手记等&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry></feed>
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2020年&quot;&gt;2020年&lt;/h2&gt;
+&lt;h3 id=&quot;书籍-1&quot;&gt;书籍&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;《深入浅出Node.js》——朴灵(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;慕课网-1&quot;&gt;慕课网&lt;/h3&gt;
+&lt;h4 id=&quot;慕课视频课程-1&quot;&gt;慕课视频课程&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/355.html&quot; target=&quot;_blank&quot;&gt;计算机基础——更适合程序员的编程必备基础知识&lt;/a&gt;(在看)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/309.html&quot; target=&quot;_blank&quot;&gt;React源码深度解析 高级前端工程师必备技能&lt;/a&gt;(在看)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://coding.imooc.com/learn/list/424.html&quot; target=&quot;_blank&quot;&gt;微信小程序入门与实战&lt;/a&gt;【拥有基本的小程序开发能力，非框架】&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;慕课专栏-1&quot;&gt;慕课专栏&lt;/h4&gt;
+
+&lt;h3 id=&quot;极客时间-1&quot;&gt;极客时间&lt;/h3&gt;
+&lt;h4 id=&quot;极客时间专栏-1&quot;&gt;极客时间专栏&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/189&quot; target=&quot;_blank&quot;&gt;透视HTTP协议&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/219&quot; target=&quot;_blank&quot;&gt;编译原理之美&lt;/a&gt;&lt;/strong&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;极客时间视频-1&quot;&gt;极客时间视频&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/190&quot; target=&quot;_blank&quot;&gt;玩转webpack-全方位掌握webpack核心技能和优化策略&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/course/intro/257&quot; target=&quot;_blank&quot;&gt;前端全链路性能优化实战&lt;/a&gt;(在看)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;掘金-1&quot;&gt;掘金&lt;/h3&gt;
+&lt;h4 id=&quot;掘金小册-1&quot;&gt;掘金小册&lt;/h4&gt;
+
+&lt;h3 id=&quot;其他经典-1&quot;&gt;其他经典&lt;/h3&gt;</content><author><name>Cheney King</name></author><summary type="html">  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。</summary></entry></feed>
