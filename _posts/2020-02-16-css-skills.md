@@ -91,4 +91,4 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
 
 ## 移动端适配
 >>  参考：[一篇搞定移动端适配-公众号链接](https://mp.weixin.qq.com/s/lM65luoAeV7RZTIYFCpVZw){:target='_blank'}   
-[一篇搞定移动端适配-掘金链接](https://juejin.im/post/5e6caf55e51d4526ff026a71){:target='_blank'}
+[面试官：你了解过移动端适配吗？-掘金链接](https://juejin.im/post/5e6caf55e51d4526ff026a71){:target='_blank'}
