@@ -22,22 +22,22 @@ keywords: 前端学习之路
 
 ### 慕课网
 #### 慕课视频课程
-   - [HTTP协议原理+实践  Web开发工程师必学](https://coding.imooc.com/class/225.html)
-   - [揭秘一线互联网企业 前端JavaScript高级面试](https://coding.imooc.com/class/190.html)(有图片总结)
+   - [HTTP协议原理+实践  Web开发工程师必学](https://coding.imooc.com/class/225.html){:target='_blank'}
+   - [揭秘一线互联网企业 前端JavaScript高级面试](https://coding.imooc.com/class/190.html){:target='_blank'}(有图片总结)
    - Web攻城狮培养计划之进击JavaScript核心视频课程（[见网盘](https://pan.baidu.com/disk/home#/all?vmode=list&path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2FWeb%E6%94%BB%E5%9F%8E%E7%8B%AE%E5%9F%B9%E5%85%BB%E8%AE%A1%E5%88%92%E4%B9%8B%E8%BF%9B%E5%87%BBJavaScript%E6%A0%B8%E5%BF%83%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B)）
-   - [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/255.html)
+   - [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/255.html){:target='_blank'}
    - ES6零基础教学解析彩票项目(有图片总结)
    - [《React16.4开发简书项目-从零基础入门到实战》](https://coding.imooc.com/class/229.html)（有图片总结）
-   - [React全家桶+AntD 共享单车后台管理系统开发](https://coding.imooc.com/class/236.html)
+   - [React全家桶+AntD 共享单车后台管理系统开发](https://coding.imooc.com/class/236.html){:target='_blank'}
    - Redux+react+Router+Node.js全栈开发([见网盘](https://pan.baidu.com/disk/home#/all?vmode=list&path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E5%89%8D%E7%AB%AF%E7%B2%BE%E5%8D%8E%E8%A7%86%E9%A2%91%2F%E2%9C%AA%CF%89%E2%9C%AA%E6%9F%90%E8%AF%BE%E7%BD%91Redux%2BReact%20Router%2BNode.js%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91))
    - React全栈 + 服务器渲染（ssr）打造社区webapp(网盘)
    - [React16+React-Router4 从零打造企业级电商后台管理系统](https://coding.imooc.com/class/179.html)
-   - [React劲爆新特性Hooks 重构去哪儿网火车票PWA](https://coding.imooc.com/class/348.html)
+   - [React劲爆新特性Hooks 重构去哪儿网火车票PWA](https://coding.imooc.com/class/348.html){:target='_blank'}
    - [React16.8+Next.js+Koa2开发Github全栈项目](https://coding.imooc.com/class/334.html)(只看了第三章)
-   - [从基础到实战 手把手带你掌握新版Webpack4.0](https://coding.imooc.com/class/316.html)
+   - **[从基础到实战 手把手带你掌握新版Webpack4.0](https://coding.imooc.com/class/316.html){:target='_blank'}【入门推荐】**
    - 四大维度解锁 Webpack 3.0 前端工程化(网盘)
-   - [《Node.js入门到企业Web开发中的应用》](https://coding.imooc.com/class/146.html)
-   - [《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》](https://coding.imooc.com/class/320.html)
+   - [《Node.js入门到企业Web开发中的应用》](https://coding.imooc.com/class/146.html){:target='_blank'}
+   - [《Node.js 从零开发 web server博客项目 前端晋升全栈工程师必备》](https://coding.imooc.com/class/320.html){:target='_blank'}
    - [ReactNative入门与进阶](https://www.imooc.com/learn/808)(免费)
    - [新版React Native从入门到实战 打造高质量上线App](https://coding.imooc.com/class/304.html)(未看完)
    - [Yahoo军规](https://www.imooc.com/learn/50)(免费)
@@ -64,12 +64,12 @@ keywords: 前端学习之路
 
 ### 极客时间
 #### 极客时间专栏
-   - [《浏览器工作原理与实践》](https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
+   - **[《浏览器工作原理与实践》](https://time.geekbang.org/column/intro/216?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}**
    - [《重学前端》](https://time.geekbang.org/column/intro/154?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
    - [《左耳听风》](https://time.geekbang.org/column/intro/48?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}(在看)
 
 #### 极客时间视频
-   - [《玩转Git三剑客》](https://time.geekbang.org/course/intro/145){:target='_blank'}
+   - [《玩转Git三剑客》](https://time.geekbang.org/course/intro/145){:target='_blank'}【git使用及原理的深入解读】
 
 ### 掘金
 #### 掘金小册
@@ -103,8 +103,8 @@ keywords: 前端学习之路
 ### 极客时间
 #### 极客时间专栏
    - [《JavaScript核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
-   - **[透视HTTP协议](https://time.geekbang.org/column/intro/189){:target='_blank'}**
-   - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}**(在看)
+   - **[透视HTTP协议](https://time.geekbang.org/column/intro/189){:target='_blank'}【全方位理解HTTP及其继承者】**
+   - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}【在看，值得再看至少一遍】**
 
 #### 极客时间视频
    - [玩转webpack-全方位掌握webpack核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='_blank'}
