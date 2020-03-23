@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-22T18:28:46+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-23T12:42:25+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -153,7 +153,14 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
  &lt;span class=&quot;c&quot;&gt;/* end of clearfix */&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Cheney King</name></author><summary type="html">汇集整理常见的CSS知识点，以供参考复习阅读。</summary></entry><entry><title type="html">前端错误处理</title><link href="http://localhost:5001/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:5001/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;移动端适配&quot;&gt;移动端适配&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;参考：&lt;a href=&quot;https://mp.weixin.qq.com/s/lM65luoAeV7RZTIYFCpVZw&quot; target=&quot;_blank&quot;&gt;一篇搞定移动端适配&lt;/a&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;</content><author><name>Cheney King</name></author><summary type="html">汇集整理常见的CSS知识点，以供参考复习阅读。</summary></entry><entry><title type="html">前端错误处理</title><link href="http://localhost:5001/2020/01/14/error-handling/" rel="alternate" type="text/html" title="前端错误处理" /><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/14/error-handling</id><content type="html" xml:base="http://localhost:5001/2020/01/14/error-handling/">&lt;p&gt;  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。&lt;/p&gt;
 
 &lt;h3 id=&quot;问题引入&quot;&gt;问题引入&lt;/h3&gt;
 &lt;p&gt;  当页面已有一个可拖拽组件，打开另一个时，react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’&lt;/p&gt;

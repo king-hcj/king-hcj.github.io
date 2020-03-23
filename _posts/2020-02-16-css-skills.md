@@ -88,3 +88,6 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
    /* End hide from IE Mac */ 
    /* end of clearfix */
    ```
+
+## 移动端适配
+>>  参考：[一篇搞定移动端适配](https://mp.weixin.qq.com/s/lM65luoAeV7RZTIYFCpVZw){:target='_blank'}
