@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS知识点汇总
-categories: Comprehensive
+categories: CSS
 description: css常见面试问题汇总
 keywords: css
 ---

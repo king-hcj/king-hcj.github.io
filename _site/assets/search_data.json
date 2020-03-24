@@ -118,7 +118,7 @@
   
     {
       "title"    : "JS技巧技法总结——闭包原理、数组展平、前端语音、Proxy 数据绑定和监听、计数器",
-      "category" : "Comprehensive",
+      "category" : "JavaScript",
       
       "url"      : "http://localhost:5001/2019/08/08/js-skills/"
     } ,
@@ -195,7 +195,7 @@
   
     {
       "title"    : "CSS知识点汇总",
-      "category" : "Comprehensive",
+      "category" : "CSS",
       
       "url"      : "http://localhost:5001/2020/02/16/css-skills/"
     } ,
