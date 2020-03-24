@@ -33,7 +33,8 @@ content!!!
    [example](https://king-hcj.github.io){:target='_blank'}
    ```
 ## Markdown常用符号及排版
-[Markdown常用符号及排版](https://blog.csdn.net/u013914471/article/details/82973812){:target='_blank'}
+[Markdown常用符号及排版](https://blog.csdn.net/u013914471/article/details/82973812){:target='_blank'}   
+>>>文中提到的特殊符号语法，经测是无法展示的；正确展示方法是`&gamma;`而不是类似文中的`\gamma`；(&gamma;)
 
 ## 在表格单元格里换行
 

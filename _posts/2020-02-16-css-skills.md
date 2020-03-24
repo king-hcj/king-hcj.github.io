@@ -92,3 +92,38 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）
 ## 移动端适配
 >>  参考：[一篇搞定移动端适配-公众号链接](https://mp.weixin.qq.com/s/lM65luoAeV7RZTIYFCpVZw){:target='_blank'}   
 [面试官：你了解过移动端适配吗？-掘金链接](https://juejin.im/post/5e6caf55e51d4526ff026a71){:target='_blank'}
+
+## 使用CSS outline便捷查看元素的位置信息
+- 使用一个 CSS 技巧给所有元素加上 outline，这样就能迅速了解自己所需的元素位置信息，无须再选择元素查看了。
+   ```scss
+   html * {
+      outline: 1px solid red
+   }
+   ```
+   >> 这里没有使用 border 的原因是 border 会增加元素的大小但是 outline 不会。通过这个技巧不仅能帮助我们在开发中迅速了解元素所在的位置，还能帮助我们方便地查看任意网站的布局。
+
+- 通过一个开关来实现任意网页开启关闭outline
+   - Chrome右上角三个点&rArr;书签&rArr;书签管理器&rArr;右上角三个点&rArr;「添加新书签」;
+   - 名称随意，粘贴以下代码到网址中;
+   - 然后我们就可以在任意网站上点击刚才创建的书签，内部会判断是否存在调试的 style。存在的话就删除，不存在的话就添加，通过这种方式我们就能很方便的通过这个技巧查看任意网页的布局了。   
+   ```js
+      javascript: (function() {
+         var elements = document.body.getElementsByTagName('*');
+         var items = [];
+         for (var i = 0; i < elements.length; i++) {
+            if (elements[i].innerHTML.indexOf('html * { outline: 1px solid red }') != -1) {
+               items.push(elements[i]);
+            }
+         }
+         if (items.length > 0) {
+            for (var i = 0; i < items.length; i++) {
+               items[i].innerHTML = '';
+            }
+         } else {
+            document.body.innerHTML +=
+               '<style>html * { outline: 1px solid red }</style>';
+         }
+   })();
+   ```
+> 参考：[很好用的 UI 调试技巧](https://mp.weixin.qq.com/s/gNmMOqVf-296BKIT39Lu2A){:target='_blank'}   
+[css-layout-hack.js](https://gist.github.com/vcastroi/e0d296171842e74ad7d4eef7daf15df6){:target='_blank'}

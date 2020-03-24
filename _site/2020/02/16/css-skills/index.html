@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共2983字,阅读全文约需10分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共3764字,阅读全文约需13分钟</span>
         </div>
       </div>
     </div>
@@ -237,6 +237,51 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</p>
 <a href="https://juejin.im/post/5e6caf55e51d4526ff026a71" target="_blank">面试官：你了解过移动端适配吗？-掘金链接</a></p>
   </blockquote>
 </blockquote>
+
+<h2 id="使用css-outline便捷查看元素的位置信息">使用CSS outline便捷查看元素的位置信息</h2>
+<ul>
+  <li>使用一个 CSS 技巧给所有元素加上 outline，这样就能迅速了解自己所需的元素位置信息，无须再选择元素查看了。
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">html</span> <span class="o">*</span> <span class="p">{</span>
+    <span class="nl">outline</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">red</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+    <blockquote>
+      <blockquote>
+        <p>这里没有使用 border 的原因是 border 会增加元素的大小但是 outline 不会。通过这个技巧不仅能帮助我们在开发中迅速了解元素所在的位置，还能帮助我们方便地查看任意网站的布局。</p>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>通过一个开关来实现任意网页开启关闭outline
+    <ul>
+      <li>Chrome右上角三个点⇒书签⇒书签管理器⇒右上角三个点⇒「添加新书签」;</li>
+      <li>名称随意，粘贴以下代码到网址中;</li>
+      <li>然后我们就可以在任意网站上点击刚才创建的书签，内部会判断是否存在调试的 style。存在的话就删除，不存在的话就添加，通过这种方式我们就能很方便的通过这个技巧查看任意网页的布局了。
+        <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">javascript</span><span class="p">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">*</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">html * { outline: 1px solid red }</span><span class="dl">'</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+       <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+       <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+       <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span>
+          <span class="dl">'</span><span class="s1">&lt;style&gt;html * { outline: 1px solid red }&lt;/style&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">})();</span>
+</code></pre></div>        </div>
+        <blockquote>
+          <p>参考：<a href="https://mp.weixin.qq.com/s/gNmMOqVf-296BKIT39Lu2A" target="_blank">很好用的 UI 调试技巧</a> <br />
+<a href="https://gist.github.com/vcastroi/e0d296171842e74ad7d4eef7daf15df6" target="_blank">css-layout-hack.js</a></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
 
     </article>
     <div class="share">
