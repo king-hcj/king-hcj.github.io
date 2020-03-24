@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-24T10:43:08+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-24T11:52:41+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -176,6 +176,9 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
  所有浏览器都支持 outline 属性;outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用;轮廓线不会占据空间，也不一定是矩形。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;控制台⇒Elements⇒右侧Styles⇒右上角+号点击，添加上面的样式；&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;通过一个开关来实现任意网页开启关闭outline
     &lt;ul&gt;
@@ -2002,6 +2005,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&amp;amp;utm_source=app&amp;amp;utm_medium=articourse&quot; target=&quot;_blank&quot;&gt;《JavaScript核心原理解析》&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/189&quot; target=&quot;_blank&quot;&gt;透视HTTP协议&lt;/a&gt;【全方位理解HTTP及其继承者】&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/219&quot; target=&quot;_blank&quot;&gt;编译原理之美&lt;/a&gt;【在看，值得再看至少一遍】&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://time.geekbang.org/column/intro/49&quot; target=&quot;_blank&quot;&gt;朱赟的技术管理课&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;极客时间视频-1&quot;&gt;极客时间视频&lt;/h4&gt;
