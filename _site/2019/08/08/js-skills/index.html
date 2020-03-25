@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#JavaScript" title="JavaScript">JavaScript</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共5681字,阅读全文约需18分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共5702字,阅读全文约需18分钟</span>
         </div>
       </div>
     </div>
@@ -248,7 +248,11 @@ annyang has no dependencies, weighs just 2 KB, and is free to use and modify und
   <li>因为JavaScript是静态作用域的，所以它内部环境中需要的变量在编译时就确定了，运行时不会改变；</li>
   <li>因为JavaScript中，函数是一等公民，可以被调用，可以作为参数传递，可以赋值给变量，也可以作为函数返回值，所以它的运行时环境很容易变化；</li>
   <li>当函数作为另一个函数（外层函数）的返回值返回时，其外层函数中的变量已经从调用栈弹出，但是我们必须让内层函数可以访问到它需要的变量，因此运行时的环境和定义时的作用域之间就产生矛盾；</li>
-  <li>所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。(内层函数作为返回值赋值给其他变量以后，外层函数就结束了，但内层函数仍能访问原来外层函数的变量，也能访问全局变量。)</li>
+  <li>所以我们把内部环境中需要的变量，打包交给内层函数（闭包函数），它就可以随时访问这些变量了，就形成了闭包。(内层函数作为返回值赋值给其他变量以后，外层函数就结束了，但内层函数仍能访问原来外层函数的变量，也能访问全局变量。)
+    <blockquote>
+      <p>推荐阅读：<a href="https://time.geekbang.org/column/article/131317" target="_blank">闭包： 理解了原理，它就不反直觉了</a></p>
+    </blockquote>
+  </li>
 </ol>
 
 <h3 id="js函数柯里化">JS函数柯里化</h3>

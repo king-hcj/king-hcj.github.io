@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共11134字,阅读全文约需42分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共11298字,阅读全文约需42分钟</span>
         </div>
       </div>
     </div>
@@ -500,6 +500,11 @@
 <span class="nx">uploadFile</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">file</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">file</span><span class="p">)</span>
 <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">actions</span><span class="p">.</span><span class="nx">uploadCalcExcel</span><span class="p">(</span><span class="nx">uploadFile</span><span class="p">)</span>
 </code></pre></div>    </div>
+    <p>上传、下载进度条实现：</p>
+    <ul>
+      <li>通过axios的onDownloadProgress和onUploadProgress配置进度条</li>
+      <li>给原生XMLHttpRequest添加<code class="language-plaintext highlighter-rouge">xhr.addEventListener("progress",()=&gt;{}</code>监听</li>
+    </ul>
   </li>
   <li>Fetch请求可以直接在控制台调用
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">let</span> <span class="nx">content</span> <span class="o">=</span> <span class="p">{</span><span class="na">some</span><span class="p">:</span> <span class="dl">'</span><span class="s1">content</span><span class="dl">'</span><span class="p">}</span>
@@ -655,6 +660,9 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
   <li>在A节点的兄弟节点B的n级后代节点中触发A节点DOM上的click事件（如果要传参数，可以引入sessionStorage或者localStorage）：
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">Tools_FBA_Calculator</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">()</span>
 </code></pre></div>    </div>
+    <blockquote>
+      <p>备注：就算是使用React中的onClick绑定的事件，也可以通过<code class="language-plaintext highlighter-rouge">.click()</code>触发</p>
+    </blockquote>
   </li>
   <li>跨平台桌面应用：
     <ul>

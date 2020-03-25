@@ -308,6 +308,9 @@ const uploadFile = new FormData()
 uploadFile.append('file', this.state.file)
 this.props.actions.uploadCalcExcel(uploadFile)
 ```
+上传、下载进度条实现：
+   - 通过axios的onDownloadProgress和onUploadProgress配置进度条
+   - 给原生XMLHttpRequest添加`xhr.addEventListener("progress",()=>{}`监听
 
 8. Fetch请求可以直接在控制台调用
     ```javascript
@@ -432,6 +435,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     ```js
     document.getElementById('Tools_FBA_Calculator').click()
     ```
+    >备注：就算是使用React中的onClick绑定的事件，也可以通过`.click()`触发
 
 23. 跨平台桌面应用：
    - [Electron](https://electronjs.org/){:target='_blank'}
