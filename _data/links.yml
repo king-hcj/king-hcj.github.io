@@ -46,6 +46,10 @@
   url: https://king-hcj.github.io/Resume/
   src: life
 
+- name: 个人简介
+  url: https://king-hcj.github.io/introduce/
+  src: life
+
 - name: SpeedCoder
   url: http://www.speedcoder.net
   src: life
