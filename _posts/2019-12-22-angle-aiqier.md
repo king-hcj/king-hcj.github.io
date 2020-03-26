@@ -388,7 +388,7 @@ const args = [...arguments];
    - parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
 > 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA){:target='_blank'}
 
-20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='_blank'}{:target='_blank'}：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
+20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='_blank'}：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
 MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。
 
     ```javascript
@@ -419,7 +419,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     ```
 
 21. 个人博客相关
-- [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f){:target='_blank'}{:target='_blank'}{:target='_blank'}
+- [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f){:target='_blank'}
 - 引入图片的方式
    - GitHub图片：需要在路径分支前加blob，图片后缀后加?raw=true（关键词百度）
    - 相对路径(liquid语法：使用站点url与基地目录（site.url与site.baseurl）)：{ {site.url} }{ {site.baseurl} }/images/posts/XXX/XX.png?raw=true

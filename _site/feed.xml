@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-26T12:00:48+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-26T16:23:01+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -309,7 +309,7 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
-&lt;p&gt;  &lt;strong&gt;前端组件/项目中，需要有适当的错误处理过程，否则出现错误，层层上传，没有进行捕获，就会导致页面挂掉。&lt;/strong&gt;&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。</summary></entry><entry><title type="html">关于未来互联网的思考</title><link href="http://localhost:5001/2020/01/13/thinking-about-the-future-network/" rel="alternate" type="text/html" title="关于未来互联网的思考" /><published>2020-01-13T00:00:00+08:00</published><updated>2020-01-13T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/13/thinking-about-the-future-network</id><content type="html" xml:base="http://localhost:5001/2020/01/13/thinking-about-the-future-network/">&lt;p&gt;  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。&lt;/p&gt;
+&lt;p&gt;  &lt;strong&gt;前端组件/项目中，需要有适当的错误处理过程，否则出现错误，层层上传，没有进行捕获，就会导致页面挂掉。&lt;/strong&gt;&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  由react-dnd-html5-backend报错：’Cannot have two HTML5 backends at the same time.’引发的前端错误处理思考。</summary></entry><entry><title type="html">关于未来互联网的思考与趋势关注</title><link href="http://localhost:5001/2020/01/13/thinking-about-the-future-network/" rel="alternate" type="text/html" title="关于未来互联网的思考与趋势关注" /><published>2020-01-13T00:00:00+08:00</published><updated>2020-01-13T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/13/thinking-about-the-future-network</id><content type="html" xml:base="http://localhost:5001/2020/01/13/thinking-about-the-future-network/">&lt;p&gt;  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。&lt;/p&gt;
 
 &lt;p&gt;  因为是转行而来，从最初面对需求的茫然不知所措到后来逐渐能胜任前端开发、理解前端思想原理，之后难免会对前端的未来和个人的未来进行一些思考。&lt;/p&gt;
 &lt;ul&gt;
@@ -321,16 +321,82 @@ QQ浏览器：Trident（兼容模式）+Webkit（高速模式）&lt;/p&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;你觉得未来的互联网、未来的前端是什么样的？&lt;/li&gt;
-  &lt;li&gt;如果我入职这个岗位的话,前三个月你希望我能做到些什么?&lt;/li&gt;
-  &lt;li&gt;我的这个岗位的前任是为什么离职的,我什么地方能做的更好?&lt;/li&gt;
-  &lt;li&gt;你对这个职位理想人选的要求是什么?&lt;/li&gt;
+  &lt;li&gt;面试反思：
+    &lt;ul&gt;
+      &lt;li&gt;对应岗位的理想人选是什么样的，需要具备哪些能力与特质？&lt;/li&gt;
+      &lt;li&gt;此岗位前任拥有什么样的特质，又有哪些不足？&lt;/li&gt;
+      &lt;li&gt;到岗后前三个月都有哪些要求，希望继任者能做到些什么?&lt;/li&gt;
+      &lt;li&gt;能否给个简单的评价或建议？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;展示立体化虚拟现实装修5g游戏&quot;&gt;展示立体化(虚拟现实，装修，5G，游戏)&lt;/h2&gt;
 &lt;p&gt;  5G带来更多可能；基于D3，threejs或类似框架技术的立体化。&lt;/p&gt;
 
 &lt;h2 id=&quot;功能智能化人工智能&quot;&gt;功能智能化(人工智能)&lt;/h2&gt;
-&lt;p&gt;  人工智能，大数据。&lt;/p&gt;</content><author><name>Cheney King</name></author><summary type="html">  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。</summary></entry><entry><title type="html">趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话</title><link href="http://localhost:5001/2020/01/11/symmetric-asymmetric/" rel="alternate" type="text/html" title="趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话" /><published>2020-01-11T00:00:00+08:00</published><updated>2020-01-11T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/11/symmetric-asymmetric</id><content type="html" xml:base="http://localhost:5001/2020/01/11/symmetric-asymmetric/">&lt;p&gt;  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！&lt;/p&gt;
+&lt;p&gt;  人工智能，大数据等。&lt;/p&gt;
+
+&lt;h2 id=&quot;前沿技术热点&quot;&gt;前沿技术热点&lt;/h2&gt;
+&lt;h3 id=&quot;graphql&quot;&gt;GraphQL&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;GraphQL是Facebook2015年开源的数据查询规范，最大的优势是查询图状数据&lt;/li&gt;
+  &lt;li&gt;A query language for your API
+    &lt;ul&gt;
+      &lt;li&gt;Describe your data&lt;/li&gt;
+      &lt;li&gt;Ask for what you want&lt;/li&gt;
+      &lt;li&gt;Get predictable results&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://graphql.org/&quot; target=&quot;_blank&quot;&gt;GraphQL英文网站&lt;/a&gt; | &lt;a href=&quot;https://graphql.org.cn/&quot; target=&quot;_blank&quot;&gt;GraphQL中文网站&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;使用GraphQL的理由（RESTful Service的局限性和问题）
+    &lt;ul&gt;
+      &lt;li&gt;数据冗余和请求冗余 (overfetching &amp;amp; underfetching)：RESTful的不足；如果使用的是REST的话，有时候你需要调用多个REST API的请求才能获取所需信息；获得的信息里可能会含有大量冗余数据；&lt;/li&gt;
+      &lt;li&gt;灵活而强类型的schema：GraphQL是强类型的。也就是说，我们在定义schema时，类似于使用SQL，是显式地为每一个域定义类型的；&lt;/li&gt;
+      &lt;li&gt;接口校验 (validation)：由于强类型的使用，我们对收到的数据进行检验的操作变得更为容易和严格，自动化的简便度和有效性也大大提高；&lt;/li&gt;
+      &lt;li&gt;接口变动，维护与文档
+        &lt;ul&gt;
+          &lt;li&gt;RESTful Application里面，一旦要改动API，不管是增删值域，改变值域范围，还是增减API数量，改变API url，都很容易变成伤筋动骨的行为；&lt;/li&gt;
+          &lt;li&gt;GraphQL的Service，API endpoint很可能就只有一个，根本不太会有改动URL path的情况；你不必因为客户端数据需求的变更而改变你的后端；&lt;/li&gt;
+          &lt;li&gt;有了GraphQL的queries，我们可以非常精准地进行数据分析(Analytics)；&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;开发效率&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;不用GraphQL的理由
+    &lt;ul&gt;
+      &lt;li&gt;迁移成本&lt;/li&gt;
+      &lt;li&gt;牺牲Performance&lt;/li&gt;
+      &lt;li&gt;缺乏动态类型&lt;/li&gt;
+      &lt;li&gt;简单问题复杂化&lt;/li&gt;
+      &lt;li&gt;缓存能解决很多问题：如果选择使用GraphQL，我们就没有了那么直白的caching解决方案&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;  GraphQL最大的优势，就是它能够大大提高开发者的效率，而且最大化地简化了前端的数据层的复杂性，并且使得前后端对数据的组织观点一致。只是使用时，需要考察scale, performance, tech stack, migration等等方面的要求，做合理的取舍，否则它可能不仅没能提高开发者效率，反倒制造出更多的问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;serverless&quot;&gt;Serverless&lt;/h3&gt;
+&lt;p&gt;  Serverless是一种构建和管理基于微服务架构的完整流程，允许你在&lt;strong&gt;服务部署级别&lt;/strong&gt;而不是&lt;strong&gt;服务器部署级别&lt;/strong&gt;来管理你的应用部署。它与传统架构的不同之处在于，完全由第三方管理，由事件触发，存在于无状态（Stateless）、暂存（可能只存在于一次调用的过程中）计算容器内。构建无服务器应用程序意味着开发者可以专注在产品代码上，而无须管理和操作云端或本地的服务器或运行时。Serverless真正做到了部署应用无需涉及基础设施的建设，自动构建、部署和启动服务。概括性地讲 —— &lt;strong&gt;Serverless 的内涵就是对全部底层资源和运维工作的封装，让开发者更专注于业务逻辑&lt;/strong&gt;。 &lt;br /&gt;
+  国内外的各大云厂商 Amazon、微软、Google、IBM、阿里云、腾讯云、华为云相继推出Serverless产品，Serverless也从概念、愿景逐步走向落地，在各企业、公司应用开来。 &lt;br /&gt;
+  Serverless由开发者实现的服务端逻辑运行在无状态的计算容器中，它由事件触发， 完全被第三方管理，其业务层面的状态则被开发者使用的数据库和存储资源所记录。Serverless涵盖了很多技术，分为两类：FaaS和BaaS。 &lt;br /&gt;
+  云计算经过这么多年的发展，逐渐进化到用户仅需关注业务和所需的资源。比如，通过K8S这类编排工具，用户只要关注自己的计算和需要的资源（CPU、内存等）就行了，不需要操心到机器这一层。&lt;strong&gt;Serverless架构让人们不再操心运行所需的资源，只需关注自己的业务逻辑，并且为实际消耗的资源付费。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;  在行业内，目前对于 Serverless 有几种解读方法：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;在某些场景可以解读为一种软件系统架构方法，通常称为 Serverless 架构&lt;/li&gt;
+  &lt;li&gt;在另一些情况下，又可以代表一种产品形态，称为 Serverless 产品&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;  在说起 Serverless 架构时，Serverless 代表的是利用 Serverless 形态的产品实现的应用架构，这种架构完全依托于云厂商或云平台提供产品完成系统的组织及构建。在这种架构中，用户无需关注支撑应用服务运行的主机，而将关注点投入在系统架构，业务开发，业务支撑运维上。 &lt;br /&gt;
+  而说起 Serverless 产品时，代表的是无需理解、管理服务器，按需使用，按使用付费的产品。Serverless 产品中，其实也可以包含存储、计算等多种类型的产品。而典型的计算产品，就是云函数这种形态。 &lt;br /&gt;
+  云函数，或者称为函数即服务 (Function as a Service)，它和后端即服务 (Backend as a Service) 一起，都可以称为 Serverless 产品。通过组合使用这些产品，开发者可以构建自身的业务 Serverless 架构。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;参考：&lt;a href=&quot;https://blog.csdn.net/cc18868876837/article/details/90672971&quot; target=&quot;_blank&quot;&gt;看懂 Serverless，这一篇就够了&lt;/a&gt; | &lt;a href=&quot;https://zhuanlan.zhihu.com/p/78250791&quot; target=&quot;_blank&quot;&gt;Serverless 基本概念入门&lt;/a&gt; | &lt;a href=&quot;https://zhuanlan.zhihu.com/p/79214097&quot; target=&quot;_blank&quot;&gt;Serverless 的运行原理与组件架构&lt;/a&gt;(多图，可参考) | &lt;strong&gt;&lt;a href=&quot;https://help.aliyun.com/document_detail/65565.html&quot; target=&quot;_blank&quot;&gt;Serverless应用场景&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Cheney King</name></author><summary type="html">  从事前端一年有余，关于前端趋势、互联网的未来等，有一些自己的判断与思考。</summary></entry><entry><title type="html">趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话</title><link href="http://localhost:5001/2020/01/11/symmetric-asymmetric/" rel="alternate" type="text/html" title="趣谈HTTPS对称加密与非对称加密——如何在微信群里进行私密会话" /><published>2020-01-11T00:00:00+08:00</published><updated>2020-01-11T00:00:00+08:00</updated><id>http://localhost:5001/2020/01/11/symmetric-asymmetric</id><content type="html" xml:base="http://localhost:5001/2020/01/11/symmetric-asymmetric/">&lt;p&gt;  HTTPS中存在对称加密和非对称加密的概念，笔者以前在学习的时候，网上看到很多文章和例子，看完总觉得自己还是不得对称加密和非对称加密的要领。最近想到一个方案——如何在微信群里进行私密会话。本文将围绕这一主题进行对称加密与非对称加密的讲诉，不当之处，请多批评指正！&lt;/p&gt;
 
 &lt;h2 id=&quot;概念&quot;&gt;概念&lt;/h2&gt;
 &lt;p&gt;  对称密钥加密（英语：Symmetric-key algorithm）又称为对称加密、私钥加密、共享密钥加密，是密码学中的一类加密算法。这类算法在加密和解密时使用相同的密钥，或是使用两个可以简单地相互推算的密钥。&lt;/p&gt;
