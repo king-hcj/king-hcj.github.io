@@ -14,7 +14,7 @@ keywords: HTML，JS，CSS，ERP，前端
 3. 先写页面，实现功能，再进行国际化；
 4. 问题：冗余key；代码中中文   
 
-参考：[React-intl 实现多语言](https://www.cnblogs.com/qiaojie/p/6411199.html)
+参考：[React-intl 实现多语言](https://www.cnblogs.com/qiaojie/p/6411199.html){:target='_blank'}
 
 # erp项目
 1. module:数据源，actions，initstate，reducer
@@ -95,9 +95,9 @@ keywords: HTML，JS，CSS，ERP，前端
     </Dropzone>
  ```
 参考：
-[office 所有后缀对应的 content-type](https://blog.csdn.net/xiaoranzhizhu/article/details/70473734)
+[office 所有后缀对应的 content-type](https://blog.csdn.net/xiaoranzhizhu/article/details/70473734){:target='_blank'}
 
-[为什么react的组件要super(props)](https://segmentfault.com/q/1010000008340434):
+[为什么react的组件要super(props)](https://segmentfault.com/q/1010000008340434){:target='_blank'}:
 >>>如果你用到了constructor就必须写super(),是用来初始化this的，可以绑定事件到this上;
 如果你在constructor中要使用this.props,就必须给super加参数：super(props)；
 （无论有没有constructor，在render中this.props都是可以使用的，这是React自动附带的；）
@@ -120,23 +120,20 @@ const HelloMessage = (props)=>(
 
 1. 树形展示GitHub项目代码Chrome插件：Octotree
 
-2. iterm配置文档参考：
+2. iterm配置文档参考：[Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）](https://www.cnblogs.com/weixuqin/p/7029177.html){:target='_blank'}
 
-[Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）](https://www.cnblogs.com/weixuqin/p/7029177.html)
-
-
-3. [idx使用](https://github.com/facebookincubator/idx):现在多使用'?.'写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的'？.'写法：[@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)   
+3. [idx使用](https://github.com/facebookincubator/idx){:target='_blank'}:现在多使用'?.'写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的'？.'写法：[@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining){:target='_blank'}   
 示例： 
-   1. obj?.foo.bar?.baz
-   2. obj?.['foo']?.bar?.baz
-   3. 
+   - obj?.foo.bar?.baz
+   - obj?.['foo']?.bar?.baz
+   -  
       ```javascript
         function test() {
           return 42;
         }
         test?.();
       ```
-  4. || 和 ??区别
+   - || 和 ??区别
       ```javascript
         let a = { b: { c: 0 } }
         console.log(a?.b?.c || 33) // 33
@@ -144,34 +141,32 @@ const HelloMessage = (props)=>(
         console.log(a?.c?.c || 22) // 22
         console.log(a?.c?.c ?? 22) // 22
       ```
-[idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js)   
+   [idx源码链接](https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js){:target='_blank'}   
    
-   
-```javascript
-  function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
-    try {
-      return accessor(input);
-    } catch (error) {
-      if (error instanceof TypeError) {
-        if (nullPattern.test(error)) {
-          return null;
-        } else if (undefinedPattern.test(error)) {
-          return undefined;
+    ```javascript
+      function idx<Ti, Tv>(input: Ti, accessor: (input: Ti) => Tv): ?Tv {
+        try {
+          return accessor(input);
+        } catch (error) {
+          if (error instanceof TypeError) {
+            if (nullPattern.test(error)) {
+              return null;
+            } else if (undefinedPattern.test(error)) {
+              return undefined;
+            }
+          }
+          throw error;
         }
       }
-      throw error;
-    }
-  }
-  const nullPattern = /^null | null$|^[^(]* null /i;
-  const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
-  idx.default = idx;
-  module.exports = idx;
-```
-   
+      const nullPattern = /^null | null$|^[^(]* null /i;
+      const undefinedPattern = /^undefined | undefined$|^[^(]* undefined /i;
+      idx.default = idx;
+      module.exports = idx;
+    ```
 
-4. [ console-importer](https://github.com/pd4d10/console-importer):在在 Dev Tools 里面来使用 npm 插件！
+4. [ console-importer](https://github.com/pd4d10/console-importer){:target='_blank'}:在在 Dev Tools 里面来使用 npm 插件！
 
-5. [ Lodash-文档](https://www.lodashjs.com/)
+5. [ Lodash-文档](https://www.lodashjs.com/){:target='_blank'}
    1. omit 忽略值：
       ```javascript
       var object = { 'a': 1, 'b': '2', 'c': 3 };   
@@ -181,25 +176,26 @@ const HelloMessage = (props)=>(
 
 6. curl
 >>>百科：cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年首次发行。它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl。    
-      1. [curl 的使用](https://www.jianshu.com/p/f05bbd5007d9)
-      2. [Linux 命令行：cURL 的十种常见用法](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028)
-      3. [curl 命令详解](https://www.jianshu.com/p/07c4dddae43a)
+      1. [curl 的使用](https://www.jianshu.com/p/f05bbd5007d9){:target='_blank'}
+      2. [Linux 命令行：cURL 的十种常见用法](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028){:target='_blank'}
+      3. [curl 命令详解](https://www.jianshu.com/p/07c4dddae43a){:target='_blank'}
 
-7. [React DnD](http://react-dnd.github.io/react-dnd/about)
+7. [React DnD](http://react-dnd.github.io/react-dnd/about){:target='_blank'}
 
-8. [Moment.js 文档](http://momentjs.cn/docs/)
+8. [Moment.js 文档](http://momentjs.cn/docs/){:target='_blank'}
 
-9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
+9. [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/){:target='_blank'}
 
-10. [DropzoneJS](https://www.dropzonejs.com/#) | [Ant Motion ](https://motion.ant.design/index-cn) | [fullPage全屏滚动](https://alvarotrigo.com/fullPage/)
+10. [DropzoneJS](https://www.dropzonejs.com/#){:target='_blank'} &#124; [Ant Motion ](https://motion.ant.design/index-cn){:target='_blank'} &#124; [fullPage全屏滚动](https://alvarotrigo.com/fullPage/){:target='_blank'}
 
-11. [Less 中文网](http://lesscss.cn/)
+11. [Less 中文网](http://lesscss.cn/){:target='_blank'}
 
-12. [TypeScript英文文档](http://www.typescriptlang.org/index.html)|[中文](https://www.tslang.cn/index.html)
+12. [TypeScript英文文档](http://www.typescriptlang.org/index.html){:target='_blank'}&#124;[中文](https://www.tslang.cn/index.html){:target='_blank'}
 
-13. [Next.js文档](http://nextjs.frontendx.cn/) | [Next.js英文文档](https://nextjs.org/)(React) | [UmiJS](https://umijs.org/zh/) | [NuxtJS](https://zh.nuxtjs.org/)(Vue)
+13. [Next.js文档](http://nextjs.frontendx.cn/){:target='_blank'} &#124; [Next.js英文文档](https://nextjs.org/){:target='_blank'}(React) &#124; [UmiJS](https://umijs.org/zh/){:target='_blank'} &#124; [NuxtJS](https://zh.nuxtjs.org/){:target='_blank'}(Vue)
 
 # 技巧技法
+
 ## git
 1. 已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程
 2. Git文件名大小写敏感:
@@ -207,9 +203,10 @@ const HelloMessage = (props)=>(
    - 查看git 的设置:git config --get core.ignorecase
    - git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改
    - 更改设置解决:git config core.ignorecase false
+
 ## JS
-1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015)
-2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html) | [Node.js 英文文档](https://nodejs.org/en/docs/)
+1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015){:target='_blank'}
+2. [Node.js 中文文档](http://nodejs.cn/api/synopsis.html){:target='_blank'} &#124; [Node.js 英文文档](https://nodejs.org/en/docs/){:target='_blank'}
 3. 函数防抖运用:
 ```javascript
 A.js
@@ -261,9 +258,9 @@ this.debouncedFn(data)
       ```
   - PureComponent减少ES6的类组件的无用渲染;React.memo(...)减少函数组件的无用渲染
   - 参考阅读
-     - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html)
-     - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html)
-     - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789)
+     - [React v16.6.0: lazy, memo and contextType](https://reactjs.org/blog/2018/10/23/react-v-16-6.html){:target='_blank'}
+     - [react v16.6 动态 import，React.lazy()、Suspense、Error boundaries](http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html){:target='_blank'}
+     - [React新特性实例详解（memo、lazy、suspense、hooks）](http://react-china.org/t/react-memo-lazy-suspense-hooks/28789){:target='_blank'}
 6. Modal.confirm的onOk，可以把this传进去，也可以写箭头函数
 ```javascript
     Modal.confirm({
@@ -330,22 +327,22 @@ this.props.actions.uploadCalcExcel(uploadFile)
     });
     ```
 
-9. [Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内](https://www.jianshu.com/p/32bef36a68a0)
+9. [Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内](https://www.jianshu.com/p/32bef36a68a0){:target='_blank'}
 
-10. [next.js中的window is not defined](https://blog.csdn.net/qq_35087256/article/details/84963644):next.js文档中提供了一种动态导入模块的办法'next/dynamic'
+10. [next.js中的window is not defined](https://blog.csdn.net/qq_35087256/article/details/84963644){:target='_blank'}:next.js文档中提供了一种动态导入模块的办法'next/dynamic'
 
 11. url-loader和file-loader
    - url-loader依赖file-loader
    - 当使用url-loader加载图片，图片大小小于上限值，则将图片转base64字符串；否则使用file-loader加载图片，都是为了提高浏览器加载图片速度。
    - 使用url-loader加载图片比file-loader更优秀
 
-12. [js实现窗口全屏示例](https://blog.csdn.net/u011500781/article/details/52896368):无URL、导航栏等
+12. [js实现窗口全屏示例](https://blog.csdn.net/u011500781/article/details/52896368){:target='_blank'}:无URL、导航栏等
 
-13. [如何实现图片缩放?](https://bbs.aliyun.com/read/541396.html):将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)
+13. [如何实现图片缩放?](https://bbs.aliyun.com/read/541396.html){:target='_blank'}:将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)
 
-14. 数字分割：[JavaScript之如何让数字千位分割](https://blog.csdn.net/spicyboiledfish/article/details/77776357) | [JS 数字，金额 用逗号 隔开](https://blog.csdn.net/evangel_z/article/details/12839657)
+14. 数字分割：[JavaScript之如何让数字千位分割](https://blog.csdn.net/spicyboiledfish/article/details/77776357){:target='_blank'} &#124; [JS 数字，金额 用逗号 隔开](https://blog.csdn.net/evangel_z/article/details/12839657){:target='_blank'}
 
-15. [arguments对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments):
+15. [arguments对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments){:target='_blank'}:
 >>>arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的Array：
 ```javascript
 var args = Array.prototype.slice.call(arguments);
@@ -357,8 +354,8 @@ const args = [...arguments];
    
 
 16. momentJS问题：
-   - [东八区问题 moment().format() 有时间差](https://blog.csdn.net/ASZJBGD/article/details/85252658)
-   - [解决Moment格式化时间出现时区差的问题](https://blog.csdn.net/littlebearGreat/article/details/80996346)
+   - [东八区问题 moment().format() 有时间差](https://blog.csdn.net/ASZJBGD/article/details/85252658){:target='_blank'}
+   - [解决Moment格式化时间出现时区差的问题](https://blog.csdn.net/littlebearGreat/article/details/80996346){:target='_blank'}
    -  使用moment.js 获取当前时间往前的时间
    ```js
   moment().format("YYYY-MM-DD HH:mm:ss"); //当前时间
@@ -389,9 +386,9 @@ const args = [...arguments];
       11 2 (3) [1, 7, 11]
       ```
    - parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
-> 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA)
+> 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA){:target='_blank'}
 
-20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7)：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
+20. [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='_blank'}{:target='_blank'}：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示：   
 MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。
 
     ```javascript
@@ -422,7 +419,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     ```
 
 21. 个人博客相关
-- [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f){:target='_blank'}
+- [在个人博客里添加评论系统--Gitalk](https://www.jianshu.com/p/656e6101bf0f){:target='_blank'}{:target='_blank'}{:target='_blank'}
 - 引入图片的方式
    - GitHub图片：需要在路径分支前加blob，图片后缀后加?raw=true（关键词百度）
    - 相对路径(liquid语法：使用站点url与基地目录（site.url与site.baseurl）)：{ {site.url} }{ {site.baseurl} }/images/posts/XXX/XX.png?raw=true
@@ -453,7 +450,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 ## HTML
 
 ## CSS
-1. [position: sticky粘性定位](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/):除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)   
+1. [position: sticky粘性定位](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/){:target='_blank'}:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)   
 ```scss
     示例代码：
     .left-container {
@@ -468,9 +465,9 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
     }
 ```
 
-2. [【CSS深入理解之z-index】听课总结](https://www.cnblogs.com/benbendu/p/5811534.html)
+2. [【CSS深入理解之z-index】听课总结](https://www.cnblogs.com/benbendu/p/5811534.html){:target='_blank'}
 
-3. [ant design Tooltip文字提示的样式设置](https://www.jianshu.com/p/27bb9a9d4f03)
+3. [ant design Tooltip文字提示的样式设置](https://www.jianshu.com/p/27bb9a9d4f03){:target='_blank'}
    - 可以通过设置mouseLeaveDelay控制Tooltip在页面的时间，然后chrome就可以查看元素了；
    - 直接用  ant-tooltip-  在页面并无法修改它的样式；
    - 通过自定义的类名以及类名下的标签就可以修改其样式,如下所示:
@@ -528,14 +525,14 @@ style={ { width: 'calc(100% - 80px)' } }
    ```
 
 ## 其他
-1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695)：
+1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695){:target='_blank'}：
     ```javascript
     videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
     ```
 
-2. [百度网盘直链下载助手](https://github.com/syhyz1990/baiduyun)(亲测有效)
+2. [百度网盘直链下载助手](https://github.com/syhyz1990/baiduyun){:target='_blank'}(亲测有效)
 
-3. [3个方法解决百度网盘限速 （2019-07-04 更新）](https://www.runningcheese.com/baiduyun)
+3. [3个方法解决百度网盘限速 （2019-07-04 更新）](https://www.runningcheese.com/baiduyun){:target='_blank'}
 
 4. 查看整个项目的代码行数
   - 打开终端，用cd命令定位到工程所在的目录，然后调用以下命名即可把每个源代码文件行数及总数统计出来(适用于前端项目，只要改文件后缀即可)：
@@ -543,51 +540,51 @@ style={ { width: 'calc(100% - 80px)' } }
     find . "(" -name "*.m" -or -name "*.mm" -or -name "*.cpp" -or -name "*.h" -or -name "*.rss" ")" -print | xargs wc -l
     ```
 # 代码规范/规约
-1. [EditorConfig](https://editorconfig.org/): 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？   
+1. [EditorConfig](https://editorconfig.org/){:target='_blank'}: 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？   
 EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
-2. [ESLint](https://cn.eslint.org/)+[Prettier](https://prettier.io/)
+2. [ESLint](https://cn.eslint.org/){:target='_blank'} &#124; [Prettier](https://prettier.io/){:target='_blank'}
 
 # 个人学习规划/学习视频书籍目录整理
 ## 通用课程(数据结构、算法、网络)
-1. [快速上手Linux 玩转典型应用](https://coding.imooc.com/class/154.html)
-2. [慕课Java就业班](https://class.imooc.com/newjava)
-3. [专为程序员设计的线性代数课程](https://coding.imooc.com/class/260.html)
-4. [学习算法思想 修炼编程内功](https://coding.imooc.com/class/71.html)
-5. [玩转数据结构 从入门到进阶](https://coding.imooc.com/class/207.html)
-6. [玩转算法面试 从真题到思维全面提升算法思维](https://coding.imooc.com/class/82.html)
-7. [慕课算法讲师推荐：liuyubobobo](http://www.imooc.com/t/108955)
+1. [快速上手Linux 玩转典型应用](https://coding.imooc.com/class/154.html){:target='_blank'}
+2. [慕课Java就业班](https://class.imooc.com/newjava){:target='_blank'}
+3. [专为程序员设计的线性代数课程](https://coding.imooc.com/class/260.html){:target='_blank'}
+4. [学习算法思想 修炼编程内功](https://coding.imooc.com/class/71.html){:target='_blank'}
+5. [玩转数据结构 从入门到进阶](https://coding.imooc.com/class/207.html){:target='_blank'}
+6. [玩转算法面试 从真题到思维全面提升算法思维](https://coding.imooc.com/class/82.html){:target='_blank'}
+7. [慕课算法讲师推荐：liuyubobobo](http://www.imooc.com/t/108955){:target='_blank'}
 ## 前端
 1. Node.js:
-   1. [Node.js入门到企业Web开发中的应用](https://coding.imooc.com/class/146.html)
-   2. [前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目](https://coding.imooc.com/class/320.html)
+   1. [Node.js入门到企业Web开发中的应用](https://coding.imooc.com/class/146.html){:target='_blank'}
+   2. [前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目](https://coding.imooc.com/class/320.html){:target='_blank'}
 2. 小程序：
-   1. [微信小程序入门与实战](https://coding.imooc.com/class/chapter/75.html#Anchor)
+   1. [微信小程序入门与实战](https://coding.imooc.com/class/chapter/75.html#Anchor){:target='_blank'}
 3. Javascript:
-   1. [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/255.html)
-   2. [基于TypeScript从零重构axios](https://coding.imooc.com/class/330.html)
+   1. [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/255.html){:target='_blank'}
+   2. [基于TypeScript从零重构axios](https://coding.imooc.com/class/330.html){:target='_blank'}
 4. HTML/CSS:
-   1. [Web App用组件方式开发全站](https://coding.imooc.com/class/15.html)
-   2. [全面系统讲解CSS 工作应用+面试一步搞定](https://coding.imooc.com/class/164.html)
-   3. [所向披靡的响应式开发](https://coding.imooc.com/class/50.html)
-   4. [前端JavaScript面试技巧](https://coding.imooc.com/class/115.html)(视情)
-   5. [前端跳槽面试必备技巧](https://coding.imooc.com/class/129.html)(视情)
+   1. [Web App用组件方式开发全站](https://coding.imooc.com/class/15.html){:target='_blank'}
+   2. [全面系统讲解CSS 工作应用+面试一步搞定](https://coding.imooc.com/class/164.html){:target='_blank'}
+   3. [所向披靡的响应式开发](https://coding.imooc.com/class/50.html){:target='_blank'}
+   4. [前端JavaScript面试技巧](https://coding.imooc.com/class/115.html){:target='_blank'}(视情)
+   5. [前端跳槽面试必备技巧](https://coding.imooc.com/class/129.html){:target='_blank'}(视情)
 5. React/Vue/Angular:
-   1. [React源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html)
-   2. [Vue2.5开发去哪儿网App 从零基础入门到实战项目](https://coding.imooc.com/class/203.html)
+   1. [React源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='_blank'}
+   2. [Vue2.5开发去哪儿网App 从零基础入门到实战项目](https://coding.imooc.com/class/203.html){:target='_blank'}
 6. Webpack:
-   1. [从基础到实战	手把手带你掌握新版Webpack4.0](https://coding.imooc.com/class/316.html)
+   1. [从基础到实战	手把手带你掌握新版Webpack4.0](https://coding.imooc.com/class/316.html){:target='_blank'}
 ## 移动端
-1. [新版React Native+Redux打造高质量上线App](https://coding.imooc.com/class/304.html)
-2. [Flutter从入门到进阶 实战携程网App](https://coding.imooc.com/class/321.html)
-3. [Socket网络编程进阶与实战](https://coding.imooc.com/class/286.html)
+1. [新版React Native+Redux打造高质量上线App](https://coding.imooc.com/class/304.html){:target='_blank'}
+2. [Flutter从入门到进阶 实战携程网App](https://coding.imooc.com/class/321.html){:target='_blank'}
+3. [Socket网络编程进阶与实战](https://coding.imooc.com/class/286.html){:target='_blank'}
 ## 后端
-1. [Google资深工程师深度讲解Go语言](https://coding.imooc.com/class/180.html)
+1. [Google资深工程师深度讲解Go语言](https://coding.imooc.com/class/180.html){:target='_blank'}
 
 ## 文章
-1. [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
-2. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
-3. [Service Worker](https://www.jianshu.com/p/62338c038c42)
-4. [Nginx详解](https://www.cnblogs.com/ysocean/category/1289968.html)
+1. [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html){:target='_blank'}
+2. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html){:target='_blank'}
+3. [Service Worker](https://www.jianshu.com/p/62338c038c42){:target='_blank'}
+4. [Nginx详解](https://www.cnblogs.com/ysocean/category/1289968.html){:target='_blank'}
 
 
 # 个人web页面构想(非静态)
@@ -598,7 +595,7 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
 5. 爱好展示
 6. 访问量统计
 7. 基于jekyll-now的个人博客解决方案
-   - [jekyll-now](https://github.com/barryclark/jekyll-now)
-   - [jekyll-now 文档](http://jekyllcn.com/)
-   - [参考页面](https://github.com/mzlogin/mzlogin.github.io)
-   - [主题选择](http://jekyllthemes.org/)
+   - [jekyll-now](https://github.com/barryclark/jekyll-now){:target='_blank'}
+   - [jekyll-now 文档](http://jekyllcn.com/){:target='_blank'}
+   - [参考页面](https://github.com/mzlogin/mzlogin.github.io){:target='_blank'}
+   - [主题选择](http://jekyllthemes.org/){:target='_blank'}

@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Comprehensive" title="Comprehensive">Comprehensive</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共11298字,阅读全文约需42分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共11306字,阅读全文约需42分钟</span>
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@
   <li>问题：冗余key；代码中中文</li>
 </ol>
 
-<p>参考：<a href="https://www.cnblogs.com/qiaojie/p/6411199.html">React-intl 实现多语言</a></p>
+<p>参考：<a href="https://www.cnblogs.com/qiaojie/p/6411199.html" target="_blank">React-intl 实现多语言</a></p>
 
 <h1 id="erp项目">erp项目</h1>
 <ol>
@@ -213,9 +213,9 @@
 </span>    <span class="o">&lt;</span><span class="sr">/Dropzone</span><span class="err">&gt;
 </span></code></pre></div></div>
 <p>参考：
-<a href="https://blog.csdn.net/xiaoranzhizhu/article/details/70473734">office 所有后缀对应的 content-type</a></p>
+<a href="https://blog.csdn.net/xiaoranzhizhu/article/details/70473734" target="_blank">office 所有后缀对应的 content-type</a></p>
 
-<p><a href="https://segmentfault.com/q/1010000008340434">为什么react的组件要super(props)</a>:</p>
+<p><a href="https://segmentfault.com/q/1010000008340434" target="_blank">为什么react的组件要super(props)</a>:</p>
 <blockquote>
   <blockquote>
     <blockquote>
@@ -246,16 +246,11 @@
     <p>树形展示GitHub项目代码Chrome插件：Octotree</p>
   </li>
   <li>
-    <p>iterm配置文档参考：</p>
+    <p>iterm配置文档参考：<a href="https://www.cnblogs.com/weixuqin/p/7029177.html" target="_blank">Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）</a></p>
   </li>
-</ol>
-
-<p><a href="https://www.cnblogs.com/weixuqin/p/7029177.html">Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）</a></p>
-
-<ol>
-  <li><a href="https://github.com/facebookincubator/idx">idx使用</a>:现在多使用’?.’写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的’？.’写法：<a href="https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining">@babel/plugin-proposal-optional-chaining</a> <br />
+  <li><a href="https://github.com/facebookincubator/idx" target="_blank">idx使用</a>:现在多使用’?.’写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的’？.’写法：<a href="https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining" target="_blank">@babel/plugin-proposal-optional-chaining</a> <br />
 示例：
-    <ol>
+    <ul>
       <li>obj?.foo.bar?.baz</li>
       <li>obj?.[‘foo’]?.bar?.baz</li>
       <li>
@@ -265,44 +260,41 @@
  <span class="nx">test</span><span class="p">?.();</span>
 </code></pre></div>        </div>
       </li>
-    </ol>
-  </li>
-  <li>|| 和 ??区别
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span> <span class="na">b</span><span class="p">:</span> <span class="p">{</span> <span class="na">c</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span>
+      <li>|| 和 ??区别
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span> <span class="na">b</span><span class="p">:</span> <span class="p">{</span> <span class="na">c</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">}</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">b</span><span class="p">?.</span><span class="nx">c</span> <span class="o">||</span> <span class="mi">33</span><span class="p">)</span> <span class="c1">// 33</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">b</span><span class="p">?.</span><span class="nx">c</span> <span class="p">??</span> <span class="mi">33</span><span class="p">)</span> <span class="c1">// 0</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">c</span><span class="p">?.</span><span class="nx">c</span> <span class="o">||</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// 22</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">?.</span><span class="nx">c</span><span class="p">?.</span><span class="nx">c</span> <span class="p">??</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// 22</span>
+</code></pre></div>        </div>
+        <p><a href="https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js" target="_blank">idx源码链接</a></p>
+      </li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">function</span> <span class="nx">idx</span><span class="o">&lt;</span><span class="nx">Ti</span><span class="p">,</span> <span class="nx">Tv</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">,</span> <span class="nx">accessor</span><span class="p">:</span> <span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">Tv</span><span class="p">):</span> <span class="p">?</span><span class="nx">Tv</span> <span class="p">{</span>
+     <span class="k">try</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="nx">accessor</span><span class="p">(</span><span class="nx">input</span><span class="p">);</span>
+     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="k">instanceof</span> <span class="nx">TypeError</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="nx">nullPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
+           <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">undefinedPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
+           <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+       <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="kd">const</span> <span class="nx">nullPattern</span> <span class="o">=</span> <span class="sr">/^null | null$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* null /i</span><span class="p">;</span>
+   <span class="kd">const</span> <span class="nx">undefinedPattern</span> <span class="o">=</span> <span class="sr">/^undefined | undefined$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* undefined /i</span><span class="p">;</span>
+   <span class="nx">idx</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
+   <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
 </code></pre></div>    </div>
-    <p><a href="https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js">idx源码链接</a></p>
   </li>
-</ol>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">idx</span><span class="o">&lt;</span><span class="nx">Ti</span><span class="p">,</span> <span class="nx">Tv</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">,</span> <span class="nx">accessor</span><span class="p">:</span> <span class="p">(</span><span class="nx">input</span><span class="p">:</span> <span class="nx">Ti</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">Tv</span><span class="p">):</span> <span class="p">?</span><span class="nx">Tv</span> <span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nx">accessor</span><span class="p">(</span><span class="nx">input</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="k">instanceof</span> <span class="nx">TypeError</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">nullPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
-          <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">undefinedPattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span> <span class="p">{</span>
-          <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="kd">const</span> <span class="nx">nullPattern</span> <span class="o">=</span> <span class="sr">/^null | null$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* null /i</span><span class="p">;</span>
-  <span class="kd">const</span> <span class="nx">undefinedPattern</span> <span class="o">=</span> <span class="sr">/^undefined | undefined$|^</span><span class="se">[^</span><span class="sr">(</span><span class="se">]</span><span class="sr">* undefined /i</span><span class="p">;</span>
-  <span class="nx">idx</span><span class="p">.</span><span class="k">default</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
-  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">idx</span><span class="p">;</span>
-</code></pre></div></div>
-
-<ol>
   <li>
-    <p><a href="https://github.com/pd4d10/console-importer"> console-importer</a>:在在 Dev Tools 里面来使用 npm 插件！</p>
+    <p><a href="https://github.com/pd4d10/console-importer" target="_blank"> console-importer</a>:在在 Dev Tools 里面来使用 npm 插件！</p>
   </li>
-  <li><a href="https://www.lodashjs.com/"> Lodash-文档</a>
+  <li><a href="https://www.lodashjs.com/" target="_blank"> Lodash-文档</a>
     <ol>
       <li>omit 忽略值：
         <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">:</span> <span class="mi">3</span> <span class="p">};</span>   
@@ -321,59 +313,34 @@
       </blockquote>
     </blockquote>
     <ol>
-      <li><a href="https://www.jianshu.com/p/f05bbd5007d9">curl 的使用</a></li>
-      <li><a href="https://blog.csdn.net/chenliaoyuanjv/article/details/79689028">Linux 命令行：cURL 的十种常见用法</a></li>
-      <li><a href="https://www.jianshu.com/p/07c4dddae43a">curl 命令详解</a></li>
+      <li><a href="https://www.jianshu.com/p/f05bbd5007d9" target="_blank">curl 的使用</a></li>
+      <li><a href="https://blog.csdn.net/chenliaoyuanjv/article/details/79689028" target="_blank">Linux 命令行：cURL 的十种常见用法</a></li>
+      <li><a href="https://www.jianshu.com/p/07c4dddae43a" target="_blank">curl 命令详解</a></li>
     </ol>
   </li>
   <li>
-    <p><a href="http://react-dnd.github.io/react-dnd/about">React DnD</a></p>
+    <p><a href="http://react-dnd.github.io/react-dnd/about" target="_blank">React DnD</a></p>
   </li>
   <li>
-    <p><a href="http://momentjs.cn/docs/">Moment.js 文档</a></p>
+    <p><a href="http://momentjs.cn/docs/" target="_blank">Moment.js 文档</a></p>
   </li>
   <li>
-    <p><a href="https://cassetterocks.github.io/react-infinite-scroller/">React Infinite Scroller</a></p>
+    <p><a href="https://cassetterocks.github.io/react-infinite-scroller/" target="_blank">React Infinite Scroller</a></p>
   </li>
   <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="https://www.dropzonejs.com/#">DropzoneJS</a></td>
-          <td><a href="https://motion.ant.design/index-cn">Ant Motion </a></td>
-          <td><a href="https://alvarotrigo.com/fullPage/">fullPage全屏滚动</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <p><a href="https://www.dropzonejs.com/#" target="_blank">DropzoneJS</a> | <a href="https://motion.ant.design/index-cn" target="_blank">Ant Motion </a> | <a href="https://alvarotrigo.com/fullPage/" target="_blank">fullPage全屏滚动</a></p>
   </li>
   <li>
-    <p><a href="http://lesscss.cn/">Less 中文网</a></p>
+    <p><a href="http://lesscss.cn/" target="_blank">Less 中文网</a></p>
   </li>
   <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="http://www.typescriptlang.org/index.html">TypeScript英文文档</a></td>
-          <td><a href="https://www.tslang.cn/index.html">中文</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <p><a href="http://www.typescriptlang.org/index.html" target="_blank">TypeScript英文文档</a>|<a href="https://www.tslang.cn/index.html" target="_blank">中文</a></p>
   </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="http://nextjs.frontendx.cn/">Next.js文档</a></td>
-          <td><a href="https://nextjs.org/">Next.js英文文档</a>(React)</td>
-          <td><a href="https://umijs.org/zh/">UmiJS</a></td>
-          <td><a href="https://zh.nuxtjs.org/">NuxtJS</a>(Vue)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li><a href="http://nextjs.frontendx.cn/" target="_blank">Next.js文档</a> | <a href="https://nextjs.org/" target="_blank">Next.js英文文档</a>(React) | <a href="https://umijs.org/zh/" target="_blank">UmiJS</a> | <a href="https://zh.nuxtjs.org/" target="_blank">NuxtJS</a>(Vue)</li>
 </ol>
 
 <h1 id="技巧技法">技巧技法</h1>
+
 <h2 id="git">git</h2>
 <ol>
   <li>已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程</li>
@@ -382,22 +349,15 @@
       <li>问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交</li>
       <li>查看git 的设置:git config –get core.ignorecase</li>
       <li>git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改</li>
-      <li>更改设置解决:git config core.ignorecase false
-        <h2 id="js">JS</h2>
-      </li>
+      <li>更改设置解决:git config core.ignorecase false</li>
     </ul>
   </li>
-  <li><a href="https://blog.csdn.net/qq_38627581/article/details/77353015">js判断对象是否为空对象的几种方法</a></li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="http://nodejs.cn/api/synopsis.html">Node.js 中文文档</a></td>
-          <td><a href="https://nodejs.org/en/docs/">Node.js 英文文档</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+</ol>
+
+<h2 id="js">JS</h2>
+<ol>
+  <li><a href="https://blog.csdn.net/qq_38627581/article/details/77353015" target="_blank">js判断对象是否为空对象的几种方法</a></li>
+  <li><a href="http://nodejs.cn/api/synopsis.html" target="_blank">Node.js 中文文档</a> | <a href="https://nodejs.org/en/docs/" target="_blank">Node.js 英文文档</a></li>
   <li>函数防抖运用:
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">A</span><span class="p">.</span><span class="nx">js</span>
 <span class="c1">// 防抖实现</span>
@@ -453,9 +413,9 @@
    - 参考阅读
 </code></pre></div>        </div>
         <ul>
-          <li><a href="https://reactjs.org/blog/2018/10/23/react-v-16-6.html">React v16.6.0: lazy, memo and contextType</a></li>
-          <li><a href="http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html">react v16.6 动态 import，React.lazy()、Suspense、Error boundaries</a></li>
-          <li><a href="http://react-china.org/t/react-memo-lazy-suspense-hooks/28789">React新特性实例详解（memo、lazy、suspense、hooks）</a></li>
+          <li><a href="https://reactjs.org/blog/2018/10/23/react-v-16-6.html" target="_blank">React v16.6.0: lazy, memo and contextType</a></li>
+          <li><a href="http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html" target="_blank">react v16.6 动态 import，React.lazy()、Suspense、Error boundaries</a></li>
+          <li><a href="http://react-china.org/t/react-memo-lazy-suspense-hooks/28789" target="_blank">React新特性实例详解（memo、lazy、suspense、hooks）</a></li>
         </ul>
       </li>
     </ul>
@@ -524,10 +484,10 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><a href="https://www.jianshu.com/p/32bef36a68a0">Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内</a></p>
+    <p><a href="https://www.jianshu.com/p/32bef36a68a0" target="_blank">Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内</a></p>
   </li>
   <li>
-    <p><a href="https://blog.csdn.net/qq_35087256/article/details/84963644">next.js中的window is not defined</a>:next.js文档中提供了一种动态导入模块的办法’next/dynamic’</p>
+    <p><a href="https://blog.csdn.net/qq_35087256/article/details/84963644" target="_blank">next.js中的window is not defined</a>:next.js文档中提供了一种动态导入模块的办法’next/dynamic’</p>
   </li>
   <li>url-loader和file-loader
     <ul>
@@ -537,22 +497,15 @@
     </ul>
   </li>
   <li>
-    <p><a href="https://blog.csdn.net/u011500781/article/details/52896368">js实现窗口全屏示例</a>:无URL、导航栏等</p>
+    <p><a href="https://blog.csdn.net/u011500781/article/details/52896368" target="_blank">js实现窗口全屏示例</a>:无URL、导航栏等</p>
   </li>
   <li>
-    <p><a href="https://bbs.aliyun.com/read/541396.html">如何实现图片缩放?</a>:将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)</p>
+    <p><a href="https://bbs.aliyun.com/read/541396.html" target="_blank">如何实现图片缩放?</a>:将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)</p>
   </li>
   <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>数字分割：<a href="https://blog.csdn.net/spicyboiledfish/article/details/77776357">JavaScript之如何让数字千位分割</a></td>
-          <td><a href="https://blog.csdn.net/evangel_z/article/details/12839657">JS 数字，金额 用逗号 隔开</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <p>数字分割：<a href="https://blog.csdn.net/spicyboiledfish/article/details/77776357" target="_blank">JavaScript之如何让数字千位分割</a> | <a href="https://blog.csdn.net/evangel_z/article/details/12839657" target="_blank">JS 数字，金额 用逗号 隔开</a></p>
   </li>
-  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments对象</a>:
+  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments" target="_blank">arguments对象</a>:
     <blockquote>
       <blockquote>
         <blockquote>
@@ -569,8 +522,8 @@
   </li>
   <li>momentJS问题：
     <ul>
-      <li><a href="https://blog.csdn.net/ASZJBGD/article/details/85252658">东八区问题 moment().format() 有时间差</a></li>
-      <li><a href="https://blog.csdn.net/littlebearGreat/article/details/80996346">解决Moment格式化时间出现时区差的问题</a></li>
+      <li><a href="https://blog.csdn.net/ASZJBGD/article/details/85252658" target="_blank">东八区问题 moment().format() 有时间差</a></li>
+      <li><a href="https://blog.csdn.net/littlebearGreat/article/details/80996346" target="_blank">解决Moment格式化时间出现时区差的问题</a></li>
       <li>使用moment.js 获取当前时间往前的时间
         <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">moment</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD HH:mm:ss</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间</span>
   <span class="nx">moment</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="dl">"</span><span class="s2">days</span><span class="dl">"</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="dl">"</span><span class="s2">YYYY-MM-DD</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//当前时间的前10天时间</span>
@@ -607,13 +560,13 @@
       </li>
       <li>parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
         <blockquote>
-          <p>参考：<a href="https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA">JS 中为啥 [‘1’, ‘7’, ‘11’].map(parseInt) 返回 [1, NaN, 3]</a></p>
+          <p>参考：<a href="https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA" target="_blank">JS 中为啥 [‘1’, ‘7’, ‘11’].map(parseInt) 返回 [1, NaN, 3]</a></p>
         </blockquote>
       </li>
     </ul>
   </li>
   <li>
-    <p><a href="https://www.jianshu.com/p/4f07ef18b5d7">MessageChannel是什么，怎么使用？</a>：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： <br />
+    <p><a href="https://www.jianshu.com/p/4f07ef18b5d7" target="_blank">MessageChannel是什么，怎么使用？</a>：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： <br />
 MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。</p>
 
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">structuralClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
@@ -684,7 +637,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 <h2 id="css">CSS</h2>
 <ol>
-  <li><a href="https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/">position: sticky粘性定位</a>:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)
+  <li><a href="https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/" target="_blank">position: sticky粘性定位</a>:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)
     <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="err">示例代码：</span>
  <span class="nc">.left-container</span> <span class="p">{</span>
    <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
@@ -699,9 +652,9 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><a href="https://www.cnblogs.com/benbendu/p/5811534.html">【CSS深入理解之z-index】听课总结</a></p>
+    <p><a href="https://www.cnblogs.com/benbendu/p/5811534.html" target="_blank">【CSS深入理解之z-index】听课总结</a></p>
   </li>
-  <li><a href="https://www.jianshu.com/p/27bb9a9d4f03">ant design Tooltip文字提示的样式设置</a>
+  <li><a href="https://www.jianshu.com/p/27bb9a9d4f03" target="_blank">ant design Tooltip文字提示的样式设置</a>
     <ul>
       <li>可以通过设置mouseLeaveDelay控制Tooltip在页面的时间，然后chrome就可以查看元素了；</li>
       <li>直接用  ant-tooltip-  在页面并无法修改它的样式；</li>
@@ -764,15 +717,15 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 <h2 id="其他">其他</h2>
 <ol>
-  <li><a href="https://blog.csdn.net/u013044310/article/details/80444695">Chrome浏览器百度云倍速播放</a>：
+  <li><a href="https://blog.csdn.net/u013044310/article/details/80444695" target="_blank">Chrome浏览器百度云倍速播放</a>：
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">videojs</span><span class="p">.</span><span class="nx">getPlayers</span><span class="p">(</span><span class="dl">"</span><span class="s2">video-player</span><span class="dl">"</span><span class="p">).</span><span class="nx">html5player</span><span class="p">.</span><span class="nx">tech_</span><span class="p">.</span><span class="nx">setPlaybackRate</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><a href="https://github.com/syhyz1990/baiduyun">百度网盘直链下载助手</a>(亲测有效)</p>
+    <p><a href="https://github.com/syhyz1990/baiduyun" target="_blank">百度网盘直链下载助手</a>(亲测有效)</p>
   </li>
   <li>
-    <p><a href="https://www.runningcheese.com/baiduyun">3个方法解决百度网盘限速 （2019-07-04 更新）</a></p>
+    <p><a href="https://www.runningcheese.com/baiduyun" target="_blank">3个方法解决百度网盘限速 （2019-07-04 更新）</a></p>
   </li>
   <li>查看整个项目的代码行数
     <ul>
@@ -783,76 +736,76 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
       </li>
     </ul>
   </li>
-  <li><a href="https://editorconfig.org/">EditorConfig</a>: 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？ <br />
+  <li><a href="https://editorconfig.org/" target="_blank">EditorConfig</a>: 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？ <br />
 EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.</li>
-  <li><a href="https://cn.eslint.org/">ESLint</a>+<a href="https://prettier.io/">Prettier</a></li>
+  <li><a href="https://cn.eslint.org/" target="_blank">ESLint</a> | <a href="https://prettier.io/" target="_blank">Prettier</a></li>
 </ol>
 
 <h1 id="个人学习规划学习视频书籍目录整理">个人学习规划/学习视频书籍目录整理</h1>
 <h2 id="通用课程数据结构算法网络">通用课程(数据结构、算法、网络)</h2>
 <ol>
-  <li><a href="https://coding.imooc.com/class/154.html">快速上手Linux 玩转典型应用</a></li>
-  <li><a href="https://class.imooc.com/newjava">慕课Java就业班</a></li>
-  <li><a href="https://coding.imooc.com/class/260.html">专为程序员设计的线性代数课程</a></li>
-  <li><a href="https://coding.imooc.com/class/71.html">学习算法思想 修炼编程内功</a></li>
-  <li><a href="https://coding.imooc.com/class/207.html">玩转数据结构 从入门到进阶</a></li>
-  <li><a href="https://coding.imooc.com/class/82.html">玩转算法面试 从真题到思维全面提升算法思维</a></li>
-  <li><a href="http://www.imooc.com/t/108955">慕课算法讲师推荐：liuyubobobo</a>
+  <li><a href="https://coding.imooc.com/class/154.html" target="_blank">快速上手Linux 玩转典型应用</a></li>
+  <li><a href="https://class.imooc.com/newjava" target="_blank">慕课Java就业班</a></li>
+  <li><a href="https://coding.imooc.com/class/260.html" target="_blank">专为程序员设计的线性代数课程</a></li>
+  <li><a href="https://coding.imooc.com/class/71.html" target="_blank">学习算法思想 修炼编程内功</a></li>
+  <li><a href="https://coding.imooc.com/class/207.html" target="_blank">玩转数据结构 从入门到进阶</a></li>
+  <li><a href="https://coding.imooc.com/class/82.html" target="_blank">玩转算法面试 从真题到思维全面提升算法思维</a></li>
+  <li><a href="http://www.imooc.com/t/108955" target="_blank">慕课算法讲师推荐：liuyubobobo</a>
     <h2 id="前端">前端</h2>
   </li>
   <li>Node.js:
     <ol>
-      <li><a href="https://coding.imooc.com/class/146.html">Node.js入门到企业Web开发中的应用</a></li>
-      <li><a href="https://coding.imooc.com/class/320.html">前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目</a></li>
+      <li><a href="https://coding.imooc.com/class/146.html" target="_blank">Node.js入门到企业Web开发中的应用</a></li>
+      <li><a href="https://coding.imooc.com/class/320.html" target="_blank">前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目</a></li>
     </ol>
   </li>
   <li>小程序：
     <ol>
-      <li><a href="https://coding.imooc.com/class/chapter/75.html#Anchor">微信小程序入门与实战</a></li>
+      <li><a href="https://coding.imooc.com/class/chapter/75.html#Anchor" target="_blank">微信小程序入门与实战</a></li>
     </ol>
   </li>
   <li>Javascript:
     <ol>
-      <li><a href="https://coding.imooc.com/class/255.html">Javascript 设计模式系统讲解与应用</a></li>
-      <li><a href="https://coding.imooc.com/class/330.html">基于TypeScript从零重构axios</a></li>
+      <li><a href="https://coding.imooc.com/class/255.html" target="_blank">Javascript 设计模式系统讲解与应用</a></li>
+      <li><a href="https://coding.imooc.com/class/330.html" target="_blank">基于TypeScript从零重构axios</a></li>
     </ol>
   </li>
   <li>HTML/CSS:
     <ol>
-      <li><a href="https://coding.imooc.com/class/15.html">Web App用组件方式开发全站</a></li>
-      <li><a href="https://coding.imooc.com/class/164.html">全面系统讲解CSS 工作应用+面试一步搞定</a></li>
-      <li><a href="https://coding.imooc.com/class/50.html">所向披靡的响应式开发</a></li>
-      <li><a href="https://coding.imooc.com/class/115.html">前端JavaScript面试技巧</a>(视情)</li>
-      <li><a href="https://coding.imooc.com/class/129.html">前端跳槽面试必备技巧</a>(视情)</li>
+      <li><a href="https://coding.imooc.com/class/15.html" target="_blank">Web App用组件方式开发全站</a></li>
+      <li><a href="https://coding.imooc.com/class/164.html" target="_blank">全面系统讲解CSS 工作应用+面试一步搞定</a></li>
+      <li><a href="https://coding.imooc.com/class/50.html" target="_blank">所向披靡的响应式开发</a></li>
+      <li><a href="https://coding.imooc.com/class/115.html" target="_blank">前端JavaScript面试技巧</a>(视情)</li>
+      <li><a href="https://coding.imooc.com/class/129.html" target="_blank">前端跳槽面试必备技巧</a>(视情)</li>
     </ol>
   </li>
   <li>React/Vue/Angular:
     <ol>
-      <li><a href="https://coding.imooc.com/class/309.html">React源码深度解析 高级前端工程师必备技能</a></li>
-      <li><a href="https://coding.imooc.com/class/203.html">Vue2.5开发去哪儿网App 从零基础入门到实战项目</a></li>
+      <li><a href="https://coding.imooc.com/class/309.html" target="_blank">React源码深度解析 高级前端工程师必备技能</a></li>
+      <li><a href="https://coding.imooc.com/class/203.html" target="_blank">Vue2.5开发去哪儿网App 从零基础入门到实战项目</a></li>
     </ol>
   </li>
   <li>Webpack:
     <ol>
-      <li><a href="https://coding.imooc.com/class/316.html">从基础到实战	手把手带你掌握新版Webpack4.0</a>
+      <li><a href="https://coding.imooc.com/class/316.html" target="_blank">从基础到实战	手把手带你掌握新版Webpack4.0</a>
         <h2 id="移动端">移动端</h2>
       </li>
     </ol>
   </li>
-  <li><a href="https://coding.imooc.com/class/304.html">新版React Native+Redux打造高质量上线App</a></li>
-  <li><a href="https://coding.imooc.com/class/321.html">Flutter从入门到进阶 实战携程网App</a></li>
-  <li><a href="https://coding.imooc.com/class/286.html">Socket网络编程进阶与实战</a>
+  <li><a href="https://coding.imooc.com/class/304.html" target="_blank">新版React Native+Redux打造高质量上线App</a></li>
+  <li><a href="https://coding.imooc.com/class/321.html" target="_blank">Flutter从入门到进阶 实战携程网App</a></li>
+  <li><a href="https://coding.imooc.com/class/286.html" target="_blank">Socket网络编程进阶与实战</a>
     <h2 id="后端">后端</h2>
   </li>
-  <li><a href="https://coding.imooc.com/class/180.html">Google资深工程师深度讲解Go语言</a></li>
+  <li><a href="https://coding.imooc.com/class/180.html" target="_blank">Google资深工程师深度讲解Go语言</a></li>
 </ol>
 
 <h2 id="文章">文章</h2>
 <ol>
-  <li><a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南</a></li>
-  <li><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">理解OAuth 2.0</a></li>
-  <li><a href="https://www.jianshu.com/p/62338c038c42">Service Worker</a></li>
-  <li><a href="https://www.cnblogs.com/ysocean/category/1289968.html">Nginx详解</a></li>
+  <li><a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html" target="_blank">RESTful API 设计指南</a></li>
+  <li><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank">理解OAuth 2.0</a></li>
+  <li><a href="https://www.jianshu.com/p/62338c038c42" target="_blank">Service Worker</a></li>
+  <li><a href="https://www.cnblogs.com/ysocean/category/1289968.html" target="_blank">Nginx详解</a></li>
 </ol>
 
 <h1 id="个人web页面构想非静态">个人web页面构想(非静态)</h1>
@@ -865,10 +818,10 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   <li>访问量统计</li>
   <li>基于jekyll-now的个人博客解决方案
     <ul>
-      <li><a href="https://github.com/barryclark/jekyll-now">jekyll-now</a></li>
-      <li><a href="http://jekyllcn.com/">jekyll-now 文档</a></li>
-      <li><a href="https://github.com/mzlogin/mzlogin.github.io">参考页面</a></li>
-      <li><a href="http://jekyllthemes.org/">主题选择</a></li>
+      <li><a href="https://github.com/barryclark/jekyll-now" target="_blank">jekyll-now</a></li>
+      <li><a href="http://jekyllcn.com/" target="_blank">jekyll-now 文档</a></li>
+      <li><a href="https://github.com/mzlogin/mzlogin.github.io" target="_blank">参考页面</a></li>
+      <li><a href="http://jekyllthemes.org/" target="_blank">主题选择</a></li>
     </ul>
   </li>
 </ol>

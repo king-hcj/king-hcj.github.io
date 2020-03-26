@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-25T14:38:14+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:5001/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5001/" rel="alternate" type="text/html" /><updated>2020-03-26T12:00:48+08:00</updated><id>http://localhost:5001/feed.xml</id><title type="html">Cheney King</title><subtitle>Cheney King的个人博客</subtitle><author><name>Cheney King</name></author><entry><title type="html">前端自动化、工程化原理与实践(一)</title><link href="http://localhost:5001/2020/02/23/front-end-engineering/" rel="alternate" type="text/html" title="前端自动化、工程化原理与实践(一)" /><published>2020-02-23T00:00:00+08:00</published><updated>2020-02-23T00:00:00+08:00</updated><id>http://localhost:5001/2020/02/23/front-end-engineering</id><content type="html" xml:base="http://localhost:5001/2020/02/23/front-end-engineering/">&lt;p&gt;  本系列文章主要用于前端自动化、工程化相关的笔记、原理与实践的简要记录，预计主要包括webpack、Babel、Git/npm/Yarn、Jenkings、CI/CD方面的内容。&lt;/p&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 &lt;h3 id=&quot;webpack功能模块设计&quot;&gt;webpack功能模块设计&lt;/h3&gt;
@@ -1140,7 +1140,7 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
   &lt;li&gt;问题：冗余key；代码中中文&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;参考：&lt;a href=&quot;https://www.cnblogs.com/qiaojie/p/6411199.html&quot;&gt;React-intl 实现多语言&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考：&lt;a href=&quot;https://www.cnblogs.com/qiaojie/p/6411199.html&quot; target=&quot;_blank&quot;&gt;React-intl 实现多语言&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;erp项目&quot;&gt;erp项目&lt;/h1&gt;
 &lt;ol&gt;
@@ -1239,9 +1239,9 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
 &lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Dropzone&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;参考：
-&lt;a href=&quot;https://blog.csdn.net/xiaoranzhizhu/article/details/70473734&quot;&gt;office 所有后缀对应的 content-type&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://blog.csdn.net/xiaoranzhizhu/article/details/70473734&quot; target=&quot;_blank&quot;&gt;office 所有后缀对应的 content-type&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/q/1010000008340434&quot;&gt;为什么react的组件要super(props)&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/q/1010000008340434&quot; target=&quot;_blank&quot;&gt;为什么react的组件要super(props)&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;blockquote&gt;
     &lt;blockquote&gt;
@@ -1272,16 +1272,11 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
     &lt;p&gt;树形展示GitHub项目代码Chrome插件：Octotree&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;iterm配置文档参考：&lt;/p&gt;
+    &lt;p&gt;iterm配置文档参考：&lt;a href=&quot;https://www.cnblogs.com/weixuqin/p/7029177.html&quot; target=&quot;_blank&quot;&gt;Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/weixuqin/p/7029177.html&quot;&gt;Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）&lt;/a&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx&quot;&gt;idx使用&lt;/a&gt;:现在多使用’?.’写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的’？.’写法：&lt;a href=&quot;https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining&quot;&gt;@babel/plugin-proposal-optional-chaining&lt;/a&gt; &lt;br /&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx&quot; target=&quot;_blank&quot;&gt;idx使用&lt;/a&gt;:现在多使用’?.’写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的’？.’写法：&lt;a href=&quot;https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining&quot; target=&quot;_blank&quot;&gt;@babel/plugin-proposal-optional-chaining&lt;/a&gt; &lt;br /&gt;
 示例：
-    &lt;ol&gt;
+    &lt;ul&gt;
       &lt;li&gt;obj?.foo.bar?.baz&lt;/li&gt;
       &lt;li&gt;obj?.[‘foo’]?.bar?.baz&lt;/li&gt;
       &lt;li&gt;
@@ -1291,44 +1286,41 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
  &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;|| 和 ??区别
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;li&gt;|| 和 ??区别
+        &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 33&lt;/span&gt;
    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0&lt;/span&gt;
    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 22&lt;/span&gt;
    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 22&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js&quot; target=&quot;_blank&quot;&gt;idx源码链接&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nullPattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;undefinedPattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nullPattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^null | null$|^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;* null /i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;undefinedPattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^undefined | undefined$|^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;* undefined /i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/facebookincubator/idx/blob/master/packages/idx/src/idx.js&quot;&gt;idx源码链接&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ti&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tv&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accessor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nullPattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;undefinedPattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nullPattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^null | null$|^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;* null /i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;undefinedPattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^undefined | undefined$|^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;* undefined /i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/pd4d10/console-importer&quot;&gt; console-importer&lt;/a&gt;:在在 Dev Tools 里面来使用 npm 插件！&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/pd4d10/console-importer&quot; target=&quot;_blank&quot;&gt; console-importer&lt;/a&gt;:在在 Dev Tools 里面来使用 npm 插件！&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.lodashjs.com/&quot;&gt; Lodash-文档&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lodashjs.com/&quot; target=&quot;_blank&quot;&gt; Lodash-文档&lt;/a&gt;
     &lt;ol&gt;
       &lt;li&gt;omit 忽略值：
         &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;   
@@ -1347,59 +1339,34 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
       &lt;/blockquote&gt;
     &lt;/blockquote&gt;
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/f05bbd5007d9&quot;&gt;curl 的使用&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/chenliaoyuanjv/article/details/79689028&quot;&gt;Linux 命令行：cURL 的十种常见用法&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/07c4dddae43a&quot;&gt;curl 命令详解&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/f05bbd5007d9&quot; target=&quot;_blank&quot;&gt;curl 的使用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/chenliaoyuanjv/article/details/79689028&quot; target=&quot;_blank&quot;&gt;Linux 命令行：cURL 的十种常见用法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/07c4dddae43a&quot; target=&quot;_blank&quot;&gt;curl 命令详解&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://react-dnd.github.io/react-dnd/about&quot;&gt;React DnD&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://react-dnd.github.io/react-dnd/about&quot; target=&quot;_blank&quot;&gt;React DnD&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://momentjs.cn/docs/&quot;&gt;Moment.js 文档&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://momentjs.cn/docs/&quot; target=&quot;_blank&quot;&gt;Moment.js 文档&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cassetterocks.github.io/react-infinite-scroller/&quot;&gt;React Infinite Scroller&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cassetterocks.github.io/react-infinite-scroller/&quot; target=&quot;_blank&quot;&gt;React Infinite Scroller&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;a href=&quot;https://www.dropzonejs.com/#&quot;&gt;DropzoneJS&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://motion.ant.design/index-cn&quot;&gt;Ant Motion &lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://alvarotrigo.com/fullPage/&quot;&gt;fullPage全屏滚动&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.dropzonejs.com/#&quot; target=&quot;_blank&quot;&gt;DropzoneJS&lt;/a&gt; | &lt;a href=&quot;https://motion.ant.design/index-cn&quot; target=&quot;_blank&quot;&gt;Ant Motion &lt;/a&gt; | &lt;a href=&quot;https://alvarotrigo.com/fullPage/&quot; target=&quot;_blank&quot;&gt;fullPage全屏滚动&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://lesscss.cn/&quot;&gt;Less 中文网&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://lesscss.cn/&quot; target=&quot;_blank&quot;&gt;Less 中文网&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;a href=&quot;http://www.typescriptlang.org/index.html&quot;&gt;TypeScript英文文档&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://www.tslang.cn/index.html&quot;&gt;中文&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.typescriptlang.org/index.html&quot; target=&quot;_blank&quot;&gt;TypeScript英文文档&lt;/a&gt;|&lt;a href=&quot;https://www.tslang.cn/index.html&quot; target=&quot;_blank&quot;&gt;中文&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;a href=&quot;http://nextjs.frontendx.cn/&quot;&gt;Next.js文档&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Next.js英文文档&lt;/a&gt;(React)&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://umijs.org/zh/&quot;&gt;UmiJS&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://zh.nuxtjs.org/&quot;&gt;NuxtJS&lt;/a&gt;(Vue)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nextjs.frontendx.cn/&quot; target=&quot;_blank&quot;&gt;Next.js文档&lt;/a&gt; | &lt;a href=&quot;https://nextjs.org/&quot; target=&quot;_blank&quot;&gt;Next.js英文文档&lt;/a&gt;(React) | &lt;a href=&quot;https://umijs.org/zh/&quot; target=&quot;_blank&quot;&gt;UmiJS&lt;/a&gt; | &lt;a href=&quot;https://zh.nuxtjs.org/&quot; target=&quot;_blank&quot;&gt;NuxtJS&lt;/a&gt;(Vue)&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;技巧技法&quot;&gt;技巧技法&lt;/h1&gt;
+
 &lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;已提交过的代码，被删除，git status会是绿色，相当于已经add过了，会被下一次commit和push带着自动提交远程&lt;/li&gt;
@@ -1408,22 +1375,15 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
       &lt;li&gt;问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交&lt;/li&gt;
       &lt;li&gt;查看git 的设置:git config –get core.ignorecase&lt;/li&gt;
       &lt;li&gt;git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改&lt;/li&gt;
-      &lt;li&gt;更改设置解决:git config core.ignorecase false
-        &lt;h2 id=&quot;js&quot;&gt;JS&lt;/h2&gt;
-      &lt;/li&gt;
+      &lt;li&gt;更改设置解决:git config core.ignorecase false&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qq_38627581/article/details/77353015&quot;&gt;js判断对象是否为空对象的几种方法&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;a href=&quot;http://nodejs.cn/api/synopsis.html&quot;&gt;Node.js 中文文档&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://nodejs.org/en/docs/&quot;&gt;Node.js 英文文档&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;js&quot;&gt;JS&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qq_38627581/article/details/77353015&quot; target=&quot;_blank&quot;&gt;js判断对象是否为空对象的几种方法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nodejs.cn/api/synopsis.html&quot; target=&quot;_blank&quot;&gt;Node.js 中文文档&lt;/a&gt; | &lt;a href=&quot;https://nodejs.org/en/docs/&quot; target=&quot;_blank&quot;&gt;Node.js 英文文档&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;函数防抖运用:
     &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// 防抖实现&lt;/span&gt;
@@ -1479,9 +1439,9 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
    - 参考阅读
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://reactjs.org/blog/2018/10/23/react-v-16-6.html&quot;&gt;React v16.6.0: lazy, memo and contextType&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html&quot;&gt;react v16.6 动态 import，React.lazy()、Suspense、Error boundaries&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://react-china.org/t/react-memo-lazy-suspense-hooks/28789&quot;&gt;React新特性实例详解（memo、lazy、suspense、hooks）&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://reactjs.org/blog/2018/10/23/react-v-16-6.html&quot; target=&quot;_blank&quot;&gt;React v16.6.0: lazy, memo and contextType&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.ptbird.cn/react-lazy-suspense-error-boundaries.html&quot; target=&quot;_blank&quot;&gt;react v16.6 动态 import，React.lazy()、Suspense、Error boundaries&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://react-china.org/t/react-memo-lazy-suspense-hooks/28789&quot; target=&quot;_blank&quot;&gt;React新特性实例详解（memo、lazy、suspense、hooks）&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -1550,10 +1510,10 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/32bef36a68a0&quot;&gt;Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/32bef36a68a0&quot; target=&quot;_blank&quot;&gt;Element.scrollIntoView() 方法让当前的元素滚动到浏览器窗口的可视区域内&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_35087256/article/details/84963644&quot;&gt;next.js中的window is not defined&lt;/a&gt;:next.js文档中提供了一种动态导入模块的办法’next/dynamic’&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_35087256/article/details/84963644&quot; target=&quot;_blank&quot;&gt;next.js中的window is not defined&lt;/a&gt;:next.js文档中提供了一种动态导入模块的办法’next/dynamic’&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;url-loader和file-loader
     &lt;ul&gt;
@@ -1563,22 +1523,15 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/u011500781/article/details/52896368&quot;&gt;js实现窗口全屏示例&lt;/a&gt;:无URL、导航栏等&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/u011500781/article/details/52896368&quot; target=&quot;_blank&quot;&gt;js实现窗口全屏示例&lt;/a&gt;:无URL、导航栏等&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/541396.html&quot;&gt;如何实现图片缩放?&lt;/a&gt;:将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/541396.html&quot; target=&quot;_blank&quot;&gt;如何实现图片缩放?&lt;/a&gt;:将图片按照要求生成缩略图，或者进行特定的缩放(阿里云)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;数字分割：&lt;a href=&quot;https://blog.csdn.net/spicyboiledfish/article/details/77776357&quot;&gt;JavaScript之如何让数字千位分割&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;https://blog.csdn.net/evangel_z/article/details/12839657&quot;&gt;JS 数字，金额 用逗号 隔开&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+    &lt;p&gt;数字分割：&lt;a href=&quot;https://blog.csdn.net/spicyboiledfish/article/details/77776357&quot; target=&quot;_blank&quot;&gt;JavaScript之如何让数字千位分割&lt;/a&gt; | &lt;a href=&quot;https://blog.csdn.net/evangel_z/article/details/12839657&quot; target=&quot;_blank&quot;&gt;JS 数字，金额 用逗号 隔开&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments&quot;&gt;arguments对象&lt;/a&gt;:
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments&quot; target=&quot;_blank&quot;&gt;arguments对象&lt;/a&gt;:
     &lt;blockquote&gt;
       &lt;blockquote&gt;
         &lt;blockquote&gt;
@@ -1595,8 +1548,8 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
   &lt;/li&gt;
   &lt;li&gt;momentJS问题：
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ASZJBGD/article/details/85252658&quot;&gt;东八区问题 moment().format() 有时间差&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/littlebearGreat/article/details/80996346&quot;&gt;解决Moment格式化时间出现时区差的问题&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ASZJBGD/article/details/85252658&quot; target=&quot;_blank&quot;&gt;东八区问题 moment().format() 有时间差&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/littlebearGreat/article/details/80996346&quot; target=&quot;_blank&quot;&gt;解决Moment格式化时间出现时区差的问题&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;使用moment.js 获取当前时间往前的时间
         &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD HH:mm:ss&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;YYYY-MM-DD&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//当前时间的前10天时间&lt;/span&gt;
@@ -1633,13 +1586,13 @@ SegmentFault社区求助&lt;/a&gt;；他也尝试着把自己的学习历程记�
       &lt;/li&gt;
       &lt;li&gt;parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
         &lt;blockquote&gt;
-          &lt;p&gt;参考：&lt;a href=&quot;https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA&quot;&gt;JS 中为啥 [‘1’, ‘7’, ‘11’].map(parseInt) 返回 [1, NaN, 3]&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;参考：&lt;a href=&quot;https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA&quot; target=&quot;_blank&quot;&gt;JS 中为啥 [‘1’, ‘7’, ‘11’].map(parseInt) 返回 [1, NaN, 3]&lt;/a&gt;&lt;/p&gt;
         &lt;/blockquote&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/4f07ef18b5d7&quot;&gt;MessageChannel是什么，怎么使用？&lt;/a&gt;：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： &lt;br /&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/4f07ef18b5d7&quot; target=&quot;_blank&quot;&gt;MessageChannel是什么，怎么使用？&lt;/a&gt;：MessageChannel的postMessage传递的数据也是深拷贝的，这和web worker的postMessage一样，而且还可以拷贝undefined和循环引用的对象,如下所示： &lt;br /&gt;
 MessageChannel创建了一个通信的管道，这个管道有两个端口，每个端口都可以通过postMessage发送数据，而一个端口只要绑定了onmessage回调方法，就可以接收从另一个端口传过来的数据。&lt;/p&gt;
 
     &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;structuralClone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1710,7 +1663,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 &lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/&quot;&gt;position: sticky粘性定位&lt;/a&gt;:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)
+  &lt;li&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/&quot; target=&quot;_blank&quot;&gt;position: sticky粘性定位&lt;/a&gt;:除了文章介绍的之外，左右布局，左sticky时，左边还要设置高度才可生效(如：100vh)
     &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;err&quot;&gt;示例代码：&lt;/span&gt;
  &lt;span class=&quot;nc&quot;&gt;.left-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1725,9 +1678,9 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/benbendu/p/5811534.html&quot;&gt;【CSS深入理解之z-index】听课总结&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/benbendu/p/5811534.html&quot; target=&quot;_blank&quot;&gt;【CSS深入理解之z-index】听课总结&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/27bb9a9d4f03&quot;&gt;ant design Tooltip文字提示的样式设置&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/27bb9a9d4f03&quot; target=&quot;_blank&quot;&gt;ant design Tooltip文字提示的样式设置&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;可以通过设置mouseLeaveDelay控制Tooltip在页面的时间，然后chrome就可以查看元素了；&lt;/li&gt;
       &lt;li&gt;直接用  ant-tooltip-  在页面并无法修改它的样式；&lt;/li&gt;
@@ -1790,15 +1743,15 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
 
 &lt;h2 id=&quot;其他&quot;&gt;其他&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u013044310/article/details/80444695&quot;&gt;Chrome浏览器百度云倍速播放&lt;/a&gt;：
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u013044310/article/details/80444695&quot; target=&quot;_blank&quot;&gt;Chrome浏览器百度云倍速播放&lt;/a&gt;：
     &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nx&quot;&gt;videojs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getPlayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;video-player&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html5player&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tech_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setPlaybackRate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/syhyz1990/baiduyun&quot;&gt;百度网盘直链下载助手&lt;/a&gt;(亲测有效)&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/syhyz1990/baiduyun&quot; target=&quot;_blank&quot;&gt;百度网盘直链下载助手&lt;/a&gt;(亲测有效)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.runningcheese.com/baiduyun&quot;&gt;3个方法解决百度网盘限速 （2019-07-04 更新）&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.runningcheese.com/baiduyun&quot; target=&quot;_blank&quot;&gt;3个方法解决百度网盘限速 （2019-07-04 更新）&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;查看整个项目的代码行数
     &lt;ul&gt;
@@ -1809,76 +1762,76 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://editorconfig.org/&quot;&gt;EditorConfig&lt;/a&gt;: 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？ &lt;br /&gt;
+  &lt;li&gt;&lt;a href=&quot;https://editorconfig.org/&quot; target=&quot;_blank&quot;&gt;EditorConfig&lt;/a&gt;: 当多人团队进行一个项目开发时，每个人可能喜欢的编辑器不同，有人喜欢Webstrom、有人喜欢sublime、还有人喜欢Hbuilder。这个时候，问题便迎面而来，如何使使用不同编辑器的开发者能够轻松惬意的遵守最基本的代码规范呢？ &lt;br /&gt;
 EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cn.eslint.org/&quot;&gt;ESLint&lt;/a&gt;+&lt;a href=&quot;https://prettier.io/&quot;&gt;Prettier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cn.eslint.org/&quot; target=&quot;_blank&quot;&gt;ESLint&lt;/a&gt; | &lt;a href=&quot;https://prettier.io/&quot; target=&quot;_blank&quot;&gt;Prettier&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;个人学习规划学习视频书籍目录整理&quot;&gt;个人学习规划/学习视频书籍目录整理&lt;/h1&gt;
 &lt;h2 id=&quot;通用课程数据结构算法网络&quot;&gt;通用课程(数据结构、算法、网络)&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/154.html&quot;&gt;快速上手Linux 玩转典型应用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/newjava&quot;&gt;慕课Java就业班&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/260.html&quot;&gt;专为程序员设计的线性代数课程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/71.html&quot;&gt;学习算法思想 修炼编程内功&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/207.html&quot;&gt;玩转数据结构 从入门到进阶&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/82.html&quot;&gt;玩转算法面试 从真题到思维全面提升算法思维&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.imooc.com/t/108955&quot;&gt;慕课算法讲师推荐：liuyubobobo&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/154.html&quot; target=&quot;_blank&quot;&gt;快速上手Linux 玩转典型应用&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://class.imooc.com/newjava&quot; target=&quot;_blank&quot;&gt;慕课Java就业班&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/260.html&quot; target=&quot;_blank&quot;&gt;专为程序员设计的线性代数课程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/71.html&quot; target=&quot;_blank&quot;&gt;学习算法思想 修炼编程内功&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/207.html&quot; target=&quot;_blank&quot;&gt;玩转数据结构 从入门到进阶&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/82.html&quot; target=&quot;_blank&quot;&gt;玩转算法面试 从真题到思维全面提升算法思维&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.imooc.com/t/108955&quot; target=&quot;_blank&quot;&gt;慕课算法讲师推荐：liuyubobobo&lt;/a&gt;
     &lt;h2 id=&quot;前端&quot;&gt;前端&lt;/h2&gt;
   &lt;/li&gt;
   &lt;li&gt;Node.js:
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot;&gt;Node.js入门到企业Web开发中的应用&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot;&gt;前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/146.html&quot; target=&quot;_blank&quot;&gt;Node.js入门到企业Web开发中的应用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/320.html&quot; target=&quot;_blank&quot;&gt;前端晋升全栈工程师必备课程 Node.js 从零开发web server博客项目&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;小程序：
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/chapter/75.html#Anchor&quot;&gt;微信小程序入门与实战&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/chapter/75.html#Anchor&quot; target=&quot;_blank&quot;&gt;微信小程序入门与实战&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Javascript:
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot;&gt;基于TypeScript从零重构axios&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/255.html&quot; target=&quot;_blank&quot;&gt;Javascript 设计模式系统讲解与应用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/330.html&quot; target=&quot;_blank&quot;&gt;基于TypeScript从零重构axios&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;HTML/CSS:
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/15.html&quot;&gt;Web App用组件方式开发全站&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot;&gt;全面系统讲解CSS 工作应用+面试一步搞定&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/50.html&quot;&gt;所向披靡的响应式开发&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/115.html&quot;&gt;前端JavaScript面试技巧&lt;/a&gt;(视情)&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/129.html&quot;&gt;前端跳槽面试必备技巧&lt;/a&gt;(视情)&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/15.html&quot; target=&quot;_blank&quot;&gt;Web App用组件方式开发全站&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/164.html&quot; target=&quot;_blank&quot;&gt;全面系统讲解CSS 工作应用+面试一步搞定&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/50.html&quot; target=&quot;_blank&quot;&gt;所向披靡的响应式开发&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/115.html&quot; target=&quot;_blank&quot;&gt;前端JavaScript面试技巧&lt;/a&gt;(视情)&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/129.html&quot; target=&quot;_blank&quot;&gt;前端跳槽面试必备技巧&lt;/a&gt;(视情)&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;React/Vue/Angular:
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/309.html&quot;&gt;React源码深度解析 高级前端工程师必备技能&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/309.html&quot; target=&quot;_blank&quot;&gt;React源码深度解析 高级前端工程师必备技能&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/203.html&quot; target=&quot;_blank&quot;&gt;Vue2.5开发去哪儿网App 从零基础入门到实战项目&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Webpack:
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot;&gt;从基础到实战	手把手带你掌握新版Webpack4.0&lt;/a&gt;
+      &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/316.html&quot; target=&quot;_blank&quot;&gt;从基础到实战	手把手带你掌握新版Webpack4.0&lt;/a&gt;
         &lt;h2 id=&quot;移动端&quot;&gt;移动端&lt;/h2&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot;&gt;新版React Native+Redux打造高质量上线App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot;&gt;Flutter从入门到进阶 实战携程网App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/286.html&quot;&gt;Socket网络编程进阶与实战&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/304.html&quot; target=&quot;_blank&quot;&gt;新版React Native+Redux打造高质量上线App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/321.html&quot; target=&quot;_blank&quot;&gt;Flutter从入门到进阶 实战携程网App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/286.html&quot; target=&quot;_blank&quot;&gt;Socket网络编程进阶与实战&lt;/a&gt;
     &lt;h2 id=&quot;后端&quot;&gt;后端&lt;/h2&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/180.html&quot;&gt;Google资深工程师深度讲解Go语言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://coding.imooc.com/class/180.html&quot; target=&quot;_blank&quot;&gt;Google资深工程师深度讲解Go语言&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;文章&quot;&gt;文章&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/restful_api.html&quot;&gt;RESTful API 设计指南&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot;&gt;理解OAuth 2.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/62338c038c42&quot;&gt;Service Worker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/ysocean/category/1289968.html&quot;&gt;Nginx详解&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/restful_api.html&quot; target=&quot;_blank&quot;&gt;RESTful API 设计指南&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&quot; target=&quot;_blank&quot;&gt;理解OAuth 2.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/62338c038c42&quot; target=&quot;_blank&quot;&gt;Service Worker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/ysocean/category/1289968.html&quot; target=&quot;_blank&quot;&gt;Nginx详解&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;个人web页面构想非静态&quot;&gt;个人web页面构想(非静态)&lt;/h1&gt;
@@ -1891,10 +1844,10 @@ EditorConfig helps maintain consistent coding styles for multiple developers wor
   &lt;li&gt;访问量统计&lt;/li&gt;
   &lt;li&gt;基于jekyll-now的个人博客解决方案
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;jekyll-now&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;jekyll-now 文档&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/mzlogin/mzlogin.github.io&quot;&gt;参考页面&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;主题选择&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot; target=&quot;_blank&quot;&gt;jekyll-now&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://jekyllcn.com/&quot; target=&quot;_blank&quot;&gt;jekyll-now 文档&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/mzlogin/mzlogin.github.io&quot; target=&quot;_blank&quot;&gt;参考页面&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot; target=&quot;_blank&quot;&gt;主题选择&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Cheney King</name></author><summary type="html">这些是在搭建本博客之前，在爱奇尔工作时进行的一些总结，篇幅略长。</summary></entry><entry><title type="html">前端学习之路【学习途径、资料、书籍等】</title><link href="http://localhost:5001/2019/12/22/front-end-engineer/" rel="alternate" type="text/html" title="前端学习之路【学习途径、资料、书籍等】" /><published>2019-12-22T00:00:00+08:00</published><updated>2019-12-22T00:00:00+08:00</updated><id>http://localhost:5001/2019/12/22/front-end-engineer</id><content type="html" xml:base="http://localhost:5001/2019/12/22/front-end-engineer/">&lt;p&gt;  自2018年7月31日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019年1月1日订立个人OKR目标并发起每日钉钉打卡，300余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将2019年学习过的书籍、专栏、视频进行整理。&lt;/p&gt;
