@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  关于未来互联网的思考与趋势关注
+title:  关于互联网的思考与趋势关注
 categories: Comprehensive
 description: 关于未来前端趋势、互联网的思考
 keywords: 前端，web3.0
