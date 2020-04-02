@@ -447,6 +447,10 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
   }
   ```
 
+25. 查看端口占用并释放
+   - 查看占用：`netstat -ano|findstr 3003`
+   - 任务管理器详细信息，根据pid结束任务
+
 ## HTML
 
 ## CSS
