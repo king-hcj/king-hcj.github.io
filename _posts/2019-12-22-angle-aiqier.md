@@ -120,7 +120,10 @@ const HelloMessage = (props)=>(
 
 1. 树形展示GitHub项目代码Chrome插件：Octotree
 
-2. iterm配置文档参考：[Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）](https://www.cnblogs.com/weixuqin/p/7029177.html){:target='_blank'}
+2. 命令行工具
+- iterm配置文档参考：[Mac下终端配置（item2 + oh-my-zsh + solarized配色方案）](https://www.cnblogs.com/weixuqin/p/7029177.html){:target='_blank'}
+- [使用Cmder替换cmd，让开发更高效](https://www.jianshu.com/p/5b7c985240a7){:target='_blank'} &#124; [官网地址](https://cmder.net/){:target='_blank'}
+- [哪些命令行工具让你相见恨晚？](https://www.zhihu.com/question/41115077){:target='_blank'}
 
 3. [idx使用](https://github.com/facebookincubator/idx){:target='_blank'}:现在多使用'?.'写法(?.是一个整体，相当于一个运算符)，可以不使用idx。新的'？.'写法：[@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining){:target='_blank'}   
 示例： 
