@@ -16,7 +16,7 @@ permalink: /about/
 > 邮箱：cheneyking23@gmail.com
 
 {% for website in site.data.social %}
-* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
+* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }}){:target='_blank'}
 {% endfor %}
 
 ## Skill Keywords
