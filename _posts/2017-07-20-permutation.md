@@ -107,4 +107,40 @@ function arrange(s) {
 arrange("");
 ```
 
+```js
+/**
+ * 实现全排列
+ */
+var fullpermutate = (str) => {
+  var result = [];
+  if (str.length > 1) {
+    //遍历每一项
+    for (var m = 0; m < str.length; m++) {
+      //拿到当前的元素
+      var left = str[m];
+      //除当前元素的其他元素组合
+      var rest = str.slice(0, m).concat(str.slice(m + 1, str.length));
+      //上一次递归返回的全排列
+      var preResult = fullpermutate(rest);
+      //组合在一起
+      for (var i = 0; i < preResult.length; i++) {
+        var tmp = [left].concat(preResult[i]);
+        result.push(tmp);
+      }
+    }
+  } else if (str.length == 1) {
+    result.push(str);
+  }
+  // 去重
+  let res = [];
+  for (let i = 0; i < result.length; i++) {
+    let str = result[i].join("");
+    //  if (!res.includes(str)) res.push(str)
+    res.push(str);
+  }
+  return res;
+};
+fullpermutate(["word","good","best","hello"])
+```
+
 参考：<http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html>
