@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 慕课视频等综合学习笔记
+title: 慕课视频等综合学习笔记(爱用宝)
 categories: Comprehensive
 description: 慕课视频等综合学习笔记
 keywords: Markdown，React，AntV，JavaScript，React Native，抠图，小技巧

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 简单的全排列算法实现 
+title: 简单的全排列算法实现
 categories: Algorithm
 description: 一种使用递归思路实现的简易全排列算法。
 keywords: 算法, 全排列, 递归
@@ -9,7 +9,7 @@ keywords: 算法, 全排列, 递归
 ### 问题描述
 
 实现一个简单的全排列算法，以整形数组{1,2,3,4,5}为例，假设元素无重复。
- 
+
 ### 问题分析
 
 如果用多层循环来实现，那么……有多少个元素将需要有多少层循环，这样作为实现一个算法的角度来看显然是不可取的。
@@ -35,7 +35,7 @@ keywords: 算法, 全排列, 递归
 ```
 
 然后分别求它们后四个元素的全排列，依此类推。
- 
+
 ### 简单的 C++ 实现
 
 ```cpp
@@ -51,7 +51,7 @@ void swapint(int *p, int *q)
     *q = tmp;
 }
 
-void fullarray(int a[], 
+void fullarray(int a[],
         int iLen,   // 数组长度
         int iStart) // 开始下标
 {
@@ -84,5 +84,27 @@ int main()
     return 0;
 }
 ```
- 
+
+### JavaScript 实现
+
+```js
+let str = [1, 2, 3, 4, 5];
+let count = 0;
+function arrange(s) {
+  for (let i = 0, length = str.length; i < length; i++) {
+    if (s.length === length - 1) {
+      if (s.indexOf(str[i]) < 0) {
+        count++;
+        console.log("组合" + count + "=" + s + str[i]);
+      }
+      continue;
+    }
+    if (s.indexOf(str[i]) < 0) {
+      arrange(s + str[i]);
+    }
+  }
+}
+arrange("");
+```
+
 参考：<http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html>
