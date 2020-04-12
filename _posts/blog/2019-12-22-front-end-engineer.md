@@ -106,15 +106,19 @@ keywords: 前端学习之路
    - **[透视HTTP协议](https://time.geekbang.org/column/intro/189){:target='_blank'}【全方位理解HTTP及其继承者】**
    - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}【在看，值得再看至少一遍】**
    - [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='_blank'}
+   - [白话法律42讲](https://time.geekbang.org/column/intro/132){:target='_blank'}(在看)
 
 #### 极客时间视频
    - [玩转webpack-全方位掌握webpack核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='_blank'}
    - [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='_blank'}(在看)
+   - [Linux实战技能100讲](https://time.geekbang.org/course/intro/193){:target='_blank'}(在看)
+   - [Elasticsearch核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='_blank'}(在看)
 
 ### 掘金
 #### 掘金小册
 
 ### LeetCode
    - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='_blank'}
+
 ### 其他经典
    
