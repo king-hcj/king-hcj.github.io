@@ -21,7 +21,7 @@
     
 
     
-    <link rel="canonical" href="http://localhost:5001/2011/11/20/permutation/">
+    <link rel="canonical" href="http://localhost:5001/2017/07/20/permutation/">
     <link rel="alternate" type="application/atom+xml" title="Cheney King" href="http://localhost:5001/feed.xml">
     <link rel="shortcut icon" href="http://localhost:5001/favicon.ico">
     
@@ -37,12 +37,12 @@
     
         
     
-    <meta property="og:url" content="http://localhost:5001/2011/11/20/permutation/">
+    <meta property="og:url" content="http://localhost:5001/2017/07/20/permutation/">
     <meta property="og:site_name" content="Cheney King">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
     
-    <meta property="article:published_time" content="2011-11-20">
+    <meta property="article:published_time" content="2017-07-20">
     
     <script src="http://localhost:5001/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="http://localhost:5001/assets/js/jquery-ui.js"></script>
@@ -83,7 +83,7 @@
         <div class="collection-info">
           
           <span class="meta-info">
-            <span class="octicon octicon-calendar"></span> 2011/11/20
+            <span class="octicon octicon-calendar"></span> 2017/07/20
           </span>
           
           
@@ -92,7 +92,7 @@
             <a href="http://localhost:5001/categories/#Algorithm" title="Algorithm">Algorithm</a>
           </span>
           
-          <span style="color:#ededed;font-size: 14px">本文共870字,阅读全文约需3分钟</span>
+          <span style="color:#ededed;font-size: 14px">本文共1720字,阅读全文约需6分钟</span>
         </div>
       </div>
     </div>
@@ -146,7 +146,7 @@
     <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">fullarray</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span> 
+<span class="kt">void</span> <span class="nf">fullarray</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span>
         <span class="kt">int</span> <span class="n">iLen</span><span class="p">,</span>   <span class="c1">// 数组长度</span>
         <span class="kt">int</span> <span class="n">iStart</span><span class="p">)</span> <span class="c1">// 开始下标</span>
 <span class="p">{</span>
@@ -180,6 +180,62 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<h3 id="javascript-实现">JavaScript 实现</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">arrange</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">length</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">组合</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">count</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+      <span class="p">}</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">arrange</span><span class="p">(</span><span class="nx">s</span> <span class="o">+</span> <span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">arrange</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * 实现全排列
+ */</span>
+<span class="kd">var</span> <span class="nx">fullpermutate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//遍历每一项</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">m</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">m</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//拿到当前的元素</span>
+      <span class="kd">var</span> <span class="nx">left</span> <span class="o">=</span> <span class="nx">str</span><span class="p">[</span><span class="nx">m</span><span class="p">];</span>
+      <span class="c1">//除当前元素的其他元素组合</span>
+      <span class="kd">var</span> <span class="nx">rest</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">m</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">));</span>
+      <span class="c1">//上一次递归返回的全排列</span>
+      <span class="kd">var</span> <span class="nx">preResult</span> <span class="o">=</span> <span class="nx">fullpermutate</span><span class="p">(</span><span class="nx">rest</span><span class="p">);</span>
+      <span class="c1">//组合在一起</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">preResult</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="p">[</span><span class="nx">left</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">preResult</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">tmp</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// 去重</span>
+  <span class="kd">let</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">result</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+    <span class="c1">//  if (!res.includes(str)) res.push(str)</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">fullpermutate</span><span class="p">([</span><span class="dl">"</span><span class="s2">word</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">good</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">best</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">])</span>
+</code></pre></div></div>
+
 <p>参考：<a href="http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html">http://www.cnblogs.com/nokiaguy/archive/2008/05/11/1191914.html</a></p>
 
     </article>
@@ -197,7 +253,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/2011/11/20/permutation/',
+            id: '/2017/07/20/permutation/',
             clientID: 'bc269064fe241728eb14',
             clientSecret: '0f2e89e4b56f4580e067356a0900c95968284917',
             repo: 'king-hcj.github.io',
@@ -271,7 +327,7 @@ SimpleJekyllSearch({
                     <a href="javascript:window.scrollTo(0,0)" >TOP</a>
                 </li>
             </ul>
-            <a href="https://github.com/king-hcj/king-hcj.github.io" target="_blank" aria-label="view source code">
+            <a href="" target="_blank" aria-label="view source code">
                 <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
             </a>
             <ul class="site-footer-links mobile-hidden">

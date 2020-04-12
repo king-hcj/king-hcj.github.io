@@ -68,31 +68,17 @@
 
   
     {
-      "title"    : "C++ 语言基础",
-      "category" : "Basis",
-      
-      "url"      : "http://localhost:5001/2011/11/04/basis/"
-    } ,
-  
-    {
-      "title"    : "操作系统和数据库基础",
-      "category" : "Basis",
-      
-      "url"      : "http://localhost:5001/2011/11/06/basis/"
-    } ,
-  
-    {
       "title"    : "简单的全排列算法实现",
       "category" : "Algorithm",
       
-      "url"      : "http://localhost:5001/2011/11/20/permutation/"
+      "url"      : "http://localhost:5001/2017/07/20/permutation/"
     } ,
   
     {
       "title"    : "VBA 在 Excel 中的常用操作",
       "category" : "Excel",
       
-      "url"      : "http://localhost:5001/2012/03/22/vba-knowledge/"
+      "url"      : "http://localhost:5001/2017/08/22/vba-knowledge/"
     } ,
   
     {
@@ -103,7 +89,7 @@
     } ,
   
     {
-      "title"    : "慕课视频等综合学习笔记",
+      "title"    : "慕课视频等综合学习笔记(爱用宝)",
       "category" : "Comprehensive",
       
       "url"      : "http://localhost:5001/2018/12/12/aiyongbao-study/"
@@ -208,6 +194,13 @@
     } ,
   
     {
+      "title"    : "前端ARTS打卡计划",
+      "category" : "ARTS",
+      
+      "url"      : "http://localhost:5001/2020/04/11/arts/"
+    } ,
+  
+    {
       "title"    : "Android Studio",
       "category" : "Android",
       
@@ -215,24 +208,10 @@
     } ,
   
     {
-      "title"    : "Badminton",
-      "category" : "Hobbies",
-      
-      "url"      : "http://localhost:5001/wiki/badminton/"
-    } ,
-  
-    {
       "title"    : "中文文案排版指北（简体中文版）",
       "category" : "Copywriting",
       
       "url"      : "http://localhost:5001/wiki/chinese-copywriting-guidelines/"
-    } ,
-  
-    {
-      "title"    : "Eclipse",
-      "category" : "Eclipse",
-      
-      "url"      : "http://localhost:5001/wiki/eclipse/"
     } ,
   
     {
@@ -264,13 +243,6 @@
     } ,
   
     {
-      "title"    : "MPV",
-      "category" : "Tools",
-      
-      "url"      : "http://localhost:5001/wiki/mpv/"
-    } ,
-  
-    {
       "title"    : "MySQL",
       "category" : "MySQL",
       
@@ -282,13 +254,6 @@
       "category" : "php",
       
       "url"      : "http://localhost:5001/wiki/php/"
-    } ,
-  
-    {
-      "title"    : "PowerShell",
-      "category" : "Windows",
-      
-      "url"      : "http://localhost:5001/wiki/powershell/"
     } ,
   
     {
@@ -310,20 +275,6 @@
       "category" : "Vim",
       
       "url"      : "http://localhost:5001/wiki/vim/"
-    } ,
-  
-    {
-      "title"    : "Visual Studio Code",
-      "category" : "Tools",
-      
-      "url"      : "http://localhost:5001/wiki/visual-studio-code/"
-    } ,
-  
-    {
-      "title"    : "Windows Terminal",
-      "category" : "Tools",
-      
-      "url"      : "http://localhost:5001/wiki/windows-terminal/"
     } 
   
 ]
