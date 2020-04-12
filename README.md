@@ -51,7 +51,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
    pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
 
-6. 安装ruby(Ruby+Devkit, ffi requires Ruby version >= 2.2, < 2.7.dev。ruby安装完，会出现有个选项，让你安装MSYS2，如果没有勾选，后面自己打开cmd，输入`ridk install`进行MSYS2的安装，会出现让你选择123，选3就行。装好会让你再做一次123选择，这个时候不需要选了，直接enter退出就行了)。安装jekyll（`gem install jekyll`）;`jekyll serve`启动项目(如果报` Could not find concurrent-ruby-1.1.5 in any of the sources (Bundler::GemNotFound)`,可尝试运行`bundle install`)。运行相关问题可参考：
+6. 安装ruby(Ruby+Devkit, ffi requires Ruby version >= 2.2, < 2.7.dev。ruby安装完，会出现有个选项，让你安装MSYS2，如果没有勾选，后面自己打开cmd，输入`ridk install`进行MSYS2的安装，会出现让你选择123，选3就行。装好会让你再做一次123选择，这个时候不需要选了，直接enter退出就行了)。安装jekyll（`gem install jekyll`）;`jekyll serve`或者`bundle exec jekyll serve`启动项目(如果报` Could not find concurrent-ruby-1.1.5 in any of the sources (Bundler::GemNotFound)`,可尝试运行`bundle install`)。运行相关问题可参考：
 - [windows系统下安装jekyll报错：Error installing jekyll](https://segmentfault.com/q/1010000013418668);
 - [windows安装jekyll步骤及问题](https://blog.csdn.net/mouday/article/details/79300135);
 - [同行问题汇总](https://github.com/zhang0peter/zhang0peter.github.io);
