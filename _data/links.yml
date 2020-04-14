@@ -34,6 +34,10 @@
   url: https://coolshell.cn
   src: www
 
+- name: JavaScript 算法与数据结构
+  url: https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md
+  src: www
+
 - name: 日新亭
   url: http://www.fengerzh.com/
   src: www
