@@ -532,6 +532,32 @@ style={ { width: 'calc(100% - 80px)' } }
     }
    ```
 
+6. AntD Select mode="multiple" 超出滚动样式
+```js
+<Select
+  allowClear
+  mode="multiple"
+  placeholder="请选择调整类型..."
+  value={value}
+  onChange={this.change}}
+  style={{ width: '260px' }}
+>
+  {Options.map(item => (
+    <Select.Option key={item.id} value={item.value}>
+      {item.name}
+    </Select.Option>
+  ))}
+</Select>
+```
+```css
+/* 通过选择器定位ant-select-selection类或者类所在div，设置如下样式：*/
+/* 无法居中时，可能需要设置父级display: flex; */
+.ant-select-selection {
+    overflow: auto;
+    height: 32px;
+  }
+```
+
 ## 其他
 1. [Chrome浏览器百度云倍速播放](https://blog.csdn.net/u013044310/article/details/80444695){:target='_blank'}：
     ```javascript
