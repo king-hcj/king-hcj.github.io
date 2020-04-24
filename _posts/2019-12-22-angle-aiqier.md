@@ -540,8 +540,8 @@ style={ { width: 'calc(100% - 80px)' } }
   mode="multiple"
   placeholder="请选择调整类型..."
   value={value}
-  onChange={this.change}}
-  style={{ width: '260px' }}
+  onChange={this.change}
+  style={ { width: '260px' } }
 >
   {Options.map(item => (
     <Select.Option key={item.id} value={item.value}>
