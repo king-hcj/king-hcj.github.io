@@ -532,7 +532,8 @@ style={ { width: 'calc(100% - 80px)' } }
     }
    ```
 
-6. AntD Select mode="multiple" 超出滚动样式
+6. AntD Select mode="multiple" 超出滚动样式   
+
 ```js
 <Select
   allowClear
@@ -549,7 +550,8 @@ style={ { width: 'calc(100% - 80px)' } }
   ))}
 </Select>
 ```
-```css
+
+```scss
 /* 通过选择器定位ant-select-selection类或者类所在div，设置如下样式：*/
 /* 无法居中时，可能需要设置父级display: flex; */
 .ant-select-selection {
