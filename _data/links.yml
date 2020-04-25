@@ -57,3 +57,7 @@
 - name: SpeedCoder
   url: http://www.speedcoder.net
   src: life
+
+- name: Typing club
+  url: https://www.typingclub.com
+  src: life
