@@ -36,6 +36,18 @@ content!!!
 [Markdown常用符号及排版](https://blog.csdn.net/u013914471/article/details/82973812){:target='_blank'}   
 >>>文中提到的特殊符号语法，经测是无法展示的；正确展示方法是`&gamma;`而不是类似文中的`\gamma`；(&gamma;)；竖线'|'如果无法正常显示，可输入'&#124;'
 
+## 自定义代码片段snippets
+   - [自定义代码片段snippets](https://www.jianshu.com/p/1f1132df1def){:target='_blank'}
+   - markdown默认是不启动智能提示的，因此快捷生成代码片段也就用不了了，因此我们需要开启智能提示：
+      - File -> Preference -> Settings，搜索`editor.quick`或`[markdown`，找到`[markdown]Configure editor settings to be overridden for [markdown] language.`
+      - 点击`Edit in settings.json`
+      - 添加如下配置：
+         ```json
+         "[markdown]": {
+            "editor.quickSuggestions": true
+         }
+         ````
+
 ## 在表格单元格里换行
 
 借助于 HTML 里的 `<br />` 实现。
