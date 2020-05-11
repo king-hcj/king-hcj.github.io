@@ -96,7 +96,7 @@ keywords: 前端学习之路
    - [计算机基础——更适合程序员的编程必备基础知识](https://coding.imooc.com/class/355.html){:target='_blank'}(在看)
    - [React源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='_blank'}(在看)
    - **[微信小程序入门与实战](https://coding.imooc.com/learn/list/424.html){:target='_blank'}【拥有基本的小程序开发能力，非框架】**
-   - [Nginx入门到实践－Nginx中间件](https://coding.imooc.com/class/121.html){:target='_blank'}(在看)
+   - [Nginx入门到实践－Nginx中间件](https://coding.imooc.com/class/121.html){:target='_blank'}
 
 
 #### 慕课专栏
