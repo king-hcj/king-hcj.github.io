@@ -455,6 +455,12 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    - 任务管理器详细信息，根据pid结束任务
    > [https://www.cnblogs.com/kaka6k66k/p/11288137.html](https://www.cnblogs.com/kaka6k66k/p/11288137.html){:target='_blank'}
 
+26. [Antd Select](https://3x.ant.design/components/select-cn/){:target='_blank'}组件属性
+   - showSearch：使用Select的时候, 选项比较多, 通过输入来筛选选项；
+   - labelInValue：是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 string 变为 {key: string, label: ReactNode} 的格式；默认情况下 onChange 里只能拿到 value，如果需要拿到选中的节点文本 label，可以使用 labelInValue 属性。选中项的 label 会被包装到 value 中传递给 onChange 等函数，此时 value 是一个对象。
+   - optionFilterProp：搜索时过滤对应的 option 属性，如设置为 children 表示对内嵌内容进行搜索。（默认值为'value'）
+   - optionLabelProp：回填到选择框的 Option 的属性值，默认是 Option 的子元素。
+
 ## HTML
 
 ## CSS
