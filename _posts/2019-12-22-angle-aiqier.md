@@ -205,7 +205,11 @@ const HelloMessage = (props)=>(
    - 问题：本地代码运行ok，但是发现push上去的代码运行后报错，发现有个文件没注意大小写，于是重命名了该文件，发现git没有识别这个更改，不能提交
    - 查看git 的设置:git config --get core.ignorecase
    - git默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改
-   - 更改设置解决:git config core.ignorecase false
+   - 更改设置解决:git config core.ignorecase false   
+3. git push代码，window下：   
+   ```error: RPC failed; HTTP 401 curl 22 The requested URL returned error: 401```   
+解决：(修改remote origin，在协议后加name@)   
+   ```cd .git;vim config; url = http://name@XXXXX:30000/XXX/XXX.git```   
 
 ## JS
 1. [js判断对象是否为空对象的几种方法](https://blog.csdn.net/qq_38627581/article/details/77353015){:target='_blank'}
@@ -461,12 +465,7 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
    - optionFilterProp：搜索时过滤对应的 option 属性，如设置为 children 表示对内嵌内容进行搜索。（默认值为'value'）
    - optionLabelProp：回填到选择框的 Option 的属性值，默认是 Option 的子元素。
 
-27. git push代码，window下：   
-   ```error: RPC failed; HTTP 401 curl 22 The requested URL returned error: 401```   
-解决：(修改remote origin，在协议后加name@)   
-   ```cd .git;vim config; url = http://name@XXXXX:30000/XXX/XXX.git```
-
-28. ReferenceError: primordials is not defined：可能是node版本过高的原因，可以用nvm管理node版本。nvm全名node.js version management，是一个nodejs的版本管理工具。通过它可以安装和切换不同版本的nodejs。
+27. ReferenceError: primordials is not defined：可能是node版本过高的原因，可以用nvm管理node版本。nvm全名node.js version management，是一个nodejs的版本管理工具。通过它可以安装和切换不同版本的nodejs。
    - 命令提示
       - nvm arch ：显示node是运行在32位还是64位。
       - nvm install <version> [arch] ：安装node， version是特定版本也可以是最新稳定版本latest。可选参数arch指定安装32位还是64位版本，默认是系统位数。可以添加--insecure绕过远程服务器的SSL。
