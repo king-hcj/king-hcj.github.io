@@ -18,19 +18,19 @@ keywords: Excel
 ```JavaScript
 import XLSX from 'xlsx';
 
-// // csv转sheet对象
-// function csv2sheet(csv) {
-//     var sheet = {}; // 将要生成的sheet
-//     csv = csv.split('\n');
-//     csv.forEach(function (row, i) {
-//         row = row.split(',');
-//         if (i == 0) sheet['!ref'] = 'A1:' + String.fromCharCode(65 + row.length - 1) + (csv.length - 1);
-//         row.forEach(function (col, j) {
-//             sheet[String.fromCharCode(65 + j) + (i + 1)] = { v: col };
-//         });
-//     });
-//     return sheet;
-// }
+// csv转sheet对象
+function csv2sheet(csv) {
+    var sheet = {}; // 将要生成的sheet
+    csv = csv.split('\n');
+    csv.forEach(function (row, i) {
+        row = row.split(',');
+        if (i == 0) sheet['!ref'] = 'A1:' + String.fromCharCode(65 + row.length - 1) + (csv.length - 1);
+        row.forEach(function (col, j) {
+            sheet[String.fromCharCode(65 + j) + (i + 1)] = { v: col };
+        });
+    });
+    return sheet;
+}
 
 // 将一个sheet转成最终的excel文件的blob对象，然后利用URL.createObjectURL下载
 function sheet2blob(sheet, sheetName) {
@@ -96,26 +96,34 @@ function openDownloadDialog(url, saveName) {
 }
 
 // 传入csv，执行后就会弹出下载框
-const exportExcel = (data, merges, cols, rows, title) => {
-  // var sheet = csv2sheet(csv);
-  // var blob = sheet2blob(sheet);
-  // openDownloadDialog(blob, '导出.xlsx')
-  // var aoa = [
-  //     ['主要信息', null, null, '其它信息'], // 特别注意合并的地方后面预留2个null
-  //     ['姓名', '性别', '年龄', '注册时间'],
-  //     ['张三', '男', 18, new Date()],
-  //     ['李四', '女', 22, new Date()]
-  // ];
-  // var sheet = XLSX.utils.aoa_to_sheet(aoa);
+const exportExcel1 = (csv) => {
+  var sheet = csv2sheet(csv);
+  var blob = sheet2blob(sheet);
+  openDownloadDialog(blob, '导出.xlsx')
+};
+
+// 利用工具，简化csv2sheet的操作
+const exportExcel2 = () => {
+  var aoa = [
+      ['主要信息', null, null, '其它信息'], // 特别注意合并的地方后面预留2个null
+      ['姓名', '性别', '年龄', '注册时间'],
+      ['张三', '男', 18, new Date()],
+      ['李四', '女', 22, new Date()]
+  ];
+  var sheet = XLSX.utils.aoa_to_sheet(aoa);
+  openDownloadDialog(sheet2blob(sheet), '导出.xlsx');
+};
+
+// 接收自定义参数，支持较复杂excel导出
+const exportExcel3 = (data, merges, cols, rows, title) => {
   var sheet = XLSX.utils.aoa_to_sheet(data);
-  let len = data.length;
   sheet['!merges'] = merges || [];
   sheet['!rows'] = rows;
   sheet['!cols'] = cols;
   openDownloadDialog(sheet2blob(sheet), `${title || '导出'}.xlsx`);
 };
 
-export { exportExcel };
+export { exportExcel1, exportExcel2, exportExcel3 };
 
 ```
 
