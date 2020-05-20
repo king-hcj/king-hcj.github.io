@@ -12,8 +12,8 @@ keywords: Excel
 
 &emsp;&emsp;数据是以行进行组织的，需要定义每一行的数据，支持列的合并等复杂较需求。
 
->>>[如何使用JavaScript实现纯前端读取和导出excel文件](https://www.cnblogs.com/liuxianan/p/js-excel.html){:target='_blank'}   
->>>[sheetjs](https://github.com/SheetJS/sheetjs){:target='_blank'}
+> > > [如何使用 JavaScript 实现纯前端读取和导出 excel 文件](https://www.cnblogs.com/liuxianan/p/js-excel.html){:target='\_blank'}  
+> > > [sheetjs](https://github.com/SheetJS/sheetjs){:target='\_blank'}
 
 ```JavaScript
 import XLSX from 'xlsx';
@@ -111,12 +111,17 @@ const exportExcel2 = () => {
       ['李四', '女', 22, new Date()]
   ];
   var sheet = XLSX.utils.aoa_to_sheet(aoa);
+  sheet['!merges'] = [
+    // 设置A1-C1的单元格合并
+      {s: {r: 0, c: 0}, e: {r: 0, c: 2}}
+  ];
   openDownloadDialog(sheet2blob(sheet), '导出.xlsx');
 };
 
 // 接收自定义参数，支持较复杂excel导出
 const exportExcel3 = (data, merges, cols, rows, title) => {
   var sheet = XLSX.utils.aoa_to_sheet(data);
+  // 参考exportExcel2的 sheet['!merges']写法
   sheet['!merges'] = merges || [];
   sheet['!rows'] = rows;
   sheet['!cols'] = cols;
@@ -126,6 +131,9 @@ const exportExcel3 = (data, merges, cols, rows, title) => {
 export { exportExcel1, exportExcel2, exportExcel3 };
 
 ```
+
+exportExcel3 参考样例：  
+![导出excel]({{site.url}}{{site.baseurl}}/images/posts/javascript/excel.png?raw=true)
 
 ## [FileSaver.js](https://github.com/eligrey/FileSaver.js){:target='\_blank'} 方案
 
