@@ -6,7 +6,7 @@ description: 纯前端生成Excel
 keywords: Excel
 ---
 
-&emsp;&emsp;前端生成 Excel。
+&emsp;&emsp;纯前端代码生成 Excel。
 
 ## SheetJS js-xlsx 方案
 
