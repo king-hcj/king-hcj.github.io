@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 前端生成Excel
+title: 纯前端生成Excel
 categories: JavaScript
-description: 前端生成Excel
+description: 纯前端生成Excel
 keywords: Excel
 ---
 
@@ -12,7 +12,7 @@ keywords: Excel
 
 &emsp;&emsp;数据是以行进行组织的，需要定义每一行的数据，支持列的合并等复杂较需求。
 
->>>[如何使用JavaScript实现纯前端读取和导出excel文件](https://www.cnblogs.com/liuxianan/p/js-excel.html){:target='_blank'}
+>>>[如何使用JavaScript实现纯前端读取和导出excel文件](https://www.cnblogs.com/liuxianan/p/js-excel.html){:target='_blank'}   
 >>>[sheetjs](https://github.com/SheetJS/sheetjs){:target='_blank'}
 
 ```JavaScript
