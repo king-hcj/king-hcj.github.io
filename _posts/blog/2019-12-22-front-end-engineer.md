@@ -120,7 +120,7 @@ keywords: 前端学习之路
 #### 掘金小册
 
 ### LeetCode
-   - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='_blank'}
+   - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='_blank'}（每周至少三题）
 
 ### 其他经典
    
