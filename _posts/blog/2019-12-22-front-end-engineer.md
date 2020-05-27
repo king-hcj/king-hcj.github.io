@@ -108,6 +108,7 @@ keywords: 前端学习之路
    - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}【在看，值得再看至少一遍】**
    - [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='_blank'}
    - [白话法律42讲](https://time.geekbang.org/column/intro/132){:target='_blank'}
+   - [如何做好一场技术演讲](https://time.geekbang.org/column/intro/61){:target='_blank'}
 
 #### 极客时间视频
    - [玩转webpack-全方位掌握webpack核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='_blank'}
