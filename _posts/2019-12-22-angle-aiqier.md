@@ -524,6 +524,32 @@ MessageChannel创建了一个通信的管道，这个管道有两个端口，每
           }
         }
       ```
+    - css全局作用域(:global)和局部作用域（:local）
+      ```css
+        :local(.title) {
+          color: red;
+        }
+        //上面这种写法相当于
+        .title{
+          color: red;
+        }
+        
+        :global(.title) {
+          color: green;
+        }
+      ```
+      ```css
+        <!-- 修改antd样式 -->
+        :global{
+          .ant-select-selection{
+                background-color: grey; //设置颜色
+            }
+        }
+        :global(.has-error .ant-form-explain){
+          position: absolute;
+        }
+      ```
+    - [CSS Modules 用法教程](http://www.ruanyifeng.com/blog/2016/06/css_modules.html){:target='_blank'}
 
 4. React行内calc的使用：
 ```js
