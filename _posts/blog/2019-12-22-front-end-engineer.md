@@ -123,7 +123,7 @@ keywords: 前端学习之路
 - [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='\_blank'}
 - [白话法律 42 讲](https://time.geekbang.org/column/intro/132){:target='\_blank'}
 - [如何做好一场技术演讲](https://time.geekbang.org/column/intro/61){:target='\_blank'}
-- [图解 Google V8](https://time.geekbang.org/column/intro/100048001){:target='\_blank'}
+- [图解 Google V8](https://time.geekbang.org/column/intro/100048001){:target='\_blank'}（在看）
 
 #### 极客时间视频
 
