@@ -105,7 +105,7 @@ keywords: 前端学习之路
 #### 极客时间专栏
    - [《JavaScript核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='_blank'}
    - **[透视HTTP协议](https://time.geekbang.org/column/intro/189){:target='_blank'}【全方位理解HTTP及其继承者】**
-   - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}【在看，值得再看至少一遍】**
+   - **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='_blank'}【值得再看至少一遍】**
    - [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='_blank'}
    - [白话法律42讲](https://time.geekbang.org/column/intro/132){:target='_blank'}
    - [如何做好一场技术演讲](https://time.geekbang.org/column/intro/61){:target='_blank'}
