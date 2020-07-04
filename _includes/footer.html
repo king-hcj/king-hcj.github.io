@@ -21,14 +21,19 @@
                 </li>
                 {% endfor %}
                 <li><a href="{{ site.url }}{{ site.subscribe_rss }}"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+                <span id="busuanzi_container_site_pv" style="margin: 0 5px">
+                  本站总访问量<span id="busuanzi_value_site_pv" style="margin: 0 3px;">
+                    <i class="fa fa-spinner fa-spin"></i>
+                  </span>次
+              </span>
             </ul>
-
         </div>
     </footer>
     <div class="tools-wrapper">
       <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
     </div>
     <!-- / footer -->
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="{{ site.url }}/assets/vendor/share.js/dist/js/share.min.js"></script>
     <script src="{{ site.url }}/assets/js/geopattern.js"></script>
     <script src="{{ site.url }}/assets/js/prism.js"></script>
