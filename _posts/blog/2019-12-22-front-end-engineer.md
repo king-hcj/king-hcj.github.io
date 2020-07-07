@@ -136,6 +136,10 @@ keywords: 前端学习之路
 
 #### 掘金小册
 
+### 拉勾教育
+
+- [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}
+
 ### LeetCode
 
 - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='\_blank'}（每周至少三题）
