@@ -123,3 +123,27 @@
     background-color: #777;
     border-radius: 10px;
 }
+
+/*添加按钮*/
+.highlight pre {
+    position: relative;
+  }
+  .highlight pre > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+    display:none;
+  }
+  .highlight pre:hover > span {
+    display:block;
+  }
+  .highlight pre > .copyed {
+    background: #67c23a;
+  }
+  
