@@ -584,6 +584,8 @@ style={ { width: 'calc(100% - 80px)' } }
     }
    ```
 
+   - 列的左中右对齐方式，除了可以使用上条方法设置样式之外，还可以通过Column的`align`属性来实现，可选值有`'left' | 'right' | 'center'`默认`left`。
+
 6. AntD Select mode="multiple" 超出滚动样式   
 
 ```js
