@@ -178,10 +178,11 @@ exportExcel3 参考样例：
   import { exportCsv } from "./utils.js";
   // 导出函数
   const doExport = () => {
-    // columns配置生成excel的列
+    // columns配置生成excel的列（columns为antD table的columns）
     let keys = _.map(columns, "dataIndex");
     let column = _.map(columns, "title");
     let dataList = list.map((item) => {
+      // 可以做一些数据处理
       item.requestTime = moment
         .unix(item.requestTime)
         .format("YYYY-MM-DD HH:mm:ss");
