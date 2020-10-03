@@ -1,4 +1,4 @@
-#  Cheney King
+# Cheney King
 
 我的个人博客：<https://king-hcj.github.io/>，欢迎 Star 和 Fork。
 
@@ -6,11 +6,11 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [效果预览](#效果预览)
-* [Fork 指南](#fork-指南)
-* [贴心提示](#贴心提示)
-* [经验与思考](#经验与思考)
-* [致谢](#致谢)
+- [效果预览](#效果预览)
+- [Fork 指南](#fork-指南)
+- [贴心提示](#贴心提示)
+- [经验与思考](#经验与思考)
+- [致谢](#致谢)
 
 <!-- vim-markdown-toc -->
 
@@ -42,19 +42,22 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
    如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
 
-   * \_posts 文件夹中是我已发布的博客文章。
-   * \_drafts 文件夹中是我尚未发布的博客文章。
-   * \_wiki 文件夹中是我已发布的 wiki 页面。
-   * images 文件夹中是我的文章和页面里使用的图片。
+   - \_posts 文件夹中是我已发布的博客文章。
+   - \_drafts 文件夹中是我尚未发布的博客文章。
+   - \_wiki 文件夹中是我已发布的 wiki 页面。
+   - images 文件夹中是我的文章和页面里使用的图片。
 
 5. 修改「关于」页面。
 
    pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
 
-6. 安装ruby(Ruby+Devkit, ffi requires Ruby version >= 2.2, < 2.7.dev。ruby安装完，会出现有个选项，让你安装MSYS2，如果没有勾选，后面自己打开cmd，输入`ridk install`进行MSYS2的安装，会出现让你选择123，选3就行。装好会让你再做一次123选择，这个时候不需要选了，直接enter退出就行了)。安装jekyll（`gem install jekyll`）;`jekyll serve`或者`bundle exec jekyll serve`启动项目(如果报` Could not find concurrent-ruby-1.1.5 in any of the sources (Bundler::GemNotFound)`,可尝试运行`bundle install`)。运行相关问题可参考：
-- [windows系统下安装jekyll报错：Error installing jekyll](https://segmentfault.com/q/1010000013418668);
-- [windows安装jekyll步骤及问题](https://blog.csdn.net/mouday/article/details/79300135);
+6. 安装 ruby(Ruby+Devkit, ffi requires Ruby version >= 2.2, < 2.7.dev。ruby 安装完，会出现有个选项，让你安装 MSYS2，如果没有勾选，后面自己打开 cmd，输入`ridk install`进行 MSYS2 的安装，会出现让你选择 123，选 3 就行。装好会让你再做一次 123 选择，这个时候不需要选了，直接 enter 退出就行了)。安装 jekyll（`gem install jekyll`）;`jekyll serve`或者`bundle exec jekyll serve`启动项目(如果报` Could not find concurrent-ruby-1.1.5 in any of the sources (Bundler::GemNotFound)`,可尝试运行`bundle install`)。运行相关问题可参考：
+
+- [windows 系统下安装 jekyll 报错：Error installing jekyll](https://segmentfault.com/q/1010000013418668);
+- [windows 安装 jekyll 步骤及问题](https://blog.csdn.net/mouday/article/details/79300135);
 - [同行问题汇总](https://github.com/zhang0peter/zhang0peter.github.io);
+
+7. 如果出现类似`Liquid Exception: undefined method 'map' for false:FalseClass Did you mean?`的报错，可尝试删除`_site`目录然后重试。
 
 ## 贴心提示
 
@@ -64,17 +67,17 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 经验与思考
 
-* 简约，尽量每个页面都不展示多余的内容。
+- 简约，尽量每个页面都不展示多余的内容。
 
-* 有时一图抵千言，有时可能只会拖慢网页加载速度。
+- 有时一图抵千言，有时可能只会拖慢网页加载速度。
 
-* 言之有物，不做无痛之呻吟。
+- 言之有物，不做无痛之呻吟。
 
-* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
+- 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
 
-* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
+- 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
 
-* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
+- 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
 
 ## 致谢
 
