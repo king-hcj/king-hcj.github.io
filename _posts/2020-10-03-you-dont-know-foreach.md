@@ -89,7 +89,7 @@ arr.forEachCustom((item) => {
 
 ## 追本溯源
 
-&emsp;&emsp;怎么办呢？咱不妨去看看 [ECMA 文档](http://www.ecma-international.org/ecma-262/11.0/index.html){:target='\_blank'}，看看 forEach 是怎么实现的：
+&emsp;&emsp;怎么办呢？咱不妨去看看 [ECMA 文档](http://www.ecma-international.org/ecma-262/11.0/index.html#sec-map.prototype.foreach){:target='\_blank'}，看看 forEach 是怎么实现的：
 
 ![forEach]({{site.url}}{{site.baseurl}}/images/posts/javascript/foreach.png?raw=true)
 
