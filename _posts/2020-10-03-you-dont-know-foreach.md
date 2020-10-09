@@ -123,12 +123,12 @@ Array.prototype.forEachCustom = function (fn, context) {
 // 示例3
 var words = ['one', 'two', 'three', 'four'];
 words.forEach(function (word) {
-  console.log(word); // one，two，four
+  console.log(word); // one，two，four（在迭代过程中删除元素，导致three被跳过，因为three的下标已经变成1，而下标为1的已经被遍历了过）
   if (word === 'two') {
     words.shift();
   }
 });
-var words = ['one', 'two', 'three', 'four']; // 重新初始化数组进行forEachCustom测试
+words = ['one', 'two', 'three', 'four']; // 重新初始化数组进行forEachCustom测试
 words.forEachCustom(function (word) {
   console.log(word); // one，two，four
   if (word === 'two') {
@@ -139,16 +139,16 @@ words.forEachCustom(function (word) {
 var arr = [1, 2, 3];
 arr.forEach((item) => {
   if (item == 2) {
-    arr.push(3);
     arr.push(4);
+    arr.push(5);
   }
-  console.log(item); // 1，2，3
+  console.log(item); // 1，2，3（迭代过程中在末尾增加元素，并不会使迭代次数增加）
 });
-var arr = [1, 2, 3];
+arr = [1, 2, 3];
 arr.forEachCustom((item) => {
   if (item == 2) {
-    arr.push(3);
     arr.push(4);
+    arr.push(5);
   }
   console.log(item); // 1，2，3
 });
@@ -173,6 +173,10 @@ arr.forEachCustom((item) => {
 - findIndex()
 
 ## 总结
+
+- forEach 不对未初始化的值进行任何操作（稀疏数组）；
+- 在迭代前，循环的次数就已经定了，且执行了循环，不代表就一定会执行回调函数；
+- 除了抛出异常以外，没有办法中止或跳出 forEach() 循环。
 
 &emsp;&emsp;遇到问题不可怕，多看文档，你总是会有不一样的收获。ECMA 文档：
 
