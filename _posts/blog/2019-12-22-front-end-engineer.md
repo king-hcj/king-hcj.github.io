@@ -128,7 +128,7 @@ keywords: 前端学习之路
 #### 极客时间视频
 
 - [玩转 webpack-全方位掌握 webpack 核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='\_blank'}
-- [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}(在看)
+- [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}
 - [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看)
 - [Elasticsearch 核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='\_blank'}(在看)
 
