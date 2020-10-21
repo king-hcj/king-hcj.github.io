@@ -735,7 +735,7 @@ for (var i = 0; i < 100; i++) {
 
 &emsp;&emsp;回调函数有两种类型：同步回调和异步回调，同步回调函数是在执行函数内部被执行的，而异步回调函数是在执行函数外部被执行的。  
 &emsp;&emsp;通用 UI 线程宏观架构：
-![通用UI线程架构]((https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true))
+![通用UI线程架构](https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true)
 &emsp;&emsp;UI 线程提供一个**消息队列**，并将待执行的事件添加到消息队列中，然后 UI 线程会不断循环地从消息队列中取出事件、执行事件。关于异步回调，这里也有两种不同的类型，其典型代表是 setTimeout 和 XMLHttpRequest：
 
 - setTimeout 的执行流程其实是比较简单的，在 setTimeout 函数内部封装回调消息，并将回调消息添加进消息队列，然后主线程从消息队列中取出回调事件，并执行回调函数。
