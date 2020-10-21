@@ -36,7 +36,7 @@ mov ax,bx         #汇编指令
 
 &emsp;&emsp;和[其他 JavaScript 引擎](https://baike.baidu.com/item/javascript%E5%BC%95%E6%93%8E/5356108?fr=aladdin)一样，**V8 会编译 / 执行 JavaScript 代码，管理内存，负责垃圾回收，与宿主语言的交互等。通过暴露宿主对象 ( 变量，函数等 ) 到 JavaScript，JavaScript 可以访问宿主环境中的对象，并在脚本中完成对宿主对象的操作**。
 
-![how-v8-works](/img/bVcHdVl)
+![how-v8-works](https://king-hcj.github.io/images/posts/arts/how-v8-works.png?raw=true)
 
 > 资料拓展：[v8 logo](https://v8.dev/logo) &#124; [V8 (JavaScript engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) &#124; [《V8、JavaScript+的现在与未来》](https://static001.geekbang.org/con/31/pdf/229180902/file/GMTC2018-%E3%80%8AV8%E3%80%81JavaScript+%E7%9A%84%E7%8E%B0%E5%9C%A8%E4%B8%8E%E6%9C%AA%E6%9D%A5%E3%80%8B-%E8%BF%B7%E6%B8%A1.pdf) &#124; [几张图让你看懂 WebAssembly](https://www.jianshu.com/p/bff8aa23fe4d)
 
@@ -200,19 +200,19 @@ console.log(%HasFastProperties(bar));
 - [Parser](https://v8.dev/blog/scanner)：负责将 JavaScript 源码转换为 Abstract Syntax Tree (AST)
 
     > 确切的说，在“Parser”将 JavaScript 源码转换为 AST前，还有一个叫”Scanner“的过程，具体流程如下：
-  ![Scanner](/img/bVcHD0u)
+  ![Scanner](https://king-hcj.github.io/images/posts/arts/overview.png?raw=true)
 
 - [Ignition](https://v8.dev/docs/ignition)：interpreter，即解释器，负责将 AST 转换为 Bytecode，解释执行 Bytecode；同时收集 TurboFan 优化编译所需的信息，比如函数参数的类型；解释器执行时主要有四个模块，内存中的字节码、寄存器、栈、堆。
 
   > **通常有两种类型的解释器，基于栈 (Stack-based)和基于寄存器 (Register-based)**，基于栈的解释器使用栈来保存函数参数、中间运算结果、变量等；基于寄存器的虚拟机则支持寄存器的指令操作，使用寄存器来保存参数、中间计算结果。通常，基于栈的虚拟机也定义了少量的寄存器，基于寄存器的虚拟机也有堆栈，其**区别体现在它们提供的指令集体系**。**大多数解释器都是基于栈的**，比如 Java 虚拟机，.Net 虚拟机，还有早期的 V8 虚拟机。基于堆栈的虚拟机在处理函数调用、解决递归问题和切换上下文时简单明快。而**现在的 V8 虚拟机则采用了基于寄存器的设计**，它将一些中间数据保存到寄存器中。  
-  > **基于寄存器的解释器架构**：![基于寄存器的解释器架构](/img/bVcHdQy)
+  > **基于寄存器的解释器架构**：![基于寄存器的解释器架构](https://king-hcj.github.io/images/posts/arts/register.jpg?raw=true)
   > 资料参考：[解释器是如何解释执行字节码的？](https://time.geekbang.org/column/article/224908)
 
 - [TurboFan](https://v8.dev/docs/turbofan)：compiler，即编译器，利用 Ignitio 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
 - [Orinoco](https://v8.dev/blog/trash-talk)：garbage collector，垃圾回收模块，负责将程序不再需要的内存空间回收。   
 
 &emsp;&emsp;其中，Parser，Ignition 以及 TurboFan 可以将 JS 源码编译为汇编代码，其流程图如下：
-![V8流程](/img/bVbu7OI)
+![V8流程](https://king-hcj.github.io/images/posts/arts/ignition-turbofan-pipeline.jpeg?raw=true)
 &emsp;&emsp;简单地说，**Parser 将 JS 源码转换为 AST，然后 Ignition 将 AST 转换为 Bytecode，最后 TurboFan 将 Bytecode 转换为经过优化的 Machine Code(实际上是汇编代码)**。
 
 - 如果函数没有被调用，则 V8 不会去编译它。
@@ -238,7 +238,7 @@ add('3', '5');
 
 - 在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
 - V8 执行一段 JavaScript 的流程图：
-  ![V8执行一段JavaScript流程图](/img/bVcHdQR)
+  ![V8执行一段JavaScript流程图](https://king-hcj.github.io/images/posts/arts/v8.jpg?raw=true)
 
   > 资料拓展：[V8 是如何执行一段 JavaScript 代码的？](https://time.geekbang.org/column/article/211682)
 
@@ -368,7 +368,7 @@ var bar = new Foo(10, 10);
 &emsp;&emsp;我们将保存在线性数据结构中的属性称之为“**快属性**”，因为线性数据结构中只需要通过索引即可以访问到属性，虽然访问线性结构的速度快，但是**如果从线性结构中添加或者删除大量的属性时，则执行效率会非常低，这主要因为会产生大量时间和内存开销**。因此，如果一个对象的属性过多时，V8 就会采取另外一种存储策略，那就是“**慢属性**”策略，但慢属性的对象内部会有独立的非线性数据结构 (字典) 作为属性存储容器。所有的属性元信息不再是线性存储的，而是直接保存在属性字典中。
 
 v8 属性存储：
-![v8属性存储](/img/bVcHdQX)
+![v8属性存储](https://king-hcj.github.io/images/posts/arts/properties.jpg?raw=true)
 
 总结：
 
@@ -517,7 +517,7 @@ Source Position Table (size = 0)
 - LdaSmi：将小整数（Smi）加载到累加器寄存器中
 - Return：结束当前函数的执行，并将控制权传回给调用方。返回的值是累加器中的值。
 
-![bytecode-ignition](/img/bVbu7OC)
+![bytecode-ignition](https://king-hcj.github.io/images/posts/arts/bytecode-ignition.jpg?raw=true)
 
 > [V8 中的字节码指令集](https://github.com/v8/v8/blob/master/src/interpreter/bytecodes.h)  | [理解 V8 的字节码「译」](https://zhuanlan.zhihu.com/p/28590489)
 
@@ -735,7 +735,7 @@ for (var i = 0; i < 100; i++) {
 
 &emsp;&emsp;回调函数有两种类型：同步回调和异步回调，同步回调函数是在执行函数内部被执行的，而异步回调函数是在执行函数外部被执行的。  
 &emsp;&emsp;通用 UI 线程宏观架构：
-![通用UI线程架构](/img/bVcHdRo)
+![通用UI线程架构]((https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true))
 &emsp;&emsp;UI 线程提供一个**消息队列**，并将待执行的事件添加到消息队列中，然后 UI 线程会不断循环地从消息队列中取出事件、执行事件。关于异步回调，这里也有两种不同的类型，其典型代表是 setTimeout 和 XMLHttpRequest：
 
 - setTimeout 的执行流程其实是比较简单的，在 setTimeout 函数内部封装回调消息，并将回调消息添加进消息队列，然后主线程从消息队列中取出回调事件，并执行回调函数。
@@ -749,7 +749,7 @@ for (var i = 0; i < 100; i++) {
 - **JavaScript 中之所以要引入微任务，主要是由于主线程执行消息队列中宏任务的时间颗粒度太粗了，无法胜任一些对精度和实时性要求较高的场景，微任务可以在实时性和效率之间做一个有效的权衡**。另外使用微任务，可以改变我们现在的异步编程模型，使得我们可以使用同步形式的代码来编写异步调用。
 - 微任务是基于消息队列、事件循环、UI 主线程还有堆栈而来的，然后基于微任务，又可以延伸出协程、Promise、Generator、await/async 等现代前端经常使用的一些技术。
 
-  ![微任务技术栈](/img/bVcHdRE)
+  ![微任务技术栈](https://king-hcj.github.io/images/posts/arts/microtask.jpg?raw=true)
 
   ```js
   // 不会使浏览器卡死
@@ -759,7 +759,7 @@ for (var i = 0; i < 100; i++) {
   foo();
   ```
 
-  ![调用栈、主线程、消息队列](/img/bVcHdRJ)
+  ![调用栈、主线程、消息队列](https://king-hcj.github.io/images/posts/arts/stack.jpg?raw=true)
   微任务：
 
 ```js
@@ -776,7 +776,7 @@ foo();
 
 #### 前端异步编程方案史
 
-![前端异步编程方案史](/img/bVcHdRS)
+![前端异步编程方案史](https://king-hcj.github.io/images/posts/arts/async.jpg?raw=true)
 
 - Callback 模式的异步编程模型需要实现大量的回调函数，大量的回调函数会打乱代码的正常逻辑，使得代码变得不线性、不易阅读，这就是我们所说的**回调地狱问题**。
 - Promise 能很好地解决回调地狱的问题，我们可以按照线性的思路来编写代码，这个过程是线性的，非常符合人的直觉。
