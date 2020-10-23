@@ -208,7 +208,7 @@ console.log(%HasFastProperties(bar));
   > **基于寄存器的解释器架构**：![基于寄存器的解释器架构](https://king-hcj.github.io/images/posts/arts/register.jpg?raw=true)
   > 资料参考：[解释器是如何解释执行字节码的？](https://time.geekbang.org/column/article/224908)
 
-- [TurboFan](https://v8.dev/docs/turbofan)：compiler，即编译器，利用 Ignitio 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
+- [TurboFan](https://v8.dev/docs/turbofan)：compiler，即编译器，利用 Ignition 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
 - [Orinoco](https://v8.dev/blog/trash-talk)：garbage collector，垃圾回收模块，负责将程序不再需要的内存空间回收。   
 
 &emsp;&emsp;其中，Parser，Ignition 以及 TurboFan 可以将 JS 源码编译为汇编代码，其流程图如下：
