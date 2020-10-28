@@ -107,6 +107,7 @@ Array.prototype.forEachCustom = function (fn, context) {
   let len = this.length;
   let k = 0;
   while (k < len) {
+    // ECMA文档使用的是HasProperty，在此，使用in应该比hasOwnProperty更确切
     if (this.hasOwnProperty(k)) {
       fn.call(context, this[k], k, this);
     }
