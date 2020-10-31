@@ -131,6 +131,7 @@ keywords: 前端学习之路
 - [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}
 - [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看)
 - [Elasticsearch 核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='\_blank'}(在看)
+- [Electron开发实战](https://time.geekbang.org/course/intro/100044201){:target='_blank'}（在看）
 
 ### 掘金
 
@@ -139,6 +140,10 @@ keywords: 前端学习之路
 ### 拉勾教育
 
 - [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}
+
+### GitChat专栏
+
+- [前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde){:target='_blank'}(在看)
 
 ### LeetCode
 
