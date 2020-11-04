@@ -1,12 +1,12 @@
 ---
 layout: post
-title: JavaScript 36 式
+title: JavaScript 72 式
 categories: JavaScript
-description: JavaScript 36 式，祝你更懂JS原理
+description: JavaScript 72 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
 ---
 
-&emsp;&emsp;JavaScript 36 式，祝你更懂JS原理。
+&emsp;&emsp;JavaScript 72 式，助你更懂JS原理。
 
 ## 1.toFixed()和1..toFixed()，哪个才不会报错？
   - Number(1).toFixed()
@@ -158,7 +158,16 @@ function add(a,b) {
 
 ## 对象属性会自己偷偷排队？
 
-## 36
+## 省省劲儿，setTimeout 不能让你的程序暂停
+
+  - 如果设置的 timeout 小于 0，则设置为 0
+  - 如果嵌套的层级超过了 5 层，并且 timeout 小于 4ms，则设置 timeout 为 4ms。
+
+  - [setTimeout, setInterval 与 requestAnimationFrame 隐藏的各种坑](https://blog.csdn.net/qingyafan/article/details/52335753){:target='_blank'}
+  - [参考](https://www.cnblogs.com/liuxiaoru/p/13637983.html){:target='_blank'}
+  - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='_blank'}
+
+## 37
 
 <!-- JavaScript  36 式（17，19，23，24）：
 常用方法的实现
