@@ -170,6 +170,7 @@ function add(a,b) {
 ## Web Components真有那么新鲜吗？
   - 也许你早已在使用
   - `<custom-label>aaa</custom-label> 会展示aaa`
+  - html很宽松，已经不在乎合法不合法，只要识别到了就解析，有对应的类，就先顺便把对应的脚本类解析绑定了
 
 ## 38 
 
