@@ -167,7 +167,11 @@ function add(a,b) {
   - [参考](https://www.cnblogs.com/liuxiaoru/p/13637983.html){:target='_blank'}
   - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='_blank'}
 
-## 37
+## Web Components真有那么新鲜吗？
+  - 也许你早已在使用
+  - `<custom-label>aaa</custom-label> 会展示aaa`
+
+## 38 
 
 <!-- JavaScript  36 式（17，19，23，24）：
 常用方法的实现
