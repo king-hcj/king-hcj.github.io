@@ -151,3 +151,5 @@ keywords: 前端学习之路
 - [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='\_blank'}（每周至少三题）
 
 ### 其他经典
+
+- [JavaScript 20 年](https://cn.history.js.org/){:target='_blank'}（在看）
