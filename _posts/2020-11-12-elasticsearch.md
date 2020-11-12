@@ -48,7 +48,7 @@ POST contract_info_suppliercontractinfo/_search
 }
 ```
 
-### 公共查询方法
+### 公共查询方法（参数拼接）
 
 ```ts
 /**
@@ -153,7 +153,7 @@ const searchParams: object = {
 console.log('-----searchParams-----', searchParams);
 ```
 
-### 示例
+### 生成示例
 
 ```js
 // 公共方法生成的查询语句
