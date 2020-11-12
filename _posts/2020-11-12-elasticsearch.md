@@ -32,7 +32,7 @@ POST contract_info_suppliercontractinfo/_search
           }
         }
       ],
-      // range可以像term一样写到must里面
+      // range可以像term一样写到must里面（金额等字段，以字符串形式存储该如何处理区间查询？）
       "filter": {
           "range": {
             "supplierContractStartDate": {
