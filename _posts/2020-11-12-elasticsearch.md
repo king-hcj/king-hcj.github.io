@@ -131,13 +131,10 @@ const searchParams: object = {
       must: conditions,
     },
   },
-  // 查询范围可自定义
-  from: 0,
-  size: 100,
   sort: [
     {
+      // asc和desc，排序字段可自定义
       'rowNo.keyword': {
-        // asc和desc，排序字段可自定义
         order: 'desc',
       },
     },
@@ -149,6 +146,9 @@ const searchParams: object = {
   //       "includes":["suppierContractCode", "suppierContractAmount", "ourContractingParty"],
   //       "excludes":["supplierSourceChannel"]
   //   },
+  // 查询范围可自定义
+  from: 0,
+  size: 100,
 };
 console.log('-----searchParams-----', searchParams);
 ```
