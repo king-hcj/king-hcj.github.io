@@ -10,7 +10,7 @@ keywords: Elasticsearch
 
 ## Elasticsearch列表搜索公共方法封装
 
-&emsp;&emsp;由于后端天秀老哥有些事情不愿去处理，查询时需要前端拼接ES查询语句，为了减少每次拼接的繁琐程序，自己封装一个列表页查询的方法，接收普通的form表单输入数据，输出ES查询语句，此方法会根据业务需求逐步完善。
+&emsp;&emsp;由于后端有些事情不愿去处理，查询时需要前端拼接ES查询语句，为了减少每次拼接的繁琐程序，自己封装一个列表页查询的方法，接收普通的form表单输入数据，输出ES查询语句，此方法会根据业务需求逐步完善。
 
 ### 通过kibana分析查询语句
 
@@ -142,6 +142,13 @@ const searchParams: object = {
       },
     },
   ],
+  // 声明需要的字段
+  _source:["suppierContractCode", "suppierContractAmount", "ourContractingParty"],
+  // 或者使用includes和excludes
+  // _source:{
+  //       "includes":["suppierContractCode", "suppierContractAmount", "ourContractingParty"],
+  //       "excludes":["supplierSourceChannel"]
+  //   },
 };
 console.log('-----searchParams-----', searchParams);
 ```
