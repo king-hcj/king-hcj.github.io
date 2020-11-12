@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Elasticsearch实践总结
+title: Elasticsearch实践与总结
 categories: Elasticsearch
-description: Elasticsearch实践总结。
+description: Elasticsearch实践与总结。
 keywords: Elasticsearch
 ---
 
-&emsp;&emsp;Elasticsearch实践总结。
+&emsp;&emsp;Elasticsearch实践与总结。
 
 ## Elasticsearch列表搜索公共方法封装
 
