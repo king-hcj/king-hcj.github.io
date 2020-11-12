@@ -172,7 +172,13 @@ function add(a,b) {
   - `<custom-label>aaa</custom-label> 会展示aaa`
   - html很宽松，已经不在乎合法不合法，只要识别到了就解析，有对应的类，就先顺便把对应的脚本类解析绑定了
 
-## 38 
+## `git reset --hard` 真的就没救了吗？
+
+- [git时光穿梭机--女神的侧颜](https://segmentfault.com/a/1190000018726100){:target='_blank'}
+- [git命令log与reflog的比较](https://blog.csdn.net/u013252047/article/details/80230781){:target='_blank'}
+- [github总结(4)--关于git reset --hard这个命令的惨痛教训](https://www.cnblogs.com/hope-markup/p/6683522.html){:target='_blank'}
+
+## 39 
 
 <!-- JavaScript  36 式（17，19，23，24）：
 常用方法的实现
