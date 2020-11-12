@@ -178,7 +178,11 @@ function add(a,b) {
 - [git命令log与reflog的比较](https://blog.csdn.net/u013252047/article/details/80230781){:target='_blank'}
 - [github总结(4)--关于git reset --hard这个命令的惨痛教训](https://www.cnblogs.com/hope-markup/p/6683522.html){:target='_blank'}
 
-## 39 
+## 浏览器也可以开车？
+
+- [小蝌蚪日记：通过console.log高仿FBI Warning](https://segmentfault.com/a/1190000022866520){:target='_blank'}
+
+## 40
 
 <!-- JavaScript  36 式（17，19，23，24）：
 常用方法的实现
