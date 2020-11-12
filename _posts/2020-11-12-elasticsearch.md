@@ -139,7 +139,7 @@ const searchParams: object = {
       },
     },
   ],
-  // 声明需要的字段
+  // 声明需要的字段（也可以不声明，默认为[]，返回所有字段）
   _source:["suppierContractCode", "suppierContractAmount", "ourContractingParty"],
   // 或者使用includes和excludes
   // _source:{
