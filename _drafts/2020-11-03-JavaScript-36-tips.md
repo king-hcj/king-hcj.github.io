@@ -10,6 +10,11 @@ keywords: JS, 前端, JavaScript
 
 ## 1.toFixed()和1..toFixed()，哪个才不会报错？
   - Number(1).toFixed()
+  - 这段代码竟然也会报错？那些你可能不知道的语法规范
+  ```js
+    console.log(123)
+    [12,2].filter(item => item > 3)
+  ```
 
 ## 动手实现一个 reduce
 
