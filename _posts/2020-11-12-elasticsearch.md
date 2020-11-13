@@ -8,6 +8,29 @@ keywords: Elasticsearch
 
 &emsp;&emsp;Elasticsearch实践与总结。
 
+## 什么是Elasticsearch？
+
+- [终于有人把Elasticsearch原理讲透了！](https://zhuanlan.zhihu.com/p/62892586){:target='_blank'}
+
+## 常用操作
+
+- 查看mapping
+
+  ```s
+    GET contract_info_suppliercontractinfo/_mapping
+  ```
+
+- 查询所有文档
+
+  ```s
+    POST contract_info_basecontractinfo/_search
+    {
+      "query": {
+        "match_all": {}
+      }
+    }
+  ```
+
 ## Elasticsearch列表搜索公共方法封装
 
 &emsp;&emsp;由于后端有些事情不愿去处理，查询时需要前端拼接ES查询语句，为了减少每次拼接的繁琐程序，自己封装一个列表页查询的方法，接收普通的form表单输入数据，输出ES查询语句，此方法会根据业务需求逐步完善。
@@ -204,5 +227,5 @@ POST contract_info_suppliercontractinfo/_search
 
 - [Elasticsearch 搜索的高级功能学习](https://zhuanlan.zhihu.com/p/104631505){:target='_blank'}
 - [十九种Elasticsearch字符串搜索方式终极介绍](https://zhuanlan.zhihu.com/p/137575167){:target='_blank'}
-- [终于有人把Elasticsearch原理讲透了！](https://zhuanlan.zhihu.com/p/62892586){:target='_blank'}
 - [知乎-Elasticsearch](https://www.zhihu.com/search?q=elasticsearch&type=content){:target='_blank'}
+- [Elasticsearch 基本查询（Query查询）](https://blog.csdn.net/zx711166/article/details/81811548){:target='_blank'}
