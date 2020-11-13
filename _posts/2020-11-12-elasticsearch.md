@@ -55,7 +55,7 @@ POST contract_info_suppliercontractinfo/_search
           }
         }
       ],
-      // range可以像term一样写到must里面（金额等字段，以字符串形式存储该如何处理区间查询？）
+      // range可以像term一样写到must里面
       "filter": {
           "range": {
             "supplierContractStartDate": {
@@ -151,7 +151,13 @@ for (const key in fields) {
 const searchParams: object = {
   query: {
     bool: {
-      must: conditions,
+      must: conditions
+      // 当出现金额、数量等字段以字符串形式存储时，直接用区间查询会出现类似1<2000<5的情况，此时可以通过下面正则的方式【下面代码会过滤出must结果中suppierContractAmount大于299的部分】
+      //filter: {
+      //  regexp: {
+      //    "suppierContractAmount.keyword": getRegExpLowStrNumber(299)
+      //  }
+      //}
     },
   },
   sort: [
@@ -174,6 +180,20 @@ const searchParams: object = {
   size: 100,
 };
 console.log('-----searchParams-----', searchParams);
+
+// 获取大于该字符串类型数据的正则
+const getRegExpLowStrNumber = (num) => {
+  const strBaseNumber = Number(num).toString();
+  const arrBaseNumber = strBaseNumber.split('');
+  const len = strBaseNumber.length;
+  // 生成正则：数位更多或者从高位开始比数值更大
+  // 丢给ES进行查询时使用，貌似不可使用\d、开头、结尾匹配等字符
+  let strRegExp = `[0-9]{${len+1}}`;
+  arrBaseNumber.map((item, index) => {
+    strRegExp += `|${strBaseNumber.substring(index,-1) || ''}[${+item + 1}-9][0-9]{${len - index - 1}}`
+  });
+  return strRegExp;
+}
 ```
 
 ### 生成示例
