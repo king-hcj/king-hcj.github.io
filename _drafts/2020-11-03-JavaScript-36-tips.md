@@ -276,6 +276,8 @@ filterStrNumberByRegExp(386, ['12', '334', '556', '1122', '5546','234','388','38
   - runPromiseInSequence
   - Koa only、pick、omit
 
+  [20个你不得不知道的数组reduce高级用法](https://mp.weixin.qq.com/s/cksKPLdXLje327UBI2eKIQ){:target='_blank'}
+
 ## 什么？我理解的forEach不对？
 
 ## 如何实现call、apply和bind
