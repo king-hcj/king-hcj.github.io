@@ -122,7 +122,7 @@ console.log(`%c
 
 ![SB_NB]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/sb_nb.png?raw=true)
 
-图解：取字符串里的字母进行拼凑
+图解：取字符串里的字母进行拼凑（看懂了原理，其实我们完全可以尝试写的更简练一些）
 
 ![SB]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/sb.png?raw=true)
 
