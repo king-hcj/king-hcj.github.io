@@ -373,6 +373,8 @@ function add(a,b) {
 
 ## 庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
 
+// MessageChannel
+
 ## Promise并行限制
 
 ## 渲染几万条数据，怎样才能不卡住页面？
@@ -404,7 +406,25 @@ function add(a,b) {
 
 ## 纯前端代码生成 Excel
 
-## 42
+## iframe数据传递，postMessage可以是你的一个选择
+
+错误：`Block a frame with origin`
+```js
+  // 页面1
+  top.postMessage(query, '*');
+ //页面2 监听message事件
+  useEffect(() => {
+ const listener = ev => {
+   console.log(ev,ev.data)
+ };
+   window.addEventListener('message', listener);
+ return () => {
+   window.removeEventListener('message', listener);
+ };
+  }, []);
+```
+
+## 43
 
 ## 装逼文章大赏
 
