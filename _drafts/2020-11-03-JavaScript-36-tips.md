@@ -14,6 +14,8 @@ keywords: JS, 前端, JavaScript
 
 [![carbon]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/carbon.png?raw=true)](https://carbon.now.sh/){:target='_blank'}
 
+&emsp;&emsp;本文为便于代码复制，将奉行**不首先装逼**的原则，尽量减少此装逼利器的使用。
+
 ## 第二式：`console`调试万金油，学会开车更上头
 
 &emsp;&emsp;`console.log()`在前端调试中的地位自不必赘述，其实一代车神也对其五体投地，不信诸君细看（如真有不解其意者，建议发扬不耻下问的求知精神，问问你旁边的同事）：
@@ -113,34 +115,44 @@ console.log(`%c
 
 > 参考资料：[很好用的 UI 调试技巧](https://mp.weixin.qq.com/s/gNmMOqVf-296BKIT39Lu2A){:target='_blank'}
 
-## 第四式：角声寒，夜阑珊，又改需求。难，难，难！—— 如何不带脏字的骂产品、高雅的夸自己？
+## 第四式：角声寒，夜阑珊，又改需求。难，难，难！—— 类型转换助你不带脏字的骂产品、优雅的夸自己
 
 - `(!(~+[])+{})[--[~+""][+[]]*[~+[]]+~~!+[]]+({}+[])[[~!+[]*~+[]]]`：sb
 - `([][[]]+[])[+!![]]+([]+{})[!+[]+!![]]`：nb
 - `(+!![]*([]+{})+[]+{})[+[]]+([]+{})[!+[]+!![]]`：Nb
 
-输出结果：
-
-![SB_NB]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/sb_nb.png?raw=true)
-
 图解：取字符串里的字母进行拼凑（看懂了原理，其实我们完全可以尝试写的更简练一些）
 
-![SB]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/sb.png?raw=true)
+![nb]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/sb.png?raw=true)
 
-> 参考资料：[js 骂人不带脏字 (!(~+[]) + {})[--[~+""][+[]] * [~+[]] + ~~!+[]] + ({} + [])[[~!+[]] * ~+[]] 图解](https://www.cnblogs.com/cynthia-wuqian/p/9914492.html){:target='_blank'}
+> 插件：[zhuangbility，一个可以逆向操作，输入文字，返回操作符的npm插件](https://www.npmjs.com/package/zhuangbility){:target='_blank'}
 
-> [zhuangbility，一个可以逆向操作，输入文字，返回操作符的npm插件](https://www.npmjs.com/package/zhuangbility){:target='_blank'}
+## 第五式：`a == 1 && a == 2 && a == 3`，那你可以实现`a === 1 && a === 2 && a === 3`吗？
 
-## 第五式：`a == 1 && a == 2 && a == 3`，1、2、3是相等的？原谅我的无知
+- `a == 1 && a == 2 && a == 3`：
 
 ```js
-  var count = 1
-  var a = {
+  let count = 1
+  let a = {
     valueOf: function(){return count++}
   }
+  console.log(a==1 && a==2 && a==3) // true
 ```
 
-// 类型转换 。。。。
+- `a === 1 && a === 2 && a === 3`：
+
+```js
+let count = 1;
+Object.defineProperty(window, 'a', {
+    get: function() {
+        return count ++;
+    }
+});
+
+console.log(a===1 && a===2 && a===3) // true
+```
+
+> 原理可参考：[[译] 在JS中，如何让(a===1 && a===2 && a === 3)(严格相等)的值为true？](https://juejin.cn/post/6844903725442531341){:target='_blank'} &#124; [Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty){:target='_blank'}
 
 ## 第六式：最近有点儿火的 Web Components 可能并不是小鲜肉
 
@@ -271,6 +283,186 @@ filterStrNumberByRegExp(386, ['12', '334', '556', '1122', '5546','234','388','38
 - 语音识别:
     - 用语音控制自己的网站 [annyang](https://github.com/TalAter/annyang):A tiny JavaScript Speech Recognition library that lets your users control your site with voice commands.annyang has no dependencies, weighs just 2 KB, and is free to use and modify under the MIT license.
 
+## 第十三式：失焦事件与点击事件冲突怎么办？
+- 场景：
+  - 下拉框中blur与click冲突
+  - 输入框blur与下方可点击浮沉click冲突：输入值时下方出现浮层，输入框失去焦点时，浮层隐藏；点击浮层条目触发搜索
+
+  ![失焦事件与点击事件冲突]({{site.url}}{{site.baseurl}}/images/posts/arts/blur.png?raw=true)
+
+```js
+// 点击弹窗条目进行搜索
+handleSearch = (activeSearch) => {
+  console.log(activeSearch);
+  this.setState({ visible: false });
+}
+
+// 获得焦点，有值时展示弹窗
+onFocus = () => {
+  if (this.state.keyword) {
+    this.setState({ visible: true });
+  }
+}
+
+// 输入且有值时展示弹窗
+onChange = (e) => {
+  this.setState({
+    keyword: e.target.value,
+    visible: !!e.target.value
+  })
+}
+
+// 失去焦点隐藏弹窗
+onBlur = () => {
+  if (this.state.keyword) {
+    this.setState({ visible: false });
+  }
+}
+
+render() {
+  const { keyword, visible } = this.state;
+  return (
+    <div>
+      <Input
+        allowClear
+        addonBefore={<Icon type="user" />}
+        placeholder="支持ID、名称、主邮箱、客户经理、专属账户、客户ID、GroupID搜索"
+        style={ { width: 460 } }
+        onFocus={this.onFocus}
+        onChange={this.onChange}
+        onBlur={this.onBlur}
+      />
+      {
+        // 展示弹窗（点击条目完成搜索）
+        visible && keyword && <div className={styles.SearchSelect}>
+          {
+            showOptions.map(item => (
+              <div
+                onClick={() => this.handleSearch(item)}
+                className={styles.item}
+                key={item.key}
+              >
+                <div>
+                  {item.label}：{keyword}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      }
+    </div>
+  );
+}
+```
+
+- 解决：
+  - 方法一：给失焦事件设置延迟触发
+
+    ```js
+      onBlur = () => {
+        if (this.state.keyword) {
+          setTimeout(() => {
+            this.setState({ visible: false });
+          }, 300);
+        }
+      }
+    ```
+
+  - 方法二：使用onMouseDown替代onClick
+    - mousedown事件：当鼠标指针移动到元素上方，并按下鼠标按键时，会发生mousedown事件。
+    - mouseup事件：当在元素上放松鼠标按钮时，会发生mouseup事件。
+
+## 第十四式：不用加减乘除如何做加法——位运算让你的代码更高效
+
+- JavaScript 位运算符
+
+  ![JavaScript 位运算符]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/bit.png?raw=true)
+
+&emsp;&emsp;位运算是基于二进制的，如何快速获得二进制可参考第十式。
+
+- 用加减乘除做加法
+
+  ```js
+  function add(a,b) {
+      var sum;
+      var add1;
+      while(b!=0) {
+          // 异或
+          sum = a^b;
+          // 与 左移
+          add1 = (a&b)<<1;
+          a = sum;
+          b = add1;
+      }
+      return a
+  }
+  ```
+
+- 使用`&`运算符判断一个数的奇偶（只需记住0和1与1进行`&`运算的结果即可）：
+  - `偶数 & 1 = 0`
+  - `奇数 & 1 = 1`
+
+- 使用`~~，>>,<<,>>>,|`来取整
+- 使用`<<,>>`来计算乘除
+- 利用`^`来完成比较两个数是否相等
+- 使用`^`来完成值交换：参考第十五式
+- 使用`&,>>,|`来完成rgb值和16进制颜色值之间的转换
+
+> 参考资料：[js按位运算符及其妙用](https://www.deanhan.cn/js-bitwise-operation.html){:target='_blank'}
+
+## 第十五式：无聊的脑筋急转弯，不借助第三个变量交换a,b两个变量值的N种方法
+
+- 方法一：加减
+
+  ```js
+    a = a + b;
+    b = a - b;
+    a= a - b;
+  ```
+
+- 方法二：位运算
+  
+  ```js
+    a ^= b;
+    b ^= a;
+    a ^= b;
+  ```
+
+- 方法三：对象或者数组
+  
+  ```js
+    a = {a, b};
+    b = a.a;
+    a = a.b;
+    // a = [a, b];
+    // b = a[0];
+    // a = a[1];
+  ```
+
+- 方法四：ES 6 解构赋值
+  
+  ```js
+    [a, b] = [b, a]
+  ```
+
+- 方案五：运算符优先级
+
+  ```js
+    a = [b, b=a][0];
+  ```
+
+ > 参考资料：[JavaScript 位运算符](https://www.w3school.com.cn/js/js_bitwise.asp){:target='_blank'} &#124; [不借助第三个变量交换a,b两个变量值](https://blog.csdn.net/web_hwg/article/details/75045689){:target='_blank'}
+
+## 如何通过脚本来新建文件，提高开发效率？
+
+- 抛砖引玉，你一定会探究出更高级的用法
+
+- 接口
+
+## 如何通过脚本完成自动化部署？
+
+- 合同、UBOX等测试环境
+
 ## 动手实现一个 reduce
 
 ## reduce 还可以这么用？
@@ -338,29 +530,6 @@ filterStrNumberByRegExp(386, ['12', '334', '556', '1122', '5546','234','388','38
 
 - [参考](https://www.cnblogs.com/Ballon/p/4752409.html){:target='_blank'}
 
-## 不用加减乘除如何做加法——位运算让你的代码更高效
-  - 加法
-  - 不借助第三个变量交换a,b两个变量值的N种方法
-```js
-function add(a,b) {
-    var sum;
-    var add1;
-    while(b!=0) {
-        // 异或
-        sum = a^b;
-        // 与 左移
-        add1 = (a&b)<<1;
-        a = sum;
-        b = add1;
-    }
-    return a
-}
-```
-
- - [【剑指offer】不用加减乘除做加法](https://blog.csdn.net/ns_code/article/details/27966641){:target='_blank'}
- - [不借助第三个变量交换a,b两个变量值](https://blog.csdn.net/web_hwg/article/details/75045689){:target='_blank'}
- - [参考](https://www.cnblogs.com/xiaonian8/p/13821533.html){:target='_blank'}
-
 ## 如何实现mul(2)(3)(4)为24？
 
    - 函数珂里化
@@ -425,21 +594,7 @@ function add(a,b) {
   }, []);
 ```
 
-## 如何通过脚本来新建文件，提高开发效率？
-
-- 抛砖引玉，你一定会探究出更高级的用法
-
-- 接口
-
-## 如何通过脚本完成自动化部署？
-
-- 合同、UBOX等测试环境
-
-## 失焦事件与点击事件冲突怎么办？
-
-- [【解决方案】如何解决输入框失焦事件与按钮点击事件冲突的问题](https://blog.csdn.net/fifteen718/article/details/77429476){:target='_blank'}
-
-## 45
+## 46
 
 ## 装逼文章大赏
 
