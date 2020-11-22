@@ -100,11 +100,11 @@ const fields = {
   suppierResourceType: undefined,
   supplierSourceChannel: undefined
 }
-// 精准查询（这里对应的时term keyword的场景）
+// 需要精准查询的字段（这里对应的是term keyword的场景）
 const exactQuery: string[] = [];
 // 由于中文每个字都是一个分词，所以模糊查询需要使用match_phrase，否则可以同exactQuery使用term
 // const matchPhrase: string[] =  ['suppierContractType', 'suppierIsRaise'];
-// 区间查询的
+// 需要进行区间查询的字段
 const rangeQuery: string[] = [
   'suppierContractAmount',
   'suppierContractSignDate',
