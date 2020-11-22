@@ -1,12 +1,20 @@
 ---
 layout: post
-title: 前端装逼技巧 108 式
+title: 前端装逼技巧 108 式（一）—— 打工人
 categories: JavaScript
 description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
 ---
 
-&emsp;&emsp;前端装逼技巧 108 式，助你更懂JS。
+> 你在拼多多到处找人砍价，他在滴滴打车求人助力，我在电子厂拧螺丝拧到凌晨，我们都有光明的未来！早安，打工人！
+
+## 楔子
+
+&emsp;&emsp;作为一名拥有钢铁般意志的前端打工人，装逼是不可能的，这辈子都不可能装逼。如果真要装逼，那就大家一起装逼，毕竟前端要讲武德嘛，要耗子尾汁。遂决定写下前端装逼技巧108式，供诸君茶余饭后一乐，甚至时不时秀个骚操作，为打工的生活增添一抹亮色。
+
+&emsp;&emsp;因作为打工人，时间、精力有限，目前大纲只有约50式，还望诸君有好的知识点私信或者在评论区留言，大家共同装逼、共同迎接打工人的光明未来！
+
+  > 文章风格所限，引用资料部分，将在对应小节末尾标出。
 
 ## 第一式：子曰，公欲装逼好，工具少不了
 
@@ -608,30 +616,7 @@ render() {
 
   > 参考资料：[BRAFT EDITOR富文本编辑器预览](https://braft.margox.cn/demos/preview){:target='_blank'}
 
-## 第十七式：这段代码为什么会报错，说好的分号可以省略呢？
-
-  ```js
-    console.log(123)
-    [12,2].filter(item => item > 3)
-    // Uncaught TypeError: Cannot read property '2' of undefined
-    // at <anonymous>:2:1
-  ```
-
-  - 分号推断：编译原理里的分号推断，作用是在编程的时候，让程序员省略掉不必要的分号；
-  - JavaScript有着自动分号插入的机制(Automatic Semicolon Insertion)，简称ASI（ASI 只是表示编译器正确理解了程序员的意图，并没有真的插入分号）；
-  - 浏览器引擎的 Parser（负责将JS 源码转换为 AST）总是优先将换行符前后的符号流当作一条语句解析（带换行的多行注释与换行符是等效的）；
-  - 所以在 Parser 眼里，以上代码是这样的：
-    - `console.log(123)[12,2].filter(item => item > 3)`，`console.log(123)`没有返回值，既`undefined`；
-    - `[12,2]`中的方括号被视为读取`console.log(123)`返回值中的属性`2`，类似于根据下标取数组中的元素；
-    - 为什么是取属性`2`呢，因为`12,2`是个逗号表达式，表达式的值是最右边的“2”，如此以来，上面的报错信息就很好理解了。
-  - 不能省略的分号：
-    - for 循环头部的分号
-    - 作为空语句存在的分号
-    - 以 `[、(、`开头的语句之前的分号
-
-  > 资料参考：[备胎的自我修养——趣谈 JavaScript 中的 ASI (Automatic Semicolon Insertion)](https://segmentfault.com/a/1190000002955405){:target='_blank'}
-
-## 第十八式：产品说要按照中文拼音顺序排序？
+## 第十七式：产品说要按照中文拼音顺序排序？
 
 - 使用 `stringObject.localeCompare(target)` 方法实现中文按照拼音顺序排序
 
@@ -668,178 +653,28 @@ person.sort(sortFunc('age', age));
 // ]
 ```
 
-## 如何通过脚本来新建文件，提高开发效率？
+## 第十八式：这段代码为什么会报错，说好的分号可以省略呢？
 
-- 抛砖引玉，你一定会探究出更高级的用法
+  ```js
+    console.log(123)
+    [12,2].filter(item => item > 3)
+    // Uncaught TypeError: Cannot read property '2' of undefined
+    // at <anonymous>:2:1
+  ```
 
-- 接口
+  - 分号推断：编译原理里的分号推断，作用是在编程的时候，让程序员省略掉不必要的分号；
+  - JavaScript有着自动分号插入的机制(Automatic Semicolon Insertion)，简称ASI（ASI 只是表示编译器正确理解了程序员的意图，并没有真的插入分号）；
+  - 浏览器引擎的 Parser（负责将JS 源码转换为 AST）总是优先将换行符前后的符号流当作一条语句解析（带换行的多行注释与换行符是等效的）；
+  - 所以在 Parser 眼里，以上代码是这样的：
+    - `console.log(123)[12,2].filter(item => item > 3)`，`console.log(123)`没有返回值，既`undefined`；
+    - `[12,2]`中的方括号被视为读取`console.log(123)`返回值中的属性`2`，类似于根据下标取数组中的元素；
+    - 为什么是取属性`2`呢，因为`12,2`是个逗号表达式，表达式的值是最右边的“2”，如此以来，上面的报错信息就很好理解了。
+  - 不能省略的分号：
+    - for 循环头部的分号
+    - 作为空语句存在的分号
+    - 以 `[、(、`开头的语句之前的分号
 
-## 如何通过脚本完成自动化部署？
-
-- 合同、UBOX等测试环境
-
-## 动手实现一个 reduce
-
-## reduce 还可以这么用？
-  - runPromiseInSequence
-  - Koa only、pick、omit
-
-  [20个你不得不知道的数组reduce高级用法](https://mp.weixin.qq.com/s/cksKPLdXLje327UBI2eKIQ){:target='_blank'}
-
-## 什么？我理解的forEach不对？
-
-## 如何实现call、apply和bind
-
-## getBoundingClientRect：让你找准定位不迷失自我
-
-## 你知道 this 也有优先级吗？
-  - 显式绑定和隐式绑定
-  - new 绑定的优先级比显式 bind 绑定更高
-  - new>显示绑定>隐式绑定
-
-## 我不太想谈闭包和变量提升
-  - 变量的定义和赋值过程
-  - 闭包、懒加载、预解析
-
-## let和const到底提升了吗？
-
-  - [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='_blank'}
-
-## new 到底新建了什么？
-
-##  函数参数传递——你应该知道的那些区别
-  - 箭头函数和普通函数
-  - 基本类型和引用类型
-
-## SQL也可以if else？
-  - SQL之CASE WHEN用法详解
-
-## 垃圾回收，一张图就够了
-
-## JavaScript 是怎么执行的？
-
-## 防抖和节流真的很难吗？
-  - 如何在 react 函数式组件中使用防抖与节流函数
-
-## 如何和浏览器过不去？比如让它卡死？
-  - 带你看看宏任务和微任务
-
-## 前端的未来在移动端吗？跨端方案都有哪些
-
-## 回调地狱：前端是如何一步步走出来的？
-  - 前端异步方案是怎么一路走来的
-
-## JavaScript新特性：Optional Chaining解决了什么问题？
-
-  - [Optional Chains](http://www.ecma-international.org/ecma-262/#sec-optional-chains){:target='_blank'}
-
-## 0.1 + 0.2 !== 0.3？体育老师说这个锅我不背
-
-  - Number.EPSILON
-  - toFixed
-
-## 如果没有BigInt，如何进行大数运算？
-
-- [参考](https://www.cnblogs.com/Ballon/p/4752409.html){:target='_blank'}
-
-## 如何实现mul(2)(3)(4)为24？
-
-   - 函数珂里化
-   - 或者compose 实现的几种方案
-
-## 数组的N种操作
-
-  - 扁平化
-  - 去重
-  - 类数组转化为数组
-
-## 庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
-
-// MessageChannel
-
-## Promise并行限制
-
-## 渲染几万条数据，怎样才能不卡住页面？
-
-## 只拆过快递，JS里装箱和拆箱又是什么？
-
-## 为了减少冗余参数，我用 delete 有错吗？
-  - 删除
-  - 改变属性顺序
-
-## 对象属性会自己偷偷排队？
-
-## 省省劲儿，setTimeout 不能让你的程序暂停
-
-  - 如果设置的 timeout 小于 0，则设置为 0
-  - 如果嵌套的层级超过了 5 层，并且 timeout 小于 4ms，则设置 timeout 为 4ms。
-
-  - [setTimeout, setInterval 与 requestAnimationFrame 隐藏的各种坑](https://blog.csdn.net/qingyafan/article/details/52335753){:target='_blank'}
-  - [参考](https://www.cnblogs.com/liuxiaoru/p/13637983.html){:target='_blank'}
-  - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='_blank'}
-
-## `git reset --hard` 真的就没救了吗？
-
-- [git时光穿梭机--女神的侧颜](https://segmentfault.com/a/1190000018726100){:target='_blank'}
-- [git命令log与reflog的比较](https://blog.csdn.net/u013252047/article/details/80230781){:target='_blank'}
-- [github总结(4)--关于git reset --hard这个命令的惨痛教训](https://www.cnblogs.com/hope-markup/p/6683522.html){:target='_blank'}
-
-## 前端错误处理
-
-## 纯前端代码生成 Excel
-
-## iframe数据传递，postMessage可以是你的一个选择
-
-错误：`Block a frame with origin`
-```js
-  // 页面1
-  top.postMessage(query, '*');
- //页面2 监听message事件
-  useEffect(() => {
- const listener = ev => {
-   console.log(ev,ev.data)
- };
-   window.addEventListener('message', listener);
- return () => {
-   window.removeEventListener('message', listener);
- };
-  }, []);
-```
-
-## 流媒体播放
-
-- [前端视频直播技术总结及video.js在h5页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='_blank'}
-- [「1.4万字」玩转前端 Video 播放器 | 多图预警](https://juejin.cn/post/6850037275579121671){:target='_blank'}
-- [[1.3万字] 玩转前端二进制](https://juejin.cn/post/6846687590783909902){:target='_blank'}
-
-## 前端流程图
-
-- [Gojs](https://gojs.net.cn/){:target='_blank'}
-
-## 微信扫码登录原理
-
-[浅析微信扫码登录原理(小结)](https://www.jb51.net/article/149680.htm){:target='_blank'}
-[实践](https://wx.qq.com/){:target='_blank'}（查看长连接等）
-
-## `Object.defineProperty()`为何被Vue弃用？
-
-`Object.defineProperty()`方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。同时，该API也是Vue 2.x数据绑定实现的核心，Vue 在 3.x 版本之后改用 Proxy 进行实现，本系列文章后续会进行简单讨论。
-
-- [实现双向绑定Proxy比defineproperty优劣如何](https://www.jianshu.com/p/2df6dcddb0d7){:target='_blank'}
-- [为什么Vue3.0使用Proxy实现数据监听？defineProperty表示不背这个锅](https://juejin.cn/post/6844903965180575751){:target='_blank'}
-
-## 51
-
-## 装逼文章大赏
-
-- [信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}
-- [这些JavaScript编程黑科技，装逼指南，高逼格代码，让你惊叹不已](https://segmentfault.com/a/1190000010752361){:target='_blank'}
-
-<!-- JavaScript  36 式（17，19，23，24）：
-常用方法的实现
-常用方法的整理
-常用技巧的梳理
-常考知识点的原理 -->
+  > 资料参考：[备胎的自我修养——趣谈 JavaScript 中的 ASI (Automatic Semicolon Insertion)](https://segmentfault.com/a/1190000002955405){:target='_blank'}
 
 
 
