@@ -57,7 +57,7 @@ console.log(`%c
 )
 ```
 
-&emsp;&emsp;为什么会这样呢？想必你还记得其他语言中的`print()`。占位符是`print()`的专属吗？不，他们在`console.log()`中同样使用：
+&emsp;&emsp;为什么会这样呢？想必你还记得其他语言中的`print()`。占位符是`print()`的专属吗？不，他们在`console.log()`中同样适用：
   - `%s`：字符串
   - `%d`：整数
   - `%i`：整数
@@ -672,9 +672,13 @@ person.sort(sortFunc('age', age));
   - 不能省略的分号：
     - for 循环头部的分号
     - 作为空语句存在的分号
-    - 以 `[、(、`开头的语句之前的分号
+    - 以 `[、(、+、-、和/`五个字符开头的语句之前的分号
 
   > 资料参考：[备胎的自我修养——趣谈 JavaScript 中的 ASI (Automatic Semicolon Insertion)](https://segmentfault.com/a/1190000002955405){:target='_blank'}
+
+  ## 本文发布
+
+  - [segmentfault思否社区](https://segmentfault.com/a/1190000038251777){:target='_blank'}
 
 
 

@@ -668,6 +668,10 @@ person.sort(sortFunc('age', age));
 // ]
 ```
 
+## `String.replace()`第二个参数可以是个函数？
+- 特殊符号`$`
+- [JavaScript replace() 方法](https://www.w3school.com.cn/jsref/jsref_replace.asp){:target='_blank'}
+
 ## 如何通过脚本来新建文件，提高开发效率？
 
 - 抛砖引玉，你一定会探究出更高级的用法
