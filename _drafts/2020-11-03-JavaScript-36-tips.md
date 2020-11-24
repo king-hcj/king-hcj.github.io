@@ -855,7 +855,9 @@ person.sort(sortFunc('age', age));
 
 ## http2
 
-## 59
+## 一个正经又不正经的组件封装："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate)
+
+## 60
 
 ## 装逼文章大赏
 
