@@ -243,6 +243,67 @@ POST contract_info_suppliercontractinfo/_search
 }
 ```
 
+## Es的模糊查询，match，match_phrase、wildcard的区别
+
+- match查询：会先对搜索词进行分词，比如“四川和成都”，会分成“四川”、“成都”。含有相关内容的字段，都会被检索出来。（不一定同时含有“四川”和“成都”）
+
+  ```js
+  POST supplychain_sku_info_hardware/_search
+  {
+    "query": {
+      "match": {
+        "manufacture": "四川和成都"
+      }
+    }
+  }
+  ```
+
+- wildcard查询：是使用通配符进行查询，其中`?`代表任意一个字符，`*`代表任意的一个或多个字符。
+   ```js
+   // 法一
+    POST supplychain_sku_info_hardware/_search
+    {
+      "query": {
+        "query_string": {
+          "query": "*光*",
+          "analyze_wildcard": false,
+          "fields": [
+            "manufacture",
+            "spec",
+            "model"
+          ]
+        }
+      }
+    }
+    // 法二
+    POST supplychain_sku_info_hardware/_search
+    {
+      "query": {
+        "wildcard": {
+          "manufacture": "光*"
+        }
+      }
+    }
+   ```
+
+- match_phrase查询：match_phrase与slop一起用，能保证分词间的邻近关系，slop参数告诉match_phrase查询词条能够相隔多远时仍然将文档视为匹配，默认是0。为0时 必须相邻才能被检索出来。
+
+  ```js
+  POST supplychain_sku_info_hardware/_search
+  {
+    "query": {
+      "match_phrase": {
+        "model": {
+          "query": "水色",
+          "slop": 1 // 为1，所以可以查出：水蓝色
+        }
+      }
+    }
+  }
+  ```
+
+> 学习参考：[【ES】match_phrase、match、prefix、wildcard比较](https://hao5743.github.io/2019/07/11/2019-07-16/){:target='_blank'}
+
 ## 可供参考的文章汇总
 
 - [Elasticsearch 搜索的高级功能学习](https://zhuanlan.zhihu.com/p/104631505){:target='_blank'}
