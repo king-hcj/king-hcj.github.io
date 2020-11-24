@@ -676,7 +676,7 @@ person.sort(sortFunc('age', age));
 
   > 资料参考：[备胎的自我修养——趣谈 JavaScript 中的 ASI (Automatic Semicolon Insertion)](https://segmentfault.com/a/1190000002955405){:target='_blank'}
 
-  ## 本文发布
+## 本文发布
 
   - [segmentfault思否社区](https://segmentfault.com/a/1190000038251777){:target='_blank'}
 
