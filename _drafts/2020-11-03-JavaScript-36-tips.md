@@ -861,7 +861,11 @@ person.sort(sortFunc('age', age));
 
 ## 一个正经又不正经的组件封装："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate)
 
-## 60
+## 重放攻击
+
+- [前端业务安全综述（防爬、防薅、人机校验等）](https://mp.weixin.qq.com/s/eQKqiBbiuw-_RwWVYUnFXg){:target='_blank'}
+
+## 61
 
 ## 装逼文章大赏
 
