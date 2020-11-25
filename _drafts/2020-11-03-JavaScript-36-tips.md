@@ -865,6 +865,13 @@ person.sort(sortFunc('age', age));
 
 - [前端业务安全综述（防爬、防薅、人机校验等）](https://mp.weixin.qq.com/s/eQKqiBbiuw-_RwWVYUnFXg){:target='_blank'}
 
+## 内网穿透
+
+> 公网IP就是广域网IP，拥有公网IP就不需要经过路由器或交换机直接可以上网，而且，还能直接被外界访问到，也就是在Internet上可以和其他计算机随意互相访问。内网穿透一般是因为局域网应用网络环境没有公网IP，但又需要在外网进行访问，就需要进行内网穿透了，如通过内网穿透，生成固定域名来实现对局域网win电脑、网站、博客、视频监控、游戏联机、FTP/SVN/MAC服务器、公司的OA、erp等办公系统等等的远程外网访问。
+
+- [什么是内网、外网？内网、外网有啥区别？](https://zhuanlan.zhihu.com/p/147282153){:target='_blank'}
+- [内网穿透：在公网访问你家的 NAS](https://zhuanlan.zhihu.com/p/57477087){:target='_blank'}
+- [内网穿透和公网IP有什么区别吗?](https://www.zhihu.com/question/404693104/answer/1315636116){:target='_blank'}
 ## 61
 
 ## 装逼文章大赏
