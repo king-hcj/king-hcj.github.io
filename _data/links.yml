@@ -10,6 +10,10 @@
   url: https://www.infoq.cn
   src: www
 
+- name: 现代 JavaScript 教程
+  url: https://zh.javascript.info
+  src: www
+
 - name: 前端进阶之道
   url: https://yuchengkai.cn
   src: www

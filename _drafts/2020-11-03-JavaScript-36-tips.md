@@ -745,6 +745,8 @@ person.sort(sortFunc('age', age));
 ## 如果没有BigInt，如何进行大数运算？
 
 - [参考](https://www.cnblogs.com/Ballon/p/4752409.html){:target='_blank'}
+- [js大数相加问题](https://www.jianshu.com/p/c373943f0e9e){:target='_blank'}
+- [JS 大数相加](https://blog.csdn.net/qq_39816673/article/details/88667505){:target='_blank'}
 
 ## 如何实现mul(2)(3)(4)为24？
 
