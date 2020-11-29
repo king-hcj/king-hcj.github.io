@@ -604,6 +604,8 @@ style={ { width: 'calc(100% - 80px)' } }
     videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.5)
     ```
 
+    > 其他视频倍速：`document.getElementById('#video').playbackRate = 2`
+
 2. [百度网盘直链下载助手](https://github.com/syhyz1990/baiduyun){:target='_blank'}(亲测有效)
 
 3. [3个方法解决百度网盘限速 （2019-07-04 更新）](https://www.runningcheese.com/baiduyun){:target='_blank'}
