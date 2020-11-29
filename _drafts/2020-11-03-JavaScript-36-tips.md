@@ -682,6 +682,14 @@ person.sort(sortFunc('age', age));
 
 - 合同、UBOX等测试环境
 
+## console.log`hello world`
+
+- [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
+- [带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'}
+
+
+## `Days[Days["Sun"] = 3] = "Sun"`
+
 ## 动手实现一个 reduce
 
 ## reduce 还可以这么用？
@@ -696,6 +704,14 @@ person.sort(sortFunc('age', age));
 
 ## getBoundingClientRect：让你找准定位不迷失自我
 
+- offsetTop 和 getBoundingClientRect() 区别
+- [Element.getBoundingClientRect()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect){:target='_blank'}
+- 吸顶效果
+
+## 滚动吸顶
+
+- [【前端词典】4 种滚动吸顶实现方式的比较](https://zhuanlan.zhihu.com/p/62125575){:target='_blank'}
+
 ## 你知道 this 也有优先级吗？
   - 显式绑定和隐式绑定
   - new 绑定的优先级比显式 bind 绑定更高
@@ -708,6 +724,10 @@ person.sort(sortFunc('age', age));
 ## let和const到底提升了吗？
 
   - [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='_blank'}
+
+## 有趣的`let x = x`
+
+- [JS变量封禁大法：薛定谔的X](https://zhuanlan.zhihu.com/p/28117094){:target='_blank'}
 
 ## new 到底新建了什么？
 
@@ -741,6 +761,9 @@ person.sort(sortFunc('age', age));
 
   - Number.EPSILON
   - toFixed
+  - 字符串运算？整数运算？
+
+  - [0.1 + 0.2 != 0.3背后的原理](https://segmentfault.com/a/1190000015051329){:target='_blank'}
 
 ## 如果没有BigInt，如何进行大数运算？
 
@@ -761,7 +784,40 @@ person.sort(sortFunc('age', age));
 
 ## 庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
 
-// MessageChannel
+```js
+  // 有undefined + 循环引用
+  let obj = {
+    a: 1,
+    b: {
+      c: 2,
+      d: 3,
+    },
+    f: undefined
+  }
+  obj.c = obj.b;
+  obj.e = obj.a
+  obj.b.c = obj.c
+  obj.b.d = obj.b
+  obj.b.e = obj.b.c
+
+  function deepCopy(obj) {
+    return new Promise((resolve) => {
+      const {port1, port2} = new MessageChannel();
+      port2.onmessage = ev => resolve(ev.data);
+      port1.postMessage(obj);
+    });
+  }
+
+  deepCopy(obj).then((copy) => {           // 请记住`MessageChannel`是异步的这个前提！
+      let copyObj = copy;
+      console.log(copyObj, obj)
+      console.log(copyObj == obj)
+  });
+```
+
+- object.asign
+- [MessageChannel](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageChannel){:target='_blank'}
+- [MessageChannel是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='_blank'}
 
 ## Promise并行限制
 
@@ -774,6 +830,46 @@ person.sort(sortFunc('age', age));
   - 改变属性顺序
 
 ## 对象属性会自己偷偷排队？
+
+试想以下，下面的代码会输出什么：
+
+```js
+// test.js
+function Foo() {
+  this[200] = 'test-200';
+  this[1] = 'test-1';
+  this[100] = 'test-100';
+  this['B'] = 'bar-B';
+  this[50] = 'test-50';
+  this[9] = 'test-9';
+  this[8] = 'test-8';
+  this[3] = 'test-3';
+  this[5] = 'test-5';
+  this['D'] = 'bar-D';
+  this['C'] = 'bar-C';
+}
+var bar = new Foo();
+
+for (key in bar) {
+  console.log(`index:${key}  value:${bar[key]}`);
+}
+//输出：
+// index:1  value:test-1
+// index:3  value:test-3
+// index:5  value:test-5
+// index:8  value:test-8
+// index:9  value:test-9
+// index:50  value:test-50
+// index:100  value:test-100
+// index:200  value:test-200
+// index:B  value:bar-B
+// index:D  value:bar-D
+// index:C  value:bar-C
+```
+
+&emsp;&emsp;在 ECMAScript 规范中定义了**数字属性应该按照索引值大小升序排列，字符串属性根据创建时的顺序升序排列**。在这里我们把对象中的数字属性称为**排序属性**，在 V8 中被称为 elements，字符串属性就被称为**常规属性**，在 V8 中被称为 properties。在 V8 内部，为了有效地提升存储和访问这两种属性的性能，分别使用了两个线性数据结构来分别保存排序属性和常规属性。同时 v8 将部分常规属性直接存储到对象本身，我们把这称为**对象内属性 (in-object properties)**，不过对象内属性的数量是固定的，默认是 10 个。
+
+> 详细可参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
 
 ## 省省劲儿，setTimeout 不能让你的程序暂停
 
@@ -840,11 +936,16 @@ person.sort(sortFunc('age', age));
 
 - 明明里面是有值的 但是Length是0
 
-## will-change
+## `will-change`是如何优化性能的？
 
--[说一说will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='_blank'}
+&emsp;&emsp;CSS 属性 `will-change` 为web开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
+
+- [will-change](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change){:target='_blank'}
+- [说一说will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='_blank'}
+- [CSS页面渲染优化属性will-change](https://www.cnblogs.com/xiaohuochai/p/6321790.html){:target='_blank'}
 
 ## 既然饱受诟病，JavaScript为什么还是单线程的
+
 ## CSS
 
 - [参考](https://mp.weixin.qq.com/s/UVifGMNXac3_KPLhR_cLNw){:target='_blank'}
@@ -861,7 +962,12 @@ person.sort(sortFunc('age', age));
 
 ## http2
 
-## 一个正经又不正经的组件封装："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate)
+- [深入浅出：HTTP/2](https://www.cnblogs.com/confach/p/10141273.html){:target='_blank'}
+- [一文读懂 HTTP/2 特性](https://zhuanlan.zhihu.com/p/26559480){:target='_blank'}
+
+## 一个正经又有点邪气的组件封装："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate)
+
+- [信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}
 
 ## 重放攻击
 
@@ -877,11 +983,12 @@ person.sort(sortFunc('age', age));
 
 ## 微前端、serverless
 
+## JS代码调试必须要HTML、控制台或者node？
+
 ## 61
 
 ## 装逼文章大赏
 
-- [信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}
 - [这些JavaScript编程黑科技，装逼指南，高逼格代码，让你惊叹不已](https://segmentfault.com/a/1190000010752361){:target='_blank'}
 
 <!-- JavaScript  36 式（17，19，23，24）：
