@@ -985,6 +985,8 @@ for (key in bar) {
 
 ## JS代码调试必须要HTML、控制台或者node？
 
+## window.btoa
+
 ## 61
 
 ## 装逼文章大赏
