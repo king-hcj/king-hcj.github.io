@@ -668,9 +668,138 @@ person.sort(sortFunc('age', age));
 // ]
 ```
 
+## 第十九式：西施宜笑复宜颦，丑女效之徒累身 —— `window.btoa`、`window.atob`，命名这么随意的API可以用来干什么？
+
+&emsp;&emsp;单从命名来看，完全让人摸不着头脑的两个API，我们到底可以用他们来干些什么呢？（我甚至怀疑，如果在项目中使用这样的命名，完全可能被同事打，哈哈）
+
+ - `window.atob()` 函数用来解码一个已经被base-64编码过的数据。你可以使用 `window.btoa()` 方法来**编码一个可能在传输过程中出现问题的数据**，并且在接受数据之后，使用 `window.atob()` 方法来将数据解码。例如：你可以把ASCII里面数值0到31的控制字符进行编码，传输和解码。
+- `window.btoa()`：将ASCII字符串或二进制数据转换成一个base64编码过的字符串,**该方法不能直接作用于Unicode字符串**。
+- 在各浏览器中,使用 `window.btoa` 对Unicode字符串进行编码都会触发一个字符越界的异常，
+
+```js
+let encodedData = window.btoa("Hello, world"); // 编码
+console.log(encodedData);                      // SGVsbG8sIHdvcmxk
+let decodedData = window.atob(encodedData);    // 解码
+console.log(decodedData);                      // Hello, world
+let encodeUTF = window.btoa(encodeURIComponent('啊'));
+console.log(encodeUTF);                        // JUU1JTk1JThB
+let decodedUTF = decodeURIComponent(atob(encodeUTF));
+console.log(decodedUTF);                       // 啊
+```
+
+> 资料参考：[window.atob()与window.btoa()方法实现编码与解码](https://www.cnblogs.com/moqiutao/p/6280099.html){:target='_blank'} &#124; [WindowOrWorkerGlobalScope.atob()](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/atob){:target='_blank'} &#124; [WindowOrWorkerGlobalScope.btoa()](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/btoa){:target='_blank'}
+
+## 第二十式：`escape`、`encodeURI` 、 `encodeURIComponent`，这些编码 API 有什么区别？
+
+- `escape` 是对字符串(string)进行编码(而另外两种是对 URL)，作用是让它们在所有电脑上可读。编码之后的效果是`%XX`或者`%uXXXX`这种形式。其中 ASCII 字母、数字、`@*/+` ，这几个字符不会被编码，其余的都会。最关键的是，**当你需要对 URL 编码时，请忘记这个方法，这个方法是针对字符串使用的，不适用于 URL**；
+- `encodeURI` 和 `encodeURIComponent` 都是编码 URL，唯一区别就是编码的字符范围；
+- `encodeURI` 方法不会对下列字符编码：ASCII 字母、数字、`~!@#$&*()=:/,;?+'`；
+- `encodeURIComponent` 方法不会对下列字符编码：ASCII 字母、数字、`~!*()'`；
+- 也就是 **`encodeURIComponent` 编码的范围更广**，会将`http://XXX`中的`//`也编码，会导致 URL 不可用。(其实 java 中的 `URLEncoder.encode(str,char)`也类似于这个方法，会导致 URL 不可用)。
+- 使用场景：
+  - 如果只是编码字符串，不和 URL 有半毛钱关系，那么用 `escape`，而且这个方法一般不会用到；
+  - 如果你需要编码整个 URL，然后需要使用这个 URL，那么用 `encodeURI`；
+  - 当你需要编码 URL 中的参数的时候，那么 `encodeURIComponent` 是最好方法；
+  - 某些场景下，编码之后导致URL不可用（比如笔者曾遇到预览附件时某些附件URL无法打开的问题），可尝试考虑是否是因为特殊字符导致的。
+- 如果不生效可以用两次编码：[关于两次编码的原因](https://www.cnblogs.com/qlqwjy/p/9934706.html){:target='\_blank'}
+
+> 资料参考：[escape、encodeURI 和 encodeURIComponent 的区别](https://www.cnblogs.com/qlqwjy/p/9934706.html){:target='\_blank'}
+
+## 第二十一式：经常碰到移动端DNS域名劫持问题？来一起了解下HTTPDNS是什么，解决了什么问题吧
+
+&emsp;&emsp;对于互联网，域名是访问的第一跳，而这一跳很多时候会“失足”（尤其是移动端网络），导致访问错误内容、失败连接等，让用户在互联网上畅游的爽快瞬间消失。但凡使用域名来给用户提供服务的互联网企业，都或多或少地无法避免在有中国特色的互联网环境中遭遇到各种域名被缓存、用户跨网访问缓慢等问题。
+
+- DNS 解析过程：
+
+![DNS 解析过程]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/dns.jpg?raw=true)
+
+- 什么HttpDNS：
+
+&emsp;&emsp;HTTPDNS 利用 HTTP 协议与 DNS 服务器交互，代替了传统的基于 UDP 协议的 DNS 交互，绕开了运营商的 Local DNS，**有效防止了域名劫持，提高域名解析效率**。另外，由于 DNS 服务器端获取的是真实客户端 IP 而非 Local DNS 的 IP，**能够精确定位客户端地理位置、运营商信息，从而有效改进调度精确性**。
+
+- HttpDns 主要解决的问题：
+
+  - Local DNS 劫持：由于 HttpDns 是通过 IP 直接请求 HTTP 获取服务器 A 记录地址，不存在向本地运营商询问 domain 解析过程，所以从根本避免了劫持问题。
+  - 平均访问延迟下降：由于是 IP 直接访问省掉了一次 domain 解析过程，通过智能算法排序后找到最快节点进行访问。
+  - 用户连接失败率下降：通过算法降低以往失败率过高的服务器排序，通过时间近期访问过的数据提高服务器排序，通过历史访问成功记录提高服务器排序。
+
+- HttpDNS的原理
+
+  - 客户端**直接访问HttpDNS接口**，获取业务在域名配置管理系统上配置的访问延迟最优的IP。（基于容灾考虑，还是保留次选使用运营商LocalDNS解析域名的方式）；
+  - 客户端获取到IP后就直接向此IP发送业务协议请求。以Http请求为例，通过在header中指定host字段，向HttpDNS返回的IP发送标准的Http请求即可。
+
+> 详细资料参考：[全面了解移动端DNS域名劫持等杂症：原理、根源、HttpDNS解决方案等](https://www.jianshu.com/p/5413a5a0577e){:target='_blank'}
+
+## 第二十二式：`depcheck`一下你的前端项目中是否存在未使用的依赖包
+
+&emsp;&emsp;很多时候，也许我们的前端项目是基于某个已有的项目进行”复制搭建“，或者直接使用[UmiJS](https://umijs.org/){:target='_blank'}这样的企业级 react 应用框架，又或者基于[Ant Design Pro](https://pro.ant.design/){:target='_blank'}等开源项目进行删改，难免会存在未使用的依赖包，拖累项目安装速度，增大项目打包体积等，这时，我们就可以考虑使用`depcheck`找出那些未使用的依赖包进行移除。
+
+  - `npm install depcheck -g`
+  - cd 到要检查的项目目录，运行 depcheck
+
+    ```s
+      D:\project>depcheck
+      Unused devDependencies  #未使用的依赖
+        * @antv/data-set
+        * echarts
+        * echarts-for-react
+        * qs
+      * Unused devDependencies #未使用的devDependencies
+        * chalk
+        * enzyme
+        * express
+      Missing dependencies  #缺少的dependencies
+        * immutability-helper: .\src\components\EditColums\EditColumnsTable.js
+        * slash2: .\config\config.js
+    ```
+
+> UmiJS学习参考：[UmiJS](https://umijs.org/){:target='_blank'} &#124; [[react]初识Umi.JS](https://www.jianshu.com/p/dc493809a2fd){:target='_blank'}
+
+## 第二十三式：防止误操作：在组件卸载、路由跳转、页面关闭（刷新）之前进行提示
+
+&emsp;&emsp;工作中经常会有大表单填写、提交这样的需求，如果用户写了大量内容，因为误操作，刷新或者关闭了页面，填写信息用没有做缓存，此时用户的内心应该是奔溃的。
+
+&emsp;&emsp;React组件卸载、路由跳转、页面关闭（刷新）之前进行提示（如果是AntD Modal弹窗里面的表单，也可视情考虑将`maskClosable`属性设置为false，防止误点蒙层导致弹窗关闭）：
+
+```js
+//监听窗口事件
+useEffect(() => {
+  const listener = (ev) => {
+    ev.preventDefault();
+    ev.returnValue = '确定离开吗？';
+  };
+  window.addEventListener('beforeunload', listener);
+  return () => {
+    // 在末尾处返回一个函数
+    // React 在该函数组件卸载前调用该方法（实现 componentWillUnmount）
+    window.removeEventListener('beforeunload', listener);
+  };
+}, []);
+```
+
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
 - [JavaScript replace() 方法](https://www.w3school.com.cn/jsref/jsref_replace.asp){:target='_blank'}
+
+## VSCode竟然可以打开谷歌开发者工具面板？他 和 Chrome有什么关系？
+
+- Help => Toggle Developer Tools
+
+VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。
+
+VS Code 的其他的主要组件有：
+
+Monaco Editor
+Language Server Protocol
+Debug Adapter Protocol
+Xterm.js
+
+- [vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
+
+## console.log`hello world`
+
+- [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
+- [带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'}
 
 ## 如何通过脚本来新建文件，提高开发效率？
 
@@ -681,12 +810,6 @@ person.sort(sortFunc('age', age));
 ## 如何通过脚本完成自动化部署？
 
 - 合同、UBOX等测试环境
-
-## console.log`hello world`
-
-- [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
-- [带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'}
-
 
 ## `Days[Days["Sun"] = 3] = "Sun"`
 
@@ -891,7 +1014,7 @@ for (key in bar) {
 
 ## 纯前端代码生成 Excel
 
-## iframe数据传递，postMessage可以是你的一个选择
+## iframe间数据传递，postMessage可以是你的选择
 
 错误：`Block a frame with origin`
 ```js
@@ -984,26 +1107,6 @@ for (key in bar) {
 ## 微前端、serverless
 
 ## JS代码调试必须要HTML、控制台或者node？
-
-## VSCode竟然可以打开谷歌开发者工具面板？他 和 Chrome有什么关系？
-
-- Help => Toggle Developer Tools
-
-VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。
-
-VS Code 的其他的主要组件有：
-
-Monaco Editor
-Language Server Protocol
-Debug Adapter Protocol
-Xterm.js
-
-- [vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
-
-## window.btoa
-
-- [window.btoa 和 window.atob](https://www.cnblogs.com/wangchaoyuana/p/7497372.html){:target='_blank'}
-- [window.atob()与window.btoa()方法实现编码与解码](https://www.cnblogs.com/moqiutao/p/6280099.html){:target='_blank'}
 
 ## 让对象的toString返回指定的字符串而不是[object Object]
 
