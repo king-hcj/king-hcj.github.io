@@ -985,7 +985,33 @@ for (key in bar) {
 
 ## JS代码调试必须要HTML、控制台或者node？
 
+## VSCode竟然可以打开谷歌开发者工具面板？他 和 Chrome有什么关系？
+
+- Help => Toggle Developer Tools
+
+VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。
+
+VS Code 的其他的主要组件有：
+
+Monaco Editor
+Language Server Protocol
+Debug Adapter Protocol
+Xterm.js
+
+- [vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
+
 ## window.btoa
+
+- [window.btoa 和 window.atob](https://www.cnblogs.com/wangchaoyuana/p/7497372.html){:target='_blank'}
+- [window.atob()与window.btoa()方法实现编码与解码](https://www.cnblogs.com/moqiutao/p/6280099.html){:target='_blank'}
+
+## 让对象的toString返回指定的字符串而不是[object Object]
+
+## 可以遍历绝大部分数据类型的for of为什么不能遍历普通对象？（单独文章，拉勾可迭代接口，MDN也可以）
+
+- [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
+- [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
+- [【译】理解 JavaScript 中的 for…of 循环](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}
 
 ## 61
 
