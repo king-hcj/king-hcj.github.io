@@ -876,7 +876,7 @@ console.log(idMaker.next().value) // 2
 console.log(idMaker.next().value) // 3
 ```
 
-## 第二十六式：对象属性会自己偷偷排队 —— 谁动了我的对象？
+## 第二十六式：谁动了我的对象 —— 对象属性会自己偷偷排队？
 
 - 试想以下，下面的代码会输出什么：
 
@@ -901,7 +901,7 @@ for (key in bar) {
 }
 ```
 
-&emsp;&emsp;在 ECMAScript 规范中定义了**数字属性应该按照索引值大小升序排列，字符串属性根据创建时的顺序升序排列**。我们把对象中的数字属性称为**排序属性**，在 Chrome V8 引擎 中被称为 elements，字符串属性就被称为**常规属性**，在 V8 中被称为 properties。在 V8 内部，为了有效地提升存储和访问这两种属性的性能，分别使用了两个线性数据结构来分别保存排序属性和常规属性。同时 v8 将部分常规属性直接存储到对象本身，我们把这称为**对象内属性 (in-object properties)**，不过对象内属性的数量是固定的，默认是 10 个。更多详情可参考之前的一篇文章[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
+&emsp;&emsp;在 ECMAScript 规范中定义了**数字属性应该按照索引值大小升序排列，字符串属性根据创建时的顺序升序排列**。我们把对象中的数字属性称为**排序属性**，在 Chrome V8 引擎 中被称为 elements，字符串属性就被称为**常规属性**，在 V8 中被称为 properties。在 V8 内部，为了有效地提升存储和访问这两种属性的性能，分别使用了两个线性数据结构来分别保存排序属性和常规属性。同时 v8 将部分常规属性直接存储到对象本身，我们把这称为**对象内属性 (in-object properties)**，不过对象内属性的数量是固定的，默认是 10 个。更多详情可参考笔者之前的一篇文章[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
 
 - 结果揭晓
 
@@ -920,8 +920,9 @@ for (key in bar) {
 // index:C  value:bar-C
 ```
 
-> 资料参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
+> 资料参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'}
 
+## 第二十七式：
 ## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
 
 - [JavaScript专精系列(6)——FileReader 文件读取](https://mapbar-front.blog.csdn.net/article/details/78632928){:target='_blank'}
