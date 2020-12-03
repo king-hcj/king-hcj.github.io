@@ -844,9 +844,83 @@ console.log`string text line 1 \n string text line 2` // ["string text line 1 �
 
 > 参考资料：[MDN-带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'} &#124; [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
 
-## 第二十五式：
+## 第二十五式：还在用闭包实现自增ID？何不试试优雅大气的Generator？
 
+- 闭包
 
+```js
+function createIdMaker(){
+    let id = 1;
+    return function (){
+        return id ++;
+    }
+}
+
+const idMaker =  createIdMaker();
+
+console.log(idMaker()) // 1
+console.log(idMaker()) // 2
+console.log(idMaker()) // 3
+```
+
+- Generator
+
+```js
+function * createIdMaker() {
+  let id = 1
+  while(true) yield id ++;
+}
+const idMaker = createIdMaker()
+console.log(idMaker.next().value) // 1
+console.log(idMaker.next().value) // 2
+console.log(idMaker.next().value) // 3
+```
+
+## 第二十六式：对象属性会自己偷偷排队 —— 谁动了我的对象？
+
+- 试想以下，下面的代码会输出什么：
+
+```js
+function Foo() {
+  this[200] = 'test-200';
+  this[1] = 'test-1';
+  this[100] = 'test-100';
+  this['B'] = 'bar-B';
+  this[50] = 'test-50';
+  this[9] = 'test-9';
+  this[8] = 'test-8';
+  this[3] = 'test-3';
+  this[5] = 'test-5';
+  this['D'] = 'bar-D';
+  this['C'] = 'bar-C';
+}
+var bar = new Foo();
+
+for (key in bar) {
+  console.log(`index:${key}  value:${bar[key]}`);
+}
+```
+
+&emsp;&emsp;在 ECMAScript 规范中定义了**数字属性应该按照索引值大小升序排列，字符串属性根据创建时的顺序升序排列**。我们把对象中的数字属性称为**排序属性**，在 Chrome V8 引擎 中被称为 elements，字符串属性就被称为**常规属性**，在 V8 中被称为 properties。在 V8 内部，为了有效地提升存储和访问这两种属性的性能，分别使用了两个线性数据结构来分别保存排序属性和常规属性。同时 v8 将部分常规属性直接存储到对象本身，我们把这称为**对象内属性 (in-object properties)**，不过对象内属性的数量是固定的，默认是 10 个。更多详情可参考之前的一篇文章[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
+
+- 结果揭晓
+
+```js
+//输出：
+// index:1  value:test-1
+// index:3  value:test-3
+// index:5  value:test-5
+// index:8  value:test-8
+// index:9  value:test-9
+// index:50  value:test-50
+// index:100  value:test-100
+// index:200  value:test-200
+// index:B  value:bar-B
+// index:D  value:bar-D
+// index:C  value:bar-C
+```
+
+> 资料参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
 
 ## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
 
@@ -855,20 +929,6 @@ console.log`string text line 1 \n string text line 2` // ["string text line 1 �
 - [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='_blank'}
 - [前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
 
-## 如何创建自增的id：发号器（生成器）
-```js
-function * createIdMaker() {
-  let id = 1
-  while(true) {
-    yield id ++
-  }
-}
-const idMaker = createIdMaker()
-console.log(idMaker.next().value)
-console.log(idMaker.next().value)
-console.log(idMaker.next().value)
-```
-
 ## 如何快速将普通对象转为map
 
 ```js
@@ -876,13 +936,19 @@ const obj = {
   foo: 'value1',
   bar: 'value2'
 }
+// 打印value
 console.log(Object.values(obj))
+// 打印key
 console.log(Object.keys(obj))
+// 打印由[key, value]
 console.log(Object.entries(obj))
+// 使用of遍历普通对象的方法
 for(const [key, value] of Object.entries(obj)){
   console.log(key, value)
 }
+// 普通对象转Map
 console.log(new Map(Object.entries(obj)))
+// 遍历普通对象生成的Map
 for(const item of new Map(Object.entries(obj))){
   console.log(item)
 }
@@ -917,7 +983,7 @@ Xterm.js
 
 - 合同、UBOX等测试环境
 
-## `Days[Days["Sun"] = 3] = "Sun"`
+## `let Days={};Days[Days["Sun"] = 3] = "Sun"`
 
 ## 动手实现一个 reduce
 
@@ -1057,48 +1123,6 @@ Xterm.js
 ## 为了减少冗余参数，我用 delete 有错吗？
   - 删除
   - 改变属性顺序
-
-## 对象属性会自己偷偷排队？
-
-试想以下，下面的代码会输出什么：
-
-```js
-// test.js
-function Foo() {
-  this[200] = 'test-200';
-  this[1] = 'test-1';
-  this[100] = 'test-100';
-  this['B'] = 'bar-B';
-  this[50] = 'test-50';
-  this[9] = 'test-9';
-  this[8] = 'test-8';
-  this[3] = 'test-3';
-  this[5] = 'test-5';
-  this['D'] = 'bar-D';
-  this['C'] = 'bar-C';
-}
-var bar = new Foo();
-
-for (key in bar) {
-  console.log(`index:${key}  value:${bar[key]}`);
-}
-//输出：
-// index:1  value:test-1
-// index:3  value:test-3
-// index:5  value:test-5
-// index:8  value:test-8
-// index:9  value:test-9
-// index:50  value:test-50
-// index:100  value:test-100
-// index:200  value:test-200
-// index:B  value:bar-B
-// index:D  value:bar-D
-// index:C  value:bar-C
-```
-
-&emsp;&emsp;在 ECMAScript 规范中定义了**数字属性应该按照索引值大小升序排列，字符串属性根据创建时的顺序升序排列**。在这里我们把对象中的数字属性称为**排序属性**，在 V8 中被称为 elements，字符串属性就被称为**常规属性**，在 V8 中被称为 properties。在 V8 内部，为了有效地提升存储和访问这两种属性的性能，分别使用了两个线性数据结构来分别保存排序属性和常规属性。同时 v8 将部分常规属性直接存储到对象本身，我们把这称为**对象内属性 (in-object properties)**，不过对象内属性的数量是固定的，默认是 10 个。
-
-> 详细可参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'} —— 【V8 内部是如何存储对象的：快属性和慢属性】一节。
 
 ## 省省劲儿，setTimeout 不能让你的程序暂停
 
