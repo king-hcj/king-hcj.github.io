@@ -843,7 +843,21 @@ console.log`string text line 1 \n string text line 2` // ["string text line 1 �
 ![原始字符串]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/tag.png?raw=true)
 
 > 参考资料：[MDN-带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'} &#124; [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
-- 
+
+## 第二十五式：
+
+
+
+## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
+
+- [JavaScript专精系列(6)——FileReader 文件读取](https://mapbar-front.blog.csdn.net/article/details/78632928){:target='_blank'}
+- [前端上传文件的方法总结](https://www.cnblogs.com/soraly/p/8441589.html){:target='_blank'}
+- [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='_blank'}
+- [前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
+
+## 如何创建自增的id：发号器（生成器）
+
+## 如何快速将普通对象转为map
 
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
@@ -1173,7 +1187,7 @@ for (key in bar) {
 
 ## 让对象的toString返回指定的字符串而不是[object Object]
 
-## 可以遍历绝大部分数据类型的for of为什么不能遍历普通对象？（单独文章，拉勾可迭代接口，MDN也可以）
+## 可以遍历绝大部分数据类型的for of为什么不能遍历普通对象？（单独文章，拉勾可迭代接口，MDN也可以，迭代器模式）
 
 - [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
 - [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
