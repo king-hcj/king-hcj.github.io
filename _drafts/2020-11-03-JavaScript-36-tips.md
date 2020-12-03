@@ -777,6 +777,74 @@ useEffect(() => {
 }, []);
 ```
 
+## 第二十四式：不带括号也能执行函数调用？console.log\`hello world\`会打印出什么
+
+- 直接看结果：
+```js
+console.log`hello world` // 打印出一个数组：["hello world", raw: Array(1)]
+```
+
+- 再看看以下代码：
+```js
+const name = 'jack'
+const gender = false
+// 带括号
+console.log(`hey, ${name} is a ${gender ? 'girl' : 'boy'}.`) // hey, jack is a boy.
+// 不带括号
+console.log`hey, ${name} is a ${gender ? 'girl' : 'boy'}.` // ["hey, ", " is a ", ".", raw: Array(3)] 'jack' 'boy'
+```
+
+&emsp;&emsp;从最后一行打印可以看出数组中的项是以'插入表达式'作为分割生成的，并且插入表答式中的内容参数，也会依次打印出来。这就是**带标签的模板字符串**。
+
+- 模板字符串的语法：
+
+```js
+// 普通
+`string text`
+
+// 换行
+`string text line 1
+ string text line 2`
+
+// 插值
+`string text ${expression} string text`
+
+// 带标签的模板字符串
+tag `string text ${expression} string text`
+```
+
+- 可以做什么：
+```js
+const name = 'jack'
+const gender = false
+
+function myTagFunc(strings, name, gender) {
+    const sex = gender ? 'girl' : 'boy'
+    // return 'hello world'
+    return strings[0] + name + strings[1] + sex + strings[2]
+}
+
+// result 的值是myTagFunc函数的返回值
+// 如果myTagFunc返回 hello world，result就是hello world
+// 这样可在一定程度上避免在模板字符串内写复杂的逻辑
+const result = myTagFunc`hey, ${name} is a ${gender}.`
+console.log(result) // hey, jack is a boy.
+```
+
+&emsp;&emsp;在标签函数的第一个参数中，存在一个特殊的属性raw ，我们可以通过它来访问模板字符串的原始字符串，而不经过特殊字符的替换。
+```js
+function tag(strings) {
+  console.log(strings.raw[0]);
+}
+tag`string text line 1 \n string text line 2`;// "string text line 1 \n string text line 2"
+console.log`string text line 1 \n string text line 2` // ["string text line 1 ↵ string text line 2", raw: Array(1)]
+```
+
+![原始字符串]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/tag.png?raw=true)
+
+> 参考资料：[MDN-带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'} &#124; [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
+- 
+
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
 - [JavaScript replace() 方法](https://www.w3school.com.cn/jsref/jsref_replace.asp){:target='_blank'}
@@ -795,11 +863,6 @@ Debug Adapter Protocol
 Xterm.js
 
 - [vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
-
-## console.log`hello world`
-
-- [带标签的模板字符串](https://www.kancloud.cn/cyyspring/more/1967485){:target='_blank'}
-- [带标签的模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings){:target='_blank'}
 
 ## 如何通过脚本来新建文件，提高开发效率？
 
