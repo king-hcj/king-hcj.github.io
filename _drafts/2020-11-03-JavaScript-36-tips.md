@@ -922,7 +922,22 @@ for (key in bar) {
 
 > 资料参考：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'}
 
-## 第二十七式：
+## 第二十七式：VS Code里竟然有谷歌开发者工具面板？它 和 Chrome有什么关系？
+
+&emsp;&emsp;如下图所示，我们经常用的开发工具VSCode竟与浏览器如此相像，莫非他们是失散多年的兄弟？诶，你还别说，还真有那么点意思。（帮助 下的 切换开发人员工具即可打开以下面板）
+
+![VSCode]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/developer.png?raw=true)
+
+&emsp;&emsp;VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。**Electron比你想象的更简单，如果你可以建一个网站，你就可以建一个桌面应用程序**。
+
+&emsp;&emsp;VS Code 的其他的主要组件有：
+- [Monaco Editor](https://github.com/Microsoft/monaco-editor){:target='_blank'}（壳）
+- [Language Server Protocol](https://github.com/Microsoft/language-server-protocol){:target='_blank'}（内核，一个代码编辑器）
+- [Debug Adapter Protocol](https://github.com/Microsoft/debug-adapter-protocol){:target='_blank'}
+- [Xterm.js](https://xtermjs.org/){:target='_blank'}
+
+> 参考资料：[vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
+
 ## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
 
 - [JavaScript专精系列(6)——FileReader 文件读取](https://mapbar-front.blog.csdn.net/article/details/78632928){:target='_blank'}
@@ -958,21 +973,6 @@ for(const item of new Map(Object.entries(obj))){
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
 - [JavaScript replace() 方法](https://www.w3school.com.cn/jsref/jsref_replace.asp){:target='_blank'}
-
-## VSCode竟然可以打开谷歌开发者工具面板？他 和 Chrome有什么关系？
-
-- Help => Toggle Developer Tools
-
-VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。
-
-VS Code 的其他的主要组件有：
-
-Monaco Editor
-Language Server Protocol
-Debug Adapter Protocol
-Xterm.js
-
-- [vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
 
 ## 如何通过脚本来新建文件，提高开发效率？
 
@@ -1045,6 +1045,8 @@ Xterm.js
   - 带你看看宏任务和微任务
 
 ## 前端的未来在移动端吗？跨端方案都有哪些
+
+[Electron 和当下其他的桌面开发方法相比如何？](https://www.zhihu.com/question/264999651?sort=created){:target='_blank'}
 
 ## 回调地狱：前端是如何一步步走出来的？
   - 前端异步方案是怎么一路走来的
