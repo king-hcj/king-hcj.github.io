@@ -856,8 +856,37 @@ console.log`string text line 1 \n string text line 2` // ["string text line 1 �
 - [前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
 
 ## 如何创建自增的id：发号器（生成器）
+```js
+function * createIdMaker() {
+  let id = 1
+  while(true) {
+    yield id ++
+  }
+}
+const idMaker = createIdMaker()
+console.log(idMaker.next().value)
+console.log(idMaker.next().value)
+console.log(idMaker.next().value)
+```
 
 ## 如何快速将普通对象转为map
+
+```js
+const obj = {
+  foo: 'value1',
+  bar: 'value2'
+}
+console.log(Object.values(obj))
+console.log(Object.keys(obj))
+console.log(Object.entries(obj))
+for(const [key, value] of Object.entries(obj)){
+  console.log(key, value)
+}
+console.log(new Map(Object.entries(obj)))
+for(const item of new Map(Object.entries(obj))){
+  console.log(item)
+}
+```
 
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
@@ -1188,6 +1217,11 @@ for (key in bar) {
 ## 让对象的toString返回指定的字符串而不是[object Object]
 
 ## 可以遍历绝大部分数据类型的for of为什么不能遍历普通对象？（单独文章，拉勾可迭代接口，MDN也可以，迭代器模式）
+```js
+for(const [key, value] of Object.entries(obj)){
+  console.log(key, value)
+}
+```
 
 - [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
 - [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
