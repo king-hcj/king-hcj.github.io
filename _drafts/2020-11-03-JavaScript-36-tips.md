@@ -1271,6 +1271,12 @@ for(const [key, value] of Object.entries(obj)){
 - [验证码的原理、作用及实现](https://blog.csdn.net/niaonao/article/details/51112686){:target='_blank'}
 - [node实现登录图片验证码的示例代码](https://www.jb51.net/article/138526.htm){:target='_blank'}
 
+## 微信支付
+
+- [支付宝、微信支付原理图](https://www.cnblogs.com/hua-nuo/p/12857671.html){:target='_blank'}
+- [从前端的角度来梳理微信支付（小程序、H5、JSAPI）的流程](https://segmentfault.com/a/1190000038228200){:target='_blank'}
+- [微信支付-文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=8_3){:target='_blank'}
+
 ## 61
 
 ## 装逼文章大赏
