@@ -10,6 +10,10 @@
   url: https://www.infoq.cn
   src: www
 
+- name: 前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈
+  url: https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde
+  src: www
+
 - name: 现代 JavaScript 教程
   url: https://zh.javascript.info
   src: www
