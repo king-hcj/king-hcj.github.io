@@ -931,12 +931,169 @@ for (key in bar) {
 &emsp;&emsp;VS Code 是基于 Electron (原来叫 Atom Shell) 进行开发的。Electron 基于 Node.js（作为后端运行时）和 Chromium（作为前端渲染)，使得开发者可以使用 HTML, CSS 和 JavaScript 等前端技术来开发跨平台桌面 GUI 应用程序。Atom, GitHub Desktop, Slack, Microsoft Teams, WordPress Desktop 等知名软件都是基于 Electron 开发的。**Electron比你想象的更简单，如果你可以建一个网站，你就可以建一个桌面应用程序**。
 
 &emsp;&emsp;VS Code 的其他的主要组件有：
-- [Monaco Editor](https://github.com/Microsoft/monaco-editor){:target='_blank'}（壳）
-- [Language Server Protocol](https://github.com/Microsoft/language-server-protocol){:target='_blank'}（内核，一个代码编辑器）
+- 壳：[Monaco Editor](https://github.com/Microsoft/monaco-editor){:target='_blank'}
+- 内核：[Language Server Protocol](https://github.com/Microsoft/language-server-protocol){:target='_blank'}（一个代码编辑器）
 - [Debug Adapter Protocol](https://github.com/Microsoft/debug-adapter-protocol){:target='_blank'}
 - [Xterm.js](https://xtermjs.org/){:target='_blank'}
 
 > 参考资料：[vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'} &#124; [Electron](https://www.electronjs.org/){:target='_blank'} &#124; [Electron 快速入门](https://zhuanlan.zhihu.com/p/27740025){:target='_blank'}
+
+## 第二十八式："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate) —— 一个正经又有点邪气的组件封装
+
+&emsp;&emsp;开始看到这行评级rate组件的代码，是在一篇充满邪气的文章[信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}里，总觉得这个组件与那篇文章的文风不对应，甚至觉得这个实现还足够机智，值得借鉴，我是不是没救了，哈哈。
+
+```js
+{
+  let rate = 3;
+  "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
+}
+```
+
+> 参考资料：[信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}
+
+## 第二十九式：`Uncaught TypeError: obj is not iterable`，`for of` 遍历普通对象报错，如何快速使普通对象可被 `for of` 遍历？
+
+&emsp;&emsp;`for of`可以迭代Arrays（数组）, Maps（映射）, Sets（集合）等，甚至连Strings（字符串）都可以迭代，却不能遍历普通对象？
+
+```js
+// 字符串
+const iterable = 'ES6';
+for (const value of iterable) {
+  console.log(value);
+}
+// Output:
+// "E"
+// "S"
+// "6"
+
+// 普通对象
+const obj = {
+  foo: 'value1',
+  bar: 'value2'
+}
+for(const item of obj){
+  console.log(item)
+}
+// Uncaught TypeError: obj is not iterable
+```
+
+&emsp;&emsp;从对象的几个方法`Object.values()`、`Object.keys()`、`Object.entries()`看起吧：
+
+```js
+const obj = {
+  foo: 'value1',
+  bar: 'value2'
+}
+// 打印由value组成的数组
+console.log(Object.values(obj))
+
+// 打印由key组成的数组
+console.log(Object.keys(obj))
+
+// 打印由[key, value]组成的二维数组
+console.log(Object.entries(obj))
+
+// 使用of遍历普通对象的方法
+for(const [, value] of Object.entries(obj)){
+  console.log(value)
+}
+
+// 普通对象转Map
+console.log(new Map(Object.entries(obj)))
+
+// 遍历普通对象生成的Map
+for(const [, value] of new Map(Object.entries(obj))){
+  console.log(value)
+}
+```
+
+&emsp;&emsp;普通对象为何不可被`for of`迭代请参考下一式。
+
+## 第三十式：可以遍历绝大部分数据类型的`for of`为什么不能遍历普通对象？
+
+- 普通对象为何不可被 `for of` 迭代
+
+```js
+{
+  // 数组
+  const iterable = ['a', 'b'];
+  for (const value of iterable) {
+    console.log(value);
+  }
+  // Output:
+  // a
+  // b
+}
+{
+  // Set(集合)
+  const iterable = new Set([1, 2, 2, 1]);
+  for (const value of iterable) {
+    console.log(value);
+  }
+  // Output:
+  // 1
+  // 2
+}
+{
+// Arguments Object(参数对象)
+function args() {
+  for (const arg of arguments) {
+    console.log(arg);
+  }
+}
+args('a', 'b');
+// Output:
+// a
+// b
+}
+```
+
+![iterator1]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/iterator1.png?raw=true)
+
+![iterator2]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/iterator2.png?raw=true)
+
+![iterator3]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/iterator3.png?raw=true)
+
+&emsp;&emsp;可以看到，这些可被`for of`迭代的对象，都实现了一个`Symbol(Symbol.iterator)`方法，而普通对象没有这个方法。
+
+&emsp;&emsp;简单来说，`for of` 语句创建一个循环来迭代可迭代的对象，可迭代的对象内部实现了`Symbol.iterator`方法，而普通对象没有实现这一方法，所以普通对象是不可迭代的。
+
+- 如何实现`Symbol.iterator`方法，使普通对象可被 `for of` 迭代
+
+```js
+// 普通对象
+const obj = {
+  foo: 'value1',
+  bar: 'value2',
+  [Symbol.iterator]() {
+    const keys = Object.keys(obj);
+    let index = 0;
+    return {
+      next() {
+        if (index < keys.length) {
+          return {
+            value: keys[index++],
+            done: false
+          };
+        } else {
+          return { value: undefined, done: true };
+        }
+      }
+    };
+  }
+}
+for (const value of obj) {
+  console.log(value);
+}
+```
+
+// （单独文章，拉勾可迭代接口，MDN也可以，迭代器模式）
+
+- [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
+- [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
+- [【译】理解 JavaScript 中的 for…of 循环](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}
+- [Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator){:target='_blank'}
+
 
 ## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
 
@@ -944,31 +1101,6 @@ for (key in bar) {
 - [前端上传文件的方法总结](https://www.cnblogs.com/soraly/p/8441589.html){:target='_blank'}
 - [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='_blank'}
 - [前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
-
-## 如何快速将普通对象转为map
-
-```js
-const obj = {
-  foo: 'value1',
-  bar: 'value2'
-}
-// 打印value
-console.log(Object.values(obj))
-// 打印key
-console.log(Object.keys(obj))
-// 打印由[key, value]
-console.log(Object.entries(obj))
-// 使用of遍历普通对象的方法
-for(const [key, value] of Object.entries(obj)){
-  console.log(key, value)
-}
-// 普通对象转Map
-console.log(new Map(Object.entries(obj)))
-// 遍历普通对象生成的Map
-for(const item of new Map(Object.entries(obj))){
-  console.log(item)
-}
-```
 
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
@@ -1221,10 +1353,6 @@ for(const item of new Map(Object.entries(obj))){
 - [深入浅出：HTTP/2](https://www.cnblogs.com/confach/p/10141273.html){:target='_blank'}
 - [一文读懂 HTTP/2 特性](https://zhuanlan.zhihu.com/p/26559480){:target='_blank'}
 
-## 一个正经又有点邪气的组件封装："★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate)
-
-- [信条｜手撕吊打面试官系列面试题](https://mp.weixin.qq.com/s/xaZGvnRuHAFocjh3DMiXCw){:target='_blank'}
-
 ## 重放攻击
 
 - [前端业务安全综述（防爬、防薅、人机校验等）](https://mp.weixin.qq.com/s/eQKqiBbiuw-_RwWVYUnFXg){:target='_blank'}
@@ -1242,17 +1370,6 @@ for(const item of new Map(Object.entries(obj))){
 ## JS代码调试必须要HTML、控制台或者node？
 
 ## 让对象的toString返回指定的字符串而不是[object Object]
-
-## 可以遍历绝大部分数据类型的for of为什么不能遍历普通对象？（单独文章，拉勾可迭代接口，MDN也可以，迭代器模式）
-```js
-for(const [key, value] of Object.entries(obj)){
-  console.log(key, value)
-}
-```
-
-- [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
-- [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
-- [【译】理解 JavaScript 中的 for…of 循环](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}
 
 ## Node后台邮件服务器
 
