@@ -936,7 +936,7 @@ for (key in bar) {
 - [Debug Adapter Protocol](https://github.com/Microsoft/debug-adapter-protocol){:target='_blank'}
 - [Xterm.js](https://xtermjs.org/){:target='_blank'}
 
-> 参考资料：[vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'}
+> 参考资料：[vs code的界面是用的什么技术？](https://www.zhihu.com/question/43666493?sort=created){:target='_blank'} &#124; [Electron](https://www.electronjs.org/){:target='_blank'} &#124; [Electron 快速入门](https://zhuanlan.zhihu.com/p/27740025){:target='_blank'}
 
 ## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
 
@@ -1253,6 +1253,23 @@ for(const [key, value] of Object.entries(obj)){
 - [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
 - [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
 - [【译】理解 JavaScript 中的 for…of 循环](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}
+
+## Node后台邮件服务器
+
+- [Node后台邮件服务器](https://blog.csdn.net/konghouy/article/details/84961500){:target='_blank'}
+- [Nodemailer](https://nodemailer.com/about/){:target='_blank'}
+
+## 短信验证码
+
+短信验证码，后端调服务商的api，服务商会把发送的验证码返回给你，然后用手机号作为key，存在比如redis里
+
+- [Web项目中手机注册短信验证码实现的全流程及代码](https://blog.csdn.net/zuoliangzhu/article/details/81193269){:target='_blank'}
+
+
+## 验证码的原理、作用及实现
+
+- [验证码的原理、作用及实现](https://blog.csdn.net/niaonao/article/details/51112686){:target='_blank'}
+- [node实现登录图片验证码的示例代码](https://www.jb51.net/article/138526.htm){:target='_blank'}
 
 ## 61
 
