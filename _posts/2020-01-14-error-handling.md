@@ -90,6 +90,7 @@ window.onerror = function(message, source, lineno, colno, error) {
 
 - window.addEventListener：静态资源加载异常捕获
 - Promise Catch
+- [unhandledrejection](https://developer.mozilla.org/zh-CN/docs/Web/Events/unhandledrejection){:target='_blank'}：当Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件；这可能发生在 window 下，但也可能发生在 Worker 中。 unhandledrejection继承自 PromiseRejectionEvent，而 PromiseRejectionEvent 又继承自 Event。因此unhandledrejection 含有 PromiseRejectionEvent 和 Event 的属性和方法。
 
 
 ### 总结
