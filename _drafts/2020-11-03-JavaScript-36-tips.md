@@ -953,7 +953,7 @@ for (key in bar) {
 
 ## 第二十九式：`Uncaught TypeError: obj is not iterable`，`for of` 遍历普通对象报错，如何快速使普通对象可被 `for of` 遍历？
 
-&emsp;&emsp;`for of`可以迭代Arrays（数组）, Maps（映射）, Sets（集合）等，甚至连Strings（字符串）都可以迭代，却不能遍历普通对象？
+&emsp;&emsp;`for of`可以迭代Arrays（数组）, Maps（映射）, Sets（集合）、NodeList对象、Generator等，甚至连Strings（字符串）都可以迭代，却不能遍历普通对象？
 
 ```js
 // 字符串
@@ -1066,7 +1066,10 @@ const obj = {
   foo: 'value1',
   bar: 'value2',
   [Symbol.iterator]() {
-    const keys = Object.keys(obj);
+    // 不用担心[Symbol.iterator]属性会被Object.keys()获取到，
+    // Symbol.iterator需要通过Object.getOwnPropertySymbols(obj)获取，
+    // Object.getOwnPropertySymbols() 方法返回一个给定对象自身的所有 Symbol 属性的数组。
+    const keys = Object.keys(obj); 
     let index = 0;
     return {
       next() {
@@ -1087,20 +1090,253 @@ for (const value of obj) {
 }
 ```
 
-// （单独文章，拉勾可迭代接口，MDN也可以，迭代器模式）
+<!-- （单独文章，拉勾可迭代接口，MDN也可以，迭代器模式） -->
 
-- [MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'}
-- [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}
-- [【译】理解 JavaScript 中的 for…of 循环](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}
-- [Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator){:target='_blank'}
+> 参考资料：[MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'} &#124; [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}（[【译文】](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}）&#124; [Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator){:target='_blank'}
+
+## 第三十一式：position定位只知道`absolute`、`fixed`、`relative` 和 `static`？，`sticky`其实可以很惊艳
+
+- absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+- fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+- relative：生成相对定位的元素，相对于其正常位置进行定位。因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+- static：默认值。没有定位，元素出现在正常的流中。
+- sticky：**粘性定位**，该定位基于用户滚动的位置。当元素在屏幕内，它的行为就像 `position:relative;`， 而**当页面滚动超出目标区域时，它的表现就像 `position:fixed;`**，它会固定在目标位置。
+
+&emsp;&emsp;`position:sticky`实现的惊艳吸顶效果可点击[这里](https://www.zhangxinxu.com/study/201812/position-sticky-demo.php){:target='_blank'}。
+
+```scss
+// 用法：nav元素实现粘性定位
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+```
+
+&emsp;&emsp;使用`position:sticky`的过程中，也许会有一些坑，比如要想sticky生效，top属性或则left属性（看滚动方向）是必须要有明确的计算值的，否则fixed的表现不会出现。详情可参考《CSS世界》作者张鑫旭大佬的[杀了个回马枪，还是说说position:sticky吧](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/){:target='_blank'}。
+
+> 参考资料：[CSS position 属性](https://www.runoob.com/cssref/pr-class-position.html){:target='_blank'} &#124; [杀了个回马枪，还是说说position:sticky吧](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/){:target='_blank'}
+
+## 第三十二式：`getBoundingClientRect`让你找准定位不迷失自我
+
+- 什么是 `getBoundingClientRect`
+
+&emsp;&emsp;`Element.getBoundingClientRect()`方法，用来描述一个元素的具体位置，该位置的四个属性都是相对于视口左上角的位置而言的。对某一节点执行该方法，它的返回值是一个 DOMRect 类型的对象。这个对象表示一个矩形盒子，它含有：left、top、right 和 bottom 等只读属性，具体含义如下图所示：
+
+![getBoundingClientRect]({{site.url}}{{site.baseurl}}/images/posts/arts/rect.png?raw=true)
+
+- offset 和 getBoundingClientRect() 区别
+
+  - offset 指偏移，包括这个元素在文档中占用的所有显示宽度，包括滚动条、padding、border，不包括overflow隐藏的部分；
+  - offset 的方向值需要考虑到父级，如果父级是定位元素，那么子元素的offset值相对于父元素；如果父元素不是定位元素，那么子元素的offset值相对于可视区窗口；
+  - `offsetParent`：获取当前元素的**定位父元素**：
+    - 如果当前元素的父元素，**有CSS定位**（position为absolute、relative、fixed），那么 `offsetParent` 获取的是**最近的**那个父元素。
+    - 如果当前元素的父元素，**没有CSS定位**（position为absolute、relative、fixed），那么`offsetParent` 获取的是**body**。
+  - getBoundingClientRect() 的值只相对于可视区窗口，所以在很多场景下更容易“找准定位”。
+
+- 能做什么：滚动吸顶效果
+
+&emsp;&emsp;笔者写此节之前有做过一个表格分页器固定在浏览器底部、表头滚动吸顶的效果，主要参考了`position:sticky`属性和`getBoundingClientRect`。写此节查阅资料时有发现[【前端词典】5 种滚动吸顶实现方式的比较[性能升级版]](https://juejin.cn/post/6844903815041269774){:target='_blank'} 这篇文章，对五种吸顶方式做了详尽的分析和对比，大家有兴趣可以看看。同时，《CSS世界》作者张鑫旭大佬在[杀了个回马枪，还是说说position:sticky吧](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/){:target='_blank'}对`sticky`定位也有详尽的介绍。本来还想在后续的章节谈谈吸顶，现在可能需要重新评估了，哈哈。
+
+&emsp;&emsp;滚动吸顶表格示例：
+
+![position]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/position.png?raw=true)
+
+&emsp;&emsp;[【前端词典】5 种滚动吸顶实现方式的比较[性能升级版]](https://juejin.cn/post/6844903815041269774){:target='_blank'}一文中的`getBoundingClientRect`吸顶实现：
+
+```jsx
+// html
+<div class="pride_tab_fixed" ref="pride_tab_fixed">
+    <div class="pride_tab" :class="titleFixed == true ? 'isFixed' :''">
+        // some code
+    </div>
+</div>
+
+// vue
+export default {
+    data(){
+      return{
+        titleFixed: false
+      }
+    },
+    activated(){
+      this.titleFixed = false;
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      //滚动监听，头部固定
+      handleScroll: function () {
+        let offsetTop = this.$refs.pride_tab_fixed.getBoundingClientRect().top;
+        this.titleFixed = offsetTop < 0;
+        // some code
+      }
+    }
+  }
+```
+
+> 参考资料：[getBoundingClientRect 方法](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect){:target='_blank'} &#124; [杀了个回马枪，还是说说position:sticky吧](https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/){:target='_blank'} &#124; [【前端词典】5 种滚动吸顶实现方式的比较[性能升级版]](https://juejin.cn/post/6844903815041269774){:target='_blank'} &#124; [JS 中的offset、scroll、client总结](https://segmentfault.com/a/1190000015961743){:target='_blank'}
+
+## 第三十三式：`Console Importer` 让你的浏览器控制台成为更强大的实验场
+
+&emsp;&emsp;平时开发中，我们经常会在控制台尝试一些操作，[Console Importer](https://github.com/pd4d10/console-importer){:target='\_blank'}是一个可以在Chrome Console面板安装（引入）loadsh、moment、jQuery、React等资源的插件，语法也很简单，比如`$i('moment')`即可引入moment库，然后即可在控制台直接验证、使用这些库：
+
+- 使用示例：
+
+![import]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/import.png?raw=true)
+
+- 效果图：
+
+![Console Importer]({{site.url}}{{site.baseurl}}/images/posts/arts/js.gif?raw=true)
+
+- 引入资源方法：
+
+```js
+$i('jquery') // 直接引入
+$i('jquery@2') // 指定版本
+$i('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') // cdn地址
+$i('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') // 引入CSS
+```
+
+> 链接：[Console Importer](https://github.com/pd4d10/console-importer){:target='\_blank'} &#124; [Chrome Web Store 地址](https://chrome.google.com/webstore/detail/console-importer/hgajpakhafplebkdljleajgbpdmplhie){:target='_blank'}
+
+## 第三十四式：误用`git reset --hard`，我真的没救了吗？ —— 认识一下 `git reflog` 时光穿梭机
+
+- 我们直奔主题，先看下面的问题：
+
+&emsp;&emsp;懵懂的小白花费一周时间做了git log如下所示的6个功能，每个功能对应一个commit的提交，分别是feature-1 到 feature-6”：
+
+![git1]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/git1.png?raw=true)
+
+&emsp;&emsp;然后错误的执行了强制回滚，`git reset --hard 2216d4e`，回滚到了feature-1上，并且回滚的时候加了--hard，导致之前feature-2 到 feature-6的所有代码全部弄丢了，现在git log上显示如下：
+
+![git2]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/git2.png?raw=true)
+
+&emsp;&emsp;然后，又在此基础上新添加了一个commit提交，信息叫feature-7：
+
+![git3]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/git3.png?raw=true)
+
+&emsp;&emsp;请问：如何把丢失的代码feature-2 到 feature-6全部恢复回来，并且feature-7的代码也要保留
+
+- 接下来，我们回忆几个git命令：
+
+  - `git reset --hard`撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交，谨慎使用 –hard 参数，它会删除回退点之前的所有信息；
+  - `git log` 命令可以显示所有提交过的版本信息；
+  - `git reflog` 可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）；
+  - `git cherry-pick`命令的作用，就是将指定的提交（commit）应用于其他分支。
+
+- 最后，给出解答：`git reflog`和`git cherry-pick`
+
+  - 首先，使用 `git reflog` 查看所以git操作记录，记下feature-7和feature-6的hash码。
+
+  ![git4]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/git4.png?raw=true)
+
+  - 其次，`git reset --hard cd52afc`回滚到feature-6。此时我们已经完成了要求的一半：成功回到了feature-6上，但是feature-7没了。
+  - 最后，`git cherry-pick 4c97ff3`，执行完成之后，feature-7的代码就回来了，大功告成。  
+
+> 更多git知识点推荐阅读GitHub联合创始人Scott Chacon 和 Ben Straub的开源巨作[《Pro Git》](https://git-scm.com/book/zh/v2){:target='_blank'}
+
+> 参考资料：[git时光穿梭机--女神的侧颜](https://segmentfault.com/a/1190000018726100){:target='_blank'} &#124; [git cherry-pick 教程](http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html){:target='_blank'} &#124; [Git Reset 三种模式](https://www.jianshu.com/p/c2ec5f06cf1a){:target='_blank'}
 
 
-## 只会用AntD上传组件？除了FormData和Blob，你还会怎么上传文件？
+## 第三十五式：文件上传只会使用 form 和 Ant Design Upload组件？
 
-- [JavaScript专精系列(6)——FileReader 文件读取](https://mapbar-front.blog.csdn.net/article/details/78632928){:target='_blank'}
-- [前端上传文件的方法总结](https://www.cnblogs.com/soraly/p/8441589.html){:target='_blank'}
+&emsp;&emsp;最近有做一个由其他部门提供接口的需求，上传文件的接口文档如下图所示，文件内容是base64格式，且要和其他参数一起传递。笔者以前做的需求，上传文件一般是通过form、Ant Design Upload组件、FormData等方式，上传成功得到一个URL，表单提交时将得到的URL传给后端；下载通过Blob、后端返回URL、发送邮件、或者[前端生成Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='_blank'}等方式。这次的上传使用了FileReader，简单记录相关实现。关于大文件的上传和下载，之后的章节会进行探讨。
+
+![fileupload]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/fileupload.png?raw=true)
+
+- 代码实现 
+
+```js
+  // DOM 
+  <input type='file' id='file' onChange={(e) => this.uploadFile(e)} />
+  // js
+  uploadFile(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    // 处理loadend事件。该事件在读取操作结束时（要么成功，要么失败）触发。
+    reader.onloadend = () => {
+      this.setState({
+        // 存储
+        XXXFile: {
+          // 除了name外，file中可被读取的属性还包括size、type、lastModifiedDate
+          Name: file.name,
+          // base64格式文件数据
+          // 一次性发送大量的base64数据会导致浏览器卡顿，服务器端接收这样的数据可能也会出现问题。
+          Buffer: reader.result.replace(/data.*base64[,]/, '')
+        }
+      })
+    }
+    reader.readAsDataURL(file);
+  }
+```
+
+- FileReader方法拓展：
+
+  - `FileReader.abort()`：中止读取操作。在返回时，readyState属性为DONE。
+  - `FileReader.readAsArrayBuffer()`：开始读取指定的 Blob中的内容, 一旦完成, result 属性中保存的将是被读取文件的 ArrayBuffer 数据对象.
+  - `FileReader.readAsBinaryString()`：开始读取指定的Blob中的内容。一旦完成，result属性中将包含所读取文件的原始二进制数据。
+  - `FileReader.readAsDataURL()`：开始读取指定的Blob中的内容。一旦完成，result属性中将包含一个`data: URL`格式的Base64字符串以表示所读取文件的内容。
+  - `FileReader.readAsText()`：开始读取指定的Blob中的内容。一旦完成，result属性中将包含一个字符串以表示所读取的文件内容。
+
+- 其他文件上传参考资料：
+
+  - [【MDN】FileReader](https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader){:target='_blank'}
+  - [【MDN】在web应用程序中使用文件](https://developer.mozilla.org/zh-CN/docs/Web/API/File/Using_files_from_web_applications){:target='_blank'}
+  - [李银城-前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
+  - [前端图片上传解决方案](https://segmentfault.com/a/1190000017781605){:target='_blank'}
+
+## 第三十六式：如果没有BigInt，该如何进行大数求和？
+
+- `Number.MAX_SAFE_INTEGER`：值为`9007199254740991`，即`2 ** 53 - 1`，小于该值能精确表示。然后我们会发现`2**53 === 2 ** 53 + 1`为`true`。
+- `Number.MAX_VALUE`：：值为`1.7976931348623157e+308`，大于该值得到的是`Infinity`，介于`Infinity`和安全值之间的无法精确表示。
+
+&emsp;&emsp;既然我们不能实现直接相加，我们可以利用字符串分割成字符串数组的方式来对每一位进行相加。
+
+- 大数相加实现 
+
+```js
+function add (str1, str2) {
+  // 转为数组
+	str1=(str1+'').split('');
+	str2=(str2+'').split('');
+	let result='';//结果
+	let flag=0; // 进位
+	while(str1.length || str2.length || flag){// 是否还有没有相加的位或者大于0的进位
+    // ~~str1.pop()得到最右边一位，并转成数字（～为按位取反运算符，详见第十四式）
+    // 对应位数字相加，再加上进位
+		flag += ~~str1.pop() + ~~str2.pop();
+    // 去除进位，然后进行字符串拼接
+		result = flag%10 + result;
+    // 进位，0或1
+		flag = +(flag>9);
+	}
+  // 去除开头（高位）的0
+  return result.replace(/^0+/, '');
+};
+// 2 ** 53：9007199254740992
+// add(2**53, 1)： "9007199254740993"
+// 2**53+1： 9007199254740992
+```
+
+- 加减乘除：
+
+&emsp;&emsp;关于加减乘除的实现可参考[大数运算js实现](https://www.cnblogs.com/Ballon/p/4752409.html){:target='_blank'}，基本思路：
+
+  - 大数加法和减法是一个道理，既然我们不能实现直接相加减，我们可以利用字符串分割成字符串数组的方式。
+  - 乘法：每个位数两两相乘，最后错位相加。
+
+> 参考资料：[JS 大数相加](https://blog.csdn.net/qq_39816673/article/details/88667505){:target='_blank'} &#124; [前端应该知道的JavaScript浮点数和大数的原理](https://zhuanlan.zhihu.com/p/66949640){:target='_blank'}
+
+## 大文件上传
+
 - [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='_blank'}
-- [前端本地文件操作与上传](https://zhuanlan.zhihu.com/p/31401799){:target='_blank'}
+
+## 大文件下载
+
+- [前端大文件下载方案](https://blog.csdn.net/azurecho/article/details/108618513){:target='_blank'}
+- [从 Fetch 到 Streams —— 以流的角度处理网络请求](https://juejin.cn/post/6844904029244358670){:target='_blank'}
+
+## `let Days={};Days[Days["Sun"] = 3] = "Sun"`
 
 ## `String.replace()`第二个参数可以是个函数？
 - 特殊符号`$`
@@ -1116,8 +1352,6 @@ for (const value of obj) {
 
 - 合同、UBOX等测试环境
 
-## `let Days={};Days[Days["Sun"] = 3] = "Sun"`
-
 ## 动手实现一个 reduce
 
 ## reduce 还可以这么用？
@@ -1129,16 +1363,6 @@ for (const value of obj) {
 ## 什么？我理解的forEach不对？
 
 ## 如何实现call、apply和bind
-
-## getBoundingClientRect：让你找准定位不迷失自我
-
-- offsetTop 和 getBoundingClientRect() 区别
-- [Element.getBoundingClientRect()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect){:target='_blank'}
-- 吸顶效果
-
-## 滚动吸顶
-
-- [【前端词典】4 种滚动吸顶实现方式的比较](https://zhuanlan.zhihu.com/p/62125575){:target='_blank'}
 
 ## 你知道 this 也有优先级吗？
   - 显式绑定和隐式绑定
@@ -1194,12 +1418,6 @@ for (const value of obj) {
   - 字符串运算？整数运算？
 
   - [0.1 + 0.2 != 0.3背后的原理](https://segmentfault.com/a/1190000015051329){:target='_blank'}
-
-## 如果没有BigInt，如何进行大数运算？
-
-- [参考](https://www.cnblogs.com/Ballon/p/4752409.html){:target='_blank'}
-- [js大数相加问题](https://www.jianshu.com/p/c373943f0e9e){:target='_blank'}
-- [JS 大数相加](https://blog.csdn.net/qq_39816673/article/details/88667505){:target='_blank'}
 
 ## 如何实现mul(2)(3)(4)为24？
 
@@ -1268,12 +1486,6 @@ for (const value of obj) {
   - [参考](https://www.cnblogs.com/liuxiaoru/p/13637983.html){:target='_blank'}
   - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='_blank'}
   - 最小延时、最大延时
-
-## `git reset --hard` 真的就没救了吗？
-
-- [git时光穿梭机--女神的侧颜](https://segmentfault.com/a/1190000018726100){:target='_blank'}
-- [git命令log与reflog的比较](https://blog.csdn.net/u013252047/article/details/80230781){:target='_blank'}
-- [github总结(4)--关于git reset --hard这个命令的惨痛教训](https://www.cnblogs.com/hope-markup/p/6683522.html){:target='_blank'}
 
 ## 前端错误处理
 
@@ -1393,6 +1605,8 @@ for (const value of obj) {
 - [支付宝、微信支付原理图](https://www.cnblogs.com/hua-nuo/p/12857671.html){:target='_blank'}
 - [从前端的角度来梳理微信支付（小程序、H5、JSAPI）的流程](https://segmentfault.com/a/1190000038228200){:target='_blank'}
 - [微信支付-文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=8_3){:target='_blank'}
+
+## 生成器函数执行器（co）
 
 ## 61
 
