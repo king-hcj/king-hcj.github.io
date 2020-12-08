@@ -8,9 +8,10 @@ keywords: JS, 前端, JavaScript
 
 > “小马同学，背一下《陋室铭》。”“山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟馨。”“停，怎么少了俩字？”“年轻人不讲吾德。”
 
-系列文章汇总：
+系列文章发布汇总：
 
 - [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777){:target='_blank'}
+- [前端装逼技巧 108 式（二）—— 不讲武德](https://segmentfault.com/a/1190000038393789){:target='_blank'}
 
 > 文章风格所限，引用资料部分，将在对应小节末尾标出。
 
@@ -678,7 +679,7 @@ function add (str1, str2) {
 
 ## 本文发布
 
-  - [segmentfault思否社区](https://segmentfault.com/a/){:target='_blank'}
+  - [segmentfault思否社区](https://segmentfault.com/a/1190000038393789){:target='_blank'}
 
 
 
