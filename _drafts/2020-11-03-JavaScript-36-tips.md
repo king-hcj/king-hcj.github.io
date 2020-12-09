@@ -154,6 +154,25 @@ keywords: JS, 前端, JavaScript
 
 ## Promise并行限制
 
+## Promise.all，一个失败都失败，怎么解决
+
+- 每一个都处理catch（或者），确保不会出现异常（`urls.map(item => axios(item).catch(e => 'error'))`）
+- Promise.allSettled
+
+- [使用promise.all遇到其中一个阻塞导致所有处理无法进行的处理方式](https://blog.csdn.net/Drongguang/article/details/91406290){:target='_blank'}
+> 资料参考：[Promise 中的三兄弟 .all(), .race(), .allSettled()](https://segmentfault.com/a/1190000020034361){:target='_blank'}
+
+## 业务超时，race
+
+## 想做自己的前端项目，又有后端支持 —— 有哪些好玩的免费的API接口?
+
+- [有哪些好玩的免费的API接口?](https://www.zhihu.com/question/32225726){:target='_blank'}
+
+## VSCode保存插件配置并使用 gist 管理代码片段
+
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync){:target='_blank'}
+- [VSCode保存插件配置并使用 gist 管理代码片段](https://www.cnblogs.com/fayin/p/8257845.html){:target='_blank'}
+
 ## 渲染几万条数据，怎样才能不卡住页面？
 
 ## 只拆过快递，JS里装箱和拆箱又是什么？
