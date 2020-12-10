@@ -76,8 +76,8 @@ document.addEventListener("paste", function () {
 ```js
 const foo = "123\u200b4";
 const bar = "123\u{200b}4";
-console.log(foo.length); 
-console.log(bar.length);
+console.log(foo, foo.length); 
+console.log(bar, bar.length);
 ```
 
 - [常见空格一览](https://zhuanlan.zhihu.com/p/150716121){:target='_blank'}
