@@ -71,11 +71,11 @@ document.addEventListener("paste", function () {
 - [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='_blank'}
 
 
-## 你的眼睛，真的会骗你
+## 你的眼睛，真的会骗你 —— 这一刻，我感觉受到了侮辱
 
 ```js
-const foo = "abc\u200bdef";
-const bar = "abc\u{200b}def";
+const foo = "123\u200b4";
+const bar = "123\u{200b}4";
 console.log(foo.length); 
 console.log(bar.length);
 ```
