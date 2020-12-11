@@ -48,7 +48,6 @@ const openNotification = (new_hash) => {
 
 // 获取hash
 export const getHash = () => {
-  console.log('refresh', uploadNotificationShow);
   // 如果提示弹窗没有展示
   if (!uploadNotificationShow) {
     // 在 js 中请求首页地址，这样不会刷新界面，也不会跨域
@@ -88,7 +87,7 @@ componentDidMount() {
   }
 
   componentWillUnmount () {
-      // 页面写着时清除
+      // 页面卸载时清除
     clearInterval(timer);
   }
 ```
