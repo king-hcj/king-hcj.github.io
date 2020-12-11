@@ -76,8 +76,11 @@ document.addEventListener('paste', function () {
 ```js
 const foo = '123\u200b4';
 const bar = '123\u{200b}4';
+const a = '1234';
 console.log(foo, foo.length);
 console.log(bar, bar.length);
+encodeURIComponent(a); // 1234
+encodeURIComponent(foo); // 123%E2%80%8B4
 ```
 
 - [常见空格一览](https://zhuanlan.zhihu.com/p/150716121){:target='\_blank'}
