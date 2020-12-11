@@ -14,7 +14,7 @@ import React from 'react';
 import axios from 'axios';
 import { notification, Button } from 'antd';
 
-// 弹窗是否已展示
+// 弹窗是否已展示（可以改用闭包、单例模式等）
 let uploadNotificationShow = false;
 
 const close = () => {
