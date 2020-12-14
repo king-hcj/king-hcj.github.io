@@ -8,6 +8,8 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;开发过程中，经常遇到页面更新、版本发布时，需要告诉使用人员刷新页面的情况，甚至有些运营、测试人员觉得切换一下菜单再切回去就是更新了web页面资源，有的分不清普通刷新和强刷的区别，所以实现了一个页面更新检测功能，页面更新了自动提示使用人员刷新页面。
 
+&emsp;&emsp;基本思路为：使用 webpack 配置编译时在 js 文件名里添加 hash，然后使用js向`${window.location.origin}/index.html`发送请求，解析出html文件里引入的js文件路径，对比当前 js 的 hash 与新版本的 hash 是否一致，不一致则提示用户更新版本。
+
 ```js
 // uploadUtils.jsx
 import React from 'react';
