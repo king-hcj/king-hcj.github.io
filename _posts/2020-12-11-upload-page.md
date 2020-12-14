@@ -56,7 +56,7 @@ export const getHash = () => {
     axios
       .get(`${window.location.origin}/index.html?time=${new Date().getTime()}`)
       .then((res) => {
-        // 匹配index.html文件中引入的js文件是否变化（具体正则，视打包时的设置而定）
+        // 匹配index.html文件中引入的js文件是否变化（具体正则，视打包时的设置及文件路径而定）
         let new_hash = res.data && res.data.match(/\/static\/js\/main.(.*).js/);
         // console.log(res, new_hash);
         new_hash = new_hash ? new_hash[1] : null;
