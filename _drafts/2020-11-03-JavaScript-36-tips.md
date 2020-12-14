@@ -57,19 +57,12 @@ document.addEventListener('paste', function () {
 - [Clipboard API and events](https://www.w3.org/TR/clipboard-apis/){:target='\_blank'}
 - [js 剪切板应用 clipboardData 详细解析](https://blog.csdn.net/a460550542/article/details/78363350){:target='\_blank'}
 
-## 防止篡改对象：Object.seal、Object.freeze
+## 前端检测版本更新
 
-- [JS 高级技巧](https://zhuanlan.zhihu.com/p/29015916){:target='\_blank'}
+<!-- 参考个人已有文章 -->
 
-## 怎么实现一个随机数发生器
-
-为什么说 Math.random 是不安全的呢？从 V8 的源码可以看到 Math.random 的种子来源是/dev/random，取 64 位，种子的可能个数为 2 ^ 64 随机算法相对简单，只是保证尽可能的随机分布。
-
-- [随机数的故事](https://zhuanlan.zhihu.com/p/205359984){:target='\_blank'}
-
-## Crypto.getRandomValues()
-
-- [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='\_blank'}
+- [前端检测版本更新](https://blog.csdn.net/sansan_7957/article/details/83626045){:target='_blank'}
+- [纯前端检测版本更新](https://blog.csdn.net/y814696634/article/details/108725374){:target='_blank'}
 
 ## 你的眼睛，真的会骗你 —— 这一刻，我感觉受到了侮辱
 
@@ -93,6 +86,20 @@ function func(a, b, c) {
   console.log(func.length, arguments.length);
 }
 ```
+
+## 防止篡改对象：Object.seal、Object.freeze
+
+- [JS 高级技巧](https://zhuanlan.zhihu.com/p/29015916){:target='\_blank'}
+
+## 怎么实现一个随机数发生器
+
+为什么说 Math.random 是不安全的呢？从 V8 的源码可以看到 Math.random 的种子来源是/dev/random，取 64 位，种子的可能个数为 2 ^ 64 随机算法相对简单，只是保证尽可能的随机分布。
+
+- [随机数的故事](https://zhuanlan.zhihu.com/p/205359984){:target='\_blank'}
+
+## Crypto.getRandomValues()
+
+- [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='\_blank'}
 
 ## 如何实现前端录音功能
 
@@ -449,11 +456,6 @@ location.reload(forceGet)
 ```
 
 <!-- 浏览器重新从服务器请求资源,在http请求头中不会包含缓存标记 -->
-
-## 前端检测版本更新
-
-- [前端检测版本更新](https://blog.csdn.net/sansan_7957/article/details/83626045){:target='_blank'}
-- [纯前端检测版本更新](https://blog.csdn.net/y814696634/article/details/108725374){:target='_blank'}
 
 ## 61
 
