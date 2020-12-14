@@ -8,55 +8,6 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
 
-## 第三十七式：禁止网页复制粘贴
-
-```js
-const html = document.querySelector('html');
-html.oncopy = () => false;
-html.onpaste = () => false;
-{
-  const html = document.querySelector('html');
-  html.oncopy = (e) => {
-    console.log(e);
-    // 比如指向登陆
-    // window.location.href='http://';  //location.herf=指向一个链接或应用
-  };
-  html.onpaste = (e) => {
-    console.log(e);
-  };
-}
-// 网银转账时，输入对方卡号，需要输入两次，通常第二次输入的输入框是不允许粘贴的，这样就在一定程度上保证了卡号的准确性。
-// 登陆才能复制。很多网站上的页面内容是不允许复制的，这样可以防止用户或者程序恶意的去抓取页面数据。
-```
-
-- [js 设置/获取剪切板内容](https://www.cnblogs.com/zhanping/p/13226193.html){:target='\_blank'}
-
-```js
-//设置剪切板内容
-document.addEventListener('copy', function () {
-  if (event.clipboardData || event.originalEvent) {
-    var clipboardData =
-      event.clipboardData || event.originalEvent.clipboardData;
-    const selection = 'AAAAA';
-    clipboardData.setData('text/plain', selection.toString());
-    event.preventDefault();
-  }
-});
-// 注意：clipboardData.setData("参数1","参数2")  参数1的值要对应http的content-type的类型，如果没有设置参数1的话有可能会报错
-//获取剪切板的内容
-document.addEventListener('paste', function () {
-  if (event.clipboardData || event.originalEvent) {
-    var clipboardData = event.clipboardData || window.clipboardData;
-    var val = clipboardData.getData('text');
-    console.log(val);
-    event.preventDefault();
-  }
-});
-```
-
-- [Clipboard API and events](https://www.w3.org/TR/clipboard-apis/){:target='\_blank'}
-- [js 剪切板应用 clipboardData 详细解析](https://blog.csdn.net/a460550542/article/details/78363350){:target='\_blank'}
-
 ## 防止篡改对象：Object.seal、Object.freeze
 
 - [JS 高级技巧](https://zhuanlan.zhihu.com/p/29015916){:target='\_blank'}
@@ -66,33 +17,28 @@ document.addEventListener('paste', function () {
 为什么说 Math.random 是不安全的呢？从 V8 的源码可以看到 Math.random 的种子来源是/dev/random，取 64 位，种子的可能个数为 2 ^ 64 随机算法相对简单，只是保证尽可能的随机分布。
 
 - [随机数的故事](https://zhuanlan.zhihu.com/p/205359984){:target='\_blank'}
+- [Math.random() 还能这样玩？](https://segmentfault.com/a/1190000038432999){:target='_blank'}
+- [Lots of Ways to Use Math.random() in JavaScript](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/){:target='_blank'}
 
 ## Crypto.getRandomValues()
 
-- [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='\_blank'}
-
-## 你的眼睛，真的会骗你 —— 这一刻，我感觉受到了侮辱
-
 ```js
-const foo = '123\u200b4';
-const bar = '123\u{200b}4';
-const a = '1234';
-console.log(foo, foo.length);
-console.log(bar, bar.length);
-encodeURIComponent(a); // 1234
-encodeURIComponent(foo); // 123%E2%80%8B4
-```
+var array = new Uint32Array(10);
+window.crypto.getRandomValues(array);
 
-- [常见空格一览](https://zhuanlan.zhihu.com/p/150716121){:target='\_blank'}
-- [什么是零宽度空格](https://www.dazhuanlan.com/2019/09/30/5d9224891dead/){:target='\_blank'}
-
-## func.length 如何获取形参个数：实现 lodash curry 化函数
-
-```js
-function func(a, b, c) {
-  console.log(func.length, arguments.length);
+console.log("Your lucky numbers:");
+for (var i = 0; i < array.length; i++) {
+    console.log(array[i]);
 }
 ```
+
+- [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='\_blank'}
+
+## v8为什么要采用多种垃圾回收方式
+
+- 引用计数
+- 标记清除
+- 标记整理
 
 ## 如何实现前端录音功能
 
@@ -179,10 +125,6 @@ input.oninput = ({ target }) => {
 ## let 和 const 到底提升了吗？
 
 - [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='\_blank'}
-
-## 有趣的`let x = x`
-
-- [JS 变量封禁大法：薛定谔的 X](https://zhuanlan.zhihu.com/p/28117094){:target='\_blank'}
 
 ## new 到底新建了什么？
 
@@ -288,7 +230,7 @@ deepCopy(obj).then((copy) => {
 
 ## 业务超时，race
 
-## 想做自己的前端项目，又有后端支持 —— 有哪些好玩的免费的 API 接口?
+## 想做自己的前端项目，却没有后端支持 —— 有哪些好玩的免费的 API 接口?
 
 - [有哪些好玩的免费的 API 接口?](https://www.zhihu.com/question/32225726){:target='\_blank'}
 
@@ -316,33 +258,10 @@ deepCopy(obj).then((copy) => {
 - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='\_blank'}
 - 最小延时、最大延时
 
-## 前端错误处理
-
-## 纯前端代码生成 Excel
-
-## iframe 间数据传递，postMessage 可以是你的选择
-
-错误：`Block a frame with origin`
-
-```js
-// 页面1
-top.postMessage(query, '*');
-//页面2 监听message事件
-useEffect(() => {
-  const listener = (ev) => {
-    console.log(ev, ev.data);
-  };
-  window.addEventListener('message', listener);
-  return () => {
-    window.removeEventListener('message', listener);
-  };
-}, []);
-```
-
 ## 流媒体播放
 
-- [前端视频直播技术总结及 video.js 在 h5 页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='\_blank'}
 - [「1.4 万字」玩转前端 Video 播放器 | 多图预警](https://juejin.cn/post/6850037275579121671){:target='\_blank'}
+- [前端视频直播技术总结及 video.js 在 h5 页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='\_blank'}
 - [[1.3 万字] 玩转前端二进制](https://juejin.cn/post/6846687590783909902){:target='\_blank'}
 
 ## 前端流程图
@@ -364,14 +283,6 @@ useEffect(() => {
 ## 明明 console 数组有值，展开就是空了？
 
 - 明明里面是有值的 但是 Length 是 0
-
-## `will-change`是如何优化性能的？
-
-&emsp;&emsp;CSS 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
-
-- [will-change](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change){:target='\_blank'}
-- [说一说 will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='\_blank'}
-- [CSS 页面渲染优化属性 will-change](https://www.cnblogs.com/xiaohuochai/p/6321790.html){:target='\_blank'}
 
 ## 既然饱受诟病，JavaScript 为什么还是单线程的
 
@@ -416,6 +327,7 @@ useEffect(() => {
 
 - [Node 后台邮件服务器](https://blog.csdn.net/konghouy/article/details/84961500){:target='\_blank'}
 - [Nodemailer](https://nodemailer.com/about/){:target='\_blank'}
+- [如何用js给老婆每天发情话](https://juejin.cn/post/6904805497845579783){:target='_blank'}
 
 ## 短信验证码
 
@@ -449,11 +361,6 @@ location.reload(forceGet)
 ```
 
 <!-- 浏览器重新从服务器请求资源,在http请求头中不会包含缓存标记 -->
-
-## 前端检测版本更新
-
-- [前端检测版本更新](https://blog.csdn.net/sansan_7957/article/details/83626045){:target='_blank'}
-- [纯前端检测版本更新](https://blog.csdn.net/y814696634/article/details/108725374){:target='_blank'}
 
 ## 61
 

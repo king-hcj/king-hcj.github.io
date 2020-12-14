@@ -197,7 +197,7 @@ console.log(a===1 && a===2 && a===3) // true
   - 通过自定义元素的`attachShadow()`方法开启 Shadow DOM（这部分 DOM 默认与外部 DOM 隔离，内部任何代码都无法影响外部），隐藏自定义元素的内部实现；
   - 添加事件监听、进行组件化封装等。
 
-> 参考资料：[Web Components 入门实例教程-阮一峰](http://www.ruanyifeng.com/blog/2019/08/web_components.html){:target='_blank'} &#124; [Window.customElements](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/customElements){:target='_blank'}
+> 参考资料：[Web Components 入门实例教程-阮一峰](http://www.ruanyifeng.com/blog/2019/08/web_components.html){:target='_blank'} &#124; [Window.customElements](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/customElements){:target='_blank'} &#124; [Web Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components){:target='_blank'}
 
 ## 第七式：Windows环境变量设置其实可以很简单
 
