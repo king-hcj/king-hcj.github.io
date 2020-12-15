@@ -38,10 +38,6 @@
   url: https://es6.ruanyifeng.com/
   src: www
 
-- name: 网道 - 阮一峰
-  url: https://wangdoc.com/
-  src: www
-
 - name: Pro Git
   url: https://git-scm.com/book/zh/v2
   src: www
