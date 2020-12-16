@@ -92,6 +92,32 @@ function func(a, b, c) {
 }
 ```
 
+```js
+// 模拟实现 lodash 中的 curry 方法
+
+function getSum (a, b, c) {
+  return a + b + c
+}
+
+const curried = curry(getSum)
+
+console.log(curried(1, 2, 3))
+console.log(curried(1)(2, 3))
+console.log(curried(1, 2)(3))
+
+function curry (func) {
+  return function curriedFn(...args) {
+    // 判断实参和形参的个数
+    if (args.length < func.length) {
+      return function () {
+        return curriedFn(...args.concat(Array.from(arguments)))
+      }
+    }
+    return func(...args)
+  }
+}
+```
+
 ## 第四十式：`["1","7","11"].map(parseInt)`返回[1,NaN,3]?
 
 - map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
@@ -226,6 +252,74 @@ deepCopy(obj).then((copy) => {
 
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync){:target='\_blank'}
 - [VSCode 保存插件配置并使用 gist 管理代码片段](https://www.cnblogs.com/fayin/p/8257845.html){:target='\_blank'}
+
+## 第四十九式：防止篡改对象：Object.seal、Object.freeze
+
+- [JS 高级技巧](https://zhuanlan.zhihu.com/p/29015916){:target='\_blank'}
+
+## 第五十式：`Math.random`，不随机的随机数
+
+- 怎么实现一个随机数发生器
+
+为什么说 Math.random 是不安全的呢？从 V8 的源码可以看到 Math.random 的种子来源是/dev/random，取 64 位，种子的可能个数为 2 ^ 64 随机算法相对简单，只是保证尽可能的随机分布。
+
+- [随机数的故事](https://zhuanlan.zhihu.com/p/205359984){:target='\_blank'}
+- [Math.random() 还能这样玩？](https://segmentfault.com/a/1190000038432999){:target='_blank'}
+- [Lots of Ways to Use Math.random() in JavaScript](https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/){:target='_blank'}
+
+- Crypto.getRandomValues()
+
+```js
+var array = new Uint32Array(10);
+window.crypto.getRandomValues(array);
+
+console.log("Your lucky numbers:");
+for (var i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+```
+
+- [Crypto.getRandomValues()](https://developer.mozilla.org/zh-CN/docs/Web/API/RandomSource/getRandomValues){:target='\_blank'}
+
+## 第五十一式：`forEach` 就是对for循环的简单封装？你理解的 forEach 可能并不正确
+
+## 第五十三式：let 和 const 到底提升了吗？定义一个变量会经历什么样的过程？
+
+- [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='\_blank'}
+- [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='_blank'}
+
+## 第五十四式：函数参数传递，到底传递了什么——你应该知道的那些区别
+
+- 箭头函数和普通函数
+- 基本类型和引用类型
+```js
+var obj1 = {
+  value:'111'
+};
+ 
+var obj2 = {
+  value:'222'
+};
+ 
+function changeStuff(obj){
+  obj.value = '333';
+  obj = obj2;
+  return obj.value;
+}
+
+var foo = changeStuff(obj1);
+ 
+console.log(foo);// '222' 参数obj指向了新的对象obj2
+console.log(obj1.value);//'333'
+```
+
+**函数的参数传递，传递的都是值，参数是 Object 类型的也一样，也是值，只不过这个值是地址值。**
+
+- [Is JavaScript a pass-by-reference or pass-by-value language?](https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?lq=1){:target='_blank'}
+- [javascript传递参数如果是object的话，是按值传递还是按引用传递？](https://www.zhihu.com/question/27114726/answer/35481766){:target='_blank'}
+- [JavaScript中函数都是值传递吗？](https://www.zhihu.com/question/51018162/answer/123779633){:target='_blank'}
+- [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='_blank'}
+- [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='_blank'}
 
 ## 中章
 
