@@ -186,3 +186,8 @@ arr.forEachCustom((item) => {
 
 - [ecma-262/6.0](http://www.ecma-international.org/ecma-262/6.0/){:target='\_blank'}
 - [ecma-262/11.0](http://www.ecma-international.org/ecma-262/11.0/index.html){:target='\_blank'}
+
+## 发布与转载
+
+- [SegmentFault 思否社区](https://segmentfault.com/a/1190000030694113){:target='_blank'}
+- [全栈前端精选](https://mp.weixin.qq.com/s/wCCJODYofkZ_9o-eS-fd1g){:target='_blank'}
