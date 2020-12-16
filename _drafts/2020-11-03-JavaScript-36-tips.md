@@ -250,44 +250,6 @@ input.oninput = ({ target }) => {
 - 去重
 - 类数组转化为数组
 
-## 庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
-
-```js
-// 有undefined + 循环引用
-let obj = {
-  a: 1,
-  b: {
-    c: 2,
-    d: 3,
-  },
-  f: undefined,
-};
-obj.c = obj.b;
-obj.e = obj.a;
-obj.b.c = obj.c;
-obj.b.d = obj.b;
-obj.b.e = obj.b.c;
-
-function deepCopy(obj) {
-  return new Promise((resolve) => {
-    const { port1, port2 } = new MessageChannel();
-    port2.onmessage = (ev) => resolve(ev.data);
-    port1.postMessage(obj);
-  });
-}
-
-deepCopy(obj).then((copy) => {
-  // 请记住`MessageChannel`是异步的这个前提！
-  let copyObj = copy;
-  console.log(copyObj, obj);
-  console.log(copyObj == obj);
-});
-```
-
-- object.asign
-- [MessageChannel](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageChannel){:target='\_blank'}
-- [MessageChannel 是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='\_blank'}
-
 ## Promise 并行限制
 
 ## Promise.all，一个失败都失败，怎么解决
@@ -303,11 +265,6 @@ deepCopy(obj).then((copy) => {
 ## 想做自己的前端项目，却没有后端支持 —— 有哪些好玩的免费的 API 接口?
 
 - [有哪些好玩的免费的 API 接口?](https://www.zhihu.com/question/32225726){:target='\_blank'}
-
-## VSCode 保存插件配置并使用 gist 管理代码片段
-
-- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync){:target='\_blank'}
-- [VSCode 保存插件配置并使用 gist 管理代码片段](https://www.cnblogs.com/fayin/p/8257845.html){:target='\_blank'}
 
 ## 渲染几万条数据，怎样才能不卡住页面？
 

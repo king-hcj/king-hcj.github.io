@@ -92,15 +92,7 @@ function func(a, b, c) {
 }
 ```
 
-## 第四十式：如何纯前端实现页面检测更新并提示？
-
-- 场景：停留在当前页面
-
-- [纯前端实现页面检测更新提示](https://king-hcj.github.io/2020/12/11/upload-page/){:target='_blank'}
-- [前端检测版本更新](https://blog.csdn.net/sansan_7957/article/details/83626045){:target='_blank'}
-- [纯前端检测版本更新](https://blog.csdn.net/y814696634/article/details/108725374){:target='_blank'}
-
-## 第四十一式：`["1","7","11"].map(parseInt)`返回[1,NaN,3]?
+## 第四十式：`["1","7","11"].map(parseInt)`返回[1,NaN,3]?
 
 - map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
 
@@ -113,7 +105,7 @@ function func(a, b, c) {
 - parseInt接受两个参数：string，radix，其中radix默认为10；每次调用parseInt，相当于：parseInt(item,index,Array),map传递的第三个参数Array会被忽略,index为0时取默认值10；parseInt(7,1)中，7在1进制中不存在。
 > 参考：[JS 中为啥 ['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]](https://mp.weixin.qq.com/s/h-hxPt1yN2shq-Dkq6S3dA){:target='_blank'}
 
-## 第四十二式：iframe 间数据传递，postMessage 可以是你的选择
+## 第四十一式：iframe 间数据传递，postMessage 可以是你的选择
 
 错误：`Block a frame with origin`
 
@@ -131,6 +123,31 @@ useEffect(() => {
   };
 }, []);
 ```
+
+## 第四十二式：有趣的`let x = x`
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let x = x
+  </script>
+  <script>
+    x = 2
+    console.log(x)
+  </script>
+</body>
+</html>
+```
+
+- [JS 变量封禁大法：薛定谔的 X](https://zhuanlan.zhihu.com/p/28117094){:target='\_blank'}
 
 ## 第四十三式：前端错误处理
 
@@ -166,39 +183,54 @@ videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.666)
 - https://time.geekbang.org/column/article/141842
 - https://time.geekbang.org/column/article/143889
 
-## 第四十七式：有趣的`let x = x`
+## 第四十七式：庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
 
-```html
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-    let x = x
-  </script>
-  <script>
-    x = 2
-    console.log(x)
-  </script>
-</body>
-</html>
+```js
+// 有undefined + 循环引用
+let obj = {
+  a: 1,
+  b: {
+    c: 2,
+    d: 3,
+  },
+  f: undefined,
+};
+obj.c = obj.b;
+obj.e = obj.a;
+obj.b.c = obj.c;
+obj.b.d = obj.b;
+obj.b.e = obj.b.c;
+
+function deepCopy(obj) {
+  return new Promise((resolve) => {
+    const { port1, port2 } = new MessageChannel();
+    port2.onmessage = (ev) => resolve(ev.data);
+    port1.postMessage(obj);
+  });
+}
+
+deepCopy(obj).then((copy) => {
+  // 请记住`MessageChannel`是异步的这个前提！
+  let copyObj = copy;
+  console.log(copyObj, obj);
+  console.log(copyObj == obj);
+});
 ```
 
-- [JS 变量封禁大法：薛定谔的 X](https://zhuanlan.zhihu.com/p/28117094){:target='\_blank'}
+- object.asign
+- [MessageChannel](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageChannel){:target='\_blank'}
+- [MessageChannel 是什么，怎么使用？](https://www.jianshu.com/p/4f07ef18b5d7){:target='\_blank'}
 
-## 第四十八式：前端如何使用脚本完成项目的便捷部署
 
-- 传统：build，压缩， scp上传，备份，解压
-- git CICD等
-- Jenkins：一个开源的持续集成的服务器，Jenkins开源帮助我们自动构建各类项目。Jenkins强大的插件式，使得Jenkins可以集成很多软件，可能帮助我们持续集成我们的工程项目。
+## 第四十八式：换了电脑，VSCode 保存插件配置并使用 gist 管理代码片段
 
-## 第四十九式：
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync){:target='\_blank'}
+- [VSCode 保存插件配置并使用 gist 管理代码片段](https://www.cnblogs.com/fayin/p/8257845.html){:target='\_blank'}
 
+## 中章
+
+半程总结：
+下期预告：前端工具人，如何用脚本为前端赋能
 
 ## 本文发布
 

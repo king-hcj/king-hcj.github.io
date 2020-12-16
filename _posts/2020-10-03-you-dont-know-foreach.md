@@ -191,3 +191,4 @@ arr.forEachCustom((item) => {
 
 - [SegmentFault 思否社区](https://segmentfault.com/a/1190000030694113){:target='_blank'}
 - [全栈前端精选](https://mp.weixin.qq.com/s/wCCJODYofkZ_9o-eS-fd1g){:target='_blank'}
+- [web前端大全](https://mp.weixin.qq.com/s/dYennTSjlKjmXx8FqZF6bQ){:target='_blank'}
