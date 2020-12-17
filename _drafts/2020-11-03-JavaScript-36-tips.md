@@ -8,11 +8,27 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
 
-## v8为什么要采用多种垃圾回收方式
+## git文件名大小写
+
+- [在 Git 中当更改一个文件名为首字母大写时](https://mp.weixin.qq.com/s/7woU5jBNmR40-Eow19F2iA){:target='_blank'}
+
+## v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
 
 - 引用计数
 - 标记清除
 - 标记整理
+
+- [垃圾回收算法优缺点对比](https://www.jianshu.com/p/47ff2bff20dc){:target='_blank'}
+- [V8专题](http://newhtml.net/category/v8%e4%b8%93%e9%a2%98/){:target='_blank'}
+- [V8 之旅： 垃圾回收器](http://newhtml.net/v8-garbage-collection/){:target='_blank'}
+- [几种垃圾回收算法](https://www.jianshu.com/p/a8a04fd00c3c){:target='_blank'}
+- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
+- [V8引擎垃圾回收机制分析](https://blog.csdn.net/weixin_41376400/article/details/106076661){:target='_blank'}
+- [前端面试：谈谈 JS 垃圾回收机制](https://segmentfault.com/a/1190000018605776){:target='_blank'}
+- [面试官问你有没有了解过 V8 的 javascript 垃圾回收机制算法](https://zhuanlan.zhihu.com/p/37996721){:target='_blank'}
+- [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031){:target='_blank'}
+
+## [全新的互联网体验](http://newhtml.net/){:target='_blank'}
 
 ## 如何实现前端录音功能
 

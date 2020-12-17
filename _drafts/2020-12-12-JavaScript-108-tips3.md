@@ -17,19 +17,51 @@ keywords: JS, 前端, JavaScript
 
 ## 第三十七式：茫然一顾眼前亮，懵懂宛如在梦中 —— `"123​4".length === 5` ？这一刻，我感受到了眼睛的背叛和侮辱
 
+- **复制**以下代码到浏览器控制台：
 ```js
-const foo = '123\u200b4';
-const bar = '123\u{200b}4';
-const a = '1234';
-console.log(foo, foo.length);
-console.log(bar, bar.length);
-encodeURIComponent(a); // 1234
-encodeURIComponent(foo); // 123%E2%80%8B4
-"123​4".length === 5;
+console.log("123​4".length === 5); // true
+```
+![12345](https://king-hcj.github.io/images/posts/zhuangbility100/12345.png?raw=true)
+
+&emsp;&emsp;哈哈，是不是有种被眼睛背叛的感觉？其实这就是所谓的**零宽空格**（Zero Width Space，简称“ZWSP”），零宽度字符是不可见的非打印字符，它用于打断长英文单词或长阿拉伯数字，以便于换行显示，否则长英文单词和长阿拉伯数字会越过盒模型的边界，常见于富文本编辑器，用于格式隔断。
+
+- 探究以下上面代码的玄机：
+
+```js
+const common = "1234";
+const special = "123​4";
+console.log(common.length); // 4
+console.log(special.length); // 5
+console.log(encodeURIComponent(common)); // 1234
+console.log(encodeURIComponent(special)); // 123%E2%80%8B4
+// 把上面中间特殊字符部分进行解码
+console.log(decodeURIComponent("%E2%80%8B")); // （空）
+
+const otherSpecial = "123\u200b4"; // 或者"123\u{200b}4"
+console.log(otherSpecial); // 1234
+console.log(otherSpecial.length, common === special, special === otherSpecial); // 5 false true
 ```
 
-- [常见空格一览](https://zhuanlan.zhihu.com/p/150716121){:target='\_blank'}
-- [什么是零宽度空格](https://www.dazhuanlan.com/2019/09/30/5d9224891dead/){:target='\_blank'}
+- 在HTML中使用零宽度空格（在HTML中，零宽度空格与`<wbr>`等效）：
+```html
+<!-- &#8203; 或者 <wbr /> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>abc&#8203;def</div>
+    <div>abc<wbr />def</div>
+  </body>
+</html>
+```
+
+> ESLint有一条[禁止不规则的空白 (no-irregular-whitespace)](https://cn.eslint.org/docs/rules/no-irregular-whitespace){:target='_blank'}的规则，防止代码里面误拷贝了一些诸如零宽空格类的空格，以免造成一些误导。
+
+>参考资料：[常见空格一览 - 李银城](https://zhuanlan.zhihu.com/p/150716121){:target='\_blank'} &#124; [什么是零宽度空格](https://www.dazhuanlan.com/2019/09/30/5d9224891dead/){:target='\_blank'} &#124; [维基百科-空格](https://zh.wikipedia.org/wiki/%E7%A9%BA%E6%A0%BC){:target='_blank'}
 
 ## 第三十八式：禁止网页复制粘贴
 
