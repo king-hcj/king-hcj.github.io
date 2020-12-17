@@ -191,6 +191,7 @@ module.exports = class querySupplierInfoForPage extends Controller {
 ## 第五十七式：如何纯前端实现页面检测更新并提示？
 
 - 场景：停留在当前页面
+- 通信靠吼
 
 - [纯前端实现页面检测更新提示](https://king-hcj.github.io/2020/12/11/upload-page/){:target='_blank'}
 - [前端检测版本更新](https://blog.csdn.net/sansan_7957/article/details/83626045){:target='_blank'}
