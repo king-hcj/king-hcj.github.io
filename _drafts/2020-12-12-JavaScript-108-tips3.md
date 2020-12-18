@@ -150,6 +150,16 @@ function curry (func) {
 }
 ```
 
+- length 是函数对象的一个属性值，指该函数有多少个必须要传入的参数，即形参的个数。
+- 形参的数量不包括剩余参数个数，仅包括第一个具有默认值之前的参数个数。
+- 与之对比的是，  arguments.length 是函数被调用时实际传参的个数。
+
+- 函数重载
+- length 是函数对象的一个属性值，指该函数有多少个必须要传入的参数，那些已定义了默认值的参数不算在内，比如function（xx = 0）的length是0。
+
+- [Function.length](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length){:target='_blank'}
+- [javascript高级知识点——函数的长度](https://www.cnblogs.com/winderby/p/4074323.html){:target='_blank'}
+
 ## 第四十式：`["1","7","11"].map(parseInt)`返回[1,NaN,3]?
 
 - map返回3个参数，item，index，Array，所以[1,7,11].map(console.log)打印：
@@ -181,6 +191,8 @@ useEffect(() => {
   };
 }, []);
 ```
+
+- [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage){:target='_blank'}
 
 ## 第四十二式：有趣的`let x = x`
 
@@ -237,9 +249,9 @@ videojs.getPlayers("video-player").html5player.tech_.setPlaybackRate(1.666)
 - [will-change](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change){:target='\_blank'}
 - [说一说 will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='\_blank'}
 - [CSS 页面渲染优化属性 will-change](https://www.cnblogs.com/xiaohuochai/p/6321790.html){:target='\_blank'}
-- https://time.geekbang.org/column/article/82397
-- https://time.geekbang.org/column/article/141842
-- https://time.geekbang.org/column/article/143889
+- [极客1](https://time.geekbang.org/column/article/82397){:target='_blank'}
+- [极客2](https://time.geekbang.org/column/article/141842){:target='_blank'}
+- [极客3](https://time.geekbang.org/column/article/143889){:target='_blank'}
 
 ## 第四十七式：庭院深深深几许，杨柳堆烟，帘幕无重数 —— 如何实现深拷贝？
 
@@ -287,6 +299,21 @@ deepCopy(obj).then((copy) => {
 
 ## 第四十九式：防止篡改对象：Object.seal、Object.freeze
 
+&emsp;&emsp;有时候你可能怕你的对象被误改了，所以需要把它保护起来。
+
+- [Object.seal防止新增和删除属性](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal){:target='_blank'}
+- [Object.freeze冻结对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze){:target='_blank'}
+- defineProperty冻结单个属性 [深入浅出Object.defineProperty()](https://www.jianshu.com/p/8fe1382ba135){:target='_blank'}
+
+```js
+const person = {
+  name: 'jack'
+}
+Object.seal(person)
+delete person.name
+console.log(person)
+```
+
 - [JS 高级技巧](https://zhuanlan.zhihu.com/p/29015916){:target='\_blank'}
 
 ## 第五十式：`Math.random`，不随机的随机数
@@ -315,12 +342,12 @@ for (var i = 0; i < array.length; i++) {
 
 ## 第五十一式：`forEach` 就是对for循环的简单封装？你理解的 forEach 可能并不正确
 
-## 第五十三式：let 和 const 到底提升了吗？定义一个变量会经历什么样的过程？
+## 第五十二式：let 和 const 到底提升了吗？定义一个变量会经历什么样的过程？
 
 - [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='\_blank'}
 - [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='_blank'}
 
-## 第五十四式：函数参数传递，到底传递了什么——你应该知道的那些区别
+## 第五十三式：函数参数传递，到底传递了什么——你应该知道的那些区别
 
 - 箭头函数和普通函数
 - 基本类型和引用类型
@@ -352,6 +379,8 @@ console.log(obj1.value);//'333'
 - [JavaScript中函数都是值传递吗？](https://www.zhihu.com/question/51018162/answer/123779633){:target='_blank'}
 - [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='_blank'}
 - [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='_blank'}
+
+## 第五十四式：前两个？或者前端检测更新？
 
 ## 中章
 
