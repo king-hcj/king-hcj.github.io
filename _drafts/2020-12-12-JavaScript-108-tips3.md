@@ -112,7 +112,7 @@ document.addEventListener('paste', function () {
 - [Clipboard API and events](https://www.w3.org/TR/clipboard-apis/){:target='\_blank'}
 - [js 剪切板应用 clipboardData 详细解析](https://blog.csdn.net/a460550542/article/details/78363350){:target='\_blank'}
 
-## 第三十九式：`fn.length`指代什么？
+## 第三十九式：`function.length`指代什么？ —— 柯里化，JS函数重载
 
 - 如何获取形参个数
 - 实现 lodash curry 化函数
@@ -157,6 +157,8 @@ function curry (func) {
 - 函数重载
 - length 是函数对象的一个属性值，指该函数有多少个必须要传入的参数，那些已定义了默认值的参数不算在内，比如function（xx = 0）的length是0。
 
+- [浅谈JavaScript函数重载](https://www.cnblogs.com/yugege/p/5539020.html){:target='_blank'}
+- [JavaScript函数重载](https://blog.fundebug.com/2017/07/24/javascript_metho_overloading/){:target='_blank'} &#124; [原文](https://johnresig.com/blog/javascript-method-overloading/){:target='_blank'}
 - [Function.length](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length){:target='_blank'}
 - [javascript高级知识点——函数的长度](https://www.cnblogs.com/winderby/p/4074323.html){:target='_blank'}
 
