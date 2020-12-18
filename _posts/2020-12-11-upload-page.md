@@ -93,3 +93,7 @@ componentDidMount() {
     clearInterval(timer);
   }
 ```
+
+&emsp;&emsp;解合[Console Importer](https://github.com/pd4d10/console-importer){:target='\_blank'}直接在控制台面板查看：
+
+![uploadpage]({{site.url}}{{site.baseurl}}/images/posts/javascript/uploadpage.png?raw=true)
