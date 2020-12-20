@@ -8,9 +8,16 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
 
-## git文件名大小写
+## `will-change`是如何优化性能的？
 
-- [在 Git 中当更改一个文件名为首字母大写时](https://mp.weixin.qq.com/s/7woU5jBNmR40-Eow19F2iA){:target='_blank'}
+&emsp;&emsp;CSS 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
+
+- [will-change](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change){:target='\_blank'}
+- [说一说 will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='\_blank'}
+- [CSS 页面渲染优化属性 will-change](https://www.cnblogs.com/xiaohuochai/p/6321790.html){:target='\_blank'}
+- [极客 1](https://time.geekbang.org/column/article/82397){:target='\_blank'}
+- [极客 2](https://time.geekbang.org/column/article/141842){:target='\_blank'}
+- [极客 3](https://time.geekbang.org/column/article/143889){:target='\_blank'}
 
 ## v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
 
@@ -110,11 +117,11 @@ input.oninput = ({ target }) => {
 - 变量的定义和赋值过程
 - 闭包、懒加载、预解析
 
+## let 和 const 到底提升了吗？定义一个变量会经历什么样的过程？
+
+- [我用了两个月的时间才理解 let](https://zhuanlan.zhihu.com/p/28140450){:target='\_blank'}
+- [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='\_blank'}
 ## new 到底新建了什么？
-
-## SQL 也可以 if else？
-
-- SQL 之 CASE WHEN 用法详解
 
 ## 垃圾回收，一张图就够了
 
