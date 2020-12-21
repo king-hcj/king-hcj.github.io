@@ -147,14 +147,6 @@ input.oninput = ({ target }) => {
 
 - [Optional Chains](http://www.ecma-international.org/ecma-262/#sec-optional-chains){:target='\_blank'}
 
-## 0.1 + 0.2 !== 0.3？体育老师说这个锅我不背
-
-- Number.EPSILON
-- toFixed
-- 字符串运算？整数运算？
-
-- [0.1 + 0.2 != 0.3 背后的原理](https://segmentfault.com/a/1190000015051329){:target='\_blank'}
-
 ## 如何实现 mul(2)(3)(4)为 24？
 
 - 函数珂里化
@@ -306,7 +298,39 @@ location.reload(forceGet)
 
 <!-- 浏览器重新从服务器请求资源,在http请求头中不会包含缓存标记 -->
 
-## 61
+## 函数参数传递，到底传递了什么——你应该知道的那些区别
+
+- 箭头函数和普通函数
+- 基本类型和引用类型
+
+```js
+var obj1 = {
+  value: '111',
+};
+
+var obj2 = {
+  value: '222',
+};
+
+function changeStuff(obj) {
+  obj.value = '333';
+  obj = obj2;
+  return obj.value;
+}
+
+var foo = changeStuff(obj1);
+
+console.log(foo); // '222' 参数obj指向了新的对象obj2
+console.log(obj1.value); //'333'
+```
+
+**函数的参数传递，传递的都是值，参数是 Object 类型的也一样，也是值，只不过这个值是地址值。**
+
+- [Is JavaScript a pass-by-reference or pass-by-value language?](https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?lq=1){:target='\_blank'}
+- [javascript 传递参数如果是 object 的话，是按值传递还是按引用传递？](https://www.zhihu.com/question/27114726/answer/35481766){:target='\_blank'}
+- [JavaScript 中函数都是值传递吗？](https://www.zhihu.com/question/51018162/answer/123779633){:target='\_blank'}
+- [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='\_blank'}
+- [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='\_blank'}
 
 ## 装逼文章大赏
 

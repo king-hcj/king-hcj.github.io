@@ -804,39 +804,35 @@ arr.forEachCustom((item) => {
 
 > 参考：[在 Git 中当更改一个文件名为首字母大写时](https://mp.weixin.qq.com/s/7woU5jBNmR40-Eow19F2iA){:target='\_blank'}
 
-## 第五十三式：函数参数传递，到底传递了什么——你应该知道的那些区别
+## 第五十三式：老生长谈的 0.1 + 0.2 !== 0.3，体育老师说这个锅我不背
 
-- 箭头函数和普通函数
-- 基本类型和引用类型
+&emsp;&emsp;`0.1 + 0.2 !== 0.3`是一个老生长谈的问题来，想必你也明白其中的根源：JS 采用 IEEE 754 双精度版本（64位），并且只要采用 IEEE 754 的语言都有这样的问题。详情可查看笔者之前的一篇文章[0.1 + 0.2 != 0.3 背后的原理](https://segmentfault.com/a/1190000015051329){:target='\_blank'}，本节我们只探讨解法。
 
+- `toFixed`限制精确位数
+
+&emsp;&emsp;`toFixed()` 方法可把 Number 四舍五入为指定小数位数的数字，语法：`NumberObject.toFixed(num)`。
 ```js
-var obj1 = {
-  value: '111',
-};
-
-var obj2 = {
-  value: '222',
-};
-
-function changeStuff(obj) {
-  obj.value = '333';
-  obj = obj2;
-  return obj.value;
-}
-
-var foo = changeStuff(obj1);
-
-console.log(foo); // '222' 参数obj指向了新的对象obj2
-console.log(obj1.value); //'333'
+// 保留两位小数
+const num = (0.1 + 0.2).toFixed(2);
 ```
 
-**函数的参数传递，传递的都是值，参数是 Object 类型的也一样，也是值，只不过这个值是地址值。**
+- `Number.EPSILON`
 
-- [Is JavaScript a pass-by-reference or pass-by-value language?](https://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language?lq=1){:target='\_blank'}
-- [javascript 传递参数如果是 object 的话，是按值传递还是按引用传递？](https://www.zhihu.com/question/27114726/answer/35481766){:target='\_blank'}
-- [JavaScript 中函数都是值传递吗？](https://www.zhihu.com/question/51018162/answer/123779633){:target='\_blank'}
-- [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='\_blank'}
-- [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='\_blank'}
+&emsp;&emsp;在大学数学分析、数值逼近或者高中数学中，自然可以想到让0.1 + 0.2的和减去0.3小于一个任意小的数，比如说我们可以通过他们差值是否小于0.0000000001来判断他们是否相等（其实ES6 已经在Number对象上面，新增一个极小的常量Number.EPSILON。根据规格，它表示 1 与大于 1 的最小浮点数之间的差。Number.EPSILON实际上是 JavaScript 能够表示的最小精度。误差如果小于这个值，就可以认为已经没有意义了，即不存在误差了。）。
+
+- 字符串运算？整数运算？
+
+&emsp;&emsp;为了避免产生精度差异，我们要把需要计算的数字乘以 10 的 n 次幂，换算成计算机能够精确识别的整数，然后再除以 10 的 n 次幂，大部分编程语言都是这样处理精度差异的，我们就借用过来处理一下 JS 中的浮点数精度误差。
+```js
+formatNum = function(f, digit) {
+  var m = Math.pow(10, digit);
+  return parseInt(f * m, 10) / m;
+}
+　var num1 = 0.1;
+　var num2 = 0.2;
+console.log(num1+num2)
+console.log(formatNum(num1 + num2, 1))
+```
 
 ## 第五十四式：发版提醒全靠吼 —— 如何纯前端实现页面检测更新并提示？
 
