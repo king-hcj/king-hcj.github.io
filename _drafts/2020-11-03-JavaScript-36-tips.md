@@ -298,6 +298,11 @@ location.reload(forceGet)
 
 <!-- 浏览器重新从服务器请求资源,在http请求头中不会包含缓存标记 -->
 
+## window.getSelection()
+
+- [clipboard.js 的源码分析](https://mp.weixin.qq.com/s/nsEmDprpeICz_wC3Xu9cPQ){:target='_blank'}
+- [Window.getSelection](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getSelection){:target='_blank'}
+
 ## 函数参数传递，到底传递了什么——你应该知道的那些区别
 
 - 箭头函数和普通函数
