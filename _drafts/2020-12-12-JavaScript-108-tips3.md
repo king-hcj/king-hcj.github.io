@@ -273,7 +273,123 @@ useEffect(() => {
 
 > 参考资料：[JS 变量封禁大法：薛定谔的 X](https://zhuanlan.zhihu.com/p/28117094){:target='\_blank'}
 
-## 第四十三式：前端错误处理
+## 第四十三式：聊聊前端错误处理
+
+### 一个 React-dnd 引出的前端错误处理
+
+&emsp;&emsp;年初的时候，笔者曾做过一个[前端错误处理](https://king-hcj.github.io/2020/01/14/error-handling/){:target='\_blank'}的笔记，事情是这样的：
+
+&emsp;&emsp;项目中某菜单定义的页面因有拖拽的需求，就引入了[React DnD](https://github.com/react-dnd/react-dnd){:target='\_blank'}来完成这一工作；随着业务的更新迭代，部分列表页面又引入了自定义列的功能，可以通过拖动来对列进行排序，后面就发现在某些页面上，试图打开自定义列的弹窗时，页面就崩溃白屏了，控制台会透出错误：`'Cannot have two HTML5 backends at the same time.'`。在排查问题的时候，查看源码发现：
+
+```js
+// ...
+value: function setup() {
+  if (this.window === undefined) {
+    return;
+  }
+  if (this.window.__isReactDndBackendSetUp) {
+    throw new Error('Cannot have two HTML5 backends at the same time.');
+  }
+  this.window.__isReactDndBackendSetUp = true;
+  this.addEventListeners(this.window);
+}
+// ...
+```
+
+&emsp;&emsp;也就是说，`react-dnd-html5-backend`在创建新的实例前会通过`window.__isReactDndBackendSetUp`的全局变量来判断是否已经存在一个可拖拽组件，如果有的话，就直接报错，而由于项目里对应组件没有相应的错误处理逻辑，抛出的 Error 异常层层上传到 root，一直没有被捕获和处理，最终导致页面崩溃。其实在当是的业务场景下，这个问题比较好解决，因为菜单定义页面没有自定义列的需求，而其他页面自定义列又是通过弹窗展示的，所以不要忘了给自定义列弹窗设置 destroyOnClose 属性（关闭销毁）即可。为了避免项目中因为一些错误导致系统白屏，在项目中，我们应该合理使用错误处理。
+
+### 前端错误处理的方法
+
+#### Error Boundaries
+
+&emsp;&emsp;如何使一个 React 组件变成一个“Error Boundaries”呢？只需要在组件中定义个新的生命周期函数——componentDidCatch(error, info):
+
+> error: 这是一个已经被抛出的错误；info:这是一个 componentStack key。这个属性有关于抛出错误的组件堆栈信息。
+
+```js
+// ErrorBoundary实现
+class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+
+  componentDidCatch(error, info) {
+    // Display fallback UI
+    this.setState({ hasError: true });
+    // You can also log the error to an error reporting service
+    logErrorToMyService(error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
+    return this.props.children;
+  }
+}
+```
+
+ErrorBoundary 使用：
+
+```js
+// ErrorBoundary使用
+<ErrorBoundary>
+  <MyWidget />
+</ErrorBoundary>
+```
+
+> Erro Boundaries 本质上也是一个组件，通过增加了新的生命周期函数 componentDidCatch 使其变成了一个新的组件，这个特殊组件可以捕获其子组件树中的 js 错误信息，输出错误信息或者在报错条件下，显示默认错误页。注意一个 Error Boundaries 只能捕获其子组件中的 js 错误，而不能捕获其组件本身的错误和非子组件中的 js 错误。
+
+&emsp;&emsp;但是 Error Boundaries 也不是万能的，下面我们来看哪些情况下不能通过 Error Boundaries 来 catch{}错误:
+
+- 组件的内部的事件处理函数，因为 Error Boundaries 处理的仅仅是 Render 中的错误，而 Hander Event 并不发生在 Render 过程中。
+- 异步函数中的异常 Error Boundaries 不能 catch，比如 setTimeout 或者 setInterval ,requestAnimationFrame 等函数中的异常。
+- 服务器端的 rendering
+- 发生在 Error Boundaries 组件本身的错误
+
+#### componentDidCatch（）生命周期函数：
+
+&emsp;&emsp;componentDidCatch 是一个新的生命周期函数，当组件有了这个生命周期函数，就成为了一个 Error Boundaries。
+
+#### try/catch 模块
+
+&emsp;&emsp;Error Boundaries 仅仅抛出了子组件的错误信息，并且不能抛出组件中的事件处理函数中的异常。（因为 Error Boundaries 仅仅能保证正确的 render，而事件处理函数并不会发生在 render 过程中），我们需要用 try/catch 来处理事件处理函数中的异常。
+
+> try/catch 只能捕获到同步的运行时错误，对语法和异步错误却无能为力，捕获不到。
+
+#### window.onerror
+
+&emsp;&emsp;当 JS 运行时错误发生时，window 会触发一个 ErrorEvent 接口的 error 事件，并执行 window.onerror()。
+
+> 在实际的使用过程中，onerror 主要是来捕获预料之外的错误，而 try-catch 则是用来在可预见情况下监控特定的错误，两者结合使用更加高效。
+
+```js
+/**
+ * @param {String}  message    错误信息
+ * @param {String}  source    出错文件
+ * @param {Number}  lineno    行号
+ * @param {Number}  colno    列号
+ * @param {Object}  error  Error对象（对象）
+ */
+window.onerror = function (message, source, lineno, colno, error) {
+  console.log('捕获到异常：', { message, source, lineno, colno, error });
+  // window.onerror 函数只有在返回 true 的时候，异常才不会向上抛出，否则即使是知道异常的发生控制台还是会显示 Uncaught Error: xxxxx。
+  //  return true;
+};
+```
+
+#### window.addEventListener
+
+&emsp;&emsp;主要用于静态资源加载异常捕获。
+
+#### Promise Catch
+
+#### [unhandledrejection](https://developer.mozilla.org/zh-CN/docs/Web/Events/unhandledrejection){:target='\_blank'}：
+
+&emsp;&emsp;当 Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件；这可能发生在 window 下，但也可能发生在 Worker 中。 unhandledrejection 继承自 PromiseRejectionEvent，而 PromiseRejectionEvent 又继承自 Event。因此 unhandledrejection 含有 PromiseRejectionEvent 和 Event 的属性和方法。
+
+### 总结
+
+&emsp;&emsp;前端组件/项目中，需要有适当的错误处理过程，否则出现错误，层层上传，没有进行捕获，就会导致页面挂掉。
 
 ## 第四十四式：不做工具人 —— 使用 nodejs 根据配置自动生成文件
 
@@ -824,4 +940,3 @@ componentDidMount() {
 &emsp;&emsp;你也完全可以在上面的方法上更上一层楼，build 的时候，在 index.html 同级目录下，自动生成一个 json 文件，包含新的文件的 hash 信息，检查版本的时候，就只需直接请求这个 json 文件进行对比了，减少数据的冗余。
 
 > 参考资料：[纯前端实现页面检测更新提示](https://king-hcj.github.io/2020/12/11/upload-page/){:target='\_blank'}
-
