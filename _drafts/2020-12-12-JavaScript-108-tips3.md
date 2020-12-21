@@ -804,35 +804,84 @@ arr.forEachCustom((item) => {
 
 > 参考：[在 Git 中当更改一个文件名为首字母大写时](https://mp.weixin.qq.com/s/7woU5jBNmR40-Eow19F2iA){:target='\_blank'}
 
-## 第五十三式：老生长谈的 0.1 + 0.2 !== 0.3，体育老师说这个锅我不背
+## 第五十三式：你看到的0.1其实并不是0.1 —— 老生长谈的 0.1 + 0.2 !== 0.3，这次我们说点不一样的
 
-&emsp;&emsp;`0.1 + 0.2 !== 0.3`是一个老生长谈的问题来，想必你也明白其中的根源：JS 采用 IEEE 754 双精度版本（64位），并且只要采用 IEEE 754 的语言都有这样的问题。详情可查看笔者之前的一篇文章[0.1 + 0.2 != 0.3 背后的原理](https://segmentfault.com/a/1190000015051329){:target='\_blank'}，本节我们只探讨解法。
+&emsp;&emsp;`0.1 + 0.2 !== 0.3`是一个老生长谈的问题来，想必你也明白其中的根源：JS 采用 IEEE 754 双精度版本（64 位），并且只要采用 IEEE 754 的语言都有这样的问题。详情可查看笔者之前的一篇文章[0.1 + 0.2 != 0.3 背后的原理](https://segmentfault.com/a/1190000015051329){:target='\_blank'}，本节我们只探讨解法。
 
-- `toFixed`限制精确位数
+- 既然IEEE 754存在精度问题，那为**什么 x=0.1 能得到 0.1**？
+
+&emsp;&emsp;因为在浮点数的存储中， mantissa（尾数） 固定长度是 52 位，再加上省略的一位，最多可以表示的数是 2^53=9007199254740992，对应科学计数尾数是 9.007199254740992，这也是 JS 最多能表示的精度。它的长度是 16，所以可以使用 toPrecision(16) 来做精度运算，超过的精度会自动做凑整处理。于是就有：
+
+![toPrecision](https://king-hcj.github.io/images/posts/zhuangbility100/toPrecision.png?raw=true)
+
+```js
+0.10000000000000000555.toPrecision(16)
+// 返回 0.1000000000000000，去掉末尾的零后正好为 0.1
+
+// 但你看到的 `0.1` 实际上并不是 `0.1`。不信你可用更高的精度试试：
+0.1.toPrecision(21) = 0.100000000000000005551
+```
+
+- `toFixed`设置精确位数
 
 &emsp;&emsp;`toFixed()` 方法可把 Number 四舍五入为指定小数位数的数字，语法：`NumberObject.toFixed(num)`。
+
 ```js
 // 保留两位小数
-const num = (0.1 + 0.2).toFixed(2);
+console.log((0.1 + 0.2).toFixed(2)); // 0.30
 ```
 
 - `Number.EPSILON`
 
-&emsp;&emsp;在大学数学分析、数值逼近或者高中数学中，自然可以想到让0.1 + 0.2的和减去0.3小于一个任意小的数，比如说我们可以通过他们差值是否小于0.0000000001来判断他们是否相等（其实ES6 已经在Number对象上面，新增一个极小的常量Number.EPSILON。根据规格，它表示 1 与大于 1 的最小浮点数之间的差。Number.EPSILON实际上是 JavaScript 能够表示的最小精度。误差如果小于这个值，就可以认为已经没有意义了，即不存在误差了。）。
+&emsp;&emsp;想必你还有印象，在高中数学或者大学数学分析、数值逼近中，在证明两个值相等的时候，我们会让他们的差去逼近一个任意小的数。那么，在此自然可以想到让 0.1 + 0.2 的和减去 0.3 小于一个任意小的数，比如说我们可以通过他们差值是否小于 0.0000000001 来判断他们是否相等。
 
-- 字符串运算？整数运算？
+&emsp;&emsp;其实 ES6 已经在 Number 对象上面，新增一个极小的常量 `Number.EPSILON`。根据规格，它表示 1 与大于 1 的最小浮点数之间的差。`Number.EPSILON` 实际上是 JavaScript 能够表示的最小精度。误差如果小于这个值，就可以认为已经没有意义了，即不存在误差了。
+
+```js
+console.log(0.1 + 0.2 - 0.3 < Number.EPSILON); // true
+```
+
+- 转换成整数或者字符串再进行求和运算
 
 &emsp;&emsp;为了避免产生精度差异，我们要把需要计算的数字乘以 10 的 n 次幂，换算成计算机能够精确识别的整数，然后再除以 10 的 n 次幂，大部分编程语言都是这样处理精度差异的，我们就借用过来处理一下 JS 中的浮点数精度误差。
+
+传入 n 次幂的 n 值：
+
 ```js
-formatNum = function(f, digit) {
+formatNum = function (f, digit) {
   var m = Math.pow(10, digit);
   return parseInt(f * m, 10) / m;
-}
-　var num1 = 0.1;
-　var num2 = 0.2;
-console.log(num1+num2)
-console.log(formatNum(num1 + num2, 1))
+};
+var num1 = 0.1;
+var num2 = 0.2;
+console.log(num1 + num2);
+console.log(formatNum(num1 + num2, 1));
 ```
+
+自动计算 n 次幂的 n 值：
+
+```js
+/**
+ * 精确加法
+ */
+function add(num1, num2) {
+  const num1Digits = (num1.toString().split('.')[1] || '').length;
+  const num2Digits = (num2.toString().split('.')[1] || '').length;
+  const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits));
+  return (num1 * baseNum + num2 * baseNum) / baseNum;
+}
+add(0.1,0.2); // 0.3
+```
+
+- 使用类库：
+
+&emsp;&emsp;通常这种对精度要求高的计算都应该交给后端去计算和存储，因为后端有成熟的库来解决这种计算问题。前端也有几个不错的类库：
+
+- [Math.js](https://mathjs.org/){:target='\_blank'}
+- [decimal.js](http://mikemcl.github.io/decimal.js/){:target='\_blank'}
+- [big.js](http://mikemcl.github.io/big.js/){:target='\_blank'}
+
+> 参考资料：[JavaScript 浮点数运算的精度问题](https://www.html.cn/archives/7340){:target='\_blank'} &#124; [JavaScript 浮点数陷阱及解法](https://github.com/camsong/blog/issues/9){:target='\_blank'}
 
 ## 第五十四式：发版提醒全靠吼 —— 如何纯前端实现页面检测更新并提示？
 
