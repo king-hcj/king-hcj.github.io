@@ -337,6 +337,24 @@ console.log(obj1.value); //'333'
 - [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='\_blank'}
 - [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='\_blank'}
 
+## case不等于if
+
+```js
+function fn (arg) {
+  switch(arg) {
+    case '1':
+          return 1  
+    case '2':
+          let a = 2
+          return a;
+    case '3':
+          let a = 3
+          return a;
+    }
+}
+// js里有一点蛮坑的感觉，写case的时候，总觉得可以这么写
+```
+
 ## 装逼文章大赏
 
 - [这些 JavaScript 编程黑科技，装逼指南，高逼格代码，让你惊叹不已](https://segmentfault.com/a/1190000010752361){:target='\_blank'}
