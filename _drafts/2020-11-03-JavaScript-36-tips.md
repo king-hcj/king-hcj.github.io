@@ -8,6 +8,11 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
 
+## 44个 Javascript 变态题解析
+
+- [44个 Javascript 变态题解析 (上)](https://github.com/xiaoyu2er/blog/issues/1){:target='_blank'}
+- [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
+
 ## `will-change`是如何优化性能的？
 
 &emsp;&emsp;CSS 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
