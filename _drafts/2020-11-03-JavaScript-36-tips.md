@@ -8,6 +8,8 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
 
+- [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='_blank'}
+
 ## 44个 Javascript 变态题解析
 
 - [44个 Javascript 变态题解析 (上)](https://github.com/xiaoyu2er/blog/issues/1){:target='_blank'}
