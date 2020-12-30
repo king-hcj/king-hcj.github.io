@@ -107,7 +107,7 @@ keywords: 前端学习之路
 #### 慕课视频课程
 
 - **[计算机基础——更适合程序员的编程必备基础知识](https://coding.imooc.com/class/355.html){:target='\_blank'}【在看，程序员经典】**
-- [React 源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='\_blank'}(在看)
+- [React 源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='\_blank'}(在看，已看前四章)
 - **[微信小程序入门与实战](https://coding.imooc.com/learn/list/424.html){:target='\_blank'}【拥有基本的小程序开发能力，非框架】**
 - [Nginx 入门到实践－Nginx 中间件](https://coding.imooc.com/class/121.html){:target='\_blank'}
 - [Go语言第一课](https://www.imooc.com/learn/345){:target='_blank'}【在看】
@@ -130,7 +130,7 @@ keywords: 前端学习之路
 
 - [玩转 webpack-全方位掌握 webpack 核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='\_blank'}
 - [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}
-- [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看)
+- [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看，已看前55节)
 - [Elasticsearch 核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='\_blank'}(在看)
 - [Electron开发实战](https://time.geekbang.org/course/intro/100044201){:target='_blank'}（在看）
 
