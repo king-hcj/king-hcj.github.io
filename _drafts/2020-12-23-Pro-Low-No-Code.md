@@ -43,3 +43,6 @@ Pro Code、Low Code、No Code 之间不是替代消灭关系，⽽是互补加�
 ## 低代码实践
 
 - [浅谈低代码平台涉及的一些技术选型](https://zhuanlan.zhihu.com/p/182211043){:target='_blank'}
+
+- [什么是低代码（Low-Code）？](https://zhuanlan.zhihu.com/p/296396032){:target='_blank'}
+- [国内低代码平台](https://github.com/taowen/awesome-lowcode){:target='_blank'}
