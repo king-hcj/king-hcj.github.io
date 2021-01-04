@@ -10,10 +10,11 @@ keywords: JS, 前端, JavaScript
 
 - [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='_blank'}
 
-## 44个 Javascript 变态题解析
+## JavaScript Puzzlers!
 
 - [44个 Javascript 变态题解析 (上)](https://github.com/xiaoyu2er/blog/issues/1){:target='_blank'}
 - [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
+- [JavaScript Puzzlers!](http://javascript-puzzlers.herokuapp.com/)
 
 ## `will-change`是如何优化性能的？
 
@@ -294,16 +295,6 @@ input.oninput = ({ target }) => {
 ## 低代码前端框架
 
 - [低代码前端框架](https://baidu.gitee.io/amis/docs/index){:target='_blank'}
-
-## window.location.reload(true)
-
-```js
-// 语法
-location.reload(forceGet)
-// 可选。如果把该方法的参数设置为 true，那么无论文档的最后修改日期是什么，它都会绕过缓存，从服务器上重新下载该文档。
-```
-
-<!-- 浏览器重新从服务器请求资源,在http请求头中不会包含缓存标记 -->
 
 ## window.getSelection()
 
