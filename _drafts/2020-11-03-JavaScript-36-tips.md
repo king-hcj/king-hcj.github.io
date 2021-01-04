@@ -16,6 +16,21 @@ keywords: JS, 前端, JavaScript
 - [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
 - [JavaScript Puzzlers!](http://javascript-puzzlers.herokuapp.com/)
 
+## window.history.length的大坑
+
+- [window.history.length的大坑](https://zhuanlan.zhihu.com/p/91931664)
+
+```js
+// 无法回退时关闭网页
+// window.history.length是1，那么肯定不能回退了，但是大于1，无法判断能不能继续回退。
+window.history.length > 1
+? window.history.back()
+// window.history.go( -1 );
+: setTimeout(() => {
+    window.close();
+  }, 2000);
+```
+
 ## `will-change`是如何优化性能的？
 
 &emsp;&emsp;CSS 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
