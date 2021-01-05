@@ -41,6 +41,7 @@ window.history.length > 1
 - [极客 1](https://time.geekbang.org/column/article/82397){:target='\_blank'}
 - [极客 2](https://time.geekbang.org/column/article/141842){:target='\_blank'}
 - [极客 3](https://time.geekbang.org/column/article/143889){:target='\_blank'}
+- [仅使用CSS就可以提高页面渲染速度的4个技巧](https://segmentfault.com/a/1190000038810622)
 
 ## v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
 
