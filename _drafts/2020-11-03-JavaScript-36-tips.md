@@ -31,6 +31,10 @@ window.history.length > 1
   }, 2000);
 ```
 
+## JS常见的四种 Error 类型
+
+- [javaScript代码飘红报错看不懂？读完这篇文章再试试！](https://zhuanlan.zhihu.com/p/339429715)
+
 ## `will-change`是如何优化性能的？
 
 &emsp;&emsp;CSS 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
@@ -216,6 +220,7 @@ input.oninput = ({ target }) => {
 - [setTimeout, setInterval 与 requestAnimationFrame 隐藏的各种坑](https://blog.csdn.net/qingyafan/article/details/52335753){:target='\_blank'}
 - [参考](https://www.cnblogs.com/liuxiaoru/p/13637983.html){:target='\_blank'}
 - [为什么 setTimeout 有最小时延 4ms ?](https://zhuanlan.zhihu.com/p/155752686){:target='\_blank'}
+- [为什么要用 setTimeout 模拟 setInterval ？](https://segmentfault.com/a/1190000038829248)
 - 最小延时、最大延时
 
 ## 流媒体播放
