@@ -31,6 +31,10 @@ window.history.length > 1
   }, 2000);
 ```
 
+## 打字机效果
+
+- [打字机效果](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setInterval#%E4%BE%8B%EF%BC%93%EF%BC%9A%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C)
+
 ## JS常见的四种 Error 类型
 
 - [javaScript代码飘红报错看不懂？读完这篇文章再试试！](https://zhuanlan.zhihu.com/p/339429715)
