@@ -31,6 +31,15 @@ window.history.length > 1
   }, 2000);
 ```
 
+
+[都说它是GIF录制神器，却不知其强大之处远不在此](https://zhuanlan.zhihu.com/p/95936611){:target='_blank'}
+[screentogif](https://www.screentogif.com/){:target='_blank'}
+
+## HTML5标签实现手风琴效果：https://mp.weixin.qq.com/s/jTM6iwTyrOo_c7HvSQWZSw
+
+- [前端进阶之路](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='_blank'}
+- https://www.jq22.com/webqd5638
+
 ## 打字机效果
 
 - requestAnimationFrame
