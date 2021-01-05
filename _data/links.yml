@@ -1,4 +1,4 @@
-- name: LeetCode
+- name: 个人 LeetCode
   url: https://leetcode-cn.com/u/king-hcj-3
   src: www
 
@@ -46,8 +46,12 @@
   url: https://coolshell.cn
   src: www
 
-- name: JavaScript 算法与数据结构
-  url: https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md
+- name: 黯羽轻扬 - 博客
+  url: http://www.ayqy.net/blog/
+  src: www
+
+- name: 面试助力，算法  101：JavaScript 描述
+  url: https://101.zoo.team/
   src: www
 
 - name: 日新亭
