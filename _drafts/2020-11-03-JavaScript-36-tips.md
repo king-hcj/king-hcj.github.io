@@ -33,7 +33,15 @@ window.history.length > 1
 
 ## 打字机效果
 
+- requestAnimationFrame
+
 - [打字机效果](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setInterval#%E4%BE%8B%EF%BC%93%EF%BC%9A%E6%89%93%E5%AD%97%E6%9C%BA%E6%95%88%E6%9E%9C)
+- [JS插件 —— 酷炫的打字机效果: Typed.js](https://www.jianshu.com/p/37ff22decc62)
+- [5行代码带你实现一个js的打字效果](https://zhuanlan.zhihu.com/p/94619915)
+- [用css3实现打字机效果](https://blog.csdn.net/shenshuai00/article/details/108964144)
+- [CSS 实现打字效果](https://www.cnblogs.com/xieyulin/p/7085766.html)
+- [纯css实现打字效果](https://www.ilt.me/dmfx/16.html)
+- [打字机](http://www.bootstrapmb.com/tag/daziji)
 
 ## JS常见的四种 Error 类型
 
