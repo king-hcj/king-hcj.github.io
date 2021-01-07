@@ -51,6 +51,20 @@ window.history.length > 1
 [What’s the difference between F5, Ctrl+R, Ctrl+Shift+R, Ctrl+F5 and Shift+F5 in Google Chrome browser?](https://www.saicharanreddy.com/whats-the-difference-between-f5-ctrlr-ctrlshiftr-ctrlf5-and-shiftf5-in-google-chrome-browser/)
 [详解谷歌Chrome浏览器中的各种刷新姿势（点击链接，在地址栏回车，F5，Ctrl + F5，Shift + F5，Ctrl + R，Ctrl + Shift + R）](https://blog.csdn.net/u012107143/article/details/100735550)
 
+JS 模拟浏览器强刷：
+    ```js
+    useEffect(() => {
+      const oaStorage = localStorage.getItem('UCloud_OA_SupplierInfoList');
+      const curTime = new Date().getTime();
+      // 没有缓存或者缓存已经超过8个小时
+      if (!oaStorage || (oaStorage &&  curTime - Number(oaStorage) > 28800000)) {
+        localStorage.setItem('UCloud_OA_SupplierInfoList', curTime);
+        window.location.href = window.location.href.split('?')[0] + `?time=${curTime}`;
+        // location.search += (location.search ? '&time=' : '?time=') +  new Date().getTime()
+      }
+    }, []);
+    ```
+
 ## Status Code:200 OK (from disk cache)和304的区别，以及怎么禁止缓存
 
 [Status Code:200 OK (from disk cache)和304的区别，以及怎么禁止缓存](https://blog.csdn.net/u014452812/article/details/79131676)
