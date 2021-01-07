@@ -40,6 +40,39 @@ window.history.length > 1
 - [前端进阶之路](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='_blank'}
 - https://www.jq22.com/webqd5638
 
+## 网页短链接的实现原理
+
+- [网页短链接的实现原理](https://blog.csdn.net/mimicoa/article/details/79834242)
+- [网页短链接实现原理探究](https://blog.csdn.net/lishanleilixin/article/details/82908834)
+
+## 	How To Force The Browser To Reload Cached .JS, .CSS Files To Reflect The Latest Changes To Those Files
+
+[How To Force The Browser To Reload Cached .JS, .CSS Files To Reflect The Latest Changes To Those Files](https://www.c-sharpcorner.com/article/how-to-force-the-browser-to-reload-cached-js-css-files-to-reflect-latest-chan/)
+[What’s the difference between F5, Ctrl+R, Ctrl+Shift+R, Ctrl+F5 and Shift+F5 in Google Chrome browser?](https://www.saicharanreddy.com/whats-the-difference-between-f5-ctrlr-ctrlshiftr-ctrlf5-and-shiftf5-in-google-chrome-browser/)
+[详解谷歌Chrome浏览器中的各种刷新姿势（点击链接，在地址栏回车，F5，Ctrl + F5，Shift + F5，Ctrl + R，Ctrl + Shift + R）](https://blog.csdn.net/u012107143/article/details/100735550)
+
+## Status Code:200 OK (from disk cache)和304的区别，以及怎么禁止缓存
+
+[Status Code:200 OK (from disk cache)和304的区别，以及怎么禁止缓存](https://blog.csdn.net/u014452812/article/details/79131676)
+[status code: 200 OK (FROM CACHE) 与 304 NOT MODIFIED](https://blog.csdn.net/m0_37205611/article/details/82751811)
+[浏览器缓存(一)：强缓存 MEMORY CACHE 和 DISK CACHE](http://www.wewyy.com/archives/444)
+[from disk/memory cache详解](https://blog.csdn.net/franknotbad/article/details/79400105)
+[Nginx下关于缓存控制字段cache-control的配置说明 - 运维小结](https://www.cnblogs.com/kevingrace/p/10459429.html)
+[浏览器缓存详解:expires,cache-control,last-modified,etag详细说明](https://blog.csdn.net/eroswang/article/details/8302191)
+
+- 200 form memory cache
+不访问服务器，一般已经加载过该资源且缓存在了内存当中，直接从内存中读取缓存。浏览器关闭后，数据将不存在（资源被释放掉了），再次打开相同的页面时，不会出现from memory cache。
+- 200 from disk cache
+不访问服务器，已经在之前的某个时间加载过该资源，直接从硬盘中读取缓存，关闭浏览器后，数据依然存在，此资源不会随着该页面的关闭而释放掉下次打开仍然会是from disk cache。
+- 304 Not Modified
+访问服务器，发现数据没有更新，服务器返回此状态码。然后从缓存中读取数据。
+- ETag 还有“强”“弱”之分。
+  - 强ETag值：无论资源发生多么细微的变化都会改变。一般是以"xxx"的形式。
+  - 弱ETag值：只有在资源发生了根本性改变，才会改变。一般是以W/"xxx"形式。
+  - 常规（强）ETag和弱ETag之间的区别在于，匹配的强ETag保证文件字节对字节相同，而匹配的弱ETag表示内容在语义上是相同的。因此，如果文件的内容发生更改，则弱ETag也应更改。
+
+![fromdiskcache](https://king-hcj.github.io/images/posts/arts/fromdiskcache.png?raw=true)
+
 ## 打字机效果
 
 - requestAnimationFrame
