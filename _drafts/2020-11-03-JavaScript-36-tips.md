@@ -132,6 +132,10 @@ JS 模拟浏览器强刷：
 - [面试官问你有没有了解过 V8 的 javascript 垃圾回收机制算法](https://zhuanlan.zhihu.com/p/37996721){:target='_blank'}
 - [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031){:target='_blank'}
 
+## 从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理
+
+- [从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理](https://segmentfault.com/a/1190000012925872){:target='_blank'}
+
 ## UV和PV
 
 [如何清楚易懂的解释“UV和PV＂的定义？](https://www.zhihu.com/question/20448467){:target='_blank'}
