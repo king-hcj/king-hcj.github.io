@@ -31,9 +31,11 @@ window.history.length > 1
   }, 2000);
 ```
 
+## 屏幕录制工具
 
-[都说它是GIF录制神器，却不知其强大之处远不在此](https://zhuanlan.zhihu.com/p/95936611){:target='_blank'}
+[推荐几款屏幕录制工具（可录制GIF）](https://www.cnblogs.com/libin-1/p/6424368.html){:target='_blank'}
 [screentogif](https://www.screentogif.com/){:target='_blank'}
+[mac用什么软件制作GIF方便？](https://www.zhihu.com/question/21773876){:target='_blank'}
 
 ## HTML5标签实现手风琴效果：https://mp.weixin.qq.com/s/jTM6iwTyrOo_c7HvSQWZSw
 
@@ -110,9 +112,7 @@ JS 模拟浏览器强刷：
 - [will-change](https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change){:target='\_blank'}
 - [说一说 will-change](https://mp.weixin.qq.com/s/rbDZntqZd8VcbDjQFER2Yw){:target='\_blank'}
 - [CSS 页面渲染优化属性 will-change](https://www.cnblogs.com/xiaohuochai/p/6321790.html){:target='\_blank'}
-- [极客 1](https://time.geekbang.org/column/article/82397){:target='\_blank'}
 - [极客 2](https://time.geekbang.org/column/article/141842){:target='\_blank'}
-- [极客 3](https://time.geekbang.org/column/article/143889){:target='\_blank'}
 - [仅使用CSS就可以提高页面渲染速度的4个技巧](https://segmentfault.com/a/1190000038810622)
 
 ## v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
@@ -121,6 +121,7 @@ JS 模拟浏览器强刷：
 - 标记清除
 - 标记整理
 
+- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
 - [垃圾回收算法优缺点对比](https://www.jianshu.com/p/47ff2bff20dc){:target='_blank'}
 - [V8专题](http://newhtml.net/category/v8%e4%b8%93%e9%a2%98/){:target='_blank'}
 - [V8 之旅： 垃圾回收器](http://newhtml.net/v8-garbage-collection/){:target='_blank'}
