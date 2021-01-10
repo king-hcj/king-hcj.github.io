@@ -132,6 +132,10 @@ JS 模拟浏览器强刷：
 - [面试官问你有没有了解过 V8 的 javascript 垃圾回收机制算法](https://zhuanlan.zhihu.com/p/37996721){:target='_blank'}
 - [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031){:target='_blank'}
 
+## UV和PV
+
+[如何清楚易懂的解释“UV和PV＂的定义？](https://www.zhihu.com/question/20448467){:target='_blank'}
+
 ## [全新的互联网体验](http://newhtml.net/){:target='_blank'}
 
 ## 如何实现前端录音功能
