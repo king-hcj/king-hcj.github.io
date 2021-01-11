@@ -4,10 +4,10 @@
 baseurl:
 url: https://king-hcj.github.io
 date_format: "ordinal"
-title: Cheney King
+title: 独钓寒江雪
 subtitle: "编码，是一种艺术"
 description: "Cheney King的个人博客"
-keywords: Cheney King, king-hcj
+keywords: Cheney King, king-hcj, 孤蓬, 独钓寒江雪
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
