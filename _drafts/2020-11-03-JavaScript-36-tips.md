@@ -31,6 +31,16 @@ window.history.length > 1
   }, 2000);
 ```
 
+## 哪些场景下不适合使用 ES6 箭头函数
+
+- this：构造函数的原型方法上
+- this：使用对象方法时
+- this：使用动态回调时
+- arguments：需要获得 arguments 时
+
+- [ES6 箭头函数使用禁忌](https://zhuanlan.zhihu.com/p/28972104)
+- [哪些场景下不适合使用 ES6 箭头函数](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
+
 ## 屏幕录制工具
 
 [推荐几款屏幕录制工具（可录制GIF）](https://www.cnblogs.com/libin-1/p/6424368.html){:target='_blank'}
