@@ -36,7 +36,7 @@ keywords: 前端学习之路
 
 ### 拉勾教育
 
-- [拉勾大前端高薪训练营](https://pan.baidu.com/disk/home?#/all?vmode=list&path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E6%8B%89%E5%8B%BE%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5){:target='\_blank'}【在看】
+- [拉勾大前端高薪训练营](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='\_blank'}【在看】
 
 ### GitChat专栏
 
