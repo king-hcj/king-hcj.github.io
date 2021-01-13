@@ -41,6 +41,56 @@ window.history.length > 1
 - [ES6 箭头函数使用禁忌](https://zhuanlan.zhihu.com/p/28972104)
 - [哪些场景下不适合使用 ES6 箭头函数](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
 
+## JavaScript中的void 0
+
+> void其实是javascript中的一个函数，接受一个参数，返回值永远是undefined。可以说，使用void目的就是为了得到javascript中的undefined。
+
+undefined是JS语言中的7大基本类型之一，表示未定义，它的值只有一个，就是undefined。任何变量在赋值前都是undefined。
+
+```js
+    console.log(void ("hello"))  // undefined
+    console.log(void (0))  // undefined
+    console.log(void 0)  // undefine
+```
+
+1. undefined是可变的？
+
+在ES5的全局环境中，undefined是只读的。而在局部作用域中，undefined是可变的。这个是JS语言公认的设计失误之一。
+
+2. 什么是void？
+void是一元运算符，出现在操作数的左边，操作数可以是任意类型的值，void右边的表达式可以是带括号形式（例如：void(0)），也可以是不带括号的形式（例如：void 0）。 
+
+3. 使用void 0代替undefined的原因是？
+
+　　① 使用void 0比使用undefined能够减少3个字节
+```js
+"undefined".length; // 9
+"void 0".length; // 6
+```
+　　② undefined并不是javascript中的保留字，我们可以使用undefined作为变量名字，然后给它赋值。void 0输出唯一的结果undefined，保证了不变性。
+
+4. undefined与null的区别？
+
+null代表空值，代表“定义了但是为空”。而undefined的代表未定义。
+
+- 为什么不直接使用undefined呢？
+  - 使用void 0比使用undefined能够减少3个字节。虽然这是个优势，个人但感觉意义不大，牺牲了可读性和简单性
+  - undefined并不是javascript中的保留字，我们可以使用undefined作为变量名字，然后给它赋值,, 但在chrome 中打印出来的是 undefined
+  ```js
+  let undefined = 1; // undefined
+  let for = 1; // Uncaught SyntaxError: Unexpected token 'for'
+  let break = 2; // Uncaught SyntaxError: Unexpected token 'break'
+  ```
+> [【JS基础】JavaScript中的void 0](https://www.cnblogs.com/sophierabbit/p/11452205.html)
+[javascript:void(0)的含义](https://www.cnblogs.com/duxiu-fang/p/11104735.html)
+## Babel是如何处理let、const和箭头函数的
+
+- JavaScript 严格模式（strict mode）不允许使用未声明的变量，加上严格模式的标记，自然就可以实现了 TDZ 的效果。
+- Babel 编译会将 let、const 变量重新命名；
+- Babel 检测到 const 声明的变量被改变赋值，就会主动插入了一个 _readOnlyError 函数，并执行此函数。这个函数的执行内容就是报错，因此代码执行时就会直接抛出异常。
+
+- [Babel 编译对代码做了什么](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
+
 ## 屏幕录制工具
 
 [推荐几款屏幕录制工具（可录制GIF）](https://www.cnblogs.com/libin-1/p/6424368.html){:target='_blank'}

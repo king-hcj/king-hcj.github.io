@@ -8,6 +8,107 @@ keywords: 前端学习之路
 
 &emsp;&emsp;自 2018 年 7 月 31 日离开国防单位贵州贵航飞机设计研究所，一年多来，我在前端领域，走过了很多路，体会到了前端所见即所得的玄妙，也不断经历着转行的不易与艰辛。如果说这一年多来，有什么是让我觉得最值得骄傲的，那无疑就是两个字——坚持。2019 年 1 月 1 日订立个人 OKR 目标并发起每日钉钉打卡，300 余天的坚持，或许还未曾使自己完全成为梦想中的样子，但也因此收获很多。现将 2019 年学习过的书籍、专栏、视频进行整理。
 
+## 2021 年
+
+### 书籍
+
+- 《深入浅出 Node.js》——朴灵(在看)
+
+### 慕课网
+
+#### 慕课视频课程
+
+- [React服务器渲染原理解析与实践](https://coding.imooc.com/class/276.html){:target='_blank'}
+
+#### 慕课专栏
+
+### 极客时间
+
+#### 极客时间专栏
+
+
+#### 极客时间视频
+
+
+### 掘金
+
+#### 掘金小册
+
+### 拉勾教育
+
+- [拉勾大前端高薪训练营](https://pan.baidu.com/disk/home?#/all?vmode=list&path=%2F%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%2F%E6%8B%89%E5%8B%BE%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5){:target='\_blank'}【在看】
+
+### GitChat专栏
+
+- [前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde){:target='_blank'}(在看)
+
+### LeetCode
+
+- [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='\_blank'}（每周至少三题）
+
+### 其他经典
+
+- [JavaScript 20 年](https://cn.history.js.org/){:target='_blank'}（在看）
+
+
+## 2020 年
+
+### 书籍
+
+- 《深入浅出 Node.js》——朴灵(在看)
+
+### 慕课网
+
+#### 慕课视频课程
+
+- **[计算机基础——更适合程序员的编程必备基础知识](https://coding.imooc.com/class/355.html){:target='\_blank'}【在看，程序员经典】**
+- [React 源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='\_blank'}(在看，已看前四章)
+- **[微信小程序入门与实战](https://coding.imooc.com/learn/list/424.html){:target='\_blank'}【拥有基本的小程序开发能力，非框架】**
+- [Nginx 入门到实践－Nginx 中间件](https://coding.imooc.com/class/121.html){:target='\_blank'}
+- [Go语言第一课](https://www.imooc.com/learn/345){:target='_blank'}【在看】
+
+#### 慕课专栏
+
+### 极客时间
+
+#### 极客时间专栏
+
+- [《JavaScript 核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='\_blank'}
+- **[透视 HTTP 协议](https://time.geekbang.org/column/intro/189){:target='\_blank'}【全方位理解 HTTP 及其继承者】**
+- **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='\_blank'}【值得再看至少一遍】**
+- [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='\_blank'}
+- [白话法律 42 讲](https://time.geekbang.org/column/intro/132){:target='\_blank'}
+- [如何做好一场技术演讲](https://time.geekbang.org/column/intro/61){:target='\_blank'}
+- **[图解 Google V8](https://time.geekbang.org/column/intro/100048001){:target='\_blank'}【已做技术分享，输出文章：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'}】**
+
+#### 极客时间视频
+
+- [玩转 webpack-全方位掌握 webpack 核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='\_blank'}
+- [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}
+- [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看，已看前55节)
+- [Elasticsearch 核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='\_blank'}(在看)
+- [Electron开发实战](https://time.geekbang.org/course/intro/100044201){:target='_blank'}（在看）
+
+### 掘金
+
+#### 掘金小册
+
+### 拉勾教育
+
+- [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}
+
+### GitChat专栏
+
+- [前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde){:target='_blank'}(在看)
+
+### LeetCode
+
+- [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='\_blank'}（每周至少三题）
+
+### 其他经典
+
+
+
 ## 2019 年及以前
 
 ### 书籍
@@ -96,60 +197,3 @@ keywords: 前端学习之路
 - [前端进阶之道](https://yuchengkai.cn/){:target='\_blank'}
 - [掘金](https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections){:target='\_blank'}、知乎、思否、微信公众号文章、慕课手记等
 
-## 2020 年
-
-### 书籍
-
-- 《深入浅出 Node.js》——朴灵(在看)
-
-### 慕课网
-
-#### 慕课视频课程
-
-- **[计算机基础——更适合程序员的编程必备基础知识](https://coding.imooc.com/class/355.html){:target='\_blank'}【在看，程序员经典】**
-- [React 源码深度解析 高级前端工程师必备技能](https://coding.imooc.com/class/309.html){:target='\_blank'}(在看，已看前四章)
-- **[微信小程序入门与实战](https://coding.imooc.com/learn/list/424.html){:target='\_blank'}【拥有基本的小程序开发能力，非框架】**
-- [Nginx 入门到实践－Nginx 中间件](https://coding.imooc.com/class/121.html){:target='\_blank'}
-- [Go语言第一课](https://www.imooc.com/learn/345){:target='_blank'}【在看】
-
-#### 慕课专栏
-
-### 极客时间
-
-#### 极客时间专栏
-
-- [《JavaScript 核心原理解析》](https://time.geekbang.org/column/intro/252?utm_term=zeusEALI1&utm_source=app&utm_medium=articourse){:target='\_blank'}
-- **[透视 HTTP 协议](https://time.geekbang.org/column/intro/189){:target='\_blank'}【全方位理解 HTTP 及其继承者】**
-- **[编译原理之美](https://time.geekbang.org/column/intro/219){:target='\_blank'}【值得再看至少一遍】**
-- [朱赟的技术管理课](https://time.geekbang.org/column/intro/49){:target='\_blank'}
-- [白话法律 42 讲](https://time.geekbang.org/column/intro/132){:target='\_blank'}
-- [如何做好一场技术演讲](https://time.geekbang.org/column/intro/61){:target='\_blank'}
-- **[图解 Google V8](https://time.geekbang.org/column/intro/100048001){:target='\_blank'}【已做技术分享，输出文章：[浏览器是如何工作的：Chrome V8让你更懂JavaScript](https://segmentfault.com/a/1190000037435824){:target='_blank'}】**
-
-#### 极客时间视频
-
-- [玩转 webpack-全方位掌握 webpack 核心技能和优化策略](https://time.geekbang.org/course/intro/190){:target='\_blank'}
-- [前端全链路性能优化实战](https://time.geekbang.org/course/intro/257){:target='\_blank'}
-- [Linux 实战技能 100 讲](https://time.geekbang.org/course/intro/193){:target='\_blank'}(在看，已看前55节)
-- [Elasticsearch 核心技术与实战](https://time.geekbang.org/course/intro/100030501){:target='\_blank'}(在看)
-- [Electron开发实战](https://time.geekbang.org/course/intro/100044201){:target='_blank'}（在看）
-
-### 掘金
-
-#### 掘金小册
-
-### 拉勾教育
-
-- [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}
-
-### GitChat专栏
-
-- [前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde){:target='_blank'}(在看)
-
-### LeetCode
-
-- [LeetCode](https://leetcode-cn.com/u/king-hcj-3){:target='\_blank'}（每周至少三题）
-
-### 其他经典
-
-- [JavaScript 20 年](https://cn.history.js.org/){:target='_blank'}（在看）
