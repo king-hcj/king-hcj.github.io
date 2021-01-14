@@ -91,6 +91,13 @@ null代表空值，代表“定义了但是为空”。而undefined的代表未�
 
 - [Babel 编译对代码做了什么](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
 
+## BFC
+
+BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+
+- [BFC 背后的布局问题](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbeaf5bbbba80861a35c03)
+- [10 分钟理解 BFC 原理](https://zhuanlan.zhihu.com/p/25321647)
+
 ## 屏幕录制工具
 
 [推荐几款屏幕录制工具（可录制GIF）](https://www.cnblogs.com/libin-1/p/6424368.html){:target='_blank'}
