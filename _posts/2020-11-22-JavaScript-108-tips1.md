@@ -90,7 +90,7 @@ console.log(
 
 ![console]({{site.url}}{{site.baseurl}}/images/posts/zhuangbility100/console.png?raw=true)
 
-> 参考资料：[小蝌蚪日记：通过console.log高仿FBI Warning](https://segmentfault.com/a/1190000022866520){:target='_blank'} &#124; [Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)?redirectedfrom=MSDN){:target='_blank'} 
+> 参考资料：[小蝌蚪日记：通过console.log高仿FBI Warning](https://segmentfault.com/a/1190000022866520){:target='_blank'} &#124; [Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)?redirectedfrom=MSDN){:target='_blank'} &#124; [console.log 也能插图！！！](https://xie.infoq.cn/article/a8b8c170ca942b2a995d1e8e1){:target='_blank'}
 
 
 ## 第三式：芙蓉面，杨柳腰，无物比妖娆 —— 让你看清UI的轮廓
