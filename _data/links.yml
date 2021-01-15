@@ -14,6 +14,10 @@
   url: https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde
   src: www
 
+- name: 政采云前端团队
+  url: https://www.zoo.team/
+  src: www
+
 - name: JavaScript 核心进阶【简书】
   url: https://www.jianshu.com/nb/1479424
   src: www
@@ -48,10 +52,6 @@
 
 - name: 黯羽轻扬 - 博客
   url: http://www.ayqy.net/blog/
-  src: www
-
-- name: 政采云前端团队
-  url: https://www.zoo.team/
   src: www
 
 - name: 日新亭
