@@ -447,6 +447,113 @@ function toHumpObj (data) {
 
 - [实现双向绑定 Proxy 比 defineproperty 优劣如何](https://www.jianshu.com/p/2df6dcddb0d7){:target='\_blank'}
 - [为什么 Vue3.0 使用 Proxy 实现数据监听？defineProperty 表示不背这个锅](https://juejin.cn/post/6844903965180575751){:target='\_blank'}
+- [Vue 的数据响应式原理](https://www.infoq.cn/article/we3l33h5zgyyg6gc9hri){:target='_blank'}
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>defineProperty 多个成员</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟 Vue 中的 data 选项
+    let data = {
+      msg: 'hello',
+      count: 10
+    }
+
+    // 模拟 Vue 的实例
+    let vm = {}
+
+    proxyData(data)
+
+    function proxyData(data) {
+      // 遍历 data 对象的所有属性
+      Object.keys(data).forEach(key => {
+        // 把 data 中的属性，转换成 vm 的 setter/setter
+        Object.defineProperty(vm, key, {
+          enumerable: true,
+          configurable: true,
+          get () {
+            console.log('get: ', key, data[key])
+            return data[key]
+          },
+          set (newValue) {
+            console.log('set: ', key, newValue)
+            if (newValue === data[key]) {
+              return
+            }
+            data[key] = newValue
+            // 数据更改，更新 DOM 的值
+            document.querySelector('#app').textContent = data[key]
+          }
+        })
+      })
+    }
+
+    // 测试
+    vm.msg = 'Hello World'
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
+```
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Proxy</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟 Vue 中的 data 选项
+    let data = {
+      msg: 'hello',
+      count: 0
+    }
+
+    // 模拟 Vue 实例
+    let vm = new Proxy(data, {
+      // 执行代理行为的函数
+      // 当访问 vm 的成员会执行
+      get (target, key) {
+        console.log('get, key: ', key, target[key])
+        return target[key]
+      },
+      // 当设置 vm 的成员会执行
+      set (target, key, newValue) {
+        console.log('set, key: ', key, newValue)
+        if (target[key] === newValue) {
+          return
+        }
+        target[key] = newValue
+        document.querySelector('#app').textContent = target[key]
+      }
+    })
+
+    // 测试
+    vm.msg = 'Hello World'
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
+```
 
 ## 明明 console 数组有值，展开就是空了？
 
