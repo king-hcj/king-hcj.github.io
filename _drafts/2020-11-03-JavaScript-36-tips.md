@@ -98,6 +98,139 @@ BFC就是页面上的一个隔离的独立容器，容器里面的子元素不�
 - [BFC 背后的布局问题](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbeaf5bbbba80861a35c03)
 - [10 分钟理解 BFC 原理](https://zhuanlan.zhihu.com/p/25321647)
 
+## HTML 
+给汉字加拼音
+展开收起组件
+禁止用户选中文字
+开启硬件加速
+让chrome支持小于12px的文字
+CSS变量：简单使用；一键主题切换；
+CSS modules并不是真正的局部有效（唯一class名称，web components更接近真正的局部有效）
+composes 实现样式复用
+
+- [进击的 CSS 和 HTML](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbef07bbbba80861a35c21)
+
+## web Storage事件机制 - 实现浏览器内多个标签页之间的通信
+
+- 标签是当前页面打开的：可直接操作
+- postMessage
+- localStorage
+- cookie+setInterval()
+
+大家一般都只知道localStorage.setItem(key,value)、localStorage.getItem(key)以及localStorage.removeItem(key)
+- [JavaScript之web Storage事件机制](https://blog.csdn.net/weixin_43772533/article/details/107166033)
+- [如何实现浏览器内多个标签页之间的通信？](https://blog.csdn.net/meijory/article/details/76358570)
+- [实现多个标签页之间通信的几种方法(sharedworker)](https://www.jianshu.com/p/31facd4934d7)
+- [实现浏览器内多个标签页之间的通信](https://segmentfault.com/a/1190000018354650)
+
+## SharedWorker
+
+- [SharedWorker](https://developer.mozilla.org/zh-CN/docs/Web/API/SharedWorker)
+
+## CSS3动画 - 酷炫的扑克牌展开
+
+```html
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            /*background-color: #eee;*/
+        }
+
+        .box {
+
+            width: 300px;
+            height: 440px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            transition: all 1.5s;
+            position: absolute;     /* 既然扑克牌是叠在一起的，那就都用绝对定位 */
+            left: 0;
+            top: 0;
+
+            transform-origin: center bottom; /*旋转时，以盒子底部的中心为坐标原点*/
+            box-shadow: 0 0 3px 0 #666;
+        }
+
+        .box:hover img:nth-child(6) {
+            transform: rotate(-10deg);
+        }
+
+        .box:hover img:nth-child(5) {
+            transform: rotate(-20deg);
+        }
+
+        .box:hover img:nth-child(4) {
+            transform: rotate(-30deg);
+        }
+
+        .box:hover img:nth-child(3) {
+            transform: rotate(-40deg);
+        }
+
+        .box:hover img:nth-child(2) {
+            transform: rotate(-50deg);
+        }
+
+        .box:hover img:nth-child(1) {
+            transform: rotate(-60deg);
+        }
+
+        .box:hover img:nth-child(8) {
+            transform: rotate(10deg);
+        }
+
+        .box:hover img:nth-child(9) {
+            transform: rotate(20deg);
+        }
+
+        .box:hover img:nth-child(10) {
+            transform: rotate(30deg);
+        }
+
+        .box:hover img:nth-child(11) {
+            transform: rotate(40deg);
+        }
+
+        .box:hover img:nth-child(12) {
+            transform: rotate(50deg);
+        }
+
+        .box:hover img:nth-child(13) {
+            transform: rotate(60deg);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+    <img src="images/pk2.jpg"/>
+    <img src="images/pk1.jpg"/>
+</div>
+</body>
+</html>
+```
+
+- [CSS3动画详解（图文教程）](https://www.cnblogs.com/qianguyihao/p/8435182.html)
+
 ## 屏幕录制工具
 
 [推荐几款屏幕录制工具（可录制GIF）](https://www.cnblogs.com/libin-1/p/6424368.html){:target='_blank'}
