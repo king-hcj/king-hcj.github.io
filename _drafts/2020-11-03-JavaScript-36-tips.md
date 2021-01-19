@@ -110,6 +110,14 @@ composes 实现样式复用
 
 - [进击的 CSS 和 HTML](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbef07bbbba80861a35c21)
 
+## CSS 中的相对单位有：
+
+em
+rem
+vh、vw、vmin、vmax
+%
+calc()
+
 ## web Storage事件机制 - 实现浏览器内多个标签页之间的通信
 
 - 标签是当前页面打开的：可直接操作
