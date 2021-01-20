@@ -118,6 +118,10 @@ vh、vw、vmin、vmax
 %
 calc()
 
+## 5个好用的 CSS 函数，快来试试手吧！
+
+- [5个好用的 CSS 函数，快来试试手吧！](https://segmentfault.com/a/1190000039031953){:target='_blank'}
+
 ## git 分支合并时如何忽略某个文件
 
 > [git 分支合并时如何忽略某个文件【译文】](http://www.voidcn.com/article/p-aohzmust-c.html){:target='_blank'} &#124; [How to make Git preserve specific files while merging](https://medium.com/@porteneuve/how-to-make-git-preserve-specific-files-while-merging-18c92343826b){:target='_blank'}：
