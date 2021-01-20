@@ -14,8 +14,16 @@
   url: https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde
   src: www
 
+- name: 领略前端技术 阅读奇舞周刊
+  url: https://weekly.75.team/
+  src: www
+
 - name: 政采云前端团队
   url: https://www.zoo.team/
+  src: www
+
+- name: Ali Data Frontend Team - 前端精读周刊
+  url: https://github.com/dt-fe/weekly
   src: www
 
 - name: JavaScript 核心进阶【简书】
@@ -52,14 +60,6 @@
 
 - name: 黯羽轻扬 - 博客
   url: http://www.ayqy.net/blog/
-  src: www
-
-- name: 日新亭
-  url: http://www.fengerzh.com/
-  src: www
-
-- name: 水寒的博客
-  url: https://dp2px.com
   src: www
 
 - name: 个人简历
