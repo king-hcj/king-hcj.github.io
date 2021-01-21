@@ -41,6 +41,12 @@ window.history.length > 1
 - [ES6 箭头函数使用禁忌](https://zhuanlan.zhihu.com/p/28972104)
 - [哪些场景下不适合使用 ES6 箭头函数](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
 
+## JavaScript中判断函数是new还是()调用
+
+- [new.target](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target){:target='_blank'}
+- [new.target 属性](https://es6.ruanyifeng.com/#docs/class#new-target-%E5%B1%9E%E6%80%A7){:target='_blank'}
+- [JavaScript中判断函数是new还是()调用](https://blog.csdn.net/weixin_33794672/article/details/85480850){:target='_blank'}
+
 ## JavaScript中的void 0
 
 > void其实是javascript中的一个函数，接受一个参数，返回值永远是undefined。可以说，使用void目的就是为了得到javascript中的undefined。
