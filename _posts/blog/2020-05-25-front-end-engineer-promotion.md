@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端进阶之路
+title: 前端进阶之路【拉勾大前端高薪训练营】
 categories: Blog
 description: front-end-engineer-promotion，结合阿里P7用人要求，循序渐进，8大阶段打造前端核心竞争力。
 keywords: 前端进阶之路
