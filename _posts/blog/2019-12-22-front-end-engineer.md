@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端学习之路【学习途径、资料、书籍等】
+title: 前端学习之路【个人学习途径、资料、书籍等】
 categories: Blog
 description: 记录个人前端学习过程中看过的书籍、专栏、视频等资料。
 keywords: 前端学习之路
@@ -19,6 +19,7 @@ keywords: 前端学习之路
 #### 慕课视频课程
 
 - [React服务器渲染原理解析与实践](https://coding.imooc.com/class/276.html){:target='_blank'}
+- [JavaScript版数据结构与算法 轻松解决前端算法面试](https://coding.imooc.com/class/446.html){:target='_blank'}（在看）
 
 #### 慕课专栏
 
@@ -95,7 +96,7 @@ keywords: 前端学习之路
 
 ### 拉勾教育
 
-- [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}
+- [前端高手进阶](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=180#/content){:target='\_blank'}（在看）
 
 ### GitChat专栏
 
