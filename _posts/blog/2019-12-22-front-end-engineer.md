@@ -25,7 +25,7 @@ keywords: 前端学习之路
 - [前端性能优化 掌握行业实用、专业、前沿的解决方案](https://coding.imooc.com/class/448.html){:target='_blank'}【A计划】
 - [大前端](https://class.imooc.com/webfullstack#Anchor){:target='_blank'}【A计划】
 - [【体系课】数据可视化入门到精通 打造前端差异化竞争力](https://coding.imooc.com/class/445.html){:target='_blank'}【A计划】
-- [Web前端架构师](https://class.imooc.com/sale/fearchitect){:target='_blank'}【计划】
+- [Web前端架构师](https://class.imooc.com/fearchitect#Anchor){:target='_blank'}【计划】
 - [算法 - liuyubobobo](http://www.imooc.com/t/108955){:target='_blank'}【B计划】
 
 #### 慕课专栏
