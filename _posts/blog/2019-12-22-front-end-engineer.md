@@ -20,6 +20,13 @@ keywords: 前端学习之路
 
 - [React服务器渲染原理解析与实践](https://coding.imooc.com/class/276.html){:target='_blank'}
 - [JavaScript版数据结构与算法 轻松解决前端算法面试](https://coding.imooc.com/class/446.html){:target='_blank'}（在看）
+- [快速搞定前端技术一面 匹配大厂面试要求](https://coding.imooc.com/class/400.html){:target='_blank'}【A计划】
+- [前端框架及项目面试－聚焦Vue3/React/Webpack](https://coding.imooc.com/class/419.html){:target='_blank'}【A计划】
+- [前端性能优化 掌握行业实用、专业、前沿的解决方案](https://coding.imooc.com/class/448.html){:target='_blank'}【A计划】
+- [大前端](https://class.imooc.com/webfullstack#Anchor){:target='_blank'}【A计划】
+- [【体系课】数据可视化入门到精通 打造前端差异化竞争力](https://coding.imooc.com/class/445.html){:target='_blank'}【A计划】
+- [Web前端架构师](https://class.imooc.com/sale/fearchitect){:target='_blank'}【计划】
+- [算法 - liuyubobobo](http://www.imooc.com/t/108955){:target='_blank'}【B计划】
 
 #### 慕课专栏
 
@@ -30,6 +37,10 @@ keywords: 前端学习之路
 
 #### 极客时间视频
 
+- [Web协议详解与抓包实战](https://time.geekbang.org/course/intro/100026801){:target='_blank'}【A计划】
+- [Node.js开发实战](https://time.geekbang.org/course/intro/100036001){:target='_blank'}【B计划】
+- [算法面试通关40讲](https://time.geekbang.org/course/intro/100019701){:target='_blank'}【B计划】
+
 
 ### 掘金
 
@@ -38,6 +49,7 @@ keywords: 前端学习之路
 ### 拉勾教育
 
 - [拉勾大前端高薪训练营](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='\_blank'}【在看】
+- [300分钟搞定数据结构与算法](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=3&sid=30-h5Url-0#/sale)【B计划】{:target='_blank'}
 
 ### GitChat专栏
 
