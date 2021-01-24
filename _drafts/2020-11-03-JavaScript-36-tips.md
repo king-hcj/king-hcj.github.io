@@ -31,6 +31,22 @@ window.history.length > 1
   }, 2000);
 ```
 
+## 百度搜索你不知道的几点技巧，让你的搜索更加准确（单篇文章？）
+
+- [这几个百度搜索技巧，太好用了](https://zhuanlan.zhihu.com/p/92562328){:target='_blank'}
+- [百度搜索技巧](http://d.baidu.com/search/skill.html){:target='_blank'}
+- [百度搜索你不知道的几点技巧，让你的搜索更加准确，绝对值得收藏](https://baijiahao.baidu.com/s?id=1588667642036316564){:target='_blank'}
+- [百度高级搜索技巧](https://blog.csdn.net/cx243698/article/details/80625384){:target='_blank'}
+
+## Vue中的 render: h => h(App) 具体是什么含义？
+
+- [Explanation for `render: h => h(App)` please](https://github.com/vuejs-templates/webpack-simple/issues/29){:target='_blank'}
+- [关于Vue中的 render: h => h(App) 具体是什么含义？](https://segmentfault.com/q/1010000007130348){:target='_blank'}
+
+> It comes from the term "hyperscript", which is commonly used in many virtual-dom implementations. "Hyperscript" itself stands for "script that generates HTML structures" because HTML is the acronym for "hyper-text markup language".
+
+它来自“ hyperscript”一词，该术语通常在许多虚拟dom实现中使用。 “超脚本”本身代表“生成HTML结构的脚本”，因为HTML是“超文本标记语言”的首字母缩写。
+
 ## 哪些场景下不适合使用 ES6 箭头函数
 
 - this：构造函数的原型方法上
@@ -542,9 +558,16 @@ function toHumpObj (data) {
 
 ## 数组的 N 种操作
 
-- 扁平化
+- 扁平化：
+  - 循环加递归（concat）
+  - flat
+  - flatMap
+  - toString后split
+  - join后split：[1,2,[3,[4,5]]].join().split(',')
 - 去重
 - 类数组转化为数组
+
+- [JS专题之数组展开](https://www.imooc.com/article/277566){:target='_blank'}
 
 ## Promise 并行限制
 
