@@ -40,6 +40,7 @@ keywords: 前端学习之路
 - [Web协议详解与抓包实战](https://time.geekbang.org/course/intro/100026801){:target='_blank'}【A计划】
 - [Node.js开发实战](https://time.geekbang.org/course/intro/100036001){:target='_blank'}【B计划】
 - [算法面试通关40讲](https://time.geekbang.org/course/intro/100019701){:target='_blank'}【B计划】
+- [算法训练营](https://u.geekbang.org/subject/algorithm/1000343?utm_source=time_web&utm_medium=menu&utm_term=timewebmenu){:target='_blank'}【计划】
 
 
 ### 掘金
