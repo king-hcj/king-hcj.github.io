@@ -16,6 +16,35 @@ keywords: JS, 前端, JavaScript
 - [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
 - [JavaScript Puzzlers!](http://javascript-puzzlers.herokuapp.com/)
 
+## 如何对比各种写法的性能
+
+- JS在线代码片段性能测试工具
+    - [https://jsperf.com](https://jsperf.com){:target='_blank'}（目前已不可用）
+    - [https://jsbench.me/](https://jsbench.me/){:target='_blank'}
+    - [Benchmark.js](https://www.npmjs.com/package/benchmark)：A robust benchmarking library that supports
+
+- [初探 performance – 监控网页与程序性能](http://www.alloyteam.com/2015/09/explore-performance/){:target='_blank'}
+- [JSPerf-javascript代码性能测试利器](https://blog.csdn.net/dpj514/article/details/78767936){:target='_blank'}
+
+## callee和caller的作用与区别
+
+- [callee和caller的作用与区别](https://blog.csdn.net/hustzw07/article/details/72312329){:target='_blank'}
+
+## 抽象语法树(AST)
+
+- [AST抽象语法树——最基础的javascript重点知识，99%的人根本不了解](https://segmentfault.com/a/1190000016231512){:target='_blank'}
+- [AST生成](https://astexplorer.net/){:target='_blank'}
+- [Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API){:target='_blank'}
+
+## JS new Function()
+
+new Function（）的参数是某个字符串，在使用时，编译器会将参数中的字符串当作正常的脚本代码来执行。利用这种方法来把字符串转对象，可以简单的想象成就是new出一个对象。
+
+vue中parse最后会把一个字符串形式的函数传给new Function()
+
+- [JS巧用 new Function() 把字符串（string）转对象（object）](https://blog.csdn.net/piaoyinluo2316/article/details/87003745){:target='_blank'}
+- [JS的new Function()](https://blog.csdn.net/piaoyinluo2316/article/details/84135918){:target='_blank'}
+
 ## window.history.length的大坑
 
 - [window.history.length的大坑](https://zhuanlan.zhihu.com/p/91931664)
