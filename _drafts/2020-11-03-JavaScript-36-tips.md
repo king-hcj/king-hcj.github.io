@@ -16,6 +16,19 @@ keywords: JS, 前端, JavaScript
 - [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
 - [JavaScript Puzzlers!](http://javascript-puzzlers.herokuapp.com/)
 
+## 尾调用优化，尾调用为什么更优化？
+
+- [尾调用优化](http://www.ruanyifeng.com/blog/2015/04/tail-call.html){:target='_blank'}
+
+## rel=”noopener noreferrer”
+
+- [关于 rel=”noopener noreferrer”的作用](http://www.6cu.com/seoxuetang/gjcpm/2019/1203/27843.html){:target='_blank'} &#124; [rel=noopener/noreferrer简介](https://www.dazhuanlan.com/2020/01/02/5e0d46202b8a8/){:target='_blank'}
+    ```js
+    <a href="http://other.site" target="_blank" rel="noopener noopener">LINK</a>
+    ```
+- [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
+- [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
+
 ## 如何对比各种写法的性能
 
 - JS在线代码片段性能测试工具
