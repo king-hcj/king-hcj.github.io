@@ -174,13 +174,13 @@ composes 实现样式复用
 
 - [进击的 CSS 和 HTML](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbef07bbbba80861a35c21)
 
-## CSS 中的相对单位有：
+## CSS 中的相对单位
 
-em
-rem
-vh、vw、vmin、vmax
-%
-calc()
+- em
+- rem
+- vh、vw、vmin、vmax
+- %
+- calc()
 
 ## 5个好用的 CSS 函数，快来试试手吧！
 
