@@ -20,6 +20,10 @@ keywords: JS, 前端, JavaScript
 
 - [尾调用优化](http://www.ruanyifeng.com/blog/2015/04/tail-call.html){:target='_blank'}
 
+## queueMicrotask —— 不用promise，如何创建微任务
+  - [queueMicrotask - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask){:target='_blank'}
+  - [使用 queueMicrotask 来执行微任务](https://segmentfault.com/a/1190000020332724){:target='_blank'}
+
 ## rel=”noopener noreferrer”
 
 - [关于 rel=”noopener noreferrer”的作用](http://www.6cu.com/seoxuetang/gjcpm/2019/1203/27843.html){:target='_blank'} &#124; [rel=noopener/noreferrer简介](https://www.dazhuanlan.com/2020/01/02/5e0d46202b8a8/){:target='_blank'}
