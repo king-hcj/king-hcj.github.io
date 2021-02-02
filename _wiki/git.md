@@ -150,7 +150,7 @@ git submodule update --init
 
 **删除 submodule**
 
-在 .gitmodules 中删除对应 submodule 的信息，然后使用如下命令删除子模块所有文件：
+在 .gitmodules 中删除对应 submodule 的信息，然后使用如下命令删除子模块所有文件（**官方文档里，应该使用 git submodule deinit 命令卸载一个子模块，详见下面的相关资料部分**）：
 
 ```
 git rm --cached Catch
