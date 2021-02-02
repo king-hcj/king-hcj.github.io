@@ -162,6 +162,8 @@ git rm --cached Catch
 git submodule update --init --recursive
 ```
 
+> 相关资料：[Git中submodule的使用](https://zhuanlan.zhihu.com/p/87053283){:target='_blank'}
+
 ### 删除远程 tag
 
 ```
