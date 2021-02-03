@@ -162,6 +162,11 @@ null代表空值，代表“定义了但是为空”。而undefined的代表未�
   ```
 > [【JS基础】JavaScript中的void 0](https://www.cnblogs.com/sophierabbit/p/11452205.html)
 [javascript:void(0)的含义](https://www.cnblogs.com/duxiu-fang/p/11104735.html)
+
+## You don't (may not) need Lodash/Underscore
+
+- [You don't (may not) need Lodash/Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore){:target='_blank'}
+
 ## Babel是如何处理let、const和箭头函数的
 
 - JavaScript 严格模式（strict mode）不允许使用未声明的变量，加上严格模式的标记，自然就可以实现了 TDZ 的效果。
