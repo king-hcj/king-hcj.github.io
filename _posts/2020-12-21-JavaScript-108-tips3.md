@@ -798,7 +798,7 @@ arr.forEachCustom((item) => {
 
 &emsp;&emsp;笔者大约两年前刚用 Mac 开发前端时曾经遇到一个坑：代码在本地运行 ok，但是发现 push 到 git，自动部署后报错了，排查了很久，最后发现有个文件名没有注意大小写，重命名了该文件，但是 git 没有识别到这个更改，导致自动部署后找不到这个文件。解决办法如下：
 
-- 查看 git 的设置：`git config –get core.ignorecase`
+- 查看 git 的设置：`git config --get core.ignorecase`
 - git 默认是不区分大小的，因此当你修改了文件名/文件夹的大小写后，git 并不会认为你有修改（git status 不会提示你有修改）
 - 更改设置解决：`git config core.ignorecase false`
 
