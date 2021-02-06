@@ -213,6 +213,21 @@ composes 实现样式复用
 > [git 分支合并时如何忽略某个文件【译文】](http://www.voidcn.com/article/p-aohzmust-c.html){:target='_blank'} &#124; [How to make Git preserve specific files while merging](https://medium.com/@porteneuve/how-to-make-git-preserve-specific-files-while-merging-18c92343826b){:target='_blank'}：
 git在merge分支时，有一个默认的merge驱动，这个驱动会去检查每个文件的每一行，如果按照一定规则发现两个分支的同一个文件有不同，那么认为两个分支都对这个文件做了修改，会merge两个文件，此时有可能产生冲突；那么如果我们自定义一个merge驱动，在里面定义一些不会被检查的文件，那git就会直接跳过这些文件，因此就不会merge了。
 
+## momentjs太重了吗？试试dayjs和miment吧
+
+[Moment.js Github](https://github.com/moment/moment){:target='_blank'}：Moment.js is a legacy project, now in maintenance mode. In most cases, you should choose a different library.
+
+默认情况下，webpack 会打包所有的 Moment.js 语言环境（在 Moment.js 2.18.1 中，最小为 160 KB）。 若要剥离不必要的语言环境且仅打包使用的语言环境，则添加 moment-locales-webpack-plugin。
+
+moment.js 的大小达到了200KB，对于非SSR的首屏渲染性能非常不友好，所以，如果对于moment.js 的需求不大，可以考虑社区中出现的，它的替代方案。
+  - day.js
+  - miment.js
+
+- [moment优化](http://momentjs.cn/docs/#/use-it/webpack/){:target='_blank'}
+- [Day.js](https://day.js.org/zh-CN/){:target='_blank'}
+- [Miment](https://github.com/noahlam/Miment){:target='_blank'}
+- [JS使用技巧2——momentjs太重了吗？试试dayjs和miment吧](https://segmentfault.com/a/1190000017517737){:target='_blank'}
+
 ## web Storage事件机制 - 实现浏览器内多个标签页之间的通信
 
 - 标签是当前页面打开的：可直接操作
