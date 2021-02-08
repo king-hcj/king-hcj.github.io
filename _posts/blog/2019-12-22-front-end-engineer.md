@@ -50,7 +50,7 @@ keywords: 前端学习之路
 ### 拉勾教育
 
 - [拉勾大前端高薪训练营](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='\_blank'}【在看】
-- [300分钟搞定数据结构与算法](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=3&sid=30-h5Url-0#/sale)【B计划】{:target='_blank'}
+- [300分钟搞定数据结构与算法](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=3&sid=30-h5Url-0#/sale){:target='_blank'}【B计划】
 
 ### GitChat专栏
 
