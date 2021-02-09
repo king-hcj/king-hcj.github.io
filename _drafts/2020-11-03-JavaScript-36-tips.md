@@ -60,9 +60,15 @@ keywords: JS, 前端, JavaScript
 
 ## 抽象语法树(AST)
 
+ESLint 使用 Espree 来解析 JavaScript 语句，生成 AST。有了完整的解析树，我们就可以基于解析树对代码进行检测和修改。
+
+ESLint 的灵魂是每一条 rule，每条规则都是独立且插件化的。
+
 - [AST抽象语法树——最基础的javascript重点知识，99%的人根本不了解](https://segmentfault.com/a/1190000016231512){:target='_blank'}
 - [AST生成](https://astexplorer.net/){:target='_blank'}
 - [Parser API](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API){:target='_blank'}
+- [Espree](https://github.com/eslint/espree/blob/master/README.md){:target='_blank'}
+- [Esprima](https://esprima.org/index.html){:target='_blank'}
 
 ## JS new Function()
 
@@ -359,6 +365,31 @@ moment.js 的大小达到了200KB，对于非SSR的首屏渲染性能非常不�
 
 - [前端进阶之路](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='_blank'}
 - https://www.jq22.com/webqd5638
+- [Espree](https://github.com/eslint/espree/blob/master/README.md){:target='_blank'}
+
+<details><summary>Output</summary>
+<p>
+
+```
+Node {
+  type: 'Program',
+  start: 0,
+  end: 15,
+  body: [
+    Node {
+      type: 'VariableDeclaration',
+      start: 0,
+      end: 15,
+      declarations: [Array],
+      kind: 'let'
+    }
+  ],
+  sourceType: 'script'
+}
+```
+
+</p>
+</details>
 
 ## 网页短链接的实现原理
 
