@@ -527,6 +527,8 @@ input.oninput = ({ target }) => {
 ## 大文件上传
 
 - [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='\_blank'}
+- [HTTP断点续传（分块传输）（HTTP头格式非常清楚）](https://www.cnblogs.com/findumars/p/5745345.html){:target='_blank'}
+- [Range回源和视频拖拽播放](https://blog.csdn.net/Kim_Weir/article/details/85336313){:target='_blank'}
 
 ## 大文件下载
 
@@ -694,7 +696,12 @@ function toHumpObj (data) {
 
 ## 想做自己的前端项目，却没有后端支持 —— 有哪些好玩的免费的 API 接口?
 
+- [前端数据模拟的三种姿势](https://blog.csdn.net/huangpb123/article/details/79273316){:target='_blank'}
+
 - [有哪些好玩的免费的 API 接口?](https://www.zhihu.com/question/32225726){:target='\_blank'}
+- [\{JSON\} Placeholder](https://jsonplaceholder.typicode.com/){:target='_blank'}：快速搭建RESTful API接口
+- [json-server](https://github.com/typicode/json-server){:target='_blank'}
+- [Mock.js](http://mockjs.com/){:target='_blank'}
 
 ## 渲染几万条数据，怎样才能不卡住页面？
 
