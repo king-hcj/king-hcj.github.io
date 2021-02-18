@@ -16,6 +16,19 @@ keywords: JS, 前端, JavaScript
 - [44个 Javascript 变态题解析 (下)](https://github.com/xiaoyu2er/blog/issues/3){:target='_blank'}
 - [JavaScript Puzzlers!](http://javascript-puzzlers.herokuapp.com/)
 
+## JSON.parse('null') === null
+
+```js
+JSON.parse('{}');              // {}
+JSON.parse('true');            // true
+JSON.parse('"foo"');           // "foo"
+JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
+JSON.parse('null');            // null
+```
+
+- [为什么JSON.parse与空字符串失败？](http://www.djcxy.com/p/8003.html){:target='_blank'}
+- 
+
 ## 尾调用优化，尾调用为什么更优化？
 
 - [尾调用优化](http://www.ruanyifeng.com/blog/2015/04/tail-call.html){:target='_blank'}
@@ -95,12 +108,25 @@ window.history.length > 1
   }, 2000);
 ```
 
-## 百度搜索你不知道的几点技巧，让你的搜索更加准确（单篇文章？）
+## 百度搜索你不知道的几点技巧，让你的搜索更加高效（单篇文章？）
 
 - [这几个百度搜索技巧，太好用了](https://zhuanlan.zhihu.com/p/92562328){:target='_blank'}
 - [百度搜索技巧](http://d.baidu.com/search/skill.html){:target='_blank'}
 - [百度搜索你不知道的几点技巧，让你的搜索更加准确，绝对值得收藏](https://baijiahao.baidu.com/s?id=1588667642036316564){:target='_blank'}
 - [百度高级搜索技巧](https://blog.csdn.net/cx243698/article/details/80625384){:target='_blank'}
+
+## 导航守卫
+
+- [vue-router导航守卫，不懂的来](https://zhuanlan.zhihu.com/p/54112006){:target='_blank'}
+- [导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html){:target='_blank'}
+- [React Router 4.0 实现路由守卫](https://www.jianshu.com/p/677433245697){:target='_blank'}
+- [如何实现一个react-router路由拦截（导航守卫）](https://juejin.cn/post/6844903753284321294){:target='_blank'}
+
+## 如何挂起请求
+
+如何挂起请求（Promise），refresh_token后再用新的access_token重新发起请求？
+
+- [axios拦截器封装http请求，刷新token重发请求](https://juejin.cn/post/6844903894481371143){:target='_blank'}
 
 ## Vue中的 render: h => h(App) 具体是什么含义？
 
@@ -169,6 +195,7 @@ null代表空值，代表“定义了但是为空”。而undefined的代表未�
   ```
 > [【JS基础】JavaScript中的void 0](https://www.cnblogs.com/sophierabbit/p/11452205.html)
 [javascript:void(0)的含义](https://www.cnblogs.com/duxiu-fang/p/11104735.html)
+[“javascript：void（0）”是什么意思？](http://www.djcxy.com/p/8001.html){:target='_blank'}
 
 ## You don't (may not) need Lodash/Underscore
 
@@ -241,8 +268,15 @@ moment.js 的大小达到了200KB，对于非SSR的首屏渲染性能非常不�
 - postMessage
 - localStorage
 - cookie+setInterval()
+- 使用websocket协议
+- 使用html5浏览器的新特性SharedWorker。
 
-大家一般都只知道localStorage.setItem(key,value)、localStorage.getItem(key)以及localStorage.removeItem(key)
+大家一般都只知道localStorage.setItem(key,value)、localStorage.getItem(key)以及localStorage.removeItem(key)，一般却不会监听localStorage变化。
+```js
+window.onstorage = (e) => {console.log(e)}
+// 或者这样
+window.addEventListener('storage', (e) => console.log(e))
+```
 - [JavaScript之web Storage事件机制](https://blog.csdn.net/weixin_43772533/article/details/107166033)
 - [如何实现浏览器内多个标签页之间的通信？](https://blog.csdn.net/meijory/article/details/76358570)
 - [实现多个标签页之间通信的几种方法(sharedworker)](https://www.jianshu.com/p/31facd4934d7)
@@ -1002,6 +1036,9 @@ function fn (arg) {
 ## 装逼文章大赏
 
 - [这些 JavaScript 编程黑科技，装逼指南，高逼格代码，让你惊叹不已](https://segmentfault.com/a/1190000010752361){:target='\_blank'}
+
+
+[顶级程序员](http://www.djcxy.com/c/4/){:target='_blank'}
 
 <!-- JavaScript  36 式（17，19，23，24）：
 常用方法的实现
