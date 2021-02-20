@@ -52,6 +52,8 @@ JSON.parse('null');            // null
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
+      // document.body.requestFullscreen()
+      // 层级太低可能影响交互
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
