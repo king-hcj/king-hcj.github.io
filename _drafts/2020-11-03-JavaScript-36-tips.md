@@ -48,6 +48,18 @@ JSON.parse('null');            // null
 
 ## JS实现页面全屏功能（模拟F11）
 
+```js
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+```
+
 <!-- 可以对页面的任何区域进行全屏 -->
 - [MDN - 全屏 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API){:target='_blank'}
 - [JS实现页面全屏功能](https://blog.csdn.net/qiao_1017/article/details/80421631){:target='_blank'}
