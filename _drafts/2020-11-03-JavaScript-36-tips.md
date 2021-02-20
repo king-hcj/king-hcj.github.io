@@ -53,8 +53,13 @@ JSON.parse('null');            // null
     - [https://jsbench.me/](https://jsbench.me/){:target='_blank'}
     - [Benchmark.js](https://www.npmjs.com/package/benchmark)：A robust benchmarking library that supports
 
-- [初探 performance – 监控网页与程序性能](http://www.alloyteam.com/2015/09/explore-performance/){:target='_blank'}
 - [JSPerf-javascript代码性能测试利器](https://blog.csdn.net/dpj514/article/details/78767936){:target='_blank'}
+
+## 性能数据获取：window.performance 与 自定义时间计算
+
+- [fmp-timing](https://github.com/qbright/fmp-timing){:target='_blank'} &#124; [前端监控实践——FMP的智能获取算法](https://segmentfault.com/a/1190000017092752){:target='_blank'}
+- [性能监控和错误收集与上报（上）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c52fccb24267c1d01b87){:target='_blank'}
+- [初探 performance – 监控网页与程序性能](http://www.alloyteam.com/2015/09/explore-performance/){:target='_blank'}
 
 ## VisuAlgo
 
