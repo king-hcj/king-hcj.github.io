@@ -46,6 +46,13 @@ JSON.parse('null');            // null
 - [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
 - [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
 
+## JS实现页面全屏功能（模拟F11）
+
+<!-- 可以对页面的任何区域进行全屏 -->
+- [MDN - 全屏 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API){:target='_blank'}
+- [JS实现页面全屏功能](https://blog.csdn.net/qiao_1017/article/details/80421631){:target='_blank'}
+- [js实现f11的全屏效果](https://blog.csdn.net/qq_36698956/article/details/82697938){:target='_blank'}
+
 ## 如何对比各种写法的性能
 
 - JS在线代码片段性能测试工具
