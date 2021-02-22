@@ -52,6 +52,7 @@ JSON.parse('null');            // null
 - 处理机制：冒泡、捕获
 - 区别
 - 怎么区分网络资源加载错误和其他一般错误
+- navigator.sendBeacon 就是天生来解决“页离开时的请求发送”问题的，目前 Google Analytics 使用 navigator.sendBeacon 来上报数据
 
 - [性能监控和错误收集与上报（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c5dbccb24267c1d01b98){:target='_blank'}
 
