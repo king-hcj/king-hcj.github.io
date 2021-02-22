@@ -46,6 +46,15 @@ JSON.parse('null');            // null
 - [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
 - [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
 
+##  window.onerror 和 window.addEventListener('error') 
+
+- 可处理类型
+- 处理机制：冒泡、捕获
+- 区别
+- 怎么区分网络资源加载错误和其他一般错误
+
+- [性能监控和错误收集与上报（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c5dbccb24267c1d01b98){:target='_blank'}
+
 ## 鼠标点击效果
 
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
