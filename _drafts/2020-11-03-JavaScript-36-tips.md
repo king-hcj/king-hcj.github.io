@@ -46,6 +46,64 @@ JSON.parse('null');            // null
 - [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
 - [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
 
+##  window.onerror 和 window.addEventListener('error') 
+
+- 可处理类型
+- 处理机制：冒泡、捕获
+- 区别
+- 怎么区分网络资源加载错误和其他一般错误
+
+
+- [性能监控和错误收集与上报（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c5dbccb24267c1d01b98){:target='_blank'}
+
+## 页离开时的请求发送
+
+- navigator.sendBeacon 就是天生来解决“页离开时的请求发送”问题的，目前 Google Analytics 使用 navigator.sendBeacon 来上报数据
+
+- [Google Analytics added sendBeacon functionality to Universal Analytics JavaScript API](https://www.thyngster.com/google-analytics-added-sendbeacon-functionality-universal-analytics-javascript-api){:target='_blank'}
+
+## 2行代码生成包含大小写字母和数字的随机字符串
+
+2行代码生成指定长度字符串：
+
+```js
+/**
+ * 生成长度为len的包含a-z、A-Z、0-9的随机字符串
+ */
+functioin generateStr(len = 18) {
+	// 一行代码生成0-9、A-Z、a-z、总长度为62的字符数组
+	var arr = [...new Array(62)].map((item, i) => String.fromCharCode(i + (i < 10 ? 0 : (i < 36 ? 7 : 13)) + 48));
+	return [...new Array(len)].map(() => arr[Math.floor(Math.random() * arr.length)]).join('');
+}
+```
+
+1行代码生成指定长度数字：这种方法有缺点，低概率会出现位数不足的问题（原因是0.00566 * 100000 = 566，会丢失前面的0），不推荐使用。
+```js
+// len 最多16，可能出现
+functioin generateNum(len = 16) {
+	return Math.floor(Math.random() * Math.pow(10, len));
+}
+
+```
+
+- [2行代码生成包含大小写字母和数字的随机字符串](http://blog.haoji.me/generate-random-string.html){:target='_blank'}
+- [随机生成验证码（由数字、大小写字母组成）](){:target='_blank'}
+
+## 鼠标点击效果
+
+- [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
+
+## 隐藏鼠标
+
+- [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
+## 网站模糊不清
+
+- [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
+
+## 晃动起来
+
+- [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
+
 ## JS实现页面全屏功能（模拟F11）
 
 ```js

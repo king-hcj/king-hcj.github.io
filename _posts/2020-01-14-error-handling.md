@@ -89,6 +89,19 @@ window.onerror = function(message, source, lineno, colno, error) {
 ```
 
 - window.addEventListener：静态资源加载异常捕获
+
+  &emsp;&emsp;可以使用 window.addEventListener('error') 方式对加载异常进行处理，注意这时候我们无法使用 window.onerror 进行处理，因为 **window.onerror 事件是通过事件冒泡获取 error 信息的，而网络加载错误是不会进行事件冒泡的**。
+
+  &emsp;&emsp;不支持冒泡的事件还有：鼠标聚焦 / 失焦（focus / blur）、鼠标移动相关事件（mouseleave / mouseenter）、一些 UI 事件（如 scroll、resize 等）。
+
+  &emsp;&emsp;因此，我们也就知道 window.addEventListener 不同于 window.onerror，它通过事件捕获获取 error 信息，从而可以对网络资源的加载异常进行处理
+
+  ```js
+    // 也可以这样处理静态资源加载错误 
+    <script src="***.js"  onerror="errorHandler(this)"></script>
+    <link rel="stylesheet" href="***.css" onerror="errorHandler(this)">
+  ```
+
 - Promise Catch
 - [unhandledrejection](https://developer.mozilla.org/zh-CN/docs/Web/Events/unhandledrejection){:target='_blank'}：当Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件；这可能发生在 window 下，但也可能发生在 Worker 中。 unhandledrejection继承自 PromiseRejectionEvent，而 PromiseRejectionEvent 又继承自 Event。因此unhandledrejection 含有 PromiseRejectionEvent 和 Event 的属性和方法。
 
