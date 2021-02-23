@@ -62,6 +62,33 @@ JSON.parse('null');            // null
 
 - [Google Analytics added sendBeacon functionality to Universal Analytics JavaScript API](https://www.thyngster.com/google-analytics-added-sendbeacon-functionality-universal-analytics-javascript-api){:target='_blank'}
 
+## 2行代码生成包含大小写字母和数字的随机字符串
+
+2行代码生成指定长度字符串：
+
+```js
+/**
+ * 生成长度为len的包含a-z、A-Z、0-9的随机字符串
+ */
+functioin generateStr(len = 18) {
+	// 一行代码生成0-9、A-Z、a-z、总长度为62的字符数组
+	var arr = [...new Array(62)].map((item, i) => String.fromCharCode(i + (i < 10 ? 0 : (i < 36 ? 7 : 13)) + 48));
+	return [...new Array(len)].map(() => arr[Math.floor(Math.random() * arr.length)]).join('');
+}
+```
+
+1行代码生成指定长度数字：这种方法有缺点，低概率会出现位数不足的问题（原因是0.00566 * 100000 = 566，会丢失前面的0），不推荐使用。
+```js
+// len 最多16，可能出现
+functioin generateNum(len = 16) {
+	return Math.floor(Math.random() * Math.pow(10, len));
+}
+
+```
+
+- [2行代码生成包含大小写字母和数字的随机字符串](http://blog.haoji.me/generate-random-string.html){:target='_blank'}
+- [随机生成验证码（由数字、大小写字母组成）](){:target='_blank'}
+
 ## 鼠标点击效果
 
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
