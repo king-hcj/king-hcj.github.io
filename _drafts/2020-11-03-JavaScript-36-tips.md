@@ -295,6 +295,11 @@ null代表空值，代表“定义了但是为空”。而undefined的代表未�
 
 - [You don't (may not) need Lodash/Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore){:target='_blank'}
 
+## 使用VSCode 断点调试 js项目，html页面
+
+- [用vscode来调试js文件吧](https://www.jianshu.com/p/8f8f384075a2){:target='_blank'}
+- [使用VSCode 断点调试 js项目，html页面](https://blog.csdn.net/arvin0/article/details/53673351){:target='_blank'}
+
 ## Babel是如何处理let、const和箭头函数的
 
 - JavaScript 严格模式（strict mode）不允许使用未声明的变量，加上严格模式的标记，自然就可以实现了 TDZ 的效果。
