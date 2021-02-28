@@ -94,14 +94,14 @@ functioin generateNum(len = 16) {
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 
 ## 隐藏鼠标
-
+（那人却在灯火阑珊处）
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 ## 网站模糊不清
-
+（犹抱琵琶半遮面）
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 
 ## 晃动起来
-
+（大珠小珠落玉盘）
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 
 ## JS实现页面全屏功能（模拟F11）
@@ -133,6 +133,16 @@ function toggleFullScreen() {
     - [Benchmark.js](https://www.npmjs.com/package/benchmark)：A robust benchmarking library that supports
 
 - [JSPerf-javascript代码性能测试利器](https://blog.csdn.net/dpj514/article/details/78767936){:target='_blank'}
+
+## requestIdleCallback
+
+- [你应该知道的requestIdleCallback](https://segmentfault.com/a/1190000014457824){:target='_blank'}
+
+## 突破Chrome浏览器12px的最小字体限制
+
+- [再谈Chrome的最小字体12px限制](https://zhuanlan.zhihu.com/p/69695071){:target='_blank'}
+- [Chrome的最小字体12px限制最终解决办法](https://blog.csdn.net/im_dogg/article/details/93891050){:target='_blank'}
+- [针对谷歌默认最小字体12px的正确解决方案 （css、html）](https://blog.csdn.net/qq_36278639/article/details/52944690){:target='_blank'}
 
 ## 性能数据获取：window.performance 与 自定义时间计算
 
@@ -193,7 +203,7 @@ window.history.length > 1
 ```
 
 ## 百度搜索你不知道的几点技巧，让你的搜索更加高效（单篇文章？）
-
+<!-- 面向百度/浏览器编程工程师 -->
 - [这几个百度搜索技巧，太好用了](https://zhuanlan.zhihu.com/p/92562328){:target='_blank'}
 - [百度搜索技巧](http://d.baidu.com/search/skill.html){:target='_blank'}
 - [百度搜索你不知道的几点技巧，让你的搜索更加准确，绝对值得收藏](https://baijiahao.baidu.com/s?id=1588667642036316564){:target='_blank'}
@@ -606,7 +616,7 @@ JS 模拟浏览器强刷：
 
 ## UV和PV
 
-[如何清楚易懂的解释“UV和PV＂的定义？](https://www.zhihu.com/question/20448467){:target='_blank'}
+- [如何清楚易懂的解释“UV和PV＂的定义？](https://www.zhihu.com/question/20448467){:target='_blank'}
 
 ## [全新的互联网体验](http://newhtml.net/){:target='_blank'}
 
@@ -1130,32 +1140,4 @@ function fn (arg) {
 常用技巧的梳理
 常考知识点的原理 -->
 
-鍵人
-终日不见阳光的职业怎么会有一个阳光的名字？
-灵感之辕
-
-指尖有风雷，
-胸中百万兵。
-手起天地动，
-键落鬼神惊。
-
-人一定会死。程序一定有Bug。
-Pythonic
-
-1、你头发真多！
-
-2、哇，你的程序居然没有warning！
-
-3、你这个对象很完美了！
-
-4、哇，你这么漂亮，居然还会写代码！
-
-5、你coding的样子，就像是在弹钢琴，十指在不停的跳跃！
-
-6、你的code，简直可以入选Thinking in Java 的示范代码了！
-
-我们用代码编写梦想，用梦想改变世界。
-
-用户总有新宠，不复念旧产品。看在曾带给大家片刻欢娱，能否值回些人间温暖?
-
-在那山的这边海的那边有一群程序员，他们老实又腼腆，他们聪明又有钱。他们一天到晚坐在那里熬夜写软件，饿了就咬一口方便面~~哦苦命的程序员，哦苦命的程序员，只要一改需求他们就要重新搞一遍，但是期限只剩下两天。
+江南无所有，聊赠一枝春
