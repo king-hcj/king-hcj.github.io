@@ -365,6 +365,26 @@ moment.js 的大小达到了200KB，对于非SSR的首屏渲染性能非常不�
 
 - 标签是当前页面打开的：可直接操作
 - postMessage
+- BroadCast Channel
+    BroadcastChannel，叫做“广播频道”，官方文档说，该API是用于同源不同页面之间完成通信的功能。
+
+    与window.postMessage的区别：BroadcastChannel只能用于同源的页面之间进行通信，而window.postMessage却可以用于任何的页面之间，
+
+    基于BroadcastChannel的同源策略，它无法完成跨域的数据传输，跨域的情况，我们还是使用window.postMessage来处理
+
+    使用起来很简单：
+
+    发送消息：
+
+    var bc = new BroadcastChannel(‘test_channel’);
+
+    bc.postMessage(‘hello world’);
+
+    接收消息:
+
+    bc.onmessage = function(msg){
+        console.log(msg);
+    }
 - localStorage
 - cookie+setInterval()
 - 使用websocket协议
@@ -380,6 +400,8 @@ window.addEventListener('storage', (e) => console.log(e))
 - [如何实现浏览器内多个标签页之间的通信？](https://blog.csdn.net/meijory/article/details/76358570)
 - [实现多个标签页之间通信的几种方法(sharedworker)](https://www.jianshu.com/p/31facd4934d7)
 - [实现浏览器内多个标签页之间的通信](https://segmentfault.com/a/1190000018354650)
+- [面试官：前端跨页面通信，你知道哪些方法？](https://juejin.cn/post/6844903811232825357){:target='_blank'}
+- [【3分钟速览】前端广播式通信：Broadcast Channel](https://juejin.cn/post/6844903811228663815){:target='_blank'}
 
 ## SharedWorker
 
