@@ -202,6 +202,11 @@ window.history.length > 1
   }, 2000);
 ```
 
+## 前端水印生成方案
+
+- [前端水印生成方案(网页水印+图片水印)](https://juejin.cn/post/6844903645155164174){:target='_blank'}
+- [不能说的秘密——前端也能玩的图片隐写术](http://www.alloyteam.com/2016/03/image-steganography/){:target='_blank'}
+
 ## 百度搜索你不知道的几点技巧，让你的搜索更加高效（单篇文章？）
 <!-- 面向百度/浏览器编程工程师 -->
 - [这几个百度搜索技巧，太好用了](https://zhuanlan.zhihu.com/p/92562328){:target='_blank'}
