@@ -440,7 +440,7 @@ for (const value of obj) {
 }
 ```
 
-> 参考资料：[MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'} &#124; [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}（[【译文】](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}）&#124; [Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator){:target='_blank'}
+> 参考资料：[MDN：for...of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of){:target='_blank'} &#124; [Understanding the JavaScript For...of Loop](https://scotch.io/tutorials/understanding-the-javascript-forof-loop){:target='_blank'}（[【译文】](https://www.cnblogs.com/m2maomao/p/7743143.html){:target='_blank'}）&#124; [Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator){:target='_blank'} &#124; [迭代协议](https://developer.mozilla.org/zh-CN/docs/Web){:target='_blank'}
 
 ## 第三十一式：position定位只知道`absolute`、`fixed`、`relative` 和 `static`？，`sticky`其实可以很惊艳
 
