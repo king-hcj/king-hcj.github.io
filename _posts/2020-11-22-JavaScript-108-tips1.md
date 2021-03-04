@@ -371,7 +371,7 @@ filterStrNumberByRegExp(386, ['12', '334', '556', '1122', '5546','234','388','38
 
 &emsp;&emsp;详细Elasticsearch列表页搜索公共方法实现可以查看我的[这篇](https://king-hcj.github.io/2020/11/12/elasticsearch/#elasticsearch%E5%88%97%E8%A1%A8%E6%90%9C%E7%B4%A2%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85){:target='_blank'}笔记。
 
-## 第十二式：如何让页面和你说话？ —— TTS（Text To Speah）
+## 第十二式：如何让页面和你说话？ —— TTS（Text To Speech）
 
 &emsp;&emsp;在项目中需要对ajax请求返回的消息进行语音播报，str 为需要播报的信息（适应于错误信息语音提示等场景）：
 
