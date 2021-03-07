@@ -46,6 +46,11 @@ JSON.parse('null');            // null
 - [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
 - [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
 
+## 这些鲜为人知的前端冷知识，你都GET了吗？
+
+以下这篇包含多式
+- [这些鲜为人知的前端冷知识，你都GET了吗？](https://mp.weixin.qq.com/s/stGK1dvOV1skp8iubMWRZw){:target='_blank'}
+
 ##  window.onerror 和 window.addEventListener('error') 
 
 - 可处理类型
@@ -213,6 +218,7 @@ window.history.length > 1
 - [百度搜索技巧](http://d.baidu.com/search/skill.html){:target='_blank'}
 - [百度搜索你不知道的几点技巧，让你的搜索更加准确，绝对值得收藏](https://baijiahao.baidu.com/s?id=1588667642036316564){:target='_blank'}
 - [百度高级搜索技巧](https://blog.csdn.net/cx243698/article/details/80625384){:target='_blank'}
+- [【译】像大佬一样使用 Google](https://mp.weixin.qq.com/s/SLxQ8eBGZQwrChZjo9brSQ){:target='_blank'}
 
 ## 导航守卫
 
