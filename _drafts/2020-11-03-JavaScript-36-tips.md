@@ -66,6 +66,7 @@ JSON.parse('null');            // null
 - navigator.sendBeacon 就是天生来解决“页离开时的请求发送”问题的，目前 Google Analytics 使用 navigator.sendBeacon 来上报数据
 
 - [Google Analytics added sendBeacon functionality to Universal Analytics JavaScript API](https://www.thyngster.com/google-analytics-added-sendbeacon-functionality-universal-analytics-javascript-api){:target='_blank'}
+- [Navigator.sendBeacon()](https://blog.csdn.net/hsl0530hsl/article/details/88579958){:target='_blank'}
 
 ## 2行代码生成包含大小写字母和数字的随机字符串
 
