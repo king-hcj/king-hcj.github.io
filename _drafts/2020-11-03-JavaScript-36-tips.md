@@ -67,6 +67,7 @@ JSON.parse('null');            // null
 
 - [Google Analytics added sendBeacon functionality to Universal Analytics JavaScript API](https://www.thyngster.com/google-analytics-added-sendbeacon-functionality-universal-analytics-javascript-api){:target='_blank'}
 - [Navigator.sendBeacon()](https://blog.csdn.net/hsl0530hsl/article/details/88579958){:target='_blank'}
+- [Navigator.sendBeacon 无阻塞发送统计数据](https://blog.csdn.net/u012193330/article/details/102778979){:target='_blank'}
 
 ## 2行代码生成包含大小写字母和数字的随机字符串
 
