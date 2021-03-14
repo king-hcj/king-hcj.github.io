@@ -6,18 +6,36 @@ description: React Fiber
 keywords: React Fiber, JS, 前端, JavaScript
 ---
 
-## React 的哲学 —— 构建快速响应的大型 Web 应用程序
+## React 的设计理念是什么？
 
-&emsp;&emsp;React官网上说：我们认为，React 是用 JavaScript 构建**快速响应**的大型 Web 应用程序的首选方式。它在 Facebook 和 Instagram 上表现优秀。React 最棒的部分之一是引导我们思考如何构建一个应用。
+&emsp;&emsp;React官网在[React哲学](https://zh-hans.reactjs.org/docs/thinking-in-react.html){:target='_blank'}一节开篇提到：我们认为，React 是用 JavaScript 构建**快速响应**的大型 Web 应用程序的首选方式。它在 Facebook 和 Instagram 上表现优秀。React 最棒的部分之一是引导我们思考如何构建一个应用。
 
-制约快速响应的场景：
+&emsp;&emsp;由此可见，React 追求的是 “快速响应”，那么，“快速响应“的制约因素都有什么呢？
 
-  - CPU的瓶颈：当当项目变得庞大、组件数量繁多、遇到大计算量的操作或者设备性能不足使页面掉帧，导致卡顿。
+  - CPU的瓶颈：当项目变得庞大、组件数量繁多、遇到大计算量的操作或者设备性能不足使得页面掉帧，导致卡顿。
   - IO的瓶颈：发送网络请求后，由于需要等待数据返回才能进一步操作导致不能快速响应。
 
-fiber 架构主要还是用来对 cpu 和网络的问题，这两个问题一直也是最影响前端开发体验的地方，一个会造成卡顿，一个会造成白屏。为此 react 为前端引入了两个新概念：Time Slicing 时间分片；Suspense
+&emsp;&emsp;fiber 架构主要还是用来解决 cpu 和网络的问题，这两个问题一直也是最影响前端开发体验的地方，一个会造成卡顿，一个会造成白屏。为此 react 为前端引入了两个新概念：Time Slicing 时间分片和Suspense。
 
-## React 15的痛点 与 后续版本的优化
+## React的“先天不足” —— 听说 Vue 3.0 采用了动静结合的 Dom diff，React 为何不跟进？
+
+### Vue 3.0 动静结合的 Dom diff
+
+&emsp;&emsp;Vue3.0 提出动静结合的 DOM diff 思想，之所以能够做到动静结合的 DOM diff，或者把这个问题放得更大：之所以能够做到**预编译优化**，是因为 Vue core 可以静态分析 template，在解析模版时，整个 parse 的过程是利用正则表达式顺序解析模板，当解析到开始标签、闭合标签和文本的时候都会分别执行对应的回调函数，来达到构造 AST 树的目的。
+
+&emsp;&emsp;借助预编译过程，Vue 可以做到的预编译优化就很强大了。比如在预编译时标记出模版中可能变化的组件节点，再次进行渲染前 diff 时就可以**跳过“永远不会变化的节点”**，而只需要对比“可能会变化的动态节点”。这也就是动静结合的 DOM diff 将 diff 成本与模版大小正相关优化到与动态节点正相关的理论依据。
+
+### React 能否像 Vue 那样进行预编译优化？
+
+&emsp;&emsp;Vue 需要做数据双向绑定，需要进行数据拦截或代理，那它就需要在预编译阶段静态分析模版，分析出视图依赖了哪些数据，进行响应式处理。而 React 就是局部重新渲染，React 拿到的或者说掌管的，所负责的就是一堆递归 React.createElement 的执行调用，它无法从模版层面进行静态分析。因此 React JSX 过度的灵活性导致运行时可以用于优化的信息不足。
+
+- [以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
+
+## 从架构看不断进击的 React 都做过哪些优化？
+
+&emsp;&emsp;既然存在以上编译时先天不足，在运行时优化方面，React一直在努力。比如，React15实现了batchedUpdates（批量更新）。即同一事件回调函数上下文中的多次setState只会触发一次更新。
+
+&emsp;&emsp;但是，如果单次更新就很耗时，页面还是会卡顿（这在一个维护时间很长的大应用中是很常见的）。这是因为React15的更新流程是同步执行的，一旦开始更新直到页面渲染前都不能中断。
 
 ### React 15 架构
 
@@ -26,7 +44,9 @@ React15架构可以分为两层：
 - Reconciler（协调器）—— 负责找出变化的组件：在React15中Reconciler是递归处理虚拟DOM的。
 - Renderer（渲染器）—— 负责将变化的组件渲染到页面上
 
-由于递归执行，所以更新一旦开始，中途就无法中断。当层级很深时，递归更新时间超过了16ms，用户交互就会卡顿。
+&emsp;&emsp;在React15及以前，Reconciler采用递归的方式创建虚拟DOM，**递归过程是不能中断的**。如果组件树的层级很深，递归会占用线程很多时间，递归更新时间超过了16ms，用户交互就会卡顿。
+
+&emsp;&emsp;为了解决这个问题，React16将递归的无法中断的更新重构为**异步的可中断更新**，由于曾经用于递归的虚拟DOM数据结构已经无法满足需要。于是，全新的Fiber架构应运而生。
 
 ### React 16 架构
 
@@ -35,13 +55,6 @@ React16架构可以分为三层：
 - Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入Reconciler
 - Reconciler（协调器）—— 负责找出变化的组件：更新工作从递归变成了可以中断的循环过程。Reconciler内部采用了Fiber的架构。
 - Renderer（渲染器）—— 负责将变化的组件渲染到页面上
-
-&emsp;&emsp;在React15及以前，Reconciler采用递归的方式创建虚拟DOM，递归过程是不能中断的。如果组件树的层级很深，递归会占用线程很多时间，造成卡顿。
-&emsp;&emsp;为了解决这个问题，React16将递归的无法中断的更新重构为异步的可中断更新，由于曾经用于递归的虚拟DOM数据结构已经无法满足需要。于是，全新的Fiber架构应运而生。
-
-&emsp;&emsp;在运行时优化方面，React一直在努力。比如，React15实现了batchedUpdates（批量更新）。即同一事件回调函数上下文中的多次setState只会触发一次更新。
-
-&emsp;&emsp;但是，如果单次更新就很耗时，页面还是会卡顿（这在一个维护时间很长的大应用中是很常见的）。这是因为React15的更新流程是同步执行的，一旦开始更新直到页面渲染前都不能中断。
 
 &emsp;&emsp;为了解决同步更新长时间占用线程导致页面卡顿的问题，也为了探索运行时优化的更多可能，React开始重构并一直持续至今。重构的目标是实现Concurrent Mode（并发模式）。
 
@@ -58,15 +71,11 @@ React16架构可以分为三层：
 
 - [React17新特性：启发式更新算法](https://zhuanlan.zhihu.com/p/182411298){:target='_blank'}
 
-## Vue 3.0 动静结合的 Dom diff 与 React的“先天不足”
-
-- [以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
-
 ## requestIdleCallback的启示
 
-我们以浏览器是否有剩余时间作为任务中断的标准，那么我们需要一种机制，当浏览器有剩余时间时通知我们。
+&emsp;&emsp;我们以浏览器是否有剩余时间作为任务中断的标准，那么我们需要一种机制，当浏览器有剩余时间时通知我们。
 
-其实部分浏览器已经实现了这个API，这就是requestIdleCallback。但是由于以下因素，React放弃使用：
+&emsp;&emsp;其实部分浏览器已经实现了这个API，这就是requestIdleCallback。但是由于以下因素，React放弃使用：
 
 - 浏览器兼容性
 - 触发频率不稳定，受很多因素影响。比如当我们的浏览器切换tab后，之前tab注册的requestIdleCallback触发的频率会变得很低
@@ -76,11 +85,7 @@ React16架构可以分为三层：
 - [你应该知道的requestIdleCallback](https://segmentfault.com/a/1190000014457824){:target='_blank'}
 - [requestIdleCallback-后台任务调度](http://www.zhangyunling.com/702.html){:target='_blank'}
 
-## 
-
 ## React 性能的飞跃 —— Fiber
-
-<!--  -->
 
 - [React Fiber Architecture](https://github.com/acdlite/react-fiber-architecture){:target='_blank'}
 - [React Fiber架构](https://zhuanlan.zhihu.com/p/37095662){:target='_blank'}
@@ -90,7 +95,11 @@ React16架构可以分为三层：
 - [A deep dive into React Fiber internals](https://blog.logrocket.com/deep-dive-into-react-fiber-internals/){:target='_blank'}
 - [React的新引擎—React Fiber是什么？](https://www.infoq.cn/article/what-the-new-engine-of-react/)
 
-## Fiber架构思想对前端生态的影响
+## 未来可期
+
+&emsp;&emsp;既然任务可拆分（只要最终得到完整effect list就行），那就允许并行执行
+
+## isInputPending —— Fiber架构思想对前端生态的影响
 
 - [Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
 
@@ -101,3 +110,6 @@ React16架构可以分为三层：
 ## 参考资料
 
 - [React技术揭秘](https://react.iamkasong.com/){:target='_blank'}
+- [源码概览](https://zh-hans.reactjs.org/docs/codebase-overview.html#reconcilers){:target='_blank'}
+- [实现说明](https://zh-hans.reactjs.org/docs/implementation-notes.html){:target='_blank'}
+- [Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'}
