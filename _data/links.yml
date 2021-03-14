@@ -2,6 +2,10 @@
   url: https://leetcode-cn.com/u/king-hcj-3
   src: www
 
+- name: freeCodeCamp
+  url: https://learn.freecodecamp.one/
+  src: www
+
 - name: Medium
   url: https://medium.com/
   src: www
