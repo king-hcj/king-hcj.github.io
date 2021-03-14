@@ -144,6 +144,7 @@ function toggleFullScreen() {
 ## requestIdleCallback
 
 - [你应该知道的requestIdleCallback](https://segmentfault.com/a/1190000014457824){:target='_blank'}
+- [requestIdleCallback-后台任务调度](http://www.zhangyunling.com/702.html){:target='_blank'}
 
 ## 突破Chrome浏览器12px的最小字体限制
 
