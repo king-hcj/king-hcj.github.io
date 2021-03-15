@@ -113,3 +113,4 @@ React16架构可以分为三层：
 - [源码概览](https://zh-hans.reactjs.org/docs/codebase-overview.html#reconcilers){:target='_blank'}
 - [实现说明](https://zh-hans.reactjs.org/docs/implementation-notes.html){:target='_blank'}
 - [Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'}
+- [【第1945期】彻底搞懂React源码调度原理（Concurrent模式）](https://mp.weixin.qq.com/s/xHfhMqa5Nsw_5i6MkK2X0A){:target='_blank'}
