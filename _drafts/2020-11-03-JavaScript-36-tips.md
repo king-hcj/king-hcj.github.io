@@ -853,6 +853,15 @@ function toHumpObj (data) {
 
 - [JS专题之数组展开](https://www.imooc.com/article/277566){:target='_blank'}
 
+## Http option 请求是怎么回事
+
+- [Http option 请求是怎么回事](https://www.cnblogs.com/bradwarden/p/11505999.html){:target='_blank'}：跨域的复杂请求需要preflight request（预检）
+- [http跨域时的options请求](https://www.jianshu.com/p/5cf82f092201){:target='_blank'}
+
+## 你也许真的不了解 JSON.stringify
+【第二个参数】
+  - [慎用JSON.stringify](https://mp.weixin.qq.com/s/jmEXKuamwP6EgfntuvV9fQ){:target='_blank'}
+
 ## `504 Gateway Time-out`，也许你并不一定需要`git clone`
 
 - 全克隆
