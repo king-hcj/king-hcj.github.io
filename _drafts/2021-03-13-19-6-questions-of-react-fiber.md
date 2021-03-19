@@ -450,6 +450,10 @@ function performUnitWork(currentFiber){
 ## 资料推荐
 
 - [React技术揭秘](https://react.iamkasong.com/){:target='_blank'}
+- [前端工程师的自我修养：React Fiber 是如何实现更新过程可控的](https://www.zoo.team/article/about-react-fiber){:target='_blank'}
+- [新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
+- [以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
+
 <!-- - [源码概览](https://zh-hans.reactjs.org/docs/codebase-overview.html#reconcilers){:target='_blank'}
 - [实现说明](https://zh-hans.reactjs.org/docs/implementation-notes.html){:target='_blank'}
 - [Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'}
@@ -460,6 +464,3 @@ function performUnitWork(currentFiber){
 - [React Fiber是什么](https://zhuanlan.zhihu.com/p/26027085){:target='_blank'}
 - [A deep dive into React Fiber internals](https://blog.logrocket.com/deep-dive-into-react-fiber-internals/){:target='_blank'}
 - [React的新引擎—React Fiber是什么？](https://www.infoq.cn/article/what-the-new-engine-of-react/) -->
-- [前端工程师的自我修养：React Fiber 是如何实现更新过程可控的](https://www.zoo.team/article/about-react-fiber){:target='_blank'}
-- [新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
-- [以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
