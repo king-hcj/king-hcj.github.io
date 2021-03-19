@@ -77,7 +77,7 @@ React16架构可以分为三层：
 
 &emsp;&emsp;为了解决同步更新长时间占用线程导致页面卡顿的问题，也为了探索运行时优化的更多可能，React开始重构并一直持续至今。重构的目标是实现Concurrent Mode（并发模式）。
 
-### React 17
+### React 17 优化
 
 &emsp;&emsp;React16的**expirationTimes模型**只能区分是否`>=expirationTimes`决定节点是否更新。React17的**lanes模型**可以选定一个更新区间，并且动态的向区间中增减优先级，可以处理更细粒度的更新。
 
@@ -148,7 +148,7 @@ function unImportWork(deadline) {
 - 浏览器兼容性
 - 触发频率不稳定，受很多因素影响。比如当我们的浏览器切换tab后，之前tab注册的requestIdleCallback触发的频率会变得很低。
 
->> [requestIdleCallback 的 FPS 只有 20](https://github.com/facebook/react/issues/13206){:target='_blank'}
+>> 参考： [requestIdleCallback 的 FPS 只有 20](https://github.com/facebook/react/issues/13206){:target='_blank'}
 
 &emsp;&emsp;基于以上原因，在React中实现了功能更完备的requestIdleCallbackpolyfill，这就是Scheduler。除了在空闲时触发回调的功能外，Scheduler还提供了多种调度优先级供任务设置。
 
@@ -414,10 +414,7 @@ function performUnitWork(currentFiber){
 
 &emsp;&emsp;其中 Suspense 可以用来解决请求阻塞的问题，UI 卡顿的问题其实开启 concurrent mode 就已经解决的，但如何利用 concurrent mode 来实现更友好的交互还是需要对代码做一番改动的。
 
-- [Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'}
-- [理解 React Fiber & Concurrent Mode](https://zhuanlan.zhihu.com/p/109971435){:target='_blank'}
-- [11.concurrent mode(并发模式是什么样的)](https://xiaochen1024.com/article_item/600acd69245877002ed5df05){:target='_blank'}
-- [人人都能读懂的react源码解析](https://xiaochen1024.com/){:target='_blank'}
+> 资料参考：[Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'} &#124; [理解 React Fiber & Concurrent Mode](https://zhuanlan.zhihu.com/p/109971435){:target='_blank'} &#124; [11.concurrent mode(并发模式是什么样的)](https://xiaochen1024.com/article_item/600acd69245877002ed5df05){:target='_blank'} &#124; [人人都能读懂的react源码解析](https://xiaochen1024.com/){:target='_blank'}
 
 ## 未来可期
 
@@ -426,10 +423,10 @@ function performUnitWork(currentFiber){
 ## isInputPending —— Fiber架构思想对前端生态的影响
 
 &emsp;&emsp;Facebook 提出的 isInputPending API 是第一个将中断的概念用于浏览器用户交互的的功能，并且允许 JavaScript 能够检查事件队列而不会将控制权交于浏览器。
-[![isInputPending](https://mmbiz.qpic.cn/mmbiz_png/aDoYvepE5x2GNEgMribX06vzBXPBYqKZic4hNE2HIceC1jr57aOKvpCiazaGgVSMXelJzVqXgLflVicMD0M4OkZheg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
+[![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
 
 
-> 资料参考：[Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
+> 资料参考：[Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='_blank'}
 
 ## Svelte 对固有模式的冲击
 
