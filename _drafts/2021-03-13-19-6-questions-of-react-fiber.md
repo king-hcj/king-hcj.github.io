@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 六问React Fiber
+title: 六问 React Fiber
 categories: JavaScript
 description: React Fiber
 keywords: React Fiber, JS, 前端, JavaScript
 ---
 
-<h1 style='width: 100vw; text-align: center'>六问React Fiber</h1>
+&emsp;&emsp;React Fiber 是Facebook花费两年余时间对 React 做出的一个重大改变与优化，是**对 React 核心算法的一次重新实现**。从Facebook在 React Conf 2017会议上确认，React Fiber 会在React 16 版本发布至今，也已过去三年有余，如今，React 17 业已发布，社区关于Fiber的优秀文章不在少数。本文**源于一次团队内部的技术分享**，借鉴社区优秀文章，结合个人理解，进行整合，从六个问题出发，对 React Fiber 进行理解与认识，同时对时下热门的前端框架**Svelte**进行简要介绍与剖析，希望对正在探究 React 及 各前端框架的小伙伴们能有所帮助。
 
 ## 一、React 的设计理念是什么？
 
@@ -18,7 +18,7 @@ keywords: React Fiber, JS, 前端, JavaScript
   - CPU的瓶颈：当项目变得庞大、组件数量繁多、遇到**大计算量**的操作或者**设备性能不足**使得页面掉帧，导致卡顿。
   - IO的瓶颈：发送网络请求后，由于需要等待数据返回才能进一步操作导致不能快速响应。
 
-&emsp;&emsp;本文要聊的fiber 架构主要就是用来解决 CPU 和网络的问题，这两个问题一直也是最影响前端开发体验的地方，一个会造成卡顿，一个会造成白屏。为此 react 为前端引入了两个新概念：**Time Slicing 时间分片和Suspense**。
+&emsp;&emsp;本文要聊的fiber 架构主要就是用来解决 CPU 和网络的问题，这两个问题一直也是最影响前端开发体验的地方，一个会造成**卡顿**，一个会造成**白屏**。为此 react 为前端引入了两个新概念：**Time Slicing 时间分片和Suspense**。
 
 ## 二、React的“先天不足” —— 听说 Vue 3.0 采用了动静结合的 Dom diff，React 为何不跟进？
 
@@ -30,29 +30,58 @@ keywords: React Fiber, JS, 前端, JavaScript
 
 ### React 能否像 Vue 那样进行预编译优化？
 
-&emsp;&emsp;Vue 需要做数据双向绑定，需要进行数据拦截或代理，那它就需要在**预编译阶段静态分析模版，分析出视图依赖了哪些数据，进行响应式处理**。而 React 就是**局部重新渲染**，React 拿到的或者说掌管的，所负责的就是一堆递归 React.createElement 的执行调用，它无法从模版层面进行静态分析。[JSX 和手写的 render function](https://cn.vuejs.org/v2/guide/render-function.html){:target='_blank'} 是完全动态的，**过度的灵活性导致运行时可以用于优化的信息不足**。
+&emsp;&emsp;Vue 需要做数据双向绑定，需要进行数据拦截或代理，那它就需要在**预编译阶段静态分析模版，分析出视图依赖了哪些数据，进行响应式处理**。而 React 就是**局部重新渲染**，React 拿到的或者说掌管的，所负责的就是一堆**递归 React.createElement** 的执行调用（参考下方经过Babel转换的代码），它无法从模版层面进行静态分析。[JSX 和手写的 render function](https://cn.vuejs.org/v2/guide/render-function.html){:target='_blank'} 是完全动态的，**过度的灵活性导致运行时可以用于优化的信息不足**。
 
-### JSX VS Template
+JSX 写法：
+```js
+<div>
+  <h1>六问 React Fiber</h1>
+  <ul>
+    <li>React</li>
+    <li>Vue</li>
+  </ul>
+</div>
+```
+
+递归 React.createElement：
+```js
+// Babel转换后
+React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    "\u516D\u95EE React Fiber"
+  ),
+  React.createElement(
+    "ul",
+    null,
+    React.createElement("li", null, "React"),
+    React.createElement("li", null, "Vue")
+  )
+);
+```
+
+### JSX vs Template
 
 ![jsx and Templates](https://mmbiz.qpic.cn/mmbiz_png/lP9iauFI73z8zVrOwuwOCBxjsf0osDx8NrzkOWN338lgV4S76ktGa5HNgG8Sq6iciaTD1ib0x2TdYcMokaKUibfKGZA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-- jsx 具有 JavaScript 的完整表现力，非常具有表现力，可以构建非常复杂的组件。但是**灵活**的语法，也意味着引擎**难以理解**，无法预判开发者的用户意图，从而难以优化性能。
-- Template模板是一种非常有**约束**的语言，你只能以某种方式去编写模板。
-
-> 资料参考：[以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
-
-> 资料参考：[新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
-
-## 三、从架构看不断进击的 React 都做过哪些优化？
-
-React渲染页面分为两个阶段：
-
-- 调度阶段（reconciliation）：在这个阶段 React 会更新数据生成新的 Virtual DOM，然后通过Diff算法，快速找出需要更新的元素，放到更新队列中去，得到新的更新队列。
-- 渲染阶段（commit）：这个阶段 React 会遍历更新队列，将其所有的变更一次性更新到DOM上。
+- JSX 具有 JavaScript 的完整表现力，可以构建非常复杂的组件。但是**灵活**的语法，也意味着**引擎难以理解**，无法预判开发者的用户意图，从而难以优化性能。
+- Template 模板是一种非常有**约束**的语言，你只能以某种方式去编写模板。
 
 &emsp;&emsp;既然存在以上**编译时先天不足**，在运行时优化方面，React一直在努力。比如，React15实现了batchedUpdates（批量更新）。即**同一事件回调函数上下文**中的多次setState只会触发一次更新。
 
 &emsp;&emsp;但是，如果单次更新就很耗时，页面还是会卡顿（这在一个维护时间很长的大应用中是很常见的）。这是因为React15的更新流程是同步执行的，一旦开始更新直到页面渲染前都不能中断。
+
+> 资料参考：[以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'} &#124; [新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
+
+## 三、从架构演变看不断进击的 React 都做过哪些优化？
+
+### React渲染页面的两个阶段
+
+- 调度阶段（reconciliation）：在这个阶段 React 会更新数据生成新的 Virtual DOM，然后通过Diff算法，快速找出需要更新的元素，放到更新队列中去，**得到新的更新队列**。
+- 渲染阶段（commit）：这个阶段 React 会遍历更新队列，**将其所有的变更一次性更新到DOM上**。
 
 ### React 15 架构
 
@@ -67,21 +96,21 @@ React15架构可以分为两层：
 
 ### React 16 架构
 
+&emsp;&emsp;为了解决同步更新长时间占用线程导致页面卡顿的问题，也为了探索运行时优化的更多可能，React开始重构并一直持续至今。重构的目标是实现Concurrent Mode（并发模式）。
+
 &emsp;&emsp;从v15到v16，React团队花了两年时间将源码架构中的Stack Reconciler重构为Fiber Reconciler。
 
 React16架构可以分为三层：
 
-- Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入Reconciler
-- Reconciler（协调器）—— 负责找出变化的组件：更新工作从递归变成了可以中断的循环过程。Reconciler内部采用了Fiber的架构。
-- Renderer（渲染器）—— 负责将变化的组件渲染到页面上
-
-&emsp;&emsp;为了解决同步更新长时间占用线程导致页面卡顿的问题，也为了探索运行时优化的更多可能，React开始重构并一直持续至今。重构的目标是实现Concurrent Mode（并发模式）。
+- Scheduler（调度器）—— **调度任务的优先级**，高优任务优先进入Reconciler；
+- Reconciler（协调器）—— 负责找出变化的组件：**更新工作从递归变成了可以中断的循环过程。Reconciler内部采用了Fiber的架构**；
+- Renderer（渲染器）—— 负责将变化的组件渲染到页面上。
 
 ### React 17 优化
 
 &emsp;&emsp;React16的**expirationTimes模型**只能区分是否`>=expirationTimes`决定节点是否更新。React17的**lanes模型**可以选定一个更新区间，并且动态的向区间中增减优先级，可以处理更细粒度的更新。
 
->>> Lane用**二进制位**表示任务的优先级，方便优先级的计算，不同优先级占用不同位置的‘**赛道**’，而且存在批的概念，优先级越低，‘赛道’越多。高优先级打断低优先级，新建的任务需要赋予什么优先级等问题都是Lane所要解决的问题。
+>>> Lane用**二进制位**表示任务的优先级，方便优先级的计算（位运算），不同优先级占用不同位置的“**赛道**”，而且存在批的概念，优先级越低，“赛道”越多。高优先级打断低优先级，新建的任务需要赋予什么优先级等问题都是Lane所要解决的问题。
 
 Concurrent Mode的目的是实现一套可中断/恢复的更新机制。其由两部分组成：
   - 一套协程架构：Fiber Reconciler
@@ -89,11 +118,11 @@ Concurrent Mode的目的是实现一套可中断/恢复的更新机制。其由�
 
 > 资料参考：[React17新特性：启发式更新算法](https://zhuanlan.zhihu.com/p/182411298){:target='_blank'}
 
-## 四、浏览器一帧都会干些什么以及requestAnimationFrame和requestIdleCallback的启示
+## 四、浏览器一帧都会干些什么以及requestIdleCallback的启示
 
 ### 浏览器一帧都会干些什么？
 
-&emsp;&emsp;我们都知道，页面的内容都是一帧一帧绘制出来的，浏览器刷新率代表浏览器一秒绘制多少帧。原则上说 1s 内绘制的帧数也多，画面表现就也细腻。目前浏览器大多是 60Hz（60帧/s），每一帧耗时也就是在 16ms 左右。那么在这一帧的（16ms） 过程中浏览器又干了些什么呢？
+&emsp;&emsp;我们都知道，页面的内容都是一帧一帧绘制出来的，浏览器刷新率代表浏览器一秒绘制多少帧。原则上说 1s 内绘制的帧数也多，画面表现就也细腻。目前浏览器大多是 60Hz（60帧/s），每一帧耗时也就是在 16.6ms 左右。那么在这一帧的（16.6ms） 过程中浏览器又干了些什么呢？
 ![浏览器一帧都会干些什么](https://www.zoo.team/images/upload/upload_fa4bed183d5043a2f350fde149d2a9d2.png)
 
 通过上面这张图可以清楚的知道，浏览器一帧会经过下面这几个过程：
@@ -103,12 +132,12 @@ Concurrent Mode的目的是实现一套可中断/恢复的更新机制。其由�
 3. 开始一帧
 4. 执行 RAF (RequestAnimationFrame)
 5. 页面布局，样式计算
-6. 渲染
+6. 绘制渲染
 7. 执行 RIC (RequestIdelCallback)
 
-&emsp;&emsp;第七步的 RIC 事件不是每一帧结束都会执行，只有在一帧的 16ms 中做完了前面 6 件事儿且还有剩余时间，才会执行。这里提一下，如果一帧执行结束后还有时间执行 RIC 事件，那么下一帧需要在事件执行结束才能继续渲染，所以 RIC 执行不要超过 30ms，如果长时间不将控制权交还给浏览器，会影响下一帧的渲染，导致页面出现卡顿和事件响应不及时。
+&emsp;&emsp;第七步的 RIC 事件不是每一帧结束都会执行，只有在一帧的 16.6ms 中做完了前面 6 件事儿且还有剩余时间，才会执行。如果一帧执行结束后还有时间执行 RIC 事件，那么下一帧需要在事件执行结束才能继续渲染，所以 RIC 执行不要超过 30ms，如果长时间不将控制权交还给浏览器，会影响下一帧的渲染，导致页面出现卡顿和事件响应不及时。
 
-### requestAnimationFrame和requestIdleCallback的启示
+### requestIdleCallback 的启示
 
 &emsp;&emsp;我们以浏览器是否有剩余时间作为任务中断的标准，那么我们需要一种机制，当浏览器有剩余时间时通知我们。
 
@@ -145,20 +174,21 @@ function unImportWork(deadline) {
 
 &emsp;&emsp;其实部分浏览器已经实现了这个API，这就是requestIdleCallback。但是由于以下因素，Facebook 抛弃了 requestIdleCallback 的原生 API：
 
-- 浏览器兼容性
+- 浏览器兼容性；
 - 触发频率不稳定，受很多因素影响。比如当我们的浏览器切换tab后，之前tab注册的requestIdleCallback触发的频率会变得很低。
 
 >> 参考： [requestIdleCallback 的 FPS 只有 20](https://github.com/facebook/react/issues/13206){:target='_blank'}
 
-&emsp;&emsp;基于以上原因，在React中实现了功能更完备的requestIdleCallbackpolyfill，这就是Scheduler。除了在空闲时触发回调的功能外，Scheduler还提供了多种调度优先级供任务设置。
+&emsp;&emsp;基于以上原因，在React中实现了功能更完备的requestIdleCallbackpolyfill，这就是**Scheduler**。除了在空闲时触发回调的功能外，Scheduler还提供了多种调度优先级供任务设置。
 
 > 资料参考：[requestIdleCallback-后台任务调度](http://www.zhangyunling.com/702.html){:target='_blank'}
 
 ## 五、 Fiber 为什么是 React 性能的一个飞跃？
 ### 什么是 Fiber
 
-&emsp;&emsp;Fiber 的英文含义是“纤维”，它是比线程（Thread）更细的线，比线程（Thread）控制得更精密的执行模型。在广义计算机科学概念中，Fiber 又是一种协作的（Cooperative）编程模型，帮助开发者用一种【既模块化又协作化】的方式来编排代码。
-&emsp;&emsp;简单点说，**Fiber 就是 React 16 实现的一套新的更新机制，让 React 的更新过程变得可控，避免了之前一竿子递归到底影响性能的做法**。
+&emsp;&emsp;Fiber 的英文含义是“纤维”，它是比线程（Thread）更细的线，比线程（Thread）控制得更精密的执行模型。在广义计算机科学概念中，Fiber 又是一种协作的（Cooperative）编程模型（协程），帮助开发者用一种【既模块化又协作化】的方式来编排代码。
+
+&emsp;&emsp;在 React 中，**Fiber 就是 React 16 实现的一套新的更新机制，让 React 的更新过程变得可控，避免了之前采用递归需要一气呵成影响性能的做法**。
 
 ### React Fiber 中的时间分片
 
@@ -168,9 +198,9 @@ function unImportWork(deadline) {
 
 ### Stack Reconciler
 
-&emsp;&emsp;浏览器引擎会从执行栈的顶端开始执行，执行完毕就弹出当前执行上下文，开始执行下一个函数，**直到执行栈被清空才会停止**。然后将执行权交还给浏览器。由于 React 将页面视图视作一个个函数执行的结果。每一个页面往往由多个视图组成，这就意味着多个函数的调用。
+&emsp;&emsp;基于栈的 Reconciler，浏览器引擎会从执行栈的顶端开始执行，执行完毕就弹出当前执行上下文，开始执行下一个函数，**直到执行栈被清空才会停止**。然后将执行权交还给浏览器。由于 React 将页面视图视作一个个函数执行的结果。每一个页面往往由多个视图组成，这就意味着多个函数的调用。
 
-&emsp;&emsp;如果一个页面足够复杂，形成的函数调用栈就会很深。每一次更新，执行栈需要一次性执行完成，中途不能干其他的事儿，只能"**一心一意**"。结合前面提到的浏览器刷新率，JS 一直执行，浏览器得不到控制权，就不能及时开始下一帧的绘制。如果这个时间超过 16ms，当页面有动画效果需求时，动画因为浏览器不能及时绘制下一帧，这时动画就会出现卡顿。不仅如此，因为事件响应代码是在每一帧开始的时候执行，如果不能及时绘制下一帧，事件响应也会延迟。
+&emsp;&emsp;如果一个页面足够复杂，形成的函数调用栈就会很深。每一次更新，执行栈需要一次性执行完成，中途不能干其他的事儿，只能"**一心一意**"。结合前面提到的浏览器刷新率，JS 一直执行，浏览器得不到控制权，就不能及时开始下一帧的绘制。如果这个时间超过 16ms，当页面有动画效果需求时，动画因为浏览器**不能及时绘制下一帧**，这时动画就会出现卡顿。不仅如此，因为事件响应代码是在每一帧开始的时候执行，如果不能及时绘制下一帧，事件响应也会延迟。
 
 ### Fiber Reconciler
 
@@ -180,14 +210,14 @@ function unImportWork(deadline) {
 
 - 使用多向链表的形式替代了原来的树结构；
 ```JSX
-<div id="id">
+<div id="A">
   A1
   <div id="B1">
     B1
-     <div id="C1"></div>
+    <div id="C1"></div>
   </div>
   <div id="B2">
-      B2
+    B2
   </div>
 </div>
 ```
@@ -206,21 +236,21 @@ function unImportWork(deadline) {
 
 ![链表](https://www.zoo.team/images/upload/upload_03f29c3bedd7df6bb616f2c7142fe492.png)
 
-链表相比顺序结构数据格式的好处就是：
+链表相比顺序结构数据格式的**好处**就是：
 
 1. 操作更高效，比如顺序调整、删除，只需要改变节点的指针指向就好了。
 2. 不仅可以根据当前节点找到下一个节点，在多向链表中，还可以找到他的父节点或者兄弟节点。
 
-但链表也不是完美的，缺点就是：
+但链表也不是完美的，**缺点**就是：
 
 1. 比顺序结构数据更占用空间，因为每个节点对象还保存有指向下一个对象的指针。
 2. 不能自由读取，必须找到他的上一个节点。
 
-&emsp;&emsp;React 用**空间换时间**，更高效的操作可以方便根据优先级进行操作。同时可以根据当前节点找到其他节点，在下面提到的挂起和恢复过程中起到了关键作用。
+&emsp;&emsp;React 用**空间换时间**，更高效的操作可以方便根据优先级进行操作。同时**可以根据当前节点找到其他节点，在下面提到的挂起和恢复过程中起到了关键作用**。
 
 ### 斐波那契数列的 Fiber
 
-递归下斐波那契数列写法：
+递归形式的斐波那契数列写法：
 
 ```js
 function fib(n) {
@@ -232,7 +262,7 @@ function fib(n) {
 }
 ```
 
-采用 Fiber 的思路将其改写为循环（这个例子并不能和 React Fiber 的对等）：
+采用 **Fiber 的思路**将其改写为循环（这个例子并不能和 React Fiber 的对等）：
 
 ```js
 function fib(n) {
@@ -245,6 +275,7 @@ function fib(n) {
       // 寻找父级
       while (fiber.returnAddr) {
         if(!consoled) {
+          // 在这里打印查看形成的链表形式的 fiber 对象
           consoled=true
           console.log(fiber)
         }
@@ -275,7 +306,7 @@ function fib(n) {
 
 ### 任务拆分
 
-&emsp;&emsp;在 React Fiber 机制中，它采用"**化整为零**"的战术，将调和阶段（Reconciler）递归遍历 VDOM 这个大任务分成若干小任务，每个任务只负责一个节点的处理。
+&emsp;&emsp;在 React Fiber 机制中，它采用"**化整为零**"的思想，将调和阶段（Reconciler）递归遍历 VDOM 这个大任务分成若干小任务，每个任务只负责**一个节点**的处理。
 
 ### 任务挂起、恢复、终止
 
@@ -287,9 +318,7 @@ function fib(n) {
 
 &emsp;&emsp;currentFiber 表示**上次渲染构建的 Filber 树**。**在每一次更新完成后 workInProgress 会赋值给 currentFiber**。在新一轮更新时 workInProgress tree 再重新构建，新 workInProgress 的节点通过 alternate 属性和 currentFiber 的节点建立联系。
 
-&emsp;&emsp;在新 workInProgress tree 的创建过程中，会同 currentFiber 的对应节点进行 Diff 比较，收集副作用。同时也会**复用**和 currentFiber 对应的节点对象，减少新创建对象带来的开销。也就是说**无论是创建还是更新，挂起、恢复以及终止操作都是发生在 workInProgress tree 创建过程中**。workInProgress tree 构建过程其实就是循环的执行任务和创建下一个任务。
-
-![workInProgress tree 构建](https://www.zoo.team/images/upload/upload_777fdfe8d50d7a355115c2c2117d7c93.png)
+&emsp;&emsp;在新 workInProgress tree 的创建过程中，会同 currentFiber 的对应节点进行 Diff 比较，收集副作用。同时也会**复用**和 currentFiber 对应的节点对象，减少新创建对象带来的开销。也就是说**无论是创建还是更新、挂起、恢复以及终止操作都是发生在 workInProgress tree 创建过程中的**。workInProgress tree 构建过程其实就是循环的执行任务和创建下一个任务。
 
 ### 挂起
 
@@ -311,22 +340,25 @@ function fib(n) {
 
 &emsp;&emsp;其实并不是每次更新都会走到提交阶段。当在调和过程中触发了新的更新，在执行下一个任务的时候，判断**是否有优先级更高的执行任务**，如果有就终止原来将要执行的任务，开始新的 workInProgressFiber 树构建过程，开始新的更新流程。这样可以避免重复更新操作。这也是**在 React 16 以后生命周期函数 componentWillMount 有可能会执行多次**的原因。
 
+![workInProgress tree 构建](https://www.zoo.team/images/upload/upload_777fdfe8d50d7a355115c2c2117d7c93.png)
+
 ### 任务具备优先级
 
-&emsp;&emsp;React Fiber 除了通过挂起，恢复和终止来控制更新外，还给每个任务分配了优先级。具体点就是在创建或者更新 FiberNode 的时候，通过算法给每个任务分配一个到期时间（**expirationTime**）。在每个任务执行的时候除了判断剩余时间，如果当前处理节点已经过期，那么无论现在是否有空闲时间都必须执行改任务。过期时间的大小还代表着任务的优先级。
+&emsp;&emsp;React Fiber 除了通过挂起，恢复和终止来控制更新外，还给每个任务分配了优先级。具体点就是在创建或者更新 FiberNode 的时候，通过算法给每个任务分配一个到期时间（**expirationTime**）。在每个任务执行的时候除了判断剩余时间，如果当前处理节点已经过期，那么无论现在是否有空闲时间都必须执行该任务。**过期时间的大小还代表着任务的优先级**。
 
-&emsp;&emsp;**任务在执行过程中顺便收集了每个 FiberNode 的副作用**，将有副作用的节点通过 firstEffect、lastEffect、nextEffect 形成一条副作用单链表 AI(TEXT)-B1(TEXT)-C1(TEXT)-C1-C2(TEXT)-C2-B1-B2(TEXT)-B2-A。
+&emsp;&emsp;**任务在执行过程中顺便收集了每个 FiberNode 的副作用**，将有副作用的节点通过 firstEffect、lastEffect、nextEffect 形成一条副作用单链表 A1(TEXT)-B1(TEXT)-C1(TEXT)-C1-C2(TEXT)-C2-B1-B2(TEXT)-B2-A。
 
 &emsp;&emsp;其实**最终都是为了收集到这条副作用链表，有了它，在接下来的渲染阶段就通过遍历副作用链完成 DOM 更新**。这里需要注意，**更新真实 DOM 的这个动作是一气呵成的**，不能中断，不然会造成视觉上的不连贯（commit）。
 ```JSX
-<div id="id">
+<div id="A1">
   A1
   <div id="B1">
     B1
-     <div id="C1"></div>
+    <div id="C1">C1</div>
+    <div id="C2">C2</div>
   </div>
   <div id="B2">
-      B2
+    B2
   </div>
 </div>
 ```
@@ -336,6 +368,8 @@ function fib(n) {
 
 &emsp;&emsp;正是基于以上这些过程，使用Fiber，我们就有了在社区经常看到的[两张对比图](https://claudiopro.github.io/react-fiber-vs-stack-demo/){:target='_blank'}。
 
+&emsp;&emsp;清晰展示及交互、源码可通过下面两个链接进入，查看网页源代码。
+
 - [Stack Example](https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html){:target='_blank'}
 - [Fiber Example](https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html){:target='_blank'}
 
@@ -343,6 +377,8 @@ function fib(n) {
 ### Fiber 结构长什么样？
 
 &emsp;&emsp;基于时间分片的增量更新需要**更多的上下文信息**，之前的vDOM tree显然难以满足，所以扩展出了fiber tree（即Fiber上下文的vDOM tree），更新过程就是根据输入数据以及现有的fiber tree构造出新的fiber tree（workInProgress tree）。
+
+&emsp;&emsp;FiberNode 上的属性有很多，根据笔者的理解，以下这么几个属性是值得关注的：return、child、sibling（主要负责fiber链表的链接）；stateNode；effectTag；expirationTime；alternate；nextEffect。各属性介绍参看下面的`class FiberNode`：
 
 ```js
 class FiberNode {
@@ -365,7 +401,7 @@ class FiberNode {
     this.memoizedState = null; // 对应  memoizedProps，上次渲染的 state，相当于当前的 state，理解成 prev 和 next 的关系
     this.mode = mode; // 表示当前组件下的子组件的渲染方式
     // effects
-    this.effectTag = NoEffect; // 表示当前 fiber 要进行何种更新
+    this.effectTag = NoEffect; // 表示当前 fiber 要进行何种更新（更新、删除等）
     this.nextEffect = null; // 指向下个需要更新的fiber
     this.firstEffect = null; // 指向所有子节点里，需要更新的 fiber 里的第一个
     this.lastEffect = null; // 指向所有子节点中需要更新的 fiber 的最后一个
@@ -378,6 +414,8 @@ class FiberNode {
 
 ![fiber](https://www.zoo.team/images/upload/upload_d174c0ca815186a390c31c5b99c097f5.jpg)
 ![fiber](http://cdn.ayqy.net/data/home/qxu1001840309/htdocs/cms/wordpress/wp-content/uploads/2018/01/fiber-tree.png)
+
+> 图片来源：[完全理解React Fiber](http://www.ayqy.net/blog/dive-into-react-fiber/){:target='_blank'}
 
 ```js
 function performUnitWork(currentFiber){
@@ -397,11 +435,11 @@ function performUnitWork(currentFiber){
 }
 ```
 
-### Concurrent Mode 
+### Concurrent Mode （并发模式）
 
 &emsp;&emsp;Concurrent Mode 指的就是 React 利用上面 Fiber 带来的新特性的开启的新模式 (mode)。​react17开始支持concurrent mode，这种模式的根本目的是为了**让应用保持cpu和io的快速响应**，它是一组新功能，**包括Fiber、Scheduler、Lane**，可以根据用户硬件性能和网络状况调整应用的响应速度，核心就是为了**实现异步可中断的更新**。concurrent mode也是未来react主要迭代的方向。
 
-目前 React 实验版本允许用户选择三种 mode
+目前 React 实验版本允许用户选择三种 mode：
 
 1. Legacy Mode: 就相当于目前稳定版的模式
 2. Blocking Mode: 应该是以后会代替 Legacy Mode 而长期存在的模式
@@ -416,25 +454,35 @@ function performUnitWork(currentFiber){
 
 > 资料参考：[Concurrent 模式介绍 (实验性)](https://zh-hans.reactjs.org/docs/concurrent-mode-intro.html){:target='_blank'} &#124; [理解 React Fiber & Concurrent Mode](https://zhuanlan.zhihu.com/p/109971435){:target='_blank'} &#124; [11.concurrent mode(并发模式是什么样的)](https://xiaochen1024.com/article_item/600acd69245877002ed5df05){:target='_blank'} &#124; [人人都能读懂的react源码解析](https://xiaochen1024.com/){:target='_blank'}
 
-## 未来可期
+### 未来可期
 
-&emsp;&emsp;既然任务可拆分（只要最终得到完整effect list就行），那就允许并行执行。
+&emsp;&emsp;Concurrent Mode只是并发，既然任务可拆分（只要最终得到完整effect list就行），那就允许**并行**执行，（多个Fiber reconciler + 多个worker），首屏也更容易分块加载/渲染（vDOM森林。
+
+&emsp;&emsp;并行渲染的话，据说Firefox测试结果显示，130ms的页面，只需要30ms就能搞定，所以在这方面是值得期待的，而React已经做好准备了，这也就是在React Fiber上下文经常听到的待unlock的更多特性之一。
 
 ## isInputPending —— Fiber架构思想对前端生态的影响
 
-&emsp;&emsp;Facebook 提出的 isInputPending API 是第一个将中断的概念用于浏览器用户交互的的功能，并且允许 JavaScript 能够检查事件队列而不会将控制权交于浏览器。
-[![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
+&emsp;&emsp;Facebook 在 Chromium 中提出并实现了 isInputPending() API，它可以提高网页的响应能力，但是不会对性能造成太大影响。Facebook 提出的 isInputPending API 是第一个将**中断的概念**用于浏览器用户交互的的功能，并且允许 JavaScript 能够检查事件队列而不会将控制权交于浏览器。
 
+&emsp;&emsp;目前 isInputPending API 仅在 Chromium 的 87 版本开始提供，其他浏览器并未实现。
+
+[![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
 
 > 资料参考：[Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='_blank'}
 
 ## Svelte 对固有模式的冲击
 
+&emsp;&emsp;当下前端领域，三大框架React、Vue、Angular版本逐渐稳定，如果说前端行业会出现哪些框架有可能会挑战React或者Vue呢？很多人认为Svelte 应该是其中的选项之一。
+
+&emsp;&emsp;Svelte叫法是`[Svelte]`, 本意是苗条纤瘦的，是一个新兴热门的前端框架。在开发者满意度、兴趣度、市场占有率上**均名列前茅**，同时，它有更小的打包体积，更少的开发代码书写，在性能测评中，与React、Vue相比，也不遑多让。
+
+&emsp;&emsp;Svelte 的核心思想在于『**通过静态编译减少框架运行时的代码量**』。
+
 ### Svelte 优势有哪些
 
 - No Runtime —— 无运行时代码
-- Less-Code ——写更少的代码
-- Hight-Performance ——高性能
+- Less-Code —— 写更少的代码
+- Hight-Performance —— 高性能
 
 ### Svelte 劣势
 
@@ -446,15 +494,15 @@ function performUnitWork(currentFiber){
 
 &emsp;&emsp;Svelte 在**编译时**，就已经分析好了数据 和 DOM 节点之间的对应关系，在数据发生变化时，可以非常高效的来更新DOM节点。
 
-- [Virtual Dom 真的高效吗](https://www.sveltejs.cn/blog/virtual-dom-is-pure-overhead){:target='_blank'}
-- Svelte 记录脏数据的方式：位掩码（bitMask）
+- Rich Harris 在进行Svelte的设计的时候**没有采用 Virtual DOM**，主要是因为他觉得Virtual DOM Diff 的过程是非常低效的。具体可参考[Virtual Dom 真的高效吗](https://www.sveltejs.cn/blog/virtual-dom-is-pure-overhead){:target='_blank'}一文；Svelte 采用了Templates语法，在编译的过程中就进行优化操作；
+- Svelte 记录脏数据的方式：位掩码（bitMask）；
 - 数据和DOM节点之间的对应关系：React 和 Vue 是通过 Virtual Dom 进行 diff 来算出来更新哪些 DOM 节点效率最高。Svelte 是在编译时候，就记录了数据 和 DOM 节点之间的对应关系，并且保存在 p 函数中。
 
 ![数据和DOM节点之间的对应关系](https://mmbiz.qpic.cn/mmbiz_png/lP9iauFI73z8zVrOwuwOCBxjsf0osDx8Nbmvp9xd7GszgEaaLrlRecCYD0WqicibAQR9jSJVucZfJgybB3hxQXWzw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 资料参考：[新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
 
-## 资料推荐
+## 资料参考与推荐
 
 - [React技术揭秘](https://react.iamkasong.com/){:target='_blank'}
 - [前端工程师的自我修养：React Fiber 是如何实现更新过程可控的](https://www.zoo.team/article/about-react-fiber){:target='_blank'}
