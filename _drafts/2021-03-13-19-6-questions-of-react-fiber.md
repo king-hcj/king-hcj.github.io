@@ -462,7 +462,7 @@ function performUnitWork(currentFiber){
 
 ## isInputPending —— Fiber架构思想对前端生态的影响
 
-&emsp;&emsp;Facebook 在 Chromium 中提出并实现了 isInputPending() API，它可以提高网页的响应能力，但是不会对性能造成太大影响。Facebook 提出的 isInputPending API 是第一个将**中断的概念**用于浏览器用户交互的的功能，并且允许 JavaScript 能够检查事件队列而不会将控制权交于浏览器。
+&emsp;&emsp;Facebook 在 Chromium 中提出并实现了 `isInputPending() API`，它可以提高网页的响应能力，但是不会对性能造成太大影响。Facebook 提出的 `isInputPending API` 是第一个将**中断的概念**用于浏览器用户交互的的功能，并且允许 JavaScript 能够检查事件队列而不会将控制权交于浏览器。
 
 &emsp;&emsp;目前 isInputPending API 仅在 Chromium 的 87 版本开始提供，其他浏览器并未实现。
 
