@@ -466,7 +466,7 @@ function performUnitWork(currentFiber){
 
 &emsp;&emsp;目前 isInputPending API 仅在 Chromium 的 87 版本开始提供，其他浏览器并未实现。
 
-[![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'}
+![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)
 
 > 资料参考：[Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='_blank'}
 
