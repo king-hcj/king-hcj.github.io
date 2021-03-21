@@ -413,7 +413,7 @@ class FiberNode {
 ```
 
 ![fiber](https://www.zoo.team/images/upload/upload_d174c0ca815186a390c31c5b99c097f5.jpg)
-![fiber](http://cdn.ayqy.net/data/home/qxu1001840309/htdocs/cms/wordpress/wp-content/uploads/2018/01/fiber-tree.png)
+![fiber](https://king-hcj.github.io/images/posts/javascript/fiber-tree.png?raw=true)
 
 > 图片来源：[完全理解React Fiber](http://www.ayqy.net/blog/dive-into-react-fiber/){:target='_blank'}
 
@@ -498,7 +498,7 @@ function performUnitWork(currentFiber){
 - Svelte 记录脏数据的方式：位掩码（bitMask）；
 - 数据和DOM节点之间的对应关系：React 和 Vue 是通过 Virtual Dom 进行 diff 来算出来更新哪些 DOM 节点效率最高。Svelte 是在编译时候，就记录了数据 和 DOM 节点之间的对应关系，并且保存在 p 函数中。
 
-![数据和DOM节点之间的对应关系](https://mmbiz.qpic.cn/mmbiz_png/lP9iauFI73z8zVrOwuwOCBxjsf0osDx8Nbmvp9xd7GszgEaaLrlRecCYD0WqicibAQR9jSJVucZfJgybB3hxQXWzw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![数据和DOM节点之间的对应关系](https://king-hcj.github.io/images/posts/javascript/svelte.webp?raw=true)
 
 > 资料参考：[新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
 
