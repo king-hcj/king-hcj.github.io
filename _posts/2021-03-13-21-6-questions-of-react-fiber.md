@@ -218,7 +218,7 @@ function unImportWork(deadline) {
 &emsp;&emsp;在 React Fiber 中**用链表遍历的方式替代了 React 16 之前的栈递归方案**。在 React 16 中使用了大量的链表。
 
 - 使用多向链表的形式替代了原来的树结构；
-```JSX
+```js
 <div id="A">
   A1
   <div id="B1">
