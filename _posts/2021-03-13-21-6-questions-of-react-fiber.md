@@ -422,8 +422,7 @@ class FiberNode {
 }
 ```
 
-![fiber](https://www.zoo.team/images/upload/upload_d174c0ca815186a390c31c5b99c097f5.jpg)
-![fiber](https://king-hcj.github.io/images/posts/javascript/fiber-tree.png?raw=true)
+![fiber-tree](https://king-hcj.github.io/images/posts/javascript/fiber-tree.png?raw=true)
 
 > 图片来源：[完全理解React Fiber](http://www.ayqy.net/blog/dive-into-react-fiber/){:target='_blank'}
 
