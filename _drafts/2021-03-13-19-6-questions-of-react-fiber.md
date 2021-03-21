@@ -65,7 +65,7 @@ React.createElement(
 
 ### JSX vs Template
 
-![jsx and Templates](https://mmbiz.qpic.cn/mmbiz_png/lP9iauFI73z8zVrOwuwOCBxjsf0osDx8NrzkOWN338lgV4S76ktGa5HNgG8Sq6iciaTD1ib0x2TdYcMokaKUibfKGZA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![jsx and Templates](https://king-hcj.github.io/images/posts/javascript/jsxTemplate.webp?raw=true)
 
 - JSX 具有 JavaScript 的完整表现力，可以构建非常复杂的组件。但是**灵活**的语法，也意味着**引擎难以理解**，无法预判开发者的用户意图，从而难以优化性能。
 - Template 模板是一种非常有**约束**的语言，你只能以某种方式去编写模板。
