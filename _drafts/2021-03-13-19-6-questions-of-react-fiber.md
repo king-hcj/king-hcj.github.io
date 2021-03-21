@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 六问 React Fiber
+title: 六个问题助你理解 React Fiber
 categories: JavaScript
 description: React Fiber
 keywords: React Fiber, JS, 前端, JavaScript
