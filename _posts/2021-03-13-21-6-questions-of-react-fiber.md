@@ -44,7 +44,7 @@ keywords: React Fiber, JS, 前端, JavaScript
 JSX 写法：
 ```js
 <div>
-  <h1>六问 React Fiber</h1>
+  <h1>六个问题助你理解 React Fiber</h1>
   <ul>
     <li>React</li>
     <li>Vue</li>
@@ -58,16 +58,16 @@ JSX 写法：
 React.createElement(
   "div",
   null,
-  React.createElement(
+ React.createElement(
     "h1",
     null,
-    "\u516D\u95EE React Fiber"
+    "\u516D\u4E2A\u95EE\u9898\u52A9\u4F60\u7406\u89E3 React Fiber"
   ),
-  React.createElement(
+ React.createElement(
     "ul",
     null,
-    React.createElement("li", null, "React"),
-    React.createElement("li", null, "Vue")
+   React.createElement("li", null, "React"),
+   React.createElement("li", null, "Vue")
   )
 );
 ```
