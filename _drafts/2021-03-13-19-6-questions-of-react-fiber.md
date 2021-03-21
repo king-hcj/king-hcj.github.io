@@ -6,7 +6,16 @@ description: React Fiber
 keywords: React Fiber, JS, 前端, JavaScript
 ---
 
-&emsp;&emsp;React Fiber 是Facebook花费两年余时间对 React 做出的一个重大改变与优化，是**对 React 核心算法的一次重新实现**。从Facebook在 React Conf 2017会议上确认，React Fiber 会在React 16 版本发布至今，也已过去三年有余，如今，React 17 业已发布，社区关于Fiber的优秀文章不在少数。本文**源于一次团队内部的技术分享**，借鉴社区优秀文章，结合个人理解，进行整合，从六个问题出发，对 React Fiber 进行理解与认识，同时对时下热门的前端框架**Svelte**进行简要介绍与剖析，希望对正在探究 React 及 各前端框架的小伙伴们能有所帮助。
+&emsp;&emsp;React Fiber 是Facebook花费两年余时间对 React 做出的一个重大改变与优化，是**对 React 核心算法的一次重新实现**。从Facebook在 React Conf 2017会议上确认，React Fiber 会在React 16 版本发布至今，也已过去三年有余，如今，React 17 业已发布，社区关于Fiber的优秀文章不在少数。
+
+&emsp;&emsp;本文**源于一次团队内部的技术分享**，借鉴社区优秀文章，结合个人理解，进行**整合**，从六个问题出发，对 React Fiber 进行理解与认识，同时对时下热门的前端框架**Svelte**进行简要介绍与剖析，希望对正在探究 React 及各前端框架的小伙伴们能有所助益。
+
+&emsp;&emsp;**全文大量参考和引用以下几篇博文**，读者可自行查阅：
+
+* [React技术揭秘](https://react.iamkasong.com/){:target='_blank'}
+* [前端工程师的自我修养：React Fiber 是如何实现更新过程可控的](https://www.zoo.team/article/about-react-fiber){:target='_blank'}
+* [新兴前端框架 Svelte 从入门到原理](https://mp.weixin.qq.com/s/7GTTAYNf28IvIe2bpfVHuQ){:target='_blank'}
+* [以 React 为例，说说框架和性能（下）](https://gitbook.cn/m/mazi/columns/5c91c813968b1d64b1e08fde/topics/5cbbf49bbbbba80861a35c64){:target='_blank'}
 
 ## 一、React 的设计理念是什么？
 
