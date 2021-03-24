@@ -51,6 +51,10 @@ JSON.parse('null');            // null
 以下这篇包含多式
 - [这些鲜为人知的前端冷知识，你都GET了吗？](https://mp.weixin.qq.com/s/stGK1dvOV1skp8iubMWRZw){:target='_blank'}
 
+## CSS如何实现局部光照效果？
+
+- [CSS如何实现局部光照效果？](https://segmentfault.com/q/1010000039359551?utm_source=homepage#){:target='_blank'}
+
 ##  window.onerror 和 window.addEventListener('error') 
 
 - 可处理类型
