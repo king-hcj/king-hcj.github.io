@@ -309,6 +309,10 @@ null代表空值，代表“定义了但是为空”。而undefined的代表未�
 [javascript:void(0)的含义](https://www.cnblogs.com/duxiu-fang/p/11104735.html)
 [“javascript：void（0）”是什么意思？](http://www.djcxy.com/p/8001.html){:target='_blank'}
 
+## JS禁止打开控制台
+
+- [JS禁止打开控制台](https://segmentfault.com/a/1190000021459140){:target='_blank'}
+
 ## You don't (may not) need Lodash/Underscore
 
 - [You don't (may not) need Lodash/Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore){:target='_blank'}
