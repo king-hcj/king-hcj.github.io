@@ -718,6 +718,8 @@ input.oninput = ({ target }) => {
 
 - 特殊符号`$`
 - [JavaScript replace() 方法](https://www.w3school.com.cn/jsref/jsref_replace.asp){:target='\_blank'}
+- [js字符串方法replace()的第二个参数为函数讲解](https://blog.csdn.net/JCY1009015337/article/details/45220431){:target='_blank'}
+- [String.prototype.replace()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace){:target='_blank'}
 
 ```js
 // 下划线转换驼峰
