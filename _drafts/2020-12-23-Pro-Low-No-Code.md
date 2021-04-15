@@ -46,3 +46,8 @@ Pro Code、Low Code、No Code 之间不是替代消灭关系，⽽是互补加�
 
 - [什么是低代码（Low-Code）？](https://zhuanlan.zhihu.com/p/296396032){:target='_blank'}
 - [国内低代码平台](https://github.com/taowen/awesome-lowcode){:target='_blank'}
+
+- [百度低代码amis](){:target='_blank'}：amis 是一个低代码前端框架，它使用 JSON 配置来生成页面，可以减少页面开发工作量，极大提升效率：[文档](https://baidu.gitee.io/amis/zh-CN/docs/index){:target='_blank'} &#124; [GitHub](https://github.com/baidu/amis){:target='_blank'}。
+- [前端页面可视化搭建工具业界的轮子](https://juejin.cn/post/6858881797490098190){:target='_blank'}
+- [前端服务化——页面搭建工具的死与生](https://www.cnblogs.com/sskyy/p/6496287.html){:target='_blank'}
+- [基于现代的前端框架，为什么没有成熟的支持控件拖拽布局，并可以自动生成前端代码的设计器出现？](https://www.zhihu.com/question/338929219){:target='_blank'}
