@@ -18,6 +18,10 @@
   url: https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde
   src: www
 
+- name: 美团技术团队
+  url: https://tech.meituan.com/tags/%E5%89%8D%E7%AB%AF.html
+  src: www
+
 - name: 领略前端技术 阅读奇舞周刊
   url: https://weekly.75.team/
   src: www
