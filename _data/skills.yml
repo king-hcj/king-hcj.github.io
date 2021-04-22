@@ -1,21 +1,21 @@
 - name: Front End Engineer Keywords
   keywords:
-      - HTML、CSS
-      - JavaScript、ES6
+      - HTML
+      - CSS
+      - JavaScript
+      - ES6
       - NodeJs
       - 计算机网络
       - 数据结构与算法
-      - 网络安全
-      - Git
       - WebPack
-      - C
-      - SQL
+      - 浏览器
 
 - name: Mobile Developer Keywords
   keywords:
-      - qap、Taro
+      - Taro
       - React-Native
       - Flutter
+      - 小程序
 
 - name: Web Developer Keywords
   keywords:

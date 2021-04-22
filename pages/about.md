@@ -8,11 +8,8 @@ menu: 关于
 permalink: /about/
 ---
 
-仰慕「优雅编码的艺术」。
+## 联系方式
 
-坚信熟能生巧，努力改变人生。
-
-## 联系
 > 邮箱：cheneyking23@gmail.com
 
 {% for website in site.data.social %}
