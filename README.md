@@ -23,7 +23,9 @@
 
 ### ARTS打卡计划
 
+<a href='https://king-hcj.github.io/2020/04/11/arts1/' target="_blank">链接文本</a>
   - <a href='https://king-hcj.github.io/2020/04/11/arts1/' target='_blank'>前端ARTS打卡计划（一）</a>
+  - [前端ARTS打卡计划（一）](https://king-hcj.github.io/2020/04/11/arts1/?_blank)
   - [前端ARTS打卡计划（一）](https://king-hcj.github.io/2020/04/11/arts1/)
   - [前端ARTS打卡计划（二）](https://king-hcj.github.io/2020/06/16/arts2/)
   - [前端ARTS打卡计划（三）](https://king-hcj.github.io/2020/08/24/arts3/)
