@@ -23,8 +23,6 @@
 
 ### ARTS打卡计划
 
-
-  - [12](https://king-hcj.github.io/2020/04/11/arts1/){target:'_blank'}
   - [前端ARTS打卡计划（一）](https://king-hcj.github.io/2020/04/11/arts1/)
   - [前端ARTS打卡计划（二）](https://king-hcj.github.io/2020/06/16/arts2/)
   - [前端ARTS打卡计划（三）](https://king-hcj.github.io/2020/08/24/arts3/)
