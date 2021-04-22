@@ -12,6 +12,7 @@ keywords: JS, 前端, JavaScript
 
 - [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777){:target='_blank'}
 - [前端装逼技巧 108 式（二）—— 不讲武德](https://segmentfault.com/a/1190000038393789){:target='_blank'}
+- [前端装逼技巧 108 式（三）—— 冇得感情的API调用工程师](https://king-hcj.github.io/2020/12/21/JavaScript-108-tips3/){:target='_blank'}
 
 ## 楔子
 
