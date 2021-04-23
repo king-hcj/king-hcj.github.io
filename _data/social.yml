@@ -18,10 +18,10 @@
   name: king-hcj
   url: https://github.com/king-hcj
 
-- sitename: 个人简历
-  name: Resume
-  url: https://king-hcj.github.io/Resume/
+# - sitename: 个人简历
+#   name: Resume
+#   url: https://king-hcj.github.io/Resume/
 
-- sitename: 个人介绍
-  name: Introduce
-  url: https://king-hcj.github.io/introduce/
+# - sitename: 个人介绍
+#   name: Introduce
+#   url: https://king-hcj.github.io/introduce/
