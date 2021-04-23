@@ -16,7 +16,7 @@ permalink: /links/
   {% endif %}
 {% endfor %}
 
-> 个人简历
+> 工具链接
 
 {% for link in site.data.links %}
   {% if link.src == 'life' %}

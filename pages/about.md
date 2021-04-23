@@ -8,7 +8,7 @@ menu: 关于
 permalink: /about/
 ---
 
-## 联系方式
+## 个人相关
 
 > 邮箱：cheneyking23@gmail.com
 

@@ -1,6 +1,6 @@
-# - sitename: GitHub
-#   name: king-hcj
-#   url: https://github.com/king-hcj
+- sitename: 个人 LeetCode
+  name: king-hcj
+  url: https://leetcode-cn.com/u/king-hcj-3
 
 - sitename: 个人博客（github.io）
   name: Cheney King
@@ -14,6 +14,14 @@
   name: king-hcj
   url: https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections
 
-# - sitename: 简书
-#   name: 孤篷_e9c4
-#   url: https://www.jianshu.com/u/184615f5e131
+- sitename: GitHub
+  name: king-hcj
+  url: https://github.com/king-hcj
+
+- sitename: 个人简历
+  name: Resume
+  url: https://king-hcj.github.io/Resume/
+
+- sitename: 个人介绍
+  name: Introduce
+  url: https://king-hcj.github.io/introduce/

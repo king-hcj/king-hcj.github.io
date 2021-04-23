@@ -1,7 +1,3 @@
-- name: 个人 LeetCode
-  url: https://leetcode-cn.com/u/king-hcj-3
-  src: www
-
 - name: freeCodeCamp
   url: https://learn.freecodecamp.one/
   src: www
@@ -77,14 +73,6 @@
 - name: 黯羽轻扬 - 博客
   url: http://www.ayqy.net/blog/
   src: www
-
-- name: 个人简历
-  url: https://king-hcj.github.io/Resume/
-  src: life
-
-- name: 个人简介
-  url: https://king-hcj.github.io/introduce/
-  src: life
 
 - name: SpeedCoder
   url: http://www.speedcoder.net
