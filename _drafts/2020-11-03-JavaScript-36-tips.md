@@ -115,6 +115,10 @@ functioin generateNum(len = 16) {
 （大珠小珠落玉盘）
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 
+## 开发提效——我点了页面上的元素，VSCode 乖乖打开了对应的组件？原理揭秘
+
+- [开发提效——我点了页面上的元素，VSCode 乖乖打开了对应的组件？原理揭秘](https://juejin.cn/post/6901466406823575560){:target='_blank'} &#124; [GitHub仓库](https://github.com/zthxxx/react-dev-inspector){:target='_blank'} &#124; [在线预览体验](https://react-dev-inspector.zthxxx.me/){:target='_blank'}：`react-dev-inspector`。
+
 ## JS实现页面全屏功能（模拟F11）
 
 ```js
