@@ -721,3 +721,9 @@ pre {
 .tools-wrapper .gotop {
   display: none;
 }
+
+img {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px #3d1096;
+  max-width: 98% !important;
+}
