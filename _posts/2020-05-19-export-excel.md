@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 纯前端生成Excel
+title: 纯前端生成和解析Excel
 categories: JavaScript
-description: 纯前端生成Excel
+description: 纯前端生成和解析Excel
 keywords: Excel
 ---
 
-&emsp;&emsp;纯前端代码生成 Excel。
+&emsp;&emsp;纯前端生成和解析Excel。
 
 ## SheetJS js-xlsx 方案
 
@@ -191,3 +191,55 @@ exportExcel3 参考样例：
     exportCsv(column, keys, dataList, "导出列表");
   };
   ```
+
+## 纯前端解析excel文件
+
+&emsp;&emsp;HTML：
+```html
+<input @change="getUploadFile" type="file">
+```
+
+&emsp;&emsp;JS：
+```js
+import XLSX from 'xlsx';
+
+getUploadFile (e) {
+  //拿到所导入文件的名字
+  let fileName = e.target.files[0]
+  //定义reader，存放文件读取方法
+  let reader = new FileReader()
+  //启动函数
+  reader.readAsBinaryString(fileName)
+  //onload在文件被读取时自动触发
+  reader.onload = function(e) {
+      //workbook存放excel的所有基本信息
+      let workbook = XLSX.read(e.target.result, {type: 'binary'})
+      //定义sheetList中存放excel表格的sheet表，就是最下方的tab
+      let sheetList = workbook.SheetNames
+      //存放json数组格式的表格数据
+      let resultJson = []
+      //存放字符串数组格式的表格数据
+      let resultFormulae = []
+      sheetList.forEach(function(y) {
+          let worksheet = workbook.Sheets[y]
+          let json = XLSX.utils.sheet_to_json(workbook.Sheets[y])
+          let formulae = XLSX.utils.sheet_to_formulae(workbook.Sheets[y])
+          if(json.length > 0){
+              //具体如何处理看项目需求，我的项目其实只有一个sheet，在这里写成循环避免大家误会
+              //数据处理与存放
+              resultJson.push(json)
+              resultFormulae.push(formulae)
+          }
+
+      });
+      //因为我的表格只有一列，因此我取出resultJson第一组数据的key作为键去遍历取出手机号码
+      let tableHeader = Object.keys(result[0])[0]
+      let importInfo = result.map((item) => {
+          return item[tableHeader]
+      })
+
+  };
+}
+```
+
+- [纯前端解析excel文件](https://blog.csdn.net/for_weber/article/details/81903875){:target='_blank'}
