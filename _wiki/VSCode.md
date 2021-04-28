@@ -13,6 +13,7 @@ keywords: VSCode
 
 ### 快捷键
 
+- [VSCode常用快捷键大全｜VSCode高级玩家宝典之第一篇](https://zhuanlan.zhihu.com/p/133414551){:target='_blank'}
 - [VSCode 常用快捷键](https://segmentfault.com/a/1190000009396435){:target='_blank'}
 - [keyboard-shortcuts-windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target='_blank'}
 - [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings){:target='_blank'}
