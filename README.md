@@ -40,6 +40,7 @@
 
   - [浏览器是如何工作的：Chrome V8 让你更懂JavaScript](https://king-hcj.github.io/2020/10/05/google-v8/)
   - [六个问题助你理解 React Fiber](https://king-hcj.github.io/2021/03/21/6-questions-of-react-fiber/)
+  - [你应该知道的前端技术浪潮与应用](https://king-hcj.github.io/2021/04/28/front-end-technology-and-application/){:target='_blank'}
   - [从前端打字机效果的 N 种实现看JS定时器机制和前端动画](https://king-hcj.github.io/2021/01/10/js-typed/)
   - [可以遍历大部分数据类型的 for…of 为什么不能遍历普通对象？](https://king-hcj.github.io/2020/12/05/for-of/)
   - [JavaScript很简单？那你理解的forEach真的对吗？](https://king-hcj.github.io/2020/10/03/you-dont-know-foreach/)

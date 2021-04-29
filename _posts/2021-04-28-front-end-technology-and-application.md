@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 前端技术浪潮与应用
+title: 你应该知道的前端技术浪潮与应用
 categories: JavaScript
 description: 前端技术浪潮与应用。
 keywords: 前端, 技术浪潮
 ---
 
-&emsp;&emsp;本次主要会从前端基建和前端新方向与大家一起聊聊2020年前端那些事儿。
+&emsp;&emsp;本次主要会从**前端基建和前端新方向**与大家一起聊聊当前前端那些事儿。
 
 ![大纲](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22a4462b66ea41efba47d380cfe2dfe5~tplv-k3u1fbpfcp-zoom-1.image)
 
