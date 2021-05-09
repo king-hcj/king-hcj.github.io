@@ -879,6 +879,7 @@ function toHumpObj (data) {
 ## 你也许真的不了解 JSON.stringify
 【第二个参数】
   - [慎用JSON.stringify](https://mp.weixin.qq.com/s/jmEXKuamwP6EgfntuvV9fQ){:target='_blank'}
+  - [你可能不知道的JSON序列化](https://mp.weixin.qq.com/s/fSJHY6oEJHiiOq2ODRawPg){:target='_blank'}
 
 ## `504 Gateway Time-out`，也许你并不一定需要`git clone`
 
