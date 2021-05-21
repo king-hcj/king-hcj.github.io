@@ -46,6 +46,33 @@ JSON.parse('null');            // null
 - [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
 - [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
 
+## 网站如何检测到是否开启开发者工具
+
+- [网站如何检测到是否开启开发者工具?](https://segmentfault.com/q/1010000039917621){:target='_blank'} &#124; [前端开发中如何在JS文件中检测用户浏览器是否打开了调试面板（F12打开开发者工具）？](https://www.zhihu.com/question/24188524){:target='_blank'} &#124; [JS检测浏览器开发者工具是否打开的方法详解](https://www.jb51.net/article/196926.htm){:target='_blank'} &#124; [devtools-detector](https://github.com/AEPKILL/devtools-detector)
+  ```js
+  var im = new Image();
+  Object.defineProperty(im, 'id', {
+      get: function() {
+        // 在这里放入你的代码
+        console.log('Console is opened');
+        window.location.href = "http://www.baidu.com"
+      }
+  });
+  console.log(im); //谷歌最新版失效
+
+  let num = 0; //谷歌最新版有效
+  var devtools = new Date();
+  devtools.toString = function () {
+    num++;
+    if (num > 1) {
+      // 在这里放入你的代码
+      console.log('Console is opened');
+      window.location.href = "http://www.baidu.com"
+    }
+  }
+  console.log('', devtools);
+  ```
+
 ## 这些鲜为人知的前端冷知识，你都GET了吗？
 
 以下这篇包含多式
