@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>light effect</title>
+    <style type="text/css">
+        .flex-row {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+        }
+
+        .flex-row>.flex-main {
+            -webkit-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+
+        .flex-row>.flex-side {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+
+        .flex-row.flex-spacing>.flex-main:not(:first-child),
+        .flex-row.flex-spacing>.flex-side:not(:first-child) {
+            margin-left: 0.5em;
+        }
+
+        .flex-row.flex-margin {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+
+        .flex-row.flex-padding {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+
+        .flex-row .flex-warp {
+            flex-wrap: wrap;
+        }
+
+        .flex-column {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .flex-column>.flex-main {
+            -webkit-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+
+        .flex-column>.flex-side {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+
+        .box {
+            position: relative;
+            display: inline-block;
+            color: #FFF;
+            font-size: 20px;
+            background-color: #000;
+            --pt-x: 0;
+            --pt-y: 0;
+        }
+
+        .box .effect {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: radial-gradient(circle at calc(var(--pt-x) * 1px) calc(var(--pt-y) * 1px), #FFF, rgba(255, 255, 255, 0) 4em);
+            z-index: 0;
+        }
+
+        .box .item-list {
+            z-index: 2;
+        }
+
+        .box .item-list .item {
+            position: relative;
+            margin: 1em;
+            padding: 1em;
+            line-height: 1.5em;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
+            background-clip: padding-box;
+            box-shadow: 0 0 0 1em #000;
+        }
+
+        .box .item-list .item .icon {
+            margin-right: 1em;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .box .item-list .item .name {}
+
+        .box .item-list .item .desc {
+            color: #999;
+            font-size: 16px;
+        }
+    </style>
+    <script> document.addEventListener('DOMContentLoaded', function () {
+            let domBox = document.querySelector('.box');
+            domBox.addEventListener('mousemove', function ($evt) {
+                let rect = domBox.getBoundingClientRect();
+                domBox.style.setProperty('--pt-x', $evt.pageX - rect.left);
+                domBox.style.setProperty('--pt-y', $evt.pageY - rect.top);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="effect"></div>
+        <div class="item-list">
+            <div class="flex-row item-list-row">
+                <div class="flex-side flex-row item">
+                    <div class="flex-side icon"></div>
+                    <div class="flex-main">
+                        <div class="name">系统</div>
+                        <div class="desc">显示、声音、通知、电源</div>
+                    </div>
+                </div>
+                <div class="flex-side flex-row item">
+                    <div class="flex-side icon"></div>
+                    <div class="flex-main">
+                        <div class="name">系统</div>
+                        <div class="desc">显示、声音、通知、电源</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-row item-list-row">
+                <div class="flex-side flex-row item">
+                    <div class="flex-side icon"></div>
+                    <div class="flex-main">
+                        <div class="name">系统</div>
+                        <div class="desc">显示、声音、通知、电源</div>
+                    </div>
+                </div>
+                <div class="flex-side flex-row item">
+                    <div class="flex-side icon"></div>
+                    <div class="flex-main">
+                        <div class="name">系统</div>
+                        <div class="desc">显示、声音、通知、电源</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
