@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端装逼技巧 108 式
+title: 前端装逼技巧 108 式（终章） - 不装逼的逼王
 categories: JavaScript
 description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
@@ -10,61 +10,16 @@ keywords: JS, 前端, JavaScript
 
 - [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='_blank'}
 
-## queueMicrotask —— 不用promise，如何创建微任务
-  - [queueMicrotask - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask){:target='_blank'}
-  - [使用 queueMicrotask 来执行微任务](https://segmentfault.com/a/1190000020332724){:target='_blank'}
+思考：取舍问题，偏技术就会失去趣味性；偏趣味性又会失去一些深度
 
-## rel=”noopener noreferrer”
+如果选择深度：
 
-- [关于 rel=”noopener noreferrer”的作用](http://www.6cu.com/seoxuetang/gjcpm/2019/1203/27843.html){:target='_blank'} &#124; [rel=noopener/noreferrer简介](https://www.dazhuanlan.com/2020/01/02/5e0d46202b8a8/){:target='_blank'}
-    ```js
-    <a href="http://other.site" target="_blank" rel="noopener noopener">LINK</a>
-    ```
-- [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
-- [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
+  - 看一些比较普适的、有深度的文章，进行总结提炼
+  - 如果偏趣味性：找一些常见或者会用到的、好玩儿、又能提炼出技术原理的东西
 
-##  window.onerror 和 window.addEventListener('error') 
+建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
 
-- 可处理类型
-- 处理机制：冒泡、捕获
-- 区别
-- 怎么区分网络资源加载错误和其他一般错误
-
-
-- [性能监控和错误收集与上报（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c5dbccb24267c1d01b98){:target='_blank'}
-
-## requestIdleCallback
-
-- [你应该知道的requestIdleCallback](https://segmentfault.com/a/1190000014457824){:target='_blank'}
-- [requestIdleCallback-后台任务调度](http://www.zhangyunling.com/702.html){:target='_blank'}
-
-## 突破Chrome浏览器12px的最小字体限制
-
-- [再谈Chrome的最小字体12px限制](https://zhuanlan.zhihu.com/p/69695071){:target='_blank'}
-- [Chrome的最小字体12px限制最终解决办法](https://blog.csdn.net/im_dogg/article/details/93891050){:target='_blank'}
-- [针对谷歌默认最小字体12px的正确解决方案 （css、html）](https://blog.csdn.net/qq_36278639/article/details/52944690){:target='_blank'}
-
-## 性能数据获取：window.performance 与 自定义时间计算
-
-- [fmp-timing](https://github.com/qbright/fmp-timing){:target='_blank'} &#124; [前端监控实践——FMP的智能获取算法](https://segmentfault.com/a/1190000017092752){:target='_blank'}
-- [性能监控和错误收集与上报（上）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c52fccb24267c1d01b87){:target='_blank'}
-- [初探 performance – 监控网页与程序性能](http://www.alloyteam.com/2015/09/explore-performance/){:target='_blank'}
-
-## GitHub 隐藏新功能！个人页还能这么玩？
-
-- [GitHub 隐藏新功能！个人页还能这么玩？](https://zhuanlan.zhihu.com/p/161029860){:target='_blank'}
-- [定制github首页-自动更新Github的star数量](https://blog.csdn.net/LEILEI18A/article/details/116659324){:target='_blank'}
-
-## 这可能是我迄今为止见过拥有最全速查表的技术网站！
-
-- [这可能是我迄今为止见过拥有最全速查表的技术网站！](https://zhuanlan.zhihu.com/p/153461066){:target='_blank'}
-
-
-## callee和caller的作用与区别
-
-- [callee和caller的作用与区别](https://blog.csdn.net/hustzw07/article/details/72312329){:target='_blank'}
-
-## 抽象语法树(AST)
+## 第九十一式：抽象语法树(AST)
 
 ESLint 使用 Espree 来解析 JavaScript 语句，生成 AST。有了完整的解析树，我们就可以基于解析树对代码进行检测和修改。
 
@@ -77,73 +32,7 @@ ESLint 的灵魂是每一条 rule，每条规则都是独立且插件化的。�
 - [Esprima](https://esprima.org/index.html){:target='_blank'}
 - [代码规范工具及背后技术设计（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99b2e5ccb24267c1d01a14){:target='_blank'}
 
-## JS new Function()
-
-new Function（）的参数是某个字符串，在使用时，编译器会将参数中的字符串当作正常的脚本代码来执行。利用这种方法来把字符串转对象，可以简单的想象成就是new出一个对象。
-
-vue中parse最后会把一个字符串形式的函数传给new Function()
-
-- [JS巧用 new Function() 把字符串（string）转对象（object）](https://blog.csdn.net/piaoyinluo2316/article/details/87003745){:target='_blank'}
-- [JS的new Function()](https://blog.csdn.net/piaoyinluo2316/article/details/84135918){:target='_blank'}
-
-## window.history.length的大坑
-
-- [window.history.length的大坑](https://zhuanlan.zhihu.com/p/91931664)
-
-```js
-// 无法回退时关闭网页
-// window.history.length是1，那么肯定不能回退了，但是大于1，无法判断能不能继续回退。
-window.history.length > 1
-? window.history.back()
-// window.history.go( -1 );
-: setTimeout(() => {
-    window.close();
-  }, 2000);
-```
-
-## 导航守卫
-
-- [vue-router导航守卫，不懂的来](https://zhuanlan.zhihu.com/p/54112006){:target='_blank'}
-- [导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html){:target='_blank'}
-- [React Router 4.0 实现路由守卫](https://www.jianshu.com/p/677433245697){:target='_blank'}
-- [如何实现一个react-router路由拦截（导航守卫）](https://juejin.cn/post/6844903753284321294){:target='_blank'}
-
-## 如何挂起请求
-
-如何挂起请求（Promise），refresh_token后再用新的access_token重新发起请求？
-
-- [axios拦截器封装http请求，刷新token重发请求](https://juejin.cn/post/6844903894481371143){:target='_blank'}
-
-## Vue中的 render: h => h(App) 具体是什么含义？
-
-- [Explanation for `render: h => h(App)` please](https://github.com/vuejs-templates/webpack-simple/issues/29){:target='_blank'}
-- [关于Vue中的 render: h => h(App) 具体是什么含义？](https://segmentfault.com/q/1010000007130348){:target='_blank'}
-
-> It comes from the term "hyperscript", which is commonly used in many virtual-dom implementations. "Hyperscript" itself stands for "script that generates HTML structures" because HTML is the acronym for "hyper-text markup language".
-
-它来自“ hyperscript”一词，该术语通常在许多虚拟dom实现中使用。 “超脚本”本身代表“生成HTML结构的脚本”，因为HTML是“超文本标记语言”的首字母缩写。
-
-## console.log恶搞（待定）
-
-- [这些鲜为人知的前端冷知识，你都GET了吗？](https://mp.weixin.qq.com/s/stGK1dvOV1skp8iubMWRZw){:target='_blank'}
-
-## 哪些场景下不适合使用 ES6 箭头函数
-
-- this：构造函数的原型方法上
-- this：使用对象方法时
-- this：使用动态回调时
-- arguments：需要获得 arguments 时
-
-- [ES6 箭头函数使用禁忌](https://zhuanlan.zhihu.com/p/28972104)
-- [哪些场景下不适合使用 ES6 箭头函数](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
-
-## JavaScript中判断函数是new还是()调用
-
-- [new.target](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target){:target='_blank'}
-- [new.target 属性](https://es6.ruanyifeng.com/#docs/class#new-target-%E5%B1%9E%E6%80%A7){:target='_blank'}
-- [JavaScript中判断函数是new还是()调用](https://blog.csdn.net/weixin_33794672/article/details/85480850){:target='_blank'}
-
-## 前端如何使用脚本完成项目的便捷部署
+## 第九十二式：前端也要懂一些shell脚本编程，如何使用脚本完成项目的便捷部署
 
 - 传统：build，压缩， scp上传，备份，解压
 - git CICD等
@@ -233,16 +122,305 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
   done
   ```
 
-## yeoman generator与自定义脚手架
+- [Bash 脚本教程 - 阮一峰](https://wangdoc.com/bash/index.html){:target='_blank'}
+- [scp 命令](https://wangdoc.com/ssh/scp.html){:target='_blank'}
+
+## 第九十三式：yeoman generator与自定义脚手架
 
 - [前端工程化 通过yeoman-generator将文件加载到本地](https://blog.csdn.net/zemprogram/article/details/104125933){:target='_blank'}
-## plop
+## 第九十四式：plop
 
 - [小型前端脚手架工具plop的简单使用](https://blog.csdn.net/zemprogram/article/details/104146833){:target='_blank'}
 
+## 第九十五式：大文件上传
 
-[Bash 脚本教程 - 阮一峰](https://wangdoc.com/bash/index.html){:target='_blank'}
-[scp 命令](https://wangdoc.com/ssh/scp.html){:target='_blank'}
+- [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='\_blank'}
+- [HTTP断点续传（分块传输）（HTTP头格式非常清楚）](https://www.cnblogs.com/findumars/p/5745345.html){:target='_blank'}
+- [Range回源和视频拖拽播放](https://blog.csdn.net/Kim_Weir/article/details/85336313){:target='_blank'}
+
+## 第九十六式：大文件下载
+
+- [前端大文件下载方案](https://blog.csdn.net/azurecho/article/details/108618513){:target='\_blank'}
+- [从 Fetch 到 Streams —— 以流的角度处理网络请求](https://juejin.cn/post/6844904029244358670){:target='\_blank'}
+
+## 第九十七式：流媒体播放
+
+- [「1.4 万字」玩转前端 Video 播放器 | 多图预警](https://juejin.cn/post/6850037275579121671){:target='\_blank'}
+- [前端视频直播技术总结及 video.js 在 h5 页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='\_blank'}
+- [[1.3 万字] 玩转前端二进制](https://juejin.cn/post/6846687590783909902){:target='\_blank'}
+
+## 第九十八式：v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
+
+- 引用计数
+- 标记清除
+- 标记整理
+
+- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
+- [垃圾回收算法优缺点对比](https://www.jianshu.com/p/47ff2bff20dc){:target='_blank'}
+- [V8专题](http://newhtml.net/category/v8%e4%b8%93%e9%a2%98/){:target='_blank'}
+- [V8 之旅： 垃圾回收器](http://newhtml.net/v8-garbage-collection/){:target='_blank'}
+- [几种垃圾回收算法](https://www.jianshu.com/p/a8a04fd00c3c){:target='_blank'}
+- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
+- [V8引擎垃圾回收机制分析](https://blog.csdn.net/weixin_41376400/article/details/106076661){:target='_blank'}
+- [前端面试：谈谈 JS 垃圾回收机制](https://segmentfault.com/a/1190000018605776){:target='_blank'}
+- [面试官问你有没有了解过 V8 的 javascript 垃圾回收机制算法](https://zhuanlan.zhihu.com/p/37996721){:target='_blank'}
+- [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031){:target='_blank'}
+
+## 第九十九式：http2
+
+- [深入浅出：HTTP/2](https://www.cnblogs.com/confach/p/10141273.html){:target='\_blank'}
+- [一文读懂 HTTP/2 特性](https://zhuanlan.zhihu.com/p/26559480){:target='\_blank'}
+## 第一百式：diff算法对比？
+
+## 第一百零一式：`Object.defineProperty()`为何被 Vue 弃用？
+
+`Object.defineProperty()`方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。同时，该 API 也是 Vue 2.x 数据绑定实现的核心，Vue 在 3.x 版本之后改用 Proxy 进行实现，本系列文章后续会进行简单讨论。
+
+- [实现双向绑定 Proxy 比 defineproperty 优劣如何](https://www.jianshu.com/p/2df6dcddb0d7){:target='\_blank'}
+- [为什么 Vue3.0 使用 Proxy 实现数据监听？defineProperty 表示不背这个锅](https://juejin.cn/post/6844903965180575751){:target='\_blank'}
+- [Vue 的数据响应式原理](https://www.infoq.cn/article/we3l33h5zgyyg6gc9hri){:target='_blank'}
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>defineProperty 多个成员</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟 Vue 中的 data 选项
+    let data = {
+      msg: 'hello',
+      count: 10
+    }
+
+    // 模拟 Vue 的实例
+    let vm = {}
+
+    proxyData(data)
+
+    function proxyData(data) {
+      // 遍历 data 对象的所有属性
+      Object.keys(data).forEach(key => {
+        // 把 data 中的属性，转换成 vm 的 setter/setter
+        Object.defineProperty(vm, key, {
+          enumerable: true,
+          configurable: true,
+          get () {
+            console.log('get: ', key, data[key])
+            return data[key]
+          },
+          set (newValue) {
+            console.log('set: ', key, newValue)
+            if (newValue === data[key]) {
+              return
+            }
+            data[key] = newValue
+            // 数据更改，更新 DOM 的值
+            document.querySelector('#app').textContent = data[key]
+          }
+        })
+      })
+    }
+
+    // 测试
+    vm.msg = 'Hello World'
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
+```
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Proxy</title>
+</head>
+<body>
+  <div id="app">
+    hello
+  </div>
+  <script>
+    // 模拟 Vue 中的 data 选项
+    let data = {
+      msg: 'hello',
+      count: 0
+    }
+
+    // 模拟 Vue 实例
+    let vm = new Proxy(data, {
+      // 执行代理行为的函数
+      // 当访问 vm 的成员会执行
+      get (target, key) {
+        console.log('get, key: ', key, target[key])
+        return target[key]
+      },
+      // 当设置 vm 的成员会执行
+      set (target, key, newValue) {
+        console.log('set, key: ', key, newValue)
+        if (target[key] === newValue) {
+          return
+        }
+        target[key] = newValue
+        document.querySelector('#app').textContent = target[key]
+      }
+    })
+
+    // 测试
+    vm.msg = 'Hello World'
+    console.log(vm.msg)
+  </script>
+</body>
+</html>
+```
+
+## 第一百零二式：微前端
+
+## 第一百零三式：低代码
+
+## 第一百零四式：serverless
+
+## 第一百零五式：可视化
+
+## 第一百零六式：跨端
+
+## 第一百零二式：前端架构
+
+## 第一百零八式：逼王
+
+- 论装逼的艺术
+
+## queueMicrotask —— 不用promise，如何创建微任务
+  - [queueMicrotask - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask){:target='_blank'}
+  - [使用 queueMicrotask 来执行微任务](https://segmentfault.com/a/1190000020332724){:target='_blank'}
+
+## rel=”noopener noreferrer”
+
+- [关于 rel=”noopener noreferrer”的作用](http://www.6cu.com/seoxuetang/gjcpm/2019/1203/27843.html){:target='_blank'} &#124; [rel=noopener/noreferrer简介](https://www.dazhuanlan.com/2020/01/02/5e0d46202b8a8/){:target='_blank'}
+    ```js
+    <a href="http://other.site" target="_blank" rel="noopener noopener">LINK</a>
+    ```
+- [Chrome 88 新功能解读](https://mp.weixin.qq.com/s/RCGljgCqtxkRbQ-KJz9w0w){:target='_blank'}
+- [Javascript中window.opener的一点小总结](https://www.cnblogs.com/ilinuxer/p/5245983.html){:target='_blank'}
+
+##  window.onerror 和 window.addEventListener('error') 
+
+- 可处理类型
+- 处理机制：冒泡、捕获
+- 区别
+- 怎么区分网络资源加载错误和其他一般错误
+
+
+- [性能监控和错误收集与上报（下）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c5dbccb24267c1d01b98){:target='_blank'}
+
+## requestIdleCallback
+
+- [你应该知道的requestIdleCallback](https://segmentfault.com/a/1190000014457824){:target='_blank'}
+- [requestIdleCallback-后台任务调度](http://www.zhangyunling.com/702.html){:target='_blank'}
+
+## 突破Chrome浏览器12px的最小字体限制
+
+- [再谈Chrome的最小字体12px限制](https://zhuanlan.zhihu.com/p/69695071){:target='_blank'}
+- [Chrome的最小字体12px限制最终解决办法](https://blog.csdn.net/im_dogg/article/details/93891050){:target='_blank'}
+- [针对谷歌默认最小字体12px的正确解决方案 （css、html）](https://blog.csdn.net/qq_36278639/article/details/52944690){:target='_blank'}
+
+## 性能数据获取：window.performance 与 自定义时间计算
+
+- [fmp-timing](https://github.com/qbright/fmp-timing){:target='_blank'} &#124; [前端监控实践——FMP的智能获取算法](https://segmentfault.com/a/1190000017092752){:target='_blank'}
+- [性能监控和错误收集与上报（上）](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c52fccb24267c1d01b87){:target='_blank'}
+- [初探 performance – 监控网页与程序性能](http://www.alloyteam.com/2015/09/explore-performance/){:target='_blank'}
+
+## GitHub 隐藏新功能！个人页还能这么玩？
+
+- [GitHub 隐藏新功能！个人页还能这么玩？](https://zhuanlan.zhihu.com/p/161029860){:target='_blank'}
+- [定制github首页-自动更新Github的star数量](https://blog.csdn.net/LEILEI18A/article/details/116659324){:target='_blank'}
+
+## 这可能是我迄今为止见过拥有最全速查表的技术网站！
+
+- [这可能是我迄今为止见过拥有最全速查表的技术网站！](https://zhuanlan.zhihu.com/p/153461066){:target='_blank'}
+
+
+## callee和caller的作用与区别
+
+- [callee和caller的作用与区别](https://blog.csdn.net/hustzw07/article/details/72312329){:target='_blank'}
+
+## JS new Function()
+
+new Function（）的参数是某个字符串，在使用时，编译器会将参数中的字符串当作正常的脚本代码来执行。利用这种方法来把字符串转对象，可以简单的想象成就是new出一个对象。
+
+vue中parse最后会把一个字符串形式的函数传给new Function()
+
+- [JS巧用 new Function() 把字符串（string）转对象（object）](https://blog.csdn.net/piaoyinluo2316/article/details/87003745){:target='_blank'}
+- [JS的new Function()](https://blog.csdn.net/piaoyinluo2316/article/details/84135918){:target='_blank'}
+
+## window.history.length的大坑
+
+- [window.history.length的大坑](https://zhuanlan.zhihu.com/p/91931664)
+
+```js
+// 无法回退时关闭网页
+// window.history.length是1，那么肯定不能回退了，但是大于1，无法判断能不能继续回退。
+window.history.length > 1
+? window.history.back()
+// window.history.go( -1 );
+: setTimeout(() => {
+    window.close();
+  }, 2000);
+```
+
+## 导航守卫
+
+- [vue-router导航守卫，不懂的来](https://zhuanlan.zhihu.com/p/54112006){:target='_blank'}
+- [导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html){:target='_blank'}
+- [React Router 4.0 实现路由守卫](https://www.jianshu.com/p/677433245697){:target='_blank'}
+- [如何实现一个react-router路由拦截（导航守卫）](https://juejin.cn/post/6844903753284321294){:target='_blank'}
+
+## 如何挂起请求
+
+如何挂起请求（Promise），refresh_token后再用新的access_token重新发起请求？
+
+- [axios拦截器封装http请求，刷新token重发请求](https://juejin.cn/post/6844903894481371143){:target='_blank'}
+
+## Vue中的 render: h => h(App) 具体是什么含义？
+
+- [Explanation for `render: h => h(App)` please](https://github.com/vuejs-templates/webpack-simple/issues/29){:target='_blank'}
+- [关于Vue中的 render: h => h(App) 具体是什么含义？](https://segmentfault.com/q/1010000007130348){:target='_blank'}
+
+> It comes from the term "hyperscript", which is commonly used in many virtual-dom implementations. "Hyperscript" itself stands for "script that generates HTML structures" because HTML is the acronym for "hyper-text markup language".
+
+它来自“ hyperscript”一词，该术语通常在许多虚拟dom实现中使用。 “超脚本”本身代表“生成HTML结构的脚本”，因为HTML是“超文本标记语言”的首字母缩写。
+
+## console.log恶搞（待定）
+
+- [这些鲜为人知的前端冷知识，你都GET了吗？](https://mp.weixin.qq.com/s/stGK1dvOV1skp8iubMWRZw){:target='_blank'}
+
+## 哪些场景下不适合使用 ES6 箭头函数
+
+- this：构造函数的原型方法上
+- this：使用对象方法时
+- this：使用动态回调时
+- arguments：需要获得 arguments 时
+
+- [ES6 箭头函数使用禁忌](https://zhuanlan.zhihu.com/p/28972104)
+- [哪些场景下不适合使用 ES6 箭头函数](https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbe98ebbbba80861a35bfe)
+
+## JavaScript中判断函数是new还是()调用
+
+- [new.target](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target){:target='_blank'}
+- [new.target 属性](https://es6.ruanyifeng.com/#docs/class#new-target-%E5%B1%9E%E6%80%A7){:target='_blank'}
+- [JavaScript中判断函数是new还是()调用](https://blog.csdn.net/weixin_33794672/article/details/85480850){:target='_blank'}
 
 ## You don't (may not) need Lodash/Underscore
 
@@ -322,7 +500,6 @@ moment.js 的大小达到了200KB，对于非SSR的首屏渲染性能非常不�
 
 - [前端进阶之路](https://king-hcj.github.io/2020/05/25/front-end-engineer-promotion/){:target='_blank'}
 - https://www.jq22.com/webqd5638
-- [Espree](https://github.com/eslint/espree/blob/master/README.md){:target='_blank'}
 
 <details><summary>Output</summary>
 <p>
@@ -369,23 +546,6 @@ Node {
 
 - [javaScript代码飘红报错看不懂？读完这篇文章再试试！](https://zhuanlan.zhihu.com/p/339429715)
 
-## v8为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
-
-- 引用计数
-- 标记清除
-- 标记整理
-
-- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
-- [垃圾回收算法优缺点对比](https://www.jianshu.com/p/47ff2bff20dc){:target='_blank'}
-- [V8专题](http://newhtml.net/category/v8%e4%b8%93%e9%a2%98/){:target='_blank'}
-- [V8 之旅： 垃圾回收器](http://newhtml.net/v8-garbage-collection/){:target='_blank'}
-- [几种垃圾回收算法](https://www.jianshu.com/p/a8a04fd00c3c){:target='_blank'}
-- [V8引擎的垃圾回收策略](https://www.cnblogs.com/onepixel/p/7422820.html){:target='_blank'}
-- [V8引擎垃圾回收机制分析](https://blog.csdn.net/weixin_41376400/article/details/106076661){:target='_blank'}
-- [前端面试：谈谈 JS 垃圾回收机制](https://segmentfault.com/a/1190000018605776){:target='_blank'}
-- [面试官问你有没有了解过 V8 的 javascript 垃圾回收机制算法](https://zhuanlan.zhihu.com/p/37996721){:target='_blank'}
-- [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031){:target='_blank'}
-
 ## 从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理
 
 - [从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理](https://segmentfault.com/a/1190000012925872){:target='_blank'}
@@ -427,17 +587,6 @@ input.oninput = ({ target }) => {
 ## 你知道 Chrome 为调试专门提供的这些函数吗？
 
 - [你知道 Chrome 为调试专门提供的这些函数吗？](https://segmentfault.com/a/1190000038406115){:target='\_blank'}
-
-## 大文件上传
-
-- [前端大文件上传](https://juejin.cn/post/6844903860327186445){:target='\_blank'}
-- [HTTP断点续传（分块传输）（HTTP头格式非常清楚）](https://www.cnblogs.com/findumars/p/5745345.html){:target='_blank'}
-- [Range回源和视频拖拽播放](https://blog.csdn.net/Kim_Weir/article/details/85336313){:target='_blank'}
-
-## 大文件下载
-
-- [前端大文件下载方案](https://blog.csdn.net/azurecho/article/details/108618513){:target='\_blank'}
-- [从 Fetch 到 Streams —— 以流的角度处理网络请求](https://juejin.cn/post/6844904029244358670){:target='\_blank'}
 
 ## `let Days={};Days[Days["Sun"] = 3] = "Sun"`
 
@@ -578,12 +727,6 @@ input.oninput = ({ target }) => {
 - [为什么要用 setTimeout 模拟 setInterval ？](https://segmentfault.com/a/1190000038829248)
 - 最小延时、最大延时
 
-## 流媒体播放
-
-- [「1.4 万字」玩转前端 Video 播放器 | 多图预警](https://juejin.cn/post/6850037275579121671){:target='\_blank'}
-- [前端视频直播技术总结及 video.js 在 h5 页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='\_blank'}
-- [[1.3 万字] 玩转前端二进制](https://juejin.cn/post/6846687590783909902){:target='\_blank'}
-
 ## 前端流程图
 
 - [Gojs](https://gojs.net.cn/){:target='\_blank'}
@@ -592,120 +735,6 @@ input.oninput = ({ target }) => {
 
 [浅析微信扫码登录原理(小结)](https://www.jb51.net/article/149680.htm){:target='\_blank'}
 [实践](https://wx.qq.com/){:target='\_blank'}（查看长连接等）
-
-## `Object.defineProperty()`为何被 Vue 弃用？
-
-`Object.defineProperty()`方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。同时，该 API 也是 Vue 2.x 数据绑定实现的核心，Vue 在 3.x 版本之后改用 Proxy 进行实现，本系列文章后续会进行简单讨论。
-
-- [实现双向绑定 Proxy 比 defineproperty 优劣如何](https://www.jianshu.com/p/2df6dcddb0d7){:target='\_blank'}
-- [为什么 Vue3.0 使用 Proxy 实现数据监听？defineProperty 表示不背这个锅](https://juejin.cn/post/6844903965180575751){:target='\_blank'}
-- [Vue 的数据响应式原理](https://www.infoq.cn/article/we3l33h5zgyyg6gc9hri){:target='_blank'}
-
-```html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>defineProperty 多个成员</title>
-</head>
-<body>
-  <div id="app">
-    hello
-  </div>
-  <script>
-    // 模拟 Vue 中的 data 选项
-    let data = {
-      msg: 'hello',
-      count: 10
-    }
-
-    // 模拟 Vue 的实例
-    let vm = {}
-
-    proxyData(data)
-
-    function proxyData(data) {
-      // 遍历 data 对象的所有属性
-      Object.keys(data).forEach(key => {
-        // 把 data 中的属性，转换成 vm 的 setter/setter
-        Object.defineProperty(vm, key, {
-          enumerable: true,
-          configurable: true,
-          get () {
-            console.log('get: ', key, data[key])
-            return data[key]
-          },
-          set (newValue) {
-            console.log('set: ', key, newValue)
-            if (newValue === data[key]) {
-              return
-            }
-            data[key] = newValue
-            // 数据更改，更新 DOM 的值
-            document.querySelector('#app').textContent = data[key]
-          }
-        })
-      })
-    }
-
-    // 测试
-    vm.msg = 'Hello World'
-    console.log(vm.msg)
-  </script>
-</body>
-</html>
-```
-
-```html
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Proxy</title>
-</head>
-<body>
-  <div id="app">
-    hello
-  </div>
-  <script>
-    // 模拟 Vue 中的 data 选项
-    let data = {
-      msg: 'hello',
-      count: 0
-    }
-
-    // 模拟 Vue 实例
-    let vm = new Proxy(data, {
-      // 执行代理行为的函数
-      // 当访问 vm 的成员会执行
-      get (target, key) {
-        console.log('get, key: ', key, target[key])
-        return target[key]
-      },
-      // 当设置 vm 的成员会执行
-      set (target, key, newValue) {
-        console.log('set, key: ', key, newValue)
-        if (target[key] === newValue) {
-          return
-        }
-        target[key] = newValue
-        document.querySelector('#app').textContent = target[key]
-      }
-    })
-
-    // 测试
-    vm.msg = 'Hello World'
-    console.log(vm.msg)
-  </script>
-</body>
-</html>
-```
 
 ## 明明 console 数组有值，展开就是空了？
 
@@ -726,11 +755,6 @@ input.oninput = ({ target }) => {
 - [11 个最好的 JavaScript 动态效果库](https://segmentfault.com/a/1190000018577143){:target='\_blank'}
 
 ## 如何修改 antd 样式
-
-## http2
-
-- [深入浅出：HTTP/2](https://www.cnblogs.com/confach/p/10141273.html){:target='\_blank'}
-- [一文读懂 HTTP/2 特性](https://zhuanlan.zhihu.com/p/26559480){:target='\_blank'}
 
 ## 重放攻击
 
