@@ -156,6 +156,8 @@ functioin generateNum(len = 16) {
 文明
 和谐
 
+- 给一个复制到控制台，就可以在当前界面点击实现效果的脚本
+
 - [前端随便玩儿](https://xiaohuazheng.github.io/2018/06/02/fed-play/){:target='_blank'}
 
 
