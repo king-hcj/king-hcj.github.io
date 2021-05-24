@@ -28,7 +28,7 @@
   - [前端ARTS打卡计划（三）](https://king-hcj.github.io/2020/08/24/arts3/)
   - [前端ARTS打卡计划（四）](https://king-hcj.github.io/2020/11/02/arts4/)
   - [前端ARTS打卡计划（五）](https://king-hcj.github.io/2021/01/11/arts5/)
-  - [前端ARTS打卡计划（六）](https://king-hcj.github.io/2021/03/22/arts6/)
+  - [前端ARTS打卡计划（终章）](https://king-hcj.github.io/2021/03/22/arts6/)
 
 ### 前端装逼技巧 108 式
 
