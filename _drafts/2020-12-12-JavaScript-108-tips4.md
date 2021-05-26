@@ -38,7 +38,9 @@ keywords: JS, 前端, JavaScript
     console.log('', devtools);
   ```
 
-## 第五十六式：纯前端代码生成 Excel
+## 第五十六式：纯前端生成和解析Excel
+
+- [纯前端生成和解析Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='_blank'}
 
 ## 第五十七式：JavaScript Puzzlers!
 

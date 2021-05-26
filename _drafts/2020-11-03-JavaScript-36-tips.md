@@ -768,6 +768,10 @@ input.oninput = ({ target }) => {
 - [内网穿透：在公网访问你家的 NAS](https://zhuanlan.zhihu.com/p/57477087){:target='\_blank'}
 - [内网穿透和公网 IP 有什么区别吗?](https://www.zhihu.com/question/404693104/answer/1315636116){:target='\_blank'}
 
+## 前端打印
+
+- [window.print() 前端实现网页打印详解](https://blog.csdn.net/qq_38128179/article/details/103344021){:target='_blank'}
+
 ## 微前端、serverless
 
 ## JS 代码调试必须要 HTML、控制台或者 node？
