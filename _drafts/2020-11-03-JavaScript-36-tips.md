@@ -807,6 +807,10 @@ input.oninput = ({ target }) => {
 
 - [低代码前端框架](https://baidu.gitee.io/amis/docs/index){:target='_blank'}
 
+## 解决 parseInt() 的神秘行为：parseInt(0.0000005) => 5
+
+- [解决 parseInt() 的神秘行为：parseInt(0.0000005) => 5](https://mp.weixin.qq.com/s/fB40_HcuyE1K7cyinn1C1Q){:target='_blank'}
+
 ## case不等于if
 
 ```js
