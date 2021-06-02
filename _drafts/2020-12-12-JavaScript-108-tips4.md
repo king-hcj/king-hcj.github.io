@@ -12,6 +12,8 @@ keywords: JS, 前端, JavaScript
 
 ## 第五十五式：网站如何检测到是否开启开发者工具
 
+- [JavaScript反防审查强制开控制台方法（反防f12必开控制台）](https://blog.csdn.net/qq_21567385/article/details/109253191){:target='_blank'}
+- [JS检测，禁用浏览器开发者工具之6大方法探讨](https://blog.csdn.net/cplvfx/article/details/108518077){:target='_blank'}
 - [网站如何检测到是否开启开发者工具?](https://segmentfault.com/q/1010000039917621){:target='_blank'} &#124; [前端开发中如何在JS文件中检测用户浏览器是否打开了调试面板（F12打开开发者工具）？](https://www.zhihu.com/question/24188524){:target='_blank'} &#124; [JS检测浏览器开发者工具是否打开的方法详解](https://www.jb51.net/article/196926.htm){:target='_blank'} &#124; - [JS禁止打开控制台](https://segmentfault.com/a/1190000021459140){:target='_blank'} &#124; [devtools-detector](https://github.com/AEPKILL/devtools-detector)
 
   ```js
@@ -36,6 +38,31 @@ keywords: JS, 前端, JavaScript
       }
     }
     console.log('', devtools);
+  ```
+
+  ```js
+  <!DOCTYPE html>
+  <html>
+      <body>
+          <pre id="output"></pre>
+          <script type="text/javascript">
+              var element = new Image;
+              var devtoolsOpen = false;
+              // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
+              // __defineGetter__ 方法可以将一个函数绑定在当前对象的指定属性上，当那个属性的值被读取时，你所绑定的函数就会被调用。
+              element.__defineGetter__("id", function() {
+                  devtoolsOpen = true; // This only executes when devtools is open.
+              });
+              setInterval(function() {
+                  devtoolsOpen = false;
+                  console.log(element);
+                  if (devtoolsOpen == true) {
+                      // run code if dev tool are open
+                  } // else here if you like to see if dev tools are not open
+              }, 1000);
+          </script>
+      </body>
+  </html>
   ```
 
 ## 第五十六式：纯前端生成和解析Excel

@@ -302,6 +302,16 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 
 - 论装逼的艺术
 
+## 签字板
+
+- [前端小功能：canvas签名版](https://www.cnblogs.com/bore/p/11351641.html){:target='_blank'}
+- [JS canvas实现画板和签字板功能](https://www.zztuku.com/front-1076.html){:target='_blank'}
+- [web前端 原生js签名板(电子签名)写字板 canvas 截图](https://blog.csdn.net/qq_33270001/article/details/81809535){:target='_blank'}
+- [sign-canvas 一个基于canvas开发,封装于Vue组件的通用手写签名板(电子签名板),支持pc端和移动端；](https://blog.csdn.net/qq_33270001/article/details/102855964){:target='_blank'}
+
+- [集成一个好用的canvas签名板](https://www.cnblogs.com/my3306/p/9895920.html){:target='_blank'}
+- [Tablet](https://github.com/941477276/Tablet/tree/master){:target='_blank'}
+
 ## queueMicrotask —— 不用promise，如何创建微任务
   - [queueMicrotask - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask){:target='_blank'}
   - [使用 queueMicrotask 来执行微任务](https://segmentfault.com/a/1190000020332724){:target='_blank'}

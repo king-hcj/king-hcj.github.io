@@ -1,0 +1,89 @@
+<!-- https://www.cnblogs.com/bore/p/11351641.html -->
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF">
+
+    <title>签名版</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="margin:20px auto; text-align:center;">签名版</div>
+    <canvas id="canvasbox" width="500" height="250"
+        style="border:1px solid green; margin:20px auto;display:block;"></canvas>
+    <div class="btn" style="margin:0 auto; text-align:center;">
+        <button id="savebtn">保存</button>
+        <button id="clearbtn">清空</button>
+    </div>
+    <script>
+
+        var canvasbox = document.getElementById("canvasbox");
+        var ctx = canvasbox.getContext("2d");
+        var iscanvas = false;
+        var offsetX = '';
+        var offsetY = '';
+        canvasbox.addEventListener("mousedown", function (e) {
+            iscanvas = true;
+            offsetX = e.offsetX;
+            offsetY = e.offsetY;
+        })
+        canvasbox.addEventListener("mousemove", function (e) {
+            if (iscanvas) {
+                ctx.beginPath();
+                ctx.moveTo(offsetX, offsetY)
+                ctx.lineTo(e.offsetX, e.offsetY)
+                ctx.lineWidth = 2;
+                ctx.stroke()
+                offsetX = e.offsetX;
+                offsetY = e.offsetY;
+            }
+        })
+        canvasbox.addEventListener("mouseup", function () {
+            iscanvas = false;
+        })
+        canvasbox.addEventListener("mouseleave", function () {
+            iscanvas = false;
+        })
+        var clearbtn = document.getElementById("clearbtn");
+        clearbtn.addEventListener("click", function () {
+            ctx.clearRect(0, 0, canvasbox.width, canvasbox.height)
+        })
+        var savebtn = document.getElementById("savebtn");
+        savebtn.addEventListener("click", function () {
+            console.log(111)
+            downLoad(saveAsPNG(canvasbox));
+        })
+        function downLoad(url) {
+            var oA = document.createElement("a");
+            oA.download = parseInt(Math.random() * 1000000);// 设置下载的文件名，默认是'下载'
+            oA.href = url;
+            document.body.appendChild(oA);
+            oA.click();
+            oA.remove(); // 下载之后把创建的元素删除
+        }
+        // 保存成png格式的图片
+        function saveAsPNG(canvas) {
+            return canvas.toDataURL("image/png");
+        }
+        // 保存成jpg格式的图片
+        function saveAsJPG(canvas) {
+            return canvas.toDataURL("image/jpeg");
+        }
+
+
+    </script>
+
+</body>
+
+</html>
