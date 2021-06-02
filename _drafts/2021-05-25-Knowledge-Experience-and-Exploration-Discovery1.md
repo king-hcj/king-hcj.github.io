@@ -49,4 +49,14 @@ keywords:  Knowledge and Experience、Exploration and Discovery
 
 ### Knowledge and Experience
 
+- `background-image`问题
+
+```css
+.body {
+  overflow: hidden; /* 这个可以禁止下拉滑动 */
+  background: #201d32; /* 不设置background的话，会有白边，下拉会漏出白底 */
+  background-image: linear-gradient(to bottom, #201d32, #000000 100%);
+}
+```
+
 ### Exploration and Discovery
