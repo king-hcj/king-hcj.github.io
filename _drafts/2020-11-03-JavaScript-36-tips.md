@@ -312,6 +312,10 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [集成一个好用的canvas签名板](https://www.cnblogs.com/my3306/p/9895920.html){:target='_blank'}
 - [Tablet](https://github.com/941477276/Tablet/tree/master){:target='_blank'}
 
+## Mutation Observer API：监视 DOM 变动。DOM 的任何变动，比如节点的增减、属性的变动、文本内容的变动，这个 API 都可以得到通知。
+
+- [Mutation Observer API](https://wangdoc.com/javascript/dom/mutationobserver.html){:target='_blank'}
+
 ## queueMicrotask —— 不用promise，如何创建微任务
   - [queueMicrotask - MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask){:target='_blank'}
   - [使用 queueMicrotask 来执行微任务](https://segmentfault.com/a/1190000020332724){:target='_blank'}
