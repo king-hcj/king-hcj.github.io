@@ -60,4 +60,22 @@ keywords:  Knowledge and Experience、Exploration and Discovery
 }
 ```
 
+- 移动端web禁止长按选择文字以及弹出菜单
+
+```css
+  /*如果是禁用长按选择文字功能，用css*/ 
+  * { 
+      user-select:none; 
+  }
+```
+
+```js
+  // 如果是想禁用长按弹出菜单, 用js 
+  window.addEventListener('contextmenu', function(e){ 
+      e.preventDefault(); 
+  });
+```
+
+- `pointer-events`是css3的一个属性，指定在什么情况下元素可以成为鼠标事件的`target`（包括鼠标的样式）。`pointer-events`属性有很多值，但是对于浏览器来说，只有`auto`（默认值）和`none`两个值可用，其它的几个是针对SVG的(本身这个属性就来自于SVG技术)。`none`值时，元素永远不会成为鼠标事件的`target`（目标）。
+
 ### Exploration and Discovery

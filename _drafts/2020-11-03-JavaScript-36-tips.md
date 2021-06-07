@@ -312,7 +312,9 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [集成一个好用的canvas签名板](https://www.cnblogs.com/my3306/p/9895920.html){:target='_blank'}
 - [Tablet](https://github.com/941477276/Tablet/tree/master){:target='_blank'}
 
-## pointer-events 与鼠标穿透
+## `pointer-events` 与鼠标穿透
+
+&emsp;&emsp;`pointer-events`是css3的一个属性，指定在什么情况下元素可以成为鼠标事件的`target`（包括鼠标的样式）。`pointer-events`属性有很多值，但是对于浏览器来说，只有`auto`（默认值）和`none`两个值可用，其它的几个是针对SVG的(本身这个属性就来自于SVG技术)。`none`值时，元素永远不会成为鼠标事件的`target`（目标）。
 
 - [非常有用的pointer-events属性](https://www.cnblogs.com/kunmomo/p/11752669.html){:target='_blank'}
 - [pointer-events](https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events){:target='_blank'}
