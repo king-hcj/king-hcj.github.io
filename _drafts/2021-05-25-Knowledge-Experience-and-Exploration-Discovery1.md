@@ -77,5 +77,6 @@ keywords:  Knowledge and Experience、Exploration and Discovery
 ```
 
 - `pointer-events`是css3的一个属性，指定在什么情况下元素可以成为鼠标事件的`target`（包括鼠标的样式）。`pointer-events`属性有很多值，但是对于浏览器来说，只有`auto`（默认值）和`none`两个值可用，其它的几个是针对SVG的(本身这个属性就来自于SVG技术)。`none`值时，元素永远不会成为鼠标事件的`target`（目标）。
+- [不要过度使用React.useCallback()](https://segmentfault.com/a/1190000022651514){:target='_blank'}
 
 ### Exploration and Discovery
