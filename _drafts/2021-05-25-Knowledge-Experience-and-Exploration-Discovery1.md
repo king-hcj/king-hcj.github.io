@@ -80,3 +80,11 @@ keywords:  Knowledge and Experience、Exploration and Discovery
 - [不要过度使用React.useCallback()](https://segmentfault.com/a/1190000022651514){:target='_blank'}
 
 ### Exploration and Discovery
+
+#### 前端性能优化
+
+- [x] [前端性能优化方法与实战](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content){:target='_blank'}
+
+#### JavaScript Visualized Series' Articles
+
+- [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='_blank'} 
