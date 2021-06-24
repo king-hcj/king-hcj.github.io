@@ -100,3 +100,11 @@ window.addEventListener('contextmenu', function (e) {
 #### JavaScript Visualized Series' Articles
 
 - [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
+
+<!--
+计划：
+前端装逼技巧（四）
+热门 JavaScript 引擎横评
+性能优化（一二三）
+技术人的芯片通识课
+-->
