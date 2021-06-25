@@ -91,6 +91,10 @@ window.addEventListener('contextmenu', function (e) {
   git log -left-right branch1...branch2 // 在上述情况下，在显示出每个提交是在哪个分支上。注意 commit 后面的箭头，根据我们在 –left-right branch1…branch2 的顺序，左箭头 < 表示是 branch1 的，右箭头 > 表示是branch2的。
 ```
 
+- opacity 子元素继承父元素透明度的解决方法（[参考](https://www.jb51.net/css/744197.html){:target='\_blank'}）
+  - 父元素背景颜色设置透明度时，避免使用 `background：#000；opacity：0.5`，建议使用 `background：rgba(0,0,0,0.5)`
+  - 如果设置背景色为渐变色等这种复杂背景,子元素会继承父元素的 opacity 属性，我们让它不成为子元素。新增一个子元素，将其绝对定位到父元素位置，然后在该元素上设置背景色与透明度。
+
 ### Exploration and Discovery
 
 #### 前端性能优化
