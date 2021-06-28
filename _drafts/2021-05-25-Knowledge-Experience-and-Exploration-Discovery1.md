@@ -95,6 +95,8 @@ window.addEventListener('contextmenu', function (e) {
   - 父元素背景颜色设置透明度时，避免使用 `background：#000；opacity：0.5`，建议使用 `background：rgba(0,0,0,0.5)`
   - 如果设置背景色为渐变色等这种复杂背景,子元素会继承父元素的 opacity 属性，我们让它不成为子元素。新增一个子元素，将其绝对定位到父元素位置，然后在该元素上设置背景色与透明度。
 
+- [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
+
 ### Exploration and Discovery
 
 #### 前端性能优化
