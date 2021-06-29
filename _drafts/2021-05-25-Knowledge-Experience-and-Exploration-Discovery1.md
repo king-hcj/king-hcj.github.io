@@ -94,8 +94,9 @@ window.addEventListener('contextmenu', function (e) {
 - opacity 子元素继承父元素透明度的解决方法（[参考](https://www.jb51.net/css/744197.html){:target='\_blank'}）
   - 父元素背景颜色设置透明度时，避免使用 `background：#000；opacity：0.5`，建议使用 `background：rgba(0,0,0,0.5)`
   - 如果设置背景色为渐变色等这种复杂背景,子元素会继承父元素的 opacity 属性，我们让它不成为子元素。新增一个子元素，将其绝对定位到父元素位置，然后在该元素上设置背景色与透明度。
-
-- [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
+- fixed元素抖动问题
+  - [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
+  - [移动端fixed的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='_blank'}
 
 ### Exploration and Discovery
 
