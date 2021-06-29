@@ -28,6 +28,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - [🤔 移动端 JS 引擎哪家强？美国硅谷找......](https://mp.weixin.qq.com/s/cV3RH72YKd6jRYBFhjJ-5w){:target='\_blank'}
 - [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
 - [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events){:target='\_blank'}
+- [从 V8 角度揭秘你不知道的面试八股文](https://mp.weixin.qq.com/s/NkaGseRlLKcERx6rpouCFA){:target='_blank'}
+- [高性能 JavaScript 引擎 V8 - 垃圾回收](https://mp.weixin.qq.com/s?__biz=MzU4MTc2NTc5NQ==&mid=2247486134&idx=1&sn=25ced12b19562ec4b5f2a3e7d7b74469&chksm=fd43d57aca345c6c5666f42d47d4fb601f19283ec756e56d4f5884cba4b0167e4206917fc4c4&scene=21#wechat_redirect){:target='_blank'}
 
 - [自主研发一款浏览器内核的难度到底有多大？](https://www.zhihu.com/question/290564335/answer/474202037){:target='\_blank'}
 
