@@ -97,6 +97,7 @@ window.addEventListener('contextmenu', function (e) {
 - fixed元素抖动问题
   - [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
   - [移动端fixed的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='_blank'}
+- 长背景，上部白底，下底有背景：`background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 100%);`;
 
 ### Exploration and Discovery
 
