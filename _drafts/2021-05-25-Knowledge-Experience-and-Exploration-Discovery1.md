@@ -98,6 +98,7 @@ window.addEventListener('contextmenu', function (e) {
   - [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
   - [移动端fixed的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='_blank'}
 - 长背景，上部白底，下底有背景：`background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 100%);`;
+- [CSS实现渐隐渐现效果](https://www.cnblogs.com/WindrunnerMax/p/14366181.html){:target='_blank'}
 
 ### Exploration and Discovery
 
@@ -108,6 +109,10 @@ window.addEventListener('contextmenu', function (e) {
 #### JavaScript Visualized Series' Articles
 
 - [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
+
+#### CSS
+
+- [css-tricks](https://css-tricks.com/){:target='_blank'}
 
 <!--
 计划：

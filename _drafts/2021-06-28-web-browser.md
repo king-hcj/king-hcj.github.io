@@ -11,11 +11,21 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
   - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
   - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2){:target='_blank'}
+  - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3){:target='_blank'}
+  - [Inside look at modern web browser (part 4)](https://developers.google.com/web/updates/2018/09/inside-browser-part4){:target='_blank'}
   - [现代浏览器内部揭秘（第一部分）](https://github.com/xitu/gold-miner/blob/master/TODO1/inside-look-at-modern-web-browser-part1.md){:target='_blank'}
 - [一文看透浏览器架构](https://segmentfault.com/a/1190000018277184){:target='_blank'}
 - [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
 - [现代浏览器工作原理（一）](http://chuquan.me/2018/01/21/browser-architecture-overview/){:target='_blank'}
 - [Web 浏览器相关的一些概念](https://keqingrong.cn/blog/2019-11-24-concepts-related-to-web-browsers){:target='_blank'}
+
+- [THE BASIC FLOW OF RENDERING ENGINE](https://www.google.com.hk/search?newwindow=1&safe=strict&source=univ&tbm=isch&q=THE+BASIC+FLOW+OF+RENDERING+ENGINE&sa=X&ved=2ahUKEwjNopKj2b7xAhXP7XMBHcUyCs8Q7Al6BAgnEFM&biw=1536&bih=694&dpr=2#imgrc=BOuUFmUelYNhYM){:target='_blank'}
+
+图片很精美：
+- [Quantum Up Close: What is a browser engine?](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/){:target='_blank'}
+  - [解密 Quantum：现代浏览器引擎的构建之道](https://github.com/xitu/gold-miner/blob/master/TODO/quantum-up-close-what-is-a-browser-engine.md){:target='_blank'}
+
+- [掘金翻译计划](https://github.com/xitu/gold-miner/search?q=web+browser){:target='_blank'}
 
 ## 浏览器基本原理
 
@@ -23,9 +33,16 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ## Chrome V8
 
+- [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
+- [V8 Ignition：JS 引擎与字节码的不解之缘](https://cnodejs.org/topic/59084a9cbbaf2f3f569be482){:target='_blank'}
+- [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
+- [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
+
 ## JavaScriptCore
 
 ## WebView
+
+- [理解 WebView](https://github.com/xitu/gold-miner/blob/ec8862f2993f7eea977af6929d0b0785a86fd4e3/TODO1/understanding-webviews.md){:target='_blank'}
 
 ## 相伴日久 —— 浏览器
 
