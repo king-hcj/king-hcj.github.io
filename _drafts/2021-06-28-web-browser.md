@@ -6,6 +6,8 @@ description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 ---
 
+&emsp;&emsp;浏览器的主要功能就是向服务器发出请求，在浏览器窗口中展示您选择的网络资源。这里所说的资源一般是指 HTML 文档，也可以是 PDF、图片或其他的类型。资源的位置由用户使用 URI（统一资源标示符）指定。
+
 ## 浏览器架构
 
 - [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
@@ -35,6 +37,20 @@ WebKit: Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏�
 Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini
 注：2013年2月Opera宣布转向WebKit引擎
 注：2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎
+
+IE: Trident Engine
+Firefox: Gecko Engine
+Safari & Chrome: WebKit (Note: Chrome uses Blink after version 27)
+Opera: Presto
+
+- [Internet Explorer Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741312(v=vs.85)){:target='_blank'}
+
+CHECK SUPPORTED CODE
+http://fmbip.com/
+http://www.browseemall.com/Compatibility/ValidateHTML
+https://www.browseemall.com/Resources
+https://html5test.com/
+https://html5test.com/compare/browser/index.html
 
 ## 浏览器基本原理
 
