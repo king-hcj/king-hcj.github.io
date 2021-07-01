@@ -10,6 +10,37 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ## 浏览器架构
 
+&emsp;&emsp;也许，在你的眼中，浏览器是这样的：
+
+![大多数人眼中的浏览器](https://king-hcj.github.io/images/browser/black-box.png?raw=true)
+
+&emsp;&emsp;实际的浏览器是这样的：
+![浏览器架构](https://king-hcj.github.io/images/browser/browser-diagram-full.png?raw=true)
+
+&emsp;&emsp;而浏览器通用架构，通常是这样的：
+![浏览器架构](https://king-hcj.github.io/images/browser/BROWSER_ARCHITECTURE.png?raw=true)
+
+
+&emsp;&emsp;下面分别介绍浏览器的这几个部分：
+
+- USER INTERFACE
+- BROWSER ENGINE
+- RENDERING ENGINE
+&emsp;&emsp;所谓浏览器内核就是指浏览器最重要或者说核心的部分"Rendering Engine"，译为"渲染引擎"。负责对网页语法的解析，比如HTML、JavaScript，并渲染到网页上。所以浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定这浏览器如何显示页面的内容和页面的格式信息。不同的浏览器内核对语法的解释也不相同，因此同一的网页在不同内核的浏览器显示的效果也会有差异。这也就是网页编写者在不同内核的浏览器中测试网页显示效果的原因。
+- NETWORKING
+- JAVASCRIPT INTERPRETER
+- DISPLAY BACKEND
+- DATA PERSISTENCE
+
+&emsp;&emsp;各浏览器架构
+![FIREFOX架构](https://king-hcj.github.io/images/browser/FIREFOX_ARCHITECTURE.png?raw=true)
+
+![FIREFOX架构](https://king-hcj.github.io/images/browser/CHROME_ARCHITECTURE.png?raw=true)
+
+
+![CPU](https://king-hcj.github.io/images/browser/CPU.png?raw=true)
+![CPU](https://king-hcj.github.io/images/browser/memory.svg?raw=true)
+
 - [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
   - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
   - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2){:target='_blank'}
