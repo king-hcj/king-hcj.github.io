@@ -27,6 +27,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - BROWSER ENGINE
 - RENDERING ENGINE
 &emsp;&emsp;所谓浏览器内核就是指浏览器最重要或者说核心的部分"Rendering Engine"，译为"渲染引擎"。负责对网页语法的解析，比如HTML、JavaScript，并渲染到网页上。所以浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定这浏览器如何显示页面的内容和页面的格式信息。不同的浏览器内核对语法的解释也不相同，因此同一的网页在不同内核的浏览器显示的效果也会有差异。这也就是网页编写者在不同内核的浏览器中测试网页显示效果的原因。
+![RENDERING ENGINE](https://king-hcj.github.io/images/browser/rendering_engines.png?raw=true)
 - NETWORKING
 - JAVASCRIPT INTERPRETER
 - DISPLAY BACKEND
@@ -35,8 +36,9 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 &emsp;&emsp;各浏览器架构
 ![FIREFOX架构](https://king-hcj.github.io/images/browser/FIREFOX_ARCHITECTURE.png?raw=true)
 
-![FIREFOX架构](https://king-hcj.github.io/images/browser/CHROME_ARCHITECTURE.png?raw=true)
+![CHROME架构](https://king-hcj.github.io/images/browser/CHROME_ARCHITECTURE.png?raw=true)
 
+![IE架构](https://king-hcj.github.io/images/browser/IE_ARCHITECTURE.png?raw=true)
 
 ![CPU](https://king-hcj.github.io/images/browser/CPU.png?raw=true)
 ![CPU](https://king-hcj.github.io/images/browser/memory.svg?raw=true)
@@ -93,6 +95,8 @@ https://html5test.com/compare/browser/index.html
 - [V8 Ignition：JS 引擎与字节码的不解之缘](https://cnodejs.org/topic/59084a9cbbaf2f3f569be482){:target='_blank'}
 - [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
 - [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
+
+- [Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
 
 ## JavaScriptCore
 
