@@ -27,6 +27,15 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - [掘金翻译计划](https://github.com/xitu/gold-miner/search?q=web+browser){:target='_blank'}
 
+
+浏览器的内核引擎，基本上是四分天下：
+Trident: IE 以Trident 作为内核引擎;
+Gecko: Firefox 是基于 Gecko 开发;
+WebKit: Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
+Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini
+注：2013年2月Opera宣布转向WebKit引擎
+注：2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎
+
 ## 浏览器基本原理
 
 ## 浏览器与JavaScript
