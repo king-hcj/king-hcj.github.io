@@ -48,6 +48,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
   - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2){:target='_blank'}
   - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3){:target='_blank'}
   - [Inside look at modern web browser (part 4)](https://developers.google.com/web/updates/2018/09/inside-browser-part4){:target='_blank'}
+  - [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
   - [现代浏览器内部揭秘（第一部分）](https://github.com/xitu/gold-miner/blob/master/TODO1/inside-look-at-modern-web-browser-part1.md){:target='_blank'}
 - [一文看透浏览器架构](https://segmentfault.com/a/1190000018277184){:target='_blank'}
 - [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
@@ -87,6 +88,12 @@ https://html5test.com/compare/browser/index.html
 
 ## 浏览器基本原理
 
+- [Design Documents](https://www.chromium.org/developers/design-documents){:target='_blank'}
+- [浏览器运行原理】全程高能动画解析浏览器运行机制！](https://www.zhihu.com/zvideo/1318938663649800192){:target='_blank'}
+  - https://www.zhihu.com/people/li-ming-44-11/zvideos
+  - [Chromium_doc_zh](https://ahangchen.gitbooks.io/chromium_doc_zh/content/zh/){:target='_blank'}
+- [万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
+
 ## 浏览器与JavaScript
 
 ## Chrome V8
@@ -100,9 +107,62 @@ https://html5test.com/compare/browser/index.html
 
 ## JavaScriptCore
 
+- [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'}
+- [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
+- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
+- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
+
 ## WebView
 
 - [理解 WebView](https://github.com/xitu/gold-miner/blob/ec8862f2993f7eea977af6929d0b0785a86fd4e3/TODO1/understanding-webviews.md){:target='_blank'}
+
+- [Android WebView基本使用](https://blog.csdn.net/lowprofile_coding/article/details/77928614){:target='_blank'}
+- [7.5.1 WebView(网页视图)基本用法](https://www.runoob.com/w3cnote/android-tutorial-webview.html){:target='_blank'}
+- [你真的了解webview么？](https://zhuanlan.zhihu.com/p/58691238){:target='_blank'}
+- [Android：这是一份全面 & 详细的Webview使用攻略](https://www.jianshu.com/p/3c94ae673e2a/){:target='_blank'}
+- [WebView你真的熟悉吗？看了才知道](https://www.jianshu.com/p/d2f5ae6b4927){:target='_blank'}
+- [WebView](http://www.androidchina.net/tag/webview){:target='_blank'}
+
+## Headless browser
+
+- [什么是「无头浏览器」 （Headless browser），它有什么应用场景？](https://www.zhihu.com/question/314668782/answer/620975831){:target='_blank'}
+- [啥是无头浏览器，都能干啥？一文说清楚](https://zhuanlan.zhihu.com/p/137843898){:target='_blank'}
+- [Headless Chrome architecture](https://www.cnblogs.com/bigben0123/p/13880254.html){:target='_blank'}
+- [What is a Headless Browser?](https://oxylabs.io/blog/what-is-headless-browser){:target='_blank'}
+- [6 Popular Headless Browsers for Web Testing](https://www.keycdn.com/blog/headless-browsers){:target='_blank'}
+
+- [Headless Chrome architecture](https://www.google.com.hk/search?q=Headless+Chrome+architecture&newwindow=1&safe=strict&tbm=isch&source=iu&ictx=1&fir=W9qdIOjuXPFz5M%252C1zvWEtXccmOnlM%252C_&vet=1&usg=AI4_-kRn8Gc3dK1IDfgodMG38_HcVuPoeQ&sa=X&ved=2ahUKEwiTvdzvuMPxAhW583MBHZnTA7wQ9QF6BAgiEAE#imgrc=W9qdIOjuXPFz5M){:target='_blank'}
+
+&emsp;&emsp;Puppeteer 是一个 node 库，他提供了一组用来操纵 Chrome 的 API, 通俗来说就是一个 headless chrome 浏览器 (当然你也可以配置成有 UI 的，默认是没有的)。既然是浏览器，那么我们手工可以在浏览器上做的事情 Puppeteer 都能胜任, 另外，Puppeteer 翻译成中文是”木偶”意思，所以听名字就知道，操纵起来很方便，你可以很方便的操纵她去实现：
+
+1） 生成网页截图或者 PDF
+2） 高级爬虫，可以爬取大量异步渲染内容的网页
+3） 模拟键盘输入、表单自动提交、登录网页等，实现 UI 自动化测试
+4） 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
+
+&emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
+
+### 坑点
+
+- Cannot find module ‘puppeteer/DeviceDescriptors‘
+
+  - [解决：Error: Cannot find module ‘puppeteer/DeviceDescriptors‘ 问题](https://blog.csdn.net/weixin_38190633/article/details/108663172){:target='\_blank'}
+  - [DeviceDescriptors.ts](https://github.com/puppeteer/puppeteer/blob/main/src/common/DeviceDescriptors.ts){:target='\_blank'}
+  - 解决：`await page.emulate(puppeteer.devices['iPhone 6']);`
+
+- Page.printToPDF 操作一定要在无头模式下进行，有头模式无法调用。
+- Puppeteer 浏览器窗口大小 window size 设置方法：
+
+  - 通过 browser 对象参数的 defaultViewport 设置无法改变浏览器窗口大小
+  - 使用 page 的 page.setViewport()方法也无效
+  - 只能使用 browser 对象的 args: [`--window-size=800,800`]参数设置
+
+- [puppeteer](https://github.com/puppeteer/puppeteer/){:target='\_blank'}
+- [Puppeteer 入门教程](https://www.r9it.com/20171106/puppeteer.html){:target='\_blank'}
+- [API 文档](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md){:target='\_blank'}
+
+- [网站性能测试利器:Puppeteer](https://cloud.tencent.com/developer/article/1086109){:target='\_blank'}
+- [结合项目来谈谈 Puppeteer](https://zhuanlan.zhihu.com/p/76237595){:target='\_blank'}
 
 ## 相伴日久 —— 浏览器
 
@@ -112,7 +172,6 @@ https://html5test.com/compare/browser/index.html
 - [浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/){:target='\_blank'}
 - [从浏览器多进程到 JS 单线程，JS 运行机制最全面的一次梳理](https://segmentfault.com/a/1190000012925872){:target='\_blank'}
 - [🤔 移动端 JS 引擎哪家强？美国硅谷找......](https://mp.weixin.qq.com/s/cV3RH72YKd6jRYBFhjJ-5w){:target='\_blank'}
-- [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
 - [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events){:target='\_blank'}
 - [从 V8 角度揭秘你不知道的面试八股文](https://mp.weixin.qq.com/s/NkaGseRlLKcERx6rpouCFA){:target='_blank'}
 - [高性能 JavaScript 引擎 V8 - 垃圾回收](https://mp.weixin.qq.com/s/TnaQRMpJaxxIUIZS2MK9-g){:target='_blank'}
@@ -124,18 +183,8 @@ https://html5test.com/compare/browser/index.html
 - [浏览器市场份额](https://tongji.baidu.com/research/site){:target='\_blank'}
 - [全球浏览器市场份额](https://gs.statcounter.com/){:target='\_blank'} &#124; [w3counter](https://www.w3counter.com/globalstats.php){:target='\_blank'}
 
-JavaScriptCore：
 
-- [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'}
-- [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
-- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
-- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
-
-WebView：
-
-- [Android WebView基本使用](https://blog.csdn.net/lowprofile_coding/article/details/77928614){:target='_blank'}
-- [7.5.1 WebView(网页视图)基本用法](https://www.runoob.com/w3cnote/android-tutorial-webview.html){:target='_blank'}
-- [你真的了解webview么？](https://zhuanlan.zhihu.com/p/58691238){:target='_blank'}
-- [Android：这是一份全面 & 详细的Webview使用攻略](https://www.jianshu.com/p/3c94ae673e2a/){:target='_blank'}
-- [WebView你真的熟悉吗？看了才知道](https://www.jianshu.com/p/d2f5ae6b4927){:target='_blank'}
-- [WebView](http://www.androidchina.net/tag/webview){:target='_blank'}
+- [QQ浏览器是基于chrome内核开发的吗？](https://zhidao.baidu.com/question/2058022048028049667.html){:target='_blank'}
+- [新版Microsoft Edge（Chromium内核）介绍](https://baijiahao.baidu.com/s?id=1654951353372013675){:target='_blank'}
+  - Microsoft Edge (EdgeHTML)
+  - Chromium

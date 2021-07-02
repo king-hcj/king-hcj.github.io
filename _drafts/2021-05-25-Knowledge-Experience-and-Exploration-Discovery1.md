@@ -99,6 +99,12 @@ window.addEventListener('contextmenu', function (e) {
   - [移动端fixed的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='_blank'}
 - 长背景，上部白底，下底有背景：`background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 100%);`;
 - [CSS实现渐隐渐现效果](https://www.cnblogs.com/WindrunnerMax/p/14366181.html){:target='_blank'}
+- [git cherry-pick 教程](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html){:target='_blank'}：`git cherry-pick`命令的作用，就是将指定的提交（commit）应用于其他分支。【修改错了分支，已经commit，但是又不能直接合并分支】
+  ```s
+  $ git cherry-pick <commitHash> # 将指定的提交commitHash，应用于当前分支
+  $ git cherry-pick feature # 将feature分支的最近一次提交，转移到当前分支
+  $ git cherry-pick <HashA> <HashB> # 将 A 和 B 两个提交应用到当前分支
+  ```
 
 ### Exploration and Discovery
 
