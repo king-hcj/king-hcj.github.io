@@ -375,7 +375,17 @@ add('1', '2');
 
 ## WebView
 
+&emsp;&emsp;WebView 是一种嵌入式浏览器，原生应用可以用它来展示网络内容。WebView 只是一个可视化的组件/控件/微件等。
+
+&emsp;&emsp;运行在你的 WebView 中的 JavaScript 有能力调用原生的系统 API。这意味着你不必受到 Web 代码通常必须遵守的传统浏览器安全沙箱的限制。下图解释了使这样成为可能的架构差异：
+
 ![webview and webapp](https://king-hcj.github.io/images/browser/webview_webapp.png?raw=true)
+
+&emsp;&emsp;WebView 非常棒。虽然看起来它们看起来像是完全特殊和独特的野兽，记住，它们只不过是一个在应用中设置好位置和大小的浏览器，而且不会放置任何花哨的 UI。其实还有更多东西，但这是它的精髓。在大多数情况下，除非你要调用原生 API，否则不必在 WebView 中专门测试 Web 应用。除此以外，你在 WebView 中看到的内容与你在浏览器中看到的内容相同，尤其是使用同一渲染引擎时：
+
+- 在 iOS 上，Web 渲染引擎始终是 WebKit，与 Safari 和 Chrome 相同。是的，你没看错。iOS 上的 Chrome 实际上使用了 WebKit。
+- 在 Android 上的渲染引擎通常是 Blink，与 Chrome 相同。
+- 在 Windows，Linux 和 macOS 上，由于这些是更宽松的桌面平台，因此在选择 WebView 风格和渲染引擎时会有很大的灵活性。你看到的流行渲染引擎将是 Blink（Chrome）和 Trident（Internet Explorer），但是没有一个引擎可以依赖。这完全取决于应用以及它正在使用的 WebView 引擎。
 
 - [理解 WebView](https://github.com/xitu/gold-miner/blob/ec8862f2993f7eea977af6929d0b0785a86fd4e3/TODO1/understanding-webviews.md){:target='_blank'}
 
@@ -404,21 +414,6 @@ add('1', '2');
 4） 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
 
 &emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
-
-### 坑点
-
-- Cannot find module ‘puppeteer/DeviceDescriptors‘
-
-  - [解决：Error: Cannot find module ‘puppeteer/DeviceDescriptors‘ 问题](https://blog.csdn.net/weixin_38190633/article/details/108663172){:target='\_blank'}
-  - [DeviceDescriptors.ts](https://github.com/puppeteer/puppeteer/blob/main/src/common/DeviceDescriptors.ts){:target='\_blank'}
-  - 解决：`await page.emulate(puppeteer.devices['iPhone 6']);`
-
-- Page.printToPDF 操作一定要在无头模式下进行，有头模式无法调用。
-- Puppeteer 浏览器窗口大小 window size 设置方法：
-
-  - 通过 browser 对象参数的 defaultViewport 设置无法改变浏览器窗口大小
-  - 使用 page 的 page.setViewport()方法也无效
-  - 只能使用 browser 对象的 args: [`--window-size=800,800`]参数设置
 
 - [puppeteer](https://github.com/puppeteer/puppeteer/){:target='\_blank'}
 - [Puppeteer 入门教程](https://www.r9it.com/20171106/puppeteer.html){:target='\_blank'}
@@ -455,7 +450,6 @@ add('1', '2');
   - Chromium
 
 ### Chrome 
-
 
 - [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
   - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
