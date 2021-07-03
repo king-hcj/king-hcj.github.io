@@ -234,7 +234,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;需要略作补充的是，我们经常还会听到Chromium、Webkit2、Blink这些引擎。
 
-- Chromium：基于webkit，08年开始作为Chrome的引擎，Chromium浏览器是Chrome的实验版，实验新特性。
+- Chromium：基于webkit，08年开始作为Chrome的引擎，Chromium浏览器是Chrome的实验版，实验新特性。可以简单地理解为：Chromium为实验版，具有众多新特性；Chrome为稳定版。
 
 ![chromium 架构](https://king-hcj.github.io/images/browser/chromium.jpeg?raw=true)
 
