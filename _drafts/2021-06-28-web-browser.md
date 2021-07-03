@@ -1,18 +1,96 @@
 ---
 layout: post
-title: Web 浏览器面面观
+title: Web浏览器面面观
 categories: Chrome
 description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 ---
 
-&emsp;&emsp;浏览器的主要功能就是向服务器发出请求，在浏览器窗口中展示您选择的网络资源。这里所说的资源一般是指 HTML 文档，也可以是 PDF、图片或其他的类型。资源的位置由用户使用 URI（统一资源标示符）指定。
+&emsp;&emsp;浏览器的主要功能就是向服务器发出请求，在浏览器窗口中展示HTML文档、PDF、图片、视频等网络内容。这些网络资源的位置由用户使用 URI（统一资源标示符）来指定指定。
 
-## 浏览器架构
-
-&emsp;&emsp;也许，在你的眼中，浏览器是这样的：
+&emsp;&emsp;获取在大多数人眼中，浏览器是这样的：
 
 ![大多数人眼中的浏览器](https://king-hcj.github.io/images/browser/black-box.png?raw=true)
+
+&emsp;&emsp;一个展示前端，一个未知的中间层连接着网络世界；甚至，网络世界也可以省略：一台显示器，一个神秘的幕后黑盒。
+
+&emsp;&emsp;如果你是一个前端开发者，甚至每天浏览器陪伴你度过的时光比女朋友陪伴你的都要久，想想那每一个令人“不是那么期待”的早晨，每一个争分夺秒完成任务的黄昏，只有浏览器和编辑器一直是你忠实的伙伴。而就连你一直离不开的VS Code编辑器，甚至也与浏览器有着莫大的渊源。
+&emsp;&emsp;屏幕前的朋友，你熟悉自己身边的那些人吗，熟悉那些与你朝夕相伴的朋友吗？也许熟悉，也许补，那么，你是否愿意花些时间来熟悉一下这个在大量时间里与你有着莫大交集的浏览器的内心世界呢？
+
+&emsp;&emsp;今天，我们就来一探究竟，走进这个我们与网络连接最紧密的中间地带。
+
+## 浏览器发展史
+
+### 浏览器的诞生与发展
+
+&emsp;&emsp;第一款浏览器诞生于1990年，但是现代浏览器的雏形却出现在1980s年代。
+
+&emsp;&emsp;一位名叫蒂姆·伯纳斯-李的英国科学家在 1980 年代初期创建了一个名为 Inquire 的计算机程序，当时他在总部位于瑞士的欧洲核研究组织（CERN，以其法文字母表示）工作。该计划旨在使在 CERN 工作的许多不同个人更容易共享信息。
+
+&emsp;&emsp;1990年，第一款浏览器问世于Tim Berners-Lee 在 CERN 工作期间。您可能想知道 Web 浏览器到底是什么，简而言之，它是一个计算机程序，其目的是显示和检索数据。使用分配给存储在网络服务器上的每个数据集（网页）的 URL，它可以做到这一点。所以这意味着当您在浏览器中输入内容时，您实际上是在输入地址，浏览器将使用该地址来获取您想要查看的信息。浏览器的另一个关键功能是以易于理解的方式向您解释和呈现计算机代码。
+
+&emsp;&emsp;浏览器简史：
+
+![Timeline_of_the_Web_Browsers](https://king-hcj.github.io/images/browser/Timeline_of_the_Web_Browsers.jpg?raw=true)
+
+&emsp;&emsp;早起的浏览器：
+
+![The-Early-Browsers](https://king-hcj.github.io/images/browser/The-Early-Browsers.jpeg?raw=true)
+
+&emsp;&emsp;浏览器诞生之后的故事，想必您已经早有耳闻：
+
+- NCSA Mosaic，或简称Mosaic，是互联网历史上第一个获普遍使用和能够显示图片的网页浏览器。它是由伊利诺伊大学厄巴纳-香槟分校的NCSA组织在1993年所发表，并于1997年1月7日正式终止开发和支持。在当时人气爆发的大受欢迎。Mosaic的出现，算是点燃了后期互联网热潮的火种之一。后来网景导航者浏览器的开发工作，聘用了许多原有的Mosaic浏览器工程师，但是没有采用Mosaic网页浏览器的任何代码。传承网景浏览器代码的后裔为Firefox浏览器。
+
+- Marc Andreesen 与同事 Jim Clark 于 1994 年成立了一家公司，当时 Mosaic 还是最流行的浏览器，它们计划打造出一个比 Mosaic 更好的浏览器，占领市场，让他们变得富有，并改变历史。他们的第一个浏览器被称为 Mosaic Netscape 0.9，不久更名 Netscape。得益于 JavaScript 和“partial-screen loading”（即使页面未完全加载，用户也可以开始阅读页面上的详细信息，这一个新概念极大地丰富了在线体验）等功能，它很快成为市场领导者，占据了浏览器市场上一半的份额，Netscape 的 IPO 也助长了日益增长的网络泡沫。
+
+- Netscape 最初的成功向那些在计算机和互联网领域工作的人证明了时代已经永远改变了，这让当时业内最强大的参与者感到震惊。一家名为 Microsoft 的西雅图公司就是这样一家公司。Netscape 对微软来说是一个挑战，微软在 1990 年代后期创建了自己的浏览器 Internet Explorer，但它通常被视为劣质产品。由于其跨平台特性，人们可以在 Windows PC 或 Mac 或任何其他系统上使用 Netscape，这导致许多人猜测**操作系统的时代已经结束**。计算机将通过浏览器运行，浏览器可以在任何机器上运行，从而使软件行业民主化并降低其相当大的进入壁垒。**微软已经建立了销售其专有操作系统 Windows 的帝国**，因此将这种由 Netscape 等公司带头的发展视为一种威胁。微软通过对其产品的大量投资，成功地迅速扭转了浏览器行业的局面，使其与 Netscape 一样好。Windows 计算机在发布时已经安装了 Internet Explorer（Microsoft 的浏览器），这使其能够在市场上占据一席之地并不断发展壮大，最终在浏览器领域取得了胜利。
+
+![Market_Share_During_the_Browser_Wars](https://king-hcj.github.io/images/browser/Market_Share_During_the_Browser_Wars.jpg?raw=true)
+
+&emsp;&emsp;市场份额的快速下滑导致 Netscape 在 2000 年卖给了 AOL，2008 年Netscape最终灭绝。
+&emsp;&emsp;到 2003 年，微软的 Internet Explorer 控制了 92% 以上的市场，完全扭转了 1995 年的局面。然而，虽然微软在不到十年的时间里成功地完全接管了浏览器市场，但很快就会出现其他竞争，再次重塑网络浏览器的历史。
+
+- 在微软在 1990 年代后期崛起并让 Netscape 等公司屈服之后，浏览器的历史似乎已经走到了尽头。然而，正如最初发布后的情况一样，Internet Explorer 正在成为劣质产品。谷歌于 2008 年推出了其专有浏览器——Chrome。到 2012 年底，即推出仅四年后，谷歌 Chrome 浏览器凭借其易用性、跨平台功能、速度以及与标签和书签相关的特殊功能，取代 Internet Explorer 成为最受欢迎的浏览器。
+
+- 在 2000 年代初期，可能是在微软将浏览器附加到其操作系统之后，Apple 发布了 Safari，一种专为 Mac 设计的浏览器，并成为目前市场上第二大浏览器。
+
+- Internet Explorer 的流行度在 2000 年代后期逐渐减少，主要是因为它变得缓慢和过时，而 Microsoft 发现自己现在似乎已经是在外面观察浏览器世界。该公司不想继续错过，于是着手解决这个问题，但发现一个关键问题是“Internet Explorer”这个名字已经成为劣质浏览器的同义词。因此，为了尝试重新进入游戏，微软不得不重新命名，它通过发布 Edge 来实现，这是微软浏览器的最新版本，它收到了很多好评，但对于 Microsoft 来说，作为 Edge 可能为时已晚。
+
+- IE浏览器终成时代之泪，Microsoft Edge成为Windows 11的默认浏览器。这是Windows系统更新20年来，IE的首次缺席，也是最后一次。早在Win10更新时微软就表示，将放弃更新IE转向开发新的浏览器Microsoft Edge。如今是彻底要和桌面上的IE说再见了。 —— IE 浏览器将在 2022 年安息，它也将从 Windows 11 中消失。
+
+### 浏览器市场份额
+
+&emsp;&emsp;截止2021年7月初，浏览器市场份额如下：
+
+&emsp;&emsp;浏览器使用趋势：
+
+![Web_Browser_Usage_Trends](https://king-hcj.github.io/images/browser/Web_Browser_Usage_Trends.png?raw=true)
+
+&emsp;&emsp;浏览器市场份额：
+
+![Web_Browser_Market_Share](https://king-hcj.github.io/images/browser/Web_Browser_Market_Share.png?raw=true)
+
+
+&emsp;&emsp;国内浏览器市场份额：
+
+![Web_Browser_Market_Share_CHN](https://king-hcj.github.io/images/browser/Web_Browser_Market_Share_CHN.png?raw=true)
+
+如何查看浏览器市场份额：
+
+- 国内浏览器市场份额
+  - [浏览器市场份额](https://tongji.baidu.com/research/site){:target='\_blank'}
+- 全球浏览器市场份额
+  - [全球浏览器市场份额](https://gs.statcounter.com/){:target='\_blank'}
+  - [w3counter](https://www.w3counter.com/globalstats.php){:target='\_blank'}
+
+
+### 参考资料
+
+- [The Story of the Web: A History Of Internet Browsers](https://www.internetadvisor.com/the-story-of-the-web-a-history-of-internet-browsers){:target='_blank'}
+- [THE HISTORY OF THE WEB BROWSER](https://minimalistwpthemes.com/history-of-the-web-browser/){:target='_blank'}
+- [浏览器简史](http://www.cnw.com.cn/zhuanti/2009-ie/){:target='_blank'}
+
+## 浏览器架构
 
 &emsp;&emsp;实际的浏览器是这样的：
 ![浏览器架构](https://king-hcj.github.io/images/browser/browser-diagram-full.png?raw=true)
@@ -85,6 +163,9 @@ http://www.browseemall.com/Compatibility/ValidateHTML
 https://www.browseemall.com/Resources
 https://html5test.com/
 https://html5test.com/compare/browser/index.html
+
+## 浏览器内核
+
 
 ## 浏览器基本原理
 
@@ -178,13 +259,11 @@ https://html5test.com/compare/browser/index.html
 
 - [自主研发一款浏览器内核的难度到底有多大？](https://www.zhihu.com/question/290564335/answer/474202037){:target='\_blank'}
 
-- [浏览器市场占有率分析](https://zhuanlan.zhihu.com/p/187066428){:target='\_blank'}
-
-- [浏览器市场份额](https://tongji.baidu.com/research/site){:target='\_blank'}
-- [全球浏览器市场份额](https://gs.statcounter.com/){:target='\_blank'} &#124; [w3counter](https://www.w3counter.com/globalstats.php){:target='\_blank'}
-
 
 - [QQ浏览器是基于chrome内核开发的吗？](https://zhidao.baidu.com/question/2058022048028049667.html){:target='_blank'}
 - [新版Microsoft Edge（Chromium内核）介绍](https://baijiahao.baidu.com/s?id=1654951353372013675){:target='_blank'}
   - Microsoft Edge (EdgeHTML)
   - Chromium
+
+
+- [浏览器市场占有率分析](https://zhuanlan.zhihu.com/p/187066428){:target='\_blank'}
