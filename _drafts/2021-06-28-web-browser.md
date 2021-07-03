@@ -169,6 +169,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![isolation](https://king-hcj.github.io/images/browser/isolation.png?raw=true)
 
+- [Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
+
 ### 浏览器架构
 
 &emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，再次不过多赘述：
@@ -219,6 +221,11 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 &emsp;&emsp;需要略作补充的是，我们经常还会听到Chromium、Webkit2、Blink这些引擎。
 
 - Chromium：基于webkit，08年开始作为Chrome的引擎，Chromium浏览器是Chrome的实验版，实验新特性。
+
+![chromium 架构](https://king-hcj.github.io/images/browser/chromium.jpeg?raw=true)
+
+> 图片来源：[万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
+
 - Webkit2：2010年随OS X Lion一起面世。WebCore层面实现进程隔离与Google的沙箱设计存在冲突。
 - Blink：基于Webkit2分支，是WebKit中WebCore组件的一个分支，13年谷歌开始作为Chrome 28的引擎集成在Chromium浏览器里。Android的WebView同样基于Webkit2。Opera（15及往后版本）和Yandex浏览器中也在使用。
 
@@ -237,7 +244,6 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 #### 数据存储
 
 &emsp;&emsp;这是持久层。浏览器需要在硬盘上保存各种数据，例如 Cookie。新的 HTML 规范 (HTML5) 定义了“网络数据库”，这是一个完整（但是轻便）的浏览器内数据库。
-
 
 ### 求同存异的浏览器架构
 
@@ -268,16 +274,74 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
   - [Chromium_doc_zh](https://ahangchen.gitbooks.io/chromium_doc_zh/content/zh/){:target='_blank'}
 - [万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
 
+## Chrome V8
+
+&emsp;&emsp;关于Chrome V8，笔者曾有一篇笔记做了比较详细的介绍，全文脉络如下，感兴趣可以[参考阅读](https://segmentfault.com/a/1190000037435824){:target='_blank'}。
+
+![Chrome-V8](https://king-hcj.github.io/images/posts/arts/Chrome-V8.png?raw=true)
+
+&emsp;&emsp;V8 是一个非常复杂的项目，有超过 100 万行 C++代码。它由许多子模块构成，其中这 4 个模块是最重要的：
+
+- [Parser](https://v8.dev/blog/scanner){:target='\_blank'}：负责将 JavaScript 源码转换为 Abstract Syntax Tree (AST)
+  > 确切的说，在“Parser”将 JavaScript 源码转换为 AST前，还有一个叫”Scanner“的过程，具体流程如下：
+  ![Scanner](https://king-hcj.github.io/images/posts/arts/overview.png?raw=true)
+
+- [Ignition](https://v8.dev/docs/ignition){:target='\_blank'}：interpreter，即解释器，负责将 AST 转换为 Bytecode，解释执行 Bytecode；同时收集 TurboFan 优化编译所需的信息，比如函数参数的类型；解释器执行时主要有四个模块，内存中的字节码、寄存器、栈、堆。
+
+- [TurboFan](https://v8.dev/docs/turbofan){:target='\_blank'}：compiler，即编译器，利用 Ignition 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
+- [Orinoco](https://v8.dev/blog/trash-talk){:target='\_blank'}：garbage collector，垃圾回收模块，负责将程序不再需要的内存空间回收。
+
+&emsp;&emsp;其中，Parser，Ignition 以及 TurboFan 可以将 JS 源码编译为汇编代码，其流程图如下：
+
+![V8流程](https://king-hcj.github.io/images/posts/arts/ignition-turbofan-pipeline.jpeg?raw=true)
+
+&emsp;&emsp;简单地说，Parser 将 JS 源码转换为 AST，然后 Ignition 将 AST 转换为 Bytecode，最后 TurboFan 将 Bytecode 转换为经过优化的 Machine Code(实际上是汇编代码)。
+
+- 如果函数没有被调用，则 V8 不会去编译它。
+- 如果函数只被调用 1 次，则 Ignition 将其编译 Bytecode 就直接解释执行了。TurboFan 不会进行优化编译，因为它需要 Ignition 收集函数执行时的类型信息。这就要求函数至少需要执行 1 次，TurboFan 才有可能进行优化编译。
+- 如果函数被调用多次，则它有可能会被识别为**热点函数**，且 Ignition 收集的类型信息证明可以进行优化编译的话，这时 TurboFan 则会将 Bytecode 编译为 Optimized Machine Code（已优化的机器码），以提高代码的执行性能。
+
+&emsp;&emsp;图片中的红色虚线是逆向的，也就是说 Optimized Machine Code 会被还原为 Bytecode，这个过程叫做 **Deoptimization**。这是因为 Ignition 收集的信息可能是错误的，比如 add 函数的参数之前是整数，后来又变成了字符串。生成的 Optimized Machine Code 已经假定 add 函数的参数是整数，那当然是错误的，于是需要进行 Deoptimization。
+
+```js
+function add(x, y) {
+  return x + y;
+}
+
+add(1, 2);
+add('1', '2');
+```
+
+&emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：node test.js)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
+
 ## 浏览器与JavaScript
 
-## Chrome V8
+- 在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
+- V8 执行一段 JavaScript 的流程图：
+
+  ![V8执行一段JavaScript流程图](https://king-hcj.github.io/images/posts/arts/v8.jpg?raw=true)
+
+- **V8 本质上是一个虚拟机**，因为计算机只能识别二进制指令，所以要让计算机执行一段高级语言通常有两种手段：
+  - 第一种是将高级代码转换为二进制代码，再让计算机去执行；
+  - 另外一种方式是在计算机安装一个解释器，并由解释器来解释执行。
+- 解释执行和编译执行都有各自的优缺点，**解释执行启动速度快，但是执行时速度慢，而编译执行启动速度慢，但是执行速度快**。为了充分地利用解释执行和编译执行的优点，规避其缺点，**V8 采用了一种权衡策略，在启动过程中采用了解释执行的策略，但是如果某段代码的执行频率超过一个值，那么 V8 就会采用优化编译器将其编译成执行效率更加高效的机器代码**。
+- 总结：
+
+  **V8 执行一段 JavaScript 代码所经历的主要流程**包括：
+
+  - 初始化基础环境；
+  - 解析源码生成 AST 和作用域；
+  - 依据 AST 和作用域生成字节码；
+  - 解释执行字节码；
+  - 监听热点代码；
+  - 优化热点代码为二进制的机器代码；
+  - 反优化生成的二进制机器代码。
+
 
 - [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
 - [V8 Ignition：JS 引擎与字节码的不解之缘](https://cnodejs.org/topic/59084a9cbbaf2f3f569be482){:target='_blank'}
 - [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
 - [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
-
-- [Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
 
 ## JavaScriptCore
 
