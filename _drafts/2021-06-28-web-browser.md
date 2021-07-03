@@ -33,7 +33,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![Timeline_of_the_Web_Browsers](https://king-hcj.github.io/images/browser/Timeline_of_the_Web_Browsers.jpg?raw=true)
 
-&emsp;&emsp;早起的浏览器：
+&emsp;&emsp;早期的浏览器：
 
 ![The-Early-Browsers](https://king-hcj.github.io/images/browser/The-Early-Browsers.jpeg?raw=true)
 
@@ -94,11 +94,15 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 计算机的核心
 
+#### CPU
+
 &emsp;&emsp;中央处理器（Central Processing Unit），或简称为 CPU。CPU 可以看作是计算机的大脑。**一个 CPU 核心如图中的办公人员，可以逐一解决很多不同任务**。它可以在解决从数学到艺术一切任务的同时还知道如何响应客户要求。过去 CPU 大多是单芯片的，一个核心就像存在于同芯片的另一个 CPU。随着现代硬件发展，你经常会有不止一个内核，为你的手机和笔记本电脑提供更多的计算能力。
 
 &emsp;&emsp;4 个 CPU 核心作为办公人员，坐在办公桌前处理各自的工作：
 
 ![CPU](https://king-hcj.github.io/images/browser/CPU.png?raw=true)
+
+#### GPU
 
 &emsp;&emsp;图形处理器（Graphics Processing Unit，简称为 GPU）是计算机的另一部件。与 CPU 不同，GPU 擅长同时处理跨内核的简单任务。顾名思义，**它最初是为解决图形而开发的**。这就是为什么在图形环境中“使用 GPU” 或 “GPU 支持”都与快速渲染和顺滑交互有关。近年来随着 GPU 加速计算的普及，仅靠 GPU 一己之力也使得越来越多的计算成为可能。
 
@@ -113,7 +117,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 ![hw-os-app](https://king-hcj.github.io/images/browser/hw-os-app.png?raw=true)
 
 
-### 进程与线程
+#### 进程与线程
 
 &emsp;&emsp;进程可以被描述为是一个应用的执行程序。线程是位于进程内部并执行其进程程序的任意部分。
 
@@ -286,7 +290,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
   - [Chromium_doc_zh](https://ahangchen.gitbooks.io/chromium_doc_zh/content/zh/){:target='_blank'}
 - [万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
 
-## Chrome V8
+### Chrome V8
 
 &emsp;&emsp;关于Chrome V8，笔者曾有一篇笔记做了比较详细的介绍，全文脉络如下，感兴趣可以[参考阅读](https://segmentfault.com/a/1190000037435824){:target='_blank'}。
 
@@ -326,7 +330,7 @@ add('1', '2');
 
 &emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：node test.js)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
 
-## JavaScriptCore
+### JavaScriptCore
 
 &emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是Chrome的V8。这些JS引擎的使命都相同，那就是解释执行JS脚本。而从上面的渲染流程图我们可以看到，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们也通过一张图看下它的工作流程:
 
@@ -341,7 +345,7 @@ add('1', '2');
 - [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
 - [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
 
-## 浏览器与JavaScript
+### 浏览器与JavaScript
 
 - 在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
 - V8 执行一段 JavaScript 的流程图：
