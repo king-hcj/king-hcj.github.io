@@ -19,7 +19,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;今天，我们就来一探究竟，走进这个我们与网络连接最紧密的中间地带。
 
-## 浏览器发展史
+## 浏览器发展简史
 
 ### 浏览器的诞生与发展
 
@@ -92,55 +92,155 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ## 浏览器架构
 
-&emsp;&emsp;实际的浏览器是这样的：
+### 计算机的核心
+
+&emsp;&emsp;中央处理器（Central Processing Unit），或简称为 CPU。CPU 可以看作是计算机的大脑。**一个 CPU 核心如图中的办公人员，可以逐一解决很多不同任务**。它可以在解决从数学到艺术一切任务的同时还知道如何响应客户要求。过去 CPU 大多是单芯片的，一个核心就像存在于同芯片的另一个 CPU。随着现代硬件发展，你经常会有不止一个内核，为你的手机和笔记本电脑提供更多的计算能力。
+
+&emsp;&emsp;4 个 CPU 核心作为办公人员，坐在办公桌前处理各自的工作：
+
+![CPU](https://king-hcj.github.io/images/browser/CPU.png?raw=true)
+
+&emsp;&emsp;图形处理器（Graphics Processing Unit，简称为 GPU）是计算机的另一部件。与 CPU 不同，GPU 擅长同时处理跨内核的简单任务。顾名思义，**它最初是为解决图形而开发的**。这就是为什么在图形环境中“使用 GPU” 或 “GPU 支持”都与快速渲染和顺滑交互有关。近年来随着 GPU 加速计算的普及，仅靠 GPU 一己之力也使得越来越多的计算成为可能。
+
+&emsp;&emsp;许多带特定扳手的 GPU 内核意味着它们只能处理有限任务
+
+![GPU](https://king-hcj.github.io/images/browser/GPU.png?raw=true)
+
+&emsp;&emsp;当你在电脑或手机上启动应用时，是 **CPU 和 GPU 为应用供能**。通常情况下应用是通过操作系统提供的机制在 CPU 和 GPU 上运行。
+
+&emsp;&emsp;三层计算机体系结构，底部是机器硬件，中间是操作系统，顶部是应用程序。
+
+![hw-os-app](https://king-hcj.github.io/images/browser/hw-os-app.png?raw=true)
+
+
+### 进程与线程
+
+&emsp;&emsp;进程可以被描述为是一个应用的执行程序。线程是位于进程内部并执行其进程程序的任意部分。
+
+&emsp;&emsp;启动应用时会创建一个进程。程序也许会创建一个或多个线程来帮助它工作，这是可选的。操作系统为进程提供了一个可以使用的“一块”内存，所有应用程序状态都保存在该私有内存空间中。关闭应用程序时，相应的进程也会消失，操作系统会释放内存。
+
+![memory](https://king-hcj.github.io/images/browser/memory.svg?raw=true)
+
+&emsp;&emsp;进程可以请求操作系统启动另一个进程来执行不同的任务。此时，内存中的不同部分会分给新进程。如果两个进程需要对话，他们可以通过**进程间通信（IPC）**来进行。许多应用都是这样设计的，所以如果一个工作进程失去响应，该进程就可以在不停止应用程序不同部分的其他进程运行的情况下重新启动。
+
+![workerprocess](https://king-hcj.github.io/images/browser/workerprocess.svg?raw=true)
+
+### 浏览器的进程/线程架构模型
+
+&emsp;&emsp;关于如何构建 web 浏览器并不存在标准规范，一个浏览器的构建方法可能与另一个迥然不同。不同浏览器架构的进程/线程一般由下图几部分：
+
+![browser-arch](https://king-hcj.github.io/images/browser/browser-arch.png?raw=true)
+
+&emsp;&emsp;而当下“浏览器世界的王者” Chrome 架构如下图所示，渲染进程下显示了多个层，表明 Chrome 为每个标签页运行多个渲染进程。
+
+![browser-arch-chrome](https://king-hcj.github.io/images/browser/browser-arch-chrome.png?raw=true)
+
+&emsp;&emsp;顶部是浏览器进程，它与处理应用其它模块任务的进程进行协调。对于渲染进程来说，创建了多个渲染进程并分配给了每个标签页。直到最近，Chrome 在可能的情况下给每个标签页分配一个进程。而现在它试图给每个站点分配一个进程，包括 iframe。
+
+- 浏览器进程：控制应用中的 “Chrome” 部分，包括地址栏，书签，回退与前进按钮。以及处理 web 浏览器不可见的特权部分，如网络请求与文件访问。
+- 渲染进程：控制标签页内网站展示。
+- 插件进程：控制站点使用的任意插件，如 Flash。
+- GPU进程：处理独立于其它进程的 GPU 任务。GPU 被分成不同进程，因为 GPU 处理来自多个不同应用的请求并绘制在相同表面。
+
+&emsp;&emsp;不同进程指向浏览器 UI 的不同部分：
+
+![browserui](https://king-hcj.github.io/images/browser/browserui.png?raw=true)
+
+
+&emsp;&emsp;更多进程信息，可通过在浏览器顶栏右键，任务管理器查看。或者可以点击右上角的选项菜单图标，选择更多工具，然后选择任务管理器。在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量。
+
+【图】
+
+&emsp;&emsp;前文中提到了 Chrome 使用多个渲染进程，那他有什么优势呢？
+
+- 稳定：最简单的情况下，你可以想象每个标签页都有自己的渲染进程。假设你打开了三个标签页，每个标签页都拥有自己独立的渲染进程。如果某个标签页失去响应，你可以关掉这个标签页，此时其它标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应，显然这样的体验会很糟糕，下面是对比动图，供你参考。
+
+![tabs](https://king-hcj.github.io/images/browser/tabs.svg?raw=true)
+
+- 安全性与沙箱化：把浏览器工作分成多个进程的另一好处是安全性与沙箱化。由于操作系统提供了限制进程权限的方法，浏览器就可以用沙箱保护某些特定功能的进程。例如，Chrome 浏览器限制处理任意用户输入的进程(如渲染器进程)对任意文件的访问。
+
+- 共享拷贝：由于进程有自己的私有内存空间，所以它们通常包含公共基础设施的拷贝(如 V8，它是 Chrome 的 JavaScript 引擎)。这意味着使用了更多的内存，如果它们是同一进程中的线程，就无法共享这些拷贝。为了节省内存，Chrome 对可启动的进程数量有所限制。具体限制数值依设备可提供的内存与 CPU 能力而定，但是**当 Chrome 运行时达到限制时，会开始在同一站点的不同标签页上运行同一进程**。
+
+&emsp;&emsp;Chrome 正在经历架构变革，它转变为将浏览器程序的每一模块作为一个服务来运行，从而可以轻松实现进程的拆解或聚合。具体表现是，当 Chrome 运行在**强力硬件**上时，它会将每个服务分解到不同进程中，从而**提升稳定性**，但是如果 Chrome 运行在资源有限的设备上时，它会将服务聚合到一个进程中从而**节省了内存占用**。在这一架构变革实现前，类似的整合进程以减少内存使用的方法已经在 Android 类平台上使用。
+
+![servicfication](https://king-hcj.github.io/images/browser/servicfication.svg?raw=true)
+
+&emsp;&emsp;Chrome 67 版本后，桌面版 Chrome 都默认开启了站点隔离，每个标签页的 iframe 都有一个单独的渲染进程。启用站点隔离是多年来工程人员努力的结果。站点隔离并不只是分配不同的渲染进程这么简单。它从根本上改变了 iframe 的通信方式。在一个页面上打开开发者工具，让 iframe 在不同的进程上运行，这意味着开发者工具必须在幕后工作，以使它看起来无缝。即使运行一个简单的 Ctrl + F 来查找页面中的一个单词，也意味着在不同的渲染器进程中进行搜索。你可以看到为什么浏览器工程师把发布站点隔离功能作为一个重要里程碑！
+
+![isolation](https://king-hcj.github.io/images/browser/isolation.png?raw=true)
+
+### 浏览器架构
+
+&emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，再次不过多赘述：
+
+  - [经典面试题：从 URL 输入到页面展现到底发生什么？](https://zhuanlan.zhihu.com/p/57895541){:target='_blank'}
+  - [在浏览器输入 URL 回车之后发生了什么（超详细版）](https://zhuanlan.zhihu.com/p/80551769){:target='_blank'}
+
+&emsp;&emsp;浏览器的主要任务之一就是渲染展示页面，不同的浏览器内核，渲染过程也不完全相同，但大致流程都差不多，下面这张图片是火狐浏览器（Firefox）开发文档中的一张图片。
+
 ![浏览器架构](https://king-hcj.github.io/images/browser/browser-diagram-full.png?raw=true)
 
-&emsp;&emsp;而浏览器通用架构，通常是这样的：
+&emsp;&emsp;上面这张图片大体揭示了浏览器的渲染展示流程，但是从浏览器的整体架构上来说，上面的图片展示的也许只是浏览器体系中的冰山一角。
+
+&emsp;&emsp;通常意义下，浏览器架构是如下图这样的：
+
 ![浏览器架构](https://king-hcj.github.io/images/browser/BROWSER_ARCHITECTURE.png?raw=true)
 
+#### 用户界面
 
-&emsp;&emsp;下面分别介绍浏览器的这几个部分：
+&emsp;&emsp;包括地址栏、前进/后退按钮、书签菜单等。除了浏览器主窗口显示的您请求的页面外，其他显示的各个部分都属于用户界面。
 
-- USER INTERFACE
-- BROWSER ENGINE
-- RENDERING ENGINE
+#### 浏览器引擎
+
+&emsp;&emsp;用户界面和渲染引擎的桥梁，在用户界面和渲染引擎之间传送指令。浏览器引擎提供了开始加载URL资源 和一些其他高级操作方法，比如：重新加载、前进、后退动作，错误信息、加载进度等。
+
+#### 渲染引擎
+
+&emsp;&emsp;负责显示请求的内容。如果请求的内容是 HTML，它就负责解析 HTML 和 CSS 内容，并将解析后的内容显示在屏幕上。
+
 &emsp;&emsp;所谓浏览器内核就是指浏览器最重要或者说核心的部分"Rendering Engine"，译为"渲染引擎"。负责对网页语法的解析，比如HTML、JavaScript，并渲染到网页上。所以浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定这浏览器如何显示页面的内容和页面的格式信息。不同的浏览器内核对语法的解释也不相同，因此同一的网页在不同内核的浏览器显示的效果也会有差异。这也就是网页编写者在不同内核的浏览器中测试网页显示效果的原因。
-![RENDERING ENGINE](https://king-hcj.github.io/images/browser/rendering_engines.png?raw=true)
-- NETWORKING
-- JAVASCRIPT INTERPRETER
-- DISPLAY BACKEND
-- DATA PERSISTENCE
 
-&emsp;&emsp;各浏览器架构
+![RENDERING ENGINE](https://king-hcj.github.io/images/browser/browser_inner.png?raw=true)
+
+#### 网络
+
+&emsp;&emsp;用于网络调用，比如 HTTP 请求。其接口与平台无关，并为所有平台提供底层实现，负责网络通信和安全。
+
+#### JavaScript 解释器。
+
+&emsp;&emsp;用于解析和执行 JavaScript 代码，执行结果将传递给渲染引擎来展示。
+
+#### 用户界面后端
+
+&emsp;&emsp;用于绘制基本的窗口小部件，比如组合框和窗口。其公开了与平台无关的通用接口，而在底层使用操作系统的用户界面方法。
+
+#### 数据存储
+
+&emsp;&emsp;这是持久层。浏览器需要在硬盘上保存各种数据，例如 Cookie。新的 HTML 规范 (HTML5) 定义了“网络数据库”，这是一个完整（但是轻便）的浏览器内数据库。
+
+
+### 求同存异的浏览器架构
+
+&emsp;&emsp;FIREFOX架构：
+
 ![FIREFOX架构](https://king-hcj.github.io/images/browser/FIREFOX_ARCHITECTURE.png?raw=true)
+
+&emsp;&emsp;CHROME架构：
 
 ![CHROME架构](https://king-hcj.github.io/images/browser/CHROME_ARCHITECTURE.png?raw=true)
 
+&emsp;&emsp;IE架构：
+
 ![IE架构](https://king-hcj.github.io/images/browser/IE_ARCHITECTURE.png?raw=true)
 
-![CPU](https://king-hcj.github.io/images/browser/CPU.png?raw=true)
-![CPU](https://king-hcj.github.io/images/browser/memory.svg?raw=true)
+> 参考资料：[Internet Explorer Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741312(v=vs.85)){:target='_blank'}
 
-- [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
-  - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
-  - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2){:target='_blank'}
-  - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3){:target='_blank'}
-  - [Inside look at modern web browser (part 4)](https://developers.google.com/web/updates/2018/09/inside-browser-part4){:target='_blank'}
-  - [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
-  - [现代浏览器内部揭秘（第一部分）](https://github.com/xitu/gold-miner/blob/master/TODO1/inside-look-at-modern-web-browser-part1.md){:target='_blank'}
-- [一文看透浏览器架构](https://segmentfault.com/a/1190000018277184){:target='_blank'}
+### 参考资料
+
 - [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
-- [现代浏览器工作原理（一）](http://chuquan.me/2018/01/21/browser-architecture-overview/){:target='_blank'}
-- [Web 浏览器相关的一些概念](https://keqingrong.cn/blog/2019-11-24-concepts-related-to-web-browsers){:target='_blank'}
+- [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
 
-- [THE BASIC FLOW OF RENDERING ENGINE](https://www.google.com.hk/search?newwindow=1&safe=strict&source=univ&tbm=isch&q=THE+BASIC+FLOW+OF+RENDERING+ENGINE&sa=X&ved=2ahUKEwjNopKj2b7xAhXP7XMBHcUyCs8Q7Al6BAgnEFM&biw=1536&bih=694&dpr=2#imgrc=BOuUFmUelYNhYM){:target='_blank'}
-
-图片很精美：
-- [Quantum Up Close: What is a browser engine?](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/){:target='_blank'}
-  - [解密 Quantum：现代浏览器引擎的构建之道](https://github.com/xitu/gold-miner/blob/master/TODO/quantum-up-close-what-is-a-browser-engine.md){:target='_blank'}
-
-- [掘金翻译计划](https://github.com/xitu/gold-miner/search?q=web+browser){:target='_blank'}
-
+## 浏览器内核
 
 浏览器的内核引擎，基本上是四分天下：
 Trident: IE 以Trident 作为内核引擎;
@@ -154,17 +254,6 @@ IE: Trident Engine
 Firefox: Gecko Engine
 Safari & Chrome: WebKit (Note: Chrome uses Blink after version 27)
 Opera: Presto
-
-- [Internet Explorer Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741312(v=vs.85)){:target='_blank'}
-
-CHECK SUPPORTED CODE
-http://fmbip.com/
-http://www.browseemall.com/Compatibility/ValidateHTML
-https://www.browseemall.com/Resources
-https://html5test.com/
-https://html5test.com/compare/browser/index.html
-
-## 浏览器内核
 
 
 ## 浏览器基本原理
@@ -245,6 +334,13 @@ https://html5test.com/compare/browser/index.html
 - [网站性能测试利器:Puppeteer](https://cloud.tencent.com/developer/article/1086109){:target='\_blank'}
 - [结合项目来谈谈 Puppeteer](https://zhuanlan.zhihu.com/p/76237595){:target='\_blank'}
 
+
+## 浏览器代码兼容性
+
+- [caniuse](https://www.caniuse.com/){:target='_blank'}
+- [browseemall](https://www.browseemall.com/Resources){:target='_blank'}
+- [html5test](https://html5test.com/){:target='_blank'}
+
 ## 相伴日久 —— 浏览器
 
 &emsp;&emsp;作为一名前端开发人员，学习浏览器的内部工作原理将有助于我们在开发中作出更明智的决策，并理解那些最佳开发实践的个中缘由。在前端面试中，也有一道经典的面试题 ——【从您在地址栏输入 google.com 直到您在浏览器屏幕上看到 Google 首页的整个过程中都发生了些什么】。
@@ -264,6 +360,29 @@ https://html5test.com/compare/browser/index.html
 - [新版Microsoft Edge（Chromium内核）介绍](https://baijiahao.baidu.com/s?id=1654951353372013675){:target='_blank'}
   - Microsoft Edge (EdgeHTML)
   - Chromium
+
+### Chrome 
+
+
+- [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
+  - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
+  - [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2){:target='_blank'}
+  - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3){:target='_blank'}
+  - [Inside look at modern web browser (part 4)](https://developers.google.com/web/updates/2018/09/inside-browser-part4){:target='_blank'}
+  - [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
+  - [现代浏览器内部揭秘（第一部分）](https://github.com/xitu/gold-miner/blob/master/TODO1/inside-look-at-modern-web-browser-part1.md){:target='_blank'}
+- [一文看透浏览器架构](https://segmentfault.com/a/1190000018277184){:target='_blank'}
+
+- [现代浏览器工作原理（一）](http://chuquan.me/2018/01/21/browser-architecture-overview/){:target='_blank'}
+- [Web 浏览器相关的一些概念](https://keqingrong.cn/blog/2019-11-24-concepts-related-to-web-browsers){:target='_blank'}
+
+- [THE BASIC FLOW OF RENDERING ENGINE](https://www.google.com.hk/search?newwindow=1&safe=strict&source=univ&tbm=isch&q=THE+BASIC+FLOW+OF+RENDERING+ENGINE&sa=X&ved=2ahUKEwjNopKj2b7xAhXP7XMBHcUyCs8Q7Al6BAgnEFM&biw=1536&bih=694&dpr=2#imgrc=BOuUFmUelYNhYM){:target='_blank'}
+
+图片很精美：
+- [Quantum Up Close: What is a browser engine?](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/){:target='_blank'}
+  - [解密 Quantum：现代浏览器引擎的构建之道](https://github.com/xitu/gold-miner/blob/master/TODO/quantum-up-close-what-is-a-browser-engine.md){:target='_blank'}
+
+- [掘金翻译计划](https://github.com/xitu/gold-miner/search?q=web+browser){:target='_blank'}
 
 
 - [浏览器市场占有率分析](https://zhuanlan.zhihu.com/p/187066428){:target='\_blank'}
