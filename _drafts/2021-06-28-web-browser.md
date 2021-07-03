@@ -218,6 +218,16 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - WebKit: 开源引擎，Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
 - Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013年2月Opera宣布转向WebKit引擎，2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎。）
 
+![WebKit](https://king-hcj.github.io/images/browser/WebKit.png?raw=true)
+
+&emsp;&emsp;WebKit就是一个页面渲染以及逻辑处理引擎，前端工程师把HTML、JavaScript、CSS这“三驾马车”作为输入，经过WebKit的处理，就输出成了我们能看到以及操作的Web页面。从上图我们可以看出来，WebKit由图中框住的四个部分组成。而其中最主要的就是WebCore和JSCore（或者是其它JS引擎）。除此之外，WebKit Embedding API是负责浏览器UI与WebKit进行交互的部分，而WebKit Ports则是让Webkit更加方便的移植到各个操作系统、平台上，提供的一些调用Native Library的接口，比如在渲染层面，在iOS系统中，Safari是交给CoreGraphics处理，而在Android系统中，Webkit则是交给Skia。
+
+&emsp;&emsp;WebKit的渲染流程：
+
+![WebKit-Rendering](https://king-hcj.github.io/images/browser/WebKit-Rendering.png?raw=true)
+
+&emsp;&emsp;首先浏览器通过URL定位到了一堆由HTML、CSS、JS组成的资源文件，通过加载器（这个加载器的实现也很复杂，在此不多赘述）把资源文件给WebCore。之后HTML Parser会把HTML解析成DOM树，CSS Parser会把CSS解析成CSSOM树。最后把这两棵树合并，生成最终需要的渲染树，再经过布局，与具体WebKit Ports的渲染接口，把渲染树渲染输出到屏幕上，成为了最终呈现在用户面前的Web页面。
+
 &emsp;&emsp;需要略作补充的是，我们经常还会听到Chromium、Webkit2、Blink这些引擎。
 
 - Chromium：基于webkit，08年开始作为Chrome的引擎，Chromium浏览器是Chrome的实验版，实验新特性。
@@ -228,6 +238,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - Webkit2：2010年随OS X Lion一起面世。WebCore层面实现进程隔离与Google的沙箱设计存在冲突。
 - Blink：基于Webkit2分支，是WebKit中WebCore组件的一个分支，13年谷歌开始作为Chrome 28的引擎集成在Chromium浏览器里。Android的WebView同样基于Webkit2。Opera（15及往后版本）和Yandex浏览器中也在使用。
+
+![khtml](https://king-hcj.github.io/images/browser/khtml.png?raw=true)
 
 #### 网络
 
@@ -337,29 +349,42 @@ add('1', '2');
   - 优化热点代码为二进制的机器代码；
   - 反优化生成的二进制机器代码。
 
+&emsp;&emsp;Chrome V8 的事件机制：
 
-- [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
+![v8-ui](https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true)
+
+- [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}【图更好一点】
 - [V8 Ignition：JS 引擎与字节码的不解之缘](https://cnodejs.org/topic/59084a9cbbaf2f3f569be482){:target='_blank'}
 - [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
 - [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
 
 ## JavaScriptCore
 
-- [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'}
+&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是Chrome的V8。这些JS引擎的使命都相同，那就是解释执行JS脚本。而从上面的渲染流程图我们可以看到，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们也通过一张图看下它的工作流程:
+
+![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
+
+&emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer、Parser、LLInt以及JIT的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。接下来我们就搭配整个工作流程介绍每一部分，它主要分为以下三个部分：词法分析、语法分析以及解释执行。
+
+> PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
+
+<!-- - [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'} -->
 - [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
 - [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
 - [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
 
 ## WebView
 
+![webview and webapp](https://king-hcj.github.io/images/browser/webview_webapp.png?raw=true)
+
 - [理解 WebView](https://github.com/xitu/gold-miner/blob/ec8862f2993f7eea977af6929d0b0785a86fd4e3/TODO1/understanding-webviews.md){:target='_blank'}
 
-- [Android WebView基本使用](https://blog.csdn.net/lowprofile_coding/article/details/77928614){:target='_blank'}
+<!-- - [Android WebView基本使用](https://blog.csdn.net/lowprofile_coding/article/details/77928614){:target='_blank'}
 - [7.5.1 WebView(网页视图)基本用法](https://www.runoob.com/w3cnote/android-tutorial-webview.html){:target='_blank'}
 - [你真的了解webview么？](https://zhuanlan.zhihu.com/p/58691238){:target='_blank'}
 - [Android：这是一份全面 & 详细的Webview使用攻略](https://www.jianshu.com/p/3c94ae673e2a/){:target='_blank'}
 - [WebView你真的熟悉吗？看了才知道](https://www.jianshu.com/p/d2f5ae6b4927){:target='_blank'}
-- [WebView](http://www.androidchina.net/tag/webview){:target='_blank'}
+- [WebView](http://www.androidchina.net/tag/webview){:target='_blank'} -->
 
 ## Headless browser
 
