@@ -149,7 +149,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;更多进程信息，可通过在浏览器顶栏右键，任务管理器查看。或者可以点击右上角的选项菜单图标，选择更多工具，然后选择任务管理器。在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量。
 
-【图】
+![task](https://king-hcj.github.io/images/browser/task.png?raw=true)
 
 &emsp;&emsp;前文中提到了 Chrome 使用多个渲染进程，那他有什么优势呢？
 
@@ -171,7 +171,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - [Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
 
-### 浏览器架构
+### 浏览器整体架构
 
 &emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，再次不过多赘述：
 
@@ -245,7 +245,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;用于网络调用，比如 HTTP 请求。其接口与平台无关，并为所有平台提供底层实现，负责网络通信和安全。
 
-#### JavaScript 解释器。
+#### JavaScript 解释器
 
 &emsp;&emsp;用于解析和执行 JavaScript 代码，执行结果将传递给渲染引擎来展示。
 
@@ -326,6 +326,21 @@ add('1', '2');
 
 &emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：node test.js)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
 
+## JavaScriptCore
+
+&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是Chrome的V8。这些JS引擎的使命都相同，那就是解释执行JS脚本。而从上面的渲染流程图我们可以看到，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们也通过一张图看下它的工作流程:
+
+![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
+
+&emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer、Parser、LLInt以及JIT的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。接下来我们就搭配整个工作流程介绍每一部分，它主要分为以下三个部分：词法分析、语法分析以及解释执行。
+
+> PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
+
+<!-- - [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'} -->
+- [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
+- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
+- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
+
 ## 浏览器与JavaScript
 
 - 在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
@@ -358,22 +373,8 @@ add('1', '2');
 - [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
 - [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
 
-## JavaScriptCore
-
-&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是Chrome的V8。这些JS引擎的使命都相同，那就是解释执行JS脚本。而从上面的渲染流程图我们可以看到，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们也通过一张图看下它的工作流程:
-
-![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
-
-&emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer、Parser、LLInt以及JIT的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。接下来我们就搭配整个工作流程介绍每一部分，它主要分为以下三个部分：词法分析、语法分析以及解释执行。
-
-> PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
-
-<!-- - [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'} -->
-- [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
-- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
-- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
-
-## WebView
+## 浏览器的不同形态
+### WebView
 
 &emsp;&emsp;WebView 是一种嵌入式浏览器，原生应用可以用它来展示网络内容。WebView 只是一个可视化的组件/控件/微件等。
 
@@ -396,7 +397,7 @@ add('1', '2');
 - [WebView你真的熟悉吗？看了才知道](https://www.jianshu.com/p/d2f5ae6b4927){:target='_blank'}
 - [WebView](http://www.androidchina.net/tag/webview){:target='_blank'} -->
 
-## Headless browser
+### Headless browser
 
 - [什么是「无头浏览器」 （Headless browser），它有什么应用场景？](https://www.zhihu.com/question/314668782/answer/620975831){:target='_blank'}
 - [啥是无头浏览器，都能干啥？一文说清楚](https://zhuanlan.zhihu.com/p/137843898){:target='_blank'}
@@ -422,6 +423,7 @@ add('1', '2');
 - [网站性能测试利器:Puppeteer](https://cloud.tencent.com/developer/article/1086109){:target='\_blank'}
 - [结合项目来谈谈 Puppeteer](https://zhuanlan.zhihu.com/p/76237595){:target='\_blank'}
 
+### Electron
 
 ## 浏览器代码兼容性
 
