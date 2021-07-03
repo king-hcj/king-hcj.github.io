@@ -202,6 +202,26 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![RENDERING ENGINE](https://king-hcj.github.io/images/browser/browser_inner.png?raw=true)
 
+&emsp;&emsp;浏览器内核主要包括以下三个技术分支：排版渲染引擎、 JavaScript引擎，以及其他。
+
+&emsp;&emsp;排版引擎：
+
+- KHTML：KHTML，是HTML网页排版引擎之一，由KDE所开发。KHTML拥有速度快捷的优点，但对错误语法的容忍度则比Mozilla产品所使用的Gecko引擎小。苹果电脑于2002年采纳了KHTML，作为开发Safari浏览器之用，并发布所修改的最新及过去版本源代码。后来发表了开放源代码的WebCore及WebKit引擎，它们均是KHTML的衍生产品。
+- WebCore：WebCore是苹果公司开发的排版引擎，它是在另外一个排版引擎“KHTML”的基础上而来的。使用WebCore的主要有Safari浏览器。
+
+&emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
+
+- Trident: IE 以Trident 作为内核引擎;
+- Gecko: Firefox 是基于 Gecko 开发;
+- WebKit: 开源引擎，Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
+- Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013年2月Opera宣布转向WebKit引擎，2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎。）
+
+&emsp;&emsp;需要略作补充的是，我们经常还会听到Chromium、Webkit2、Blink这些引擎。
+
+- Chromium：基于webkit，08年开始作为Chrome的引擎，Chromium浏览器是Chrome的实验版，实验新特性。
+- Webkit2：2010年随OS X Lion一起面世。WebCore层面实现进程隔离与Google的沙箱设计存在冲突。
+- Blink：基于Webkit2分支，是WebKit中WebCore组件的一个分支，13年谷歌开始作为Chrome 28的引擎集成在Chromium浏览器里。Android的WebView同样基于Webkit2。Opera（15及往后版本）和Yandex浏览器中也在使用。
+
 #### 网络
 
 &emsp;&emsp;用于网络调用，比如 HTTP 请求。其接口与平台无关，并为所有平台提供底层实现，负责网络通信和安全。
@@ -239,22 +259,6 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
 - [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
-
-## 浏览器内核
-
-浏览器的内核引擎，基本上是四分天下：
-Trident: IE 以Trident 作为内核引擎;
-Gecko: Firefox 是基于 Gecko 开发;
-WebKit: Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
-Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini
-注：2013年2月Opera宣布转向WebKit引擎
-注：2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎
-
-IE: Trident Engine
-Firefox: Gecko Engine
-Safari & Chrome: WebKit (Note: Chrome uses Blink after version 27)
-Opera: Presto
-
 
 ## 浏览器基本原理
 
