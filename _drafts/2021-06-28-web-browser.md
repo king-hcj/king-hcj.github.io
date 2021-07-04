@@ -441,6 +441,8 @@ add('1', '2');
 
 ### Electron
 
+![Electron](https://king-hcj.github.io/images/browser/electron.png?raw=true)
+
 ## 浏览器代码兼容性
 
 - [caniuse](https://www.caniuse.com/){:target='_blank'}
