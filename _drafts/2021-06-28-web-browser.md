@@ -19,6 +19,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;今天，我们就来一探究竟，走进这个我们与网络连接最紧密的中间地带。
 
+![目录结构](https://king-hcj.github.io/images/browser/WEB_Browser.png?raw=true)
+
 ## 浏览器发展简史
 
 ### 浏览器的诞生与发展
@@ -295,6 +297,16 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 &emsp;&emsp;关于Chrome V8，笔者曾有一篇笔记做了比较详细的介绍，全文脉络如下，感兴趣可以[参考阅读](https://segmentfault.com/a/1190000037435824){:target='_blank'}。
 
 ![Chrome-V8](https://king-hcj.github.io/images/posts/arts/Chrome-V8.png?raw=true)
+
+&emsp;&emsp;V8是依托Chrome发展起来的，后面确不局限于浏览器内核。发展至今V8应用于很多场景，例如流行的nodejs，weex，快应用，早期的RN。V8曾经历过一次比较大的架构调整，主要变化在于“从字节码的放弃到真香”。
+
+&emsp;&emsp;V8引擎诞生的使命就是要在速度和内存回收上进行革命。JavaScriptCore的架构是采用生成字节码的方式，然后执行字节码。Google觉得JavaScriptCore这套架构不行，生成字节码会浪费时间，不如直接生成机器码快。所以V8在前期的架构设计上是非常激进的，采用了直接编译成机器码的方式。后期的实践证明Google的这套架构速度是有改善，但是同时也造成了**内存消耗问题**。
+
+![V8-2010](https://king-hcj.github.io/images/browser/v8_2010.png?raw=true)
+
+![V8-2017](https://king-hcj.github.io/images/browser/v8_2017.png?raw=true)
+
+> 参考资料：[JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
 
 &emsp;&emsp;V8 是一个非常复杂的项目，有超过 100 万行 C++代码。它由许多子模块构成，其中这 4 个模块是最重要的：
 
