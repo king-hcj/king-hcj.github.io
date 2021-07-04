@@ -94,6 +94,12 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 计算机的核心
 
+&emsp;&emsp;三层计算机体系结构：底部是机器硬件，中间是操作系统，顶部是应用程序。
+
+![hw-os-app](https://king-hcj.github.io/images/browser/hw-os-app.png?raw=true)
+
+&emsp;&emsp;当你在电脑或手机上启动应用时，是 **CPU 和 GPU 为应用供能**。通常情况下应用是通过操作系统提供的机制在 CPU 和 GPU 上运行。
+
 #### CPU
 
 &emsp;&emsp;中央处理器（Central Processing Unit），或简称为 CPU。CPU 可以看作是计算机的大脑。**一个 CPU 核心如图中的办公人员，可以逐一解决很多不同任务**。它可以在解决从数学到艺术一切任务的同时还知道如何响应客户要求。过去 CPU 大多是单芯片的，一个核心就像存在于同芯片的另一个 CPU。随着现代硬件发展，你经常会有不止一个内核，为你的手机和笔记本电脑提供更多的计算能力。
@@ -110,12 +116,6 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![GPU](https://king-hcj.github.io/images/browser/GPU.png?raw=true)
 
-&emsp;&emsp;当你在电脑或手机上启动应用时，是 **CPU 和 GPU 为应用供能**。通常情况下应用是通过操作系统提供的机制在 CPU 和 GPU 上运行。
-
-&emsp;&emsp;三层计算机体系结构，底部是机器硬件，中间是操作系统，顶部是应用程序。
-
-![hw-os-app](https://king-hcj.github.io/images/browser/hw-os-app.png?raw=true)
-
 
 #### 进程与线程
 
@@ -131,7 +131,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器的进程/线程架构模型
 
-&emsp;&emsp;关于如何构建 web 浏览器并不存在标准规范，一个浏览器的构建方法可能与另一个迥然不同。不同浏览器架构的进程/线程一般由下图几部分：
+&emsp;&emsp;关于如何**构建 web 浏览器并不存在标准规范**，一个浏览器的构建方法可能与另一个迥然不同。不同浏览器的进程/线程架构一般由下图几部分：
 
 ![browser-arch](https://king-hcj.github.io/images/browser/browser-arch.png?raw=true)
 
@@ -151,7 +151,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 ![browserui](https://king-hcj.github.io/images/browser/browserui.png?raw=true)
 
 
-&emsp;&emsp;更多进程信息，可通过在浏览器顶栏右键，任务管理器查看。或者可以点击右上角的选项菜单图标，选择更多工具，然后选择任务管理器。在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量。
+&emsp;&emsp;更多进程信息，可通过在浏览器顶栏右键，选择任务管理器查看。或者点击 Chrome 浏览器右上角的“选项”菜单，选择“更多工具”子菜单，点击“任务管理器”，打开任务管理器窗口。在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量。
 
 ![task](https://king-hcj.github.io/images/browser/task.png?raw=true)
 
@@ -161,15 +161,15 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![tabs](https://king-hcj.github.io/images/browser/tabs.svg?raw=true)
 
-- 安全性与沙箱化：把浏览器工作分成多个进程的另一好处是安全性与沙箱化。由于操作系统提供了限制进程权限的方法，浏览器就可以用沙箱保护某些特定功能的进程。例如，Chrome 浏览器限制处理任意用户输入的进程(如渲染器进程)对任意文件的访问。
+- 安全性与沙箱化：把浏览器工作分成多个进程的另一好处是安全性与沙箱化。由于操作系统提供了限制进程权限的方法，浏览器就可以用沙箱保护某些特定功能的进程。例如，Chrome 浏览器可以限制处理用户输入（如渲染器）的进程的文件访问的权限。
 
-- 共享拷贝：由于进程有自己的私有内存空间，所以它们通常包含公共基础设施的拷贝(如 V8，它是 Chrome 的 JavaScript 引擎)。这意味着使用了更多的内存，如果它们是同一进程中的线程，就无法共享这些拷贝。为了节省内存，Chrome 对可启动的进程数量有所限制。具体限制数值依设备可提供的内存与 CPU 能力而定，但是**当 Chrome 运行时达到限制时，会开始在同一站点的不同标签页上运行同一进程**。
+- 共享拷贝：由于进程有自己的私有内存空间，所以它们通常包含公共基础设施的拷贝(如Chrome V8引擎)。这意味着使用了更多的内存，如果它们是同一进程中的线程，就无法共享这些拷贝（同一个进程中的线程不共享堆栈，堆栈是保证线程独立运行所必须的）。为了节省内存，Chrome 对可启动的进程数量有所限制。具体限制数值依设备可提供的内存与 CPU 能力而定，但是**当 Chrome 运行时达到限制时，会开始在同一站点的不同标签页上运行同一进程**。
 
 &emsp;&emsp;Chrome 正在经历架构变革，它转变为将浏览器程序的每一模块作为一个服务来运行，从而可以轻松实现进程的拆解或聚合。具体表现是，当 Chrome 运行在**强力硬件**上时，它会将每个服务分解到不同进程中，从而**提升稳定性**，但是如果 Chrome 运行在资源有限的设备上时，它会将服务聚合到一个进程中从而**节省了内存占用**。在这一架构变革实现前，类似的整合进程以减少内存使用的方法已经在 Android 类平台上使用。
 
 ![servicfication](https://king-hcj.github.io/images/browser/servicfication.svg?raw=true)
 
-&emsp;&emsp;Chrome 67 版本后，桌面版 Chrome 都默认开启了站点隔离，每个标签页的 iframe 都有一个单独的渲染进程。启用站点隔离是多年来工程人员努力的结果。站点隔离并不只是分配不同的渲染进程这么简单。它从根本上改变了 iframe 的通信方式。在一个页面上打开开发者工具，让 iframe 在不同的进程上运行，这意味着开发者工具必须在幕后工作，以使它看起来无缝。即使运行一个简单的 Ctrl + F 来查找页面中的一个单词，也意味着在不同的渲染器进程中进行搜索。你可以看到为什么浏览器工程师把发布站点隔离功能作为一个重要里程碑！
+&emsp;&emsp;Chrome 67 版本后，桌面版 Chrome 都默认开启了**站点隔离**，每个标签页的 iframe 都有一个单独的渲染进程。启用站点隔离是多年来工程人员努力的结果。站点隔离并不只是分配不同的渲染进程这么简单。它从根本上改变了 iframe 的通信方式。在一个页面上打开开发者工具，让 iframe 在不同的进程上运行，这意味着开发者工具必须在幕后工作，以使它看起来无缝。即使运行一个简单的 Ctrl + F 来查找页面中的一个单词，也意味着在不同的渲染器进程中进行搜索。你可以看到为什么浏览器工程师把发布站点隔离功能作为一个重要里程碑！
 
 ![isolation](https://king-hcj.github.io/images/browser/isolation.png?raw=true)
 
