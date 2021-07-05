@@ -106,7 +106,8 @@ window.addEventListener('contextmenu', function (e) {
   $ git cherry-pick <HashA> <HashB> # 将 A 和 B 两个提交应用到当前分支
   ```
 
-- 0.5px 边框问题（部分三星机型）：[CSS3实现0.5px的边框](https://www.cnblogs.com/sese/p/7067961.html){:target='_blank'}
+- 0.5px 边框问题（部分三星机型）：[CSS 0.5px 细线边框的原理和实现方式](https://www.cnblogs.com/yangshifu/p/9257519.html){:target='_blank'}
+> 要实现小于1px的线条，有个先决条件：屏幕的分辨率要足够高，设备像素比要大于1，即css中的1个像素对应物理屏幕中1个以上的像素点。
 
   ```less
   // border-width: 0.5px;
