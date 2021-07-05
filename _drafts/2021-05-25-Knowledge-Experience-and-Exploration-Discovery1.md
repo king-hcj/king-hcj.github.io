@@ -106,6 +106,14 @@ window.addEventListener('contextmenu', function (e) {
   $ git cherry-pick <HashA> <HashB> # 将 A 和 B 两个提交应用到当前分支
   ```
 
+- 0.5px 边框问题（部分三星机型）：[CSS3实现0.5px的边框](https://www.cnblogs.com/sese/p/7067961.html){:target='_blank'}
+
+  ```less
+  // border-width: 0.5px;
+  border-width: 1px;
+  transform: scaleY(0.5);
+  ```
+
 ### Exploration and Discovery
 
 #### 前端性能优化
