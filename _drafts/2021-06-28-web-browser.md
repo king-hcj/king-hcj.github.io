@@ -25,7 +25,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器的诞生与发展
 
-&emsp;&emsp;第一款浏览器诞生于1990年，但是现代浏览器的雏形却出现在1980s年代。
+&emsp;&emsp;第一款浏览器诞生于1990年，但是现代浏览器的雏形却孕育于 1980s年代。
 
 &emsp;&emsp;一位名叫蒂姆·伯纳斯-李的英国科学家在 1980 年代初期创建了一个名为 Inquire 的计算机程序，当时他在总部位于瑞士的欧洲核研究组织（CERN，以其法文字母表示）工作。该计划旨在使在 CERN 工作的许多不同个人更容易共享信息。
 
@@ -180,7 +180,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器整体架构
 
-&emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，再次不过多赘述：
+&emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，在此不过多赘述：
 
   - [经典面试题：从 URL 输入到页面展现到底发生什么？](https://zhuanlan.zhihu.com/p/57895541){:target='_blank'}
   - [在浏览器输入 URL 回车之后发生了什么（超详细版）](https://zhuanlan.zhihu.com/p/80551769){:target='_blank'}
@@ -295,6 +295,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### Chrome V8
 
+> V8一词最早见于“V-8 engine”，即V8发动机，一般使用在中高端车辆上。8个气缸分成两组，每组4个，成V型排列。是高层次汽车运动中最常见的发动机结构，尤其在美国，IRL，ChampCar和NASCAR都要求使用V8发动机。
+
 &emsp;&emsp;关于Chrome V8，笔者曾有一篇笔记做了比较详细的介绍，全文脉络如下，感兴趣可以[参考阅读](https://segmentfault.com/a/1190000037435824){:target='_blank'}。
 
 ![Chrome-V8](https://king-hcj.github.io/images/posts/arts/Chrome-V8.png?raw=true)
@@ -328,16 +330,19 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
   > 确切的说，在“Parser”将 JavaScript 源码转换为 AST前，还有一个叫”Scanner“的过程，具体流程如下：
   ![Scanner](https://king-hcj.github.io/images/posts/arts/overview.png?raw=true)
 
-- [Ignition](https://v8.dev/docs/ignition){:target='\_blank'}：interpreter，即解释器，负责将 AST 转换为 Bytecode，解释执行 Bytecode；同时收集 TurboFan 优化编译所需的信息，比如函数参数的类型；解释器执行时主要有四个模块，内存中的字节码、寄存器、栈、堆。
+- [Ignition](https://v8.dev/docs/ignition){:target='\_blank'}：interpreter，即解释器，负责将 AST 转换为 Bytecode，解释执行 Bytecode；同时收集 TurboFan 优化编译所需的信息，比如函数参数的类型；解释器执行时主要有四个模块，内存中的字节码、寄存器、栈、堆。Ignition的原始动机是减少移动设备上的内存消耗。在Ignition之前，V8的Full-codegen基线编译器生成的代码通常占据Chrome整体JavaScript堆的近三分之一。这为Web应用程序的实际数据留下了更少的空间。Ignition的字节码可以直接用TurboFan生成优化的机器代码，而不必像Crankshaft那样从源代码重新编译。Ignition的字节码在V8中提供了更清晰且更不容易出错的基线执行模型，简化了去优化机制，这是V8 自适应优化的关键特性。最后，由于生成字节码比生成Full-codegen的基线编译代码更快，因此激活Ignition通常会改善脚本启动时间，从而改善网页加载。
 
-- [TurboFan](https://v8.dev/docs/turbofan){:target='\_blank'}：compiler，即编译器，利用 Ignition 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
+- [TurboFan](https://v8.dev/docs/turbofan){:target='\_blank'}：compiler，即优化编译器，利用 Ignition 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；TurboFan项目最初于2013年底启动，旨在解决Crankshaft的缺点。Crankshaft只能优化JavaScript语言的子集。例如，它不是设计用于使用结构化异常处理优化JavaScript代码，即由JavaScript的try，catch和finally关键字划分的代码块。很难在Crankshaft中添加对新语言功能的支持，因为这些功能几乎总是需要为九个支持的平台编写特定于体系结构的代码。
+
 - [Orinoco](https://v8.dev/blog/trash-talk){:target='\_blank'}：garbage collector，垃圾回收模块，负责将程序不再需要的内存空间回收。
+
+&emsp;&emsp;采用新的Ignition+TurboFan架构后，比Full-codegen+Crankshaft架构内存降低一半多，且70%左右的网页速度得到了提升。
 
 &emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：`node test.js`)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
 
 ### JavaScriptCore
 
-&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是前文提到的Chrome的V8。这些**JS引擎的使命都是解释执行JS脚本**。而在渲染流程上，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们可以通过下图看下它的工作流程:
+&emsp;&emsp;V8未诞生之前，早期主流的JavaScript引擎是JavaScriptCore引擎.JavaScriptCore（以下简称JSCore）主要服务于Webkit浏览器内核，他们都是由苹果公司开发并开源出来。JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是前文提到的Chrome的V8。这些**JS引擎的使命都是解释执行JS脚本**。而在渲染流程上，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们可以通过下图看下它的工作流程:
 
 ![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
 
