@@ -43,7 +43,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - NCSA Mosaic，或简称Mosaic，是互联网历史上第一个获普遍使用和能够显示图片的网页浏览器。它是由伊利诺伊大学厄巴纳-香槟分校的NCSA组织在1993年所发表，并于1997年1月7日正式终止开发和支持。在当时人气爆发的大受欢迎。Mosaic的出现，算是点燃了后期互联网热潮的火种之一。后来网景导航者浏览器的开发工作，聘用了许多原有的Mosaic浏览器工程师，但是没有采用Mosaic网页浏览器的任何代码。传承网景浏览器代码的后裔为Firefox浏览器。
 
-- Marc Andreesen 与同事 Jim Clark 于 1994 年成立了一家公司，当时 Mosaic 还是最流行的浏览器，它们计划打造出一个比 Mosaic 更好的浏览器，占领市场，让他们变得富有，并改变历史。他们的第一个浏览器被称为 Mosaic Netscape 0.9，不久更名 Netscape。得益于 JavaScript 和“partial-screen loading”（即使页面未完全加载，用户也可以开始阅读页面上的详细信息，这一个新概念极大地丰富了在线体验）等功能，它很快成为市场领导者，占据了浏览器市场上一半的份额，Netscape 的 IPO 也助长了日益增长的网络泡沫。
+- Marc Andreesen 与同事 Jim Clark 于 1994 年成立了一家公司，当时 Mosaic 还是最流行的浏览器，它们计划打造出一个比 Mosaic 更好的浏览器，占领市场，让他们变得富有，并改变历史。他们的第一个浏览器被称为 Mosaic Netscape 0.9，不久更名 Netscape。得益于 JavaScript（JavaScript诞生于1995年，它是Netscape的Brendan Eich 仅花费十天设计实现的。） 和“partial-screen loading”（即使页面未完全加载，用户也可以开始阅读页面上的详细信息，这一个新概念极大地丰富了在线体验）等功能，它很快成为市场领导者，占据了浏览器市场上一半的份额，Netscape 的 IPO 也助长了日益增长的网络泡沫。
 
 - Netscape 最初的成功向那些在计算机和互联网领域工作的人证明了时代已经永远改变了，这让当时业内最强大的参与者感到震惊。一家名为 Microsoft 的西雅图公司就是这样一家公司。Netscape 对微软来说是一个挑战，微软在 1990 年代后期创建了自己的浏览器 Internet Explorer，但它通常被视为劣质产品。由于其跨平台特性，人们可以在 Windows PC 或 Mac 或任何其他系统上使用 Netscape，这导致许多人猜测**操作系统的时代已经结束**。计算机将通过浏览器运行，浏览器可以在任何机器上运行，从而使软件行业民主化并降低其相当大的进入壁垒。**微软已经建立了销售其专有操作系统 Windows 的帝国**，因此将这种由 Netscape 等公司带头的发展视为一种威胁。微软通过对其产品的大量投资，成功地迅速扭转了浏览器行业的局面，使其与 Netscape 一样好。Windows 计算机在发布时已经安装了 Internet Explorer（Microsoft 的浏览器），这使其能够在市场上占据一席之地并不断发展壮大，最终在浏览器领域取得了胜利。
 
@@ -84,13 +84,6 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - 全球浏览器市场份额
   - [全球浏览器市场份额](https://gs.statcounter.com/){:target='\_blank'}
   - [w3counter](https://www.w3counter.com/globalstats.php){:target='\_blank'}
-
-
-### 参考资料
-
-- [The Story of the Web: A History Of Internet Browsers](https://www.internetadvisor.com/the-story-of-the-web-a-history-of-internet-browsers){:target='_blank'}
-- [THE HISTORY OF THE WEB BROWSER](https://minimalistwpthemes.com/history-of-the-web-browser/){:target='_blank'}
-- [浏览器简史](http://www.cnw.com.cn/zhuanti/2009-ie/){:target='_blank'}
 
 ## 浏览器架构
 
@@ -133,9 +126,13 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器的进程/线程架构模型
 
+#### 浏览器进程分类【A】
+
 &emsp;&emsp;关于如何**构建 web 浏览器并不存在标准规范**，一个浏览器的构建方法可能与另一个迥然不同。不同浏览器的进程/线程架构一般由下图几部分：
 
 ![browser-arch](https://king-hcj.github.io/images/browser/browser-arch.png?raw=true)
+
+#### Chrome多进程架构
 
 &emsp;&emsp;而当下“浏览器世界的王者” Chrome 架构如下图所示，渲染进程下显示了多个层，表明 Chrome 为每个标签页运行多个渲染进程。
 
@@ -152,14 +149,18 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![browserui](https://king-hcj.github.io/images/browser/browserui.png?raw=true)
 
+&emsp;&emsp;**Chrome 更多的是把自己抽象为一个操作系统，网页或扩展相当于一个个程序**，你甚至可以注意到 Chrome 确实自带一个任务管理器，在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量等。
 
-&emsp;&emsp;更多进程信息，可通过在浏览器顶栏右键，选择任务管理器查看。或者点击 Chrome 浏览器右上角的“选项”菜单，选择“更多工具”子菜单，点击“任务管理器”，打开任务管理器窗口。在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量。
+&emsp;&emsp;一般你可以通过两种方法打开Chrome任务管理器：
+
+- 通过在浏览器顶栏右键，选择任务管理器查看；
+- 点击 Chrome 浏览器右上角的“选项”菜单，选择“更多工具”子菜单，点击“任务管理器”，打开任务管理器窗口。
 
 ![task](https://king-hcj.github.io/images/browser/task.png?raw=true)
 
 &emsp;&emsp;前文中提到了 Chrome 使用多个渲染进程，那他有什么优势呢？
 
-- 稳定：最简单的情况下，你可以想象每个标签页都有自己的渲染进程。假设你打开了三个标签页，每个标签页都拥有自己独立的渲染进程。如果某个标签页失去响应，你可以关掉这个标签页，此时其它标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应，显然这样的体验会很糟糕，下面是对比动图，供你参考。
+- 稳定性：最简单的情况下，你可以想象每个标签页都有自己的渲染进程。假设你打开了三个标签页，每个标签页都拥有自己独立的渲染进程。如果某个标签页失去响应，你可以关掉这个标签页，此时其它标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应，显然这样的体验会很糟糕，下面是对比动图，供你参考。
 
 ![tabs](https://king-hcj.github.io/images/browser/tabs.svg?raw=true)
 
@@ -221,18 +222,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - Trident: IE 以Trident 作为内核引擎;
 - Gecko: Firefox 是基于 Gecko 开发;
-- WebKit: 开源引擎，Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
+- WebKit: 诞生于1998年，并于2005年由Apple公司开源，Safari, Google Chrome,傲游3,猎豹浏览器,百度浏览器 opera浏览器 基于 Webkit 开发。
 - Presto: Opera的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013年2月Opera宣布转向WebKit引擎，2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎。）
-
-![WebKit](https://king-hcj.github.io/images/browser/WebKit.png?raw=true)
-
-&emsp;&emsp;WebKit就是一个页面渲染以及逻辑处理引擎，前端工程师把HTML、JavaScript、CSS这“三驾马车”作为输入，经过WebKit的处理，就输出成了我们能看到以及操作的Web页面。从上图我们可以看出来，WebKit由图中框住的四个部分组成。而其中最主要的就是WebCore和JSCore（或者是其它JS引擎）。除此之外，WebKit Embedding API是负责浏览器UI与WebKit进行交互的部分，而WebKit Ports则是让Webkit更加方便的移植到各个操作系统、平台上，提供的一些调用Native Library的接口，比如在渲染层面，在iOS系统中，Safari是交给CoreGraphics处理，而在Android系统中，Webkit则是交给Skia。
-
-&emsp;&emsp;WebKit的渲染流程：
-
-![WebKit-Rendering](https://king-hcj.github.io/images/browser/WebKit-Rendering.png?raw=true)
-
-&emsp;&emsp;首先浏览器通过URL定位到了一堆由HTML、CSS、JS组成的资源文件，通过加载器（这个加载器的实现也很复杂，在此不多赘述）把资源文件给WebCore。之后HTML Parser会把HTML解析成DOM树，CSS Parser会把CSS解析成CSSOM树。最后把这两棵树合并，生成最终需要的渲染树，再经过布局，与具体WebKit Ports的渲染接口，把渲染树渲染输出到屏幕上，成为了最终呈现在用户面前的Web页面。
 
 &emsp;&emsp;需要略作补充的是，我们经常还会听到Chromium、Webkit2、Blink这些引擎。
 
@@ -243,9 +234,24 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 > 图片来源：[万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
 
 - Webkit2：2010年随OS X Lion一起面世。WebCore层面实现进程隔离与Google的沙箱设计存在冲突。
-- Blink：基于Webkit2分支，是WebKit中WebCore组件的一个分支，13年谷歌开始作为Chrome 28的引擎集成在Chromium浏览器里。Android的WebView同样基于Webkit2。Opera（15及往后版本）和Yandex浏览器中也在使用。
+- Blink：基于Webkit2分支，是WebKit中WebCore组件的一个分支，13年谷歌开始作为Chrome 28的引擎集成在Chromium浏览器里。Android的WebView同样基于Webkit2，是现在对新特性支持度最好的内核。Opera（15及往后版本）和Yandex浏览器中也在使用。
+- 移动端基本上全部是 Webkit 或 Blink 内核（除去 Android 上腾讯家的 X5），这两个内核对新特性的支持度较高，所以新特性可以在移动端大展身手。
+
+&emsp;&emsp;各内核关系图：
 
 ![khtml](https://king-hcj.github.io/images/browser/khtml.png?raw=true)
+
+&emsp;&emsp;下面我们以WebKit为列，进行简单介绍，以便让你对渲染引擎有一个更多的理解。WebKit由多个重要模块组成，通过下图我们可以对WebKit有个整体的了解：
+
+![WebKit](https://king-hcj.github.io/images/browser/WebKit.png?raw=true)
+
+&emsp;&emsp;WebKit就是一个**页面渲染以及逻辑处理引擎**，前端工程师把HTML、JavaScript、CSS这“三驾马车”作为输入，经过WebKit的处理，就输出成了我们能看到以及操作的Web页面。从上图我们可以看出来，WebKit由图中框住的四个部分组成。而其中最主要的就是WebCore和JSCore（或者是其它JS引擎）。除此之外，WebKit Embedding API是负责浏览器UI与WebKit进行交互的部分，而WebKit Ports则是让Webkit更加方便的移植到各个操作系统、平台上，提供的一些调用Native Library的接口，比如在渲染层面，在iOS系统中，Safari是交给CoreGraphics处理，而在Android系统中，Webkit则是交给Skia。
+
+&emsp;&emsp;WebKit的渲染流程：
+
+![WebKit-Rendering](https://king-hcj.github.io/images/browser/WebKit-Rendering.png?raw=true)
+
+&emsp;&emsp;首先浏览器通过URL定位到了一堆由HTML、CSS、JS组成的资源文件，通过加载器把资源文件给WebCore。之后HTML Parser会把HTML解析成DOM树，CSS Parser会把CSS解析成CSSOM树。最后把这两棵树合并，生成最终需要的渲染树，再经过布局，与具体WebKit Ports的渲染接口，把渲染树渲染输出到屏幕上，成为了最终呈现在用户面前的Web页面。
 
 #### 网络
 
@@ -279,12 +285,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 > 参考资料：[Internet Explorer Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741312(v=vs.85)){:target='_blank'}
 
-### 参考资料
-
-- [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
-- [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
-
-## 浏览器基本原理
+## 浏览器基本原理【A】
 
 - [Design Documents](https://www.chromium.org/developers/design-documents){:target='_blank'}
 - [浏览器运行原理】全程高能动画解析浏览器运行机制！](https://www.zhihu.com/zvideo/1318938663649800192){:target='_blank'}
@@ -300,15 +301,28 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;V8是依托Chrome发展起来的，后面确不局限于浏览器内核。发展至今V8应用于很多场景，例如流行的nodejs，weex，快应用，早期的RN。V8曾经历过一次比较大的架构调整，主要变化在于“从字节码的放弃到真香”。
 
+#### V8 的早期架构
+
 &emsp;&emsp;V8引擎诞生的使命就是要在速度和内存回收上进行革命。JavaScriptCore的架构是采用生成字节码的方式，然后执行字节码。Google觉得JavaScriptCore这套架构不行，生成字节码会浪费时间，不如直接生成机器码快。所以V8在前期的架构设计上是非常激进的，采用了直接编译成机器码的方式。后期的实践证明Google的这套架构速度是有改善，但是同时也造成了**内存消耗问题**。
 
 ![V8-2010](https://king-hcj.github.io/images/browser/v8_2010.png?raw=true)
 
+&emsp;&emsp;早期的V8有Full-Codegen和Crankshaft两个编译器。V8 首先用 Full-Codegen把所有的代码都编译一次，生成对应的机器码。JS在执行的过程中，V8内置的Profiler筛选出热点函数并且记录参数的反馈类型，然后交给 Crankshaft 来进行优化。所以Full-Codegen本质上是生成的是未优化的机器码，而Crankshaft生成的是优化过的机器码。
+
+&emsp;&emsp;随着网页的复杂化，V8也渐渐的暴露出了自己架构上的缺陷：
+
+- Full-Codegen 编译直接生成机器码，导致**内存占用大**；
+- Full-Codegen 编译直接生成机器码，导致**编译时间长**，导致**启动速度慢**；
+- Crankshaft 无法优化try，catch和finally等关键字划分的代码块；
+- Crankshaft 新加语法支持，需要为此编写适配不同的Cpu架构代码。
+
+#### V8 的现有架构
+
+&emsp;&emsp;为了解决上述缺点，V8采用JavaScriptCore的架构，生成字节码。V8采用生成字节码的方式后，整体流程如下图：
+
 ![V8-2017](https://king-hcj.github.io/images/browser/v8_2017.png?raw=true)
 
-> 参考资料：[JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
-
-&emsp;&emsp;V8 是一个非常复杂的项目，有超过 100 万行 C++代码。它由许多子模块构成，其中这 4 个模块是最重要的：
+&emsp;&emsp;现在的 V8 是一个非常复杂的项目，有超过 100 万行 C++代码。它由许多子模块构成，其中这 4 个模块是最重要的：
 
 - [Parser](https://v8.dev/blog/scanner){:target='\_blank'}：负责将 JavaScript 源码转换为 Abstract Syntax Tree (AST)
   > 确切的说，在“Parser”将 JavaScript 源码转换为 AST前，还有一个叫”Scanner“的过程，具体流程如下：
@@ -319,7 +333,44 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - [TurboFan](https://v8.dev/docs/turbofan){:target='\_blank'}：compiler，即编译器，利用 Ignition 所收集的类型信息，将 Bytecode 转换为优化的汇编代码；
 - [Orinoco](https://v8.dev/blog/trash-talk){:target='\_blank'}：garbage collector，垃圾回收模块，负责将程序不再需要的内存空间回收。
 
-&emsp;&emsp;其中，Parser，Ignition 以及 TurboFan 可以将 JS 源码编译为汇编代码，其流程图如下：
+&emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：`node test.js`)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
+
+### JavaScriptCore
+
+&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是前文提到的Chrome的V8。这些**JS引擎的使命都是解释执行JS脚本**。而在渲染流程上，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们可以通过下图看下它的工作流程:
+
+![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
+
+> JavaScriptCore主要模块：Lexer 词法分析器，将脚本源码分解成一系列的Token；Parser 语法分析器，处理Token并生成相应的语法树；LLInt 低级解释器，执行Parser生成的二进制代码；Baseline JIT 基线JIT（just in time 实时编译）；DFG 低延迟优化的JIT；FTL 高通量优化的JIT。
+
+&emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer（词法分析）、Parser（语法分析）、LLInt以及JIT（解释执行）的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。
+
+- **词法分析**很好理解，就是把一段我们写的源代码分解成Token序列的过程，这一过程也叫分词。在JSCore，词法分析是由Lexer来完成（有的编译器或者解释器把分词叫做Scanner，比如Chrome v8）。
+- 跟人类语言一样，我们讲话的时候其实是按照约定俗成，交流习惯按照一定的语法讲出一个又一个词语。那类比到计算机语言，计算机要理解一门计算机语言，也要理解一个语句的语法。Parser会把Lexer分析之后生成的token序列进行语法分析，并生成对应的一棵抽象语法树(AST)。之后，ByteCodeGenerator会根据AST来生成JSCore的字节码，完成整个**语法解析**步骤。
+- JS源代码经过了词法分析和语法分析这两个步骤，转成了字节码，其实就是经过任何一门程序语言必经的步骤–编译。但是不同于我们编译运行OC代码，JS编译结束之后，并不会生成存放在内存或者硬盘之中的目标代码或可执行文件。生成的指令字节码，会被立即被JSCore这台虚拟机进行逐行**解释执行**。运行指令字节码（ByteCode）是JS引擎中很核心的部分，各家JS引擎的优化也主要集中于此。
+
+> PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
+
+&emsp;&emsp;如果对JavaScriptCore有更多兴趣，关于JavaScriptCore的更多细节，建议延伸阅读以下几篇博文：
+
+- [深入理解JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='_blank'}
+- [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'}
+- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
+- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
+
+### 浏览器与JavaScript
+
+&emsp;&emsp;这一小结，还是以Chrome V8为例，简单阐述浏览器与JavaScript的关系。
+
+&emsp;&emsp;在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
+
+#### V8 执行一段 JavaScript 的流程
+
+&emsp;&emsp;V8 执行一段 JavaScript 的流程如下图所示：
+
+  ![V8执行一段JavaScript流程图](https://king-hcj.github.io/images/posts/arts/v8.jpg?raw=true)
+
+&emsp;&emsp;结合上文介绍的Chrome V8 架构，聚焦到JavaScript上，浏览器拿到JavaScript源码，Parser，Ignition 以及 TurboFan 可以将 JS 源码编译为汇编代码，其流程图如下：
 
 ![V8流程](https://king-hcj.github.io/images/posts/arts/ignition-turbofan-pipeline.jpeg?raw=true)
 
@@ -340,37 +391,12 @@ add(1, 2);
 add('1', '2');
 ```
 
-&emsp;&emsp;在运行 C、C++以及 Java 等程序之前，需要进行编译，不能直接执行源码；但对于 JavaScript 来说，我们可以直接执行源码(比如：node test.js)，它是在运行的时候先编译再执行，这种方式被称为**即时编译(Just-in-time compilation)**，简称为 JIT。因此，V8 也属于 **JIT 编译器**。
-
-### JavaScriptCore
-
-&emsp;&emsp;JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是Chrome的V8。这些JS引擎的使命都相同，那就是解释执行JS脚本。而从上面的渲染流程图我们可以看到，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们也通过一张图看下它的工作流程:
-
-![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
-
-&emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer、Parser、LLInt以及JIT的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。接下来我们就搭配整个工作流程介绍每一部分，它主要分为以下三个部分：词法分析、语法分析以及解释执行。
-
-> PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
-
-<!-- - [深入剖析 JavaScriptCore](https://ming1016.github.io/2018/04/21/deeply-analyse-javascriptcore/){:target='\_blank'} -->
-- [深入理解 JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='\_blank'}【关注一下参考资料】
-- [JavaScriptCore 全面解析](https://juejin.cn/post/6844903765582053384){:target='\_blank'}
-- [深入浅出 JavaScriptCore](https://www.jianshu.com/p/ac534f508fb0){:target='\_blank'}
-
-### 浏览器与JavaScript
-
-- 在 **V8 出现之前，所有的 JavaScript 虚拟机所采用的都是解释执行的方式，这是 JavaScript 执行速度过慢的一个主要原因**。而 V8 率先引入了**即时编译（JIT）**的**双轮驱动**的设计（混合使用编译器和解释器的技术），这是一种权衡策略，**混合编译执行和解释执行这两种手段**，给 JavaScript 的执行速度带来了极大的提升。V8 出现之后，各大厂商也都在自己的 JavaScript 虚拟机中引入了 JIT 机制，所以目前市面上 JavaScript 虚拟机都有着类似的架构。另外，**V8 也是早于其他虚拟机引入了惰性编译、内联缓存、隐藏类等机制，进一步优化了 JavaScript 代码的编译执行效率**。
-- V8 执行一段 JavaScript 的流程图：
-
-  ![V8执行一段JavaScript流程图](https://king-hcj.github.io/images/posts/arts/v8.jpg?raw=true)
-
-- **V8 本质上是一个虚拟机**，因为计算机只能识别二进制指令，所以要让计算机执行一段高级语言通常有两种手段：
+&emsp;&emsp;**V8 本质上是一个虚拟机**，因为计算机只能识别二进制指令，所以要让计算机执行一段高级语言通常有两种手段：
   - 第一种是将高级代码转换为二进制代码，再让计算机去执行；
   - 另外一种方式是在计算机安装一个解释器，并由解释器来解释执行。
 - 解释执行和编译执行都有各自的优缺点，**解释执行启动速度快，但是执行时速度慢，而编译执行启动速度慢，但是执行速度快**。为了充分地利用解释执行和编译执行的优点，规避其缺点，**V8 采用了一种权衡策略，在启动过程中采用了解释执行的策略，但是如果某段代码的执行频率超过一个值，那么 V8 就会采用优化编译器将其编译成执行效率更加高效的机器代码**。
-- 总结：
 
-  **V8 执行一段 JavaScript 代码所经历的主要流程**包括：
+&emsp;&emsp;简单总结如下，**V8 执行一段 JavaScript 代码所经历的主要流程**包括：
 
   - 初始化基础环境；
   - 解析源码生成 AST 和作用域；
@@ -380,7 +406,7 @@ add('1', '2');
   - 优化热点代码为二进制的机器代码；
   - 反优化生成的二进制机器代码。
 
-&emsp;&emsp;Chrome V8 的事件机制：
+#### Chrome V8 的事件机制
 
 ![v8-ui](https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true)
 
@@ -448,6 +474,18 @@ add('1', '2');
 - [caniuse](https://www.caniuse.com/){:target='_blank'}
 - [browseemall](https://www.browseemall.com/Resources){:target='_blank'}
 - [html5test](https://html5test.com/){:target='_blank'}
+
+## 参考资料
+
+- [深入理解JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='_blank'}
+- [The Story of the Web: A History Of Internet Browsers](https://www.internetadvisor.com/the-story-of-the-web-a-history-of-internet-browsers){:target='_blank'}
+- [THE HISTORY OF THE WEB BROWSER](https://minimalistwpthemes.com/history-of-the-web-browser/){:target='_blank'}
+- [浏览器简史](http://www.cnw.com.cn/zhuanti/2009-ie/){:target='_blank'}
+- [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
+- [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
+[JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
+
+
 
 ## 相伴日久 —— 浏览器
 
