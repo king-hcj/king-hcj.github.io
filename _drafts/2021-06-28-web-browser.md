@@ -274,6 +274,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 求同存异的浏览器架构
 
+&emsp;&emsp;下面列出了部分浏览器的架构图，也许有些架构已经改变，有兴趣可以简单参考看看，除了IE之外，大体上各浏览器的整体架构都是类似的。
+
 &emsp;&emsp;Mosaic架构：
 
 ![Architecture_of_Mosaic](https://king-hcj.github.io/images/browser/Architecture_of_Mosaic.png?raw=true)
