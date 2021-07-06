@@ -176,7 +176,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![isolation](https://king-hcj.github.io/images/browser/isolation.png?raw=true)
 
-- [Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
+> 延伸阅读：[Chrome 为什么多进程而不是多线程？](https://www.zhihu.com/question/368712837){:target='_blank'}
 
 ### 浏览器整体架构
 
@@ -211,12 +211,15 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![RENDERING ENGINE](https://king-hcj.github.io/images/browser/browser_inner.png?raw=true)
 
-&emsp;&emsp;浏览器内核主要包括以下三个技术分支：排版渲染引擎、 JavaScript引擎，以及其他。
+> 延伸阅读：曾红极一时的红芯浏览器，官网对其介绍是：拥有智能的认证引擎、渲染引擎、管控引擎，而且还有强大的“国密通讯协议”，支持统一管控、远程控制。2018年8月15日，红芯浏览器被爆出打开安装目录后出现大量和谷歌chorme浏览器一致的同名文件，其安装程序的文件属性中也显示了原始文件名chrome.exe，红芯浏览器的官网已撤下了浏览器的下载链接。8月16日，红芯联合创始人高婧回应，红芯浏览器“包含‘Chrome’在里面”，但并非抄袭，而是“站在巨人的肩膀上去做创新”。
+![hongxin](https://king-hcj.github.io/images/browser/hongxin.jpeg?raw=true)
+
+&emsp;&emsp;言归正传，浏览器内核主要包括以下三个技术分支：排版渲染引擎、 JavaScript引擎，以及其他。
 
 &emsp;&emsp;排版引擎：
 
 - KHTML：KHTML，是HTML网页排版引擎之一，由KDE所开发。KHTML拥有速度快捷的优点，但对错误语法的容忍度则比Mozilla产品所使用的Gecko引擎小。苹果电脑于2002年采纳了KHTML，作为开发Safari浏览器之用，并发布所修改的最新及过去版本源代码。后来发表了开放源代码的WebCore及WebKit引擎，它们均是KHTML的衍生产品。
-- WebCore：WebCore是苹果公司开发的排版引擎，它是在另外一个排版引擎“KHTML”的基础上而来的。使用WebCore的主要有Safari浏览器。
+- WebCore：WebCore是**苹果公司**开发的排版引擎，它是在另外一个排版引擎“KHTML”的基础上而来的。使用WebCore的主要有Safari浏览器。
 
 &emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
 
@@ -239,7 +242,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;各内核关系图：
 
-![khtml](https://king-hcj.github.io/images/browser/khtml.png?raw=true)
+![KHTML](https://king-hcj.github.io/images/browser/khtml.png?raw=true)
 
 &emsp;&emsp;下面我们以WebKit为列，进行简单介绍，以便让你对渲染引擎有一个更多的理解。WebKit由多个重要模块组成，通过下图我们可以对WebKit有个整体的了解：
 
@@ -271,19 +274,27 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 求同存异的浏览器架构
 
-&emsp;&emsp;FIREFOX架构：
+&emsp;&emsp;Mosaic架构：
 
-![FIREFOX架构](https://king-hcj.github.io/images/browser/FIREFOX_ARCHITECTURE.png?raw=true)
+![Architecture_of_Mosaic](https://king-hcj.github.io/images/browser/Architecture_of_Mosaic.png?raw=true)
 
-&emsp;&emsp;CHROME架构：
+&emsp;&emsp;Firefox架构：
 
-![CHROME架构](https://king-hcj.github.io/images/browser/CHROME_ARCHITECTURE.png?raw=true)
+![Architecture_of_Mozilla](https://king-hcj.github.io/images/browser/Architecture_of_Mozilla.png?raw=true)
+
+&emsp;&emsp;Chrome架构：
+
+![Architecture_of_Chrome](https://king-hcj.github.io/images/browser/Architecture_of_Chrome.png?raw=true)
+
+&emsp;&emsp;Safari架构：
+
+![Architecture_of_Safari](https://king-hcj.github.io/images/browser/Architecture_of_Safari.png?raw=true)
 
 &emsp;&emsp;IE架构：
 
 ![IE架构](https://king-hcj.github.io/images/browser/IE_ARCHITECTURE.png?raw=true)
 
-> 参考资料：[Internet Explorer Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741312(v=vs.85)){:target='_blank'}
+<!-- > 参考资料：https://www.semanticscholar.org/paper/Architecture-and-evolution-of-the-modern-web-Grosskurth-Godfrey/f200708902b03ddfe8b385aaffa1065fca41df87 -->
 
 ## 浏览器基本原理【A】
 
