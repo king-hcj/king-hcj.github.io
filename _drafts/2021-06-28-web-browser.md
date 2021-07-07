@@ -478,7 +478,8 @@ add('1', '2');
 2） 高级爬虫，可以爬取大量异步渲染内容的网页
 3） 实现 UI 自动化测试，模拟键盘输入、表单自动提交、点击、登录网页等
 4） 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
-5)  模拟不同的设备
+5） 模拟不同的设备
+6） ...
 
 &emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
 
@@ -496,6 +497,10 @@ add('1', '2');
 &emsp;&emsp;Electron Architecture 由多个 Render Process 和一个 Main 进程组成。 Main Process 启动Render Process，它们之间的通信是通过IPC [Inter Process Communication]，如下图所示。
 
 ![Electron_Architecture](https://king-hcj.github.io/images/browser/Electron_Architecture.png?raw=true)
+
+&emsp;&emsp;我们常用的IDE VSCode 就是基于 Electron (原来叫 Atom Shell) 进行开发的。如下图所示，（点击 VSCode 帮助【Help】 下的 切换开发人员工具即可打开以下面板）。
+
+![VSCode](https://king-hcj.github.io/images/posts/zhuangbility100/developer.png?raw=true)
 
 > 延伸阅读：[Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
 
