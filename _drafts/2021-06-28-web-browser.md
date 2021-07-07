@@ -62,9 +62,9 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器市场份额
 
-&emsp;&emsp;截止2021年7月初，浏览器市场份额如下：
+&emsp;&emsp;截止2021年7月初，浏览器市场份额如下所示。
 
-&emsp;&emsp;近年来浏览器使用趋势变化：
+&emsp;&emsp;浏览器使用趋势变化：
 
 ![Web_Browser_Usage_Trends](https://king-hcj.github.io/images/browser/Web_Browser_Usage_Trends.png?raw=true)
 
