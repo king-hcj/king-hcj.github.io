@@ -502,6 +502,13 @@ add('1', '2');
 
 ![VSCode](https://king-hcj.github.io/images/posts/zhuangbility100/developer.png?raw=true)
 
+&emsp;&emsp;VS Code 的其他的主要组件有：
+
+- 壳：[Monaco Editor](https://github.com/Microsoft/monaco-editor){:target='_blank'}
+- 内核：[Language Server Protocol](https://github.com/Microsoft/language-server-protocol){:target='_blank'}（一个代码编辑器）
+- [Debug Adapter Protocol](https://github.com/Microsoft/debug-adapter-protocol){:target='_blank'}
+- [Xterm.js](https://xtermjs.org/){:target='_blank'}
+
 > 延伸阅读：[Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
 
 ## 浏览器代码兼容性
@@ -538,9 +545,6 @@ add('1', '2');
 
 
 - [QQ浏览器是基于chrome内核开发的吗？](https://zhidao.baidu.com/question/2058022048028049667.html){:target='_blank'}
-- [新版Microsoft Edge（Chromium内核）介绍](https://baijiahao.baidu.com/s?id=1654951353372013675){:target='_blank'}
-  - Microsoft Edge (EdgeHTML)
-  - Chromium
 
 ### Chrome 
 
