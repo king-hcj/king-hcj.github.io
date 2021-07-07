@@ -459,15 +459,11 @@ add('1', '2');
 
 ### Headless browser
 
-- [Headless Chrome architecture](https://www.cnblogs.com/bigben0123/p/13880254.html){:target='_blank'}
-- [What is a Headless Browser?](https://oxylabs.io/blog/what-is-headless-browser){:target='_blank'}
-- [6 Popular Headless Browsers for Web Testing](https://www.keycdn.com/blog/headless-browsers){:target='_blank'}
-
-![Headless_architecture](https://king-hcj.github.io/images/browser/Headless_architecture.png?raw=true)
-
 &emsp;&emsp;**无头浏览器**是一种未配置图形用户界面 (GUI) 的 Web 浏览器，通常通过命令行或网络通信来执行。它主要由软件测试工程师使用，没有 GUI 的浏览器执行速度更快，因为它们不必绘制视觉内容。无头浏览器的最大好处之一是它们能够在没有 GUI 支持的服务器上运行。 
 
 &emsp;&emsp;Headless 浏览器对于测试网页特别有用，因为它们能够像浏览器一样呈现和理解超文本标记语言，包括页面布局、颜色、字体选择以及JavaScript和AJAX的执行等样式元素，这些元素在使用其他测试方法时通常是不可用的。
+
+![Headless_architecture](https://king-hcj.github.io/images/browser/Headless_architecture.png?raw=true)
 
 &emsp;&emsp;Headless 浏览器有两个主要可交付成果：
 
@@ -480,16 +476,15 @@ add('1', '2');
 
 1） 生成网页截图或者 PDF
 2） 高级爬虫，可以爬取大量异步渲染内容的网页
-3） 模拟键盘输入、表单自动提交、登录网页等，实现 UI 自动化测试
+3） 实现 UI 自动化测试，模拟键盘输入、表单自动提交、点击、登录网页等
 4） 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
+5)  模拟不同的设备
 
 &emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
 
+- [Headless Chrome architecture](https://www.cnblogs.com/bigben0123/p/13880254.html){:target='_blank'}
 - [puppeteer](https://github.com/puppeteer/puppeteer/){:target='\_blank'}
 - [Puppeteer 入门教程](https://www.r9it.com/20171106/puppeteer.html){:target='\_blank'}
-- [API 文档](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md){:target='\_blank'}
-
-- [网站性能测试利器:Puppeteer](https://cloud.tencent.com/developer/article/1086109){:target='\_blank'}
 - [结合项目来谈谈 Puppeteer](https://zhuanlan.zhihu.com/p/76237595){:target='\_blank'}
 
 ### Electron
