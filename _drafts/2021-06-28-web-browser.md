@@ -459,15 +459,24 @@ add('1', '2');
 
 ### Headless browser
 
-- [什么是「无头浏览器」 （Headless browser），它有什么应用场景？](https://www.zhihu.com/question/314668782/answer/620975831){:target='_blank'}
-- [啥是无头浏览器，都能干啥？一文说清楚](https://zhuanlan.zhihu.com/p/137843898){:target='_blank'}
 - [Headless Chrome architecture](https://www.cnblogs.com/bigben0123/p/13880254.html){:target='_blank'}
 - [What is a Headless Browser?](https://oxylabs.io/blog/what-is-headless-browser){:target='_blank'}
 - [6 Popular Headless Browsers for Web Testing](https://www.keycdn.com/blog/headless-browsers){:target='_blank'}
 
-- [Headless Chrome architecture](https://www.google.com.hk/search?q=Headless+Chrome+architecture&newwindow=1&safe=strict&tbm=isch&source=iu&ictx=1&fir=W9qdIOjuXPFz5M%252C1zvWEtXccmOnlM%252C_&vet=1&usg=AI4_-kRn8Gc3dK1IDfgodMG38_HcVuPoeQ&sa=X&ved=2ahUKEwiTvdzvuMPxAhW583MBHZnTA7wQ9QF6BAgiEAE#imgrc=W9qdIOjuXPFz5M){:target='_blank'}
+![Headless_architecture](https://king-hcj.github.io/images/browser/Headless_architecture.png?raw=true)
 
-&emsp;&emsp;Puppeteer 是一个 node 库，他提供了一组用来操纵 Chrome 的 API, 通俗来说就是一个 headless chrome 浏览器 (当然你也可以配置成有 UI 的，默认是没有的)。既然是浏览器，那么我们手工可以在浏览器上做的事情 Puppeteer 都能胜任, 另外，Puppeteer 翻译成中文是”木偶”意思，所以听名字就知道，操纵起来很方便，你可以很方便的操纵她去实现：
+&emsp;&emsp;**无头浏览器**是一种未配置图形用户界面 (GUI) 的 Web 浏览器，通常通过命令行或网络通信来执行。它主要由软件测试工程师使用，没有 GUI 的浏览器执行速度更快，因为它们不必绘制视觉内容。无头浏览器的最大好处之一是它们能够在没有 GUI 支持的服务器上运行。 
+
+&emsp;&emsp;Headless 浏览器对于测试网页特别有用，因为它们能够像浏览器一样呈现和理解超文本标记语言，包括页面布局、颜色、字体选择以及JavaScript和AJAX的执行等样式元素，这些元素在使用其他测试方法时通常是不可用的。
+
+&emsp;&emsp;Headless 浏览器有两个主要可交付成果：
+
+- 无头库，它允许嵌入应用程序控制浏览器并与网页交互。
+- 一个无头外壳，它是一个示例应用程序，用于执行无头 API 的各种功能。
+
+![Architecture_of_Puppeteer](https://king-hcj.github.io/images/browser/Architecture_of_Puppeteer.png?raw=true)
+
+&emsp;&emsp;Puppeteer 是一个 Node 库，他提供了一组用来操纵 Chrome 的 API, 通俗来说就是一个 headless chrome 浏览器 (当然你也可以配置成有 UI 的，默认是没有的)。既然是浏览器，那么我们手工可以在浏览器上做的事情 Puppeteer 都能胜任, 另外，Puppeteer 翻译成中文是”木偶”意思，所以听名字就知道，操纵起来很方便，你可以很方便的操纵她去实现：
 
 1） 生成网页截图或者 PDF
 2） 高级爬虫，可以爬取大量异步渲染内容的网页
@@ -485,7 +494,15 @@ add('1', '2');
 
 ### Electron
 
-![Electron](https://king-hcj.github.io/images/browser/electron.png?raw=true)
+&emsp;&emsp;Electron（原名为Atom Shell）是 GitHub 开发的一个开源框架。它通过使用 Node.js（作为后端）和Chromium 的渲染引擎（作为前端）完成跨平台的桌面 GUI 应用程序的开发。现已被多个开源 Web 应用程序用于前端与后端的开发，著名项目包括 GitHub 的 Atom 和微软的 Visual Studio Code。
+
+![Electron](https://king-hcj.github.io/images/browser/electron.jpeg?raw=true)
+
+&emsp;&emsp;Electron Architecture 由多个 Render Process 和一个 Main 进程组成。 Main Process 启动Render Process，它们之间的通信是通过IPC [Inter Process Communication]，如下图所示。
+
+![Electron_Architecture](https://king-hcj.github.io/images/browser/Electron_Architecture.png?raw=true)
+
+> 延伸阅读：[Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
 
 ## 浏览器代码兼容性
 
