@@ -115,6 +115,8 @@ window.addEventListener('contextmenu', function (e) {
   transform: scaleY(0.5);
   ```
 
+- rgba的另一种写法：`background: rgba($color: #10152a, $alpha: 0.1);`。
+
 ### Exploration and Discovery
 
 #### 前端性能优化
