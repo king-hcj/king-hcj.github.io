@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web浏览器面面观
+title: 47 张图带你看懂浏览器的世界
 categories: Chrome
 description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
@@ -8,16 +8,17 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;浏览器的主要功能就是向服务器发出请求，在浏览器窗口中展示HTML文档、PDF、图片、视频等网络内容。这些网络资源的位置由用户使用 URI（统一资源标示符）来指定指定。
 
-&emsp;&emsp;获取在大多数人眼中，浏览器是这样的：
+&emsp;&emsp;或许在大多数人眼中，浏览器是这样的：
 
 ![大多数人眼中的浏览器](https://king-hcj.github.io/images/browser/black-box.png?raw=true)
 
-&emsp;&emsp;一个展示前端，一个未知的中间层连接着网络世界；甚至，网络世界也可以省略：一台显示器，一个神秘的幕后黑盒。
+&emsp;&emsp;**一个展示前端，一个未知的中间层连接着网络世界**；甚至，网络世界也可以省略：一台显示器，一个神秘的幕后黑盒。
 
-&emsp;&emsp;如果你是一个前端开发者，甚至每天浏览器陪伴你度过的时光比女朋友陪伴你的都要久，想想那每一个令人“不是那么期待”的早晨，每一个争分夺秒完成任务的黄昏，只有浏览器和编辑器一直是你忠实的伙伴。而就连你一直离不开的VS Code编辑器，甚至也与浏览器有着莫大的渊源。
-&emsp;&emsp;屏幕前的朋友，你熟悉自己身边的那些人吗，熟悉那些与你朝夕相伴的朋友吗？也许熟悉，也许补，那么，你是否愿意花些时间来熟悉一下这个在大量时间里与你有着莫大交集的浏览器的内心世界呢？
+&emsp;&emsp;如果你是一个前端开发者，甚至每天浏览器陪伴你度过的时光比女朋友陪伴你的都要久，想想那每一个令人“不是那么期待”的早晨，每一个争分夺秒完成任务的黄昏，只有浏览器和编辑器一直是你忠实的伙伴。而**就连你一直离不开的VS Code编辑器，甚至也与浏览器有着莫大的渊源**。
 
-&emsp;&emsp;今天，我们就来一探究竟，走进这个我们与网络连接最紧密的中间地带。
+&emsp;&emsp;屏幕前的朋友，你熟悉自己身边的那些人吗，熟悉那些与你朝夕相伴的朋友吗？也许熟悉，也许不，那么，你是否愿意花些时间来熟悉一下这个在大量时间里与你有着莫大交集的浏览器的内心世界呢？
+
+&emsp;&emsp;今天，我们就来一探究竟，走进这个我们与网络连接最紧密的中间地带。全文行文结构大概如下：
 
 ![目录结构](https://king-hcj.github.io/images/browser/WEB_Browser.png?raw=true)
 
@@ -25,40 +26,43 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器的诞生与发展
 
-&emsp;&emsp;第一款浏览器诞生于1990年，但是现代浏览器的雏形却孕育于 1980s年代。
+&emsp;&emsp;也许你知道，第一款浏览器 —— WorldWideWeb，诞生于1990年。但是现代浏览器的雏形却孕育于 1980s年代。
 
-&emsp;&emsp;一位名叫蒂姆·伯纳斯-李的英国科学家在 1980 年代初期创建了一个名为 Inquire 的计算机程序，当时他在总部位于瑞士的欧洲核研究组织（CERN，以其法文字母表示）工作。该计划旨在使在 CERN 工作的许多不同个人更容易共享信息。
+&emsp;&emsp;一位名叫蒂姆·伯纳斯-李的英国科学家在 1980 年代初期创建了一个名为 Inquire 的计算机程序，当时他在总部位于瑞士的欧洲核研究组织（CERN，以其法文字母表示）工作。该计划旨在**使在 CERN 工作的许多不同个人更容易共享信息**。
 
-&emsp;&emsp;1990年，第一款浏览器问世于Tim Berners-Lee 在 CERN 工作期间。您可能想知道 Web 浏览器到底是什么，简而言之，它是一个计算机程序，其目的是显示和检索数据。使用分配给存储在网络服务器上的每个数据集（网页）的 URL，它可以做到这一点。所以这意味着当您在浏览器中输入内容时，您实际上是在输入地址，浏览器将使用该地址来获取您想要查看的信息。浏览器的另一个关键功能是以易于理解的方式向您解释和呈现计算机代码。
+&emsp;&emsp;1990年，第一款浏览器问世于Tim Berners-Lee 在 CERN 工作期间。您可能想知道 Web 浏览器到底是什么，简而言之，它是一个计算机程序，其目的是显示和检索数据。使用分配给存储在网络服务器上的每个数据集（网页）的 URL，它可以做到这一点。所以这意味着**当您在浏览器中输入内容时，您实际上是在输入地址**，浏览器将使用该地址来获取您想要查看的信息。**浏览器的另一个关键功能是以易于理解的方式向您解释和呈现计算机代码**。
 
-&emsp;&emsp;浏览器简史：
+&emsp;&emsp;下图简单罗列了截止2020年浏览器的发展简史：
 
 ![Timeline_of_the_Web_Browsers](https://king-hcj.github.io/images/browser/Timeline_of_the_Web_Browsers.jpg?raw=true)
 
-&emsp;&emsp;早期的浏览器：
+&emsp;&emsp;早期比较有名、有意义的浏览器主要包括Erwise、ViolaWWW、Mosaic、Netscape Navigator：
 
 ![The-Early-Browsers](https://king-hcj.github.io/images/browser/The-Early-Browsers.jpeg?raw=true)
 
-&emsp;&emsp;浏览器诞生之后的故事，想必您已经早有耳闻：
+&emsp;&emsp;1990年浏览器诞生之后的故事，想必您已经早有耳闻：
 
-- NCSA Mosaic，或简称Mosaic，是互联网历史上第一个获普遍使用和能够显示图片的网页浏览器。它是由伊利诺伊大学厄巴纳-香槟分校的NCSA组织在1993年所发表，并于1997年1月7日正式终止开发和支持。在当时人气爆发的大受欢迎。Mosaic的出现，算是点燃了后期互联网热潮的火种之一。后来网景导航者浏览器的开发工作，聘用了许多原有的Mosaic浏览器工程师，但是没有采用Mosaic网页浏览器的任何代码。传承网景浏览器代码的后裔为Firefox浏览器。
+- **NCSA Mosaic**，或简称 Mosaic，是互联网历史上**第一个获普遍使用和能够显示图片的网页浏览器**。它由伊利诺伊大学厄巴纳-香槟分校的NCSA组织在1993年发表，并于1997年1月7日正式终止开发和支持，这款浏览器在当时大受欢迎。Mosaic的出现，算是点燃了后期互联网热潮的火种之一。后来 Netscape Navigator 浏览器的开发，聘用了许多原有的 Mosaic 浏览器工程师，但是没有采用 Mosaic 网页浏览器的任何代码。而传承网景浏览器代码的后裔为Firefox浏览器。
 
-- Marc Andreesen 与同事 Jim Clark 于 1994 年成立了一家公司，当时 Mosaic 还是最流行的浏览器，它们计划打造出一个比 Mosaic 更好的浏览器，占领市场，让他们变得富有，并改变历史。他们的第一个浏览器被称为 Mosaic Netscape 0.9，不久更名 Netscape。得益于 JavaScript（JavaScript诞生于1995年，它是Netscape的Brendan Eich 仅花费十天设计实现的。） 和“partial-screen loading”（即使页面未完全加载，用户也可以开始阅读页面上的详细信息，这一个新概念极大地丰富了在线体验）等功能，它很快成为市场领导者，占据了浏览器市场上一半的份额，Netscape 的 IPO 也助长了日益增长的网络泡沫。
+- Marc Andreesen 与同事 Jim Clark 于 1994 年成立了一家公司，当时 Mosaic 还是最流行的浏览器，它们计划打造出一个比 Mosaic 更好的浏览器，占领市场，让他们变得富有，并改变历史。他们的第一个浏览器被称为 Mosaic Netscape 0.9，不久更名 Netscape。得益于 JavaScript（JavaScript诞生于1995年，它是Netscape的Brendan Eich 仅花费十天设计实现的。） 和“partial-screen loading”（即使页面未完全加载，用户也可以开始阅读页面上的详细信息，这一个新概念极大地丰富了在线体验）等功能，它很快成为市场领导者，占据了浏览器市场上一半的份额，最疯狂的时候，网景浏览器的市场份额接近百分之九十。
 
-- Netscape 最初的成功向那些在计算机和互联网领域工作的人证明了时代已经永远改变了，这让当时业内最强大的参与者感到震惊。一家名为 Microsoft 的西雅图公司就是这样一家公司。Netscape 对微软来说是一个挑战，微软在 1990 年代后期创建了自己的浏览器 Internet Explorer，但它通常被视为劣质产品。由于其跨平台特性，人们可以在 Windows PC 或 Mac 或任何其他系统上使用 Netscape，这导致许多人猜测**操作系统的时代已经结束**。计算机将通过浏览器运行，浏览器可以在任何机器上运行，从而使软件行业民主化并降低其相当大的进入壁垒。**微软已经建立了销售其专有操作系统 Windows 的帝国**，因此将这种由 Netscape 等公司带头的发展视为一种威胁。微软通过对其产品的大量投资，成功地迅速扭转了浏览器行业的局面，使其与 Netscape 一样好。Windows 计算机在发布时已经安装了 Internet Explorer（Microsoft 的浏览器），这使其能够在市场上占据一席之地并不断发展壮大，最终在浏览器领域取得了胜利。
+> 1995年8月9日，网景公开募股，最初的价格是14美元一股，但后来阴差阳错，改为28美元一股发行，当天收盘时，网景的股票成了75美元一股，网景成为了当时世界上市值最高的互联网公司，Netscape 的 IPO 也助长了日益增长的网络泡沫。
+
+- Netscape 最初的成功向那些在计算机和互联网领域工作的人证明时代已经永远改变了，这让当时业内最强大的参与者感到震惊，一家名为 Microsoft 的西雅图公司就是其中之一。计算机将通过浏览器运行，浏览器可以在任何机器上运行，从而使软件行业民主化并降低其相当大的进入壁垒，这导致许多人猜测**操作系统的时代已经结束**。Netscape 对微软来说是一个挑战，微软在 1990 年代后期创建了自己的浏览器 Internet Explorer，当时的IE和现在一样，通常被视为劣质产品。由于**微软已经建立了销售其专有操作系统 Windows 的帝国**，因此将这种由 Netscape 等公司带头的发展视为一种威胁。微软通过对其产品的大量投资，使其与 Netscape 一样好，成功地迅速扭转了浏览器行业的局面。Windows 计算机在发布时已经安装了 Internet Explorer（Microsoft 的浏览器），这使其能够在市场上占据一席之地并不断发展壮大，最终在浏览器领域取得了胜利，这便是著名的**第一次浏览器大战**。
 
 ![Market_Share_During_the_Browser_Wars](https://king-hcj.github.io/images/browser/Market_Share_During_the_Browser_Wars.jpg?raw=true)
 
-&emsp;&emsp;市场份额的快速下滑导致 Netscape 在 2000 年卖给了 AOL，2008 年Netscape最终灭绝。
+&emsp;&emsp;市场份额的快速下滑导致 Netscape 被出售给了 AOL，2003年7月，网景解散，就在解散的当天，Mozilla基金会成立，2004年基于Mozilla源码的Firefox首次登台，拉开了第二次浏览器大战的序幕。2008 年Netscape最终灭绝，**当年的浏览器帝国正式退出了历史的舞台**。
+
 &emsp;&emsp;到 2003 年，微软的 Internet Explorer 控制了 92% 以上的市场，完全扭转了 1995 年的局面。然而，虽然微软在不到十年的时间里成功地完全接管了浏览器市场，但很快就会出现其他竞争，再次重塑网络浏览器的历史。
 
-- 在微软在 1990 年代后期崛起并让 Netscape 等公司屈服之后，浏览器的历史似乎已经走到了尽头。然而，正如最初发布后的情况一样，Internet Explorer 正在成为劣质产品。谷歌于 2008 年推出了其专有浏览器——Chrome。到 2012 年底，即推出仅四年后，谷歌 Chrome 浏览器凭借其易用性、跨平台功能、速度以及与标签和书签相关的特殊功能，取代 Internet Explorer 成为最受欢迎的浏览器。
+- 微软在 1990 年代后期崛起并让 Netscape 等公司屈服之后，浏览器的历史似乎已经走到了尽头。然而，正如最初发布后的情况一样，Internet Explorer 正在成为劣质产品。谷歌于 2008 年推出了其专有浏览器——Chrome。到 2012 年底，即推出仅四年后，谷歌 Chrome 浏览器凭借其易用性、跨平台功能、速度以及与标签和书签相关的特殊功能，取代 Internet Explorer 成为最受欢迎的浏览器。
 
 - 在 2000 年代初期，可能是在微软将浏览器附加到其操作系统之后，Apple 发布了 Safari，一种专为 Mac 设计的浏览器，并成为目前市场上第二大浏览器。
 
-- Internet Explorer 的流行度在 2000 年代后期逐渐减少，主要是因为它变得缓慢和过时，而 Microsoft 发现自己现在似乎已经是在外面观察浏览器世界。该公司不想继续错过，于是着手解决这个问题，但发现一个关键问题是“Internet Explorer”这个名字已经成为劣质浏览器的同义词。因此，为了尝试重新进入游戏，微软不得不重新命名，它通过发布 Edge 来实现，这是微软浏览器的最新版本，它收到了很多好评，但对于 Microsoft 来说，作为 Edge 可能为时已晚。
+- Internet Explorer 的流行度在 2000 年代后期逐渐减少，主要是因为它变得缓慢和过时，而 Microsoft 发现自己现在似乎已经是在外面观察浏览器世界。该公司不想继续错过，于是着手解决这个问题，但发现一个关键问题是“Internet Explorer”这个名字已经成为劣质浏览器的同义词。因此，为了尝试重新进入游戏，微软不得不重新命名，是以，Edge 变诞生了。Edge是微软浏览器的最新版本，它受到了很多好评，但对于 Microsoft 来说，Edge 的出现可能为时已晚。
 
-- IE浏览器终成时代之泪，Microsoft Edge成为Windows 11的默认浏览器。这是Windows系统更新20年来，IE的首次缺席，也是最后一次。早在Win10更新时微软就表示，将放弃更新IE转向开发新的浏览器Microsoft Edge。如今是彻底要和桌面上的IE说再见了。 —— IE 浏览器将在 2022 年安息，它也将从 Windows 11 中消失。
+- **IE浏览器终成时代之泪，Microsoft Edge 成为Windows 11的默认浏览器**。这是Windows系统更新20年来，IE的首次缺席，也是最后一次。早在Win10更新时微软就表示，将放弃更新IE转向开发新的浏览器Microsoft Edge。如今是彻底要和桌面上的IE说再见了。 —— IE 浏览器将从 Windows 11 中消失，它也将在 2022 年安息。
 
 ### 浏览器市场份额
 
@@ -77,7 +81,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![Web_Browser_Market_Share_CHN](https://king-hcj.github.io/images/browser/Web_Browser_Market_Share_CHN.png?raw=true)
 
-如何查看浏览器市场份额：
+&emsp;&emsp;如果你对以上浏览器市场份额数据有兴趣，可以通过以下链接进行查看：
 
 - 国内浏览器市场份额
   - [浏览器市场份额](https://tongji.baidu.com/research/site){:target='\_blank'}
@@ -97,7 +101,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 #### CPU
 
-&emsp;&emsp;中央处理器（Central Processing Unit），或简称为 CPU。CPU 可以看作是计算机的大脑。**一个 CPU 核心如图中的办公人员，可以逐一解决很多不同任务**。它可以在解决从数学到艺术一切任务的同时还知道如何响应客户要求。过去 CPU 大多是单芯片的，一个核心就像存在于同芯片的另一个 CPU。随着现代硬件发展，你经常会有不止一个内核，为你的手机和笔记本电脑提供更多的计算能力。
+&emsp;&emsp;中央处理器（Central Processing Unit），或简称为 CPU。CPU 可以看作是计算机的大脑。**一个 CPU 核心如图中的办公人员，可以逐一解决很多不同任务**。它可以在解决从数学到艺术一切任务的同时还知道如何响应客户要求。过去 CPU 大多是单芯片的。随着现代硬件发展，你经常会有不止一个内核，为你的手机和笔记本电脑提供更多的计算能力。
 
 &emsp;&emsp;4 个 CPU 核心作为办公人员，坐在办公桌前处理各自的工作：
 
@@ -107,7 +111,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;图形处理器（Graphics Processing Unit，简称为 GPU）是计算机的另一部件。与 CPU 不同，GPU 擅长同时处理跨内核的简单任务。顾名思义，**它最初是为解决图形而开发的**。这就是为什么在图形环境中“使用 GPU” 或 “GPU 支持”都与快速渲染和顺滑交互有关。近年来随着 GPU 加速计算的普及，仅靠 GPU 一己之力也使得越来越多的计算成为可能。
 
-&emsp;&emsp;许多带特定扳手的 GPU 内核意味着它们只能处理有限任务
+&emsp;&emsp;下图中，许多带特定扳手的 GPU 内核意味着它们只能处理有限任务。
 
 ![GPU](https://king-hcj.github.io/images/browser/GPU.png?raw=true)
 
@@ -116,7 +120,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;进程可以被描述为是一个应用的执行程序。线程是位于进程内部并执行其进程程序的任意部分。
 
-&emsp;&emsp;启动应用时会创建一个进程。程序也许会创建一个或多个线程来帮助它工作，这是可选的。操作系统为进程提供了一个可以使用的“一块”内存，所有应用程序状态都保存在该私有内存空间中。关闭应用程序时，相应的进程也会消失，操作系统会释放内存。
+&emsp;&emsp;启动应用时会创建一个进程。程序也许会创建一个或多个线程来帮助它工作。操作系统为进程提供了一个可以使用的“一块”内存，所有应用程序状态都保存在该私有内存空间中。关闭应用程序时，相应的进程也会消失，操作系统会释放内存（下图中，边界框为进程，线程作为抽象鱼在进程中游动）。
 
 ![memory](https://king-hcj.github.io/images/browser/memory.svg?raw=true)
 
@@ -126,7 +130,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器的进程/线程架构模型
 
-#### 浏览器进程分类【A】
+#### 浏览器进程分类
 
 &emsp;&emsp;关于如何**构建 web 浏览器并不存在标准规范**，一个浏览器的构建方法可能与另一个迥然不同。不同浏览器的进程/线程架构一般由下图几部分：
 
@@ -138,41 +142,41 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![browser-arch-chrome](https://king-hcj.github.io/images/browser/browser-arch-chrome.png?raw=true)
 
-&emsp;&emsp;顶部是浏览器进程，它与处理应用其它模块任务的进程进行协调。对于渲染进程来说，创建了多个渲染进程并分配给了每个标签页。直到最近，Chrome 在可能的情况下给每个标签页分配一个进程。而现在它试图给每个站点分配一个进程，包括 iframe。
+&emsp;&emsp;上图中，顶部是浏览器进程，它与处理应用其它模块任务的进程进行协调。对于渲染进程来说，创建了多个渲染进程并分配给了每个标签页。Chrome 在可能的情况下会给每个标签页分配一个进程。而现在它试图给每个站点分配一个进程，包括 iframe。
 
-- 浏览器进程：控制应用中的 “Chrome” 部分，包括地址栏，书签，回退与前进按钮。以及处理 web 浏览器不可见的特权部分，如网络请求与文件访问。
-- 渲染进程：控制标签页内网站展示。
-- 插件进程：控制站点使用的任意插件，如 Flash。
+- 浏览器进程：控制应用中的 “Chrome” 部分，包括地址栏，书签，回退与前进按钮，以及处理 web 浏览器中网络请求、文件访问等不可见的特权部分；
+- 渲染进程：控制标签页内网站展示；
+- 插件进程：控制站点使用的任意插件，如 Flash；
 - GPU进程：处理独立于其它进程的 GPU 任务。GPU 被分成不同进程，因为 GPU 处理来自多个不同应用的请求并绘制在相同表面。
 
-&emsp;&emsp;不同进程指向浏览器 UI 的不同部分：
+&emsp;&emsp;可以简单理解为不同进程对应浏览器 UI 的不同部分：
 
 ![browserui](https://king-hcj.github.io/images/browser/browserui.png?raw=true)
 
-&emsp;&emsp;**Chrome 更多的是把自己抽象为一个操作系统，网页或扩展相当于一个个程序**，你甚至可以注意到 Chrome 确实自带一个任务管理器，在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量等。
+&emsp;&emsp;**Chrome 更多的是把自己抽象为一个操作系统，网页或扩展相当于一个个程序**，你甚至可以发现，Chrome 确实自带了一个任务管理器，在任务管理器面板会列出当前正在运行的进程以及它们当前的 CPU/内存使用量情况等信息。
 
 &emsp;&emsp;一般你可以通过两种方法打开Chrome任务管理器：
 
-- 通过在浏览器顶栏右键，选择任务管理器查看；
-- 点击 Chrome 浏览器右上角的“选项”菜单，选择“更多工具”子菜单，点击“任务管理器”，打开任务管理器窗口。
+- 通过在浏览器顶栏（标签tab栏）右侧右键，选择任务管理器查看；
+- 点击 Chrome 浏览器右上角的“选项”菜单（一般是三个点的标识），选择“更多工具”子菜单，点击“任务管理器”，打开任务管理器窗口。
 
 ![task](https://king-hcj.github.io/images/browser/task.png?raw=true)
 
 &emsp;&emsp;前文中提到了 Chrome 使用多个渲染进程，那他有什么优势呢？
 
-- 稳定性：最简单的情况下，你可以想象每个标签页都有自己的渲染进程。假设你打开了三个标签页，每个标签页都拥有自己独立的渲染进程。如果某个标签页失去响应，你可以关掉这个标签页，此时其它标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应，显然这样的体验会很糟糕，下面是对比动图，供你参考。
+- 稳定性：最简单的情况下，你可以想象每个标签页都有自己的渲染进程。假设你打开了三个标签页，每个标签页都拥有自己独立的渲染进程。如果某个标签页失去响应，你可以关掉这个标签页，此时其它标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应，显然这样的体验会很糟糕。下面是多/单进程架构的对比动图，供你参考。
 
 ![tabs](https://king-hcj.github.io/images/browser/tabs.svg?raw=true)
 
 - 安全性与沙箱化：把浏览器工作分成多个进程的另一好处是安全性与沙箱化。由于操作系统提供了限制进程权限的方法，浏览器就可以用沙箱保护某些特定功能的进程。例如，Chrome 浏览器可以限制处理用户输入（如渲染器）的进程的文件访问的权限。
 
-- 共享拷贝：由于进程有自己的私有内存空间，所以它们通常包含公共基础设施的拷贝(如Chrome V8引擎)。这意味着使用了更多的内存，如果它们是同一进程中的线程，就无法共享这些拷贝（同一个进程中的线程不共享堆栈，堆栈是保证线程独立运行所必须的）。为了节省内存，Chrome 对可启动的进程数量有所限制。具体限制数值依设备可提供的内存与 CPU 能力而定，但是**当 Chrome 运行时达到限制时，会开始在同一站点的不同标签页上运行同一进程**。
+&emsp;&emsp;由于进程有自己的私有内存空间，所以它们通常包含公共基础设施的拷贝(如Chrome V8引擎)。这意味着使用了更多的内存，如果它们是同一进程中的线程，就无法共享这些拷贝（同一个进程中的线程不共享堆栈，堆栈是保证线程独立运行所必须的）。为了节省内存，Chrome 对可启动的进程数量有所限制。具体限制数值依设备可提供的内存与 CPU 能力而定，但是**当 Chrome 运行时达到限制时，会开始在同一站点的不同标签页上运行同一进程**。
 
 &emsp;&emsp;Chrome 正在经历架构变革，它转变为将浏览器程序的每一模块作为一个服务来运行，从而可以轻松实现进程的拆解或聚合。具体表现是，当 Chrome 运行在**强力硬件**上时，它会将每个服务分解到不同进程中，从而**提升稳定性**，但是如果 Chrome 运行在资源有限的设备上时，它会将服务聚合到一个进程中从而**节省了内存占用**。在这一架构变革实现前，类似的整合进程以减少内存使用的方法已经在 Android 类平台上使用。
 
 ![servicfication](https://king-hcj.github.io/images/browser/servicfication.svg?raw=true)
 
-&emsp;&emsp;Chrome 67 版本后，桌面版 Chrome 都默认开启了**站点隔离**，每个标签页的 iframe 都有一个单独的渲染进程。启用站点隔离是多年来工程人员努力的结果。站点隔离并不只是分配不同的渲染进程这么简单。它从根本上改变了 iframe 的通信方式。在一个页面上打开开发者工具，让 iframe 在不同的进程上运行，这意味着开发者工具必须在幕后工作，以使它看起来无缝。即使运行一个简单的 Ctrl + F 来查找页面中的一个单词，也意味着在不同的渲染器进程中进行搜索。你可以看到为什么浏览器工程师把发布站点隔离功能作为一个重要里程碑！
+&emsp;&emsp;Chrome 67 版本后，桌面版 Chrome 都默认开启了**站点隔离**，每个标签页的 iframe 都有一个单独的渲染进程。启用站点隔离是多年来工程人员努力的结果。站点隔离并不只是分配不同的渲染进程这么简单。它从根本上改变了 iframe 的通信方式。在一个页面上打开开发者工具，让 iframe 在不同的进程上运行，这意味着开发者工具必须在幕后工作，以使它看起来无缝。即使运行一个简单的 Ctrl + F 来查找页面中的一个单词，也意味着在不同的渲染器进程中进行搜索。你可以看到为什么**浏览器工程师把发布站点隔离功能作为一个重要里程碑**！
 
 ![isolation](https://king-hcj.github.io/images/browser/isolation.png?raw=true)
 
@@ -180,12 +184,12 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### 浏览器整体架构
 
-&emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，在此不过多赘述：
+&emsp;&emsp;如果您是一名前端工程师，那么，面试时你大概率会被问到过：从 URL 输入到页面展现到底发生了什么？，如果您对这一过程不太熟悉，建议看看下面两篇文章，在此不过多赘述：
 
   - [经典面试题：从 URL 输入到页面展现到底发生什么？](https://zhuanlan.zhihu.com/p/57895541){:target='_blank'}
   - [在浏览器输入 URL 回车之后发生了什么（超详细版）](https://zhuanlan.zhihu.com/p/80551769){:target='_blank'}
 
-&emsp;&emsp;浏览器的主要任务之一就是渲染展示页面，不同的浏览器内核，渲染过程也不完全相同，但大致流程都差不多，下面这张图片是火狐浏览器（Firefox）开发文档中的一张图片。
+&emsp;&emsp;浏览器的主要任务之一就是渲染展示页面，不同的浏览器内核，渲染过程也不完全相同，但大致流程都差不多，下面这张图片是火狐浏览器（Firefox，可以认为是Netscapede的涅槃重生）开发文档中的一张图片。
 
 ![浏览器架构](https://king-hcj.github.io/images/browser/browser-diagram-full.png?raw=true)
 
@@ -207,18 +211,18 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;负责显示请求的内容。如果请求的内容是 HTML，它就负责解析 HTML 和 CSS 内容，并将解析后的内容显示在屏幕上。
 
-&emsp;&emsp;所谓浏览器内核就是指浏览器最重要或者说核心的部分"Rendering Engine"，译为"渲染引擎"。负责对网页语法的解析，比如HTML、JavaScript，并渲染到网页上。所以浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定这浏览器如何显示页面的内容和页面的格式信息。不同的浏览器内核对语法的解释也不相同，因此同一的网页在不同内核的浏览器显示的效果也会有差异。这也就是网页编写者在不同内核的浏览器中测试网页显示效果的原因。
+&emsp;&emsp;所谓浏览器内核就是指浏览器最重要或者说核心的部分"Rendering Engine"，译为"渲染引擎"。负责对网页语法的解析，比如HTML、JavaScript，并渲染到网页上。所以浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定这浏览器如何显示页面的内容和页面的格式信息。不同的浏览器内核对语法的解释也不相同，因此同一网页在不同内核的浏览器显示的效果也会有差异（浏览器兼容）。这也就是网页开发者在不需要同内核的浏览器中测试网页显示效果的原因。
 
 ![RENDERING ENGINE](https://king-hcj.github.io/images/browser/browser_inner.png?raw=true)
 
-> 延伸阅读：曾红极一时的红芯浏览器，官网对其介绍是：拥有智能的认证引擎、渲染引擎、管控引擎，而且还有强大的“国密通讯协议”，支持统一管控、远程控制。2018年8月15日，红芯浏览器被爆出打开安装目录后出现大量和谷歌chorme浏览器一致的同名文件，其安装程序的文件属性中也显示了原始文件名chrome.exe，红芯浏览器的官网已撤下了浏览器的下载链接。8月16日，红芯联合创始人高婧回应，红芯浏览器“包含‘Chrome’在里面”，但并非抄袭，而是“站在巨人的肩膀上去做创新”。
+> 延伸阅读：曾红极一时的红芯浏览器，官网对其介绍是：拥有智能的认证引擎、渲染引擎、管控引擎，而且还有强大的“国密通讯协议”，支持统一管控、远程控制。2018年8月15日，红芯浏览器被爆出打开安装目录后出现大量和谷歌Chrome浏览器一致的同名文件，其安装程序的文件属性中也显示了原始文件名chrome.exe，红芯浏览器的官网已撤下了浏览器的下载链接。8月16日，红芯联合创始人高婧回应，红芯浏览器“包含‘Chrome’在里面”，但并非抄袭，而是“站在巨人的肩膀上去做创新”。
 ![hongxin](https://king-hcj.github.io/images/browser/hongxin.jpeg?raw=true)
 
 &emsp;&emsp;言归正传，浏览器内核主要包括以下三个技术分支：排版渲染引擎、 JavaScript引擎，以及其他。
 
 &emsp;&emsp;排版引擎：
 
-- KHTML：KHTML，是HTML网页排版引擎之一，由KDE所开发。KHTML拥有速度快捷的优点，但对错误语法的容忍度则比Mozilla产品所使用的Gecko引擎小。苹果电脑于2002年采纳了KHTML，作为开发Safari浏览器之用，并发布所修改的最新及过去版本源代码。后来发表了开放源代码的WebCore及WebKit引擎，它们均是KHTML的衍生产品。
+- KHTML：KHTML，是HTML网页排版引擎之一，由KDE所开发。KHTML拥有速度快捷的优点，但对错误语法的容忍度则比Mozilla产品所使用的Gecko引擎小。苹果电脑于2002年采纳了KHTML，作为开发Safari浏览器之用，并发布所修改的最新及过去版本源代码。**后来发表的开源WebCore及WebKit引擎，它们均是KHTML的衍生产品**。
 - WebCore：WebCore是**苹果公司**开发的排版引擎，它是在另外一个排版引擎“KHTML”的基础上而来的。使用WebCore的主要有Safari浏览器。
 
 &emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
@@ -270,7 +274,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 #### 数据存储
 
-&emsp;&emsp;这是持久层。浏览器需要在硬盘上保存各种数据，例如 Cookie。新的 HTML 规范 (HTML5) 定义了“网络数据库”，这是一个完整（但是轻便）的浏览器内数据库。
+&emsp;&emsp;这是持久层，浏览器需要在硬盘上保存各种数据，例如 Cookie。新的 HTML 规范 (HTML5) 定义了“网络数据库”，这是一个完整而轻便的浏览器内数据库。
 
 ### 求同存异的浏览器架构
 
@@ -298,13 +302,13 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 <!-- > 参考资料：https://www.semanticscholar.org/paper/Architecture-and-evolution-of-the-modern-web-Grosskurth-Godfrey/f200708902b03ddfe8b385aaffa1065fca41df87 -->
 
-## 浏览器基本原理【A】
+## 浏览器基本原理
 
-- [Design Documents](https://www.chromium.org/developers/design-documents){:target='_blank'}
-- [浏览器运行原理】全程高能动画解析浏览器运行机制！](https://www.zhihu.com/zvideo/1318938663649800192){:target='_blank'}
+<!-- - [Design Documents](https://www.chromium.org/developers/design-documents){:target='_blank'}
+- [【浏览器运行原理】全程高能动画解析浏览器运行机制！](https://www.zhihu.com/zvideo/1318938663649800192){:target='_blank'}
   - https://www.zhihu.com/people/li-ming-44-11/zvideos
   - [Chromium_doc_zh](https://ahangchen.gitbooks.io/chromium_doc_zh/content/zh/){:target='_blank'}
-- [万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'}
+- [万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818){:target='_blank'} -->
 
 ### Chrome V8
 
@@ -333,7 +337,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 #### V8 的现有架构
 
-&emsp;&emsp;为了解决上述缺点，V8采用JavaScriptCore的架构，生成字节码。V8采用生成字节码的方式后，整体流程如下图：
+&emsp;&emsp;为了解决上述缺点，V8借鉴JavaScriptCore的架构，生成字节码。V8采用生成字节码的方式后，整体流程如下图：
 
 ![V8-2017](https://king-hcj.github.io/images/browser/v8_2017.png?raw=true)
 
@@ -355,16 +359,16 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ### JavaScriptCore
 
-&emsp;&emsp;V8未诞生之前，早期主流的JavaScript引擎是JavaScriptCore引擎.JavaScriptCore（以下简称JSCore）主要服务于Webkit浏览器内核，他们都是由苹果公司开发并开源出来。JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是前文提到的Chrome的V8。这些**JS引擎的使命都是解释执行JS脚本**。而在渲染流程上，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们可以通过下图看下它的工作流程:
+&emsp;&emsp;V8未诞生之前，早期主流的JavaScript引擎是JavaScriptCore引擎。JavaScriptCore（以下简称JSCore）主要服务于Webkit浏览器内核，他们都是由苹果公司开发并开源出来。JSCore是WebKit默认内嵌的JS引擎，之所以说是默认内嵌，是因为很多基于WebKit分支开发的浏览器引擎都开发了自家的JS引擎，其中最出名的就是前文提到的Chrome的V8。这些**JS引擎的使命都是解释执行JS脚本**。而在渲染流程上，JS和DOM树之间存在着互相关联，这是因为浏览器中的JS脚本最主要的功能就是操作DOM树，并与之交互。我们可以通过下图看下它的工作流程:
 
 ![JavaScriptCore](https://king-hcj.github.io/images/browser/jsCore.png?raw=true)
 
-> JavaScriptCore主要模块：Lexer 词法分析器，将脚本源码分解成一系列的Token；Parser 语法分析器，处理Token并生成相应的语法树；LLInt 低级解释器，执行Parser生成的二进制代码；Baseline JIT 基线JIT（just in time 实时编译）；DFG 低延迟优化的JIT；FTL 高通量优化的JIT。
+> JavaScriptCore主要模块：**Lexer 词法分析器，将脚本源码分解成一系列的Token；Parser 语法分析器，处理Token并生成相应的语法树；LLInt 低级解释器，执行Parser生成的二进制代码；Baseline JIT 基线JIT（just in time 实时编译）；DFG 低延迟优化的JIT；FTL 高通量优化的JIT**。
 
 &emsp;&emsp;可以看到，相比静态编译语言生成语法树之后，还需要进行链接，装载生成可执行文件等操作，解释型语言在流程上要简化很多。这张流程图右边画框的部分就是JSCore的组成部分：Lexer（词法分析）、Parser（语法分析）、LLInt以及JIT（解释执行）的部分（之所以JIT的部分是用橙色标注，是因为并不是所有的JSCore中都有JIT部分）。
 
-- **词法分析**很好理解，就是把一段我们写的源代码分解成Token序列的过程，这一过程也叫分词。在JSCore，词法分析是由Lexer来完成（有的编译器或者解释器把分词叫做Scanner，比如Chrome v8）。
-- 跟人类语言一样，我们讲话的时候其实是按照约定俗成，交流习惯按照一定的语法讲出一个又一个词语。那类比到计算机语言，计算机要理解一门计算机语言，也要理解一个语句的语法。Parser会把Lexer分析之后生成的token序列进行语法分析，并生成对应的一棵抽象语法树(AST)。之后，ByteCodeGenerator会根据AST来生成JSCore的字节码，完成整个**语法解析**步骤。
+- **词法分析**很好理解，就是**把一段我们写的源代码分解成Token序列的过程**，这一过程也叫**分词**。在JSCore，词法分析是由Lexer来完成（有的编译器或者解释器把分词叫做Scanner，比如Chrome v8）。
+- 跟人类语言一样，我们讲话的时候其实是按照约定俗成，交流习惯按照一定的语法讲出一个又一个词语。那类比到计算机语言，计算机要理解一门计算机语言，也要理解一个语句的语法。**Parser会把Lexer分析之后生成的token序列进行语法分析，并生成对应的一棵抽象语法树(AST)**。之后，ByteCodeGenerator会根据AST来生成JSCore的字节码，完成整个**语法解析**步骤。
 - JS源代码经过了词法分析和语法分析这两个步骤，转成了字节码，其实就是经过任何一门程序语言必经的步骤–编译。但是不同于我们编译运行OC代码，JS编译结束之后，并不会生成存放在内存或者硬盘之中的目标代码或可执行文件。生成的指令字节码，会被立即被JSCore这台虚拟机进行逐行**解释执行**。运行指令字节码（ByteCode）是JS引擎中很核心的部分，各家JS引擎的优化也主要集中于此。
 
 > PS：严格的讲，语言本身并不存在编译型或者是解释型，因为语言只是一些抽象的定义与约束，并不要求具体的实现，执行方式。这里讲JS是一门“解释型语言”只是JS一般是被JS引擎动态解释执行，而并不是语言本身的属性。
@@ -426,36 +430,42 @@ add('1', '2');
 
 #### Chrome V8 的事件机制
 
-![v8-ui](https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true)
+&emsp;&emsp;关于异步编程和消息队列，UI 线程提供一个消息队列，并将待执行的事件添加到消息队列中，然后 UI 线程会不断循环地从消息队列中取出事件、执行事件，通用 UI 线程宏观架构如下图所示：
 
-- [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}【图更好一点】
-- [V8 Ignition：JS 引擎与字节码的不解之缘](https://cnodejs.org/topic/59084a9cbbaf2f3f569be482){:target='_blank'}
-- [认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685){:target='_blank'}
-- [V8引擎详解（一）——概述](https://juejin.cn/post/6844904137792962567){:target='_blank'}
+![v8-ui](https://king-hcj.github.io/images/posts/arts/v8-ui.jpg?raw=true)
 
 ## 浏览器的不同形态
 ### WebView
 
-&emsp;&emsp;WebView 是一种嵌入式浏览器，原生应用可以用它来展示网络内容。WebView 只是一个可视化的组件/控件/微件等。
+&emsp;&emsp;**WebView 是一种嵌入式浏览器，原生应用可以用它来展示网络内容**。WebView 只是一个**可视化的**组件/控件/微件等。这样我们可以用它来作为我们原生 app 的视觉部分。当你使用原生应用时，WebView 可能只是被隐藏在普通的原生 UI 元素中，你甚至用不到注意到它。
 
-&emsp;&emsp;运行在你的 WebView 中的 JavaScript 有能力调用原生的系统 API。这意味着你不必受到 Web 代码通常必须遵守的传统浏览器安全沙箱的限制。下图解释了使这样成为可能的架构差异：
+> 如果你把浏览器想象成两部分，一部分是 UI（地址栏，导航栏按钮等），其它部分是把标记跟代码转换成我们可见和可交互视图的引擎。**WebView 就是浏览器引擎部分**，你可以像插入 iframe 一样将 Webview 插入到你的原生应用中，并且编程化的告诉它将会加载什么网页内容。
+
+&emsp;&emsp;运行在你的 WebView 中的 JavaScript 有能力调用原生的系统 API。这意味着你不必受到 Web 代码通常必须遵守的传统浏览器安全沙箱的限制。下图解释了使用这种技术后的架构差异：
 
 ![webview and webapp](https://king-hcj.github.io/images/browser/webview_webapp.png?raw=true)
 
-&emsp;&emsp;WebView 非常棒。虽然看起来它们看起来像是完全特殊和独特的野兽，记住，它们只不过是一个在应用中设置好位置和大小的浏览器，而且不会放置任何花哨的 UI。其实还有更多东西，但这是它的精髓。在大多数情况下，除非你要调用原生 API，否则不必在 WebView 中专门测试 Web 应用。除此以外，你在 WebView 中看到的内容与你在浏览器中看到的内容相同，尤其是使用同一渲染引擎时：
+&emsp;&emsp;默认情况下，在 WebView 或 Web 浏览器中运行的任何 Web 代码都与应用的其余部分保持隔离。这样做是出于安全原因，主要是为降低恶意的 JavaScript 代码对系统造成的伤害。对于任意 Web 内容，这种安全级别很有意义,因为你永远不能完全信任加载的 Web 内容。但 WebView 的情况并非如此，对于 WebView 方案，开发人员通常可以完全控制加载的内容。恶意代码进入并在设备上造成混乱的可能性非常低。
+
+&emsp;&emsp;**这就是为什么对于 WebView，开发人员可以使用各种受支持的方式来覆盖默认的安全行为，并让 Web 代码和原生应用代码相互通信。这种沟通通常称为 bridge**。你可以在上文的图片中看到 bridge 可视化为 Native Bridge 和 JavaScript Bridge 的一部分。
+
+&emsp;&emsp;WebView 非常好，虽然它看起来像是完全特殊和独特的，但请记住，它们只不过是一个在应用中设置好位置和大小的、没有任何花哨 UI 的浏览器，这就是它的精髓。大多数情况下，除非您调用原生 API，否则您不必在 WebView 中专门测试您的 Web 应用程序。此外，您在 WebView 中看到的内容与您在浏览器中看到的内容相同，尤其是使用同一渲染引擎时：
 
 - 在 iOS 上，Web 渲染引擎始终是 WebKit，与 Safari 和 Chrome 相同。是的，你没看错。iOS 上的 Chrome 实际上使用了 WebKit。
 - 在 Android 上的渲染引擎通常是 Blink，与 Chrome 相同。
 - 在 Windows，Linux 和 macOS 上，由于这些是更宽松的桌面平台，因此在选择 WebView 风格和渲染引擎时会有很大的灵活性。你看到的流行渲染引擎将是 Blink（Chrome）和 Trident（Internet Explorer），但是没有一个引擎可以依赖。这完全取决于应用以及它正在使用的 WebView 引擎。
 
-- [理解 WebView](https://github.com/xitu/gold-miner/blob/ec8862f2993f7eea977af6929d0b0785a86fd4e3/TODO1/understanding-webviews.md){:target='_blank'}
+&emsp;&emsp;WebView 的应用：
 
-<!-- - [Android WebView基本使用](https://blog.csdn.net/lowprofile_coding/article/details/77928614){:target='_blank'}
+- WebView 最常见的用途之一是显示链接的内容；
+- 广告仍然是原生应用最流行的赚钱方式之一，大多数广告是通过 WebView 提供的 Web 内容进行投放的；
+- Hybrid Apps，混合应用程序很受欢迎有几个原因，最大的一个是提高开发人员的生产力。如果你有一个可以在浏览器中运行的响应式 Web 应用程序，那么让相同的应用程序在各种设备上与混合应用程序一起运行是相当简单的；当你对 Web 应用进行更新时，所有使用它的设备都可以立即使用该更改，因为内容来自一个集中的服务器，而如果是纯原生应用，部署和更新时，你将不得不经历针对每个平台的构建、审核；
+- 原生应用扩展，如 Microsoft Office 中类似维基百科这样的基于网络的扩展就是通过一个 WebView 实现的。
+
+&emsp;&emsp;如果你对 WebView 感兴趣，可通过以下几篇文章继续了解：
+
 - [7.5.1 WebView(网页视图)基本用法](https://www.runoob.com/w3cnote/android-tutorial-webview.html){:target='_blank'}
-- [你真的了解webview么？](https://zhuanlan.zhihu.com/p/58691238){:target='_blank'}
 - [Android：这是一份全面 & 详细的Webview使用攻略](https://www.jianshu.com/p/3c94ae673e2a/){:target='_blank'}
-- [WebView你真的熟悉吗？看了才知道](https://www.jianshu.com/p/d2f5ae6b4927){:target='_blank'}
-- [WebView](http://www.androidchina.net/tag/webview){:target='_blank'} -->
 
 ### Headless browser
 
@@ -511,58 +521,29 @@ add('1', '2');
 
 > 延伸阅读：[Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
 
-## 浏览器代码兼容性
+## 浏览器代码兼容性测试
 
 - [caniuse](https://www.caniuse.com/){:target='_blank'}
 - [browseemall](https://www.browseemall.com/Resources){:target='_blank'}
 - [html5test](https://html5test.com/){:target='_blank'}
 
-## 参考资料
+## 延伸阅读
 
-- [深入理解JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='_blank'}
-- [The Story of the Web: A History Of Internet Browsers](https://www.internetadvisor.com/the-story-of-the-web-a-history-of-internet-browsers){:target='_blank'}
-- [THE HISTORY OF THE WEB BROWSER](https://minimalistwpthemes.com/history-of-the-web-browser/){:target='_blank'}
 - [浏览器简史](http://www.cnw.com.cn/zhuanti/2009-ie/){:target='_blank'}
-- [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
-- [Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}
-[JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
-
-
-
-## 相伴日久 —— 浏览器
-
-&emsp;&emsp;作为一名前端开发人员，学习浏览器的内部工作原理将有助于我们在开发中作出更明智的决策，并理解那些最佳开发实践的个中缘由。在前端面试中，也有一道经典的面试题 ——【从您在地址栏输入 google.com 直到您在浏览器屏幕上看到 Google 首页的整个过程中都发生了些什么】。
-
-- [浏览器是如何工作的：Chrome V8 让你更懂 JavaScript](https://segmentfault.com/a/1190000037435824){:target='\_blank'}
+- [Web 浏览器相关的一些概念](https://keqingrong.cn/blog/2019-11-24-concepts-related-to-web-browsers){:target='_blank'}
 - [浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/){:target='\_blank'}
 - [从浏览器多进程到 JS 单线程，JS 运行机制最全面的一次梳理](https://segmentfault.com/a/1190000012925872){:target='\_blank'}
 - [🤔 移动端 JS 引擎哪家强？美国硅谷找......](https://mp.weixin.qq.com/s/cV3RH72YKd6jRYBFhjJ-5w){:target='\_blank'}
-- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events){:target='\_blank'}
 - [从 V8 角度揭秘你不知道的面试八股文](https://mp.weixin.qq.com/s/NkaGseRlLKcERx6rpouCFA){:target='_blank'}
 - [高性能 JavaScript 引擎 V8 - 垃圾回收](https://mp.weixin.qq.com/s/TnaQRMpJaxxIUIZS2MK9-g){:target='_blank'}
 
-- [自主研发一款浏览器内核的难度到底有多大？](https://www.zhihu.com/question/290564335/answer/474202037){:target='\_blank'}
+## 参考资料
 
-
-- [QQ浏览器是基于chrome内核开发的吗？](https://zhidao.baidu.com/question/2058022048028049667.html){:target='_blank'}
-
-### Chrome 
-
-- [Chrome 浏览器架构](https://xie.infoq.cn/article/5d36d123bfd1c56688e125ad3){:target='_blank'}
-  - [图解浏览器的基本工作原理](https://zhuanlan.zhihu.com/p/47407398){:target='\_blank'}
-  - [现代浏览器内部揭秘（第一部分）](https://github.com/xitu/gold-miner/blob/master/TODO1/inside-look-at-modern-web-browser-part1.md){:target='_blank'}
-- [一文看透浏览器架构](https://segmentfault.com/a/1190000018277184){:target='_blank'}
-
-- [现代浏览器工作原理（一）](http://chuquan.me/2018/01/21/browser-architecture-overview/){:target='_blank'}
-- [Web 浏览器相关的一些概念](https://keqingrong.cn/blog/2019-11-24-concepts-related-to-web-browsers){:target='_blank'}
-
-- [THE BASIC FLOW OF RENDERING ENGINE](https://www.google.com.hk/search?newwindow=1&safe=strict&source=univ&tbm=isch&q=THE+BASIC+FLOW+OF+RENDERING+ENGINE&sa=X&ved=2ahUKEwjNopKj2b7xAhXP7XMBHcUyCs8Q7Al6BAgnEFM&biw=1536&bih=694&dpr=2#imgrc=BOuUFmUelYNhYM){:target='_blank'}
-
-图片很精美：
+- [Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part1){:target='_blank'}【一共四篇，可供参考】
+- [浏览器是如何工作的：Chrome V8 让你更懂 JavaScript](https://segmentfault.com/a/1190000037435824){:target='\_blank'}
+- [深入理解JSCore](https://tech.meituan.com/2018/08/23/deep-understanding-of-jscore.html){:target='_blank'}
+- [The Story of the Web: A History Of Internet Browsers](https://www.internetadvisor.com/the-story-of-the-web-a-history-of-internet-browsers){:target='_blank'}
+- [PPT - Browser Architecture](https://sangbui.com/sb-files/BrowserArchitecture_ClientSide.pdf){:target='_blank'}
+- [JavaScript 引擎 V8 执行流程概述](http://blog.itpub.net/69912579/viewspace-2668277/){:target='_blank'}
+- [Understanding WebViews](https://www.kirupa.com/apps/webview.htm){:target='_blank'}
 - [Quantum Up Close: What is a browser engine?](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/){:target='_blank'}
-  - [解密 Quantum：现代浏览器引擎的构建之道](https://github.com/xitu/gold-miner/blob/master/TODO/quantum-up-close-what-is-a-browser-engine.md){:target='_blank'}
-
-- [掘金翻译计划](https://github.com/xitu/gold-miner/search?q=web+browser){:target='_blank'}
-
-
-- [浏览器市场占有率分析](https://zhuanlan.zhihu.com/p/187066428){:target='\_blank'}
