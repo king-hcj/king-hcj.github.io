@@ -521,7 +521,7 @@ add('1', '2');
 - [Debug Adapter Protocol](https://github.com/Microsoft/debug-adapter-protocol){:target='_blank'}
 - [Xterm.js](https://xtermjs.org/){:target='_blank'}
 
-> 延伸阅读：[Electron | Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
+> 延伸阅读：[Electron &#124; Build cross-platform desktop apps with JavaScript, HTML, and CSS](https://delftswa.gitbooks.io/desosa2018/content/electron/chapter.html){:target='_blank'}
 
 ## 浏览器代码兼容性测试
 
