@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 47 张图带你看懂浏览器的世界
+title: 47 张图带你走进浏览器的世界
 categories: Chrome
 description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
