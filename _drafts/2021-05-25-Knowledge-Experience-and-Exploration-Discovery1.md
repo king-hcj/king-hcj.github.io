@@ -94,20 +94,22 @@ window.addEventListener('contextmenu', function (e) {
 - opacity 子元素继承父元素透明度的解决方法（[参考](https://www.jb51.net/css/744197.html){:target='\_blank'}）
   - 父元素背景颜色设置透明度时，避免使用 `background：#000；opacity：0.5`，建议使用 `background：rgba(0,0,0,0.5)`
   - 如果设置背景色为渐变色等这种复杂背景,子元素会继承父元素的 opacity 属性，我们让它不成为子元素。新增一个子元素，将其绝对定位到父元素位置，然后在该元素上设置背景色与透明度。
-- fixed元素抖动问题
-  - [【移动端】解决fixed定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='_blank'}：`transform: translateZ(0)`；
-  - [移动端fixed的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='_blank'}
+- fixed 元素抖动问题
+  - [【移动端】解决 fixed 定位闪动问题](https://www.cnblogs.com/wuxianqiang/p/10554164.html){:target='\_blank'}：`transform: translateZ(0)`；
+  - [移动端 fixed 的元素抖动的问题](https://www.cnblogs.com/qiujianmei/p/7544989.html){:target='\_blank'}
 - 长背景，上部白底，下底有背景：`background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 100%);`;
-- [CSS实现渐隐渐现效果](https://www.cnblogs.com/WindrunnerMax/p/14366181.html){:target='_blank'}
-- [git cherry-pick 教程](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html){:target='_blank'}：`git cherry-pick`命令的作用，就是将指定的提交（commit）应用于其他分支。【修改错了分支，已经commit，但是又不能直接合并分支】
+- [CSS 实现渐隐渐现效果](https://www.cnblogs.com/WindrunnerMax/p/14366181.html){:target='\_blank'}
+- [git cherry-pick 教程](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html){:target='\_blank'}：`git cherry-pick`命令的作用，就是将指定的提交（commit）应用于其他分支。【修改错了分支，已经 commit，但是又不能直接合并分支】
+
   ```s
   $ git cherry-pick <commitHash> # 将指定的提交commitHash，应用于当前分支
   $ git cherry-pick feature # 将feature分支的最近一次提交，转移到当前分支
   $ git cherry-pick <HashA> <HashB> # 将 A 和 B 两个提交应用到当前分支
   ```
 
-- 0.5px 边框问题（部分三星机型）：[CSS 0.5px 细线边框的原理和实现方式](https://www.cnblogs.com/yangshifu/p/9257519.html){:target='_blank'}
-> 要实现小于1px的线条，有个先决条件：屏幕的分辨率要足够高，设备像素比要大于1，即css中的1个像素对应物理屏幕中1个以上的像素点。
+- 0.5px 边框问题（部分三星机型）：[CSS 0.5px 细线边框的原理和实现方式](https://www.cnblogs.com/yangshifu/p/9257519.html){:target='\_blank'}
+
+  > 要实现小于 1px 的线条，有个先决条件：屏幕的分辨率要足够高，设备像素比要大于 1，即 css 中的 1 个像素对应物理屏幕中 1 个以上的像素点。
 
   ```less
   // border-width: 0.5px;
@@ -115,7 +117,26 @@ window.addEventListener('contextmenu', function (e) {
   transform: scaleY(0.5);
   ```
 
-- rgba的另一种写法：`background: rgba($color: #10152a, $alpha: 0.1);`。
+- rgba 的另一种写法：`background: rgba($color: #10152a, $alpha: 0.1);`。
+
+- 过滤字符串中的表情：
+
+```ts
+// emoji 范围
+const emojiRanges = [
+  '\ud83c[\udf00-\udfff]',
+  '\ud83d[\udc00-\ude4f]',
+  '\ud83d[\ude80-\udeff]',
+];
+
+// emoji 正则
+const emojiReg = new RegExp(emojiRanges.join('|'), 'g');
+
+// 过滤掉表情
+export const filterEmoji = (str: string): string => {
+  return str.replace(emojiReg, '');
+};
+```
 
 ### Exploration and Discovery
 
@@ -129,7 +150,7 @@ window.addEventListener('contextmenu', function (e) {
 
 #### CSS
 
-- [css-tricks](https://css-tricks.com/){:target='_blank'}
+- [css-tricks](https://css-tricks.com/){:target='\_blank'}
 
 <!--
 计划：
