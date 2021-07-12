@@ -62,7 +62,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 - 在 2000 年代初期，可能是在微软将浏览器附加到其操作系统之后，Apple 发布了 Safari，一种专为 Mac 设计的浏览器，并成为目前市场上第二大浏览器。
 
-- Internet Explorer 的流行度在 2000 年代后期逐渐减少，主要是因为它变得缓慢和过时，而 Microsoft 发现自己现在似乎已经是在外面观察浏览器世界。该公司不想继续错过，于是着手解决这个问题，但发现一个关键问题是“Internet Explorer”这个名字已经成为劣质浏览器的同义词。因此，为了尝试重新进入游戏，微软不得不重新命名，是以，Edge 变诞生了。Edge 是微软浏览器的最新版本，它受到了很多好评，但对于 Microsoft 来说，Edge 的出现可能为时已晚。
+- Internet Explorer 的流行度在 2000 年代后期逐渐减少，主要是因为它变得缓慢和过时，而 Microsoft 发现自己现在似乎已经是在外面观察浏览器世界。该公司不想继续错过，于是着手解决这个问题，但发现一个关键问题是“Internet Explorer”这个名字已经成为劣质浏览器的同义词。因此，为了尝试重新进入游戏，微软不得不重新命名，是以，Edge 便诞生了。Edge 是微软浏览器的最新版本，它受到了很多好评，但对于 Microsoft 来说，Edge 的出现可能为时已晚。
 
 - **IE 浏览器终成时代之泪，Microsoft Edge 成为 Windows 11 的默认浏览器**。这是 Windows 系统更新 20 年来，IE 的首次缺席，也是最后一次。早在 Win10 更新时微软就表示，将放弃更新 IE 转向开发新的浏览器 Microsoft Edge。如今是彻底要和桌面上的 IE 说再见了。 —— IE 浏览器将从 Windows 11 中消失，它也将在 2022 年安息。
 
