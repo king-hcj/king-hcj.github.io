@@ -138,6 +138,10 @@ export const filterEmoji = (str: string): string => {
 };
 ```
 
+- Mac 设置环境变量
+  - 单个用户：`export PATH=/opt/local/bin:/opt/local/sbin:$PATH`
+  - [MAC 设置环境变量 path 的几种方法](https://www.cnblogs.com/shineqiujuan/p/4693404.html){:target='\_blank'}
+
 ### Exploration and Discovery
 
 #### 前端性能优化
