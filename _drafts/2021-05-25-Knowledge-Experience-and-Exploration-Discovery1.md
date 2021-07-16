@@ -117,7 +117,7 @@ window.addEventListener('contextmenu', function (e) {
   transform: scaleY(0.5);
   ```
 
-- rgba 的另一种写法：`background: rgba($color: #10152a, $alpha: 0.1);`。
+- rgba 的另两种写法：`background: rgba($color: #10152a, $alpha: 0.1);`和`background: rgba(red, green, blue, alpha)`。
 
 - 过滤字符串中的表情：
 
