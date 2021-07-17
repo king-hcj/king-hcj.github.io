@@ -244,6 +244,8 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - Blink：基于 Webkit2 分支，是 WebKit 中 WebCore 组件的一个分支，13 年谷歌开始作为 Chrome 28 的引擎集成在 Chromium 浏览器里。Android 的 WebView 同样基于 Webkit2，是现在对新特性支持度最好的内核。Opera（15 及往后版本）和 Yandex 浏览器中也在使用。
 - 移动端基本上全部是 Webkit 或 Blink 内核（除去 Android 上腾讯家的 X5），这两个内核对新特性的支持度较高，所以新特性可以在移动端大展身手。
 
+&emsp;&emsp;对浏览器的内核进行溯源的话，你会发现其实并没有那么多。 Google 的 Blink 来源于苹果开源的 Webkit，而 Webkit  来源于 KHTML, 属于 KDE 的一部分, KDE 又是基于挪威公司 Trolltech 开发的 QT， 很多 KHTML 的贡献者其实也是来自于 Trolltech。
+
 &emsp;&emsp;各内核关系图：
 
 ![KHTML](https://king-hcj.github.io/images/browser/khtml.png?raw=true)
