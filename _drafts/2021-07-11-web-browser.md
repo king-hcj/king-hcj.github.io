@@ -227,7 +227,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
 
-- Trident: IE 以 Trident 作为内核引擎;
+- Trident: 又叫MSHTML，是微软开发的一种排版引擎，IE 以 Trident 作为内核引擎;
 - Gecko: Firefox 是基于 Gecko 开发;
 - WebKit: 诞生于 1998 年，并于 2005 年由 Apple 公司开源，Safari, Google Chrome,傲游 3,猎豹浏览器,百度浏览器 opera 浏览器 基于 Webkit 开发。
 - Presto: Opera 的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013 年 2 月 Opera 宣布转向 WebKit 引擎，2013 年 4 月 Opera 宣布放弃 WEBKIT，跟随 GOOGLE 的新开发的 blink 引擎。）
