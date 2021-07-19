@@ -6,7 +6,7 @@ description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 ---
 
-> _春风好媒妁，说动一树榴红。偶来雨多，茅屋又新破，且戴一笠，借故去访邻居家老叟。 循着江岸梅林，一颗颗睡饱了的梅子，正是青里一抹红透，得着此刻无人，且摘它个两袖清风、一袋新酒。世间的功名不能裱壁，就向天地讨一笔闲钱糊口。&emsp;&emsp;&emsp;&emsp;正算计着老叟家的那只古瓮，怎么着，一匹快马驰过，溅得我一身泥泞，定睛一探，可不是城里那位篡了功名的新进？且拼春风一叹，还好，近日雨多。_
+> _春风好媒妁，说动一树榴红。偶来雨多，茅屋又新破，且戴一笠，借故去访邻居家老叟。 循着江岸梅林，一颗颗睡饱了的梅子，正是青里一抹红透，得着此刻无人，且摘它个两袖清风、一袋新酒。世间的功名不能裱壁，就向天地讨一笔闲钱糊口。正算计着老叟家的那只古瓮，怎么着，一匹快马驰过，溅得我一身泥泞，定睛一探，可不是城里那位篡了功名的新进？且拼春风一叹，还好，近日雨多。_
 
 &emsp;&emsp;电子设备、互联网大行其道的的今天，**你还有多少空余时间去熟悉、了解身边的人呢？日益增长的互联网泡沫又始于何时？**了解身边的人，从了解身边互联网的浏览器开始。
 
@@ -229,7 +229,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
 
-- Trident: 又叫MSHTML，是微软开发的一种排版引擎，IE 以 Trident 作为内核引擎;
+- Trident: 又叫 MSHTML，是微软开发的一种排版引擎，IE 以 Trident 作为内核引擎;
 - Gecko: Firefox 是基于 Gecko 开发;
 - WebKit: 诞生于 1998 年，并于 2005 年由 Apple 公司开源，Safari, Google Chrome,傲游 3,猎豹浏览器,百度浏览器 opera 浏览器 基于 Webkit 开发。
 - Presto: Opera 的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013 年 2 月 Opera 宣布转向 WebKit 引擎，2013 年 4 月 Opera 宣布放弃 WEBKIT，跟随 GOOGLE 的新开发的 blink 引擎。）
@@ -246,7 +246,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - Blink：基于 Webkit2 分支，是 WebKit 中 WebCore 组件的一个分支，13 年谷歌开始作为 Chrome 28 的引擎集成在 Chromium 浏览器里。Android 的 WebView 同样基于 Webkit2，是现在对新特性支持度最好的内核。Opera（15 及往后版本）和 Yandex 浏览器中也在使用。
 - 移动端基本上全部是 Webkit 或 Blink 内核（除去 Android 上腾讯家的 X5），这两个内核对新特性的支持度较高，所以新特性可以在移动端大展身手。
 
-&emsp;&emsp;对浏览器的内核进行溯源的话，你会发现其实并没有那么多。 Google 的 Blink 来源于苹果开源的 Webkit，而 Webkit  来源于 KHTML, 属于 KDE（K桌面环境，K Desktop Environment的缩写） 的一部分, KDE 又是基于挪威公司 Trolltech 开发的 QT， 很多 KHTML 的贡献者其实也是来自于 Trolltech。
+&emsp;&emsp;对浏览器的内核进行溯源的话，你会发现其实并没有那么多。 Google 的 Blink 来源于苹果开源的 Webkit，而 Webkit 来源于 KHTML, 属于 KDE（K 桌面环境，K Desktop Environment 的缩写） 的一部分, KDE 又是基于挪威公司 Trolltech 开发的 QT， 很多 KHTML 的贡献者其实也是来自于 Trolltech。
 
 &emsp;&emsp;各内核关系图：
 
