@@ -844,6 +844,10 @@ input.oninput = ({ target }) => {
 
 - [解决 parseInt() 的神秘行为：parseInt(0.0000005) => 5](https://mp.weixin.qq.com/s/fB40_HcuyE1K7cyinn1C1Q){:target='\_blank'}
 
+## Why is the result of ('b'+'a'+ + 'a' + 'a').toLowerCase() 'banana'?
+
+- [Why is the result of ('b'+'a'+ + 'a' + 'a').toLowerCase() 'banana'?](https://stackoverflow.com/questions/57456188/why-is-the-result-of-ba-a-a-tolowercase-banana){:target='\_blank'}
+
 ## case 不等于 if
 
 ```js
