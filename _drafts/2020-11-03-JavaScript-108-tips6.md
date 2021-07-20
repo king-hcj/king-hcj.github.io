@@ -665,6 +665,11 @@ input.oninput = ({ target }) => {
 
 [Electron 和当下其他的桌面开发方法相比如何？](https://www.zhihu.com/question/264999651?sort=created){:target='\_blank'}
 
+## 动态生成 GitHub 统计信息！
+
+- [在你的 README 中获取动态生成的 GitHub 统计信息！](https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md){:target='\_blank'}
+<!-- https://github-readme-stats.vercel.app/api?username=king-hcj -->
+
 ## 回调地狱：前端是如何一步步走出来的？
 
 - 前端异步方案是怎么一路走来的
