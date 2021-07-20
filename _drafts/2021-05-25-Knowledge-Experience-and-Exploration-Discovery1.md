@@ -144,6 +144,13 @@ export const filterEmoji = (str: string): string => {
   - [MAC 设置环境变量 path 的几种方法](https://www.cnblogs.com/shineqiujuan/p/4693404.html){:target='\_blank'}
 
 - [Fira Code，一个程序员专用字体](https://github.com/tonsky/FiraCode){:target='\_blank'}
+- [Git 忽略规则(.gitignore 配置）不生效原因和解决](https://www.cnblogs.com/rainbowk/p/10932322.html){:target='\_blank'}
+  - git 清除本地缓存（改变成未 track 状态），然后再提交：`[root@kevin ~]# git rm -r --cached .`
+  - 在每个 clone 下来的仓库中手动设置不要检查特定文件的更改情况。
+    ```bash
+    # 在PATH处输入要忽略的文件
+    [root@kevin ~]# git update-index --assume-unchanged PATH
+    ```
 
 ### Exploration and Discovery
 
