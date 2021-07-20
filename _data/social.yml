@@ -1,4 +1,4 @@
-- sitename: 个人 LeetCode
+- sitename: LeetCode
   name: king-hcj
   url: https://leetcode-cn.com/u/king-hcj-3
 
@@ -11,13 +11,16 @@
   url: https://segmentfault.com/u/king_hcj
 
 - sitename: 掘金社区
-  name: king-hcj
-  url: https://juejin.im/user/5b0158d66fb9a07ab458e82b/collections
+  name: 獨釣寒江雪
+  url: https://juejin.cn/user/1116759543515485
+
+- sitename: 知乎
+  name: 独钓寒江雪
+  url: https://www.zhihu.com/people/king-hcj-16
 
 - sitename: GitHub
   name: king-hcj
   url: https://github.com/king-hcj
-
 # - sitename: 个人简历
 #   name: Resume
 #   url: https://king-hcj.github.io/Resume/
