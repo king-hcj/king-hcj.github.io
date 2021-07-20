@@ -227,7 +227,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 &emsp;&emsp;浏览器的内核引擎，基本上是四分天下：
 
-- Trident: 又叫MSHTML，是微软开发的一种排版引擎，IE 以 Trident 作为内核引擎;
+- Trident: 又叫 MSHTML，是微软开发的一种排版引擎，IE 以 Trident 作为内核引擎;
 - Gecko: Firefox 是基于 Gecko 开发;
 - WebKit: 诞生于 1998 年，并于 2005 年由 Apple 公司开源，Safari, Google Chrome,傲游 3,猎豹浏览器,百度浏览器 opera 浏览器 基于 Webkit 开发。
 - Presto: Opera 的内核，但由于市场选择问题，主要应用在手机平台--Opera mini。（2013 年 2 月 Opera 宣布转向 WebKit 引擎，2013 年 4 月 Opera 宣布放弃 WEBKIT，跟随 GOOGLE 的新开发的 blink 引擎。）
@@ -244,7 +244,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 - Blink：基于 Webkit2 分支，是 WebKit 中 WebCore 组件的一个分支，13 年谷歌开始作为 Chrome 28 的引擎集成在 Chromium 浏览器里。Android 的 WebView 同样基于 Webkit2，是现在对新特性支持度最好的内核。Opera（15 及往后版本）和 Yandex 浏览器中也在使用。
 - 移动端基本上全部是 Webkit 或 Blink 内核（除去 Android 上腾讯家的 X5），这两个内核对新特性的支持度较高，所以新特性可以在移动端大展身手。
 
-&emsp;&emsp;对浏览器的内核进行溯源的话，你会发现其实并没有那么多。 Google 的 Blink 来源于苹果开源的 Webkit，而 Webkit  来源于 KHTML, 属于 KDE（K桌面环境，K Desktop Environment的缩写） 的一部分, KDE 又是基于挪威公司 Trolltech 开发的 QT， 很多 KHTML 的贡献者其实也是来自于 Trolltech。
+&emsp;&emsp;对浏览器的内核进行溯源的话，你会发现其实并没有那么多。 Google 的 Blink 来源于苹果开源的 Webkit，而 Webkit 来源于 KHTML, 属于 KDE（K 桌面环境，K Desktop Environment 的缩写） 的一部分, KDE 又是基于挪威公司 Trolltech 开发的 QT， 很多 KHTML 的贡献者其实也是来自于 Trolltech。
 
 &emsp;&emsp;各内核关系图：
 
@@ -481,12 +481,12 @@ add('1', '2');
 
 &emsp;&emsp;Puppeteer 是一个 Node 库，他提供了一组用来操纵 Chrome 的 API, 通俗来说就是一个 headless chrome 浏览器 (当然你也可以配置成有 UI 的，默认是没有的)。既然是浏览器，那么我们手工可以在浏览器上做的事情 Puppeteer 都能胜任, 另外，Puppeteer 翻译成中文是”木偶”意思，所以听名字就知道，操纵起来很方便，你可以很方便的操纵她去实现：
 
-1） 生成网页截图或者 PDF
-2） 高级爬虫，可以爬取大量异步渲染内容的网页
-3） 实现 UI 自动化测试，模拟键盘输入、表单自动提交、点击、登录网页等
-4） 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
-5） 模拟不同的设备
-6） ...
+1. 生成网页截图或者 PDF
+2. 高级爬虫，可以爬取大量异步渲染内容的网页
+3. 实现 UI 自动化测试，模拟键盘输入、表单自动提交、点击、登录网页等
+4. 捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
+5. 模拟不同的设备
+6. ...
 
 &emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
 
