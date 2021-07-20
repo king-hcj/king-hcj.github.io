@@ -488,7 +488,7 @@ add('1', '2');
 5. 模拟不同的设备
 6. ...
 
-&emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的 的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们 使用的是不同的设计哲学。
+&emsp;&emsp;Puppeteer 跟 webdriver 以及 PhantomJS 最大的不同就是它是站在用户浏览的角度，而 webdriver 和 PhantomJS 最初设计就是用来做自动化测试的，所以它是站在机器浏览的角度来设计的，所以它们使用的是不同的设计哲学。
 
 - [Headless Chrome architecture](https://www.cnblogs.com/bigben0123/p/13880254.html)
 - [puppeteer](https://github.com/puppeteer/puppeteer/)
