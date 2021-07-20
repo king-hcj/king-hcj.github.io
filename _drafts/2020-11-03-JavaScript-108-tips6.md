@@ -371,6 +371,8 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 
 - [GitHub 隐藏新功能！个人页还能这么玩？](https://zhuanlan.zhihu.com/p/161029860){:target='\_blank'}
 - [定制 github 首页-自动更新 Github 的 star 数量](https://blog.csdn.net/LEILEI18A/article/details/116659324){:target='\_blank'}
+- [在你的 README 中获取动态生成的 GitHub 统计信息！](https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md){:target='\_blank'}
+<!-- https://github-readme-stats.vercel.app/api?username=king-hcj -->
 
 ## 这可能是我迄今为止见过拥有最全速查表的技术网站！
 
@@ -664,11 +666,6 @@ input.oninput = ({ target }) => {
 ## 前端的未来在移动端吗？跨端方案都有哪些
 
 [Electron 和当下其他的桌面开发方法相比如何？](https://www.zhihu.com/question/264999651?sort=created){:target='\_blank'}
-
-## 动态生成 GitHub 统计信息！
-
-- [在你的 README 中获取动态生成的 GitHub 统计信息！](https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md){:target='\_blank'}
-<!-- https://github-readme-stats.vercel.app/api?username=king-hcj -->
 
 ## 回调地狱：前端是如何一步步走出来的？
 
