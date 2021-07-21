@@ -238,7 +238,7 @@ keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
 
 ![chromium 架构](https://king-hcj.github.io/images/browser/chromium.jpeg?raw=true)
 
-> 图片来源：[万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818)
+> chromium 浏览器的架构，图片来源：[万字详文：深入理解浏览器原理](https://zhuanlan.zhihu.com/p/96986818)
 
 - Webkit2：2010 年随 OS X Lion 一起面世。WebCore 层面实现进程隔离与 Google 的沙箱设计存在冲突。
 - Blink：基于 Webkit2 分支，是 WebKit 中 WebCore 组件的一个分支，13 年谷歌开始作为 Chrome 28 的引擎集成在 Chromium 浏览器里。Android 的 WebView 同样基于 Webkit2，是现在对新特性支持度最好的内核。Opera（15 及往后版本）和 Yandex 浏览器中也在使用。
