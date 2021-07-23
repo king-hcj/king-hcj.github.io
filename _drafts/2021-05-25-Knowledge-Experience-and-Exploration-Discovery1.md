@@ -151,6 +151,9 @@ export const filterEmoji = (str: string): string => {
     # 在PATH处输入要忽略的文件
     [root@kevin ~]# git update-index --assume-unchanged PATH
     ```
+- 安卓调试
+  - [Android 调试桥 (adb)](https://developer.android.google.cn/studio/command-line/adb){:target='\_blank'}
+  - [Logcat 命令行工具](https://developer.android.google.cn/studio/command-line/logcat){:target='\_blank'}
 
 ### Exploration and Discovery
 
