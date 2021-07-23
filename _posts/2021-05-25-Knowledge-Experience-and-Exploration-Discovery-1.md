@@ -48,6 +48,8 @@ keywords: Knowledge and Experience、Exploration and Discovery
 
 ## 立春
 
+> 截止 2021.07.23【完成】
+
 ### Knowledge and Experience
 
 - `background-image`问题
@@ -107,7 +109,7 @@ window.addEventListener('contextmenu', function (e) {
   $ git cherry-pick <HashA> <HashB> # 将 A 和 B 两个提交应用到当前分支
   ```
 
-- 0.5px 边框问题（部分三星机型）：[CSS 0.5px 细线边框的原理和实现方式](https://www.cnblogs.com/yangshifu/p/9257519.html){:target='\_blank'}
+- `0.5px` 边框问题（部分三星机型）：[CSS 0.5px 细线边框的原理和实现方式](https://www.cnblogs.com/yangshifu/p/9257519.html){:target='\_blank'}
 
   > 要实现小于 1px 的线条，有个先决条件：屏幕的分辨率要足够高，设备像素比要大于 1，即 css 中的 1 个像素对应物理屏幕中 1 个以上的像素点。
 
@@ -161,13 +163,29 @@ export const filterEmoji = (str: string): string => {
 
 - [x] [前端性能优化方法与实战](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=638#/content){:target='\_blank'}
 
-#### JavaScript Visualized Series' Articles
+#### 走进浏览器的世界
 
-- [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
+- [47 张图带你走进浏览器的世界](https://king-hcj.github.io/2021/07/11/web-browser/){:target='\_blank'}
+
+## 雨水
+
+> 截止 2021.09.23【计划】
+
+### Knowledge and Experience
+
+### Exploration and Discovery
+
+#### 前端装逼技巧
 
 #### CSS
 
 - [css-tricks](https://css-tricks.com/){:target='\_blank'}
+
+#### JavaScript Visualized Series' Articles
+
+- [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
+
+#### React Hooks
 
 <!--
 计划：
