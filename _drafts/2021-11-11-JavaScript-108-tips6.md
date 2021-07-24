@@ -406,6 +406,25 @@ window.history.length > 1
     }, 2000);
 ```
 
+## console.log()
+
+- [Will console.log reduce JavaScript execution performance?](https://stackoverflow.com/questions/11426185/will-console-log-reduce-javascript-execution-performance){:target='\_blank'}
+- [console.log() async or sync?](https://stackoverflow.com/questions/23392111/console-log-async-or-sync){:target='\_blank'}
+- [Does console log affect performance?](https://everythingwhat.com/does-console-log-affect-performance){:target='\_blank'}
+- [Is Chrome's JavaScript console lazy about evaluating arrays?](https://stackoverflow.com/questions/4057440/is-chromes-javascript-console-lazy-about-evaluating-arrays){:target='\_blank'}
+- [array.length is zero, but the array has elements in it [duplicate]](https://stackoverflow.com/questions/42260524/array-length-is-zero-but-the-array-has-elements-in-it){:target='\_blank'}
+- [Weird behavior with objects & console.log [duplicate]](https://stackoverflow.com/questions/23429203/weird-behavior-with-objects-console-log){:target='\_blank'}
+- [Please stop using console.log(), it’s broken…](https://hackernoon.com/please-stop-using-console-log-its-broken-b5d7d396cf15){:target='\_blank'}
+
+和内存泄漏关联
+
+## 内存泄漏
+
+- [4 Types of Memory Leaks in JavaScript and How to Get Rid Of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/){:target='\_blank'}
+- [Don't Fear node.js console.log()](https://surfingthe.cloud/dont-fear-node-js-console-log/){:target='\_blank'}
+- [Does console log increase memory on nodejs server?](https://stackoverflow.com/questions/54204313/does-console-log-increase-memory-on-nodejs-server/54205072){:target='\_blank'}
+- [Memory leak patterns in JavaScript](https://www.ibm.com/developerworks/web/library/wa-memleak/wa-memleak-pdf.pdf){:target='\_blank'}
+
 ## 导航守卫
 
 - [vue-router 导航守卫，不懂的来](https://zhuanlan.zhihu.com/p/54112006){:target='\_blank'}
