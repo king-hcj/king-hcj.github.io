@@ -387,6 +387,10 @@ function fib(n) {
 
 &emsp;&emsp;正是基于以上这些过程，使用 Fiber，我们就有了在社区经常看到的[两张对比图](https://claudiopro.github.io/react-fiber-vs-stack-demo/){:target='\_blank'}。
 
+![stack](https://king-hcj.github.io/images/posts/arts/react_stack.gif?raw=true)
+
+![fiber](https://king-hcj.github.io/images/posts/arts/react_fiber.gif?raw=true)
+
 &emsp;&emsp;清晰展示及交互、源码可通过下面两个链接进入，查看网页源代码。
 
 - [Stack Example](https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html){:target='\_blank'}
