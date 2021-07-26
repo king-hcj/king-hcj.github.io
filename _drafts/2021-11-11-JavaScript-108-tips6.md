@@ -869,6 +869,11 @@ input.oninput = ({ target }) => {
 
 - [Why is the result of ('b'+'a'+ + 'a' + 'a').toLowerCase() 'banana'?](https://stackoverflow.com/questions/57456188/why-is-the-result-of-ba-a-a-tolowercase-banana){:target='\_blank'}
 
+## 如何把你家的 WiFi 打印在墙上？
+
+- [如何把你家的 WiFi 打印在墙上？](https://zhuanlan.zhihu.com/p/390136394){:target='\_blank'}
+- [WiFi Card:将 wifi 密码转为二维码，从此不再被询问 wifi 密码](https://github.com/bndw/wifi-card){:target='\_blank'}
+
 ## case 不等于 if
 
 ```js
