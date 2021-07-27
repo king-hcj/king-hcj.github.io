@@ -780,6 +780,8 @@ url.hash
 
 ## 如何通过动图学习 JS
 
+可多篇
+
 - [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
 
 ## isInputPending
