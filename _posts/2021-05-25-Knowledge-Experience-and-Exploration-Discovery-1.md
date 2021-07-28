@@ -175,6 +175,30 @@ export const filterEmoji = (str: string): string => {
 
 - 查看当前的 git 分支是基于哪个分支创建的？：`git reflog --date=local | grep <branchname>`；
   - [How to determine when a Git branch was created?](https://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created){:target='\_blank'}
+- Less 循环简化样式的编写
+
+```less
+/**
+  * 定义循环方法
+  * @index--传入的循环起始值
+*/
+.LoopTransform(@index) when(@index<6) {
+  // 执行内容
+  // 类名参数要加大括号@{index}
+  // 根据index获取对应的某个值
+  .swiper-wrapper .swiper-slide:nth-child(@{index}) {
+    /*index号图像向前方移位300px*/
+    // 注意，这里不能写成(72 * (@index - 1))deg
+    transform: rotateY(72deg * (@index - 1)) translateZ(300px);
+  }
+
+  //递归调用 达到循环目的
+  .LoopTransform(@index+1);
+}
+
+// 调用循环
+.LoopTransform(1);
+```
 
 ### Exploration and Discovery
 
