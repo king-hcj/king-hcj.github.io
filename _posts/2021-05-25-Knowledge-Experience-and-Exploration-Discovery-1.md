@@ -173,6 +173,9 @@ export const filterEmoji = (str: string): string => {
 
 ### Knowledge and Experience
 
+- 查看当前的 git 分支是基于哪个分支创建的？：`git reflog --date=local | grep <branchname>`；
+  - [How to determine when a Git branch was created?](https://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created){:target='\_blank'}
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
