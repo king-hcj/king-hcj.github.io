@@ -293,7 +293,7 @@ var name = 'World!';
 
 ![汪峰](https://king-hcj.github.io/images/posts/zhuangbility100/wangfeng.jpeg?raw=true)
 
-&emsp;&emsp;蒽 🤔，如果汪峰是个前端工程师，那热搜的事儿不是分分钟搞定吗？就算不懂 HTML，只要知道 HTML5 的`contenteditable`，属性，控制台输入一个`document.body.contentEditable='true';`，热搜还不少随便改，想要多少有多少 😄。
+&emsp;&emsp;蒽 🤔，如果汪峰是个前端工程师，那热搜的事儿不是分分钟搞定吗？就算不懂 HTML，只要知道 HTML5 的`contenteditable`属性，控制台输入一个`document.body.contentEditable='true';`，热搜还不少随便改，想要多少有多少 😄。
 
 ![汪峰热搜](https://king-hcj.github.io/images/posts/zhuangbility100/wangfengresou.png?raw=true)
 
@@ -313,7 +313,30 @@ var name = 'World!';
 
 ![contentEditable](https://king-hcj.github.io/images/posts/zhuangbility100/contenteditable1.gif?raw=true)
 
+&emsp;&emsp;你以为`contenteditable`只有`true`和`false`？其实它的可选值包括：
+
+- contenteditable=""
+- contenteditable="events"
+- contenteditable="caret"
+- contenteditable="plaintext-only"
+- contenteditable="true"
+- contenteditable="false"
+
+&emsp;&emsp;那么，`contenteditable`真的没有用吗？其实很多富文本编辑器就是基于`contenteditable`实现的，具体可以参考[深入浅出 contenteditable 富文本编辑器](https://zhuanlan.zhihu.com/p/37051858){:target='\_blank'}。
+
+&emsp;&emsp;除了 HTML5 的`contenteditable`属性，其实还有一个不常用的 css 属性 —— `user-modify`可以实现类似的效果，`user-modify`可取值为以下四个：
+
+- `read-only`
+- `read-write`
+- `write-only`
+- `read-write-plaintext-only`
+
+&emsp;&emsp;其中，`write-only`不用在意，当下这个年代，基本上没有浏览器支持，以后估计也不会有。`read-only`表示只读，就是普通元素的默认状态。然后，`read-write`和`read-write-plaintext-only`会让元素表现得像个文本域一样，可以 focus 以及输入内容，前者可以输入富文本，而后者只能输入纯文本。
+
+&emsp;&emsp;具体效果你可以通过审查元素，添加 CSS 样式查看，也可以直接看张鑫旭大佬的[CSS user-modify 属性行为表现测试实例页面](https://www.zhangxinxu.com/study/201601/user-modify.html){:target='\_blank'}demo。
+
 - [这些鲜为人知的前端冷知识，你都 GET 了吗？](https://mp.weixin.qq.com/s/stGK1dvOV1skp8iubMWRZw){:target='\_blank'}
+- [小 tip: 如何让 contenteditable 元素只能输入纯文本](https://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/){:target='\_blank'}
 
 ## 第六十式：蓦然回首，那人却在，灯火阑珊处 —— 我的鼠标去哪儿了
 
