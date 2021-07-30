@@ -844,6 +844,26 @@ input.oninput = ({ target }) => {
 
 - [Web 项目中手机注册短信验证码实现的全流程及代码](https://blog.csdn.net/zuoliangzhu/article/details/81193269){:target='\_blank'}
 
+## 外部页面如何突破隐身模式，统计 UV
+
+&emsp;&emsp;FingerPrint 即我们常说的指纹识别，使用手指和拇指前端的纹理按下的纹印来鉴定身份。指纹是鉴别身份的一种可靠的方法，因为每个人的每个指头上的纹理排列各不相同而且不因发育或年龄而改变。
+
+&emsp;&emsp;长期以来，人们一直认为 IP 地址和 Cookie 是用于在线跟踪人员的唯一可靠数字指纹。但过了一段时间，当现代网络技术允许感兴趣的组织在他们不知情且无法避免的情况下使用新方法来识别和跟踪用户时，事情就失控了。
+
+&emsp;&emsp;[BrowserLeaks](https://browserleaks.com/){:target='\_blank'}就是关于浏览隐私和网络浏览器指纹的。在这里，您将找到一个 Web 技术安全测试工具库，这些工具将向您展示哪些类型的个人身份数据可能会被泄露，以及如何保护自己免受此类泄露。
+
+&emsp;&emsp;我们常说的指纹，都是指人们手指上的指纹，因具有唯一性，所以可以被用来标识一个人的唯一身份。而浏览器指纹是指仅通过浏览器的各种信息，如 CPU 核心数、显卡信息、系统字体、屏幕分辨率、浏览器插件等组合成的一个字符串，就**能近乎绝对定位一个用户，就算使用浏览器的隐私窗口模式，也无法避免**。
+
+&emsp;&emsp;这是一个被动的识别方式。也就是说，理论上你访问了某一个网站，那么这个网站就能识别到你，虽然不知道你是谁，但你有一个唯一的指纹，将来无论是广告投放、精准推送、安全防范，还是其他一些关于隐私的事情，都非常方便。
+
+- 隐身模式
+- 精准信息获取与推荐
+
+- [探讨浏览器指纹](https://zhuanlan.zhihu.com/p/282922459){:target='\_blank'}
+- [BrowserLeaks](https://browserleaks.com/){:target='\_blank'}
+- [fingerprintJS](http://valve.github.io/fingerprintjs/){:target='\_blank'}
+- [FingerprintJS - 在浏览器端实现指纹识别](https://www.cnblogs.com/lhb25/p/browser-fingerprinting-js-library.html){:target='\_blank'}
+
 ## 验证码的原理、作用及实现
 
 - [验证码的原理、作用及实现](https://blog.csdn.net/niaonao/article/details/51112686){:target='\_blank'}
