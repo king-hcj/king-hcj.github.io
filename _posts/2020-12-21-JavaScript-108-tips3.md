@@ -10,9 +10,10 @@ keywords: JS, 前端, JavaScript
 
 系列文章发布汇总：
 
-- [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777){:target='_blank'}
-- [前端装逼技巧 108 式（二）—— 不讲武德](https://segmentfault.com/a/1190000038393789){:target='_blank'}
-- [前端装逼技巧 108 式（三）—— 冇得感情的API调用工程师](https://king-hcj.github.io/2020/12/21/JavaScript-108-tips3/){:target='_blank'}
+- [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777){:target='\_blank'}
+- [前端装逼技巧 108 式（二）—— 不讲武德](https://segmentfault.com/a/1190000038393789){:target='\_blank'}
+- [前端装逼技巧 108 式（三）—— 冇得感情的 API 调用工程师](https://segmentfault.com/a/1190000038557733){:target='\_blank'}
+- [前端装逼技巧 108 式（四）—— 一起摇摆](https://king-hcj.github.io/2021-08-01-JavaScript-108-tips4/){:target='\_blank'}
 
 > 文章风格所限，引用资料部分，将在对应小节末尾标出。
 
@@ -481,9 +482,7 @@ exec();
  */
 const { Controller, Joi } = require('ukoa');
 
-module.exports = class querySupplierInfoForPage extends (
-  Controller
-) {
+module.exports = class querySupplierInfoForPage extends Controller {
   init() {
     this.schema = {
       Params: Joi.object().default({}).notes('参数'),
@@ -494,9 +493,7 @@ module.exports = class querySupplierInfoForPage extends (
   // 执行函数体
   async main() {
     const { http_supply_chain } = this.ctx.galaxy;
-    const [
-      data,
-    ] = await http_supply_chain(
+    const [data] = await http_supply_chain(
       '/supplier/rest/v1/supplier/querySupplierInfoForPage',
       this.params.Params,
       { throw: true }
@@ -807,11 +804,11 @@ arr.forEachCustom((item) => {
 
 > 参考：[在 Git 中当更改一个文件名为首字母大写时](https://mp.weixin.qq.com/s/7woU5jBNmR40-Eow19F2iA){:target='\_blank'}
 
-## 第五十三式：你看到的0.1其实并不是0.1 —— 老生长谈的 0.1 + 0.2 !== 0.3，这次我们说点不一样的
+## 第五十三式：你看到的 0.1 其实并不是 0.1 —— 老生长谈的 0.1 + 0.2 !== 0.3，这次我们说点不一样的
 
 &emsp;&emsp;`0.1 + 0.2 !== 0.3`是一个老生长谈的问题来，想必你也明白其中的根源：JS 采用 IEEE 754 双精度版本（64 位），并且只要采用 IEEE 754 的语言都有这样的问题。详情可查看笔者之前的一篇文章[0.1 + 0.2 != 0.3 背后的原理](https://segmentfault.com/a/1190000015051329){:target='\_blank'}，本节我们只探讨解法。
 
-- 既然IEEE 754存在精度问题，那为**什么 x=0.1 能得到 0.1**？
+- 既然 IEEE 754 存在精度问题，那为**什么 x=0.1 能得到 0.1**？
 
 &emsp;&emsp;因为在浮点数的存储中， mantissa（尾数） 固定长度是 52 位，再加上省略的一位，最多可以表示的数是 2^53=9007199254740992，对应科学计数尾数是 9.007199254740992，这也是 JS 最多能表示的精度。它的长度是 16，所以可以使用 toPrecision(16) 来做精度运算，超过的精度会自动做凑整处理。于是就有：
 
@@ -873,7 +870,7 @@ function add(num1, num2) {
   const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits));
   return (num1 * baseNum + num2 * baseNum) / baseNum;
 }
-add(0.1,0.2); // 0.3
+add(0.1, 0.2); // 0.3
 ```
 
 - 使用类库：

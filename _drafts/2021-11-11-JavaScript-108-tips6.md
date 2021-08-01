@@ -6,7 +6,7 @@ description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
 ---
 
-&emsp;&emsp;前端装逼技巧 108 式，助你更懂 JS。
+> 原来《人月神话》不是本奇幻小说！ 原来《代码大全》不是一堆开源代码！ 原来《鸟哥的 Linux 私房菜》不是教你做菜！ 原来《边城》不是教你写代码的！ 原来《深入浅出 HTML》不是教你**H**ow **T**o **M**ake **L**ove。
 
 - [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='\_blank'}
 
@@ -18,6 +18,37 @@ keywords: JS, 前端, JavaScript
 - 如果偏趣味性：找一些常见或者会用到的、好玩儿、又能提炼出技术原理的东西
 
 建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
+
+## 如何通过动图学习 JS
+
+可多篇
+
+- [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341){:target='\_blank'} &#124; [译文](https://segmentfault.com/u/savokiss/articles){:target='\_blank'} &#124; [译文](https://juejin.cn/post/6844904050165563406){:target='\_blank'}
+
+## isInputPending
+
+- [Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='\_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='\_blank'}
+
+## 你也许真的不了解 JSON.stringify
+
+简单的深拷贝，复杂的不行？真的不行吗？
+【第二个参数】
+
+- [慎用 JSON.stringify](https://mp.weixin.qq.com/s/jmEXKuamwP6EgfntuvV9fQ){:target='\_blank'}
+- [你可能不知道的 JSON 序列化](https://mp.weixin.qq.com/s/fSJHY6oEJHiiOq2ODRawPg){:target='\_blank'}
+
+## 浏览器自带的长截图
+
+- [浏览器自带的长截图](https://blog.csdn.net/weixin_38753698/article/details/106654346){:target='\_blank'}
+
+## 纯前端生成和解析 Excel
+
+- [纯前端生成和解析 Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='\_blank'}
+- [Node.js + Vue 实现 Excel 导出与保存](https://mp.weixin.qq.com/s/PHIbCZe31rATZj34xgdKkA){:target='\_blank'}
+
+## CSS 如何实现局部光照效果？
+
+- [CSS 如何实现局部光照效果？](https://segmentfault.com/q/1010000039359551?utm_source=homepage#){:target='\_blank'}
 
 ## 第九十一式：抽象语法树(AST)
 
@@ -843,26 +874,6 @@ input.oninput = ({ target }) => {
 短信验证码，后端调服务商的 api，服务商会把发送的验证码返回给你，然后用手机号作为 key，存在比如 redis 里
 
 - [Web 项目中手机注册短信验证码实现的全流程及代码](https://blog.csdn.net/zuoliangzhu/article/details/81193269){:target='\_blank'}
-
-## 外部页面如何突破隐身模式，统计 UV
-
-&emsp;&emsp;FingerPrint 即我们常说的指纹识别，使用手指和拇指前端的纹理按下的纹印来鉴定身份。指纹是鉴别身份的一种可靠的方法，因为每个人的每个指头上的纹理排列各不相同而且不因发育或年龄而改变。
-
-&emsp;&emsp;长期以来，人们一直认为 IP 地址和 Cookie 是用于在线跟踪人员的唯一可靠数字指纹。但过了一段时间，当现代网络技术允许感兴趣的组织在他们不知情且无法避免的情况下使用新方法来识别和跟踪用户时，事情就失控了。
-
-&emsp;&emsp;[BrowserLeaks](https://browserleaks.com/){:target='\_blank'}就是关于浏览隐私和网络浏览器指纹的。在这里，您将找到一个 Web 技术安全测试工具库，这些工具将向您展示哪些类型的个人身份数据可能会被泄露，以及如何保护自己免受此类泄露。
-
-&emsp;&emsp;我们常说的指纹，都是指人们手指上的指纹，因具有唯一性，所以可以被用来标识一个人的唯一身份。而浏览器指纹是指仅通过浏览器的各种信息，如 CPU 核心数、显卡信息、系统字体、屏幕分辨率、浏览器插件等组合成的一个字符串，就**能近乎绝对定位一个用户，就算使用浏览器的隐私窗口模式，也无法避免**。
-
-&emsp;&emsp;这是一个被动的识别方式。也就是说，理论上你访问了某一个网站，那么这个网站就能识别到你，虽然不知道你是谁，但你有一个唯一的指纹，将来无论是广告投放、精准推送、安全防范，还是其他一些关于隐私的事情，都非常方便。
-
-- 隐身模式
-- 精准信息获取与推荐
-
-- [探讨浏览器指纹](https://zhuanlan.zhihu.com/p/282922459){:target='\_blank'}
-- [BrowserLeaks](https://browserleaks.com/){:target='\_blank'}
-- [fingerprintJS](http://valve.github.io/fingerprintjs/){:target='\_blank'}
-- [FingerprintJS - 在浏览器端实现指纹识别](https://www.cnblogs.com/lhb25/p/browser-fingerprinting-js-library.html){:target='\_blank'}
 
 ## 验证码的原理、作用及实现
 
