@@ -49,6 +49,7 @@ keywords: JS, 前端, JavaScript
 ## CSS 如何实现局部光照效果？
 
 - [CSS 如何实现局部光照效果？](https://segmentfault.com/q/1010000039359551?utm_source=homepage#){:target='\_blank'}
+- 在线演示：[深入理解 CSS 径向渐变 radial-gradient](https://www.cnblogs.com/xiaohuochai/p/5383285.html){:target='\_blank'}
 
 ## 第九十一式：抽象语法树(AST)
 
