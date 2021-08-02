@@ -789,6 +789,10 @@ input.oninput = ({ target }) => {
 
 ## 渲染几万条数据，怎样才能不卡住页面？
 
+## React 官方提供的：React.addons.Perf
+
+- [React 性能优化总结](https://segmentfault.com/a/1190000007811296){:target='\_blank'}
+
 ## 只拆过快递，JS 里装箱和拆箱又是什么？
 
 ## 为了减少冗余参数，我用 delete 有错吗？
