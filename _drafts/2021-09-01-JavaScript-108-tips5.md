@@ -404,6 +404,7 @@ console.log(obj1.value); //'333'
 - [JavaScript 中函数都是值传递吗？](https://www.zhihu.com/question/51018162/answer/123779633){:target='\_blank'}
 - [箭头函数和普通函数的区别](https://segmentfault.com/a/1190000021380336){:target='\_blank'}
 - [08 | x => x：函数式语言的核心抽象：函数与表达式的同一性](https://time.geekbang.org/column/article/171617){:target='\_blank'}
+- [为什么函数赋值为null后,后续还会执行?](https://segmentfault.com/q/1010000040298121){:target='_blank'}
 
 ## 第九十式：web Storage事件机制 - 实现浏览器内多个标签页之间的通信
 
