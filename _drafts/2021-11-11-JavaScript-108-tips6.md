@@ -932,6 +932,15 @@ function fn(arg) {
 
 - [你不知道的 Chrome 浏览器 骚操作](https://blog.csdn.net/qq_43901693/article/details/103483721){:target='\_blank'}
 
+## 你可能不知道，前端这 6 个有用的技术可以这么酷！
+
+- [你可能不知道，前端这 6 个有用的技术可以这么酷！](https://segmentfault.com/a/1190000040426363){:target='\_blank'}
+
+## squoosh 谷歌图片压缩工具
+
+- [squoosh](https://squoosh.app/){:target='\_blank'}
+- [squoosh 中文版](https://squoosh.net/)
+
 ## 装逼文章大赏
 
 - [这些 JavaScript 编程黑科技，装逼指南，高逼格代码，让你惊叹不已](https://segmentfault.com/a/1190000010752361){:target='\_blank'}
