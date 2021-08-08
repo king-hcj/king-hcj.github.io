@@ -6,6 +6,11 @@ description: 你不知道的 GIF
 keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 ---
 
+<!--
+前端解析、生成Excel
+你不知道的 GIF，压缩算法
+-->
+
 ## 你不知道的 GIF
 
 &emsp;&emsp;GIF 文件带给了我们很多欢乐，君不见每天微博上搞笑的图片大多数都是 GIF 格式的。那么 GIF 这种神奇的图片格式究竟是怎么来的呢？GIF(Graphics Interchange Format)的原义是“图像互换格式”。本片是 SmartWater 工作室为首届 GIF 动画节 Moving the Still 所做，精致的粘土定格动画给我们讲述了 GIF 这三十年的历史，还给我们展示了为什么 GIF 文件能给我们带来无穷的欢乐。A Short History of the Gif GIF25 岁生日快乐！
