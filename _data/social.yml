@@ -8,15 +8,15 @@
 
 - sitename: SegmentFault社区（思否）
   name: 孤篷/独钓寒江雪
-  url: https://segmentfault.com/u/king_hcj
+  url: https://segmentfault.com/u/king_hcj/articles?sort=votes
 
 - sitename: 掘金社区
   name: 獨釣寒江雪
-  url: https://juejin.cn/user/1116759543515485
+  url: https://juejin.cn/user/1116759543515485/posts?sort=popular
 
 - sitename: 知乎
   name: 独钓寒江雪
-  url: https://www.zhihu.com/people/king-hcj-16
+  url: https://www.zhihu.com/people/king-hcj-16/posts/posts_by_votes
 
 - sitename: GitHub
   name: king-hcj
