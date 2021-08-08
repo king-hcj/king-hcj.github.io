@@ -1,25 +1,25 @@
 - name: Front End Engineer Keywords
   keywords:
-      - HTML
-      - CSS
-      - JavaScript
-      - ES6
-      - NodeJs
-      - 计算机网络
-      - 数据结构与算法
-      - WebPack
-      - 浏览器
+    - 浏览器
+    - Chrome
+    - HTML + CSS + JavaScript
+    - ES6
+    - NodeJs
+    - 计算机网络
+    - 数据结构与算法
+    - WebPack
 
 - name: Mobile Developer Keywords
   keywords:
-      - Taro
-      - React-Native
-      - Flutter
-      - 小程序
+    - 混合开发
+    - Taro
+    - React-Native
+    - Flutter
+    - 小程序
 
 - name: Web Developer Keywords
   keywords:
-      - React
-      - Ant Design 
-      - AntV
-      - Vue
+    - React
+    - Ant Design
+    - AntV
+    - Vue
