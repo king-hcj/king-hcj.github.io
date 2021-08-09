@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 你不知道的 GIF
+title: GIF 若死，谁才是未来？
 categories: JavaScript
 description: 你不知道的 GIF
 keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
