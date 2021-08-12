@@ -37,7 +37,7 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 - [谈谈 GIF 格式](https://zhuanlan.zhihu.com/p/22590949){:target='\_blank'}
 - [GIF 动图发展史上的 11 个重要时刻](https://zhuanlan.zhihu.com/p/28466822){:target='\_blank'}
 
-- [PNG 图片压缩原理解析--屌丝的眼泪](https://zhuanlan.zhihu.com/p/59608343){:target='\_blank'}
+- [PNG 图片压缩原理解析--屌丝的眼泪](https://segmentfault.com/a/1190000018557449){:target='\_blank'}
 - [apng、webp 适用性调研与兼容性方案](https://lizheguang.github.io/zhaiGuang/2020/10/10/gitwebp/){:target='\_blank'}
 
 - [FLIF, the new lossless image format that outperforms PNG, WebP and BPG](https://cloudinary.com/blog/flif_the_new_lossless_image_format_that_outperforms_png_webp_and_bpg){:target='\_blank'}
