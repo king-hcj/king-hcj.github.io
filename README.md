@@ -21,15 +21,6 @@
 
 ## 博文列表
 
-### ARTS 打卡计划
-
-- [前端 ARTS 打卡计划（一）](https://king-hcj.github.io/2020/04/11/arts1/)
-- [前端 ARTS 打卡计划（二）](https://king-hcj.github.io/2020/06/16/arts2/)
-- [前端 ARTS 打卡计划（三）](https://king-hcj.github.io/2020/08/24/arts3/)
-- [前端 ARTS 打卡计划（四）](https://king-hcj.github.io/2020/11/02/arts4/)
-- [前端 ARTS 打卡计划（五）](https://king-hcj.github.io/2021/01/11/arts5/)
-- [前端 ARTS 打卡计划（终章）](https://king-hcj.github.io/2021/03/22/arts6/)
-
 ### 前端装逼技巧 108 式
 
 - [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777)
@@ -55,6 +46,15 @@
 - [JS 技巧技法总结——闭包原理、数组展平、前端语音、Proxy 数据绑定和监听、计数器](https://king-hcj.github.io/2019/08/08/js-skills/)
 - [图解 SQL 里的各种 JOIN](https://king-hcj.github.io/2017/09/11/joins-in-sql/)
 - [VBA 在 Excel 中的常用操作](https://king-hcj.github.io/2017/08/22/vba-knowledge/)
+
+### 个人 ARTS 打卡计划
+
+- [前端 ARTS 打卡计划（一）](https://king-hcj.github.io/2020/04/11/arts1/)
+- [前端 ARTS 打卡计划（二）](https://king-hcj.github.io/2020/06/16/arts2/)
+- [前端 ARTS 打卡计划（三）](https://king-hcj.github.io/2020/08/24/arts3/)
+- [前端 ARTS 打卡计划（四）](https://king-hcj.github.io/2020/11/02/arts4/)
+- [前端 ARTS 打卡计划（五）](https://king-hcj.github.io/2021/01/11/arts5/)
+- [前端 ARTS 打卡计划（终章）](https://king-hcj.github.io/2021/03/22/arts6/)
 
 ### 工具与解决方案
 

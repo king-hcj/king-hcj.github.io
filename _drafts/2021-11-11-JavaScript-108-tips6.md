@@ -19,6 +19,12 @@ keywords: JS, 前端, JavaScript
 
 建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
 
+## 识见中的部分内容
+
+<!-- 如Mac 设置环境变量、程序猿字体、git -->
+
+- [知识与经验，探索和发现（壹）](https://king-hcj.github.io/2021/05/25/Knowledge-Experience-and-Exploration-Discovery-1/){:target='\_blank'}
+
 ## 如何通过动图学习 JS
 
 可多篇
