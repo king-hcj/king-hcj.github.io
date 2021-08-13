@@ -21,7 +21,7 @@ keywords: JS, 前端, JavaScript
 
 ## 识见中的部分内容
 
-<!-- 如Mac 设置环境变量、程序猿字体、git -->
+<!-- 如Mac 设置环境变量、程序猿字体、git、端口占用 -->
 
 - [知识与经验，探索和发现（壹）](https://king-hcj.github.io/2021/05/25/Knowledge-Experience-and-Exploration-Discovery-1/){:target='\_blank'}
 
