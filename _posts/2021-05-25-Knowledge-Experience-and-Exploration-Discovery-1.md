@@ -215,6 +215,38 @@ export const filterEmoji = (str: string): string => {
   - 再次执行第一步，是否无进程占用：`lsof -i: 端口号`
 
 - [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'}
+- css 非阻塞的一种解决方案：当一个媒体查询的结果值计算出来是 false 的时候，浏览器仍然会下载样式表，但是不会在渲染页面之前等待样式表的资源可用。样式表一下载好，media 属性就必须被设置一个可用的值，以便样式规则能被应用到 html 文档中。onload 事件就可以用来将 media 属性切换到 all：
+  - [加载 CSS 时不影响页面渲染](https://www.oschina.net/translate/loading-css-without-blocking-render){:target='\_blank'}
+  - [Loading CSS without blocking render](https://keithclark.co.uk/articles/loading-css-without-blocking-render/){:target='\_blank'}
+
+```html
+<!-- 方法1 -->
+<link
+  rel="stylesheet"
+  href="css.css"
+  media="none"
+  onload="if(media!='all')media='all'"
+/>
+```
+
+```html
+<!-- 方法2 -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+/>
+<script>
+  {
+    `
+          let link = document.createElement('link')
+          link.setAttribute('rel', 'stylesheet')
+          link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+          document.head.appendChild(link)
+        `;
+  }
+</script>
+```
 
 ### Exploration and Discovery
 
