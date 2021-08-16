@@ -25,6 +25,10 @@ keywords: JS, 前端, JavaScript
 
 - [知识与经验，探索和发现（壹）](https://king-hcj.github.io/2021/05/25/Knowledge-Experience-and-Exploration-Discovery-1/){:target='\_blank'}
 
+## 互联网史上 14 个著名的第一次
+
+- [第一张图片啥样?互联网史上 14 个著名的第一次](https://it.sohu.com/20130423/n373695453.shtml){:target='\_blank'}
+
 ## 如何通过动图学习 JS
 
 可多篇

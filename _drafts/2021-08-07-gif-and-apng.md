@@ -13,6 +13,13 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 
 &emsp;&emsp;Mosaic 浏览器，1993 年，美国伊利诺州的伊利诺大学的 NCSA 组织，发表了**第一个可以显示图片的浏览器**，命名为 ─「MOSAIC」，在当时人气爆发的大受欢迎，Mosaic 的出现，算是点燃后来因特网热潮的火种之一。
 
+&emsp;&emsp;第一张网络图片由万维网发明人 Tim Burners Lee 上传，图中的 4 位女士是一支名为 Les Horrible Cernettes 的音乐团体。另外据考证，Lee 还用一部彩色 Mac，使用第一代 Photoshop 进行了修改，并被保存为.gif 格式文件。
+
+- [The Story of the First Photo on the Web](https://gizmodo.com/the-story-of-the-first-photo-on-the-web-1686067248){:target='\_blank'}
+- [THE FIRST DIGITAL PHOTOS, FROM VICTORIAN TECHNOLOGY TO THE INTERNET](https://www.scienceandmediamuseum.org.uk/objects-and-stories/first-digital-photos){:target='\_blank'}
+- [世界第一张网络图片再现 于 20 年前无意上传(图)](https://news.hangzhou.com.cn/dqsj/content/2012-07/12/content_4286263.htm){:target='\_blank'}
+- [第一张图片啥样?互联网史上 14 个著名的第一次](https://it.sohu.com/20130423/n373695453.shtml){:target='\_blank'}
+
 ## 你不知道的 GIF
 
 &emsp;&emsp;GIF 文件带给了我们很多欢乐，君不见每天微博上搞笑的图片大多数都是 GIF 格式的。那么 GIF 这种神奇的图片格式究竟是怎么来的呢？GIF(Graphics Interchange Format)的原义是“图像互换格式”。本片是 SmartWater 工作室为首届 GIF 动画节 Moving the Still 所做，精致的粘土定格动画给我们讲述了 GIF 这三十年的历史，还给我们展示了为什么 GIF 文件能给我们带来无穷的欢乐。A Short History of the Gif GIF25 岁生日快乐！
