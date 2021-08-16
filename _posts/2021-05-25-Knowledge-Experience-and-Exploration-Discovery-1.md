@@ -209,9 +209,12 @@ export const filterEmoji = (str: string): string => {
   - `E[att*="val"]`，选择器匹配元素 E，且元素定义了属性 att，att 属性值**任意位置包含**了"val"。
 
 - Mac 查看端口号是否被占用及释放
+
   - 查看使用端口进程：`lsof -i: 端口号`
   - 释放进程：`kill 你的PID`
   - 再次执行第一步，是否无进程占用：`lsof -i: 端口号`
+
+- [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'}
 
 ### Exploration and Discovery
 
