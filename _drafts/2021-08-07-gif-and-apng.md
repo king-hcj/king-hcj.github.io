@@ -11,6 +11,8 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 你不知道的 GIF，压缩算法
 -->
 
+&emsp;&emsp;Mosaic 浏览器，1993 年，美国伊利诺州的伊利诺大学的 NCSA 组织，发表了**第一个可以显示图片的浏览器**，命名为 ─「MOSAIC」，在当时人气爆发的大受欢迎，Mosaic 的出现，算是点燃后来因特网热潮的火种之一。
+
 ## 你不知道的 GIF
 
 &emsp;&emsp;GIF 文件带给了我们很多欢乐，君不见每天微博上搞笑的图片大多数都是 GIF 格式的。那么 GIF 这种神奇的图片格式究竟是怎么来的呢？GIF(Graphics Interchange Format)的原义是“图像互换格式”。本片是 SmartWater 工作室为首届 GIF 动画节 Moving the Still 所做，精致的粘土定格动画给我们讲述了 GIF 这三十年的历史，还给我们展示了为什么 GIF 文件能给我们带来无穷的欢乐。A Short History of the Gif GIF25 岁生日快乐！
@@ -20,6 +22,12 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 &emsp;&emsp;动图，顾名思义就是动态图片，亦称 GIF 图片。官方解释：它是一个可以将多幅图像数据存于一起，并逐帧显示到屏幕上，形成简单动画的图像文件。
 
 &emsp;&emsp;gif 的全称是 Graphics Interchange Format（ 图形交换格式 ），诞生于 1987 年，最初是为了填补跨平台图像格式的空白，用人话来说就是填补了静态图片和视频之间的空隙。gif 最初由一家叫做 CompuServe 的公司搞出来，这也是美国最早的一家信息服务公司。gif 到了 1995 年才能循环起来，这已经是 gif 诞生 8 年之后了。之所以 gif 能在 1995 年开始循环播放，其实要靠一个叫做网景 （ Netscape ） 的浏览器。
+
+> CompuServe 于 1987 年发布了 GIF 格式，并于 1989 年进行了最后一次更新。换句话说，GIF 的诞生比万维网早了两年。它帮助定义了早期的 GeoCities 网站，MySpace 页面和电子邮件链（还记得跳舞的宝贝吗？），它仍然是互联网文化的重要组成部分。实际上，GIF 格式现在可能比以往更流行。
+
+&emsp;&emsp;GIF 越来越受欢迎，是因为它们像模因一样，对于交流笑话，情感和想法非常有用。另外，像 GIPHY 和 Gyfcat 之类的网站 使共享和创建 GIF 变得超级容易。这些服务已集成到 Twitter，Facebook Messenger 和手机键盘等应用程序中，因此与表情符号或“贴纸”一样易于使用。
+
+- [什么是 GIF，以及如何使用它们？](https://jingyan.baidu.com/article/93f9803fd7d821a0e46f55ca.html){:target='\_blank'}
 
 &emsp;&emsp;gif 之所以能够在有限的大小实现了动态画面，是因为它采用了 LZW（ Lempel-Zev-Welch ）压缩算法。LZW 算法也叫做 “ 串表压缩算法 ”，这种算法会用数字来表示文件中第一次出现的串，然后再放进串表中。而压缩文件只存储数字，不存储串符，这样压缩效率就会得到提高。
 
