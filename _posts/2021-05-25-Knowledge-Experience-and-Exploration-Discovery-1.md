@@ -218,7 +218,7 @@ export const filterEmoji = (str: string): string => {
 
   > 在 GitHub 创建个人 Access Token：从你的 Github 帐户，转到 `Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fill up the form => 单击 Generate token => Copy the generated Token`，它将类似于 `ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta`
 
-  > 对于 MAC 操作系统，单击菜单栏右侧的 Spotlight 图标（放大镜）。`键入 Keychain access 然后按 Enter 键启动应用程序 => 在 Keychain Access 中，搜索 github.com=> 查找 Internet 密码条目 github.com=> 相应地编辑或删除该条目 => 大功告成`
+  > 对于 MAC 操作系统，单击菜单栏右侧的 Spotlight 图标（放大镜）。`键入 Keychain access 然后按 Enter 键启动应用程序【钥匙串访问】 => 在 Keychain Access 中，搜索 github.com=> 查找 Internet 密码条目 github.com=> 相应地编辑或删除该条目 => 大功告成`
 
   > 对于 Windows 操作系统，从控制面板转到 `Credential Manager => Windows Credentials=> 查找git:https://github.com =>编辑=> 密码替换为你的 Github 个人 Access Taken => 完成`
 
