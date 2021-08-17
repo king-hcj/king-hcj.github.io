@@ -255,6 +255,54 @@ export const filterEmoji = (str: string): string => {
 </script>
 ```
 
+- [touch 事件中的 touches、targetTouches 和 changedTouches 详解](https://www.cnblogs.com/mengff/p/6005516.html){:target='\_blank'}
+  - 触点坐标选取：
+    - `touchstart`和`touchmove`使用: `e.targetTouches[0].pageX`；
+    - `touchend`使用: `e.changedTouches[0].pageX`。
+
+```ts
+let startX: number;
+let endX: number;
+
+const onTouchStart = (e: any) => {
+  startX = e.targetTouches[0].pageX;
+};
+
+const onTouchEnd = (e: any) => {
+  endX = e.changedTouches[0].pageX;
+  if (endX && endX && Math.abs(endX - startX) > 50) {
+    if (endX - startX > 0) {
+      swiperInstance?.slidePrev();
+    } else {
+      swiperInstance?.slideNext();
+    }
+  }
+};
+```
+
+```ts
+// 滑动事件 Hooks
+export const useTouchEvent = () => {
+  const [startX, setStartX] = useState<number>(0);
+  const [swiperInstance, setSwiperInstance] = useState<any>();
+  const onTouchStart = (e: any) => {
+    setStartX(e.targetTouches[0].pageX);
+  };
+  const onTouchEnd = (e: any) => {
+    // 执行滑动逻辑
+    const endX = e.changedTouches[0].pageX;
+    if (endX && endX && Math.abs(endX - startX) > 50) {
+      if (endX - startX > 0) {
+        swiperInstance?.slidePrev();
+      } else {
+        swiperInstance?.slideNext();
+      }
+    }
+  };
+  return [onTouchStart, onTouchEnd, setSwiperInstance];
+};
+```
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
