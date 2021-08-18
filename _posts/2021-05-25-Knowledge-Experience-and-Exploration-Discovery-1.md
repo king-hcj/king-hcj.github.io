@@ -287,13 +287,14 @@ export const useTouchEvent = () => {
   // 更改`.current`属性不会导致重新渲染。因为他一直是一个引用。
   const startX = useRef(0);
   const swiperInstance = useRef<any>(null);
-  const setSwiperInstance = (el: any) => {
+
+  const setSwiperInstance = useCallback((el: any) => {
     swiperInstance.current = el;
-  };
-  const onTouchStart = (e: any) => {
+  }, []);
+  const onTouchStart = useCallback((e: any) => {
     startX.current = e.targetTouches[0].pageX;
-  };
-  const onTouchEnd = (e: any) => {
+  }, []);
+  const onTouchEnd = useCallback((e: any) => {
     // 执行滑动逻辑
     const endX = e.changedTouches[0].pageX;
     if (endX && endX && Math.abs(endX - startX.current) > 50) {
@@ -303,7 +304,8 @@ export const useTouchEvent = () => {
         swiperInstance?.current?.slideNext();
       }
     }
-  };
+  }, []);
+
   return { onTouchStart, onTouchEnd, setSwiperInstance };
 };
 ```
