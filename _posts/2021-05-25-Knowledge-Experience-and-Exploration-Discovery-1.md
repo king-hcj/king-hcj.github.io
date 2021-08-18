@@ -308,6 +308,8 @@ export const useTouchEvent = () => {
 };
 ```
 
+- [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data){:target='\_blank'}
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
