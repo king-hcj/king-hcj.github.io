@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 前端万字精华——浏览器简史及其核心原理综述
+title: 前端万字精华——浏览器简史及其核心原理详解
 categories: Chrome
 description: Web 浏览器面面观
 keywords: Chrome, Chrome V8, JavaScriptCore, JS, 前端, JavaScript
