@@ -283,23 +283,28 @@ const onTouchEnd = (e: any) => {
 ```ts
 // 滑动事件 Hooks
 export const useTouchEvent = () => {
-  const [startX, setStartX] = useState<number>(0);
-  const [swiperInstance, setSwiperInstance] = useState<any>();
+  // useRef 的内容发生变化时,它不会通知你
+  // 更改`.current`属性不会导致重新渲染。因为他一直是一个引用。
+  const startX = useRef(0);
+  const swiperInstance = useRef<any>(null);
+  const setSwiperInstance = (el: any) => {
+    swiperInstance.current = el;
+  };
   const onTouchStart = (e: any) => {
-    setStartX(e.targetTouches[0].pageX);
+    startX.current = e.targetTouches[0].pageX;
   };
   const onTouchEnd = (e: any) => {
     // 执行滑动逻辑
     const endX = e.changedTouches[0].pageX;
-    if (endX && endX && Math.abs(endX - startX) > 50) {
-      if (endX - startX > 0) {
-        swiperInstance?.slidePrev();
+    if (endX && endX && Math.abs(endX - startX.current) > 50) {
+      if (endX - startX.current > 0) {
+        swiperInstance?.current?.slidePrev();
       } else {
-        swiperInstance?.slideNext();
+        swiperInstance?.current?.slideNext();
       }
     }
   };
-  return [onTouchStart, onTouchEnd, setSwiperInstance];
+  return { onTouchStart, onTouchEnd, setSwiperInstance };
 };
 ```
 
