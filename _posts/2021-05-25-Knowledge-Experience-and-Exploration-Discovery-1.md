@@ -333,6 +333,8 @@ export const useTouchEvent = () => {
 
 #### 前端装逼技巧
 
+- [前端装逼技巧 108 式（四）—— 一起摇摆](https://king-hcj.github.io/2021/08/01/JavaScript-108-tips4/){:target='\_blank'}
+
 #### CSS
 
 - [css-tricks](https://css-tricks.com/){:target='\_blank'}
@@ -345,8 +347,6 @@ export const useTouchEvent = () => {
 
 <!--
 计划：
-前端装逼技巧（四）
-热门 JavaScript 引擎横评
 性能优化（一二三）
 技术人的芯片通识课
 -->
