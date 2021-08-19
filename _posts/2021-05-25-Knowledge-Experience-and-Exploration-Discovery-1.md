@@ -311,6 +311,23 @@ export const useTouchEvent = () => {
 ```
 
 - [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data){:target='\_blank'}
+- React swiperjs 使用：
+  - [swiperjs](https://swiperjs.com/react){:target='\_blank'}
+  - [swiper 中文文档](https://www.swiper.com.cn/){:target='\_blank'}
+  - `onSwiper`：接收 Swiper 实例的回调；
+  - 在最外层的容器上增加`className="swiper-no-swiping"`可以禁止手动拖动滑动；
+  - 宽度可以设置：`width={(window.innerWidth || 360) / 2}`；【强制 Swiper 的宽度(px)，当你的 Swiper 在隐藏状态下初始化时用得上。这个参数会使自适应失效。】
+  - `onClick` 可以这么用：
+  ```js
+  const onClick = (e: any) => {
+    if (e.clickedIndex > activeIndex) {
+      swip?.slideNext();
+    } else if (e.clickedIndex < activeIndex) {
+      swip?.slidePrev();
+    }
+  };
+  ```
+- 点击时获取 DOM 上的值（属性）：可以通过`e.target.dataset.xxx`获取元素上通过`data-xxx`设置的值。
 
 ### Exploration and Discovery
 
