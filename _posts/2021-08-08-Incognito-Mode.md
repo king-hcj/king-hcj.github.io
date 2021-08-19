@@ -360,7 +360,7 @@ console.log(getUUID('https://www.baidu.com/'));
 
 ### 如何免受广告跟踪器的监视和跟踪
 
-&emsp;&emsp;禁用第三方 Cookie。Chrome 2020 年推了一个叫做 SameSite Cookie 的东西，目的是为了减少第三方 Cookie 的发送，但网站所有者仍然有能力关掉它（`SameSite=None`），可参考下图。而 Chrome 的终极目标，是要在 2022 年完全消灭第三方 Cookie，像 Safari 和 Brave 已经做的那样，SameSite Cookie 就是第一步。
+&emsp;&emsp;禁用第三方 Cookie。Chrome 2020 年推了一个叫做 SameSite Cookie 的东西，目的是为了减少第三方 Cookie 的发送，但网站所有者仍然有能力关掉它（`SameSite=None`）。而 Chrome 的终极目标，是要在 2022 年完全消灭第三方 Cookie，像 Safari 和 Brave 已经做的那样，SameSite Cookie 就是第一步。
 
 &emsp;&emsp;禁用 JavaScript 脚本，蒽，这个在现今，估计还是算了。在现在前后端分离的开发模式下，大多数网站在禁用 JavaScript 后，将什么也没有，得，烦恼没有了，网站内容也没有了，一了百了～
 
