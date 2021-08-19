@@ -31,7 +31,7 @@
 ### 技术博文
 
 - [浏览器是如何工作的：Chrome V8 让你更懂 JavaScript](https://king-hcj.github.io/2020/10/05/google-v8/)
-- [六个问题助你理解 React Fiber](https://king-hcj.github.io/2021/03/21/6-questions-of-react-fiber/)
+- [React Fiber 太难？六个问题助你理解 React Fiber](https://king-hcj.github.io/2021/03/21/6-questions-of-react-fiber/)
 - [前端万字精华——浏览器简史及其核心原理详解](https://king-hcj.github.io/2021/07/11/web-browser/)
 - [从前端视角看浏览器隐身模式](https://king-hcj.github.io/2021/08/08/Incognito-Mode/)
 - [你应该知道的前端技术浪潮与应用](https://king-hcj.github.io/2021/04/28/front-end-technology-and-application/)
