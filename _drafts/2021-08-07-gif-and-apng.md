@@ -11,6 +11,8 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 你不知道的 GIF，压缩算法
 -->
 
+图片压缩的原理，为什么有的压缩比例大，还能保真？
+
 &emsp;&emsp;Mosaic 浏览器，1993 年，美国伊利诺州的伊利诺大学的 NCSA 组织，发表了**第一个可以显示图片的浏览器**，命名为 ─「MOSAIC」，在当时人气爆发的大受欢迎，Mosaic 的出现，算是点燃后来因特网热潮的火种之一。
 
 &emsp;&emsp;第一张网络图片由万维网发明人 Tim Burners Lee 上传，图中的 4 位女士是一支名为 Les Horrible Cernettes 的音乐团体。另外据考证，Lee 还用一部彩色 Mac，使用第一代 Photoshop 进行了修改，并被保存为.gif 格式文件。
