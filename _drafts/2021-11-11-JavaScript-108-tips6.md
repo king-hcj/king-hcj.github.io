@@ -39,7 +39,7 @@ keywords: JS, 前端, JavaScript
 
 - [Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='\_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='\_blank'}
 
-## 你也许真的不了解 JSON.stringify
+## JSON.stringify 真的不能满足深拷贝的要求吗？
 
 简单的深拷贝，复杂的不行？真的不行吗？
 【第二个参数】
