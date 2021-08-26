@@ -389,6 +389,10 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [Linux 下使用 curl 查看 http 请求各阶段耗时](https://www.cnblogs.com/lnlvinso/p/9775484.html){:target='\_blank'}
 - [Linux 使用 curl 查看请求响应时间](https://blog.csdn.net/zhenyushao/article/details/69258536){:target='\_blank'}
 
+## 剪贴板操作 Clipboard API 教程
+
+- [剪贴板操作 Clipboard API 教程](https://www.ruanyifeng.com/blog/2021/01/clipboard-api.html){:target='\_blank'}
+
 ## `pointer-events` 与鼠标穿透
 
 &emsp;&emsp;`pointer-events`是 css3 的一个属性，指定在什么情况下元素可以成为鼠标事件的`target`（包括鼠标的样式）。`pointer-events`属性有很多值，但是对于浏览器来说，只有`auto`（默认值）和`none`两个值可用，其它的几个是针对 SVG 的(本身这个属性就来自于 SVG 技术)。`none`值时，元素永远不会成为鼠标事件的`target`（目标）。

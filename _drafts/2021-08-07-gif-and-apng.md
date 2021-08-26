@@ -74,3 +74,5 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 - [FLIF 自由的无损图像格式](https://www.oschina.net/p/flif){:target='\_blank'}
 - [一种新型免费无损图片格式 FLIF](https://blog.csdn.net/ybhuangfugui/article/details/104528840){:target='\_blank'}
 - [A new image format for the Web](https://developers.google.com/speed/webp/){:target='\_blank'}
+
+- [前端 9 种图片格式基础知识, 你应该知道的](https://juejin.cn/post/7000154907156152327){:target='\_blank'}
