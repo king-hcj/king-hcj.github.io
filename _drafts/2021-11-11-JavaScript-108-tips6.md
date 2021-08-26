@@ -62,6 +62,15 @@ keywords: JS, 前端, JavaScript
 - [纯前端生成和解析 Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='\_blank'}
 - [Node.js + Vue 实现 Excel 导出与保存](https://mp.weixin.qq.com/s/PHIbCZe31rATZj34xgdKkA){:target='\_blank'}
 
+## 前端生成图片
+
+- [H5 分享截图方案优化](https://zhuanlan.zhihu.com/p/162162955){:target='\_blank'}
+- [H5 -- （功能）基于 html2canvas 实现长按网页保存为图片到本地](https://blog.csdn.net/weixin_41076513/article/details/80896399){:target='\_blank'}
+
+## 前端生成 PDF
+
+- [前端实现 HTML 转 PDF 下载的两种方式](https://www.jianshu.com/p/56680ce1cc97){:target='\_blank'}
+
 ## CSS 如何实现局部光照效果？
 
 - [CSS 如何实现局部光照效果？](https://segmentfault.com/q/1010000039359551?utm_source=homepage#){:target='\_blank'}
