@@ -71,6 +71,10 @@ keywords: JS, 前端, JavaScript
 
 - [前端实现 HTML 转 PDF 下载的两种方式](https://www.jianshu.com/p/56680ce1cc97){:target='\_blank'}
 
+## 前端生成 PPT
+
+- [居然可以用 js 写 PPT](https://mp.weixin.qq.com/s/xoHMvqg_tThgSjdEtZ5ahQ){:target='\_blank'}
+
 ## CSS 如何实现局部光照效果？
 
 - [CSS 如何实现局部光照效果？](https://segmentfault.com/q/1010000039359551?utm_source=homepage#){:target='\_blank'}

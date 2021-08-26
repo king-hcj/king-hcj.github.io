@@ -329,6 +329,15 @@ export const useTouchEvent = () => {
   ```
 - 点击时获取 DOM 上的值（属性）：可以通过`e.target.dataset.xxx`获取元素上通过`data-xxx`设置的值。
 
+- PC、手机判断
+
+```js
+const isMobile = () =>
+  navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  ) !== null;
+```
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
