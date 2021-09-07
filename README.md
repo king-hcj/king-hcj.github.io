@@ -26,7 +26,7 @@
 - [前端装逼技巧 108 式（一）—— 打工人](https://segmentfault.com/a/1190000038251777)
 - [前端装逼技巧 108 式（二）—— 不讲武德](https://segmentfault.com/a/1190000038393789)
 - [前端装逼技巧 108 式（三）—— 冇得感情的 API 调用工程师](https://king-hcj.github.io/2020/12/21/JavaScript-108-tips3/)
-- [前端装逼技巧 108 式（四）—— 一起摇摆](https://king-hcj.github.io/2021-08-01-JavaScript-108-tips4/)
+- [前端装逼技巧 108 式（四）—— 一起摇摆](https://king-hcj.github.io/2021/08/01/JavaScript-108-tips4/)
 
 ### 技术博文
 
