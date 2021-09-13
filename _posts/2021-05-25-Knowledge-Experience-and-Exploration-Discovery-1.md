@@ -272,6 +272,7 @@ const onTouchEnd = (e: any) => {
   endX = e.changedTouches[0].pageX;
   if (endX && endX && Math.abs(endX - startX) > 50) {
     if (endX - startX > 0) {
+      // allowSlideNext allowSlidePrev 可以控制是否运行向对应方向滑动
       swiperInstance?.slidePrev();
     } else {
       swiperInstance?.slideNext();
@@ -336,6 +337,53 @@ const isMobile = () =>
   navigator.userAgent.match(
     /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
   ) !== null;
+```
+
+- Less 函数
+
+```less
+// global.less
+@default-w: 360;
+.px2vw(@px, @width: @default-w) {
+  @var: (@px / @width) * 100;
+  @vw: ~'@{var}vw';
+}
+
+// index.less
+@import url('global.less');
+.radioButton_wrap {
+  display: flex;
+  flex-direction: column;
+  .radioButton {
+    position: relative;
+    label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      color: #fff;
+    }
+    input[type='radio'] {
+      // 去除radio小圆圈
+      appearance: none;
+      width: .px2vw(328) [ @vw];
+      height: .px2vw(56) [ @vw];
+      background: #000000;
+      box-sizing: border-box;
+      border: 1.5px solid #2e9df3;
+      border-radius: .px2vw(28) [ @vw];
+    }
+
+    input[type='radio']:checked {
+      background: #2e9df3;
+    }
+
+    input[type='radio']:checked {
+      color: #fff;
+    }
+  }
+}
 ```
 
 ### Exploration and Discovery

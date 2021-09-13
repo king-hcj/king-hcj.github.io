@@ -62,10 +62,31 @@ keywords: JS, 前端, JavaScript
 - [纯前端生成和解析 Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='\_blank'}
 - [Node.js + Vue 实现 Excel 导出与保存](https://mp.weixin.qq.com/s/PHIbCZe31rATZj34xgdKkA){:target='\_blank'}
 
+## 前端生成 word
+
+- [Vue 项目纯前端导出 word 文档](https://www.cnblogs.com/xhxdd/p/13716395.html){:target='\_blank'}
+
+## 前端生成 JSON
+
+- [前端保存 JSON 文件到本地](https://www.cnblogs.com/apex-wzw/p/12430386.html){:target='\_blank'}
+- [javascript 前端实现生成 json 格式数据并下载](https://blog.csdn.net/u010608964/article/details/85254508){:target='\_blank'}
+
 ## 前端生成图片
 
 - [H5 分享截图方案优化](https://zhuanlan.zhihu.com/p/162162955){:target='\_blank'}
 - [H5 -- （功能）基于 html2canvas 实现长按网页保存为图片到本地](https://blog.csdn.net/weixin_41076513/article/details/80896399){:target='\_blank'}
+
+## 前端生成 GIF
+
+- [前端生成 gif 动态图下载](https://blog.csdn.net/xw505501936/article/details/80017776){:target='\_blank'}
+- [纯前端实现可传图可字幕台词定制的 GIF 表情生成器](https://www.zhangxinxu.com/wordpress/2018/05/js-custom-gif-generate/){:target='\_blank'}
+- [前端实现通过短视频生成 gif 图](https://juejin.cn/post/6860701250342617096){:target='\_blank'}
+
+## 前端生成二维码
+
+- [前端使用 js 生成二维码](https://www.jianshu.com/p/0e01aa312ab4?utm_campaign){:target='\_blank'}
+- [qrcode.js](http://davidshimjs.github.io/qrcodejs/){:target='\_blank'}
+- [Vue——前端生成二维码](https://www.cnblogs.com/belongs-to-qinghua/p/12197878.html){:target='\_blank'}
 
 ## 前端生成 PDF
 
@@ -74,6 +95,21 @@ keywords: JS, 前端, JavaScript
 ## 前端生成 PPT
 
 - [居然可以用 js 写 PPT](https://mp.weixin.qq.com/s/xoHMvqg_tThgSjdEtZ5ahQ){:target='\_blank'}
+
+## 前端生成视频
+
+- [如何将 Canvas 绘制过程转为视频](https://mp.weixin.qq.com/s/OTdgUzkibH5a9HHDRxgySw){:target='\_blank'}
+
+## 渐进式加载图片
+
+- [渐进式加载](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps/Loading){:target='\_blank'}
+- [How Medium does progressive image loading](https://jmperezperez.com/medium-image-progressive-loading-placeholder/){:target='\_blank'}
+- [渐进式图片加载 progressive-image](https://blog.csdn.net/qq_24147051/article/details/85250455){:target='\_blank'}
+- [iOS 图片渐进式下载](https://www.jianshu.com/p/8638503baa5d){:target='\_blank'}
+
+## 前端分享
+
+- [How to Use the Web Share API](https://css-tricks.com/how-to-use-the-web-share-api/){:target='\_blank'}
 
 ## CSS 如何实现局部光照效果？
 
@@ -465,6 +501,13 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [定制 github 首页-自动更新 Github 的 star 数量](https://blog.csdn.net/LEILEI18A/article/details/116659324){:target='\_blank'}
 - [在你的 README 中获取动态生成的 GitHub 统计信息！](https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md){:target='\_blank'}
 <!-- https://github-readme-stats.vercel.app/api?username=king-hcj -->
+
+## The Open Graph protocol
+
+- [The Open Graph protocol](https://ogp.me/){:target='\_blank'}
+- [Provide an image for WhatsApp link sharing](https://stackoverflow.com/questions/19778620/provide-an-image-for-whatsapp-link-sharing){:target='\_blank'}
+- [开放图谱动态](https://developers.facebook.com/docs/sharing/opengraph){:target='\_blank'}
+- [How to Customize which URL, Text and IMG to Share](https://sharethis.com/support/legacy/how-to-customize-which-url-text-and-img-to-share/){:target='\_blank'}
 
 ## 这可能是我迄今为止见过拥有最全速查表的技术网站！
 
@@ -860,6 +903,10 @@ input.oninput = ({ target }) => {
 
 - 删除
 - 改变属性顺序
+- 隐藏类与内敛缓存
+- delete 究竟删除了什么
+
+- [JavaScript 中几种释放内存的方式性能对比](https://mp.weixin.qq.com/s/t5tibQyvT0CA7gxq6KG0xQ){:target='\_blank'}
 
 ## 省省劲儿，setTimeout 不能让你的程序暂停
 

@@ -50,6 +50,8 @@ keywords: JS, 前端, JavaScript, 浏览器, GIF, Apng
 
 - **[移动端图片格式调研](https://blog.ibireme.com/2015/11/02/mobile_image_benchmark/){:target='\_blank'}**
 
+- [2021 年 Web 应用程序的最佳图像格式](https://mp.weixin.qq.com/s/ndcL1k1XwxKTjuRR66htBg){:target='\_blank'}
+
 - [为什么 30 多年过去了，GIF 还没有被淘汰](https://zhuanlan.zhihu.com/p/396618872){:target='\_blank'}
 - [谈谈 GIF 格式](https://zhuanlan.zhihu.com/p/22590949){:target='\_blank'}
 - [GIF 动图发展史上的 11 个重要时刻](https://zhuanlan.zhihu.com/p/28466822){:target='\_blank'}
