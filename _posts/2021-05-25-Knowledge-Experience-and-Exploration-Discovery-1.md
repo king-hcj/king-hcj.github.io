@@ -210,6 +210,7 @@ export const filterEmoji = (str: string): string => {
 
 - Mac 查看端口号是否被占用及释放
 
+  - 提示信息：`Something is already running on port 8080. Use port 8081 instead.`
   - 查看使用端口进程：`lsof -i: 端口号`
   - 释放进程：`kill 你的PID`
   - 再次执行第一步，是否无进程占用：`lsof -i: 端口号`
