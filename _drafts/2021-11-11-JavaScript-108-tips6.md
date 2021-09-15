@@ -19,6 +19,10 @@ keywords: JS, 前端, JavaScript
 
 建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
 
+## 做一个在线聊天室
+
+- [用 React + Redux + NodeJS 开发一个在线聊天室](https://blog.csdn.net/u012422829/article/details/52674667){:target='\_blank'}
+
 ## 识见中的部分内容
 
 <!-- 如Mac 设置环境变量、程序猿字体、git、端口占用 -->
