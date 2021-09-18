@@ -17,6 +17,26 @@ keywords: JS, 前端, JavaScript
 - [Android 开发利用 webview 识别 H5 中图片并保存到相册（手机，平板适配,避免保存两次图片）](https://blog.csdn.net/ytfunnysite/article/details/85345569){:target='\_blank'}
 - [剪贴板操作 Clipboard API 教程](https://www.ruanyifeng.com/blog/2021/01/clipboard-api.html){:target='\_blank'}
 
+## 如何轻松突破某 DN 的限制复制
+
+&emsp;&emsp;通过一个开关实现任意网页开启复制功能：
+
+- Chrome 右上角三个点 ⇒ 书签 ⇒ 书签管理器 ⇒ 右上角三个点 ⇒「添加新书签」;
+- 名称随意，粘贴以下代码到网址中;
+- 然后我们就可以在任意网站上点击刚才创建的书签，通过这个技巧，我们就能很方便的突破某 DN 的复制限制了。
+
+```js
+javascript: (function () {
+  document.body.contentEditable = true;
+})();
+```
+
+## 前端换肤实现
+
+- [使用 css/less 动态更换主题色（换肤功能）](https://www.cnblogs.com/leiting/p/11203383.html){:target='\_blank'}
+- [link rel=alternate 网站换肤功能最佳实现](https://www.zhangxinxu.com/wordpress/2019/02/link-rel-alternate-website-skin/){:target='\_blank'}
+- [使用 style.setProperty 设置 CSS 变量示例](https://wow.techbrood.com/fiddle/41577){:target='\_blank'}
+
 ## 前端滑动事件
 
 详见成就 UI 优化
