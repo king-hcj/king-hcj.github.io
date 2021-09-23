@@ -387,6 +387,8 @@ const isMobile = () =>
 }
 ```
 
+- [如何重置 Mac 的 SMC](https://support.apple.com/zh-cn/HT201295){:target='\_blank'}：重置系统管理控制器 (SMC) 可以解决某些与电源、电池、风扇和其他功能相关的问题。【如：电脑因出现问题而重新启动。请按一下按键,或等几秒钟以继续启动。】
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧

@@ -445,6 +445,9 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 ## 剪贴板操作 Clipboard API 教程
 
 - [剪贴板操作 Clipboard API 教程](https://www.ruanyifeng.com/blog/2021/01/clipboard-api.html){:target='\_blank'}
+- [Javascript Copy To Clipboard on safari?](https://stackoverflow.com/questions/40147676/javascript-copy-to-clipboard-on-safari){:target='\_blank'}
+- [Cut, Copy and Paste in JavaScript with the Clipboard API](https://www.sitepoint.com/clipboard-api/){:target='\_blank'}
+- 用户触发的事件和 `document.execCommand('copy');` 之间不能被异步过程隔开；
 
 ## `pointer-events` 与鼠标穿透
 
