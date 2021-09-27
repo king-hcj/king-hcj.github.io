@@ -389,6 +389,47 @@ const isMobile = () =>
 
 - [如何重置 Mac 的 SMC](https://support.apple.com/zh-cn/HT201295){:target='\_blank'}：重置系统管理控制器 (SMC) 可以解决某些与电源、电池、风扇和其他功能相关的问题。【如：电脑因出现问题而重新启动。请按一下按键,或等几秒钟以继续启动。】
 
+- 在使用 `Form.Item` 获取表单数据的时候，千万要注意，对于最外层的标签，同级别的只能有一个。如：下面的 InputNumber 值会取不到，因为`Form.Item`中还包含了“for each number”。
+
+```jsx
+<Form.Item
+  label='Enter amount'
+  name='amount'
+  rules={[
+    {
+      required: true,
+      type: 'number',
+      min: 1,
+      max: 999,
+      message: 'Please input amount!',
+    },
+  ]}
+>
+  <InputNumber
+    precision={0}
+    placeholder='Please input amount!'
+    style={{ width: '50%' }}
+  />{' '}
+  for each number
+</Form.Item>
+```
+
+- [函数式组件中使用 ref](https://zh-hans.reactjs.org/docs/hooks-reference.html#useimperativehandle){:target='\_blank'}
+
+```jsx
+function FancyInput(props, ref) {
+  const inputRef = useRef();
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current.focus();
+    }
+  }));
+  return <input ref={inputRef} ... />;
+}
+FancyInput = forwardRef(FancyInput);
+// 渲染 <FancyInput ref={inputRef} /> 的父组件可以调用 inputRef.current.focus()
+```
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
