@@ -430,6 +430,40 @@ FancyInput = forwardRef(FancyInput);
 // 渲染 <FancyInput ref={inputRef} /> 的父组件可以调用 inputRef.current.focus()
 ```
 
+- Form 表单中，在黏贴（Paste）的时候对剪贴板内容进行格式化或者其他处理的方法：
+
+  - onPaste：弊端为难以追加黏贴，如果要实现追加黏贴，需要读取光标位置、`getSelection`等，会很麻烦；
+
+  ```js
+  onPaste: (e) => {
+    // 阻止默认事件
+    e.preventDefault();
+    form.setFieldsValue({
+      // 获取剪贴板内容并格式化（如处理掉多余的空格、替换换行符等），然后设置给表单
+      phone_number: e.clipboardData.getData('text').replace(/\s+/g, ' '),
+    });
+  };
+  ```
+
+  - 结合 onPaste 和 onChange 实现：
+
+  ```js
+  onPaste: () => {
+    // 加锁，避免无意义的form.setFieldsValue
+    IsOnPaste.current = true;
+  },
+  onChange: () => {
+    if (IsOnPaste.current) {
+      // 解锁
+      IsOnPaste.current = false;
+      form.setFieldsValue({
+        // 获取表单的值，处理后再设置回去
+        phone_number:form.getFieldValue('phone_number').replace(/\s+/g, ' ')
+      })
+    }
+  }
+  ```
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
