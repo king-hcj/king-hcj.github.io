@@ -453,6 +453,7 @@ FancyInput = forwardRef(FancyInput);
     IsOnPaste.current = true;
   },
   onChange: () => {
+    // 只有是黏贴引起的Change才需要格式化
     if (IsOnPaste.current) {
       // 解锁
       IsOnPaste.current = false;
@@ -461,6 +462,27 @@ FancyInput = forwardRef(FancyInput);
         phone_number:form.getFieldValue('phone_number').replace(/\s+/g, ' ')
       })
     }
+  }
+  ```
+
+- less 插值：
+  - 法一：
+  ```less
+  .color(@token) {
+    color: var(~'--color-@{token}');
+  }
+  body {
+    background: .color('abc') [color];
+  }
+  ```
+  - 法二：
+  ```less
+  .color(@token) {
+    @color: var(~'--color-@{token}');
+  }
+  body {
+    .color('abcd'); //调用
+    background: @color; // 使用返回值
   }
   ```
 
