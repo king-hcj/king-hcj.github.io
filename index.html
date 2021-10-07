@@ -20,18 +20,12 @@ comments: false
           {% if site.organization %}
           <span class="meta-info">
             <span class="octicon octicon-organization"></span>
-            <a href="{{ site.organization_url }}" target="_blank"
-              >{{ site.organization }}</a
-            >
+            <a href="{{ site.organization_url }}" target="_blank">{{ site.organization }}</a>
           </span>
           {% endif %}
           <span class="meta-info">
             <span class="octicon octicon-mark-github"></span>
-            <a
-              href="https://github.com/{{ site.github_username }}"
-              target="_blank"
-              >{{ site.github_username }}</a
-            >
+            <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
           </span>
         </div>
       </div>
@@ -46,7 +40,12 @@ comments: false
         {% for post in paginator.posts %}
         <li class="repo-list-item">
           <h3 class="repo-list-name">
-            <a href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title }}</a>
+            <a href="{{ site.url }}{{ post.url }}" target="_blank">
+              {% if post.hot %}
+              🔥
+              {% endif %}
+              {{ post.title }}
+            </a>
           </h3>
           <p class="repo-list-description">
             {{ post.excerpt | strip_html | strip }}
@@ -59,9 +58,7 @@ comments: false
             {% for cat in post.categories %}
             <span class="meta-info">
               <span class="octicon octicon-file-directory"></span>
-              <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}" target="_blank"
-                >{{ cat }}</a
-              >
+              <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}" target="_blank">{{ cat }}</a>
             </span>
             {% endfor %}
           </p>
@@ -70,7 +67,7 @@ comments: false
       </ol>
     </div>
     <div class="column one-third">
-      {% include sidebar-search.html %} {% include sidebar-qrcode.html %} {%
+      {% include sidebar-search.html %} {% include sidebar_hot.html %} {% include sidebar-qrcode.html %} {%
       include sidebar-popular-repo.html %}
     </div>
   </div>
@@ -79,11 +76,7 @@ comments: false
       {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
       <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
       {% else %}
-      <a
-        href="{{ site.url }}/page{{paginator.previous_page}}"
-        class="btn btn-outline"
-        >&laquo;</a
-      >
+      <a href="{{ site.url }}/page{{paginator.previous_page}}" class="btn btn-outline">&laquo;</a>
       {% endif %} {% else %}
       <button disabled="disabled" href="javascript:;" class="btn btn-outline">
         &laquo;
@@ -96,15 +89,9 @@ comments: false
       paginator.page %}
       <a href="javascript:;" class="active btn btn-outline">{{count}}</a>
       {% else %}
-      <a href="{{ site.url }}/page{{count}}" class="btn btn-outline"
-        >{{count}}</a
-      >
+      <a href="{{ site.url }}/page{{count}}" class="btn btn-outline">{{count}}</a>
       {% endif %} {% endfor %} {% if paginator.next_page %}
-      <a
-        href="{{ site.url }}/page{{paginator.next_page}}"
-        class="btn btn-outline"
-        >&raquo;</a
-      >
+      <a href="{{ site.url }}/page{{paginator.next_page}}" class="btn btn-outline">&raquo;</a>
       {% else %}
       <button disabled="disabled" href="javascript:;" class="btn btn-outline">
         &raquo;

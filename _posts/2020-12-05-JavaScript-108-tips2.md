@@ -4,6 +4,7 @@ title: 前端装逼技巧 108 式（二）—— 不讲武德
 categories: JavaScript
 description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
+hot: true
 ---
 
 > “小马同学，背一下《陋室铭》。”“山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟馨。”“停，怎么少了俩字？”“年轻人不讲吾德。”

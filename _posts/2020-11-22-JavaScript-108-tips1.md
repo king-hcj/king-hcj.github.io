@@ -4,6 +4,7 @@ title: 前端装逼技巧 108 式（一）—— 打工人
 categories: JavaScript
 description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
+hot: true
 ---
 
 > 你在拼多多到处找人砍价，他在滴滴打车求人助力，我在电子厂拧螺丝拧到凌晨，我们都有光明的未来！早安，打工人！

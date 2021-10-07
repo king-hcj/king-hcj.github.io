@@ -4,6 +4,7 @@ title: React Fiber太难？六个问题助你理解 React Fiber
 categories: JavaScript
 description: React Fiber
 keywords: React Fiber, JS, 前端, JavaScript
+hot: true
 ---
 
 &emsp;&emsp;React Fiber 是 Facebook 花费两年余时间对 React 做出的一个重大改变与优化，是**对 React 核心算法的一次重新实现**。从 Facebook 在 React Conf 2017 会议上确认，React Fiber 会在 React 16 版本发布至今，也已过去三年有余，如今，React 17 业已发布，社区关于 Fiber 的优秀文章不在少数。

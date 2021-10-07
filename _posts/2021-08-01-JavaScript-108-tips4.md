@@ -4,6 +4,7 @@ title: 前端装逼技巧 108 式（四）—— 一起摇摆
 categories: JavaScript
 description: 前端装逼技巧 108 式，助你更懂JS原理
 keywords: JS, 前端, JavaScript
+hot: true
 ---
 
 > <div style="text-align: center">《洗 练》<br /><br />半夜不眠，<br />推门至院落，<br />院中的莲雾树熟了，<br />有一枚红果悄然坠落，<br />我剪一段月光裹住心伤。<br /><br />七月的虫声是炸了线的唐诗三百，<br />格律皆破，<br />独独押一个锡韵：寂寂寂寂寂寂。<br />我说：渔人哪，你竟不如一只虫子，你三年未归。<br /><br />瀚海无路，<br />只有等字，<br />你不妨托星月当信差，<br />若我裁得一截银白的咸布，<br />渍痛了伤口，<br />我便知晓，<br />你已无法回來。</div>

@@ -4,6 +4,7 @@ title: 从前端视角看浏览器隐身模式
 categories: JavaScript
 description: 浏览器隐身模式真的可以隐身吗
 keywords: JS, 前端, JavaScript, 浏览器, Chrome, 浏览器指纹
+hot: true
 ---
 
 &emsp;&emsp;本文从科普和技术视角对浏览器隐身模式进行介绍，全文脉络如下，读者可根据兴趣选择对应章节阅读。
