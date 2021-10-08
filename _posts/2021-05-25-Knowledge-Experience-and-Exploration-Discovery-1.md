@@ -113,7 +113,7 @@ window.addEventListener('contextmenu', function (e) {
 
   > 要实现小于 1px 的线条，有个先决条件：屏幕的分辨率要足够高，设备像素比要大于 1，即 css 中的 1 个像素对应物理屏幕中 1 个以上的像素点。
 
-  ```less
+  ```scss
   // border-width: 0.5px;
   border-width: 1px;
   transform: scaleY(0.5);
@@ -177,7 +177,7 @@ export const filterEmoji = (str: string): string => {
   - [How to determine when a Git branch was created?](https://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created){:target='\_blank'}
 - Less 循环简化样式的编写
 
-```less
+```scss
 /**
   * 定义循环方法
   * @index--传入的循环起始值
@@ -342,7 +342,7 @@ const isMobile = () =>
 
 - Less 函数
 
-```less
+```scss
 // global.less
 @default-w: 360;
 .px2vw(@px, @width: @default-w) {
@@ -467,7 +467,7 @@ FancyInput = forwardRef(FancyInput);
 
 - less 插值：
   - 法一：
-  ```less
+  ```scss
   .color(@token) {
     color: var(~'--color-@{token}');
   }
@@ -476,7 +476,7 @@ FancyInput = forwardRef(FancyInput);
   }
   ```
   - 法二：
-  ```less
+  ```scss
   .color(@token) {
     @color: var(~'--color-@{token}');
   }
