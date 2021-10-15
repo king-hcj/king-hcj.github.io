@@ -16,6 +16,8 @@ keywords: JS, 前端, JavaScript
 - [Build a simple Google Chrome Extension in few minutes](https://medium.com/tech-tajawal/build-a-simple-google-chrome-extension-in-few-minutes-1f13b600e83e){:target='\_blank'}【含代码】 ｜ [中文](https://vimsky.com/article/4586.html){:target='\_blank'}
 - [用 Vue 开发自己的 Chrome 扩展程序](https://segmentfault.com/a/1190000019436268){:target='\_blank'} ｜ [英文](https://www.sitepoint.com/build-vue-chrome-extension/){:target='\_blank'}
 - [如何从零开始写一个 Chrome 扩展？](https://www.zhihu.com/question/20179805){:target='\_blank'}
+- [开始创建应用（扩展）和 WebApp](https://open.chrome.360.cn/extension_dev/overview.html){:target='\_blank'}
+- [Getting started](https://developer.chrome.com/docs/extensions/mv3/getstarted/){:target='\_blank'}
 
 ### 视频
 
