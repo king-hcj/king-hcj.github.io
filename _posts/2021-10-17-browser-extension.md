@@ -118,14 +118,19 @@ keywords: JS, 前端, JavaScript, Chrome
 
 ### 目录结构
 
-- manifest.json：配置文件，插件开发中的必备项；
-- popup.html：插件弹窗；
-- style.css：弹窗样式文件；
+&emsp;&emsp;目录结构图：
+![extensions](https://king-hcj.github.io/images/browser/browser_exe.png?raw=true)
+
+&emsp;&emsp;目录解释：
+
+- images
+  - logo.png：插件图标。
 - js
   - popup.js：弹窗 popup.html 中使用的 js；
   - content_script.js：需要直接注入页面的 js；
-- images
-  - logo.png：插件图标。
+- manifest.json：配置文件，插件开发中的必备项；
+- popup.html：插件弹窗；
+- style.css：弹窗样式文件；
 
 ### manifest.json 配置文件
 
