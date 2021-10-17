@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 浏览器插件
+title: 10分钟入门chrome(谷歌)浏览器插件/扩展开发——突破某SDN未登录禁止复制的限制
 categories: JavaScript
 description: 浏览器插件
 keywords: JS, 前端, JavaScript
