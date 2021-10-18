@@ -112,6 +112,8 @@ keywords: JS, 前端, JavaScript, Chrome
 
 &emsp;&emsp;基本思路其实很简单，**通过将当前页面的`document.body.contentEditable`值设置为`true`来达到可复制的效果**。当然，这个我们通过控制台面板或者“自定义书签“的方式也能轻松实现，这里只是让大家体验一下简单插件的开发，避免出手就是”Hello World！“，😄
 
+> 某 SDN 给代码块儿设置了`user-select: none;`，导致无法进行选中复制，从这里入手亦可。
+
 > 书签功能的实现可参考[前端装逼技巧 108 式（一）—— 打工人](https://juejin.cn/post/6996850474175430686#heading-3){:target='\_blank'}。
 
 &emsp;&emsp;下面将逐步介绍项目各文件相关信息，您也可以直接点击[这里](https://stackblitz.com/edit/browser-extension?){:target='\_blank'}在线查看完整代码。整个项目**核心代码不足 30 行**，相信您能藉此迅速入门 Chrome 插件开发，激发兴趣和潜能，写出更有用的插件或者应用。
