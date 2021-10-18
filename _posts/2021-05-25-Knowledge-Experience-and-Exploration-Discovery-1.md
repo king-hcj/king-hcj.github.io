@@ -502,6 +502,18 @@ FancyInput = forwardRef(FancyInput);
 
 ### Knowledge and Experience
 
+- 防止越界的简写方式：
+
+```js
+// 原写法
+const nextValue = currentValue === 4 ? currentValue : currentValue + 1;
+const preValue = currentValue === 0 ? currentValue : currentValue - 1;
+
+// 新的写法
+const nextValue = Math.min(currentValue + 1, 4);
+const preValue = Math.max(currentValue - 1, 0);
+```
+
 ### Exploration and Discovery
 
 #### 前端装逼技巧
