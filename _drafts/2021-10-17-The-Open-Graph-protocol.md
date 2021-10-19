@@ -115,6 +115,85 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;尽量确保您遵循[开放图形文档](https://ogp.me/#structured){:target='\_blank'}中的所有注释和示例。此外，一些社交网络有图像要求。例如，[Twitter 要求](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image){:target='\_blank'}比例为 2:1，最小尺寸为 300x157，最大尺寸为 4096x4096，小于 5MB，JPG、PNG、WEBP 或 GIF 格式。
 
+### 开发图标签
+
+&emsp;&emsp;只需几个步骤，即可完美预览 WhatsApp、Twitter、Facebook 和个人电脑和移动设备的书签图标。如果您喜欢阅读，请转到Open Graph (ogp.me) - 但请务必阅读此答案中的第 1 - 6 步，以获得最佳的 WhatsApp 预览。
+
+#### title
+
+&emsp;&emsp;最多 65 个字符。
+```html
+<title>your keyword rich title of the website and/or webpage</title>
+```
+
+#### description
+
+&emsp;&emsp;最多 155 个字符。
+```html
+<meta name="description" content="description of your website/webpage, make sure you use keywords!">
+```
+
+#### og:title
+
+&emsp;&emsp;最多 35 个字符。
+```html
+<meta property="og:title" content="short title of your website/webpage" />
+```
+
+#### og:url
+&emsp;&emsp;当前网页地址的完整链接。
+
+```html
+<meta property="og:url" content="https://www.example.com/webpage/" />
+```
+
+#### og:description
+
+&emsp;&emsp;最多 65 个字符。
+
+```html
+<meta property="og:description" content="description of your website/webpage">
+```
+#### og:image
+
+&emsp;&emsp;尺寸小于 300KB 且最小尺寸为 300 x 200 的图像（JPG 或 PNG）。此图像应通过具有有效非自签名证书的 HTTPS 连接提供。
+
+```html
+<meta property="og:image" content="//cdn.example.com/uploads/images/webpage_300x200.png">
+```
+#### og:type
+&emsp;&emsp;为了在图形中表示您的对象，您需要指定其类型。以下是可用的全局类型列表：http : //ogp.me/#types。您还可以指定自己的类型。
+```html
+<meta property="og:type" content="article" />
+```
+#### og:locale
+
+&emsp;&emsp;资源的语言环境。如果您有其他语言翻译可用，您也可以使用 og:locale:alternate。如果不指定 og:locale，则默认为 en_US。
+```html
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
+```
+#### Twitter
+
+&emsp;&emsp;要获得最佳 Twitter 支持，请阅读[此内容](https://dev.twitter.com/cards/overview)。
+
+#### Facebook
+
+&emsp;&emsp;要获得最佳 Facebook 支持，请阅读[此内容](https://developers.facebook.com/docs/sharing/webmasters)。
+
+#### favicon
+
+&emsp;&emsp;要获得对所有浏览器和设备的最佳图标支持，请阅读[此内容](https://stackoverflow.com/a/43154399/6086226)。
+
+#### video/audio
+
+&emsp;&emsp;还可以共享音频/视频。例如，Facebook 和 Twitter 可以很好地共享视频。阅读ogp.me。当然，WhatsApp 也有这个选项：当您分享 Instagram 或 Youtube 链接时，WhatsApp 预览会随应用内视频播放器一起提供。
+
+#### products, persons, movies等
+
+&emsp;&emsp;此类信息实际上取决于提供商（Facebook、Google）。我不知道什么时候，但 WhatsApp 和 Twitter可以启用对产品的支持。这样，您与之共享链接的人可能会在共享链接“小部件”中看到价格、平均评论分数。那样就好了。对于在其 WhatsApp Business 应用程序中拥有最新目录的企业帐户来说，这已经存在，但这与链接共享完全不同。
+
 ### Twitter 和其他使用开放图的社交媒体网络
 
 &emsp;&emsp;大多数社交网络都遵循开放图标准的基础，但其中一些还包括自己的扩展，以帮助自定义其生态系统中的外观。
