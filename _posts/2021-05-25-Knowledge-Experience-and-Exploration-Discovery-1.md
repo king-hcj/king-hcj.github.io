@@ -516,6 +516,11 @@ const preValue = Math.max(currentValue - 1, 0);
 
 ### Exploration and Discovery
 
+- [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
+- [Introducing CSS Scroll Snap Points](https://css-tricks.com/introducing-css-scroll-snap-points/){:target='\_blank'}
+- [Practical CSS Scroll Snapping](https://css-tricks.com/practical-css-scroll-snapping/){:target='\_blank'}
+- [大侠，请留步，要不过来了解下 CSS Scroll Snap？](https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/){:target='\_blank'}
+
 #### 前端装逼技巧
 
 #### 浏览器插件
