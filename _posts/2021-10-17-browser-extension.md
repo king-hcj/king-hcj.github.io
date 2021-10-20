@@ -42,7 +42,7 @@ keywords: JS, 前端, JavaScript, Chrome
 
 &emsp;&emsp;`chrome://plugins`不再存在的部分原因是出于安全考虑，Chrome 不再支持 NPAPI 插件——一些插件不再工作，而其他插件已以各种方式集成到 Chrome 中。例如，基于 Java 的小程序不再在浏览器中运行，PDF 查看器等功能已直接集成到浏览器中。因此，有点像应用程序（Chrome Apps），Chrome 插件的也正在逐步淘汰或集成到浏览器的主体中。
 
-&emsp;&emsp;插件的格式通常是**二进制文件**，如 windows 下的插件一般是`dll`，linux 下的插件一般是`os`格式。
+&emsp;&emsp;插件的格式通常是**二进制文件**，如 windows 下的插件一般是`dll`，linux 下的插件一般是`.so`格式。
 
 &emsp;&emsp;从本质上讲，“Chrome 应用程序”会被 PWA 所替代，而这些年来插件基本上已被弃用，所以你在 Chrome 中唯一需要关心的就是扩展程序。
 
