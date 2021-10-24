@@ -18,7 +18,7 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;看了这么多，好像还是不理解什么是开发图谱协议？
 
-&emsp;&emsp;举个简单的例子，当我们分享一个链接（URL）到给朋友时，在有的 App 上它只是一个链接，而在有的 APP 上，他却可以包含图片，如下图所示：
+&emsp;&emsp;举个简单的例子，当我们分享一个链接（URL）给朋友时，在有的 App 上它只是一个链接，而在有的 APP 上，他却可以包含标题、图片、描述等信息，如下图所示：
 
 ![extensions](https://i.stack.imgur.com/ERx58.jpg)
 
@@ -27,9 +27,11 @@ keywords: JS, 前端, JavaScript
 &emsp;&emsp;其实这一切也是依赖于具体 app 的实现的，对于同一 URL，我们可以看看在飞书和微信上的不同形态：
 
 微信：
+
 ![extensions](https://king-hcj.github.io/images/posts/javascript/og_wx.png?raw=true)
 
 飞书：
+
 ![extensions](https://king-hcj.github.io/images/posts/javascript/og_fs.png?raw=true)
 
 ## 为什么需要使用 OG 协议？
@@ -48,6 +50,8 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;如果您没有开放谱图协议标签会怎样？也许对于网站内容来说不会有什么影响，但你的内容将很难从互联网上大量其他内容中脱颖而出。
 
+&emsp;&emsp;如果网页采用OG协议，分享结果会结构化展示，这样站点在被链接分享时会有更丰富内容的展现，同时站点的转化率将会提升。
+
 ![吸引眼球的OG协议](https://king-hcj.github.io/images/posts/javascript/og_em.png?raw=true)
 
 ## 如何给网站添加 OG 协议
@@ -60,6 +64,8 @@ keywords: JS, 前端, JavaScript
 - `og:type`- 对象的类型，例如“video.movi​​e”。根据您指定的类型，可能还需要其他属性。
 - `og:image` - 一个图片 URL。
 - `og:url` - 指定您想要共享的 URL/当前页面的 URL（可以是缩短的 URL），例如，“https://www.imdb.com/title/tt0117500/”。
+
+&emsp;&emsp;各标签控制区域如下图所示：
 
 ![OG](https://king-hcj.github.io/images/posts/javascript/og_base.png?raw=true)
 
@@ -88,12 +94,6 @@ keywords: JS, 前端, JavaScript
 </html>
 ```
 
-### `og: type`
-
-&emsp;&emsp;开放图谱协议有一些它支持的网站“type”，包括网站、文章或视频等类型。
-
-&emsp;&emsp;设置开放图标签时，您需要了解哪种类型对您的网站更有意义。如果您的页面专注于单个视频，则使用“video”类型可能是有意义的。如果它是一个没有特定垂直行业的一般网站，您可能更适合使用“website”类型。
-
 ### 其他一些值得添加的开放图标签
 
 &emsp;&emsp;这里还有一些值得添加的内容：
@@ -109,13 +109,7 @@ keywords: JS, 前端, JavaScript
 <meta property="“[NAME]”" content="“[VALUE]”" />
 ```
 
-### 开放图中的图像
-
-&emsp;&emsp;虽然添加您的图像`og:image`通常就足够了，但有时让您的图像正确显示可能具有挑战性。如果您似乎遇到了麻烦，开放图标准包括一些图像标签，例如`og:image:url`vs`og:image:secure_url`以及`og:image:width`和`og:image:height`。
-
-&emsp;&emsp;尽量确保您遵循[开放图形文档](https://ogp.me/#structured){:target='\_blank'}中的所有注释和示例。此外，一些社交网络有图像要求。例如，[Twitter 要求](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image){:target='\_blank'}比例为 2:1，最小尺寸为 300x157，最大尺寸为 4096x4096，小于 5MB，JPG、PNG、WEBP 或 GIF 格式。
-
-### 开发图标签
+### 开发图标签介绍
 
 &emsp;&emsp;只需几个步骤，即可完美预览 WhatsApp、Twitter、Facebook 和个人电脑和移动设备的书签图标。如果您喜欢阅读，请转到Open Graph (ogp.me) - 但请务必阅读此答案中的第 1 - 6 步，以获得最佳的 WhatsApp 预览。
 
@@ -160,12 +154,21 @@ keywords: JS, 前端, JavaScript
 
 ```html
 <meta property="og:image" content="//cdn.example.com/uploads/images/webpage_300x200.png">
+
+&emsp;&emsp;虽然添加您的图像`og:image`通常就足够了，但有时让您的图像正确显示可能具有挑战性。如果您似乎遇到了麻烦，开放图标准包括一些图像标签，例如`og:image:url`vs`og:image:secure_url`以及`og:image:width`和`og:image:height`。
+
+&emsp;&emsp;尽量确保您遵循[开放图形文档](https://ogp.me/#structured){:target='\_blank'}中的所有注释和示例。此外，一些社交网络有图像要求。例如，[Twitter 要求](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image){:target='\_blank'}比例为 2:1，最小尺寸为 300x157，最大尺寸为 4096x4096，小于 5MB，JPG、PNG、WEBP 或 GIF 格式。
 ```
 #### og:type
-&emsp;&emsp;为了在图形中表示您的对象，您需要指定其类型。以下是可用的全局类型列表：http : //ogp.me/#types。您还可以指定自己的类型。
+
+&emsp;&emsp;为了在图形中表示您的对象，您需要指定其类型。这里是可用的全局类型列表：http://ogp.me/#types。您还可以指定自己的类型。
+
 ```html
 <meta property="og:type" content="article" />
 ```
+
+&emsp;&emsp;设置开放图标签时，您需要了解哪种类型对您的网站更有意义。如果您的页面专注于单个视频，则使用“video”类型可能是有意义的。如果它是一个没有特定垂直行业的一般网站，您可能更适合使用“website”类型。
+
 #### og:locale
 
 &emsp;&emsp;资源的语言环境。如果您有其他语言翻译可用，您也可以使用 og:locale:alternate。如果不指定 og:locale，则默认为 en_US。
