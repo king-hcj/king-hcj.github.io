@@ -16,7 +16,7 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;简单来说，该协议就是用来标注页面的类型和描述页面的内容。其灵感来自 [Dublin Core](https://www.ruanyifeng.com/blog/2007/03/dublin_core.html){:target='\_blank'}、link-rel canonical、Microformats 和 RDFa，虽然有这些不同的技术和模式并且可以组合在一起，但**没有一种技术可以提供足够的信息来丰富地表示社交图中的任何网页**。Open Graph 协议建立在这些现有技术的基础上，以开发人员使用的简单性为关键目标，并为开发人员提供了一个实施方案，它为许多技术设计决策提供了信息。
 
-&emsp;&emsp;看了这么多，好像还是不理解什么是开发图谱协议？
+&emsp;&emsp;看了这么多，好像还是不理解什么是开放图谱协议？
 
 &emsp;&emsp;举个简单的例子，当我们分享一个链接（URL）给朋友时，在有的 App 上它只是一个链接，而在有的 APP 上，他却可以包含如下图所示的标题、图片、描述等信息：
 
@@ -94,7 +94,7 @@ keywords: JS, 前端, JavaScript
 </html>
 ```
 
-### 开发图标签介绍
+### 开放图标签介绍
 
 &emsp;&emsp;上面介绍了基本元数据标签，下面将进一步对一些属性进行说明。如果你想要获得更全面的信息，请转到 [Open Graph](https://ogp.me/){:target='\_blank'} (https://ogp.me/)进行阅读。
 
