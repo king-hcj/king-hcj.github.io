@@ -514,7 +514,11 @@ const nextValue = Math.min(currentValue + 1, 4);
 const preValue = Math.max(currentValue - 1, 0);
 ```
 
-- 在 flex 布局中，有时候会遇到，在缩小容器时，最左边的元素被挤压/ 压扁了，这时只需要给它添加一个 css 样式：`flex-shrink:0;`；
+- 在 flex 布局中，有时候会遇到，在缩小容器时，最左边的元素被挤压/ 压扁了，这时只需要给它添加一个 css 样式：`flex-shrink:0;`；理论参考：[深入理解 flex 布局的 flex-grow、flex-shrink、flex-basis](https://zhuanlan.zhihu.com/p/39052660){:target='\_blank'}
+  > flex 有三个属性值，分别是 `flex-grow`， `flex-shrink`， `flex-basis`，默认值是 `0 1 auto`。[Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html){:target='\_blank'}
+  - `flex-basis`：用于设置子项的占用空间；如果没设置或者为 auto；
+  - `flex-grow`： 用来“瓜分”父项的“剩余空间”（拉伸）；未设置默认为 0；
+  - `flex-shrink`：用来“吸收”超出的空间（压缩）；未设置默认为 1；
 
 ### Exploration and Discovery
 
