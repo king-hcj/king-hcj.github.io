@@ -514,6 +514,8 @@ const nextValue = Math.min(currentValue + 1, 4);
 const preValue = Math.max(currentValue - 1, 0);
 ```
 
+- 在 flex 布局中，有时候会遇到，在缩小容器时，最左边的元素被挤压/ 压扁了，这时只需要给它添加一个 css 样式：`flex-shrink:0;`；
+
 ### Exploration and Discovery
 
 - [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
@@ -539,7 +541,7 @@ const preValue = Math.max(currentValue - 1, 0);
 
 #### React Hooks
 
-- [react-use](https://github.com/streamich/react-use){:target='_blank'} &#124; [译](https://github.com/zenghongtu/react-use-chinese){:target='_blank'} &#124; [中文文档](http://blog.zenghongtu.com/react-use-chinese/){:target='_blank'}
+- [react-use](https://github.com/streamich/react-use){:target='\_blank'} &#124; [译](https://github.com/zenghongtu/react-use-chinese){:target='\_blank'} &#124; [中文文档](http://blog.zenghongtu.com/react-use-chinese/){:target='\_blank'}
 
 <!-- 开发图谱协议
 前端图片
