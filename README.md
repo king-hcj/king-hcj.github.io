@@ -39,6 +39,7 @@
 - [从前端打字机效果的 N 种实现看 JS 定时器机制和前端动画](https://king-hcj.github.io/2021/01/10/js-typed/)
 - [可以遍历大部分数据类型的 for…of 为什么不能遍历普通对象？](https://king-hcj.github.io/2020/12/05/for-of/)
 - [JavaScript 很简单？那你理解的 forEach 真的对吗？](https://king-hcj.github.io/2020/10/03/you-dont-know-foreach/)
+- [前端应该知道的：开放图谱协议（The Open Graph protocol）](https://king-hcj.github.io/2021/10/25/The-Open-Graph-protocol/)
 - [前端自动化、工程化原理与实践(一)](https://king-hcj.github.io/2020/02/23/front-end-engineering/)
 - [CSS 知识点汇总](https://king-hcj.github.io/2020/02/16/css-skills/)
 - [趣谈 HTTPS 对称加密与非对称加密——如何在微信群里进行私密会话](https://king-hcj.github.io/2020/01/11/symmetric-asymmetric/)
