@@ -12,7 +12,7 @@ keywords: JS, 前端, JavaScript
 
 - [How To Create A Google Chrome Extension With React](https://medium.com/litslink/how-to-create-google-chrome-extension-using-react-js-5c9e343323ff){:target='\_blank'} &#124; [仓库](https://github.com/nemrosim/chrome-react-extension-example){:target='\_blank'}
 - [【干货】Chrome 插件(扩展)开发全攻略](http://blog.haoji.me/chrome-plugin-develop.html){:target='\_blank'} &#124; [博客园](https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html){:target='\_blank'}
-- [Console Importer](https://github.com/pd4d10/console-importer/blob/master/app/scripts.babel/importer.js){:target='\_blank'}
+- [Console Importer](https://github.com/pd4d10/console-importer/blob/master/src/importer.js){:target='\_blank'}
 - [Build a simple Google Chrome Extension in few minutes](https://medium.com/tech-tajawal/build-a-simple-google-chrome-extension-in-few-minutes-1f13b600e83e){:target='\_blank'}【含代码】 ｜ [中文](https://vimsky.com/article/4586.html){:target='\_blank'}
 - [用 Vue 开发自己的 Chrome 扩展程序](https://segmentfault.com/a/1190000019436268){:target='\_blank'} ｜ [英文](https://www.sitepoint.com/build-vue-chrome-extension/){:target='\_blank'}
 - [如何从零开始写一个 Chrome 扩展？](https://www.zhihu.com/question/20179805){:target='\_blank'}
