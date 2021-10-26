@@ -95,3 +95,5 @@ const cdnjs = async (name) => {
 ## 可以干什么
 
 ## 可以学到什么
+
+// 查各种包，查cdn资源
