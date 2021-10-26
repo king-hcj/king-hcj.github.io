@@ -8,23 +8,23 @@ keywords: JS, 前端, JavaScript
 
 > Open Graph 是一种互联网协议，最初由 Facebook 创建，用于标准化网页中元数据的使用，使得社交媒体得以以丰富的“图形”对象来表示共享的页面内容。
 
-&emsp;&emsp;看到这个标题，也许你会陷入疑惑，什么是开放图谱协议（The Open Graph protocol）？我为什么好像很少见到它？它到底有什么用呢？确实，对于很多前端开发来说，开放图谱协议（The Open Graph protocol）是一个比较陌生的概念。
+&emsp;&emsp;看到这个标题，也许你会陷入疑惑，什么是开放图谱协议（The Open Graph protocol）？我们为什么似乎很少见到它？它到底有什么用呢？确实，对于很多前端开发来说，开放图谱协议（The Open Graph protocol）是一个比较陌生的概念。
 
 ## 什么是 Open Graph Protocol（开放图谱协议）
 
-&emsp;&emsp;Open Graph Protocol（开放图谱协议），简称 OG 协议。它是 Facebook 在 2010 年 F8 开发者大会公布的一种网页元信息（Meta Information）标记协议，属于 Meta Tag （Meta 标签）的范畴，是一种为社交分享而生的 Meta 标签，**用于标准化网页中元数据的使用，使得社交媒体得以以丰富的“图形”对象来表示共享的页面内容**。它允许在 Facebook 上，其他网站能像 Facebook 内容一样具有丰富的“图形”对象，进而促进 Facebook 和其他网站之间的集成。
+&emsp;&emsp;Open Graph Protocol（开放图谱协议），简称 **OG 协议**。它是 Facebook 在 2010 年 F8 开发者大会公布的一种**网页元信息（Meta Information）标记协议**，属于 Meta Tag （Meta 标签）的范畴，是一种**为社交分享而生**的 Meta 标签，**用于标准化网页中元数据的使用，使得社交媒体得以以丰富的“图形”对象来表示共享的页面内容**。它允许在 Facebook 上，其他网站能像 Facebook 内容一样具有丰富的“图形”对象，进而促进 Facebook 和其他网站之间的集成。
 
 &emsp;&emsp;简单来说，该协议就是用来标注页面的类型和描述页面的内容。其灵感来自 [Dublin Core](https://www.ruanyifeng.com/blog/2007/03/dublin_core.html){:target='\_blank'}、link-rel canonical、Microformats 和 RDFa，虽然有这些不同的技术和模式并且可以组合在一起，但**没有一种技术可以提供足够的信息来丰富地表示社交图中的任何网页**。Open Graph 协议建立在这些现有技术的基础上，以开发人员使用的简单性为关键目标，并为开发人员提供了一个实施方案，它为许多技术设计决策提供了信息。
 
-&emsp;&emsp;看了这么多，好像还是不理解什么是开发图谱协议？
+&emsp;&emsp;看了这么多，好像还是不理解什么是开放图谱协议？
 
 &emsp;&emsp;举个简单的例子，当我们分享一个链接（URL）给朋友时，在有的 App 上它只是一个链接，而在有的 APP 上，他却可以包含如下图所示的标题、图片、描述等信息：
 
-![OG协议]](https://i.stack.imgur.com/ERx58.jpg)
+![OG协议](https://king-hcj.github.io/images/posts/javascript/og_exm.jpeg?raw=true)
 
 &emsp;&emsp;像飞书、WhatsApp、Twitter、Facebook 等社交软件，都会根据链接去抓取你给定 URL 的内容，以确定要包含哪些属性来进行共享展示。你可以通过在页面的头部代码中包含 `og:tags` 来显式定义属性；如果没有这些显示定义的信息，这些社交软件将在完成对给定 URL 的页面抓取后推断属性，然后使用这些属性信息组装共享框并进行展示。
 
-&emsp;&emsp;其实这一切也是依赖于具体 APP 的实现的，对于同一 URL，我们可以看看在飞书和微信上的不同形态：
+&emsp;&emsp;其实这一切也是依赖于具体 APP 的实现的（是否会根据URL去抓取内容），对于同一 URL，我们可以看看在飞书和微信上的不同形态：
 
 &emsp;&emsp;微信：
 
@@ -46,11 +46,11 @@ keywords: JS, 前端, JavaScript
 
 ![large-image-twitter-card](https://king-hcj.github.io/images/posts/javascript/large-image-twitter-card.jpeg?raw=true)
 
-&emsp;&emsp;互联网上的内容通常至少有一个目标——与他人分享。如果你只是将它发送给一个朋友，有没有开放图谱协议可能不一定重要。但是如果你想运营、分享或希望它在任何具有丰富预览功能的社交网络或应用程序上共享、传播时，你会希望该预览尽可能抓住别人的眼球。像下面这样丰富而有效的信息将有助于鼓励人们点击查看你的内容。
+&emsp;&emsp;互联网上的内容通常至少有一个目标——与他人分享。如果你只是将它发送给一个朋友，有没有开放图谱协议可能不重要。但是如果你想运营、分享或希望它在任何具有丰富预览功能的社交网络或应用程序上共享、传播时，你会希望该预览尽可能抓住别人的眼球。像下面这样丰富而有效的信息将有助于鼓励人们点击查看你的内容。
 
 ![吸引眼球的OG协议](https://king-hcj.github.io/images/posts/javascript/og_em.png?raw=true)
 
-&emsp;&emsp;如果你的内容没有开放谱图协议标签会怎样？也许对于网站内容来说不会有什么影响，但你的内容将很难从互联网上大量其他内容中脱颖而出。
+&emsp;&emsp;如果你的内容没有开放谱图协议标签会怎样？也许对于网站内容来说不会有什么影响，但**你的内容将很难从互联网上大量其他内容中脱颖而出**。
 
 &emsp;&emsp;如果网页采用 OG 协议，**分享结果会结构化展示**，这样站点在被链接分享时会有**更丰富的内容展现**，同时**站点的转化率将会提升**。
 
@@ -94,7 +94,7 @@ keywords: JS, 前端, JavaScript
 </html>
 ```
 
-### 开发图标签介绍
+### 开放图标签介绍
 
 &emsp;&emsp;上面介绍了基本元数据标签，下面将进一步对一些属性进行说明。如果你想要获得更全面的信息，请转到 [Open Graph](https://ogp.me/){:target='\_blank'} (https://ogp.me/)进行阅读。
 
@@ -147,7 +147,7 @@ keywords: JS, 前端, JavaScript
 
 #### og:image
 
-&emsp;&emsp;尺寸小于 300KB 且最小尺寸为 300 x 200 的图像（JPG 或 PNG）。此图像应通过具有有效非自签名证书的 HTTPS 连接提供。
+&emsp;&emsp;尺寸小于 300KB 且最小尺寸为 300 x 200 的图像（JPG 或 PNG）。此图像一般应通过具有有效**非自签名证书**的 HTTPS 链接提供。
 
 ```html
 <meta
@@ -158,13 +158,13 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;虽然使用`og:image`添加图像比较容易，但有时让你的图像正确显示可能具有挑战性。开放图谱协议包括一些图像标签，例如`og:image:url`vs`og:image:secure_url`以及`og:image:width`和`og:image:height`，可以对图像进行更细致的控制。
 
-&emsp;&emsp;尽量确保你遵循[开放图形文档](https://ogp.me/#structured){:target='\_blank'}中的所有注释和示例。此外，一些社交网络有图像要求。例如，[Twitter
+&emsp;&emsp;尽量确保你遵循[开放图形文档](https://ogp.me/#structured){:target='\_blank'}中的所有注释和示例。此外，一些社交网络可能会对图像有特殊要求。例如，[Twitter
 要求](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image){:target='\_blank'}比例为
 `2:1`，最小尺寸为 `300x157`，最大尺寸为 `4096x4096`，小于 `5MB`，JPG、PNG、WEBP 或 GIF 格式。
 
 #### og:video
 
-&emsp;&emsp;og:video 标签与 og:image 标签相同，用于补充“图形”对象的视频文件的 URL。
+&emsp;&emsp;`og:video` 标签与 `og:image` 标签相同，用于补充“图形”对象的视频文件的 URL。
 
 #### og:type
 
@@ -188,7 +188,7 @@ keywords: JS, 前端, JavaScript
 
 #### video/audio
 
-&emsp;&emsp;还可以共享音频/视频。例如，Facebook 和 Twitter 可以很好地共享视频。当然，WhatsApp 也有这个选项，比如当你分享 Instagram 或 Youtube 链接时，WhatsApp 预览版附带应用内视频播放器。
+&emsp;&emsp;还可以共享音频/视频。例如，Facebook 和 Twitter 可以很好地共享视频。当然，WhatsApp 也有这个选项，比如当你分享 Instagram 或 Youtube 链接时，WhatsApp 的预览会在应用内附带视频播放。
 
 #### products, persons, movies 等
 
@@ -198,9 +198,9 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;要获得对所有浏览器和设备的最佳图标支持，请阅读[此内容](https://stackoverflow.com/a/43154399/6086226)。
 
-### Twitter 和其他使用开放图的社交媒体网络
+### Twitter 和其他使用开放图的社交媒体
 
-&emsp;&emsp;大多数社交网络都遵循开放图谱协议的基本元数据标签，当然，一些社交应用也会包括自己的扩展，以帮助自定义其生态系统中的一些外观展示。
+&emsp;&emsp;大多数社交网络都遵循开放图谱协议的基本元数据标签，当然，一些社交应用也会包括自己的扩展，以帮助**自定义**其生态系统中的一些外观展示。
 
 &emsp;&emsp;例如，Twitter 允许你指定`twitter:card`，这是你在展示你的网站时可以使用的“卡片”类型。他们的卡类型包括：
 
@@ -234,7 +234,7 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;虽然以上介绍涵盖了一个网站中可能包含的大部分标签，但还有一些标签可能会帮助你和你的企业在整个社交网络中更多的被吸引和发现。如果你有兴趣**深入研究**，[The Open Graph protocol](https://ogp.me/){:target='\_blank'}官方文档将是一个很好的使用指南。
 
-&emsp;&emsp;如果你只是在寻找**入门示例**，那么在为博客文章设置标签时，你可以采用类似下面的结果：
+&emsp;&emsp;如果你只是在寻找**入门示例**，例如为博客文章添加设置标签，你可以采用类似下面的结果：
 
 ```html
 <meta property="og:site_name" content="Colby Fayock" />
