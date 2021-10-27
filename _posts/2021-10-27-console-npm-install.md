@@ -6,6 +6,8 @@ description: 在浏览器控制台安装npm包是什么体验？
 keywords: JS, 前端, JavaScript
 ---
 
+> 大音希声，大象无形，大智若愚，大巧若拙，越是“复杂”的东西，其原理越趋向“简单”，**大道至简，繁在人心**。
+
 &emsp;&emsp;我们都知道，npm 是 JavaScript 世界的包管理工具,并且是 Node.js 平台的默认包管理工具。通过 npm 可以安装、共享、分发代码,管理项目依赖关系。虽然作为命令行工具的 npm 近年来逐渐式微，但是作为广泛使用的存储库的 npm，却依然如日中天，还是世界上最大的软件注册表。
 
 &emsp;&emsp;通常，我们通过`npm install xxx`在 React、Vue、Angular 等现代前端项目中安装依赖，但是前端项目在本质上还是运行在浏览器端的 HTML、JavaScript 和 CSS，那么，我们有办法**在浏览器控制台直接安装 npm 包并使用**吗？
