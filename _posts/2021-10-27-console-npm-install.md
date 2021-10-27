@@ -12,7 +12,7 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;通常，我们通过`npm install xxx`在 React、Vue、Angular 等现代前端项目中安装依赖，但是前端项目在本质上还是运行在浏览器端的 HTML、JavaScript 和 CSS，那么，我们有办法**在浏览器控制台直接安装 npm 包并使用**吗？
 
-&emsp;&emsp;如果你对这个问题感兴趣，不妨跟着我通过本文一探究竟。
+&emsp;&emsp;如果你对这个问题感兴趣，不妨跟着我通过本文一探究竟，也许最终你会发现：**越是“复杂”的东西，其原理越趋向“简单”**。
 
 ## 通过 `<script />` 引入 cdn 资源
 
@@ -207,6 +207,10 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 &emsp;&emsp;[cdnjs](https://cdnjs.com/){:target='_blank'} 是一种免费的开源 CDN 服务，受到超过 12.5% 的网站的信任，每月处理超过 2000 亿次请求，由 Cloudflare 提供支持。它类似 Google CDN 和微软CDN服务，但是速度比这二者更加快。CDNJS 上提供了众多 JavaScript 库，你可以直接在网页上引用这些 JS 文件，实现用户浏览网站的最佳速度体验。
 
 &emsp;&emsp;你还可以通过它的查询API`https://api.cdnjs.com/libraries?search=xxx`进行**特定库的cdn地址的查找**，这个API还会给你**返回一些你所查询的库的替代品**。
+
+### 大道至简，繁在人心
+
+&emsp;&emsp;越是“复杂”的东西，其原理也许越是趋向“简单”，**大道至简，繁在人心**，祝每一个努力攀登者，终能豁然开朗，释然于心。
 
 ## 参考资料
 
