@@ -26,18 +26,17 @@ const injectScript = (url) => {
   const script = document.createElement('script');
   script.src = url;
   document.body.appendChild(script);
-  // document.body.removeChild(script);
 };
 ```
 
 &emsp;&emsp;我们还得在资源引入后以及出现错误时，给用户一些提示：
 
 ```js
-script.onload = (name) => {
-  console.log(name, ' 安装成功。');
+script.onload = () => {
+    console.log(pkg_name_origin, ' 安装成功。');
 };
-script.onerror = (name) => {
-  console.log(name, ' 安装失败。');
+script.onerror = () => {
+  console.log(pkg_name_origin, ' 安装失败。');
 };
 ```
 
@@ -68,9 +67,10 @@ const cdnjs = async (name) => {
     return;
   }
 
-  // 取结果中最新的一条
+  // 取结果中最相关的一条
   const { name: exactName, latest: url } = results[0];
   if (name !== exactName) {
+    // 如果名称和你传进来的不一样
     console.log(name, ' not found, import ', exactName, ' instead.');
   }
   // 通过<script />标签插入
