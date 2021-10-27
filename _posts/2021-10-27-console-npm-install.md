@@ -18,7 +18,7 @@ keywords: JS, 前端, JavaScript
 
 ## 通过 `<script />` 引入 cdn 资源
 
-&emsp;&emsp;在浏览器控制台安装 npm 包，看起来是个天马行空的问题，让人觉得不太切实际。如果我换一个方式进行提问：如何在浏览器/HTML 中引入 JavaScript 呢？也许你马上就有了答案：`<script />`。没错，我们的第一步就是通过 `<script />`标签在 HTML 页面上引入 cdn 资源。
+&emsp;&emsp;在浏览器控制台安装 npm 包，看起来是个天马行空的问题，让人觉得不太切实际。如果我换一个方式进行提问：如何在浏览器/HTML 中引入 JavaScript 呢？也许你马上就有了答案：`<script />`标签。没错，我们的第一步就是通过 `<script />`标签在 HTML 页面上引入 cdn 资源。
 
 &emsp;&emsp;那么，又该如果在控制台在页面上插入`<script />`标签来引入 CDN 资源呢？**这个问题可难不倒你**：
 
