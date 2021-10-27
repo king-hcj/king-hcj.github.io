@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一看就懂：在浏览器控制台安装npm包是什么操作？
+title: 大道至简，繁在人心：在浏览器控制台安装npm包是什么操作？
 categories: JavaScript
 description: 在浏览器控制台安装npm包是什么体验？
 keywords: JS, 前端, JavaScript
