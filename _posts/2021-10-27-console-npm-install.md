@@ -16,7 +16,7 @@ keywords: JS, 前端, JavaScript
 
 ## 通过 `<script />` 引入 cdn 资源
 
-&emsp;&emsp;在浏览器控制台安装 npm 包，看起来是个天马行空的问题，让人觉得不太切实际。如果我换一个方式进行提问：如何在浏览器/HTML 中引入 JavaScript 呢？也许你马上就有了答案：`<script />`标签。没错，我们的第一步就是通过 `<script />`标签在 HTML 页面上引入 cdn 资源。
+&emsp;&emsp;在浏览器控制台安装 npm 包，**看起来是个天马行空的想法**，让人觉得不太切实际。如果我换一个方式进行提问：如何在浏览器/HTML 中引入 JavaScript 呢？也许你马上就有了答案：`<script />`标签。没错，我们的第一步就是通过 `<script />`标签在 HTML 页面上引入 cdn 资源。
 
 &emsp;&emsp;那么，又该如果在控制台在页面上插入`<script />`标签来引入 CDN 资源呢？**这个问题可难不倒你**：
 
@@ -40,7 +40,7 @@ script.onerror = () => {
 };
 ```
 
-&emsp;&emsp;这么以来，我们就可以直接在控制台引入 cdn 资源了，你可以在额外补充一些善后工作的处理逻辑。当然，你也完全**可以通过创建`<link />`标签来引入css样式库**，这里不过多赘述。
+&emsp;&emsp;这么以来，我们就可以直接在控制台引入 cdn 资源了，你可以再额外补充一些善后工作的处理逻辑，比如把`<script />`标签移除。当然，你也完全**可以通过创建`<link />`标签来引入css样式库**，这里不过多赘述。
 
 ## 根据包名安装 npm 包
 
@@ -156,11 +156,11 @@ const cdnjs = async (name) => {
 };
 ```
 
-&emsp;&emsp;我们可以通过类似`npmInstall('moment')`的方式在控制台进行调用：
+&emsp;&emsp;我们可以使用类似`npmInstall('moment')`的方式在控制台进行调用：
 
 ![console](https://king-hcj.github.io/images/posts/javascript/consoleSuc.png?raw=true)
 
-&emsp;&emsp;下面的调用方式自然也是支持的：
+&emsp;&emsp;下面这些调用方式自然也是支持的：
 
 ```js
 npmInstall('jquery'); // 直接引入
@@ -200,7 +200,7 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 
 ### unpkg
 
-&emsp;&emsp;unpkg 是一个内容源自 npm 的前端常用全球快速 CDN，它能以快速、简洁、优雅的方式提供任意包、任意文件的访问，在流行的类库、框架文档中常常能看到它的身影。使用方式一般是`unpkg.com/:package@:version/:file`。或者更简洁一点：`https://unpkg.com/`➕`包名`，包名包含版本号时，你将获得对应版本的js文件，不包含版本号时，你将获得这个库的最新版js文件。
+&emsp;&emsp;[unpkg](https://unpkg.com/){:target='\_blank'} 是一个内容源自 npm 的前端常用全球快速 CDN，它能以快速、简洁、优雅的方式提供任意包、任意文件的访问，在流行的类库、框架文档中常常能看到它的身影。使用方式一般是`unpkg.com/:package@:version/:file`。或者更简洁一点：`https://unpkg.com/`➕`包名`，包名包含版本号时，你将获得对应版本的js文件，不包含版本号时，你将获得这个库的最新版js文件。
 
 ### cdnjs
 
@@ -215,3 +215,5 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 ## 参考资料
 
 - [Console Importer](https://github.com/pd4d10/console-importer){:target='\_blank'}
+
+&emsp;&emsp;本文首发于[个人博客](https://king-hcj.github.io/2021/10/27/console-npm-install/))，欢迎[指正和star](https://github.com/king-hcj/king-hcj.github.io)。
