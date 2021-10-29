@@ -33,14 +33,14 @@ const injectScript = (url) => {
 
 ```js
 script.onload = () => {
-    console.log(pkg_name_origin, ' 安装成功。');
+  console.log(pkg_name_origin, ' 安装成功。');
 };
 script.onerror = () => {
   console.log(pkg_name_origin, ' 安装失败。');
 };
 ```
 
-&emsp;&emsp;这么以来，我们就可以直接在控制台引入 cdn 资源了，你可以再额外补充一些善后工作的处理逻辑，比如把`<script />`标签移除。当然，你也完全**可以通过创建`<link />`标签来引入css样式库**，这里不过多赘述。
+&emsp;&emsp;这么以来，我们就可以直接在控制台引入 cdn 资源了，你可以再额外补充一些善后工作的处理逻辑，比如把`<script />`标签移除。当然，你也完全**可以通过创建`<link />`标签来引入 css 样式库**，这里不过多赘述。
 
 ## 根据包名安装 npm 包
 
@@ -170,7 +170,7 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 
 ## 不每次都写这些函数行不行
 
-&emsp;&emsp;看了上面的操作，确实很简单，但是也许你会说：每次要使用时，我都得在控制台定义和调用函数，有些麻烦，**不每次都写这些函数行不行**？那自然是行的啦，你完全可以自己写一个**浏览器插件**，将这些JS代码注入页面，详情可参考[7分钟学会写一个浏览器插件——突破某SDN未登录禁止复制的限制](https://king-hcj.github.io/2021/10/17/browser-extension/){:target='_blank'}。
+&emsp;&emsp;看了上面的操作，确实很简单，但是也许你会说：每次要使用时，我都得在控制台定义和调用函数，有些麻烦，**不每次都写这些函数行不行**？那自然是行的啦，你完全可以自己写一个**浏览器插件**，将这些 JS 代码注入页面，详情可参考[7 分钟学会写一个浏览器插件——突破某 SDN 未登录禁止复制的限制](https://king-hcj.github.io/2021/10/17/browser-extension/){:target='\_blank'}。
 
 &emsp;&emsp;如果你实在不想写，其实有人已经为你写好了，那便是`Console Importer`，它可以**让你的浏览器控制台成为更强大的实验场**。
 
@@ -190,7 +190,7 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 
 &emsp;&emsp;平时开发中，我们经常会**想要在项目里尝试一些操作或者验证一些库的方法、打印结果**，通过本文的学习，以后你完全可以直接在控制台引入`loadsh、moment、jQuery、React` 等来进行使用和验证，减少在项目中进行`console.log`验证后再删除的频次。
 
-- 你可以通过引入`jQuery`方便的进行一些项目、页面中的DOM操作；
+- 你可以通过引入`jQuery`方便的进行一些项目、页面中的 DOM 操作；
 - 你可以通过引入`axios`进行一些简单的接口请求；
 - 你可以通过引入`moment.js`来验证一些时间格式化方法的使用；
 - 你可以通过引入`loadsh`并调用它的方法完成一些便捷的计算；
@@ -200,13 +200,13 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 
 ### unpkg
 
-&emsp;&emsp;[unpkg](https://unpkg.com/){:target='\_blank'} 是一个内容源自 npm 的前端常用全球快速 CDN，它能以快速、简洁、优雅的方式提供任意包、任意文件的访问，在流行的类库、框架文档中常常能看到它的身影。使用方式一般是`unpkg.com/:package@:version/:file`。或者更简洁一点：`https://unpkg.com/`➕`包名`，包名包含版本号时，你将获得对应版本的js文件，不包含版本号时，你将获得这个库的最新版js文件。
+&emsp;&emsp;[unpkg](https://unpkg.com/){:target='\_blank'} 是一个内容源自 npm 的前端常用全球快速 CDN，它能以快速、简洁、优雅的方式提供任意包、任意文件的访问，在流行的类库、框架文档中常常能看到它的身影。使用方式一般是`unpkg.com/:package@:version/:file`。或者更简洁一点：`https://unpkg.com/`➕`包名`，包名包含版本号时，你将获得对应版本的 js 文件，不包含版本号时，你将获得这个库的最新版 js 文件。
 
 ### cdnjs
 
-&emsp;&emsp;[cdnjs](https://cdnjs.com/){:target='_blank'} 是一种免费的开源 CDN 服务，受到超过 12.5% 的网站的信任，每月处理超过 2000 亿次请求，由 Cloudflare 提供支持。它类似 Google CDN 和微软CDN服务，但是速度比这二者更加快。CDNJS 上提供了众多 JavaScript 库，你可以直接在网页上引用这些 JS 文件，实现用户浏览网站的最佳速度体验。
+&emsp;&emsp;[cdnjs](https://cdnjs.com/){:target='\_blank'} 是一种免费的开源 CDN 服务，受到超过 12.5% 的网站的信任，每月处理超过 2000 亿次请求，由 Cloudflare 提供支持。它类似 Google CDN 和微软 CDN 服务，但是速度比这二者更加快。CDNJS 上提供了众多 JavaScript 库，你可以直接在网页上引用这些 JS 文件，实现用户浏览网站的最佳速度体验。
 
-&emsp;&emsp;你还可以通过它的查询API`https://api.cdnjs.com/libraries?search=xxx`进行**特定库的cdn地址的查找**，这个API还会给你**返回一些你所查询的库的替代品**。
+&emsp;&emsp;你还可以通过它的查询 API`https://api.cdnjs.com/libraries?search=xxx`进行**特定库的 cdn 地址的查找**，这个 API 还会给你**返回一些你所查询的库的替代品**。
 
 ### 大道至简，繁在人心
 
@@ -215,5 +215,3 @@ npmInstall('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 ## 参考资料
 
 - [Console Importer](https://github.com/pd4d10/console-importer){:target='\_blank'}
-
-&emsp;&emsp;本文首发于[个人博客](https://king-hcj.github.io/2021/10/27/console-npm-install/))，欢迎[指正和star](https://github.com/king-hcj/king-hcj.github.io)。
