@@ -137,7 +137,7 @@ Concurrent Mode 的目的是实现一套可中断/恢复的更新机制。其由
 ### 浏览器一帧都会干些什么？
 
 &emsp;&emsp;我们都知道，页面的内容都是一帧一帧绘制出来的，浏览器刷新率代表浏览器一秒绘制多少帧。原则上说 1s 内绘制的帧数也多，画面表现就也细腻。目前浏览器大多是 60Hz（60 帧/s），每一帧耗时也就是在 16.6ms 左右。那么在这一帧的（16.6ms） 过程中浏览器又干了些什么呢？
-![浏览器一帧都会干些什么](https://www.zoo.team/images/upload/upload_fa4bed183d5043a2f350fde149d2a9d2.png)
+![浏览器一帧都会干些什么](https://king-hcj.github.io/images/posts/javascript/life_of_frame.png?raw=true)
 
 通过上面这张图可以清楚的知道，浏览器一帧会经过下面这几个过程：
 
@@ -237,21 +237,21 @@ function unImportWork(deadline) {
 </div>
 ```
 
-![多向链表](https://www.zoo.team/images/upload/upload_01f79abb306a7f1a9291bcf78d14297b.jpg)
+![多向链表](https://king-hcj.github.io/images/posts/javascript/linked_list1.jpeg?raw=true)
 
 - 副作用单链表；
 
-![副作用单链表](https://www.zoo.team/images/upload/upload_7fa2aa387b906771c58c120dba52d295.jpg)
+![副作用单链表](https://king-hcj.github.io/images/posts/javascript/linked_list2.jpeg?raw=true)
 
 -  状态更新单链表；
 
-![状态更新单链表](https://www.zoo.team/images/upload/upload_a154f8d85a6764de892ad2fc25d55756.jpg)
+![状态更新单链表](https://king-hcj.github.io/images/posts/javascript/linked_list3.jpeg?raw=true)
 
 - ...
 
 &emsp;&emsp;链表是一种简单高效的数据结构，它在当前节点中保存着指向下一个节点的指针；遍历的时候，通过操作指针找到下一个元素。
 
-![链表](https://www.zoo.team/images/upload/upload_03f29c3bedd7df6bb616f2c7142fe492.png)
+![链表](https://king-hcj.github.io/images/posts/javascript/linked_list5.png?raw=true)
 
 链表相比顺序结构数据格式的**好处**就是：
 
@@ -358,7 +358,7 @@ function fib(n) {
 
 &emsp;&emsp;其实并不是每次更新都会走到提交阶段。当在调和过程中触发了新的更新，在执行下一个任务的时候，判断**是否有优先级更高的执行任务**，如果有就终止原来将要执行的任务，开始新的 workInProgressFiber 树构建过程，开始新的更新流程。这样可以避免重复更新操作。这也是**在 React 16 以后生命周期函数 componentWillMount 有可能会执行多次**的原因。
 
-![workInProgress tree 构建](https://www.zoo.team/images/upload/upload_777fdfe8d50d7a355115c2c2117d7c93.png)
+![workInProgress tree 构建](https://king-hcj.github.io/images/posts/javascript/workIn_progress_tree.png?raw=true)
 
 ### 任务具备优先级
 
@@ -382,7 +382,7 @@ function fib(n) {
 </div>
 ```
 
-![副作用链](https://www.zoo.team/images/upload/upload_42558caf76119a7ca2b465b43ba8d12b.png)
+![副作用链](https://king-hcj.github.io/images/posts/javascript/linked_list4.png?raw=true)
 
 ### 直观展示
 
@@ -489,7 +489,7 @@ function performUnitWork(currentFiber) {
 
 &emsp;&emsp;目前 isInputPending API 仅在 Chromium 的 87 版本开始提供，其他浏览器并未实现。
 
-![isInputPending](https://engineering.fb.com/wp-content/uploads/2019/04/isinputpendinghero.jpg)
+![isInputPending](https://king-hcj.github.io/images/posts/javascript/isinputpendinghero.jpeg?raw=true)
 
 > 资料参考：[Facebook 将对 React 的优化实现到了浏览器！](https://mp.weixin.qq.com/s/Lbcu1aa2LQZlddAwIIExqA){:target='\_blank'} &#124; [Faster input events with Facebook’s first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/){:target='\_blank'}
 
