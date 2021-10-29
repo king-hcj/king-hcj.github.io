@@ -543,6 +543,8 @@ BraveWang
   .reduce((pre, next) => {
     return { ...pre, [next]: pre[next] ? pre[next] + 1 : 1 };
   }, {});
+// 按照频率倒序
+Object.entries(name2Obj).sort((a, b) => b[1] - a[1]);
 // 筛选出现大于1次的
 Object.entries(name2Obj).filter((item) => item[1] > 1);
 ```
