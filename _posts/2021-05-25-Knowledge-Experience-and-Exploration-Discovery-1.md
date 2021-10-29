@@ -549,6 +549,8 @@ Object.entries(name2Obj).sort((a, b) => b[1] - a[1]);
 Object.entries(name2Obj).filter((item) => item[1] > 1);
 ```
 
+- [控制台解析 preview 和 response 数据不一致怎么解决](https://segmentfault.com/q/1010000008360312){:target='\_blank'}
+
 ### Exploration and Discovery
 
 - [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
