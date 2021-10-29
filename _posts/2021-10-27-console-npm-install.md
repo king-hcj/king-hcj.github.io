@@ -146,7 +146,7 @@ const cdnjs = async (name) => {
     return;
   }
 
-  // 取结果中最新的一条
+  // 取结果中最相关的一条
   const { name: exactName, latest: url } = results[0];
   if (name !== exactName) {
     console.log(name, ' not found, import ', exactName, ' instead.');
