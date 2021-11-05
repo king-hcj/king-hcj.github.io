@@ -74,6 +74,14 @@
   url: http://www.ayqy.net/blog/
   src: www
 
+- name: css-tricks
+  url: https://css-tricks.com/
+  src: www
+
+- name: 30 seconds of code
+  url: https://www.30secondsofcode.org/
+  src: www
+
 - name: SpeedCoder
   url: http://www.speedcoder.net
   src: life
