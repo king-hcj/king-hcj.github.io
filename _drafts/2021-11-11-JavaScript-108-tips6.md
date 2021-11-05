@@ -23,6 +23,14 @@ keywords: JS, 前端, JavaScript
 
 - [用 React + Redux + NodeJS 开发一个在线聊天室](https://blog.csdn.net/u012422829/article/details/52674667){:target='\_blank'}
 
+## 10 个可视化 CSS 工具， 快速生成 CSS 片段，渣男，又想抛弃我！！
+
+- [10 个可视化 CSS 工具， 快速生成 CSS 片段，渣男，又想抛弃我！！](https://segmentfault.com/a/1190000040875123){:target='\_blank'}
+
+## 推荐几个面向 Web 开发者的杀手级网站
+
+- [推荐几个面向 Web 开发者的杀手级网站](https://mp.weixin.qq.com/s/RWY8zI9Ce8ATVcuBIw9HcA){:target='\_blank'} ｜ [原文](https://javascript.plainenglish.io/17-killer-websites-for-web-developers-13e1e30345b8){:target='\_blank'}
+
 ## 识见中的部分内容
 
 <!-- 如Mac 设置环境变量、程序猿字体、git、端口占用 -->
