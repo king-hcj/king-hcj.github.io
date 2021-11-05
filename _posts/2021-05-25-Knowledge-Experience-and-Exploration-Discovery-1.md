@@ -577,8 +577,3 @@ Object.entries(name2Obj).filter((item) => item[1] > 1);
 #### React Hooks
 
 - [react-use](https://github.com/streamich/react-use){:target='\_blank'} &#124; [译](https://github.com/zenghongtu/react-use-chinese){:target='\_blank'} &#124; [中文文档](http://blog.zenghongtu.com/react-use-chinese/){:target='\_blank'}
-
-<!-- 开发图谱协议
-前端图片
-浏览器插件
-delete -->
