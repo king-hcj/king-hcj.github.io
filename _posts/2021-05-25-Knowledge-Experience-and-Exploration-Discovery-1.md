@@ -595,6 +595,13 @@ Object.entries(name2Obj).filter((item) => item[1] > 1);
 
 - [react-use](https://github.com/streamich/react-use){:target='\_blank'} &#124; [译](https://github.com/zenghongtu/react-use-chinese){:target='\_blank'} &#124; [中文文档](http://blog.zenghongtu.com/react-use-chinese/){:target='\_blank'}
 
+#### CSS 开发者大会
+
+- [CSS 开发者大会](https://www.yuque.com/cssconf){:target='\_blank'}
+- [COUNTERS](https://www.w3cplus.com/blog/tags/435.html){:target='\_blank'}
+- [w3cplus](https://www.w3cplus.com/){:target='\_blank'}
+- [Houdini：CSS 领域最令人振奋的革新](https://zhuanlan.zhihu.com/p/20939640){:target='\_blank'}
+
 <!-- 开发图谱协议
 前端图片
 浏览器插件
