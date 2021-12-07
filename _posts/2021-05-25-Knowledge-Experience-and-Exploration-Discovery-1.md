@@ -566,7 +566,20 @@ Object.entries(name2Obj).filter((item) => item[1] > 1);
 ```
 
 - [CSV vs Excel (.xls) – What is the Difference? CSV 与 Excel (.xls) – 有什么区别？](https://www.guru99.com/excel-vs-csv.html){:target='\_blank'}
+
   - [EasyExcel](https://alibaba-easyexcel.github.io/index.html){:target='\_blank'}：EasyExcel 是一个基于 Java 的简单、省内存的读写 Excel 的开源项目。在尽可能节约内存的情况下支持读写百 M 的 Excel。
+
+- fetch API 获取返回值的方式：
+
+```js
+const count = 3;
+const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
+fetch(fakeDataUrl)
+  .then((res) => res.json())
+  .then((res) => console.log(res));
+```
+
+- Mac 上录制视频快捷键：command ➕ shift ➕ 5；
 
 ### Exploration and Discovery
 
