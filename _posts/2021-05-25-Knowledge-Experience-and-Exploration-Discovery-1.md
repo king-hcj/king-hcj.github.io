@@ -581,6 +581,77 @@ fetch(fakeDataUrl)
 
 - Mac 上录制视频快捷键：command ➕ shift ➕ 5；
 
+- 表格吸顶的实现：
+
+```tsx
+// 实现一
+<Table
+  sticky
+  className={styles.table}
+  columns={columns}
+  dataSource={data}
+  pagination={{
+    total,
+    showSizeChanger: true,
+    position: ['bottomCenter'],
+  }}
+/>
+// 实现二
+<>
+  <Table
+    sticky
+    columns={columns as any}
+    dataSource={dataSource}
+    pagination={false}
+    loading={loading}
+    onChange={pageChange}
+    scroll={{ x: getTableTotalWidth(columns) }}
+  />
+  <footer className={styles.tableFooter}>
+    <Pagination
+      showSizeChanger
+      showQuickJumper
+      current={current}
+      pageSize={pageSize}
+      total={total}
+      onChange={(current, size) => {
+        setPageSize(size as number);
+        setCurrent(pageSize === size ? current : 1);
+      }}
+    />
+  </footer>
+</>
+```
+
+```scss
+// 实现一
+.table {
+  :global {
+    .ant-pagination {
+      position: sticky;
+      bottom: 0;
+      padding: 16px;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      border-radius: 5px;
+    }
+  }
+}
+// 实现二
+.tableFooter {
+  position: sticky;
+  bottom: 0;
+  padding: 16px;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  border-radius: 5px;
+}
+```
+
 ### Exploration and Discovery
 
 - [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
@@ -615,7 +686,6 @@ fetch(fakeDataUrl)
 - [w3cplus](https://www.w3cplus.com/){:target='\_blank'}
 - [Houdini：CSS 领域最令人振奋的革新](https://zhuanlan.zhihu.com/p/20939640){:target='\_blank'}
 
-<!-- 开发图谱协议
+<!--
 前端图片
-浏览器插件
 delete -->
