@@ -41,6 +41,15 @@ keywords: JS, 前端, JavaScript
 
 - [第一张图片啥样?互联网史上 14 个著名的第一次](https://it.sohu.com/20130423/n373695453.shtml){:target='\_blank'}
 
+## 粒子动画
+
+- [Particles Animation: 20 Solutions from Codepen](https://www.jotform.com/blog/particles-animation-codepen-97659/){:target='\_blank'}
+
+## V8
+
+- [《Chrome V8 源码》](https://www.anquanke.com/member.html?memberId=161290){:target='\_blank'}
+- [初探 V8 JavaScript 引擎](https://github.com/bluezhan/v8){:target='\_blank'}
+
 ## 如何通过动图学习 JS
 
 可多篇
