@@ -19,6 +19,10 @@ keywords: JS, 前端, JavaScript
 
 建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
 
+## 计划
+
+- 建立自己的网站，进行博客迁移，可接广告；
+
 ## 做一个在线聊天室
 
 - [用 React + Redux + NodeJS 开发一个在线聊天室](https://blog.csdn.net/u012422829/article/details/52674667){:target='\_blank'}
@@ -40,6 +44,15 @@ keywords: JS, 前端, JavaScript
 ## 互联网史上 14 个著名的第一次
 
 - [第一张图片啥样?互联网史上 14 个著名的第一次](https://it.sohu.com/20130423/n373695453.shtml){:target='\_blank'}
+
+## 粒子动画
+
+- [Particles Animation: 20 Solutions from Codepen](https://www.jotform.com/blog/particles-animation-codepen-97659/){:target='\_blank'}
+
+## V8
+
+- [《Chrome V8 源码》](https://www.anquanke.com/member.html?memberId=161290){:target='\_blank'}
+- [初探 V8 JavaScript 引擎](https://github.com/bluezhan/v8){:target='\_blank'}
 
 ## 如何通过动图学习 JS
 

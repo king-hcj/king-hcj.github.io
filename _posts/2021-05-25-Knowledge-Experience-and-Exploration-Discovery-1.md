@@ -566,7 +566,91 @@ Object.entries(name2Obj).filter((item) => item[1] > 1);
 ```
 
 - [CSV vs Excel (.xls) – What is the Difference? CSV 与 Excel (.xls) – 有什么区别？](https://www.guru99.com/excel-vs-csv.html){:target='\_blank'}
+
   - [EasyExcel](https://alibaba-easyexcel.github.io/index.html){:target='\_blank'}：EasyExcel 是一个基于 Java 的简单、省内存的读写 Excel 的开源项目。在尽可能节约内存的情况下支持读写百 M 的 Excel。
+
+- fetch API 获取返回值的方式：
+
+```js
+const count = 3;
+const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
+fetch(fakeDataUrl)
+  .then((res) => res.json())
+  .then((res) => console.log(res));
+```
+
+- Mac 上录制视频快捷键：command ➕ shift ➕ 5；
+
+- 表格吸顶的实现：
+
+```tsx
+// 实现一
+<Table
+  sticky
+  className={styles.table}
+  columns={columns}
+  dataSource={data}
+  pagination={{
+    total,
+    showSizeChanger: true,
+    position: ['bottomCenter'],
+  }}
+/>
+// 实现二
+<>
+  <Table
+    sticky
+    columns={columns as any}
+    dataSource={dataSource}
+    pagination={false}
+    loading={loading}
+    onChange={pageChange}
+    scroll={{ x: getTableTotalWidth(columns) }}
+  />
+  <footer className={styles.tableFooter}>
+    <Pagination
+      showSizeChanger
+      showQuickJumper
+      current={current}
+      pageSize={pageSize}
+      total={total}
+      onChange={(current, size) => {
+        setPageSize(size as number);
+        setCurrent(pageSize === size ? current : 1);
+      }}
+    />
+  </footer>
+</>
+```
+
+```scss
+// 实现一
+.table {
+  :global {
+    .ant-pagination {
+      position: sticky;
+      bottom: 0;
+      padding: 16px;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      border-radius: 5px;
+    }
+  }
+}
+// 实现二
+.tableFooter {
+  position: sticky;
+  bottom: 0;
+  padding: 16px;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  border-radius: 5px;
+}
+```
 
 ### Exploration and Discovery
 
@@ -602,7 +686,6 @@ Object.entries(name2Obj).filter((item) => item[1] > 1);
 - [w3cplus](https://www.w3cplus.com/){:target='\_blank'}
 - [Houdini：CSS 领域最令人振奋的革新](https://zhuanlan.zhihu.com/p/20939640){:target='\_blank'}
 
-<!-- 开发图谱协议
+<!--
 前端图片
-浏览器插件
 delete -->
