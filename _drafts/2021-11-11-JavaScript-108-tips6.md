@@ -19,6 +19,10 @@ keywords: JS, 前端, JavaScript
 
 建议有深度的内容，放在**前端中高级面试精华荟萃**系列里面讲，这里已轻松为主。
 
+## 计划
+
+- 建立自己的网站，进行博客迁移，可接广告；
+
 ## 做一个在线聊天室
 
 - [用 React + Redux + NodeJS 开发一个在线聊天室](https://blog.csdn.net/u012422829/article/details/52674667){:target='\_blank'}
