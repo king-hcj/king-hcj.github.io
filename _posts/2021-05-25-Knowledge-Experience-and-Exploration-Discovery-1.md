@@ -217,13 +217,13 @@ export const filterEmoji = (str: string): string => {
   - 释放进程：`kill 你的PID`
   - 再次执行第一步，是否无进程占用：`lsof -i: 端口号`
 
-- [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'} | [Token authentication requirements for Git operations](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/){:target='\_blank'}
+- [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'} &#124; [Token authentication requirements for Git operations](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/){:target='\_blank'}
 
-  > 在 GitHub 创建个人 Access Token：从你的 Github 帐户，转到 "Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fill up the form => 单击 Generate token => Copy the generated Token"，它将类似于 `ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta`【生成 Token 时记得进行选择 Token 的权限[Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){:target='\_blank'}，否则 push 的时候可能会 403】
+  > 在 GitHub 创建个人 Access Token：从你的 Github 帐户，转到 **Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fill up the form => 单击 Generate token => Copy the generated Token**，它将类似于 `ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta`【生成 Token 时记得进行选择 Token 的权限[Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){:target='\_blank'}，否则 push 的时候可能会 403】
 
-  > 对于 MAC 操作系统，单击菜单栏右侧的 Spotlight 图标（放大镜）。"键入 Keychain access 然后按 Enter 键启动应用程序【钥匙串访问】 => 在 Keychain Access 中，搜索 github.com=> 查找 Internet 密码条目 github.com=> 相应地编辑或删除该条目 => 大功告成"
+  > 对于 MAC 操作系统，单击菜单栏右侧的 Spotlight 图标（放大镜，或者 command + 空格）。**键入 Keychain access 然后按 Enter 键启动应用程序【钥匙串访问】 => 在 Keychain Access 中，搜索 github.com=> 查找 Internet 密码条目 github.com=> 相应地编辑或删除该条目 => 大功告成**
 
-  > 对于 Windows 操作系统，从控制面板转到 "Credential Manager => Windows Credentials=> 查找 git:https://github.com =>编辑=> 密码替换为你的 Github 个人 Access Taken => 完成"
+  > 对于 Windows 操作系统，从控制面板转到 **Credential Manager => Windows Credentials=> 查找 git:https://github.com =>编辑=> 密码替换为你的 Github 个人 Access Taken => 完成**
 
 - css 非阻塞的一种解决方案：当一个媒体查询的结果值计算出来是 false 的时候，浏览器仍然会下载样式表，但是不会在渲染页面之前等待样式表的资源可用。样式表一下载好，media 属性就必须被设置一个可用的值，以便样式规则能被应用到 html 文档中。onload 事件就可以用来将 media 属性切换到 all：
   - [加载 CSS 时不影响页面渲染](https://www.oschina.net/translate/loading-css-without-blocking-render){:target='\_blank'}
