@@ -217,7 +217,7 @@ export const filterEmoji = (str: string): string => {
   - 释放进程：`kill 你的PID`
   - 再次执行第一步，是否无进程占用：`lsof -i: 端口号`
 
-- [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'}
+- [Support for password authentication was removed. Please use a personal access token instead [duplicate]](https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to){:target='\_blank'} | [Token authentication requirements for Git operations](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/){:target='\_blank'}
 
   > 在 GitHub 创建个人 Access Token：从你的 Github 帐户，转到 "Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fill up the form => 单击 Generate token => Copy the generated Token"，它将类似于 `ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta`【生成 Token 时记得进行选择 Token 的权限[Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){:target='\_blank'}，否则 push 的时候可能会 403】
 
