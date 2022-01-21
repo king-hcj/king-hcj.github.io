@@ -22,7 +22,7 @@ keywords: JS, 前端, JavaScript
 ## 计划
 
 - 建立自己的网站，进行博客迁移，可接广告；
-- lv4，知乎，思否5k；
+- lv4，知乎，思否 5k；
 - 混沌学院，提升认知水平；
 - 深入可视化技术
 
@@ -817,6 +817,10 @@ input.oninput = ({ target }) => {
 [20 个你不得不知道的数组 reduce 高级用法](https://mp.weixin.qq.com/s/cksKPLdXLje327UBI2eKIQ){:target='\_blank'}
 
 ## 如何实现 call、apply 和 bind
+
+## Parsing big numbers in JSON to strings
+
+- [Parsing big numbers in JSON to strings [duplicate]](https://stackoverflow.com/questions/20408537/parsing-big-numbers-in-json-to-strings){:target='\_blank'}
 
 ## 你知道 this 也有优先级吗？
 
