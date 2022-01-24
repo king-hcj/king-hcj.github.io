@@ -10,6 +10,8 @@ keywords: JS, 前端, JavaScript
 
 ## CSS 色值的 N 种写法
 
+## 请求接口缓存(utils 里面已经实现)
+
 ## CSS Scroll Snap —— 轮播竟然如此简单
 
 - [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
