@@ -658,6 +658,9 @@ fetch(fakeDataUrl)
 - [Introducing CSS Scroll Snap Points](https://css-tricks.com/introducing-css-scroll-snap-points/){:target='\_blank'}
 - [Practical CSS Scroll Snapping](https://css-tricks.com/practical-css-scroll-snapping/){:target='\_blank'}
 - [大侠，请留步，要不过来了解下 CSS Scroll Snap？](https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/){:target='\_blank'}
+- [git rebase](http://gitbook.liuhui998.com/4_2.html){:target='\_blank'}
+- [git rebase 详解（图解+最简单示例，一次就懂）](https://blog.csdn.net/weixin_42310154/article/details/119004977){:target='\_blank'}
+- [Git 基本命令 merge 和 rebase，你真的了解吗？](https://www.cnblogs.com/michael-xiang/p/13179837.html){:target='\_blank'}
 
 #### 前端装逼技巧
 
