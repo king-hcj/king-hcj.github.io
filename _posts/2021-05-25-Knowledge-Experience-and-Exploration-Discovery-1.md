@@ -663,6 +663,7 @@ fetch(fakeDataUrl)
 - [Git 基本命令 merge 和 rebase，你真的了解吗？](https://www.cnblogs.com/michael-xiang/p/13179837.html){:target='\_blank'}
 - [has been blocked by CORS policy: The request client is not a secure context and the resource is in more-private address space `private`](https://www.jianshu.com/p/ec6f373cc9e5){:target='\_blank'}
   - 配置 Chrome 选项`chrome://flags/#block-insecure-private-network-requests`为 disable
+  - [chrome 更新跨域规则，将对网站造成影响](https://www.cnblogs.com/daysme/p/15493523.html){:target='\_blank'}【原理】
 
 #### 前端装逼技巧
 
