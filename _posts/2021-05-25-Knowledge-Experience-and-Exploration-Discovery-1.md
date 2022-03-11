@@ -661,6 +661,8 @@ fetch(fakeDataUrl)
 - [git rebase](http://gitbook.liuhui998.com/4_2.html){:target='\_blank'}
 - [git rebase 详解（图解+最简单示例，一次就懂）](https://blog.csdn.net/weixin_42310154/article/details/119004977){:target='\_blank'}
 - [Git 基本命令 merge 和 rebase，你真的了解吗？](https://www.cnblogs.com/michael-xiang/p/13179837.html){:target='\_blank'}
+- [has been blocked by CORS policy: The request client is not a secure context and the resource is in more-private address space `private`](https://www.jianshu.com/p/ec6f373cc9e5){:target='\_blank'}
+  - 配置 Chrome 选项`chrome://flags/#block-insecure-private-network-requests`为 disable
 
 #### 前端装逼技巧
 
