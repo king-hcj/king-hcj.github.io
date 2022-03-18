@@ -6,7 +6,7 @@ description: 纯前端生成和解析Excel
 keywords: Excel
 ---
 
-&emsp;&emsp;纯前端生成和解析Excel。
+&emsp;&emsp;纯前端生成和解析 Excel。
 
 ## SheetJS js-xlsx 方案
 
@@ -135,6 +135,71 @@ export { exportExcel1, exportExcel2, exportExcel3 };
 exportExcel3 参考样例：  
 ![导出excel]({{site.url}}{{site.baseurl}}/images/posts/javascript/excel.png?raw=true)
 
+## 非框架生成简单 CSV
+
+### 方案一
+
+```js
+export const exportCSV = (storageObj: any) => {
+  const title = storageObj.title as any[];
+  const titleForKey = storageObj.titleForKey;
+  const data = storageObj.data;
+  const str = [];
+  str.push(title.join(",") + "\n");
+  for (let i = 0; i < data.length; i++) {
+    const temp = [];
+    for (let j = 0; j < titleForKey.length; j++) {
+      temp.push(data[i][titleForKey[j]]);
+    }
+    str.push(temp.join(",") + "\n");
+  }
+  const uri = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str.join(""));
+  const downloadLink = document.createElement("a");
+  downloadLink.href = uri;
+  downloadLink.download = new Date().toISOString().substring(0, 10) + "-template.csv";
+  downloadLink.click();
+}
+```
+
+```html
+<a onClick={() => exportCSV({
+    title: ["title", "key", "type", "subtitle", "link", "icon", "landscape"],
+    titleForKey: ["title", "key", "type", "subtitle", "link", "icon", "landscape"],
+    data: [{
+      "title": '',
+      "key": 'The legal contents are letters、numbers and underscores！',
+      "type": "1 or 2，games is 2",
+      "subtitle": '',
+      "link": '',
+      "icon": '',
+      "landscape": "TRUE or FALSE"
+    }]
+  })}
+>
+  template.csv
+</a>
+```
+
+### 方案二
+
+```js
+export const downloadCSV = (data: string) => {
+  const csvDataBlob = new Blob([data], { type: 'text/csv' });
+  const ObjectURL = URL.createObjectURL(csvDataBlob);
+  if (!ObjectURL) return;
+  const a = document.createElement('a');
+  a.href = ObjectURL;
+  a.click();
+  URL.revokeObjectURL(ObjectURL);
+};
+```
+
+```html
+<a onClick={() => downloadCSV('title1,title2')}>
+  template.csv
+</a>
+```
+
 ## [FileSaver.js](https://github.com/eligrey/FileSaver.js){:target='\_blank'} 方案
 
 - [FileSaver.js 介绍](https://www.cnblogs.com/jackyWHJ/articles/10435851.html){:target='\_blank'}：FileSaver.js 是在客户端保存文件的解决方案，非常适合需要生成文件，或者保存不应该发送到外部服务器的敏感信息的 web App。
@@ -143,16 +208,16 @@ exportExcel3 参考样例：
 
   ```js
   // utils.j
-  import FileSaver from "file-saver";
-  export const exportCsv = (columns, keys, data, title = "导出") => {
-    let exportStr = "\uFEFF";
-    columns = columns.join(",");
-    exportStr += columns + "\n";
+  import FileSaver from 'file-saver';
+  export const exportCsv = (columns, keys, data, title = '导出') => {
+    let exportStr = '\uFEFF';
+    columns = columns.join(',');
+    exportStr += columns + '\n';
     _.each(data, (item) => {
-      let dataStr = "";
-      let itemStr = "";
+      let dataStr = '';
+      let itemStr = '';
       _.each(keys, (key) => {
-        if (typeof key === "object") {
+        if (typeof key === 'object') {
           for (let index in key) {
             let callback = key[index];
             itemStr = callback(item[index], item);
@@ -160,46 +225,48 @@ exportExcel3 参考样例：
         } else {
           itemStr = item[key];
         }
-        dataStr += `"${itemStr || ""}",`;
+        dataStr += `"${itemStr || ''}",`;
       });
-      dataStr = dataStr.substring(0, dataStr.length - 1) + "\n";
+      dataStr = dataStr.substring(0, dataStr.length - 1) + '\n';
       exportStr += dataStr;
     });
 
     let blob = new Blob([exportStr], {
-      type: "text/csv;charset=UTF-8",
+      type: 'text/csv;charset=UTF-8',
     });
-    FileSaver.saveAs(blob, title + ".csv");
+    FileSaver.saveAs(blob, title + '.csv');
   };
   ```
 
   ```js
   // index.js
-  import { exportCsv } from "./utils.js";
+  import { exportCsv } from './utils.js';
   // 导出函数
   const doExport = () => {
     // columns配置生成excel的列（columns为antD table的columns）
-    let keys = _.map(columns, "dataIndex");
-    let column = _.map(columns, "title");
+    let keys = _.map(columns, 'dataIndex');
+    let column = _.map(columns, 'title');
     let dataList = list.map((item) => {
       // 可以做一些数据处理
       item.requestTime = moment
         .unix(item.requestTime)
-        .format("YYYY-MM-DD HH:mm:ss");
+        .format('YYYY-MM-DD HH:mm:ss');
       return item;
     });
-    exportCsv(column, keys, dataList, "导出列表");
+    exportCsv(column, keys, dataList, '导出列表');
   };
   ```
 
-## 纯前端解析excel文件
+## 纯前端解析 excel 文件
 
 &emsp;&emsp;HTML：
+
 ```html
-<input @change="getUploadFile" type="file">
+<input @change="getUploadFile" type="file" />
 ```
 
 &emsp;&emsp;JS：
+
 ```js
 import XLSX from 'xlsx';
 
@@ -242,4 +309,4 @@ getUploadFile (e) {
 }
 ```
 
-- [纯前端解析excel文件](https://blog.csdn.net/for_weber/article/details/81903875){:target='_blank'}
+- [纯前端解析 excel 文件](https://blog.csdn.net/for_weber/article/details/81903875){:target='\_blank'}
