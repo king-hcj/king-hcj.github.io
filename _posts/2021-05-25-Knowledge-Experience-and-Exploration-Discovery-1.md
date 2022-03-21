@@ -498,9 +498,11 @@ FancyInput = forwardRef(FancyInput);
 
 - [css-tricks](https://css-tricks.com/){:target='\_blank'}
 
-## 惊蛰
+## 惊蛰、春分、清明
 
-> 截止 2021.11.23【计划】
+> 2021.11.23
+> 2022.01.23
+> 2022.03.21
 
 ### Knowledge and Experience
 
@@ -665,9 +667,10 @@ fetch(fakeDataUrl)
   - 配置 Chrome 选项`chrome://flags/#block-insecure-private-network-requests`为 disable
   - [chrome 更新跨域规则，将对网站造成影响](https://www.cnblogs.com/daysme/p/15493523.html){:target='\_blank'}【原理】
 
-#### 前端装逼技巧
-
 #### 浏览器插件
+
+- [7 分钟学会写一个浏览器插件——突破某 SDN 未登录禁止复制的限制](https://king-hcj.github.io/2021/10/17/browser-extension/){:target='\_blank'}
+- [前端应该知道的：开放图谱协议（The Open Graph protocol）](){:target='\_blank'}
 
 #### WebView 相关
 
@@ -676,6 +679,15 @@ fetch(fakeDataUrl)
 - [史上最全 WebView 使用，附送 Html5Activity 一份](https://www.jianshu.com/p/3fcf8ba18d7f){:target='\_blank'}
 
 #### 前端换肤
+
+- **[使用 css/less 动态更换主题色（换肤功能）](https://www.cnblogs.com/leiting/p/11203383.html){:target='\_blank'}**
+- [link rel=alternate 网站换肤功能最佳实现](https://www.zhangxinxu.com/wordpress/2019/02/link-rel-alternate-website-skin/){:target='\_blank'}
+- [前端换肤的 N 种方案，请收下](https://juejin.cn/post/6844904122643120141){:target='\_blank'}
+- [一文总结前端换肤换主题](https://www.jianshu.com/p/35e0581629d2){:target='\_blank'}
+- [CSS 变量教程](https://www.ruanyifeng.com/blog/2017/05/css-variables.html){:target='\_blank'}
+- Element-UI 换肤
+  - [demo](https://elementui.github.io/theme-preview/#/zh-CN){:target='\_blank'}
+  - [官方解释](https://github.com/ElemeFE/element/issues/3054){:target='\_blank'}
 
 #### JavaScript Visualized Series' Articles
 
