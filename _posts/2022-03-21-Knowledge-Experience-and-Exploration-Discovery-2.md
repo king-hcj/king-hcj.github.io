@@ -18,5 +18,12 @@ keywords: Knowledge and Experience、Exploration and Discovery
   - [border-image](https://css-tricks.com/almanac/properties/b/border-image/){:target='\_blank'}
   - [CSS3 border-image 彻底明白](https://segmentfault.com/a/1190000010969367){:target='\_blank'}
   - [前端 web 的点 9 图效果实现](https://www.jianshu.com/p/fee55621cd3b){:target='\_blank'}
+- IntersectionObserver API
+  - [IntersectionObserver API 使用教程](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html){:target='\_blank'}
+  - [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
 
 ### Exploration and Discovery
+
+#### MySQL 实战
+
+- [MySQL 实战 45 讲](https://time.geekbang.org/column/intro/100020801?tab=intro){:target='\_blank'}

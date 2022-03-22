@@ -28,6 +28,11 @@ keywords: JS, 前端, JavaScript
 - [Practical CSS Scroll Snapping](https://css-tricks.com/practical-css-scroll-snapping/){:target='\_blank'}
 - [大侠，请留步，要不过来了解下 CSS Scroll Snap？](https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/){:target='\_blank'}
 
+## IntersectionObserver API
+
+- [IntersectionObserver API 使用教程](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html){:target='\_blank'}
+- [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
+
 ## 微软悄悄发布了 Web 版的 VsCode
 
 - [微软悄悄发布了 Web 版的 VsCode](https://mp.weixin.qq.com/s/yPV8Rv9CW09OzrrsedaWCA){:target='\_blank'}
