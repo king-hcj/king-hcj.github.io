@@ -33,6 +33,15 @@ keywords: JS, 前端, JavaScript
 - [IntersectionObserver API 使用教程](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html){:target='\_blank'}
 - [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
 
+## count(\*)=count(0)=count(1)=count(2)
+
+count(if(event='custom_click' and params['click_source'] = 'guide',1,0)) guide_click_cnt，潜意识里以为用的是 sum，所以将关注点放在了代码逻辑上，通过画脑图、打 log、请前端同学一起看，确定了逻辑的正确性，最后通过埋点上报平台发现数据和数据分析师提供的不一致（数据分析师的数据来自数据库）；
+
+数字没实际含义，如果（）里面的不是字段，则统计查询结果总量，如果是字段，则统计对应字段非空的总量（count(\*)=count(0)=count(1)=count(2)）
+
+- [Select count(\*)、Count(1)、Count(0)的区别和执行效率比较](https://www.cnblogs.com/sueris/p/6650301.html){:target='\_blank'}
+- [mysql sum(if())和 count(if())的用法说明](https://www.jb51.net/article/234709.htm){:target='\_blank'}
+
 ## 微软悄悄发布了 Web 版的 VsCode
 
 - [微软悄悄发布了 Web 版的 VsCode](https://mp.weixin.qq.com/s/yPV8Rv9CW09OzrrsedaWCA){:target='\_blank'}
