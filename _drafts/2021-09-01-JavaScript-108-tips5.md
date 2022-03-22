@@ -37,7 +37,11 @@ keywords: JS, 前端, JavaScript
 
 count(if(event='custom_click' and params['click_source'] = 'guide',1,0)) guide_click_cnt，潜意识里以为用的是 sum，所以将关注点放在了代码逻辑上，通过画脑图、打 log、请前端同学一起看，确定了逻辑的正确性，最后通过埋点上报平台发现数据和数据分析师提供的不一致（数据分析师的数据来自数据库）；
 
-数字没实际含义，如果（）里面的不是字段，则统计查询结果总量，如果是字段，则统计对应字段非空的总量（count(\*)=count(0)=count(1)=count(2)）
+数字没实际含义，如果（）里面的不是字段，则统计查询结果总量，如果是字段，则统计对应字段非空的总量（count(\*)=count(0)=count(1)=count(2)）;
+
+不知不知觉又搞了这么久了，然后一点收获都没有，只证明了自己没问题；
+
+既然 SQL 中 count(_)=count(0)=count(1)=count(2)，那 count 后面跟数字的意义在哪儿 —— 就无聊啊；count(_)是特殊优化的，理论上等于 count(1)，这里应该用 sum。
 
 - [Select count(\*)、Count(1)、Count(0)的区别和执行效率比较](https://www.cnblogs.com/sueris/p/6650301.html){:target='\_blank'}
 - [mysql sum(if())和 count(if())的用法说明](https://www.jb51.net/article/234709.htm){:target='\_blank'}
