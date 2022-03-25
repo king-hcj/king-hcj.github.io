@@ -460,6 +460,7 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [为什么 30 多年过去了，GIF 还没有被淘汰](https://zhuanlan.zhihu.com/p/396618872){:target='\_blank'}
 - [谈谈 GIF 格式](https://zhuanlan.zhihu.com/p/22590949){:target='\_blank'}
 - [GIF 动图发展史上的 11 个重要时刻](https://zhuanlan.zhihu.com/p/28466822){:target='\_blank'}
+- [GIF 动图发明者因新冠去世](https://www.baidu.com/s?rsv_idx=1&wd=GIF%E5%8A%A8%E5%9B%BE%E5%8F%91%E6%98%8E%E8%80%85%E5%9B%A0%E6%96%B0%E5%86%A0%E5%8E%BB%E4%B8%96&fenlei=256&ie=utf-8&rsv_pq=a46ca1d500002d24&oq=border-radius&rsv_t=159b9jboPWUu4E2PSdwwFYuEirgU9PrHmQlcU78rZ2d%2FE3y4Y7eZ%2FezR3bc&rqid=a46ca1d500002d24&rsf=8d99c04971951c8917d86163e30773f3_1_10_8&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811){:target='\_blank'}
 
 ## Linux 下使用 curl 查看 http 请求各阶段耗时
 

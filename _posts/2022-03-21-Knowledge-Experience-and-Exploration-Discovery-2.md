@@ -21,6 +21,7 @@ keywords: Knowledge and Experience、Exploration and Discovery
 - IntersectionObserver API
   - [IntersectionObserver API 使用教程](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html){:target='\_blank'}
   - [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
+- [git 修改分支名称](https://www.cnblogs.com/xyarch/p/15683279.html){:target='\_blank'}
 
 ### Exploration and Discovery
 
