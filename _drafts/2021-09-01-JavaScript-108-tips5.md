@@ -10,6 +10,11 @@ keywords: JS, 前端, JavaScript
 
 ## CSS 色值的 N 种写法
 
+## 非等宽字体下，数字等宽显示【css】
+
+- [非等宽字体下，数字等宽显示【css】](http://agoodlife.cn/infoview/205.html){:target='\_blank'}
+- [font-variant-numeric](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-numeric){:target='\_blank'}
+
 ## Js 获取图片主色调，近似色，互补色，以及根据图片颜色获取主题配色方案详解、插件
 
 - [Js 获取图片主色调，近似色，互补色，以及根据图片颜色获取主题配色方案详解、插件](https://blog.csdn.net/qq_41076441/article/details/84184565){:target='\_blank'}
