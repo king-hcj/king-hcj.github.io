@@ -525,6 +525,7 @@ render() {
   - 方法二：使用 onMouseDown 替代 onClick
     - mousedown 事件：当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件，所以它会先于失焦事件执行。
     - mouseup 事件：当在元素上放松鼠标按钮时，会发生 mouseup 事件。
+  - 方法三：保持 onClick 不变，添加`onMouseDown={(e) => { e.preventDefault() }};`；
 
 ## 第十四式：不用加减乘除如何做加法——位运算让你的代码更高效
 
