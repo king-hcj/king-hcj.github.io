@@ -22,8 +22,13 @@ keywords: Knowledge and Experience、Exploration and Discovery
   - [IntersectionObserver API 使用教程](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html){:target='\_blank'}
   - [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
 - [git 修改分支名称](https://www.cnblogs.com/xyarch/p/15683279.html){:target='\_blank'}
+- [react+antd form 警告 Warning: [antd: Form.Item] `children` is array of render props cannot have `name`.](https://blog.csdn.net/feinifi/article/details/107337618){:target='\_blank'} &#124; [官方说明：复杂一点的控件](https://ant.design/components/form-cn/#components-form-demo-complex-form-control){:target='\_blank'}
 
 ### Exploration and Discovery
+
+#### 经济学
+
+- [解读你身边的经济学](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=987){:target='\_blank'}
 
 #### MySQL 实战
 

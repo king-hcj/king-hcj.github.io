@@ -200,9 +200,10 @@ export const downloadCSV = (data: string) => {
 </a>
 ```
 
-## [FileSaver.js](https://github.com/eligrey/FileSaver.js){:target='\_blank'} 方案
+## FileSaver.js 方案
 
-- [FileSaver.js 介绍](https://www.cnblogs.com/jackyWHJ/articles/10435851.html){:target='\_blank'}：FileSaver.js 是在客户端保存文件的解决方案，非常适合需要生成文件，或者保存不应该发送到外部服务器的敏感信息的 web App。
+- [FileSaver.js 介绍](https://www.cnblogs.com/jackyWHJ/articles/10435851.html){:target='\_blank'}：FileSaver.js 是在客户端保存文件的解决方案，非常适合需要生成文件，或者保存不应该发送到外部服务器的敏感信息的 web App；
+- [FileSaver.js GitHub](https://github.com/eligrey/FileSaver.js){:target='\_blank'}；
 - [FileSaver.js demo](https://eligrey.com/demos/FileSaver.js/){:target='\_blank'}
 - 保存 excel 文件示例代码：
 
@@ -309,4 +310,7 @@ getUploadFile (e) {
 }
 ```
 
+## 其他资源拓展
+
 - [纯前端解析 excel 文件](https://blog.csdn.net/for_weber/article/details/81903875){:target='\_blank'}
+- [前端提效 - js 批量导出 excel 为 zip 压缩包](https://juejin.cn/post/7080169896209809445){:target='\_blank'}
