@@ -191,6 +191,24 @@ npm install serve -g
 
 ![appshell]({{site.url}}{{site.baseurl}}/images/posts/pwa/appshell.png?raw=true)
 
+#### 从微博 Lite 看 PWA
+
+&emsp;&emsp;安装 PWA：
+
+![weibo_install]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_install.png?raw=true)
+
+&emsp;&emsp;安装后，PWA 应用就会出现在桌面/Chrome 应用里面：
+
+![weibo_icon]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_icon.png?raw=true)
+
+&emsp;&emsp;从下图可以看出，点击桌面图标打开后，我们可以选择卸载 PWA，图标将会从桌面移除；同时，我们还可以发现，微博 Lite 除了缓存图片、JS、CSS 等静态资源外，也会缓存接口：
+
+![weibo_detail]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_detail.png?raw=true)
+
+&emsp;&emsp;当我们将网络设置成离线时，刷新页面，依然可以继续浏览页面上上次加载过的信息，提升用户体验：
+
+![weibo_offline]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_offline.png?raw=true)
+
 ### PWA 的优势与劣势
 
 ![pwa_processon]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_processon.png?raw=true)
