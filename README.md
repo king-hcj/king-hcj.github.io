@@ -35,7 +35,8 @@
 - [前端万字精华——浏览器简史及其核心原理详解](https://king-hcj.github.io/2021/07/11/web-browser/)
 - [从前端视角看浏览器隐身模式](https://king-hcj.github.io/2021/08/08/Incognito-Mode/)
 - [7 分钟学会写一个浏览器插件——突破某 SDN 未登录禁止复制的限制](https://king-hcj.github.io/2021/10/17/browser-extension/)
-- [大道至简，繁在人心：在浏览器控制台安装npm包是什么操作？](https://king-hcj.github.io/2021/10/27/console-npm-install/)
+- [大道至简，繁在人心：在浏览器控制台安装 npm 包是什么操作？](https://king-hcj.github.io/2021/10/27/console-npm-install/)
+- [在国内逐渐消亡的 PWA 可以带给我们哪些启示？](https://king-hcj.github.io/2022/04/10/pwa-and-service-worker/){:target='\_blank'}
 - [你应该知道的前端技术浪潮与应用](https://king-hcj.github.io/2021/04/28/front-end-technology-and-application/)
 - [从前端打字机效果的 N 种实现看 JS 定时器机制和前端动画](https://king-hcj.github.io/2021/01/10/js-typed/)
 - [可以遍历大部分数据类型的 for…of 为什么不能遍历普通对象？](https://king-hcj.github.io/2020/12/05/for-of/)
