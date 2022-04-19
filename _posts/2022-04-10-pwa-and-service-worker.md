@@ -20,13 +20,13 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 &emsp;&emsp;对前端开发者来说，Lighthouse 是一个很熟悉的网站性能诊断工具，在这里，我们总是可以看到 PWA（Progressive Web App）的身影：
 
-![pwa_opt]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_opt.png?raw=true)
+![pwa_opt](https://king-hcj.github.io/images/posts/pwa/pwa_opt.png?raw=true)
 
 #### PWA 书籍
 
 &emsp;&emsp;又或者，你曾无意间看到这些书籍或者资料：
 
-- [![pwa_book]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_book.webp?raw=true)](https://github.com/SangKa/PWA-Book-CN){:target='\_blank'}
+- [![pwa_book](https://king-hcj.github.io/images/posts/pwa/pwa_book.webp?raw=true)](https://github.com/SangKa/PWA-Book-CN){:target='\_blank'}
 
 - [《PWA 应用实战》](https://gitee.com/hbche/pwa-book){:target='\_blank'}
 
@@ -34,11 +34,11 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 &emsp;&emsp;啊哈，这些，都没看到过？那你总是访问过[Google Developers](https://developers.google.com/){:target='\_blank'}吧，或者总看见过这样一个图标：
 
-![google_dev]({{site.url}}{{site.baseurl}}/images/posts/pwa/google_dev.png?raw=true)
+![google_dev](https://king-hcj.github.io/images/posts/pwa/google_dev.png?raw=true)
 
 &emsp;&emsp;可以认为这个图标在哪里，一个 PWA 应用就在哪里，点击这个按钮，可以**将 PWA 应用安装到桌面**。于是，在线 IDE [StackBlitz.com](https://stackblitz.com/){:target='\_blank'}出现了，字节内部使用的[Goofy Studio PWA](https://studio.bytedance.net/){:target='\_blank'}出现了：
 
-![stackblitz]({{site.url}}{{site.baseurl}}/images/posts/pwa/stackblitz.png?raw=true)
+![stackblitz](https://king-hcj.github.io/images/posts/pwa/stackblitz.png?raw=true)
 
 #### 谷歌的探索
 
@@ -46,13 +46,13 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 &emsp;&emsp;2018 Google Chrome 开发者峰会上，Google 发布了[Squoosh](https://squoosh.app/){:target='\_blank'}，这是一个开源的图片压缩渐进式 Web 应用（PWA），它同时也是现代 Web 技术的一个实际展示，[谷歌实验室发布 Squoosh](https://www.infoq.com/news/2018/11/google-squoosh-pwa-webassembly/){:target='\_blank'} 的主要目标是演示高级 web 应用程序如何利用现代技术在 web 浏览器中提供高性能的体验。
 
-![squoosh]({{site.url}}{{site.baseurl}}/images/posts/pwa/squoosh.png?raw=true)
+![squoosh](https://king-hcj.github.io/images/posts/pwa/squoosh.png?raw=true)
 
 &emsp;&emsp;[PROXX](https://proxx.app/){:target='\_blank'}是谷歌 Chrome 团队推出的一款 JavaScript 游戏。该项目展示了如何开发快速平滑的 Web 应用，这些应用在多种平台和输入设备上提供了相近的用户体验。Proxx 项目的独到之处在于它主要针对的是**智能功能机**。
 
 > 智能功能机是低价智能机替代设备，在印度和非洲广为使用。相对于智能机，智能功能机的硬件非常简单。它不支持触控，屏幕相对较小，大多采用 240x320 分辨率的 QVGA 屏，CPU 的处理能力也相对较弱。
 
-![proxx]({{site.url}}{{site.baseurl}}/images/posts/pwa/proxx.png?raw=true)
+![proxx](https://king-hcj.github.io/images/posts/pwa/proxx.png?raw=true)
 
 &emsp;&emsp;这是一款 JavaScript 游戏扫雷游戏，**摸鱼时可以玩儿玩儿，如果不幸被老板撞见，你就说在研究 PWA 嘛**。
 
@@ -60,7 +60,7 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 &emsp;&emsp;[微博 Lite](https://m.weibo.cn){:target='\_blank'}，我相信，这，应该是 PWA 离你最近的一次：
 
-![weibo]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo.png?raw=true)
+![weibo](https://king-hcj.github.io/images/posts/pwa/weibo.png?raw=true)
 
 &emsp;&emsp;**我猜你一定不会问**：既然 PWA 应用还是蛮广泛的，那，它一定很强大吧？
 
@@ -70,15 +70,15 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 - 2017 年的[一篇技术博文](https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154){:target='\_blank'}显示，堪称图片版的 Twitter 的 Pinterest 将他们的移动网站重建为 PWA，核心参与度增加了 60%，用户产生的广告收入增加了 44%，花费的时间也增加了 40%；
 
-![compare_mobile_web]({{site.url}}{{site.baseurl}}/images/posts/pwa/compare_mobile_web.png?raw=true)
+![compare_mobile_web](https://king-hcj.github.io/images/posts/pwa/compare_mobile_web.png?raw=true)
 
-![compare_pwa_app]({{site.url}}{{site.baseurl}}/images/posts/pwa/compare_pwa_app.png?raw=true)
+![compare_pwa_app](https://king-hcj.github.io/images/posts/pwa/compare_pwa_app.png?raw=true)
 
 - 2016 年初 AliExpress 开始与 Google 团队合作，推动 PWA 技术在 AliExpress 上的落地；结果是非常令人惊奇和满意的。AliExpress 发现[新用户的转换率增加了 104％](https://zhuanlan.zhihu.com/p/26445223){:target='\_blank'}。在 Safari 的转化率也上升了 82％。现在用户每次访问的页面数量是原先的两倍，也大大提升了用户浏览页面的时间；
 
 - 类似这样的成功案例数不胜数，为了方便你直接丢到老板脸上，我梳理了这个图 😂：
 
-![pwa_productivity]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_productivity.png?raw=true)
+![pwa_productivity](https://king-hcj.github.io/images/posts/pwa/pwa_productivity.png?raw=true)
 
 &emsp;&emsp;我觉得你可以告诉他：**这些不仅仅是数字，这些都是 PWA 的成功案例**。
 
@@ -89,11 +89,11 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 &emsp;&emsp;我们应该都深有体会，Native app 体验确实很好，下载到手机上之后入口也方便。但它的优缺点很明显:
 
-![native_app]({{site.url}}{{site.baseurl}}/images/posts/pwa/native_app.png?raw=true)
+![native_app](https://king-hcj.github.io/images/posts/pwa/native_app.png?raw=true)
 
 &emsp;&emsp;而 web 网页开发成本低，网站更新时上传最新的资源到服务器即可，用手机带的浏览器打开就可以使用。但是除了体验上比 Native app 还是差一些，还有一些明显的缺点：
 
-![web_app]({{site.url}}{{site.baseurl}}/images/posts/pwa/web_app.png?raw=true)
+![web_app](https://king-hcj.github.io/images/posts/pwa/web_app.png?raw=true)
 
 &emsp;&emsp;在这些因素的推动下，**Web 应用渐进式接近原生 App**的概念 —— PWA 诞生了。
 
@@ -119,7 +119,7 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 > 中文官网解释：采用所有正确组成要素的网站。
 
-![pwa]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa.png?raw=true)
+![pwa](https://king-hcj.github.io/images/posts/pwa/pwa.png?raw=true)
 
 &emsp;&emsp;PWA 是 Google 于 2016 年提出的概念，于 2017 年正式落地，于 2018 年迎来重大突破，**全球顶级的浏览器厂商，Google、Microsoft、Apple 已经全数宣布支持 PWA 技术**。
 
@@ -137,7 +137,7 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 ### PWA 实现
 
-![pwa_and_stand_app]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_and_stand_app.jpeg?raw=true)
+![pwa_and_stand_app](https://king-hcj.github.io/images/posts/pwa/pwa_and_stand_app.jpeg?raw=true)
 
 #### 实现
 
@@ -173,11 +173,11 @@ npm install serve -g
 
 &emsp;&emsp;示例 demo：
 
-![pwa_demo]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_demo.png?raw=true)
+![pwa_demo](https://king-hcj.github.io/images/posts/pwa/pwa_demo.png?raw=true)
 
 &emsp;&emsp;通过对 manifest.json 进行相应配置，可以实现以下功能：
 
-![manifest]({{site.url}}{{site.baseurl}}/images/posts/pwa/manifest.png?raw=true)
+![manifest](https://king-hcj.github.io/images/posts/pwa/manifest.png?raw=true)
 
 #### App Shell 模型
 
@@ -189,29 +189,29 @@ npm install serve -g
 
 &emsp;&emsp;对于使用包含大量 JavaScript 的架构的单页应用来说，App Shell 是一种常用方法。这种方法依赖渐进式缓存 Shell（使用 Service Worker 线程）让应用运行，接下来，为使用 JavaScript 的每个页面加载动态内容。App Shell 非常适合用于在没有网络的情况下将一些初始 HTML 快速加载到屏幕上。
 
-![appshell]({{site.url}}{{site.baseurl}}/images/posts/pwa/appshell.png?raw=true)
+![appshell](https://king-hcj.github.io/images/posts/pwa/appshell.png?raw=true)
 
 #### 从微博 Lite 看 PWA
 
 &emsp;&emsp;安装 PWA：
 
-![weibo_install]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_install.png?raw=true)
+![weibo_install](https://king-hcj.github.io/images/posts/pwa/weibo_install.png?raw=true)
 
 &emsp;&emsp;安装后，PWA 应用就会出现在桌面/Chrome 应用里面：
 
-![weibo_icon]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_icon.png?raw=true)
+![weibo_icon](https://king-hcj.github.io/images/posts/pwa/weibo_icon.png?raw=true)
 
 &emsp;&emsp;从下图可以看出，点击桌面图标打开后，我们可以选择卸载 PWA，图标将会从桌面移除；同时，我们还可以发现，微博 Lite 除了缓存图片、JS、CSS 等静态资源外，也会缓存接口：
 
-![weibo_detail]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_detail.png?raw=true)
+![weibo_detail](https://king-hcj.github.io/images/posts/pwa/weibo_detail.png?raw=true)
 
 &emsp;&emsp;当我们将网络设置成离线时，刷新页面，依然可以继续浏览页面上上次加载过的信息，提升用户体验：
 
-![weibo_offline]({{site.url}}{{site.baseurl}}/images/posts/pwa/weibo_offline.png?raw=true)
+![weibo_offline](https://king-hcj.github.io/images/posts/pwa/weibo_offline.png?raw=true)
 
 ### PWA 的优势与劣势
 
-![pwa_processon]({{site.url}}{{site.baseurl}}/images/posts/pwa/pwa_processon.png?raw=true)
+![pwa_processon](https://king-hcj.github.io/images/posts/pwa/pwa_processon.png?raw=true)
 
 &emsp;&emsp;在这些存在的问题里面，简单介绍一下摩尔定律。
 
@@ -241,7 +241,7 @@ npm install serve -g
 
 &emsp;&emsp;一般来说，Worker 可以让脚本在浏览器主线程之外的单独的线程上运行。如果你想要在 HTML 文档中引用一个`<script>`标签的典型的 JavaScript 文件，它会运行在主线程上。如果主线程上有太多的计算，会拖慢网站的速度，造成交互卡顿和响应延迟。Web worker，Service worker 和 Worklet 都是让脚步运行在单独的线程上的。
 
-![workers]({{site.url}}{{site.baseurl}}/images/posts/pwa/workers.png?raw=true)
+![workers](https://king-hcj.github.io/images/posts/pwa/workers.png?raw=true)
 
 > 参考资料：[Web workers vs Service workers vs Worklets](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets/){:target='\_blank'}
 
@@ -249,7 +249,7 @@ npm install serve -g
 
 &emsp;&emsp;Web workers 是最常用的 worker 类型。它不像另外两种，它们除了运行在主线程外的特性外，没有一个特殊的应用场景。所以，Web worker 可以用于减少主线程上大量的线程活动。
 
-![web-worker]({{site.url}}{{site.baseurl}}/images/posts/pwa/web-worker.jpeg?raw=true)
+![web-worker](https://king-hcj.github.io/images/posts/pwa/web-worker.jpeg?raw=true)
 
 > 推荐阅读：[Workers overview](https://web.dev/workers-overview/){:target='\_blank'}。
 
@@ -271,19 +271,19 @@ npm install serve -g
 
 &emsp;&emsp;Service workers 主要是提供详细的**浏览器和网络/缓存间的代理服务**，如下图所以：
 
-![service-worker]({{site.url}}{{site.baseurl}}/images/posts/pwa/service-worker.jpeg?raw=true)
+![service-worker](https://king-hcj.github.io/images/posts/pwa/service-worker.jpeg?raw=true)
 
 &emsp;&emsp;2014 年，W3C（万维网联盟）公布了 Service Worker 的相关草案，但真正在生产环境被 Chrome 支持是在 2015 年，比微信小程序要早两年。
 
 &emsp;&emsp;下图展示了 Service workers 的生命周期：
 
-![sw-lifecycle]({{site.url}}{{site.baseurl}}/images/posts/pwa/sw-lifecycle.png?raw=true)
+![sw-lifecycle](https://king-hcj.github.io/images/posts/pwa/sw-lifecycle.png?raw=true)
 
 &emsp;&emsp;而下面这张图则**几乎涵盖了 Service workers 所有最重要的知识点**：
 
 > 原图来自 GitHub：[service-workers-101](https://github.com/delapuente/service-workers-101){:target='\_blank'}
 
-![sw-lifecycle]({{site.url}}{{site.baseurl}}/images/posts/pwa/sw-lifecycle.webp?raw=true)
+![sw-lifecycle](https://king-hcj.github.io/images/posts/pwa/sw-lifecycle.webp?raw=true)
 
 #### HTTP 缓存与 Service Worker 缓存
 
@@ -310,25 +310,25 @@ npm install serve -g
 
 &emsp;&emsp;当然，无论您做了多少缓存， Service Worker 进程都不会使用缓存，除非你告诉它何时以及如何使用。下图展示的是缓存优先的示意图：
 
-![cache_prior]({{site.url}}{{site.baseurl}}/images/posts/pwa/cache_prior.png?raw=true)
+![cache_prior](https://king-hcj.github.io/images/posts/pwa/cache_prior.png?raw=true)
 
 &emsp;&emsp;其他一些缓存模式简单梳理如下：
 
-![cache]({{site.url}}{{site.baseurl}}/images/posts/pwa/cache.png?raw=true)
+![cache](https://king-hcj.github.io/images/posts/pwa/cache.png?raw=true)
 
 #### 调试
 
-![service_debug]({{site.url}}{{site.baseurl}}/images/posts/pwa/service_debug.png?raw=true)
+![service_debug](https://king-hcj.github.io/images/posts/pwa/service_debug.png?raw=true)
 
 #### 兼容性
 
 - [Service Worker](https://caniuse.com/?search=Service%20Worker){:target='\_blank'}
 
-![can_i_use_sw]({{site.url}}{{site.baseurl}}/images/posts/pwa/can_i_use_sw.png?raw=true)
+![can_i_use_sw](https://king-hcj.github.io/images/posts/pwa/can_i_use_sw.png?raw=true)
 
 - [manifest](https://caniuse.com/?search=manifest){:target='\_blank'}
 
-![can_i_use_manifest]({{site.url}}{{site.baseurl}}/images/posts/pwa/can_i_use_manifest.png?raw=true)
+![can_i_use_manifest](https://king-hcj.github.io/images/posts/pwa/can_i_use_manifest.png?raw=true)
 
 &emsp;&emsp;可以看出，兼容性问题最大的其实还是在 manifest.json 的支持上。
 
@@ -346,7 +346,7 @@ npm install serve -g
 
 &emsp;&emsp;在展示网页时，浏览器会执行多个步骤。在这里我们主要关注四个步骤：Style，Layout，Paint 和 Composite（合成）。
 
-![frame-full]({{site.url}}{{site.baseurl}}/images/posts/pwa/frame-full.jpeg?raw=true)
+![frame-full](https://king-hcj.github.io/images/posts/pwa/frame-full.jpeg?raw=true)
 
 &emsp;&emsp;Paint 是浏览器将样式应用于每个元素的地方。与此渲染阶段挂钩的 Worklet 是 Paint Worklet。Paint Worklet 允许我们创建自定义图片，这个图片可以应用任何 CSS，比如 background-image 属性的值。
 
@@ -399,7 +399,7 @@ div {
 
 ## App、小程序、快应用与 App Clips
 
-[![App]({{site.url}}{{site.baseurl}}/images/posts/pwa/App.png?raw=true)](https://www.biaodianfu.com/app-next.html){:target='\_blank'}
+[![App](https://king-hcj.github.io/images/posts/pwa/App.png?raw=true)](https://www.biaodianfu.com/app-next.html){:target='\_blank'}
 
 ## PWA 发展与现状
 
@@ -439,7 +439,7 @@ div {
 
 &emsp;&emsp;Microsoft 依然在维护着相关文档：[Get started with Progressive Web Apps](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/){:target='\_blank'}，时间显示，最近更新时 2022 年 3 月 1。
 
-![Microsoft]({{site.url}}{{site.baseurl}}/images/posts/pwa/microsoft.png?raw=true)
+![Microsoft](https://king-hcj.github.io/images/posts/pwa/microsoft.png?raw=true)
 
 ## 推荐参考
 
