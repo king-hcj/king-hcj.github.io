@@ -23,6 +23,9 @@ keywords: Knowledge and Experience、Exploration and Discovery
   - [IntersectionObserver’s Coming into View](https://developers.google.com/web/updates/2016/04/intersectionobserver){:target='\_blank'}
 - [git 修改分支名称](https://www.cnblogs.com/xyarch/p/15683279.html){:target='\_blank'}
 - [react+antd form 警告 Warning: [antd: Form.Item] `children` is array of render props cannot have `name`.](https://blog.csdn.net/feinifi/article/details/107337618){:target='\_blank'} &#124; [官方说明：复杂一点的控件](https://ant.design/components/form-cn/#components-form-demo-complex-form-control){:target='\_blank'}
+- [Warning: ant Checkbox: value is not a valid prop, do you mean checked?](https://stackoverflow.com/questions/66631801/warning-ant-checkbox-value-is-not-a-valid-prop-do-you-mean-checked){:target='\_blank'}
+  - Checkbox，`form.setFieldsValue`后控制台报错；
+  - Use [valuePropName](https://ant.design/components/form-cn/#API){:target='\_blank'} for Checkbox form item: `<Form.Item label="landscape" name="landscape" valuePropName="checked"><Checkbox /></Form.Item>`
 
 ### Exploration and Discovery
 
