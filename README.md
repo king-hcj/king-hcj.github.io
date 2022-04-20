@@ -124,7 +124,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 - [windows 系统下安装 jekyll 报错：Error installing jekyll](https://segmentfault.com/q/1010000013418668);
 - [windows 安装 jekyll 步骤及问题](https://blog.csdn.net/mouday/article/details/79300135);
 
-7. 如果出现类似`Liquid Exception: undefined method 'map' for false:FalseClass Did you mean?`的报错，可尝试删除`_site`目录然后重试。
+7. 如果出现类似`Liquid Exception: undefined method 'map' for false:FalseClass Did you mean?`的报错，可尝试删除`_site`目录然后重试。如果还是不行，可尝试`gem install jekyll`重新安装 jekyll，再进行重试。
 
 ## 贴心提示
 
