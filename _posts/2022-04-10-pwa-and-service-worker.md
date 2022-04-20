@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在国内逐渐消亡的 PWA 可以带给我们哪些启示？
+title: 小程序鼻祖 —— 在国内逐渐消亡的 PWA 可以带给我们哪些启示？
 categories: JavaScript
 description: PWA的消亡及启示
 keywords: JS, 前端, JavaScript, PWA, Service Worker
@@ -137,7 +137,7 @@ keywords: JS, 前端, JavaScript, PWA, Service Worker
 
 ### PWA 实现
 
-![pwa_and_stand_app](https://king-hcj.github.io/images/posts/pwa/pwa_and_stand_app.jpeg?raw=true)
+![sw_img](https://king-hcj.github.io/images/posts/pwa/sw_img.gif?raw=true)
 
 #### 实现
 
@@ -277,7 +277,7 @@ npm install serve -g
 
 &emsp;&emsp;下图展示了 Service workers 的生命周期：
 
-![sw-lifecycle](https://king-hcj.github.io/images/posts/pwa/sw-lifecycle.png?raw=true)
+![sw-lifecycle](https://king-hcj.github.io/images/posts/pwa/sw-lifecycle.gif?raw=true)
 
 &emsp;&emsp;而下面这张图则**几乎涵盖了 Service workers 所有最重要的知识点**：
 
@@ -331,12 +331,6 @@ npm install serve -g
 ![can_i_use_manifest](https://king-hcj.github.io/images/posts/pwa/can_i_use_manifest.png?raw=true)
 
 &emsp;&emsp;可以看出，兼容性问题最大的其实还是在 manifest.json 的支持上。
-
-#### 参考资料
-
-- [网站渐进式增强体验(PWA)改造：Service Worker 应用详解](https://lzw.me/a/pwa-service-worker.html){:target='\_blank'}
-- [Web 离线应用解决方案——ServiceWorker](https://www.cnblogs.com/dojo-lzz/p/8047336.html){:target='\_blank'}
-- [What self.skipWaiting() does to the service worker lifecycle](https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/){:target='\_blank'}
 
 ### Worklet
 
@@ -397,10 +391,6 @@ div {
 - Service worker 是浏览器和网络间的代理。通过拦截文档中发出的请求，service worker 可以直接请求缓存中的数据，达到离线运行的目的。
 - Web worker 的通常目的是让我们减轻主线程中的密集处理工作。
 
-## App、小程序、快应用与 App Clips
-
-[![App](https://king-hcj.github.io/images/posts/pwa/App.png?raw=true)](https://www.biaodianfu.com/app-next.html){:target='\_blank'}
-
 ## PWA 发展与现状
 
 ### PWA in China
@@ -441,10 +431,22 @@ div {
 
 ![Microsoft](https://king-hcj.github.io/images/posts/pwa/microsoft.png?raw=true)
 
-## 推荐参考
+## 总结：App、小程序、快应用与 App Clips
+
+[![App](https://king-hcj.github.io/images/posts/pwa/App.png?raw=true)](https://www.biaodianfu.com/app-next.html){:target='\_blank'}
+
+> 高清大图可点击[这里](https://king-hcj.github.io/images/posts/pwa/App.png?raw=true){:target='\_blank'}查看。
+
+## 推荐参考资料
 
 - [Learn PWA](https://web.dev/learn/pwa/){:target='\_blank'}
 - [渐进式 Web 应用](https://web.dev/progressive-web-apps/){:target='\_blank'}
 - [讲讲 PWA](https://segmentfault.com/a/1190000012353473){:target='\_blank'}
 - [6 myths of Progressive Web Apps](https://medium.com/samsung-internet-dev/6-myths-of-progressive-web-apps-81e28ca9d2b1){:target='\_blank'}
 - [PWA 文档](https://www.wenjiangs.com/docs/pwa-docs){:target='\_blank'}
+- [网站渐进式增强体验(PWA)改造：Service Worker 应用详解](https://lzw.me/a/pwa-service-worker.html){:target='\_blank'}
+- [Web 离线应用解决方案——ServiceWorker](https://www.cnblogs.com/dojo-lzz/p/8047336.html){:target='\_blank'}
+- [What self.skipWaiting() does to the service worker lifecycle](https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/){:target='\_blank'}
+- [ServiceWorker 工作原理、生命周期和使用场景](https://xie.infoq.cn/article/d6db2099c0064563a403c51ec){:target='\_blank'}
+
+&emsp;&emsp;本文首发于[个人博客](https://king-hcj.github.io/2022/04/10/pwa-and-service-worker/){:target='\_blank'}，欢迎[指正和 star](https://github.com/king-hcj/king-hcj.github.io){:target='\_blank'}。
