@@ -4,6 +4,7 @@ title: 小程序鼻祖 —— 在国内逐渐消亡的 PWA 可以带给我们哪
 categories: JavaScript
 description: PWA的消亡及启示
 keywords: JS, 前端, JavaScript, PWA, Service Worker
+hot: true
 ---
 
 &emsp;&emsp;如果我说，我们要讨论一个 2016 年被提出、2017 年落地、至今在国内仍可算籍籍无名的概念，你是不是会觉得这没有什么意义？

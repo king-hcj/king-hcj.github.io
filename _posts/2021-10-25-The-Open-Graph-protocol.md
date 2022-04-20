@@ -4,6 +4,7 @@ title: 前端应该知道的：开放图谱协议（The Open Graph protocol）
 categories: JavaScript
 description: The Open Graph protocol
 keywords: JS, 前端, JavaScript
+hot: true
 ---
 
 > Open Graph 是一种互联网协议，最初由 Facebook 创建，用于标准化网页中元数据的使用，使得社交媒体得以以丰富的“图形”对象来表示共享的页面内容。
@@ -24,7 +25,7 @@ keywords: JS, 前端, JavaScript
 
 &emsp;&emsp;像飞书、WhatsApp、Twitter、Facebook 等社交软件，都会根据链接去抓取你给定 URL 的内容，以确定要包含哪些属性来进行共享展示。你可以通过在页面的头部代码中包含 `og:tags` 来显式定义属性；如果没有这些显示定义的信息，这些社交软件将在完成对给定 URL 的页面抓取后推断属性，然后使用这些属性信息组装共享框并进行展示。
 
-&emsp;&emsp;其实这一切也是依赖于具体 APP 的实现的（是否会根据URL去抓取内容），对于同一 URL，我们可以看看在飞书和微信上的不同形态：
+&emsp;&emsp;其实这一切也是依赖于具体 APP 的实现的（是否会根据 URL 去抓取内容），对于同一 URL，我们可以看看在飞书和微信上的不同形态：
 
 &emsp;&emsp;微信：
 

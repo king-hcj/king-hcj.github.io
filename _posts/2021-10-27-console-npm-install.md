@@ -4,6 +4,7 @@ title: 大道至简，繁在人心：在浏览器控制台安装npm包是什么�
 categories: JavaScript
 description: 在浏览器控制台安装npm包是什么体验？
 keywords: JS, 前端, JavaScript
+hot: true
 ---
 
 > 大音希声，大象无形，大智若愚，大巧若拙，越是“复杂”的东西，其原理越趋向“简单”，**大道至简，繁在人心**。
