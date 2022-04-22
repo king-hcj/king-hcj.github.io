@@ -9,6 +9,7 @@ keywords: JS, 前端, JavaScript
 > 原来《人月神话》不是本奇幻小说！ 原来《代码大全》不是一堆开源代码！ 原来《鸟哥的 Linux 私房菜》不是教你做菜！ 原来《边城》不是教你写代码的！ 原来《深入浅出 HTML》不是教你**H**ow **T**o **M**ake **L**ove。
 
 - [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='\_blank'}
+- [爱情的各种状态，早被古人写明白了](https://mp.weixin.qq.com/s/wZaTjCCUMrKqbdGlqKLDbQ){:target='\_blank'}
 - [有没有“苍山负雪，明烛天南”这种一读就觉得很有意境的简短诗句？](https://www.zhihu.com/question/491212435/answer/2202859196){:target='\_blank'}
 
 思考：取舍问题，偏技术就会失去趣味性；偏趣味性又会失去一些深度
@@ -30,6 +31,10 @@ keywords: JS, 前端, JavaScript
 - lv4，知乎，思否 5k；
 - 混沌学院，提升认知水平；
 - 深入可视化技术
+
+## 为什么 parseInt (0.0000005) === 5 ?
+
+- [为什么 parseInt (0.0000005) === 5 ?](https://mp.weixin.qq.com/s/3D3_oOf_v2ytyIHaDv6pNw){:target='\_blank'}
 
 ## 做一个在线聊天室
 
@@ -877,6 +882,10 @@ input.oninput = ({ target }) => {
 - 如果一个值要经过多个函数，才能变成另外一个值，就可以把所有中间步骤合并成一个函数，这叫做"函数的合成"（compose）。
 
 - [三行代码实现 add(1)(2)(3)](https://juejin.cn/post/6844904093467541517){:target='\_blank'}
+
+## CSS 属性 aspect-ratio
+
+- [CSS 属性 aspect-ratio](https://blog.csdn.net/qq_37954086/article/details/113526080){:target='\_blank'}
 
 ## 数组的 N 种操作
 
