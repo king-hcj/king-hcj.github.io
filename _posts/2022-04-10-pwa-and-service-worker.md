@@ -11,6 +11,8 @@ hot: true
 
 &emsp;&emsp;互联网发展了这么久，我们记住了“Native App”、“小程序”、“快应用”、“App clips”、“Hybrid App”、“Web App”，似乎独独没有 PWA，但 **PWA 及其理念却一直在推动着前端领域前进**。
 
+> 从严格意义上来说，百度和奇虎 360 在 2013 年提出的[轻应用](https://wiki.mbalib.com/wiki/%E8%BD%BB%E5%BA%94%E7%94%A8){:target='\_blank'}概念，和小程序有更多一致性。
+
 ## PWA 是什么？
 
 &emsp;&emsp;似乎 PWA 对很多人来说是如此陌生，PWA 对前端开发者来说却又是无处不在。
