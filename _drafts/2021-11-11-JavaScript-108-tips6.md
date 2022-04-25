@@ -887,6 +887,10 @@ input.oninput = ({ target }) => {
 
 - [CSS 属性 aspect-ratio](https://blog.csdn.net/qq_37954086/article/details/113526080){:target='\_blank'}
 
+## 深入理解浏览器的缓存机制
+
+- [深入理解浏览器的缓存机制](https://www.jianshu.com/p/54cc04190252){:target='\_blank'}
+
 ## 数组的 N 种操作
 
 - 扁平化：

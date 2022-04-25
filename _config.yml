@@ -3,21 +3,21 @@
 # ---------------- #
 baseurl:
 url: https://king-hcj.github.io
-date_format: "ordinal"
-title: 独钓寒江雪
-subtitle: "编码，是一种艺术"
-description: "Cheney King的个人博客"
-keywords: Cheney King, king-hcj, 孤蓬, 独钓寒江雪
+date_format: 'ordinal'
+title: 獨釣寒江雪
+subtitle: '编码，是一种艺术'
+description: 'Cheney King的个人博客'
+keywords: Cheney King, king-hcj, 孤蓬, 独钓寒江雪, 獨釣寒江雪
 timezone: Asia/Shanghai
-encoding: "utf-8"
+encoding: 'utf-8'
 side_bar_repo_limit: 3
 
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: 独钓寒江雪
-organization: 
-organization_url: 
+author: 獨釣寒江雪
+organization:
+organization_url:
 github_username: king-hcj
 location: ShangHai, China
 email: cheneyking23@gmail.com
@@ -26,28 +26,23 @@ email: cheneyking23@gmail.com
 #    Navigation    #
 # ---------------- #
 navs:
-  -
-    href: /
+  - href: /
     label: 首页
 
-  -
-    href: /categories/
+  - href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
+  #   -
+  #     href: /archives/
+  #     label: 归档
 
-  -
-    href: /wiki/
+  - href: /wiki/
     label: 维基
 
-  -
-    href: /links/
+  - href: /links/
     label: 链接
 
-  -
-    href: /about/
+  - href: /about/
     label: 关于
 
 # ---------------- #
@@ -60,7 +55,7 @@ subscribe_rss: /feed.xml
 # ---------------- #
 markdown: kramdown
 kramdown:
-    input: GFM
+  input: GFM
 highlighter: rouge
 paginate: 10
 lsi: false
@@ -69,18 +64,18 @@ excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 # gems:
 plugins:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
+  - jekyll-github-metadata
+  - rouge
+  #     - jekyll-html-pipeline
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
 #     - jekyll-mentions
 collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
 
 repository: king-hcj/king-hcj.github.io
 
@@ -93,36 +88,35 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: 
+  username:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: king-hcj
-    repo: king-hcj.github.io
-    oauth:
-        client_id: bc269064fe241728eb14
-        client_secret: 0f2e89e4b56f4580e067356a0900c95968284917
+  owner: king-hcj
+  repo: king-hcj.github.io
+  oauth:
+    client_id: bc269064fe241728eb14
+    client_secret: 0f2e89e4b56f4580e067356a0900c95968284917
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: king-hcj
-    repo: king-hcj.github.io
-    clientID: bc269064fe241728eb14
-    clientSecret: 0f2e89e4b56f4580e067356a0900c95968284917
+  owner: king-hcj
+  repo: king-hcj.github.io
+  clientID: bc269064fe241728eb14
+  clientSecret: 0f2e89e4b56f4580e067356a0900c95968284917
 # 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+lazy_load_disqus: false
 
 # ---------------- #
 #      Search      #
 # ---------------- #
 simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: true
-    # 最多显示多少条搜索结果
-    limit: 10
+  # 是否支持全文搜索
+  fulltext: true
+  # 最多显示多少条搜索结果
+  limit: 10
 
 # ---------------- #
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
-port:
-    5001
+  analytics_id: UA-80669434-1
+port: 5001

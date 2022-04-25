@@ -28,6 +28,7 @@ keywords: JS, 前端, JavaScript
 
 ## CSS Scroll Snap —— 轮播竟然如此简单
 
+- [2 行 CSS 实现滚动贴合 Scroll Snap 特效](https://www.bilibili.com/video/BV1R3411r79d){:target='\_blank'}
 - [使用 CSS Scroll Snap 优化滚动，提升用户体验！](https://segmentfault.com/a/1190000040824694){:target='\_blank'}
 - [Introducing CSS Scroll Snap Points](https://css-tricks.com/introducing-css-scroll-snap-points/){:target='\_blank'}
 - [Practical CSS Scroll Snapping](https://css-tricks.com/practical-css-scroll-snapping/){:target='\_blank'}
