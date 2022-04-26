@@ -9,6 +9,7 @@ keywords: JS, 前端, JavaScript
 > 原来《人月神话》不是本奇幻小说！ 原来《代码大全》不是一堆开源代码！ 原来《鸟哥的 Linux 私房菜》不是教你做菜！ 原来《边城》不是教你写代码的！ 原来《深入浅出 HTML》不是教你**H**ow **T**o **M**ake **L**ove。
 
 - [一叹](http://www.fx361.com/page/2017/0224/888345.shtml){:target='\_blank'}
+- [有诗意的诗句](https://www.fwsir.com/ziliao/HTML/ziliao_20160420103818_335176.html){:target='\_blank'}
 - [爱情的各种状态，早被古人写明白了](https://mp.weixin.qq.com/s/wZaTjCCUMrKqbdGlqKLDbQ){:target='\_blank'}
 - [有没有“苍山负雪，明烛天南”这种一读就觉得很有意境的简短诗句？](https://www.zhihu.com/question/491212435/answer/2202859196){:target='\_blank'}
 
