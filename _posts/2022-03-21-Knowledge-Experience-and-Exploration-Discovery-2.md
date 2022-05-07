@@ -27,8 +27,19 @@ keywords: Knowledge and Experience、Exploration and Discovery
   - Checkbox，`form.setFieldsValue`后控制台报错；
   - Use [valuePropName](https://ant.design/components/form-cn/#API){:target='\_blank'} for Checkbox form item: `<Form.Item label="landscape" name="landscape" valuePropName="checked"><Checkbox /></Form.Item>`
 - `git revert -n`：[参考](https://git-scm.com/docs/git-revert){:target='\_blank'}
+
   - `git revert <commit-id>`：撤销某个提交；
   - `git revert -n|--no-commit <commit-id>`：撤销某个提交，但执行命令后不进入编辑界面，也就是**不会自动提交文件**，需要手动提交，这与上一点的差别就是撤销和提交分开了，**适用于需要在撤销的基础上再进行更改的场景**。
+
+- echo `nvm ls`：显示命令执行结果
+- [nvm 笔记: node 版本管理工具](https://d.cellmean.com/p/59067c621850){:target='\_blank'}
+
+  ```sh
+  lts/dubnium -> v10.24.1 (-> N/A)
+  lts/erbium -> v12.22.9 (-> N/A)
+  lts/fermium -> v14.18.3 (-> N/A)
+  lts/gallium -> v16.13.2
+  ```
 
 ### Exploration and Discovery
 
