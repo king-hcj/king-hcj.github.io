@@ -166,7 +166,7 @@ function toggleFullScreen() {
 
 ## 第七十九式：JavaScript 中的 void 0
 
-> void 其实是 javascript 中的一个函数，接受一个参数，返回值永远是 undefined。可以说，使用 void 目的就是为了得到 javascript 中的 undefined。
+> void 其实是 javascript 中的一个函数，接受一个参数，返回值永远是 undefined(void 0 === void 100)。可以说，使用 void 目的就是为了得到 javascript 中的 undefined。
 
 undefined 是 JS 语言中的 7 大基本类型之一，表示未定义，它的值只有一个，就是 undefined。任何变量在赋值前都是 undefined。
 

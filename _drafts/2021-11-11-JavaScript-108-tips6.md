@@ -33,9 +33,85 @@ keywords: JS, 前端, JavaScript
 - 混沌学院，提升认知水平；
 - 深入可视化技术
 
+## web Component
+
+vue slot 和 scope css 借鉴了其思想
+
+- [自定义元素：web component, 任性的开始](https://www.aliyundrive.com/drive/folder/626cbc552b989dca32294cea976c5681cee0d1b9){:target='\_blank'}
+
+组件库：
+
+- fluent UI
+- fast ui
+- lit
+
+##   唯一 ID
+
+- 会变，不具有标识性： URL.createObjectURL(new Blob([''])).split('/').pop()
+- 浏览器指纹
+
 ## 为什么 parseInt (0.0000005) === 5 ?
 
 - [为什么 parseInt (0.0000005) === 5 ?](https://mp.weixin.qq.com/s/3D3_oOf_v2ytyIHaDv6pNw){:target='\_blank'}
+
+## `typeof document.all` 和 document.all
+
+document.all document.forms document.scripts document.images document.links document.cookie document.fonts document.styleSheets
+
+## window === window.window, window.window=== window.window.window,window=== this
+
+全局 this 上有 window，方便使用 this
+window.isSecureContext
+this self window parent top
+open opener:同源可操作
+可见性：focus blur；document.hidden document.visibilityState；visibilityChange(切到别的 tab，不继续播放、不广告倒计时等等)
+window.devicePixelRatio(CSS 是控制逻辑像素)
+scroll To by intoview
+JS 媒体查询：matchMedia
+getSelection / document.activeElement
+window.frameElement
+navigator.onLine / ononline onoffline
+window.print 及打印样式设置（三种方式的 media 的 print）
+
+- [window](https://www.aliyundrive.com/drive/folder/626cbc56988d71681d0c4ef08bdca96cdf80a693){:target='\_blank'}
+
+## navigator.mediaDevices.enumerateDevices().then(device => console.log(device))
+
+## 分享屏幕 录音等（可单篇文章）
+
+```js
+(async function captureDesk() {
+  await navigator.mediaDevices.getDisplayMedia({
+    video: {
+      cursor: 'always',
+    },
+    audio: false,
+  });
+})();
+```
+
+- [navigator](https://www.aliyundrive.com/drive/folder/626cbc56988d71681d0c4ef08bdca96cdf80a693){:target='\_blank'}
+
+- [【SSD 系列】共享桌面，3 分钟自己实现一个吧，还能听见麦克风声音哦](https://juejin.cn/post/6993133406565449736){:target='\_blank'}
+- [前端 H5 实现调用麦克风，录音功能](https://blog.csdn.net/Darker0305/article/details/110187482){:target='\_blank'}
+- [技术教程 | 基于 Web 端的屏幕共享实践](https://blog.csdn.net/zego_0616/article/details/119671093){:target='\_blank'}
+- [前端实践：像素级同步、低延时、超低流量的屏幕共享工具 Syncit](https://juejin.cn/post/6844904194936143880){:target='\_blank'}
+
+## 查询伪元素 getComputedStyle
+
+会让页面重排
+
+- [如何确定 HTML 元素是否具有伪元素？](https://qa.1r1g.com/sf/ask/2814460071/){:target='\_blank'}
+- [window.getComputedStyle() 方法的使用](https://www.runoob.com/w3cnote/window-getcomputedstyle-method.html){:target='\_blank'}
+
+## NodeIterator 和 TreeWalker
+
+- [DOM 结构深度优先遍历（一）：NodeIterator](https://blog.csdn.net/qq_35087256/article/details/80920081){:target='\_blank'}
+- [DOM 结构深度优先遍历（二）：TreeWalker](https://blog.csdn.net/qq_35087256/article/details/80920508){:target='\_blank'}
+
+## [NaN].includes(NaN) === true; [NaN].indexOf(NaN) === -1
+
+> ECMA 文档，实现机理
 
 ## 做一个在线聊天室
 
