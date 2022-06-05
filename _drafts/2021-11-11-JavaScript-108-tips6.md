@@ -54,6 +54,13 @@ vue slot 和 scope css 借鉴了其思想
 
 - [为什么 parseInt (0.0000005) === 5 ?](https://mp.weixin.qq.com/s/3D3_oOf_v2ytyIHaDv6pNw){:target='\_blank'}
 
+## 层爆炸和层压缩
+
+层爆炸、层压缩、will-change 为什么不能多用
+
+- [浏览器层合成与页面渲染优化](https://juejin.cn/post/6844903966573068301#heading-10){:target='\_blank'}
+- [从浏览器渲染原理谈动画性能优化](https://zhuanlan.zhihu.com/p/458424384){:target='\_blank'}
+
 ## `typeof document.all` 和 document.all
 
 document.all document.forms document.scripts document.images document.links document.cookie document.fonts document.styleSheets
