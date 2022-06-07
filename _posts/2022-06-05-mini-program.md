@@ -8,13 +8,15 @@ keywords: JS, 前端, JavaScript, 小程序
 
 ![Jump]({{site.url}}{{site.baseurl}}/images/posts/mini_program/Jump.gif?raw=true)
 
-&emsp;&emsp;2017 年 12 月 28 日，一款叫做《跳一跳》的微信小游戏横空出世，为微信小程序跳出一片繁华；2018 年 5 月，研究公司 QuestMobile 发布了微信小游戏《跳一跳》的数据，这款只有 4MB 大小的游戏**截至 2018 年 3 月份已经积累了 3.9 亿玩家**。据腾讯第一季度财报显示，微信平台目前已经有超过 500 款迷你游戏，拥有了 4.57 亿用户。除了本身平台用户基数的优势，微信还认为，微信小游戏的**加载速度比 HTML5 快 30%**也是其成功的原因。
+&emsp;&emsp;2017 年 12 月 28 日，一款叫做《跳一跳》的微信小游戏横空出世，为微信小程序跳出一片繁华；2018 年 5 月，研究公司 QuestMobile 发布了微信小游戏《跳一跳》的数据，这款只有 4MB 大小的游戏**截至 2018 年 3 月份已经积累了 3.9 亿玩家**。除了本身平台用户基数的优势，微信还认为，微信小游戏的**加载速度比 HTML5 快 30%**也是其成功的原因。
 
 &emsp;&emsp;据微信游戏产品总监孙春光分享：
 
 > 《跳一跳》的**次日留存为 65%**，三日留存为 60%，七日留存为 52%，“这已经可以媲美一款非常活跃的 APP 大作了…… 和 H5 游戏行业 20%左右的留存相比更是有翻天覆地的变化。”“我们做过对比，同样品质的 H5 游戏，做成小游戏，留存率有 10%的提升。”
 
 &emsp;&emsp;而跳一跳发布的这一天，距离微信声势浩大的提出“小程序”的概念已经比较久了，一直不温不火、没有广泛群众基础的“小程序”，在《跳一跳》中让普通用户感受到了它的魅力，也让商业开发者嗅到了真正的商机。
+
+&emsp;&emsp;全文脉络大体如下图所示，清晰版图片可以在[这里](https://king-hcj.github.io/images/posts/mini_program/mini.png?raw=true){:target='\_blank'}查看。
 
 ![小程序]({{site.url}}{{site.baseurl}}/images/posts/mini_program/mini.png?raw=true)
 
@@ -39,7 +41,7 @@ keywords: JS, 前端, JavaScript, 小程序
 
 &emsp;&emsp;2016 年 Google 提出的 PWA 的概念，于 2017 年正式落地，2018 年迎来重大突破，全球顶级的浏览器厂商，Google、Microsoft、Apple 已经全数宣布支持 PWA 技术，但是由于国内技术环境的特殊性，PWA 可算籍籍无名。
 
-&emsp;&emsp;小程序界的先行者 —— 轻应用、PWA 的结局，想必你已经清楚，最终在国内成功的，只有微信推出的小程序，这不禁使人感叹：赤兔无人用，当须吕布骑。
+&emsp;&emsp;小程序界的先行者 —— 轻应用、PWA 的结局，想必你已经清楚，最终在国内成功的，只有微信推出的小程序，这不禁使人感叹：**赤兔无人用，当须吕布骑**。
 
 ## 莫看江面平如镜，要看水底万丈深 —— 小程序的技术原理
 
@@ -61,7 +63,7 @@ keywords: JS, 前端, JavaScript, 小程序
 
 ![逻辑层与渲染层]({{site.url}}{{site.baseurl}}/images/posts/mini_program/app_rendering.png?raw=true)
 
-#### 双线程的优势与不足
+#### 双线程的特点
 
 ![双线程]({{site.url}}{{site.baseurl}}/images/posts/mini_program/Thread.png?raw=true)
 
@@ -73,11 +75,13 @@ keywords: JS, 前端, JavaScript, 小程序
 
 &emsp;&emsp;前文提到，小程序是基于双线程模型的，所以在小程序视图层和逻辑层之间的数据传递会存在一定延时。渲染层需要有逻辑层的数据才能把界面渲染出来。
 
+&emsp;&emsp;下面对双线程交互的生命周期做简要解释说明：
+
 - start 阶段:
   - View 线程初始化渲染，包括页面层级等;
   - AppService 线程初始化数据，进入 onLoad 钩子;
 - 初始化完成
-  - View 线程：通知逻辑层，等待逻辑层指令
+  - View 线程：通知逻辑层，等待逻辑层数据
   - AppService 线程：进入 onShow 钩子，等待渲染层通知
 - 渲染层渲染初始数据
   - View 线程：渲染数据
