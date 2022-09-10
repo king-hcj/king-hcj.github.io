@@ -6,9 +6,9 @@ description: 小程序发展史
 keywords: JS, 前端, JavaScript, 小程序
 ---
 
-![Jump]({{site.url}}{{site.baseurl}}/images/posts/mini_program/Jump.gif?raw=true)
-
 &emsp;&emsp;2017 年 12 月 28 日，一款叫做《跳一跳》的微信小游戏横空出世，为微信小程序跳出一片繁华；2018 年 5 月，研究公司 QuestMobile 发布了微信小游戏《跳一跳》的数据，这款只有 4MB 大小的游戏**截至 2018 年 3 月份已经积累了 3.9 亿玩家**。除了本身平台用户基数的优势，微信还认为，微信小游戏的**加载速度比 HTML5 快 30%**也是其成功的原因。
+
+![Jump]({{site.url}}{{site.baseurl}}/images/posts/mini_program/Jump.gif?raw=true)
 
 &emsp;&emsp;据微信游戏产品总监孙春光分享：
 

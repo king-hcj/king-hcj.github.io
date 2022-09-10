@@ -41,6 +41,8 @@ keywords: Knowledge and Experience、Exploration and Discovery
   lts/gallium -> v16.13.2
   ```
 
+- [antd Select onChange 获取除了 value 其他的值](https://blog.csdn.net/weixin_41718879/article/details/120343083){:target='\_blank'}：给 option 标签添加“data”属性；
+
 ### Exploration and Discovery
 
 #### 经济学

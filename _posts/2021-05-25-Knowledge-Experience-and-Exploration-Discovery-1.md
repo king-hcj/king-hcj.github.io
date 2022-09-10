@@ -204,6 +204,123 @@ export const filterEmoji = (str: string): string => {
 
 ![透明度对照表](https://king-hcj.github.io/images/posts/javascript/opcitycolor.png?raw=true)
 
+```js
+// 转换方法
+const arrHex = [
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+]; //十六进制数组
+
+/**
+ * 将颜色值转为带透明度的16进制
+ * @param param0
+ * @returns
+ */
+export const getHexOpacityColor = ({ color = '#000000', opacity = 1 }) => {
+  color = color.replace(/\#/g, '').toUpperCase();
+  if (color.length === 3) {
+    const arr = color.split('');
+    color = '';
+    for (let i = 0; i < arr.length; i++) {
+      color += arr[i] + arr[i]; //将简写的3位字符补全到6位字符
+    }
+  }
+  const opacityStr = getHexOpacity({ opacity });
+  return `#${color + opacityStr}`;
+};
+
+/**
+ * 透明度转16进制表示
+ * @param param0
+ * @returns
+ */
+export const getHexOpacity = ({ opacity = 0.5 }) => {
+  opacity = Math.max(opacity, 0);
+  opacity = Math.min(opacity, 1);
+  let num = Math.round(255 * opacity); //向下取整
+  // let str = num.toString(16); // 可以用这一行替代下面的循环
+  let str = '';
+  while (num > 0) {
+    const mod = num % 16;
+    num = (num - mod) / 16;
+    str = arrHex[mod] + str;
+  }
+  if (str.length == 1) str = '0' + str;
+  if (str.length == 0) str = '00';
+  return `${str}`;
+};
+
+/**
+ * 16进制透明度转小数
+ * @param param0
+ * @returns
+ */
+export const getDecimalOpacity = ({ hexOpacity = '00' }) => {
+  let opacity = Number((parseInt(hexOpacity, 16) / 255).toFixed(2));
+  opacity = Math.max(opacity, 0);
+  opacity = Math.min(opacity, 1);
+  return opacity;
+};
+
+// 16进制转RGB值
+export const hexToRgb = (hex: string) => {
+  hex = hex.replace(/\#/g, '').toUpperCase();
+  if (hex.length === 3) {
+    const arr = hex.split('');
+    hex = '';
+    for (let i = 0; i < arr.length; i++) {
+      hex += arr[i] + arr[i]; //将简写的3位字符补全到6位字符
+    }
+  }
+  const bigint = parseInt(hex, 16);
+  return {
+    r: (bigint >> 16) & 255,
+    g: (bigint >> 8) & 255,
+    b: bigint & 255,
+  };
+};
+
+// RGB值转16进制
+// 其实 （(r << 16) + (g << 8) + b).toString(16)已经可以了，为什么前边还要加个 (1 << 24) 再做处理
+// 解释：为了防止 r，g，b值全为 0 的特殊情况， ((1 << 24))的值二进制表示为 100...0(1后边有24个0），加上r（0），g（0），b（0），结果不变， ((1 << 24)).toString(16) 的值为 "1000000"
+export const rgbToHex = ({ r, g, b }: { r: number, g: number, b: number }) => {
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+/**
+ * 客户端xml色值转css
+ * 8位16进制色值，客户端透明度在前，css透明度在后
+ * @param xml
+ * @returns
+ */
+export const xmlColor2CSSColor = (xml: string) => {
+  return xml.substring(0, 1) + xml.substring(3) + xml.substring(1, 3);
+};
+
+/**
+ * css色值转客户端xml色值
+ * @param css
+ * @returns
+ */
+export const cssColor2XMLColor = (css: string) => {
+  return css.substring(0, 1) + css.substring(7) + css.substring(1, 7);
+};
+```
+
 - [使用通配符的属性选择器【`E[Attr^=Val]`】【`E[Attr$=Val]`】【`E[Attr*=Val]`】](http://it028.com/css-selectors.html){:target='\_blank'}：css3 属性选择器中的大 boss，使得选择器功能分分钟提升。
 
   - `E[att^="val"]`，选择器匹配元素 E，且 E 元素定义了属性 att,att 的属性值是**以 val 开头**的任何字符串。

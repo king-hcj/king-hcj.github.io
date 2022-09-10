@@ -54,6 +54,14 @@ vue slot 和 scope css 借鉴了其思想
 
 - [为什么 parseInt (0.0000005) === 5 ?](https://mp.weixin.qq.com/s/3D3_oOf_v2ytyIHaDv6pNw){:target='\_blank'}
 
+## 10 个 CSS 小技巧
+
+- [10 个 CSS 小技巧](https://mp.weixin.qq.com/s/GAjAdHrPTltdinilJ3dytg){:target='\_blank'}
+
+## 通过 ajax 请求回来的数据在 response 和 preview 两种状态显示的 id 是不同的
+
+- [json-bigint 处理大整数问题（详解）](https://blog.csdn.net/weixin_50636536/article/details/113356987){:target='\_blank'}
+
 ## 层爆炸和层压缩
 
 层爆炸、层压缩、will-change 为什么不能多用
