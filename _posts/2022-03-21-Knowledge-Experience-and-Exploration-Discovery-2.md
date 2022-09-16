@@ -42,6 +42,47 @@ keywords: Knowledge and Experience、Exploration and Discovery
   ```
 
 - [antd Select onChange 获取除了 value 其他的值](https://blog.csdn.net/weixin_41718879/article/details/120343083){:target='\_blank'}：给 option 标签添加“data”属性；
+- 动态创建 ref：
+  - [如何在 React Native 中动态创建多个 Ref](https://cloud.tencent.com/developer/ask/sof/265314){:target='\_blank'}
+  - [Refs and the DOM](https://zh-hans.reactjs.org/docs/refs-and-the-dom.html#gatsby-focus-wrapper){:target='\_blank'}
+
+```js
+const CustomComponent = (props, ref) => {
+  const [ArrConfig, setArrConfig] = useState([]);
+  const MaxKey = useRef(-1);
+  const refs = useRef({}); // using useRef because we want to persist the values when component re-renders
+
+  useImperativeHandle(ref, () => ({
+    refs,
+  }));
+
+  // 用户动态创建
+  const add = () => {
+    // 随便模拟一下，key值一版是自增的
+    setArrConfig([...ArrConfig, { key: (MaxKey.current += 1) }]);
+  };
+
+  const setRefs = (ele: HTMLElement, key: number) => {
+    if (ele) {
+      // 当map开始遍历后就会调用，因为ref回调函数是以内联函数的方式定义的，所以更新过程中会执行两次。一次参数是null，一次是dom元素，所以需要if判断
+      refs.current[`form_${key}`] = ele;
+    }
+  };
+
+  return (
+    <div className='card'>
+      {ArrConfig.map(({ key }) => (
+        <DynamicRenderItemForm
+          key={key}
+          ref={(ele: HTMLElement) => setRefs(ele, key)}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default forwardRef(CustomComponent);
+```
 
 ### Exploration and Discovery
 

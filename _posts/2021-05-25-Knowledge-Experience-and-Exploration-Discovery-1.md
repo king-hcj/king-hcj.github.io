@@ -307,7 +307,8 @@ export const rgbToHex = ({ r, g, b }: { r: number, g: number, b: number }) => {
  * @param xml
  * @returns
  */
-export const xmlColor2CSSColor = (xml: string) => {
+export const xmlColor2CSSColor = (xml: string = '') => {
+  if (xml.length === 7) xml = '#FF' + xml.substring(1);
   return xml.substring(0, 1) + xml.substring(3) + xml.substring(1, 3);
 };
 
@@ -316,7 +317,8 @@ export const xmlColor2CSSColor = (xml: string) => {
  * @param css
  * @returns
  */
-export const cssColor2XMLColor = (css: string) => {
+export const cssColor2XMLColor = (css: string = '') => {
+  if (css.length === 7) css += 'FF';
   return css.substring(0, 1) + css.substring(7) + css.substring(1, 7);
 };
 ```
