@@ -54,6 +54,10 @@ vue slot 和 scope css 借鉴了其思想
 
 - [为什么 parseInt (0.0000005) === 5 ?](https://mp.weixin.qq.com/s/3D3_oOf_v2ytyIHaDv6pNw){:target='\_blank'}
 
+## CSS position: fixed 相对于父元素定位
+
+- [CSS position: fixed 相对于父元素定位](https://blog.csdn.net/weixin_48003149/article/details/121850887){:target='\_blank'}
+
 ## 10 个 CSS 小技巧
 
 - [10 个 CSS 小技巧](https://mp.weixin.qq.com/s/GAjAdHrPTltdinilJ3dytg){:target='\_blank'}
