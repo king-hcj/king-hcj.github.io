@@ -386,6 +386,7 @@ scp -r ./ucontract/* root@192.168.0.123:/data/front-end/ucontract
 - [「1.4 万字」玩转前端 Video 播放器 | 多图预警](https://juejin.cn/post/6850037275579121671){:target='\_blank'}
 - [前端视频直播技术总结及 video.js 在 h5 页面中的应用](https://www.cnblogs.com/dreamsqin/p/12557070.html){:target='\_blank'}
 - [[1.3 万字] 玩转前端二进制](https://juejin.cn/post/6846687590783909902){:target='\_blank'}
+- [什么是流媒体？](https://www.php.cn/faq/419045.html){:target='\_blank'}
 
 ## 第九十八式：v8 为什么要采用多种垃圾回收方式？各种垃圾回收方式的优劣对比
 
