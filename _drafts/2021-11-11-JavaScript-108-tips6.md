@@ -196,6 +196,10 @@ window.print 及打印样式设置（三种方式的 media 的 print）
 - [纯前端生成和解析 Excel](https://king-hcj.github.io/2020/05/19/export-excel/){:target='\_blank'}
 - [Node.js + Vue 实现 Excel 导出与保存](https://mp.weixin.qq.com/s/PHIbCZe31rATZj34xgdKkA){:target='\_blank'}
 
+## 快速了解 inert 属性
+
+- [快速了解 inert 属性](https://mp.weixin.qq.com/s/VfIo7A1CDNd2iSI_3p_rWA){:target='_blank'}
+
 ## 前端生成 word
 
 - [Vue 项目纯前端导出 word 文档](https://www.cnblogs.com/xhxdd/p/13716395.html){:target='\_blank'}
