@@ -212,6 +212,18 @@ npm install serve -g
 
 ![weibo_offline](https://king-hcj.github.io/images/posts/pwa/weibo_offline.png?raw=true)
 
+#### 如何卸载 Service Worker
+
+&emsp;&emsp;当从根目录中删除 `/serviceworker.js` 后，Chrome 仍然会运行从 webroot 中删除的 service worker，导致端口一直被占用. 如何从 Chrome 中卸载 Service Worker，以便我们可以重新登录原来的网站呢?这个问题主要是因为 ServiceWork 的缓存机制，在控制台运行下面的代码即可卸载 Service Worker：
+
+```js
+navigator.serviceWorker.getRegistrations().then(function (registrations) {
+  for (let registration of registrations) {
+    registration.unregister();
+  }
+});
+```
+
 ### PWA 的优势与劣势
 
 ![pwa_processon](https://king-hcj.github.io/images/posts/pwa/pwa_processon.png?raw=true)
