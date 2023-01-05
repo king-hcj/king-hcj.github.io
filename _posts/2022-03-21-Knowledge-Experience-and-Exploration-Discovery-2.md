@@ -84,6 +84,17 @@ const CustomComponent = (props, ref) => {
 export default forwardRef(CustomComponent);
 ```
 
+- 表单禁止输入空格
+
+```js
+rules: [
+  {
+    pattern: /^[^\s]*$/,
+    message: 'No spaces',
+  },
+];
+```
+
 ### Exploration and Discovery
 
 #### 经济学
