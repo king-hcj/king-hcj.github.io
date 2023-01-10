@@ -95,6 +95,8 @@ rules: [
 ];
 ```
 
+- Table 表格默认某列降序排序时（没排序时就按照这列降序），点击没反应（因为降序的下一个值是 undefined，被默认降序覆盖了），可以改变 sortDirections 的顺序为: ['descend', 'ascend']即可；
+
 ### Exploration and Discovery
 
 #### 经济学
