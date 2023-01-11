@@ -97,6 +97,15 @@ rules: [
 
 - Table 表格默认某列降序排序时（没排序时就按照这列降序），点击没反应（因为降序的下一个值是 undefined，被默认降序覆盖了），可以改变 sortDirections 的顺序为: ['descend', 'ascend']即可；
 
+- 如果远程主机删除了某个分支，默认情况下，`git pull` 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致`git pull`不知不觉删除了本地分支。加上参数 `-p` 就会在本地删除远程已经删除的分支
+
+  ```sh
+    git pull -p
+    # 等同于下面的命令
+    git fetch --prune origin
+    git fetch -p
+  ```
+
 ### Exploration and Discovery
 
 #### 经济学
