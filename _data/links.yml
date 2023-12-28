@@ -10,20 +10,8 @@
   url: https://www.infoq.cn
   src: www
 
-- name: 前端开发核心知识进阶：50 讲从夯实基础到突破瓶颈
-  url: https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde
-  src: www
-
 - name: 美团技术团队
   url: https://tech.meituan.com/tags/%E5%89%8D%E7%AB%AF.html
-  src: www
-
-- name: 领略前端技术 阅读奇舞周刊
-  url: https://weekly.75.team/
-  src: www
-
-- name: 政采云前端团队
-  url: https://www.zoo.team/
   src: www
 
 - name: Ali Data Frontend Team - 前端精读周刊
@@ -34,20 +22,16 @@
   url: https://www.jianshu.com/nb/1479424
   src: www
 
-- name: 前端进阶之道
-  url: https://yuchengkai.cn
-  src: www
-
 - name: 木易杨前端进阶
   url: https://www.muyiy.cn
   src: www
 
-- name: 前端面试与进阶指南
-  url: https://www.cxymsg.com
+- name: 剑指前端 Offer
+  url: https://febook.hzfe.org/awesome-interview/
   src: www
 
-- name: React源码解析
-  url: https://react.jokcy.me
+- name: 图解React
+  url: https://7km.top/
   src: www
 
 - name: React技术揭秘
