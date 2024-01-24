@@ -50,6 +50,18 @@
   url: https://git-scm.com/book/zh/v2
   src: www
 
+- name: 深入浅出 Webpack
+  url: https://webpack.wuhaolin.cn/
+  src: www
+
+- name: 深入理解 TypeScript
+  url: https://jkchao.github.io/typescript-book-chinese/
+  src: www
+
+- name: 什么是 TypeScript
+  url: https://ts.xcatliu.com/introduction/what-is-typescript.html
+  src: www
+
 - name: 酷 壳 – CoolShell
   url: https://coolshell.cn
   src: www
