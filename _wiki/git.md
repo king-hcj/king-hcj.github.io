@@ -580,3 +580,25 @@ fatal: no man viewer handled the request
 ```
 git config --global help.format web
 ```
+
+## 常用git别名配置
+
+> [Git 基础 - Git 别名](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-Git-%E5%88%AB%E5%90%8D)
+
+```sh
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.ps  push
+git config --global alias.pl  pull --rebase
+git config --global alias.mg merge
+git config --global alias.rs reset
+git config --global alias.cp cherry-pick
+git config --global alias.psn 'push --set-upstream origin'
+git config --global alias.subi 'submodule init'
+git config --global alias.psd 'push origin --delete'
+# git config pull.rebase true
+# git config --global --list
+# nvm alias default v16.18.0
+```
